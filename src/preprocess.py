@@ -26,9 +26,7 @@ class Preprocessor:
                 return summary
             else:
                 return ""
-        except DisambiguationError as e:
-            return ""
-        except PageError:
+        except Exception as e:
             return ""
 
     def add_wiki_content(self):
