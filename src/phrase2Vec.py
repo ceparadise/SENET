@@ -21,4 +21,6 @@ class Phrase2Vec:
 
 
 if __name__ == "__main__":
+    print("Building the word2vec ...")
     p2v = Phrase2Vec(force_build=True)
+    print("Finish building")

@@ -1,6 +1,7 @@
 #!usr/bin/env python
 from nltk import word_tokenize
 import os
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
@@ -133,6 +134,8 @@ class Preprocessor:
 
 if __name__ == "__main__":
     print("Start ...")
+    nltk.download("stopwords")
+    nltk.download("wordnet")
     data_dir = os.path.abspath(os.pardir) + os.sep + "data" + os.sep
     preprocessor = Preprocessor(data_dir)
     docuemnts = preprocessor.read_all_files()
