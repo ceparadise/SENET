@@ -26,9 +26,7 @@ class Preprocessor:
                 return summary
             else:
                 return ""
-        except DisambiguationError as e:
-            return ""
-        except PageError:
+        except Exception as e:
             return ""
 
     def add_wiki_content(self):
@@ -39,7 +37,7 @@ class Preprocessor:
                 print("processing {} ...".format(word))
                 wiki_doc = self.__wiki_context_extract(word)
                 if len(wiki_doc) > 0:
-                    count + 1
+                    count += 1
                 fout.write("{}\t{}\n".format(word, wiki_doc))
         print("{} word have wiki doc associated".format(count))
 
