@@ -134,6 +134,7 @@ if __name__ == "__main__":
     print("Start ...")
     nltk.download("stopwords")
     nltk.download("wordnet")
+    nltk.download("punkt")
     data_dir = os.path.abspath(os.pardir) + os.sep + "data" + os.sep
     preprocessor = Preprocessor(data_dir)
     docuemnts = preprocessor.read_all_files()
