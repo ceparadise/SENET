@@ -1,18 +1,9 @@
 from gensim.models.word2vec import Word2Vec
 from nltk.stem.wordnet import WordNetLemmatizer
 
-def lemmatizing(tokens):
-    lmtzr = WordNetLemmatizer()
-    lem_sentences = []
-    for sentence_token in tokens:
-        tmp = []
-        for token in sentence_token:
-            tmp.append(lmtzr.lemmatize(token))
-        lem_sentences.append(tmp)
-    return lem_sentences
-
 keywords = set()
 wd = set()
+lmtzr = WordNetLemmatizer()
 word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
 with open("../../data/vocabulary.txt", encoding="utf8") as fin:
     for line in fin:
@@ -41,7 +32,7 @@ vocab = model.wv.vocab.keys()
 for key in keywords:
     key = key.lower()
     tokens = key.strip(' \n\t').split()
-    tokens = lemmatizing(tokens)
+    tokens = [lmtzr.lemmatize(tk) for tk in tokens]
     key = "_".join(tokens)
     if key in vocab or key + "\n" in vocab:
         in_vocab.add(key)
