@@ -32,7 +32,9 @@ vocab = model.wv.vocab.keys()
 for key in keywords:
     key = key.lower()
     tokens = key.strip(' \n\t').split()
+    print("before lem : ", tokens)
     tokens = [lmtzr.lemmatize(tk) for tk in tokens]
+    print("After lem : ", tokens)
     key = "_".join(tokens)
     if key in vocab or key + "\n" in vocab:
         in_vocab.add(key)
