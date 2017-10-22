@@ -9,6 +9,7 @@ model = Word2Vec.load("../../data/w2v.model")
 in_vocab = set()
 vocab = model.wv.vocab.keys()
 for key in keywords:
+    key = key.strip(' \n\t').replace(' ','_')
     if key in vocab or key + "\n" in vocab:
         in_vocab.add(key)
         count += 1
