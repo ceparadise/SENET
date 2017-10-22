@@ -3,11 +3,13 @@ from gensim.models.word2vec import Word2Vec
 keywords = []
 word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
 for word_file in word_files:
-    with open("../../data/contrast.txt", encoding="utf8") as fin:
+    with open("../../data/" + word_files, encoding="utf8") as fin:
         for line in fin:
             line = line.strip("\n\t\r")
-            keywords.append(line[0])
-            keywords.append(line[1])
+            words = line.split(",")
+            keywords.append(words[0])
+            keywords.append(words[1])
+
 with open("../../data/hyper.txt", encoding="utf8") as fin:
     for line in fin:
         parent, rest = line.split(":")
@@ -21,6 +23,7 @@ in_vocab = set()
 un_vocab = set()
 vocab = model.wv.vocab.keys()
 for key in keywords:
+    key = key.lower()
     tokens = key.strip(' \n\t').split()
     key = "_".join(tokens)
     if key in vocab or key + "\n" in vocab:
