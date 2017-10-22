@@ -5,7 +5,9 @@ word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
 for word_file in word_files:
     with open("../../data/contrast.txt", encoding="utf8") as fin:
         for line in fin:
-            keywords.append(line.strip("\n\t\r"))
+            line = line.strip("\n\t\r")
+            keywords.append(line[0])
+            keywords.append(line[1])
 with open("../../data/hyper.txt", encoding="utf8") as fin:
     for line in fin:
         parent, rest = line.split(":")
