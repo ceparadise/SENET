@@ -16,7 +16,7 @@ class Phrase2Vec:
                 sentences = f.readlines()
                 sentence_stream = [sentence.split(" ") for sentence in sentences]
                 phrasedTxt = Phrases(sentence_stream, min_count=1, threshold=3)
-                self.w2v_model = Word2Vec(phrasedTxt[sentence_stream], size=15000, window=5, min_count=2, workers=4)
+                self.w2v_model = Word2Vec(phrasedTxt[sentence_stream], size=5000, window=5, min_count=1, workers=4)
                 self.w2v_model.save(self.model_path)
         self.w2v_model = Word2Vec.load(self.model_path)
 
