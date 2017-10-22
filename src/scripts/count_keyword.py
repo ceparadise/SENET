@@ -13,4 +13,8 @@ for key in keywords:
         in_vocab.add(key)
         count += 1
 
-print("vocab size {} , and {}:{} keywords are in the vocab".format(len(vocab), len(in_vocab), count))
+with open("./appearedWords.txt", 'w') as out:
+    for word in in_vocab:
+        out.write(word + "\n")
+
+print("vocab size {} , and {} keywords are in the vocab".format(len(vocab), len(in_vocab), count))
