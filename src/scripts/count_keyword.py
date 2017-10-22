@@ -3,7 +3,7 @@ from gensim.models.word2vec import Word2Vec
 keywords = []
 word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
 for word_file in word_files:
-    with open("../../data/" + word_files, encoding="utf8") as fin:
+    with open("../../data/" + word_file, encoding="utf8") as fin:
         for line in fin:
             line = line.strip("\n\t\r")
             words = line.split(",")
