@@ -5,6 +5,7 @@ import os
 
 class Phrase2Vec:
     def __init__(self, force_build=False):
+        print("Force rebuild = {}", force_build)
         data_path = os.pardir + os.sep + "data"
         self.model_path = data_path + os.sep + "w2v.model";
         self.training_data_path = data_path + os.sep + "w2v.data"
