@@ -1,22 +1,22 @@
 from gensim.models.word2vec import Word2Vec
 
-keywords = []
+keywords = set()
 word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
 for word_file in word_files:
     with open("../../data/" + word_file, encoding="utf8") as fin:
         for line in fin:
             line = line.strip("\n\t\r")
             words = line.split(",")
-            keywords.append(words[0])
-            keywords.append(words[1])
+            keywords.add(words[0])
+            keywords.add(words[1])
 
 with open("../../data/hyper.txt", encoding="utf8") as fin:
     for line in fin:
         parent, rest = line.split(":")
-        keywords.append(parent)
+        keywords.add(parent)
         rest_words = rest.split(",")
         for words in rest_words:
-            keywords.append(parent)
+            keywords.add(parent)
 
 model = Word2Vec.load("../../data/w2v.model")
 in_vocab = set()
