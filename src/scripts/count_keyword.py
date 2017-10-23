@@ -1,22 +1,29 @@
 from gensim.models.word2vec import Word2Vec
+from nltk.stem.wordnet import WordNetLemmatizer
 
-keywords = []
+keywords = set()
+wd = set()
+lmtzr = WordNetLemmatizer()
 word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
+with open("../../data/vocabulary.txt", encoding="utf8") as fin:
+    for line in fin:
+        wd.add(line.strip(" \n\t\r"))
+    print(len(wd))
 for word_file in word_files:
-    with open("../../data/" + word_files, encoding="utf8") as fin:
+    with open("../../data/" + word_file, encoding="utf8") as fin:
         for line in fin:
             line = line.strip("\n\t\r")
             words = line.split(",")
-            keywords.append(words[0])
-            keywords.append(words[1])
+            keywords.add(words[0])
+            keywords.add(words[1])
 
 with open("../../data/hyper.txt", encoding="utf8") as fin:
     for line in fin:
         parent, rest = line.split(":")
-        keywords.append(parent)
+        keywords.add(parent)
         rest_words = rest.split(",")
         for words in rest_words:
-            keywords.append(parent)
+            keywords.add(parent)
 
 model = Word2Vec.load("../../data/w2v.model")
 in_vocab = set()
@@ -25,6 +32,9 @@ vocab = model.wv.vocab.keys()
 for key in keywords:
     key = key.lower()
     tokens = key.strip(' \n\t').split()
+    print("before lem : ", tokens)
+    tokens = [lmtzr.lemmatize(tk) for tk in tokens]
+    print("After lem : ", tokens)
     key = "_".join(tokens)
     if key in vocab or key + "\n" in vocab:
         in_vocab.add(key)
