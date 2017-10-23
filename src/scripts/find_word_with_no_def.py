@@ -1,4 +1,4 @@
-from .common import *
+from scripts.common import *
 import os
 
 with open(DATA_DIR + os.sep + "vocabulary_wiki.txt") as fin:
