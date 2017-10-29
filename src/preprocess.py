@@ -7,21 +7,19 @@ from nltk.tokenize import sent_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
 import wikipedia
-from wikipedia.exceptions import DisambiguationError
-from wikipedia.exceptions import PageError
+from common import *
 
 
 class Preprocessor:
-    def __init__(self, dir_path):
-        self.dir_paht = dir_path
-        self.vocab_file = os.path.join(dir_path, "vocabulary.txt")
-        self.vocab_with_wiki = os.path.join(dir_path, "vocabulary_wiki.txt")
-        self.w2v_raw_dir = os.path.join(data_dir, "SE_Books_txt")
+    def __init__(self):
+        self.vocab_file = os.path.join(VOCAB_DIR, "vocabulary.txt")
+        self.vocab_with_wiki = os.path.join(VOCAB_DIR, "vocabulary_wiki.txt")
+        self.w2v_raw_dir = os.path.join(RAW_DIR, "SE_Books_txt")
 
     def __wiki_context_extract(self, word):
         try:
             summary = wikipedia.summary(word)
-            summary = summary.replace("\n" , " ")
+            summary = summary.replace("\n", " ")
             if summary:
                 return summary
             else:
@@ -135,12 +133,12 @@ if __name__ == "__main__":
     nltk.download("stopwords")
     nltk.download("wordnet")
     nltk.download("punkt")
-    data_dir = os.path.abspath(os.pardir) + os.sep + "data" + os.sep
-    preprocessor = Preprocessor(data_dir)
+
+    preprocessor = Preprocessor()
     docuemnts = preprocessor.read_all_files()
     tokens = preprocessor.tokenize(docuemnts)
     tokens = preprocessor.remove_stop_word(tokens)
     tokens = preprocessor.clean_numbers(tokens)
     tokens = preprocessor.lemmatizing(tokens)  # tokens =preprocessor.stemming(tokens)
-    preprocessor.write_to_file(data_dir + "w2v.data", tokens)
+    preprocessor.write_to_file(W2V_DIR + os.sep + "w2v.data", tokens)
     print("Finished ...")

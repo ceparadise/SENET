@@ -1,23 +1,25 @@
 from gensim.models.word2vec import Word2Vec
 from nltk.stem.wordnet import WordNetLemmatizer
+import os
+from common import *
 
 keywords = set()
 wd = set()
 lmtzr = WordNetLemmatizer()
 word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
-with open("../../data/vocabulary.txt", encoding="utf8") as fin:
+with open(VOCAB_DIR + os.sep + "vocabulary.txt", encoding="utf8") as fin:
     for line in fin:
         wd.add(line.strip(" \n\t\r"))
     print(len(wd))
 for word_file in word_files:
-    with open("../../data/" + word_file, encoding="utf8") as fin:
+    with open(VOCAB_DIR + os.sep + word_file, encoding="utf8") as fin:
         for line in fin:
             line = line.strip("\n\t\r")
             words = line.split(",")
             keywords.add(words[0])
             keywords.add(words[1])
 
-with open("../../data/hyper.txt", encoding="utf8") as fin:
+with open(VOCAB_DIR + os.sep + "hyper.txt", encoding="utf8") as fin:
     for line in fin:
         parent, rest = line.split(":")
         keywords.add(parent)
@@ -25,7 +27,7 @@ with open("../../data/hyper.txt", encoding="utf8") as fin:
         for words in rest_words:
             keywords.add(parent)
 
-model = Word2Vec.load("../../data/w2v.model")
+model = Word2Vec.load(W2V_DIR + os.sep + "w2v.model")
 in_vocab = set()
 un_vocab = set()
 vocab = model.wv.vocab.keys()

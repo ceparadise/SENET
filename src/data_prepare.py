@@ -2,6 +2,7 @@ import os
 import random
 import re
 import numpy as np
+from common import VOCAB_DIR
 
 from feature_extractors import FeatureExtractor
 
@@ -9,8 +10,7 @@ from feature_extractors import FeatureExtractor
 class DataPrepare:
     def __init__(self, p2v_model, fake=False):
         self.p2v_model = p2v_model
-        self.data_dir = os.pardir + os.sep + "data"
-        self.keyword_path = self.data_dir + os.sep + "vocabulary.txt"
+        self.keyword_path = VOCAB_DIR + os.sep + "vocabulary.txt"
         self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
         golden_pairs = self.build_golden()
         self.data_set = []
@@ -42,13 +42,13 @@ class DataPrepare:
     def build_golden(self):
         pair_set = set()
         for g_pair_name in self.golden_pair_files:
-            path = self.data_dir + os.sep + g_pair_name
+            path = VOCAB_DIR + os.sep + g_pair_name
             with open(path, encoding='utf8') as fin:
                 for line in fin.readlines():
                     words1, words2 = line.strip(" \n").split(",")
                     pair_set.add((words1, words2))
 
-        with open(self.data_dir + os.sep + "hyper.txt") as fin:
+        with open(VOCAB_DIR + os.sep + "hyper.txt") as fin:
             for line in fin.readlines():
                 words1, rest = line.strip(" \n").split(":")
                 for word in rest.strip(" ").split(","):
