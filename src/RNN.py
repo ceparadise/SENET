@@ -1,6 +1,4 @@
 import tensorflow as tf
-import numpy as np
-
 
 class RNN:
     def __init__(self, vec_len):

@@ -7,21 +7,18 @@ from nltk.tokenize import sent_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
 import wikipedia
-from wikipedia.exceptions import DisambiguationError
-from wikipedia.exceptions import PageError
+from common import *
 
 
 class Preprocessor:
-    def __init__(self, dir_path):
-        self.dir_paht = dir_path
-        self.vocab_file = os.path.join(dir_path, "vocabulary.txt")
-        self.vocab_with_wiki = os.path.join(dir_path, "vocabulary_wiki.txt")
-        self.w2v_raw_dir = os.path.join(data_dir, "SE_Books_txt")
+    def __init__(self):
+        self.vocab_file = os.path.join(VOCAB_DIR, "vocabulary.txt")
+        self.vocab_with_wiki = os.path.join(VOCAB_DIR, "vocabulary_wiki.txt")
 
     def __wiki_context_extract(self, word):
         try:
             summary = wikipedia.summary(word)
-            summary = summary.replace("\n" , " ")
+            summary = summary.replace("\n", " ")
             if summary:
                 return summary
             else:
@@ -31,6 +28,8 @@ class Preprocessor:
 
     def add_wiki_content(self):
         count = 0
+        if os.path.isfile(self.vocab_with_wiki):
+            return
         with open(self.vocab_file, encoding="utf8") as fin, open(self.vocab_with_wiki, 'w', encoding="utf8") as fout:
             for line in fin:
                 word = line.strip("\n\t\r")
@@ -44,22 +43,29 @@ class Preprocessor:
     def read_all_files(self):
         """
         Read all files in a directory and make the content in each file to be lowercase. All files will be merged to a
-        single string
+        single string. The file path can be too long for windows machine.
         :param dir_path: The path to the directory
         :return: A string representing all files
         """
+
         self.add_wiki_content()
-        file_names = os.listdir(self.w2v_raw_dir)
-        file_paths = [os.path.join(self.w2v_raw_dir, file_name) for file_name in file_names]
+        file_paths = []
+        for raw_dir in RAW_DIR_LIST:
+            file_names = os.listdir(raw_dir)
+            file_paths.extend([os.path.join(raw_dir, file_name) for file_name in file_names])
         file_paths.append(self.vocab_with_wiki)
+
         raw_txt = ''
         for file_path in file_paths:
             if not file_path.endswith("txt"):
                 continue
             print("Processing " + file_path)
-            with open(file_path, 'r', encoding='utf8') as input:
-                for line in input:
-                    raw_txt += line.lower()
+            try:
+                with open(file_path, 'r', encoding='utf8') as input:
+                    for line in input:
+                        raw_txt += line.lower()
+            except Exception as e:
+                pass
         return raw_txt
 
     def tokenize(self, raw_txt):
@@ -123,6 +129,7 @@ class Preprocessor:
         return re_stop_sentences
 
     def write_to_file(self, output_path, sentences):
+        print("Writing to disk ...")
         with open(output_path, 'w', encoding='utf8') as outfile:
             for line in sentences:
                 line = ' '.join(line).strip(' \n') + '\n'
@@ -130,17 +137,35 @@ class Preprocessor:
                     outfile.write(line)
 
 
+'''
+class PUREDataExtractor:
+    def __init__(self):
+        xmls = [os.path.join(PURE_REQ_DIR, fname) for fname in os.listdir(PURE_REQ_DIR) if fname.endswith(".xml")]
+        for xml_path in xmls:
+            print("processing " + xml_path)
+            tree = ET.parse(xml_path)
+            txt = ""
+            for element in tree.iter():
+                if element.tag.endswith("title") or element.tag.endswith("text_body"):
+                    if (element.text == None):
+                        continue
+                    txt += element.text.strip("\n\t\r") + "\n"
+            txt_path = xml_path[:-len(".xml")] + ".txt"
+            with open(txt_path, 'w', encoding='utf8') as of:
+                of.write(txt)
+'''
+
 if __name__ == "__main__":
     print("Start ...")
     nltk.download("stopwords")
     nltk.download("wordnet")
     nltk.download("punkt")
-    data_dir = os.path.abspath(os.pardir) + os.sep + "data" + os.sep
-    preprocessor = Preprocessor(data_dir)
+
+    preprocessor = Preprocessor()
     docuemnts = preprocessor.read_all_files()
     tokens = preprocessor.tokenize(docuemnts)
     tokens = preprocessor.remove_stop_word(tokens)
     tokens = preprocessor.clean_numbers(tokens)
     tokens = preprocessor.lemmatizing(tokens)  # tokens =preprocessor.stemming(tokens)
-    preprocessor.write_to_file(data_dir + "w2v.data", tokens)
+    preprocessor.write_to_file(W2V_DIR + os.sep + "w2v.data", tokens)
     print("Finished ...")

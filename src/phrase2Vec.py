@@ -1,14 +1,15 @@
 from gensim.models.word2vec import Word2Vec
 from gensim.models.phrases import Phrases
+from common import  W2V_DIR
 import os
 
 
 class Phrase2Vec:
     def __init__(self, force_build=False):
         print("Force rebuild = {}", force_build)
-        data_path = os.pardir + os.sep + "data"
-        self.model_path = data_path + os.sep + "w2v.model";
-        self.training_data_path = data_path + os.sep + "w2v.data"
+
+        self.model_path = W2V_DIR + os.sep + "w2v.model";
+        self.training_data_path = W2V_DIR + os.sep + "w2v.data"
 
         # If file not exists, train a new one
         if not os.path.isfile(self.model_path) or force_build == True:
