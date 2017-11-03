@@ -6,6 +6,7 @@ DATA_DIR = PROJECT_ROOT + os.sep + "data"
 RAW_DIR = DATA_DIR + os.sep + "raw"
 SE_BOOK_DIR = RAW_DIR + os.sep + "SE_Books_txt"
 PURE_REQ_DIR = RAW_DIR + os.sep + "PURE_Requirement"
+GOOGLE_DOWNLOAD = RAW_DIR + os.sep + 'Google_Word_Download'
 RAW_DIR_LIST = [SE_BOOK_DIR, PURE_REQ_DIR]
 
 VOCAB_DIR = DATA_DIR + os.sep + "vocab"
