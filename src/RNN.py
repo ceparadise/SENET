@@ -1,6 +1,4 @@
 import tensorflow as tf
-import numpy as np
-
 
 class RNN:
     def __init__(self, vec_len):
@@ -68,7 +66,6 @@ class RNN:
                     res.append((batch_ys, is_correct))
                 print(res)
                 self.eval(res)
-                break
 
     def classify(self, X, weights, biases):
         X = tf.reshape(X, [-1, self.n_inputs])

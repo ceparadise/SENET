@@ -2,6 +2,7 @@ import os
 import random
 import re
 import numpy as np
+from common import VOCAB_DIR
 
 from feature_extractors import FeatureExtractor
 
@@ -9,75 +10,67 @@ from feature_extractors import FeatureExtractor
 class DataPrepare:
     def __init__(self, p2v_model, fake=False):
         self.p2v_model = p2v_model
-        self.data_dir = os.pardir + os.sep + "data"
-        self.keyword_path = self.data_dir + os.sep + "vocabulary.txt"
+        self.keyword_path = VOCAB_DIR + os.sep + "vocabulary.txt"
         self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
         golden_pairs = self.build_golden()
         self.data_set = []
-        pairs = self.build_pairs()
-
-        for pair in pairs:
+        neg_pairs = []
+        for pair in golden_pairs:
             try:
                 words1 = pair[0]
                 words2 = pair[1]
                 phrase1 = self.words2phrase(words1)
                 phrase2 = self.words2phrase(words2)
-                p1_vec = self.p2v_model.w2v_model[pair[0]]
-                p2_vec = self.p2v_model.w2v_model[pair[1]]
-                similarity = self.p2v_model.w2v_model.similarity(phrase1, phrase2)
-                vector = []
-                vector.extend(p1_vec)
-                vector.extend(p2_vec)
-                vector.append(similarity)
-                vector.extend(self.build_feature_vector(words1, words2))
-                if pair in golden_pairs:
-                    label = [1., 0.]
-                else:
-                    label = [0., 1.]
-                self.data_set.append((vector, label))
-            except KeyError as e:
+                close_phrases1 = self.p2v_model.w2v_model.most_similar(phrase1, topn=3)
+                close_phrases2 = self.p2v_model.w2v_model.most_similar(phrase2, topn=3)
+                for close_phrase1, close_phrase2 in zip(close_phrases1, close_phrases2):
+                    close_words1 = self.phrase2words(close_phrase1[0])
+                    close_words2 = self.phrase2words(close_phrase2[0])
+                    if close_words1 != phrase2:
+                        neg_pairs.append((phrase1, close_words1))
+                    if close_words2 != phrase1:
+                        neg_pairs.append((phrase2, close_words1))
+            except Exception:
                 pass
-                # print(e)
+
+
+        labels = [[0., 1.], [1., 0.]]
+        for i, plist in enumerate([neg_pairs, golden_pairs]):
+            label = labels[i]
+            for pair in plist:
+                try:
+                    words1 = pair[0]
+                    words2 = pair[1]
+                    phrase1 = self.words2phrase(words1)
+                    phrase2 = self.words2phrase(words2)
+                    p1_vec = self.p2v_model.w2v_model[pair[0]]
+                    p2_vec = self.p2v_model.w2v_model[pair[1]]
+                    similarity = self.p2v_model.w2v_model.similarity(phrase1, phrase2)
+                    vector = []
+                    vector.extend(p1_vec)
+                    vector.extend(p2_vec)
+                    vector.append(similarity)
+                    vector.extend(self.build_feature_vector(words1, words2))
+                    self.data_set.append((vector, label))
+                except KeyError as e:
+                    pass
+                    # print(e)
 
     def build_golden(self):
         pair_set = set()
         for g_pair_name in self.golden_pair_files:
-            path = self.data_dir + os.sep + g_pair_name
+            path = VOCAB_DIR + os.sep + g_pair_name
             with open(path, encoding='utf8') as fin:
                 for line in fin.readlines():
                     words1, words2 = line.strip(" \n").split(",")
                     pair_set.add((words1, words2))
 
-        with open(self.data_dir + os.sep + "hyper.txt") as fin:
+        with open(VOCAB_DIR + os.sep + "hyper.txt") as fin:
             for line in fin.readlines():
                 words1, rest = line.strip(" \n").split(":")
                 for word in rest.strip(" ").split(","):
                     pair_set.add((words1, word))
         return pair_set
-
-    def build_pairs(self):
-        """
-        for each keyword, find its closest N phrases and produce N pairs.
-        :return: The binned N pairs
-        """
-        pairs = set()
-        with open(self.keyword_path, encoding='utf8') as kf:
-            for words in kf.readlines():
-                words = words.strip(" \n")
-                cleaned_words = self.clean_word(words)
-                if len(cleaned_words) == 0:
-                    continue
-                # Transfer the words into a phrase eg. new york -> new_york, since p2vmodel use this format
-                phrase = self.words2phrase(cleaned_words)
-                try:
-                    close_phrases = self.p2v_model.w2v_model.most_similar(phrase, topn=50)
-                    for close_phrase in close_phrases:
-                        close_words = self.phrase2words(close_phrase[0])
-                        pairs.add((cleaned_words, close_words))
-                except KeyError:
-                    pass
-                    # print("key error for " + phrase + " | " + words)
-        return pairs
 
     def words2phrase(self, words):
         return words.replace(" ", "_")
@@ -132,5 +125,3 @@ class DataSet:
         end = self.cur_batch_start
         batch_data = self.data[start:end]
         return np.array([x[0] for x in batch_data]), np.array([x[1] for x in batch_data])
-
-
