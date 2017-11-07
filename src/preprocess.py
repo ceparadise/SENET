@@ -14,6 +14,7 @@ class Preprocessor:
     def __init__(self):
         self.vocab_file = os.path.join(VOCAB_DIR, "vocabulary.txt")
         self.vocab_with_wiki = os.path.join(VOCAB_DIR, "vocabulary_wiki.txt")
+        self.definition = os.path.join(VOCAB_DIR, "definition.txt")
 
     def __wiki_context_extract(self, word):
         try:
@@ -54,6 +55,7 @@ class Preprocessor:
             file_names = os.listdir(raw_dir)
             file_paths.extend([os.path.join(raw_dir, file_name) for file_name in file_names])
         file_paths.append(self.vocab_with_wiki)
+        file_paths.append(self.definition)
 
         raw_txt = ''
         for file_path in file_paths:
@@ -81,7 +83,7 @@ class Preprocessor:
             tokenized_sentences.append(sentence_token)
         return tokenized_sentences
 
-    def clean_numbers(self, tokenized_sentences):
+    def clean_nonAlpha(self, tokenized_sentences):
         # clean numbers and puncutations
         clean_numbers_sentences = []
         for sentence_token in tokenized_sentences:
@@ -137,24 +139,6 @@ class Preprocessor:
                     outfile.write(line)
 
 
-'''
-class PUREDataExtractor:
-    def __init__(self):
-        xmls = [os.path.join(PURE_REQ_DIR, fname) for fname in os.listdir(PURE_REQ_DIR) if fname.endswith(".xml")]
-        for xml_path in xmls:
-            print("processing " + xml_path)
-            tree = ET.parse(xml_path)
-            txt = ""
-            for element in tree.iter():
-                if element.tag.endswith("title") or element.tag.endswith("text_body"):
-                    if (element.text == None):
-                        continue
-                    txt += element.text.strip("\n\t\r") + "\n"
-            txt_path = xml_path[:-len(".xml")] + ".txt"
-            with open(txt_path, 'w', encoding='utf8') as of:
-                of.write(txt)
-'''
-
 if __name__ == "__main__":
     print("Start ...")
     nltk.download("stopwords")
@@ -165,7 +149,7 @@ if __name__ == "__main__":
     docuemnts = preprocessor.read_all_files()
     tokens = preprocessor.tokenize(docuemnts)
     tokens = preprocessor.remove_stop_word(tokens)
-    tokens = preprocessor.clean_numbers(tokens)
+    tokens = preprocessor.clean_nonAlpha(tokens)
     tokens = preprocessor.lemmatizing(tokens)  # tokens =preprocessor.stemming(tokens)
     preprocessor.write_to_file(W2V_DIR + os.sep + "w2v.data", tokens)
     print("Finished ...")
