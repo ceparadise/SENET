@@ -71,7 +71,7 @@ class RNN:
                 a_pre += pre
                 a_f1 += f1
 
-            print("Average recall:{}, precision:{}, F1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10))
+            print("Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10))
 
     def classify(self, X, weights, biases):
         X = tf.reshape(X, [-1, self.n_inputs])
@@ -113,8 +113,9 @@ class RNN:
         else:
             precision = tp / (tp + fp)
 
+        f1 = 2 * (precision * recall) / (precision + recall)
         print("True Negative:{}, True Positive:{}, False Negative:{}, False Negative:{}".format(tn, tp, fn, tp))
         print("recall: {}".format(recall))
-        print("accuracy: {}".format(accuracy))
         print("precision: {}".format(precision))
-        return recall, accuracy, precision
+        print("f1:{}".format(f1))
+        return recall, precision, f1
