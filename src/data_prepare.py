@@ -99,7 +99,7 @@ class DataPrepare:
     def ten_fold(self):
         train_test_pair = []
         test_size = int(len(self.data_set) / 5)
-        for i in range(1, 10):
+        for i in range(0, 10):
             random.shuffle(self.data_set)
             test_entries = self.data_set[:test_size]
             train_entries = self.data_set[test_size:]

@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+
 class RNN:
     def __init__(self, vec_len):
         self.lr = 0.001  # learning rate
@@ -36,6 +37,7 @@ class RNN:
             accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
             init = tf.global_variables_initializer()
 
+            a_recall = a_pre = a_f1 = 0
             for index, (train_set, test_set) in enumerate(data.ten_fold()):
                 print("Start fold {}".format(index))
 
@@ -48,12 +50,12 @@ class RNN:
                         x: batch_xs,
                         y: batch_ys,
                     })
-                    if step % 2000 == 0:
-                        print("Training step {}:".format(step))
-                        print(sess.run(accuracy, feed_dict={
-                            x: batch_xs,
-                            y: batch_ys,
-                        }))
+                    # if step % 2000 == 0:
+                    #     print("Training step {}:".format(step))
+                    #     print(sess.run(accuracy, feed_dict={
+                    #         x: batch_xs,
+                    #         y: batch_ys,
+                    #     }))
                     step += 1
 
                 print("Start testing...")
@@ -64,8 +66,12 @@ class RNN:
                     batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                     is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
                     res.append((batch_ys, is_correct))
-                print(res)
-                self.eval(res)
+                re, pre, f1 = self.eval(res)
+                a_recall += re
+                a_pre += pre
+                a_f1 += f1
+
+            print("Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10))
 
     def classify(self, X, weights, biases):
         X = tf.reshape(X, [-1, self.n_inputs])
@@ -107,7 +113,9 @@ class RNN:
         else:
             precision = tp / (tp + fp)
 
+        f1 = 2 * (precision * recall) / (precision + recall)
         print("True Negative:{}, True Positive:{}, False Negative:{}, False Negative:{}".format(tn, tp, fn, tp))
         print("recall: {}".format(recall))
-        print("accuracy: {}".format(accuracy))
         print("precision: {}".format(precision))
+        print("f1:{}".format(f1))
+        return recall, precision, f1
