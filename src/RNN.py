@@ -66,7 +66,6 @@ class RNN:
                     res.append((batch_ys, is_correct))
                 print(res)
                 self.eval(res)
-                break
 
     def classify(self, X, weights, biases):
         X = tf.reshape(X, [-1, self.n_inputs])
