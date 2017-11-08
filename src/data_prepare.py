@@ -55,6 +55,7 @@ class DataPrepare:
                 except KeyError as e:
                     pass
         random.shuffle(self.data_set)
+        print(self.data_set)
 
     def build_golden(self):
         pair_set = set()
@@ -106,6 +107,7 @@ class DataPrepare:
         for i in range(0, 10):
             end_cut_index = min(start_cut_index + slice_size, len(self.data_set))
             folds.append(self.data_set[start_cut_index: end_cut_index])
+            start_cut_index = end_cut_index
 
         for i in range(0, 10):
             test_entries = folds[i]
