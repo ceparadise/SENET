@@ -63,8 +63,6 @@ class RNN:
                         batch_xs, batch_ys, test_word_pairs = test_set.next_batch(self.batch_size)
                         batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                         is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
-                        print("debug Pre: {}".format(sess.run(pred_label_index, feed_dict={x: batch_xs})))
-                        print("debug Gold: {}".format(batch_ys))
                         res.append((batch_ys, is_correct, test_word_pairs))
                     re, pre, f1 = self.eval(res)
                     self.write_res(res, fout)
@@ -124,4 +122,6 @@ class RNN:
     def write_res(self, res, writer):
         writer.write("w1,w2,correctness")
         for label, correctness, word_pairs in res:
-            writer.write("{},{},{} \n".format(word_pairs[0][0], word_pairs[0][1], correctness[0]))
+            res_str = "{},{},{} \n".format(word_pairs[0][0], word_pairs[0][1], correctness[0])
+            print(res_str)
+            writer.write(res_str)
