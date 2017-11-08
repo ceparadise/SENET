@@ -113,7 +113,7 @@ class DataPrepare:
                 train_entries.extend(fd)
             for fd in folds[i + 1:]:
                 train_entries.extend(fd)
-                
+
             train_set = DataSet(train_entries)
             test_set = DataSet(test_entries)
             train_test_pair.append((train_set, test_set))

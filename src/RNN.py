@@ -47,7 +47,7 @@ class RNN:
                     sess.run(init)
                     step = 0
                     while step * self.batch_size < self.training_iters:
-                        batch_xs, batch_ys = train_set.next_batch(self.batch_size)
+                        batch_xs, batch_ys, train_word_pairs = train_set.next_batch(self.batch_size)
                         batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                         sess.run([train_op], feed_dict={
                             x: batch_xs,
@@ -59,10 +59,10 @@ class RNN:
                     res = []
                     print(len(test_set.data))
                     for i in range(len(test_set.data)):
-                        batch_xs, batch_ys, word_pairs = train_set.next_batch(self.batch_size)
+                        batch_xs, batch_ys, test_word_pairs = train_set.next_batch(self.batch_size)
                         batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                         is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
-                        res.append((batch_ys, is_correct, word_pairs))
+                        res.append((batch_ys, is_correct, test_word_pairs))
                     re, pre, f1 = self.eval(res)
                     self.write_res(res, fout)
                     a_recall += re
