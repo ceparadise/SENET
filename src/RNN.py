@@ -111,10 +111,9 @@ class RNN:
             precision = 1
         else:
             precision = tp / (tp + fp)
-
-        if precision + recall == 0:
-            f1 = 0
-        f1 = 2 * (precision * recall) / (precision + recall)
+        f1 = 0
+        if precision + recall > 0:
+            f1 = 2 * (precision * recall) / (precision + recall)
         print("True Negative:{}, True Positive:{}, False Negative:{}, False Positive:{}".format(tn, tp, fn, fp))
         print("recall: {}".format(recall))
         print("precision: {}".format(precision))
