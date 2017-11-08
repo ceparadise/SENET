@@ -17,8 +17,8 @@ class DataPrepare:
         neg_pairs = []
         for pair in golden_pairs:
             try:
-                words1 = pair[0].stirp(" \n")
-                words2 = pair[1].stirp(" \n")
+                words1 = pair[0].strip(" \n")
+                words2 = pair[1].strip(" \n")
                 phrase1 = self.words2phrase(words1)
                 phrase2 = self.words2phrase(words2)
                 close_phrases1 = self.p2v_model.w2v_model.most_similar(phrase1, topn=3)
@@ -53,8 +53,8 @@ class DataPrepare:
                     vector.extend(self.build_feature_vector(words1, words2))
                     self.data_set.append(
                         (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
-                except KeyError as e:
-                    pass
+                except Exception as e:
+                    print(e)
         random.shuffle(self.data_set)
         for x in self.data_set:
             print(x[1], x[2])
