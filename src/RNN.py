@@ -114,7 +114,7 @@ class RNN:
             precision = tp / (tp + fp)
 
         f1 = 2 * (precision * recall) / (precision + recall)
-        print("True Negative:{}, True Positive:{}, False Negative:{}, False Negative:{}".format(tn, tp, fn, tp))
+        print("True Negative:{}, True Positive:{}, False Negative:{}, True Negative:{}".format(tn, tp, fn, tp))
         print("recall: {}".format(recall))
         print("precision: {}".format(precision))
         print("f1:{}".format(f1))
