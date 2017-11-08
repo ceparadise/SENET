@@ -35,12 +35,13 @@ class DataPrepare:
 
         labels = [[0., 1.], [1., 0.]]
         print("Candidate neg pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
+        cnt_n = cnt_p = 0
         for i, plist in enumerate([neg_pairs, golden_pairs]):
             label = labels[i]
             for pair in plist:
                 try:
-                    words1 = pair[0]
-                    words2 = pair[1]
+                    words1 = pair[0].strip(" \n")
+                    words2 = pair[1].strip(" \n")
                     phrase1 = self.words2phrase(words1)
                     phrase2 = self.words2phrase(words2)
                     p1_vec = self.p2v_model.w2v_model[pair[0]]
@@ -53,8 +54,13 @@ class DataPrepare:
                     vector.extend(self.build_feature_vector(words1, words2))
                     self.data_set.append(
                         (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
+                    if i == 0:
+                        cnt_n += 1
+                    else:
+                        cnt_p += 1
                 except Exception as e:
                     pass
+        print("Negative pairs:{} Golden Pairs:{}".format(cnt_n, cnt_p))
         random.shuffle(self.data_set)
         for x in self.data_set:
             print(x[1], x[2])
