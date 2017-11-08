@@ -35,7 +35,8 @@ class RNN:
             pred = self.classify(x, weights, biases)
             cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y))
             train_op = tf.train.AdamOptimizer(self.lr).minimize(cost)
-            correct_pred = tf.equal(tf.argmax(pred, 1), tf.argmax(y, 1))
+            pred_label_index = tf.argmax(pred, 1)  # Since we use one-hot represent the predicted label, index = label
+            correct_pred = tf.equal(pred_label_index, tf.argmax(y, 1))
             accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
             init = tf.global_variables_initializer()
 
@@ -62,6 +63,7 @@ class RNN:
                         batch_xs, batch_ys, test_word_pairs = test_set.next_batch(self.batch_size)
                         batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                         is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
+                        print("debug: {}", pred_label_index)
                         res.append((batch_ys, is_correct, test_word_pairs))
                     re, pre, f1 = self.eval(res)
                     self.write_res(res, fout)
