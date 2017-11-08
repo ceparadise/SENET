@@ -56,7 +56,8 @@ class DataPrepare:
                 except KeyError as e:
                     pass
         random.shuffle(self.data_set)
-        print([(x[1], x[2]) for x in self.data_set] + "\n")
+        for x in self.data_set:
+            print(x[1], x[2], "\n")
 
     def build_golden(self):
         pair_set = set()
