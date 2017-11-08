@@ -52,8 +52,10 @@ class DataPrepare:
                     vector.extend(self.build_feature_vector(words1, words2))
                     self.data_set.append(
                         (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
+                    print("Added:" + (words1, words2))
                 except KeyError as e:
                     pass
+        random.shuffle(self.data_set)
 
     def build_golden(self):
         pair_set = set()
@@ -118,6 +120,7 @@ class DataPrepare:
             test_set = DataSet(test_entries)
             train_test_pair.append((train_set, test_set))
         return train_test_pair
+
 
 class DataSet:
     def __init__(self, entry_list):
