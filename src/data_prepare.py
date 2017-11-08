@@ -33,7 +33,6 @@ class DataPrepare:
             except Exception:
                 pass
 
-
         labels = [[0., 1.], [1., 0.]]
         for i, plist in enumerate([neg_pairs, golden_pairs]):
             label = labels[i]
@@ -51,10 +50,10 @@ class DataPrepare:
                     vector.extend(p2_vec)
                     vector.append(similarity)
                     vector.extend(self.build_feature_vector(words1, words2))
-                    self.data_set.append((vector, label))
+                    self.data_set.append(
+                        (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
                 except KeyError as e:
                     pass
-                    # print(e)
 
     def build_golden(self):
         pair_set = set()
@@ -98,11 +97,25 @@ class DataPrepare:
 
     def ten_fold(self):
         train_test_pair = []
-        test_size = int(len(self.data_set) / 5)
+        folds = []
+        slice_size = len(self.data_set) / 10
+        if slice_size == 0:
+            raise Exception("Not enough data to do 10 fold")
+        start_cut_index = 0;
         for i in range(0, 10):
-            random.shuffle(self.data_set)
-            test_entries = self.data_set[:test_size]
-            train_entries = self.data_set[test_size:]
+            end_cut_index = min(start_cut_index + slice_size, len(self.data_set))
+            folds.append(self.data_set[start_cut_index: end_cut_index])
+
+        for i in range(0, 10):
+            test_fold = folds[i]
+            train_fold = []
+            for fd in folds[:i]:
+                train_fold.extend(fd)
+            for fd in folds[i + 1:]:
+                train_fold.extend(fd)
+
+            test_entries = self.data_set[test_fold]
+            train_entries = self.data_set[train_fold]
             train_set = DataSet(train_entries)
             test_set = DataSet(test_entries)
             train_test_pair.append((train_set, test_set))
@@ -115,6 +128,12 @@ class DataSet:
         self.data = entry_list
 
     def next_batch(self, batch_size):
+        """
+        Get next batch of the data. If the times of requesting new batch larger than the dataset,
+        shuffle the dataset and do it again
+        :param batch_size:
+        :return:
+        """
         start = self.cur_batch_start
         self.cur_batch_start += batch_size
         if self.cur_batch_start > len(self.data):
@@ -124,4 +143,6 @@ class DataSet:
             assert batch_size <= len(self.data)
         end = self.cur_batch_start
         batch_data = self.data[start:end]
-        return np.array([x[0] for x in batch_data]), np.array([x[1] for x in batch_data])
+        # Provide the vector, label and the readable words
+        return np.array([x[0] for x in batch_data]), np.array([x[1] for x in batch_data]), np.array(
+            [x[2] for x in batch_data])

@@ -30,6 +30,7 @@ for fname in fileNames:
         text = " ".join(text)
         tokens = preprocessor.tokenize(text)
         tokens = preprocessor.remove_stop_word(tokens)
+        tokens = preprocessor.lemmatizing(tokens)
         clean_sents_list = preprocessor.clean_nonAlpha(tokens)
         if word not in word_dict.keys():
             word_dict[word] = []
