@@ -11,7 +11,7 @@ class DataPrepare:
     def __init__(self, p2v_model, fake=False):
         self.p2v_model = p2v_model
         self.keyword_path = VOCAB_DIR + os.sep + "vocabulary.txt"
-        self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
+        self.golden_pair_files = ["synonym.txt"]#["synonym.txt", "contrast.txt", "related.txt"]
         golden_pairs = self.build_golden()
         self.data_set = []
         neg_pairs = []
@@ -48,8 +48,8 @@ class DataPrepare:
                     p2_vec = self.p2v_model.w2v_model[pair[1]]
                     similarity = self.p2v_model.w2v_model.similarity(phrase1, phrase2)
                     vector = []
-                    vector.extend(p1_vec)
-                    vector.extend(p2_vec)
+                    #vector.extend(p1_vec)
+                    #vector.extend(p2_vec)
                     vector.append(similarity)
                     vector.extend(self.build_feature_vector(words1, words2))
                     self.data_set.append(
