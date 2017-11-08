@@ -34,6 +34,7 @@ class DataPrepare:
                 pass
 
         labels = [[0., 1.], [1., 0.]]
+        print("Candidate neg_pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
         for i, plist in enumerate([neg_pairs, golden_pairs]):
             label = labels[i]
             for pair in plist:
@@ -55,7 +56,7 @@ class DataPrepare:
                 except KeyError as e:
                     pass
         random.shuffle(self.data_set)
-        print([(x[1], x[2]) for x in self.data_set])
+        print([(x[1], x[2]) for x in self.data_set] + "\n")
 
     def build_golden(self):
         pair_set = set()
