@@ -40,7 +40,7 @@ class RNN:
             init = tf.global_variables_initializer()
 
             a_recall = a_pre = a_f1 = 0
-            result_file = RESULT_DIR + os.sep + "result{}.txt".format(datetime.datetime.now())
+            result_file = RESULT_DIR + os.sep + "result{}.txt".format(len(os.listdir(RESULT_DIR)))
             with open(result_file, "w", encoding='utf8') as fout:
                 for index, (train_set, test_set) in enumerate(data.ten_fold()):
                     print("Start fold {}".format(index))
@@ -59,7 +59,7 @@ class RNN:
                     res = []
                     print(len(test_set.data))
                     for i in range(len(test_set.data)):
-                        batch_xs, batch_ys, test_word_pairs = train_set.next_batch(self.batch_size)
+                        batch_xs, batch_ys, test_word_pairs = test_set.next_batch(self.batch_size)
                         batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                         is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
                         res.append((batch_ys, is_correct, test_word_pairs))

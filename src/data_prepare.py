@@ -141,5 +141,4 @@ class DataSet:
         end = self.cur_batch_start
         batch_data = self.data[start:end]
         # Provide the vector, label and the readable words
-        return np.array([x[0] for x in batch_data]), np.array([x[1] for x in batch_data]), np.array(
-            [x[2] for x in batch_data])
+        return np.array([x[0] for x in batch_data]), np.array([x[1] for x in batch_data]), [x[2] for x in batch_data]
