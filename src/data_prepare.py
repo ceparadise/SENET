@@ -31,7 +31,7 @@ class DataPrepare:
                     if close_words2 != phrase1:
                         neg_pairs.append((phrase2, close_words1))
             except Exception:
-                continue
+                pass
 
         labels = [[0., 1.], [1., 0.]]
         for i, plist in enumerate([neg_pairs, golden_pairs]):
@@ -52,7 +52,6 @@ class DataPrepare:
                     vector.extend(self.build_feature_vector(words1, words2))
                     self.data_set.append(
                         (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
-                    print("Added:" + words1 + " " + words2)
                 except KeyError as e:
                     pass
         random.shuffle(self.data_set)
