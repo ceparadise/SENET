@@ -54,8 +54,8 @@ class DataPrepare:
                         (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
                 except KeyError as e:
                     pass
-        random.shuffle([(x[1], x[2]) for x in self.data_set])
-        print(self.data_set)
+        random.shuffle(self.data_set)
+        print([(x[1], x[2]) for x in self.data_set])
 
     def build_golden(self):
         pair_set = set()
