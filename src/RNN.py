@@ -112,15 +112,13 @@ class RNN:
             precision = tp / (tp + fp)
 
         f1 = 2 * (precision * recall) / (precision + recall)
-        print("True Negative:{}, True Positive:{}, False Negative:{}, True Negative:{}".format(tn, tp, fn, tp))
+        print("True Negative:{}, True Positive:{}, False Negative:{}, False Positive:{}".format(tn, tp, fn, fp))
         print("recall: {}".format(recall))
         print("precision: {}".format(precision))
         print("f1:{}".format(f1))
         return recall, precision, f1
 
     def write_res(self, res, writer):
+        writer.write("w1,w2,correctness")
         for label, correctness, word_pairs in res:
-            try:
-                writer.write("{} {} {} \n".format(word_pairs[0], word_pairs[1], correctness[0]))
-            except Exception:
-                print(word_pairs)
+            writer.write("{},{},{} \n".format(word_pairs[0][0], word_pairs[0][1], correctness[0]))
