@@ -1,4 +1,6 @@
 import tensorflow as tf
+from common import *
+import logging
 
 
 class RNN:
@@ -10,6 +12,12 @@ class RNN:
         self.n_steps = 1  # time steps
         self.n_hidden_units = 128  # neurons in hidden layer
         self.n_classes = 2  # classes (0/1 digits)
+
+        self.logger = logging.getLogger('RNN')
+        hdlr = logging.FileHandler(RESULT_DIR + os.sep + 'result.log')
+        formatter = logging.Formatter('%(message)s')
+        hdlr.setFormatter(formatter)
+        self.logger.addHandler(hdlr)
 
     def train_test(self, data):
         # x y placeholder
@@ -40,7 +48,6 @@ class RNN:
             a_recall = a_pre = a_f1 = 0
             for index, (train_set, test_set) in enumerate(data.ten_fold()):
                 print("Start fold {}".format(index))
-
                 sess.run(init)
                 step = 0
                 while step * self.batch_size < self.training_iters:
@@ -50,23 +57,18 @@ class RNN:
                         x: batch_xs,
                         y: batch_ys,
                     })
-                    # if step % 2000 == 0:
-                    #     print("Training step {}:".format(step))
-                    #     print(sess.run(accuracy, feed_dict={
-                    #         x: batch_xs,
-                    #         y: batch_ys,
-                    #     }))
                     step += 1
 
                 print("Start testing...")
                 res = []
                 print(len(test_set.data))
                 for i in range(len(test_set.data)):
-                    batch_xs, batch_ys = train_set.next_batch(self.batch_size)
+                    batch_xs, batch_ys, word_pairs = train_set.next_batch(self.batch_size)
                     batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                     is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
-                    res.append((batch_ys, is_correct))
+                    res.append((batch_ys, is_correct, word_pairs))
                 re, pre, f1 = self.eval(res)
+                self.log_res(res)
                 a_recall += re
                 a_pre += pre
                 a_f1 += f1
@@ -89,7 +91,7 @@ class RNN:
         tp = 0
         fn = 0
         fp = 0
-        for label, correctness in results:
+        for label, correctness, word_pairs in results:
             if label[0][0] == 1:  # positive
                 if correctness[0]:
                     tp += 1
@@ -119,3 +121,7 @@ class RNN:
         print("precision: {}".format(precision))
         print("f1:{}".format(f1))
         return recall, precision, f1
+
+    def log_res(self, res):
+        for label, correctness, word_pairs in res:
+            self.logger.info("{} {} {}".format(word_pairs[0], word_pairs[1], correctness[0]))

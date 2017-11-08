@@ -11,5 +11,6 @@ RAW_DIR_LIST = [SE_BOOK_DIR, PURE_REQ_DIR]
 
 VOCAB_DIR = DATA_DIR + os.sep + "vocab"
 W2V_DIR = DATA_DIR + os.sep + "w2v"
+RESULT_DIR = DATA_DIR + os.sep + "results"
 
 PACKAGES_DIR = PROJECT_ROOT + os.sep + "packages"
