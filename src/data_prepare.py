@@ -98,7 +98,7 @@ class DataPrepare:
     def ten_fold(self):
         train_test_pair = []
         folds = []
-        slice_size = len(self.data_set) / 10
+        slice_size = int(len(self.data_set) / 10)
         if slice_size == 0:
             raise Exception("Not enough data to do 10 fold")
         start_cut_index = 0;
@@ -107,15 +107,13 @@ class DataPrepare:
             folds.append(self.data_set[start_cut_index: end_cut_index])
 
         for i in range(0, 10):
-            test_fold = folds[i]
-            train_fold = []
+            test_entries = folds[i]
+            train_entries = []
             for fd in folds[:i]:
-                train_fold.extend(fd)
+                train_entries.extend(fd)
             for fd in folds[i + 1:]:
-                train_fold.extend(fd)
-
-            test_entries = self.data_set[test_fold]
-            train_entries = self.data_set[train_fold]
+                train_entries.extend(fd)
+                
             train_set = DataSet(train_entries)
             test_set = DataSet(test_entries)
             train_test_pair.append((train_set, test_set))
