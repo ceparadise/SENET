@@ -52,7 +52,7 @@ class DataPrepare:
                     vector.extend(self.build_feature_vector(words1, words2))
                     self.data_set.append(
                         (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
-                    print("Added:" + (words1, words2))
+                    print("Added:" + words1 + " " +words2)
                 except KeyError as e:
                     pass
         random.shuffle(self.data_set)
