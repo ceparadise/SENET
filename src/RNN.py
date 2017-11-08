@@ -120,4 +120,7 @@ class RNN:
 
     def write_res(self, res, writer):
         for label, correctness, word_pairs in res:
-            writer.write("{} {} {} \n".format(word_pairs[0], word_pairs[1], correctness[0]))
+            try:
+                writer.write("{} {} {} \n".format(word_pairs[0], word_pairs[1], correctness[0]))
+            except Exception:
+                print(word_pairs)
