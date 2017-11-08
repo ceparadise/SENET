@@ -1,6 +1,6 @@
 import tensorflow as tf
 from common import *
-import logging
+import datetime
 
 
 class RNN:
@@ -12,12 +12,6 @@ class RNN:
         self.n_steps = 1  # time steps
         self.n_hidden_units = 128  # neurons in hidden layer
         self.n_classes = 2  # classes (0/1 digits)
-
-        self.logger = logging.getLogger('RNN')
-        hdlr = logging.FileHandler(RESULT_DIR + os.sep + 'result.log')
-        formatter = logging.Formatter('%(message)s')
-        hdlr.setFormatter(formatter)
-        self.logger.addHandler(hdlr)
 
     def train_test(self, data):
         # x y placeholder
@@ -46,32 +40,34 @@ class RNN:
             init = tf.global_variables_initializer()
 
             a_recall = a_pre = a_f1 = 0
-            for index, (train_set, test_set) in enumerate(data.ten_fold()):
-                print("Start fold {}".format(index))
-                sess.run(init)
-                step = 0
-                while step * self.batch_size < self.training_iters:
-                    batch_xs, batch_ys = train_set.next_batch(self.batch_size)
-                    batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
-                    sess.run([train_op], feed_dict={
-                        x: batch_xs,
-                        y: batch_ys,
-                    })
-                    step += 1
+            result_file = RESULT_DIR + os.sep + "result{}.txt".format(datetime.datetime.now())
+            with open(result_file, "w", encoding='utf8') as fout:
+                for index, (train_set, test_set) in enumerate(data.ten_fold()):
+                    print("Start fold {}".format(index))
+                    sess.run(init)
+                    step = 0
+                    while step * self.batch_size < self.training_iters:
+                        batch_xs, batch_ys = train_set.next_batch(self.batch_size)
+                        batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
+                        sess.run([train_op], feed_dict={
+                            x: batch_xs,
+                            y: batch_ys,
+                        })
+                        step += 1
 
-                print("Start testing...")
-                res = []
-                print(len(test_set.data))
-                for i in range(len(test_set.data)):
-                    batch_xs, batch_ys, word_pairs = train_set.next_batch(self.batch_size)
-                    batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
-                    is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
-                    res.append((batch_ys, is_correct, word_pairs))
-                re, pre, f1 = self.eval(res)
-                self.log_res(res)
-                a_recall += re
-                a_pre += pre
-                a_f1 += f1
+                    print("Start testing...")
+                    res = []
+                    print(len(test_set.data))
+                    for i in range(len(test_set.data)):
+                        batch_xs, batch_ys, word_pairs = train_set.next_batch(self.batch_size)
+                        batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
+                        is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
+                        res.append((batch_ys, is_correct, word_pairs))
+                    re, pre, f1 = self.eval(res)
+                    self.write_res(res, fout)
+                    a_recall += re
+                    a_pre += pre
+                    a_f1 += f1
 
             print("Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10))
 
@@ -122,6 +118,6 @@ class RNN:
         print("f1:{}".format(f1))
         return recall, precision, f1
 
-    def log_res(self, res):
+    def write_res(self, res, writer):
         for label, correctness, word_pairs in res:
-            self.logger.info("{} {} {}".format(word_pairs[0], word_pairs[1], correctness[0]))
+            writer.write("{} {} {} \n".format(word_pairs[0], word_pairs[1], correctness[0]))

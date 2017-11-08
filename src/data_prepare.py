@@ -120,7 +120,6 @@ class DataPrepare:
             test_set = DataSet(test_entries)
             train_test_pair.append((train_set, test_set))
         return train_test_pair
-	print(len(train_test_pair))
 
 class DataSet:
     def __init__(self, entry_list):
