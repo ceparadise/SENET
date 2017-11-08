@@ -27,9 +27,9 @@ class DataPrepare:
                     close_words1 = self.phrase2words(close_phrase1[0])
                     close_words2 = self.phrase2words(close_phrase2[0])
                     if close_words1 != phrase2:
-                        neg_pairs.append((phrase1, close_words1))
+                        neg_pairs.append((words1, close_words1))
                     if close_words2 != phrase1:
-                        neg_pairs.append((phrase2, close_words1))
+                        neg_pairs.append((words2, close_words1))
             except Exception as e:
                 pass
 
