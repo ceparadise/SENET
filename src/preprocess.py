@@ -1,6 +1,5 @@
 #!usr/bin/env python
 from nltk import word_tokenize
-import os
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize

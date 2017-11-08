@@ -123,6 +123,6 @@ class RNN:
     def write_res(self, res, writer):
         writer.write("w1,w2,correctness")
         for label, correctness, word_pairs in res:
-            res_str = "{},{},{} \n".format(word_pairs[0][0], word_pairs[0][1], correctness[0])
+            res_str = "{},{},{}".format(word_pairs[0][0], word_pairs[0][1], correctness[0])
             print(res_str)
             writer.write(res_str)
