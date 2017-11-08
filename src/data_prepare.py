@@ -30,8 +30,8 @@ class DataPrepare:
                         neg_pairs.append((phrase1, close_words1))
                     if close_words2 != phrase1:
                         neg_pairs.append((phrase2, close_words1))
-            except Exception:
-                pass
+            except Exception as e:
+                print(e)
 
         labels = [[0., 1.], [1., 0.]]
         print("Candidate neg_pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
@@ -57,7 +57,7 @@ class DataPrepare:
                     pass
         random.shuffle(self.data_set)
         for x in self.data_set:
-            print(x[1], x[2], "\n")
+            print(x[1], x[2])
 
     def build_golden(self):
         pair_set = set()
