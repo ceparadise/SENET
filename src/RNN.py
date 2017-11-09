@@ -1,6 +1,6 @@
 import tensorflow as tf
 from common import *
-import datetime
+import numpy as np
 
 
 class RNN:
@@ -69,8 +69,9 @@ class RNN:
                     a_recall += re
                     a_pre += pre
                     a_f1 += f1
-
-            print("Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10))
+                avg_str = "Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10)
+                fout.write(avg_str)
+                print(avg_str)
 
     def classify(self, X, weights, biases):
         X = tf.reshape(X, [-1, self.n_inputs])
@@ -121,8 +122,10 @@ class RNN:
         return recall, precision, f1
 
     def write_res(self, res, writer):
-        writer.write("w1,w2,correctness")
+        writer.write("w1, w2, label, correctness\n")
         for label, correctness, word_pairs in res:
-            res_str = "{},{},{}".format(word_pairs[0][0], word_pairs[0][1], correctness[0])
-            print(res_str)
-            writer.write(res_str)
+            tran_label = "Yes"
+            if np.argmax(label.ravel()) == 1:
+                tran_label = "No";
+            res_str = "{},{},{},{}".format(word_pairs[0][0], word_pairs[0][1], tran_label, correctness[0])
+            writer.write(res_str + "\n")

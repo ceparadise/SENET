@@ -13,7 +13,8 @@ from RNN import RNN
 """
 if __name__ == '__main__':
     print("Preparing phrase2vec model...")
-    p2v_model = Phrase2Vec()
+    #p2v_model = Phrase2Vec()
+    p2v_model = None
     print("Phrase2Vector model loaded...")
     data = DataPrepare(p2v_model)
     print("Experiment data is ready, size ", len(data.data_set))
