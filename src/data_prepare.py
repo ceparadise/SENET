@@ -20,21 +20,21 @@ class DataPrepare:
         golden_pairs = self.build_golden()
         self.data_set = []
         neg_pairs = []
-        for pair in golden_pairs:
-            try:
-                words1 = pair[0].strip(" \n")
-                words2 = pair[1].strip(" \n")
-                phrase1 = self.words2phrase(words1)
-                phrase2 = self.words2phrase(words2)
-                close_phrases1 = self.p2v_model.w2v_model.most_similar(phrase1, topn=20)
-                close_phrases2 = self.p2v_model.w2v_model.most_similar(phrase2, topn=20)
-                for close_phrase1, close_phrase2 in zip(close_phrases1, close_phrases2):
-                    close_words1 = self.phrase2words(close_phrase1[0])
-                    close_words2 = self.phrase2words(close_phrase2[0])
-                    if close_words1 != phrase2:
-                        neg_pairs.append((words1, close_words1))
-                    if close_words2 != phrase1:
-                        neg_pairs.append((words2, close_words1))
+        # for pair in golden_pairs:
+        #     try:
+        #         words1 = pair[0].strip(" \n")
+        #         words2 = pair[1].strip(" \n")
+        #         phrase1 = self.words2phrase(words1)
+        #         phrase2 = self.words2phrase(words2)
+        #         close_phrases1 = self.p2v_model.w2v_model.most_similar(phrase1, topn=20)
+        #         close_phrases2 = self.p2v_model.w2v_model.most_similar(phrase2, topn=20)
+        #         for close_phrase1, close_phrase2 in zip(close_phrases1, close_phrases2):
+        #             close_words1 = self.phrase2words(close_phrase1[0])
+        #             close_words2 = self.phrase2words(close_phrase2[0])
+        #             if close_words1 != phrase2:
+        #                 neg_pairs.append((words1, close_words1))
+        #             if close_words2 != phrase1:
+        #                 neg_pairs.append((words2, close_words1))
 
                 # words1 = pair[0].strip(" \n")
                 # words2 = pair[1].strip(" \n")
@@ -47,8 +47,8 @@ class DataPrepare:
                 #         neg_pairs.append(neg_p1)
                 #     if neg_p2 not in golden_pairs and p2_verse not in golden_pairs:
                 #         neg_pairs.append(neg_p2)
-            except Exception as e:
-                pass
+            # except Exception as e:
+            #     pass
 
         with open(self.keyword_path, 'r', encoding="utf8") as fin:
             try:
@@ -60,7 +60,7 @@ class DataPrepare:
                         close_word = self.phrase2words(close_phrase)
                         if (word,close_word) not in golden_pairs:
                             neg_pairs.append((word,close_word))
-                            
+
             except Exception as e:
                 pass
 
