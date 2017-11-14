@@ -58,6 +58,7 @@ class DataPrepare:
                     close_phrases = self.p2v_model.w2v_model.most_similar(phrase, topn=20)
                     for close_phrase in close_phrases:
                         close_word = self.phrase2words(close_phrase)
+                        print("processing:",(word, close_word))
                         if (word,close_word) not in golden_pairs:
                             neg_pairs.append((word,close_word))
                 except Exception as e:
