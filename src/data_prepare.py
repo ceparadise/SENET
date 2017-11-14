@@ -36,21 +36,21 @@ class DataPrepare:
                     if close_words2 != phrase1:
                         neg_pairs.append((words2, close_words1))
 
-                words1 = pair[0].strip(" \n")
-                words2 = pair[1].strip(" \n")
-                for i in range(0, 2):
-                    neg_p1 = (words1, keys[random.randint(0, len(keys) - 1)])
-                    p1_verse = (neg_p1[1], neg_p1[0])
-                    neg_p2 = (words2, keys[random.randint(0, len(keys) - 1)])
-                    p2_verse = (neg_p2[1], neg_p2[0])
-                    if neg_p1 not in golden_pairs and p1_verse not in golden_pairs:
-                        neg_pairs.append(neg_p1)
-                    if neg_p2 not in golden_pairs and p2_verse not in golden_pairs:
-                        neg_pairs.append(neg_p2)
+                # words1 = pair[0].strip(" \n")
+                # words2 = pair[1].strip(" \n")
+                # for i in range(0, 2):
+                #     neg_p1 = (words1, keys[random.randint(0, len(keys) - 1)])
+                #     p1_verse = (neg_p1[1], neg_p1[0])
+                #     neg_p2 = (words2, keys[random.randint(0, len(keys) - 1)])
+                #     p2_verse = (neg_p2[1], neg_p2[0])
+                #     if neg_p1 not in golden_pairs and p1_verse not in golden_pairs:
+                #         neg_pairs.append(neg_p1)
+                #     if neg_p2 not in golden_pairs and p2_verse not in golden_pairs:
+                #         neg_pairs.append(neg_p2)
             except Exception as e:
                 pass
 
-        with open(VOCAB_DIR + "vocabulary.txt", 'r', encoding="utf8") as fin:
+        with open(self.keyword_path, 'r', encoding="utf8") as fin:
             for line in fin:
                 word = line.strip("\n\t\r")
                 phrase = self.words2phrase(word)
