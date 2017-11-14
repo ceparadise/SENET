@@ -9,32 +9,32 @@ from feature_extractors import FeatureExtractor
 
 class DataPrepare:
     def __init__(self, p2v_model, fake=False):
-        # self.p2v_model = p2v_model
+        self.p2v_model = p2v_model
         self.keyword_path = VOCAB_DIR + os.sep + "vocabulary.txt"
         keys = []
         with open(self.keyword_path, 'r', encoding='utf-8') as kwin:
             for line in kwin:
                 keys.append(line.strip(" \n\r\t"))
 
-        self.golden_pair_files = ["contrast.txt", "related.txt"]#["synonym.txt", "contrast.txt", "related.txt"]
+        self.golden_pair_files = ["contrast.txt", "related.txt"]  # ["synonym.txt", "contrast.txt", "related.txt"]
         golden_pairs = self.build_golden()
         self.data_set = []
         neg_pairs = []
         for pair in golden_pairs:
             try:
-                # words1 = pair[0].strip(" \n")
-                # words2 = pair[1].strip(" \n")
-                # phrase1 = self.words2phrase(words1)
-                # phrase2 = self.words2phrase(words2)
-                # close_phrases1 = self.p2v_model.w2v_model.most_similar(phrase1, topn=3)
-                # close_phrases2 = self.p2v_model.w2v_model.most_similar(phrase2, topn=3)
-                # for close_phrase1, close_phrase2 in zip(close_phrases1, close_phrases2):
-                #     close_words1 = self.phrase2words(close_phrase1[0])
-                #     close_words2 = self.phrase2words(close_phrase2[0])
-                #     if close_words1 != phrase2:
-                #         neg_pairs.append((words1, close_words1))
-                #     if close_words2 != phrase1:
-                #         neg_pairs.append((words2, close_words1))
+                words1 = pair[0].strip(" \n")
+                words2 = pair[1].strip(" \n")
+                phrase1 = self.words2phrase(words1)
+                phrase2 = self.words2phrase(words2)
+                close_phrases1 = self.p2v_model.w2v_model.most_similar(phrase1, topn=20)
+                close_phrases2 = self.p2v_model.w2v_model.most_similar(phrase2, topn=20)
+                for close_phrase1, close_phrase2 in zip(close_phrases1, close_phrases2):
+                    close_words1 = self.phrase2words(close_phrase1[0])
+                    close_words2 = self.phrase2words(close_phrase2[0])
+                    if close_words1 != phrase2:
+                        neg_pairs.append((words1, close_words1))
+                    if close_words2 != phrase1:
+                        neg_pairs.append((words2, close_words1))
 
                 words1 = pair[0].strip(" \n")
                 words2 = pair[1].strip(" \n")
@@ -49,6 +49,16 @@ class DataPrepare:
                         neg_pairs.append(neg_p2)
             except Exception as e:
                 pass
+
+        with open(VOCAB_DIR + "vocabulary.txt", 'r', encoding="utf8") as fin:
+            for line in fin:
+                word = line.strip("\n\t\r")
+                phrase = self.words2phrase(word)
+                close_phrases = self.p2v_model.w2v_model.most_similar(phrase, topn=20)
+                for close_phrase in close_phrases:
+                    close_word = self.phrase2words(close_phrase)
+                    if (word,close_word) not in golden_pairs:
+                        neg_pairs.append((word,close_word))
 
         labels = [[0., 1.], [1., 0.]]
         print("Candidate neg pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
