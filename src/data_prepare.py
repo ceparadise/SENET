@@ -51,14 +51,19 @@ class DataPrepare:
                 pass
 
         with open(self.keyword_path, 'r', encoding="utf8") as fin:
-            for line in fin:
-                word = line.strip("\n\t\r")
-                phrase = self.words2phrase(word)
-                close_phrases = self.p2v_model.w2v_model.most_similar(phrase, topn=20)
-                for close_phrase in close_phrases:
-                    close_word = self.phrase2words(close_phrase)
-                    if (word,close_word) not in golden_pairs:
-                        neg_pairs.append((word,close_word))
+            try:
+                for line in fin:
+                    word = line.strip("\n\t\r")
+                    phrase = self.words2phrase(word)
+                    close_phrases = self.p2v_model.w2v_model.most_similar(phrase, topn=20)
+                    for close_phrase in close_phrases:
+                        close_word = self.phrase2words(close_phrase)
+                        if (word,close_word) not in golden_pairs:
+                            neg_pairs.append((word,close_word))
+                            
+            except Exception as e:
+                pass
+
 
         labels = [[0., 1.], [1., 0.]]
         print("Candidate neg pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
