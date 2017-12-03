@@ -127,5 +127,10 @@ class RNN:
             tran_label = "Yes"
             if np.argmax(label.ravel()) == 1:
                 tran_label = "No";
-            res_str = "{},{},{},{}".format(word_pairs[0][0], word_pairs[0][1], tran_label, correctness[0])
+            correct_output = 'Incorrect'
+
+            if correctness[0] == True:
+                correct_output = 'Correct'
+
+            res_str = "{},{},{},{}".format(word_pairs[0][0], word_pairs[0][1], tran_label, correct_output)
             writer.write(res_str + "\n")
