@@ -16,7 +16,7 @@ class DataPrepare:
             for line in kwin:
                 keys.append(line.strip(" \n\r\t"))
 
-        self.golden_pair_files = ["contrast.txt", "related.txt"]#["synonym.txt", "contrast.txt", "related.txt"]
+        self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
         golden_pairs = self.build_golden()
         self.data_set = []
         neg_pairs = []

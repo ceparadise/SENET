@@ -4,6 +4,7 @@ import os
 from common import *
 
 keywords = set()
+pair_set = set()
 wd = set()
 lmtzr = WordNetLemmatizer()
 word_files = ['contrast.txt', 'related.txt', 'synonym.txt']
@@ -18,6 +19,7 @@ for word_file in word_files:
             words = line.split(",")
             keywords.add(words[0])
             keywords.add(words[1])
+            pair_set.add((words[0], words[1]))
 
 with open(VOCAB_DIR + os.sep + "hyper.txt", encoding="utf8") as fin:
     for line in fin:
@@ -25,7 +27,9 @@ with open(VOCAB_DIR + os.sep + "hyper.txt", encoding="utf8") as fin:
         keywords.add(parent)
         rest_words = rest.split(",")
         for words in rest_words:
-            keywords.add(parent)
+            keywords.add(words)
+            pair_set.add((parent, words))
+print("Distint pair #:{}".format(len(pair_set)))
 
 model = Word2Vec.load(W2V_DIR + os.sep + "w2v.model")
 in_vocab = set()
@@ -34,9 +38,7 @@ vocab = model.wv.vocab.keys()
 for key in keywords:
     key = key.lower()
     tokens = key.strip(' \n\t').split()
-    print("before lem : ", tokens)
     tokens = [lmtzr.lemmatize(tk) for tk in tokens]
-    print("After lem : ", tokens)
     key = "_".join(tokens)
     if key in vocab or key + "\n" in vocab:
         in_vocab.add(key)
