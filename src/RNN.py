@@ -122,7 +122,7 @@ class RNN:
         return recall, precision, f1
 
     def write_res(self, res, writer):
-        writer.write("w1, w2, label, correctness\n")
+        writer.write("label, correctness, w1, w2\n")
         for label, correctness, word_pairs in res:
             tran_label = "Yes"
             if np.argmax(label.ravel()) == 1:
@@ -132,5 +132,5 @@ class RNN:
             if correctness[0] == True:
                 correct_output = 'Correct'
 
-            res_str = "{},{},{},{}".format(word_pairs[0][0], word_pairs[0][1], tran_label, correct_output)
+            res_str = "{}\t{}\t{}\t\t{}".format(tran_label, correct_output,word_pairs[0][0], word_pairs[0][1])
             writer.write(res_str + "\n")
