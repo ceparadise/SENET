@@ -2,8 +2,8 @@ import os
 import random
 import re
 import numpy as np
-from common import VOCAB_DIR
-from common import BING_WORD_DIR
+from common import *
+from nltk.stem.porter import PorterStemmer
 
 from feature_extractors import FeatureExtractor
 
@@ -42,8 +42,12 @@ class DataPrepare:
                     print(e)
         print("Negative pairs:{} Golden Pairs:{}".format(cnt_n, cnt_p))
         random.shuffle(self.data_set)
-        for x in self.data_set:
-            print(x[1], x[2])
+        # self.write_file()
+
+    def write_file(self):
+        with open(DATA_DIR + os.sep + "dataset.data", encoding='utf8') as fout:
+            for entry in self.data_set:
+                fout.write(entry)
 
     def build_neg_with_w2v(self, golden_pairs):
         neg_pairs = []
@@ -94,7 +98,30 @@ class DataPrepare:
                 words1, rest = line.strip(" \n").split(":")
                 for word in rest.strip(" ").split(","):
                     pair_set.add((words1.strip(" \n"), word.strip("\n")))
+        print("Golden pair number:{}".format(len(pair_set)))
+        pair_set = self.remove_pair_with_same_pre_post(pair_set)
         return pair_set
+
+    def remove_pair_with_same_pre_post(self, pair_set):
+        def __stem_Tokens(words):
+            porter_stemmer = PorterStemmer()
+            return [porter_stemmer.stem(x) for x in words.split(" ")]
+
+        cnt = 0
+        filtered = []
+        for p in pair_set:
+            w1 = __stem_Tokens(p[0])
+            w2 = __stem_Tokens(p[1])
+            flag = False
+            for tk in w1:
+                if tk in w2:
+                    flag = True
+            if flag:
+                cnt += 1
+                continue
+            filtered.append(p)
+        print("Totally {} pairs have been removed".format(cnt))
+        return filtered
 
     def words2phrase(self, words):
         return words.replace(" ", "_")

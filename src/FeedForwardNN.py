@@ -47,7 +47,8 @@ def eval(results):
     print("recall: {}".format(recall))
     print("precision: {}".format(precision))
     print("f1:{}".format(f1))
-    return recall, precision, f1
+    print("accuracy:{}".format(accuracy))
+    return recall, precision, f1, accuracy
 
 
 def write_res(res, writer):
@@ -105,8 +106,8 @@ def main(data_set):
 
     # Run SGD
     with tf.Session() as sess:
-        result_file = RESULT_DIR + os.sep + "result{}.txt".format(len(os.listdir(RESULT_DIR)))
-        a_recall = a_pre = a_f1 = 0
+        result_file = RESULT_DIR + os.sep + "FeedForward_Result{}.txt".format(len(os.listdir(RESULT_DIR)))
+        a_acc = a_recall = a_pre = a_f1 = 0
         with open(result_file, "w", encoding='utf8') as fout:
             for index, (train_set, test_set) in enumerate(data.ten_fold()):
                 train_X, train_y, train_word_pair = train_set.all()
@@ -123,13 +124,15 @@ def main(data_set):
                 is_correct = sess.run(correct_pred, feed_dict={X: test_X, y: test_y})
                 res = (test_y, is_correct, test_word_pair)
 
-                re, pre, f1 = eval(res)
+                re, pre, f1, acc = eval(res)
                 write_res(res, fout)
                 a_recall += re
                 a_pre += pre
                 a_f1 += f1
+                a_acc += acc
 
-            avg_str = "Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10)
+            avg_str = "Average recall:{}, precision:{}, f1:{}, accuracy:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10,
+                                                                                   a_acc / 10)
             fout.write(avg_str)
             print(avg_str)
 

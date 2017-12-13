@@ -40,8 +40,8 @@ class RNN:
             accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
             init = tf.global_variables_initializer()
 
-            a_recall = a_pre = a_f1 = 0
-            result_file = RESULT_DIR + os.sep + "result{}.txt".format(len(os.listdir(RESULT_DIR)))
+            a_acc = a_recall = a_pre = a_f1 = 0
+            result_file = RESULT_DIR + os.sep + "RNN_result{}.txt".format(len(os.listdir(RESULT_DIR)))
             with open(result_file, "w", encoding='utf8') as fout:
                 for index, (train_set, test_set) in enumerate(data.ten_fold()):
                     print("Start fold {}".format(index))
@@ -64,12 +64,14 @@ class RNN:
                         batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                         is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
                         res.append((batch_ys, is_correct, test_word_pairs))
-                    re, pre, f1 = self.eval(res)
+                    re, pre, f1, accuracy = self.eval(res)
                     self.write_res(res, fout)
                     a_recall += re
                     a_pre += pre
                     a_f1 += f1
-                avg_str = "Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10)
+                    a_acc += accuracy
+                avg_str = "Average recall:{}, precision:{}, f1:{}, accuracy:{}".format(a_recall / 10, a_pre / 10,
+                                                                                       a_f1 / 10, a_acc / 10)
                 fout.write(avg_str)
                 print(avg_str)
 
@@ -119,7 +121,8 @@ class RNN:
         print("recall: {}".format(recall))
         print("precision: {}".format(precision))
         print("f1:{}".format(f1))
-        return recall, precision, f1
+        print("accuracy:{}".format(accuracy))
+        return recall, precision, f1, accuracy
 
     def write_res(self, res, writer):
         writer.write("label, correctness, w1, w2\n")
@@ -132,5 +135,5 @@ class RNN:
             if correctness[0] == True:
                 correct_output = 'Correct'
 
-            res_str = "{}\t{}\t{}\t\t{}".format(tran_label, correct_output,word_pairs[0][0], word_pairs[0][1])
+            res_str = "{}\t{}\t{}\t\t{}".format(tran_label, correct_output, word_pairs[0][0], word_pairs[0][1])
             writer.write(res_str + "\n")

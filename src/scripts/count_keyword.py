@@ -31,6 +31,14 @@ with open(VOCAB_DIR + os.sep + "hyper.txt", encoding="utf8") as fin:
             pair_set.add((parent, words))
 print("Distint pair #:{}".format(len(pair_set)))
 
+word_relation = set()
+for pair in pair_set:
+    w1 = pair[0]
+    w2 = pair[1]
+    word_relation.add(w1)
+    word_relation.add(w2)
+print("{} words have relationship".format(len(word_relation)))
+
 model = Word2Vec.load(W2V_DIR + os.sep + "w2v.model")
 in_vocab = set()
 un_vocab = set()

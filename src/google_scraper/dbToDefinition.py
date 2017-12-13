@@ -11,7 +11,7 @@ c = conn.cursor()
 user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 headers = {'User-Agent': user_agent, }
 
-existed_files = [f[:-4] for f in os.listdir('.') if os.path.isfile(f)]
+existed_files = [f[:-4] for f in os.listdir('./bing_stackoverflow_word/') if os.path.isfile("./bing_stackoverflow_word/" + f)]
 
 from threading import Thread
 from threading import Lock
@@ -107,6 +107,8 @@ word_link = dict()
 for row in join_result:
     query = row[0]
     query = query[:query.index("site:") - 1]
+    if query in existed_files:
+        continue
     link = row[1]
     if query not in word_link:
         word_link[query] = []
@@ -115,6 +117,7 @@ for row in join_result:
 threads = []
 for thread_num in range(0, 4):
     d = {key: value for i, (key, value) in enumerate(word_link.items()) if i % 4 == thread_num}
+    print("Thread {} have {} words to fetch".format(thread_num, len(d)))
     t = Thread(target=worker, args=(d, thread_num))
     threads.append(t)
     t.start()

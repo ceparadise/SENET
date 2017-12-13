@@ -38,7 +38,8 @@ def eval(results):
     print("recall: {}".format(recall))
     print("precision: {}".format(precision))
     print("f1:{}".format(f1))
-    return recall, precision, f1
+    print("accuracy:{}".format(accuracy))
+    return recall, precision, f1, accuracy
 
 
 def write_res(res, writer):
@@ -60,8 +61,8 @@ print("Preparing phrase2vec model...")
 p2v_model = None
 print("Phrase2Vector model loaded...")
 data = DataPrepare(p2v_model)
-result_file = RESULT_DIR + os.sep + "result{}.txt".format(len(os.listdir(RESULT_DIR)))
-a_recall = a_pre = a_f1 = 0
+result_file = RESULT_DIR + os.sep + "Maxent_result{}.txt".format(len(os.listdir(RESULT_DIR)))
+a_acc = a_recall = a_pre = a_f1 = 0
 with open(result_file, "w", encoding='utf8') as fout:
     for raw_train_set, raw_test_set in data.ten_fold():
         train_x, train_y, train_word_pair = raw_train_set.all()
@@ -98,11 +99,14 @@ with open(result_file, "w", encoding='utf8') as fout:
             res[0].append(label)
             res[1].append(correctness)
             res[2].append(test_word_pair[i])
-        re, pre, f1 = eval(res)
+        re, pre, f1, accuracy = eval(res)
         write_res(res, fout)
         a_recall += re
         a_pre += pre
         a_f1 += f1
-    avg_str = "Average recall:{}, precision:{}, f1:{}".format(a_recall / 10, a_pre / 10, a_f1 / 10)
+        a_acc += accuracy
+
+    avg_str = "Average recall:{}, precision:{}, f1:{}, accuracy:{}".format(a_recall / 10, a_pre / 10,
+                                                                           a_f1 / 10, a_acc / 10)
     fout.write(avg_str)
     print(avg_str)
