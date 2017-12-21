@@ -66,9 +66,9 @@ class DataPrepare:
             cnt = 0
             key_size = len(self.keys)
             while cnt < num:
-                neg_pair = (gold, self.keys[random.randint(0, key_size - 1)])
+                neg_pair = (self.keys[random.randint(0, key_size - 1)], self.keys[random.randint(0, key_size - 1)])
                 neg_verse = (neg_pair[1], neg_pair[0])
-                if neg_pair not in golden_pairs and neg_verse not in golden_pairs:
+                if neg_pair not in golden_pairs and neg_verse not in golden_pairs and neg_pair[0] != neg_pair[1]:
                     res.append(neg_pair)
                     cnt += 1
             return res
@@ -91,13 +91,18 @@ class DataPrepare:
             with open(path, encoding='utf8') as fin:
                 for line in fin.readlines():
                     words1, words2 = line.strip(" \n").split(",")
-                    pair_set.add((words1, words2))
+                    if (words2, words1) not in pair_set:
+                        pair_set.add((words1, words2))
 
         with open(VOCAB_DIR + os.sep + "hyper.txt") as fin:
             for line in fin.readlines():
                 words1, rest = line.strip(" \n").split(":")
                 for word in rest.strip(" ").split(","):
-                    pair_set.add((words1.strip(" \n"), word.strip("\n")))
+                    wp = (words1.strip(" \n"), word.strip("\n"))
+                    wp_r = (wp[1], wp[0])
+                    if wp_r not in pair_set:
+                        pair_set.add(wp)
+
         print("Golden pair number:{}".format(len(pair_set)))
         pair_set = self.remove_pair_with_same_pre_post(pair_set)
         return pair_set
@@ -183,6 +188,91 @@ class DataPrepare:
             test_set = DataSet(test_entries)
             train_test_pair.append((train_set, test_set))
         return train_test_pair
+
+    def ten_times_of_half_seen(self):
+        """
+        Generate 10 set of train/test. The test set entry have one side appeared in training
+        :return:
+        """
+
+        def is_must_stay(asso_words, must_stay_set):
+            for vec in asso_words:
+                word = vec[2]
+                if word in must_stay_set:
+                    return True
+            return False
+
+        def split_half_seen():
+            relation_dict = dict()
+            for vec in self.data_set:
+                pair = vec[2]
+                if pair[0] not in relation_dict:
+                    relation_dict[pair[0]] = []
+                if pair[1] not in relation_dict:
+                    relation_dict[pair[1]] = []
+                relation_dict[pair[0]].append((vec[0], vec[1], pair[1]))  # append the (feature, label, word)
+                relation_dict[pair[1]].append((vec[0], vec[1], pair[0]))
+
+            train_entries = []
+            test_entries = []
+            test_vocab = set()
+            train_vocab = set()
+            must_stay = set()
+
+            while len(test_entries) < len(self.data_set) * 0.1:
+                random_key = random.sample(relation_dict.keys(), 1)[0]
+                associated_word_info = relation_dict[random_key]
+                if random_key in test_vocab or is_must_stay(associated_word_info, must_stay):
+                    continue
+                print("del random key {}".format(random_key), flush=True)
+
+                del relation_dict[random_key]
+                test_vocab.add(random_key)
+                for (f_vec, label, word) in associated_word_info:
+                    # This word/pair is selected, clean the word_cnt and word_relation then add to the test entry
+                    relation_dict[word] = [x for x in relation_dict[word] if x[2] != random_key]
+                    must_stay.add(word)
+                    if len(relation_dict[word]) == 0:
+                        print("del word {}, random keyword {}".format(word, random_key), flush=True)
+                        del relation_dict[word]
+                    else:
+                        test_entries.append((f_vec, label, (random_key, word)))
+                        test_vocab.add(word)
+            train_set = set()
+            for key in relation_dict:
+                associated_word_info = relation_dict[key]
+                train_vocab.add(key)
+                for (f_vec, label, word) in associated_word_info:
+                    if (word, key) not in train_set:
+                        train_set.add((key, word))
+                        train_entries.append((f_vec, label, (key, word)))
+                        train_vocab.add(word)
+
+            for test_entry in test_entries:
+                w1 = test_entry[2][0]
+                w2 = test_entry[2][1]
+                assert (w1 not in train_vocab and w2 in train_vocab) or (
+                    w2 not in train_vocab and w1 in train_vocab), "{} in train_vocab {}, {} in train_vocab {}".format(
+                    w1,
+                    w1 in train_vocab,
+                    w2,
+                    w2 in train_vocab)
+            print(len(train_entries), len(test_entries))
+            train_set = DataSet(train_entries)
+            test_set = DataSet(test_entries)
+            return (train_set, test_set)
+
+        train_test_pair = []
+        for i in range(0, 10):
+            train_test_pair.append(split_half_seen())
+        return train_test_pair
+
+    def ten_times_of_not_seen(self):
+        """
+        Generate 10 set of train/test. Both side of test set entry have not appeared in training
+        :return:
+        """
+        pass
 
 
 class DataSet:

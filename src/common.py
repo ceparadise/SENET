@@ -3,7 +3,7 @@ import os
 PROJECT_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
 DATA_DIR = PROJECT_ROOT + os.sep + "data"
 
-BING_WORD_DIR = PROJECT_ROOT + os.sep + "src" + os.sep + "google_scraper" + os.sep + "bing_word"
+BING_WORD_DIR = PROJECT_ROOT + os.sep + "src" + os.sep + "google_scraper" + os.sep + "bing_stackoverflow_word"
 
 RAW_DIR = DATA_DIR + os.sep + "raw"
 SE_BOOK_DIR = RAW_DIR + os.sep + "SE_Books_txt"

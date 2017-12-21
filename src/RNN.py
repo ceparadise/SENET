@@ -43,7 +43,7 @@ class RNN:
             a_acc = a_recall = a_pre = a_f1 = 0
             result_file = RESULT_DIR + os.sep + "RNN_result{}.txt".format(len(os.listdir(RESULT_DIR)))
             with open(result_file, "w", encoding='utf8') as fout:
-                for index, (train_set, test_set) in enumerate(data.ten_fold()):
+                for index, (train_set, test_set) in enumerate(data.ten_times_of_half_seen()):
                     print("Start fold {}".format(index))
                     sess.run(init)
                     step = 0
