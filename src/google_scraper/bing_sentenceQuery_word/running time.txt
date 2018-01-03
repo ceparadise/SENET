@@ -1,0 +1,472 @@
+In time program running contrast
+A error detected execution running state program whereas error detected program ever executed
+code optimization typically done compile time may done run time depending particular language compiler
+When program executed first performs necessary setup link program need execution begin starting program
+In case language implementation task done language runtime instead though unusual mainstream language common consumer operating system
+Some program debugging performed efficient accurate performed runtime
+bound checking example
+For reason programming discovered program tested real data despite sophisticated checking testing
+In case end user may encounter message
+one language feature designed handle runtime error providing structured way catch completely unexpected situation well predictable error unusual result without amount inline error checking required language without
+More recent advancement runtime engine enable provides debug information every exception interest implemented independent source code attaching special software product runtime engine
+
+In time program running contrast
+A error detected execution running state program whereas error detected program ever executed
+code optimization typically done compile time may done run time depending particular language compiler
+When program executed first performs necessary setup link program need execution begin starting program
+In case language implementation task done language runtime instead though unusual mainstream language common consumer operating system
+Some program debugging performed efficient accurate performed runtime
+bound checking example
+For reason programming discovered program tested real data despite sophisticated checking testing
+In case end user may encounter message
+one language feature designed handle runtime error providing structured way catch completely unexpected situation well predictable error unusual result without amount inline error checking required language without
+More recent advancement runtime engine enable provides debug information every exception interest implemented independent source code attaching special software product runtime engine
+
+In determination algorithm amount time storage resource necessary
+Usually involves determining relates length algorithm input number step take number storage location us
+An algorithm said efficient function value small
+Since different input length may cause algorithm different behavior function describing performance usually actual performance determined input algorithm
+The term analysis algorithm coined
+Algorithm analysis important part broader provides theoretical estimate resource needed algorithm solves given
+These estimate provide insight reasonable direction search
+In theoretical analysis algorithm common estimate complexity asymptotic sense estimate complexity function arbitrarily large input
+used end
+For instance said run number step proportional logarithm length sorted list searched O log n colloquially
+Usually estimate used different algorithm may differ efficiency
+However efficiency two reasonable implementation given algorithm related constant multiplicative factor called
+Exact asymptotic measure efficiency sometimes computed usually require certain assumption concerning particular implementation algorithm called
+A model computation may defined term postulating certain operation executed unit time
+For example sorted list apply binary search element guarantee lookup element list done unit time log time unit needed return answer
+Time efficiency estimate depend define step
+For analysis correspond usefully actual execution time time required perform step must guaranteed bounded constant
+One must careful instance analysis count addition two number one step
+This assumption may warranted certain context
+For example number involved computation may arbitrarily large time required single addition longer assumed constant
+Two cost model generally used The latter cumbersome use employed necessary example analysis algorithm like used
+A key point often overlooked published lower bound problem often given model computation restricted set operation could use practice therefore algorithm faster would naively thought possible
+analysis theoretical classification estimate anticipates increase usually denoted increase
+efficiency topic great interest A take second hour even year finish executing depending algorithm implement
+While technique used measure algorithm practice provide timing data infinitely many possible input latter achieved theoretical method analysis
+Since algorithm
+given algorithm implemented arbitrary arbitrary running arbitrary additional significant drawback using approach gauge comparative performance given set algorithm
+Take example program look specific entry size
+Suppose program implemented Computer A machine using algorithm Computer B much slower machine using
+two computer running respective program might look something like following Based metric would easy jump conclusion running algorithm far superior efficiency
+However size increased sufficient number conclusion dramatically demonstrated error Computer A running linear search program exhibit growth rate
+The program directly proportional input size
+Doubling input size double run time quadrupling input size quadruple forth
+On hand Computer B running binary search program exhibit growth rate
+Quadrupling input size increase run time amount example n
+Even though Computer A ostensibly faster machine Computer B inevitably surpass Computer A running algorithm much slower growth rate
+Informally algorithm said exhibit growth rate order beyond certain input size function time positive constant provides algorithm
+In word given input size greater constant running time algorithm never larger
+This concept frequently expressed using Big O notation
+For example since input size increase insertion sort said order
+Big O notation convenient way express given algorithm although also used express example scenario
+Assuming execution time follows power rule coefficient found taking empirical measurement run time point calculating
+In word measure slope empirical line execution time problem size size point
+If order growth indeed follows power rule line plot indeed straight line empirical value stay constant different range change line curved line still could serve comparison two given algorithm behaviour
+Applied table It clearly seen first algorithm exhibit linear order growth indeed following power rule
+The empirical value second one diminishing rapidly suggesting follows another rule growth case much lower local order growth improving still empirically first one
+The complexity scenario given algorithm sometimes evaluated examining structure algorithm making simplifying assumption
+Consider following A given computer take execute involved carrying algorithm
+The specific amount time carry given instruction vary depending instruction executed computer executing conventional computer amount
+Say action carried step considered consume time step us time forth
+In algorithm step run
+For evaluation assumed step run well
+Thus total amount time run step step The step trickier evaluate
+The outer loop test step execute time note extra step required terminate loop hence n n execution consume time
+The inner loop hand governed value j
+On first pas outer loop j iterates The inner loop make one pas running inner loop body step consumes time inner loop test step consumes time
+During next pas outer loop j iterates inner loop make two pass running inner loop body step consumes time inner loop test step consumes time
+Altogether total time required run inner loop body expressed The total time required run outer loop test evaluated similarly factored Therefore total running time algorithm As one assume term given function dominates rate growth thus defines order
+In example n term one conclude f n O n
+Formally proven follows Prove Let constant greater equal Therefore A approach analyzing algorithm would declare equal one unit time system unit chosen one unit greater equal actual time step
+This would mean algorithm running time break follows The methodology analysis also utilized predicting growth rate consumption
+As example consider following pseudocode manages reallocates memory usage program based size program manages In instance file size n increase memory consumed rate order O
+This extremely rapid likely unmanageable growth rate consumption memory
+Algorithm analysis important practice accidental unintentional use inefficient algorithm significantly impact system performance
+In application algorithm taking long run render result outdated useless
+An inefficient algorithm also end requiring uneconomical amount computing power storage order run rendering practically useless
+Analysis algorithm typically focus asymptotic performance particularly elementary level practical application constant factor important data practice always limited size
+The limit typically size addressable memory machine GiB greater used machine EiB
+Thus given limited size order growth time space replaced constant factor sense practical algorithm O large enough constant small enough data
+This interpretation primarily useful function grow extremely slowly binary log le practical data bit binary log log le virtually practical data bit binary log log le virtually practical data bit
+An algorithm complexity may nonetheless efficient algorithm constant complexity practical data overhead constant time algorithm result larger constant factor one may long
+For large data linear quadratic factor ignored small data asymptotically inefficient algorithm may efficient
+This particularly used like use asymptotically efficient algorithm time complexity switch asymptotically inefficient algorithm time complexity small data simpler algorithm faster small data
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+This question already answer I gone much deep CS
+So please forgive question good scope site
+I seen many site book notation like O n tell time taken algorithm
+I read article I still able understand calculate given algorithm
+This question asked already answer
+If answer fully address question please
+This part computer science called analysis algorithm
+Many time people satisfied given guarantee performance worse specified bound care exact performance
+This bound conveniently denoted notation case O f n upper bound
+That input size n algorithm complexity guaranteed exceed constant time f n
+Most time clear context bound measured
+Note measured actual time unit second minute etc
+frowned upon compare meaningful across different computer
+Typically elementary operation identified like compare exchange sorting algorithm push pop algorithm includes stack update tree data structure used algorithm
+This elementary operation understood dominating one largest contribution complexity perhaps expensive another one particular setting multiplication considered expensive addition example
+It selected cost operation proportional number elementary operation
+This upper bound called complexity algorithm
+Because hold input size n input incur highest worst cost
+The actual performance specific input size n may lot lower upper bound
+While possible exact analysis usually much involved arrive exact result
+Also exact analysis mean accounting operation algorithm requires rather detailed implementation counting elementary operation done mere sketch algorithm time
+It nice analysis possible always necessary
+Because small input much problem want learn happens input size n get large
+Knowing complexity bounded n nice looking performance asymptotically term dominates others large n
+So proving upper bound O suffices
+If two algorithm guarantee one performs like like n easily decide one lower us le elementary operation noting quadratic function grows faster linear function
+In practice mean linear algorithm finish earlier process larger input time
+But might constant hidden practical n algorithm faster
+However three algorithm O guarantee complexity hard pressed decide algorithm choose
+Then detailed bound needed perhaps even exact analysis
+It may well analysis hard give bound
+Then gap actual performance perhaps bound perhaps O
+Then clever idea involved analysis necessary close gap provide improved bound
+This improvement bound algorithm
+Typically argue carefully want prove tighter bound
+This said analysis algorithm simple looking implementation counting nesting depth loop conclude operation innermost loop executed O time say three loop nested
+For type algorithm analysis follows always pattern theorem like tell generically algorithm performance
+Then apply theorem get bound
+Perhaps faced recursive algorithm able describe algorithm complexity recurrence relation
+Then solving recurrence give desired bound
+Typically exploit property input
+Sorting algorithm deeply connected permutation knowing something number inversion permutation help lot analysing performance
+There general approach proceed analysis
+As discussed depends algorithm input implementation elementary operation choosen mathematical tool hand desired sharpness bound
+Some may prefer treatment
+Then different technique necessary
+Big O notation O ignores constant factor left upper bound growth rate
+For single line statement like assignment running time independent input size n time complexity would O For loop like The running time would O n line executed n time
+But It O statement executed n time every
+For statement depends condition statement executed
+The running time logarithmic O n multiplication
+For instance Which
+Hence O n
+For information look Wikipedia atricle A statement like Algorithm A take O n time
+say much actual runtime algorithm given instance
+You usually read like For fixed N n runtime A instance size n bounded function f n cn c R fixed
+This called asymptotic runtime bounded O n much weaker statement
+All item come sharper analysis even impossibly perform without knowledge concrete machine algorithm run
+Aside determining c precisely deriving upper lower bound average case analysis amortised analysis smoothed analysis popular technique better describe algorithm behaviour
+Note furthermore tha memory hierarchy usually ignored even though heavily influence performance
+See answer quick explanation different Landau symbol
+That said analysing algorithm conceptually simple Count executed operation sum relative runtimes
+As often hard trick employed desired quality resulting bound inform one employ extent
+Performing analysis
+one yield exactly desired precision definitely art
+If want see exceptionally rigorous analysis take peek Donald Knuth The Art Computer Programming
+For example common resolution try Cormen Leiserson et al Introduction Algorithms
+Let give graphical representation
+Consider two function f n g n look something like When say function f n bound O g n
+f n O g n actually mean exists constant c f n g n like figure Likewise say function f n bound g n
+f n g n actually mean exists constant c f n g n like figure In manner say function f n bound g n
+f n g n actually mean exists two constant SAME FUNCTION g n f n g n like figure NOTE You remember notation O write O always end finishing top line When write notation always finish bottom line function line middle
+Now said basic understanding asymptotic notation look following figure
+The following figure dice analysis runtime merge sort algorithm O denote sort expression constant factor stripped
+The difference O notation set upper bound algorithm running time Omega notation set lower bound Theta notation sandwich algorithm running time
+To calculate running time algorithm find dominates running time
+For example designed algorithm binary search quick sort running time dominated quick sort
+But finally calculate running time algorithm least partially consist algorithm seen
+In case find part spends time
+It usually mean look loop nested loop recursive call
+There much say algorithm analysis also technique like amortized analysis
+To find I highly recommend read Introduction Algorithms Third Edition CLRS
+asked viewed active Get In get see site design logo Stack Exchange Inc user contribution licensed
+
+What running time mergesort computer science
+Here solution
+Here solution
+The best way approach question running time merge sort O n merge TutorSense Course Hero homework study help need succeed
+We got note study guide practice test along expert tutor customizable anywhere anytime
+Find best study resource around tagged specific course
+Share gain free Course Hero access earn money Marketplace
+Get homework help expert online
+Ask question browse existing Q A thread
+Satisfaction guaranteed
+Browse existing set create using digital flashcard system
+A simple yet effective studying tool help earn grade want
+Or get help Computer Science expert
+Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+For measuring complexity algorithm time complexity computational complexity
+What difference
+I used calculate maximum worst count basic costing operation algorithm
+general term time resource might want consider
+The next obvious space algorithm us hence talk complexity also part computational complexity
+Indeed measure care use course measure useful others
+So counting number step algorithm take worst case give time complexity bound problem solves counting much many tape cell us give space complexity bound etc
+etc
+Remember also want strict complexity refers problem algorithm problem complexity bound algorithm resource bound running time space use
+It matter definitional formality complexity theory deal problem
+Yes algorithm key tool analysing problem complexity algorithmics closely tied together formally would say algorithm P problem Sorting P
+us certain resource O n step example
+The resource bound correctness algorithm imply complexity upper bound problem different thing
+Sorting also complexity bound really stated problem algorithmic implication
+Cyclomatic complexity often used measure computational complexity useful example provided There may many different possibly nested path algorithm giving high cyclomatic complexity loop giving low time complexity
+A program single loop would low cyclomatic complexity possibly high time complexity
+Cyclomatic complexity often used measure maintenance required code
+A detailed discussion provided
+This different time complexity run time measurement code may used ass user perception effectiveness system
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+If seeing message mean trouble loading external resource website
+If behind web filter please make sure domain unblocked
+To log use feature Khan Academy please enable JavaScript browser
+
+This post part series produced HuffPost Mentorship Program
+discus issue affecting woman science technology engineering math
+Transitioning sophomore year summer given lot time think reflect upon experience towards majoring Computer Science
+I feel extremely different way commonly portrayed medium even I expected
+So six reality computer science major Personally brother one encouraged take computer science class
+I tried learn code unsuccessful I could even set development environment
+Even though dropped intro CS class told I could field needed woman engineer like
+Through faith I took web development course jumped intro CS track Stanford stuck CS train ever since
+The number one thing attracts CS major fact I build stuff stay around forever said internet written ink bad deal
+b accessible many people c like teaching really stupid baby something
+Mehran Sahami really famous one awesome CS professor told u first day class computer really dumb really good following instruction
+Almost good point everything letter
+If talk computer language make want golden
+My problem solving skill become immensely better becoming computer science major
+In fact everything I think problem
+Running late morning
+I break problem going take time I effectively cut corner avoid wasting time
+My parent often rely fix anything technologically related television phone name
+I approach every issue software problem could wrong
+Look symptom problem see show
+Understand system could causing
+And usually I get solution
+It easy give say oh care someone else code
+Another one awesome CS Professors Eric Roberts showed u first day second introductory class even Stanford graduated student CS major Valley hired still need people fill job
+It surprising software job even working eBay talent one thing company aggressively looking
+You give could
+Maybe could code next app Learning CS involves experimentation
+You mess around code really get
+Sometimes mean break something already working
+But great thing return get learn something new sometimes something even documented fixed
+This definitely happens work everyday
+Sometimes I feel like taking lazy approach going back old way thing trust definitely lot better play around
+Being CS major hard probably many people
+You doubt everyday whether meant want give
+You see kid since two year old think Damn I even bother trying
+You fail programming ponder question personal experience
+The truth one talk hard want think
+Even year later I still doubting decision major CS software engineering
+I doubt day I set foot first second third CS class every exam I took first day internship day I push code Github
+But truth OK doubt long hold back
+You think best
+Of course
+Do afraid wo get anywhere unless try
+So someone contemplating computer science someone afraid stop
+Forget boy tell ca forget hater jealous zeal
+Code
+If broken get segmentation fault Java exception go fix
+Chances assume meant never able feel thrill getting something work even Hello World stopping
+Sometimes one stopping answer let go
+
+learn share knowledge build career
+I heard thing like C Runtime Visual Runtime Common Language Runtime etc
+When coding assembly language Linux I could use INT instruction make system call
+So runtime nothing bunch function wrap low level function abstract high level function
+But seem like definition library runtime
+Are runtime two different thing
+These day I thinking maybe something common called JVM
+Here quotation lead thought This compilation process sufficiently complex broken several layer abstraction usually involve three translator compiler virtual machine implementation assembler
+Introduction The Road Down To Hardware Land As per Wikipedia
+In computer programming runtime library special program library used compiler implement function built programming language runtime execution computer program
+This often includes function input output memory management
+A system also called runtime system runtime software designed support execution computer program written computer language
+The system contains implementation basic command may also implement command may support type checking debugging even code generation optimization
+Some service system accessible programmer application programming interface service task scheduling resource management may inaccessible
+runtime runtime library two different name thing
+Runtime describes executed program running especially instruction write explicitly necessary proper execution code
+language like C small runtime
+More complex language like allows dynamic message passing much extensive runtime
+You correct runtime code library code library code general term describing code produced library
+Runtime code specifically code required implement feature language
+Runtime general term refers library framework platform code run
+The C runtimes collection function
+The runtime contains interpreter garbage collector
+The part language implementation executes code present part implementation called C standard
+Java runtime consists virtual machine standard library common C runtime consists loader part operating system runtime library implement part C language built executable compiler hosted environment includes part standard library In understanding exactly mean time program run
+You say something happens compile time
+I think two separate thing
+C runtime seem right
+I call C runtime library
+Answers question I think term extended include also environment context program run This answer extend opinion fact definition
+Matt Ball answered correctly
+I would say example
+Consider running program compiled version year compiler let run version window like Win etc
+Its bit compiler
+And see program bit pointer
+Why OS
+Yeah
+compiler setup execution environment bit bit version OS supported
+What commonly called JRE Java Runtime Environment provides Java program resource may need execute
+Actually runtime environment brain product idea Virtual Machines
+A virtual machine implement raw interface hardware program may need execute
+The runtime environment adopts interface present use programmer
+A compiler developer would need facility provide execution environment program
+Run time exactly code come life see lot important thing code
+Runtime responsibility allocating memory freeing memory using operating system sub system like File Services IO Network Services etc
+Your code called WORKING IN THEORY practically run code
+Runtime friend help achiving
+I found make insightful context understanding You see Development Kit eg
+stuff get run runtime
+It content like The zip contains So eg
+C runtime would file like C runtime library run runtime made special content purpose inclusion definition C language implemented C implementation choice
+And get runtime implementation use build upon
+That little polarisation runnable file user new program need
+As developer program need C compiler C library header user need
+runtime could denote current phase program life runtime compile time load time link time could mean runtime library form basic low level action interface execution environment
+could mean runtime system execution environment
+case C program runtime code set stack heap etc
+requirement expected C environment
+essentially set environment promised language
+could runtime library component something like case C Run time instance know type object creates execution object creation based certain condition computation work
+In contradict compile time instance required object defined execution
+These section MSDN documentation deal question I hope help
+Thanks Damian Runtime somewhat opposite
+Historically come slow mainframe environment expensive
+Runtime period time program running
+It begin program opened executed end program quit closed
+Runtime technical term used often software development
+It commonly seen context runtime error error occurs program running
+The term runtime error used distinguish type error syntax error compiliation error occur program run
+When program runtime phase application loaded RAM
+This includes executable file library framework file referenced program
+When program quit runtime period end memory used program made available use program
+Time elapsed execution program
+But general
+Say duration compilation program OS presenting recipe programmer interact see outcome developed called runtime
+No syntax error etc presented runtime
+
+logic correct technically business perspetcive
+So way say compileTime primary level runtime secondary level
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+I work programmer computer science background recently I following along excellent MIT OpenCourseWare intro Computer Science Programming
+In course question asked program written using function definition call basic arithmetic operator assignment conditionals run constant time
+I thought answer yes since operation seem pretty simple
+But smart people probably already knew correct answer apparently potential indefinite recursion
+It seems like I understand implication constant time
+The way I pictured meaning sounded like meant simple operation would take known amount time complete
+I accept recursion lead program running forever individual operation still taking finite measurable amount time even infinite number
+Or answer mean two infinitely recursive program validly said take amount time run
+If anyone give authoritative definition constant time implication thereof I grateful
+Constant time effectively mean give constant upper bound long program take run affected input parameter
+Compare say linear time input often actually input data rather direct value mean upper bound time taken expressed value
+Note mean program take amount time input data run constant time
+For example consider method That work case case zero
+However still constant time going one comparison one addition one multiplication
+Now compare recursive function This recurse time linear
+You get much worse linear however
+Consider method computing Fibonacci number That much worse previous version upper bound easily expressed term O
+It still using simple comparison addition function call though
+Constant time mean operation execute amount time memory space another thing often measured input size
+Usually pick variable let use indicate input size
+constant time running time depend linear time running time quadratic time running time These example possibility endless
+See wiki article Here specific way program composed operation mention could take various amount time Note three length independent
+Now run value linear time And bit fun What running time
+
+many execute
+Constant time meaning O mean algorithm run fixed amount time mean proportional input
+input computed amount time even amount time really long
+In constant time generally mean time take compute result independent size input
+For example
+Calculating length list vector managed language done constant time matter large list
+The size stored separate field updated list grows shrink
+But calculating count simple reading field
+Calculating size doubly linked list often constant time
+The list often mutated end hence central place store count
+Hence determining length list necessitates visiting determining many element
+So list grows time take calculate answer
+Constant time mean dependent number input input allowed goto way make depend number input conditionals recursion
+Although could argue recursion necessary debatable solution
+Eg
+C The real important thing consider time scale function number element
+In constant time mean time remains matter many element involved layman explanation
+If program run forever complete known amount time complete
+We applying concept constant time run entire program individual step
+constant time mean time depending amount input
+In constant time mean matter input program run longer known amount time
+Consider factorial function counterexample
+The factorial say calculated like This obviously take le time compute factorial latter program five multiplication So constant time mean know long program run case never run longer known amount time upper bound
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This first three post series
+The second post talk
+The third article talk
+notation used really scary concept
+I thought real programmer talked code
+It scary academic description made little sense
+This frustrating underlying concept actually hard
+Simply put notation programmer talk algorithm
+Algorithms another scary topic I cover another post purpose let say algorithm mean function program far
+A function notation determined responds different input
+How much slower give list thing work instead list thing
+Consider code So call function like pretty quick
+We loop thing list find first argument function return True
+If get end find return False
+The complexity function
+I explain mean second let break mathematical syntax
+read Order N function also known Order function
+I think approximation deal order magnitude
+Orders magnitude mathematical term basically tell difference class number
+Think difference
+If picture closest friend people really big difference
+Similarly difference pretty big fact difference junker car lightly used one
+It turn approximation long within order magnitude pretty close
+If guess number gumballs machine within order magnitude said gumballs
+gumballs would
+A gumball machine whose number gumballs probably within order magnitude
+Back dissecting say graph time take run function different sized input
+array item item item etc see approximately corresponds number item array
+This called linear graph
+This mean line basically straight graph
+Some may caught code sample item always first item list code would really fast
+This true approximate performance something
+The worst case code thing searching list
+Note The math term upper bound mean talking mathematic limit awfulness
+If wanted see graph function ignore function change variable
+You type Wolfram Alpha plot x show diagonal line
+The reason swap n x graphing program want variable name corresponds x axis
+The getting bigger left right corresponds giving bigger bigger array function
+The represents time higher line slower
+Runtime characteristic O n function So example
+Consider function This bit silly example bear
+This function called called constant time
+What mean matter big input always take amount time compute thing
+If go back Wolfram see always stay matter far right go
+If pas list million integer take time going pas list integer
+Constant time considered best case scenario function
+Runtime characteristic O function Consider function This match every item list every item list
+If gave array get back
+This part field mathematical field study combination thing
+This function algorithm want sound fancy considered
+This every item list aka input size operation
+So
+Below comparison graph reference
+You see function get slow quickly something operates constant time much better
+This particularly useful come data structure I post soon
+Comparison O n v O n v O function This pretty high level overview notation hopefully get acquainted topic
+There give depth view topic warned hop mathematic notation quickly
+If anything make sense send
+I also written
+I thinking writing book topic
+If something like see please express interest
+

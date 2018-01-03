@@ -1,0 +1,553 @@
+learn share knowledge build career
+I seen several post comparing JSON XML example Most seem suggest JSON better alternative XML
+I would like understand case specific scenario
+In particular JSON better suited XML configuration file currently specified XML format Do configuration file use XML instead JSON historical reason
+Thanks
+Many good question generate degree opinion based expert experience answer question tend almost entirely based opinion rather fact reference specific expertise
+XML widely adopted early great variety file format replacing many proprietary custom syntax
+Later found many place XML used need full power XML JSON developed simpler alternative
+However syntax becomes established particular kind file usually best stick benefit sticking single standard exceed benefit could get developing better format
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+I application c config file xml file
+If computer working fine security
+In case everyone see read config file
+Can I load xml file another computer
+Thanks
+Do want load config starting application possible load config initial load done
+In latter case would better using webservice
+Also second PC located
+Is inside LAN somewhere else
+Same first point latter would make webservice better option
+Lastly security problem
+If worried password config could encrypt password load encrypted password XML decrypt see correct
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I thinking XML format following quote database
+It never meant database
+It never going database
+Relational database proven technology year implementation experience
+They solid stable useful product
+They going away
+XML useful technology moving data different database database program
+However database
+Do use like page Part Item paragraph This seems really stress XML used data storage used program program interoperability
+Personally I disagree file used store program setting example data storage XML file
+However database rather configuration etc XML used
+To develop point I use two example A Data customer field one level
+number field relating one customer child B Data configuration application nested field property make lot sense So question Is still valid statement acceptable store data using XML
+EDIT I sent email author quote ask context
+Many good question generate degree opinion based expert experience answer question tend almost entirely based opinion rather fact reference specific expertise
+This quote using XML storage format general fine depending requirement storage
+When people talk database usually mean storage system store quantity data often gigabyte terabyte range
+A database potentially much larger amount available RAM server store
+Since nobody ever need data database database optimized fast retrieval selective subset data statement relational database well NoSQL solution optimize internal storage format fast retrieval subset
+XML however really fit requirement
+Due nested tag structure impossible determine file certain value stored term byte offset file without walking entire document tree least match
+A relational database index looking value index even primitive implementation single O log n lookup getting actual value nothing
+O
+In XML file efficient way run SAX parser document awful lot read seek get actual data hardly get better O n unless use index rebuild entire index every insertion see
+Inserting even worse
+Relational database guarantee row order mean append new row overwrite row marked
+This extremely fast DB keep pool writable location around getting entry pool O unless pool empty worst case pool empty new page created O
+By contrast database would move everything insertion point make room O n
+When index come play thing become even interesting typical index updated relatively low complexity say O log n want index XML file every insertion potentially change location every value document
+This also go update updating say element text content change size mean consecutive XML shift
+A relational database touch index update column XML database would rebuild entire index update change size updated XML node
+Those important downside
+XML verbose good communication add safety receiving server perform sort integrity check XML anything went wrong transfer document unlikely validate
+For mass storage however killing uncommon overhead XML data uncommon see overhead ratio range thing like SOAP message typical relational DB storage scheme constant overhead table metadata plus tiny bit per row overhead relational database come fixed column width
+If terabyte data overhead simply unacceptable many reason
+XML lousy data storage
+First verbose
+Data stored XML file take much disk space data stored reasonable database system
+In XML record name particular field stored twice along string representation data
+So example store single integar field called foobar end byte string On hand real database store single integar value taking byte
+If database small mean much record problem
+Second XML parsed text every single time file read
+For field real database simply read binary data memory offset know stored field foobar
+If file stored XML read field foobar parse text determine field parse string convert binary
+Thus performance penalty using XML huge
+The benefit XML somewhat human readable allows easy transfer data completely separate system
+Neither advantage applies local database
+The one exception configuration file generally small generally need editable human
+An XML database absolutely larger slower reasonable SQL system
+Unless find counterbalancing advantage human readability interoperability point using data storage
+XML Is viable depending context
+If data pretty static changing much Sample data example yes XML Is good use
+Configuration setting sample data even million row rarely changing good us XML
+Hard disk expensive way accessing data stack
+This seems really stress XML used data storage used program program interoperability
+Your premise flawed
+The paragraph quote actually saying XML replacement used
+It clear setting file thing database different technology
+used
+Correct I wrong seem experience language database
+If got bit experience database realise domain two different techologies suited
+This really subjective
+That quote like someone opinion man
+Honestly I think XML viable alternative database multiple advantage RDMS including low overhead equal cheaper storage especially using hosting service charge database separately
+Take look
+Both application use xml storage default
+That said
+It RDMS high volatility lot update insert deletes data require high availability use database
+XML fine storing small thing like configuration data low volatility data
+question Is still valid statement acceptable store data using XML
+I see point example configuration file
+However file format could used
+In fact old day setting used stored regular text file called INI file
+I see statement presented gray The definition XML state XML markup language defines set rule encoding document format
+This definition focus readability language rather manage data
+Compared RDBMS XML provide mean randomly insert delete row XML file
+For example row wanted delete row random even single user environment XML based file would good choice database
+Also XML provide native mechanism locking data
+In fact since XML software ACID atomicity consistency isolation durability property guarantee database transaction processed reliably shared environment left developer build exception Durability
+XML robust specification handle data integrity across XML file let alone different server
+customer xml file order xml file No FKs enforce integrity
+The enumeration XML lack instead could server quick justification statement XML database
+XML mainly defined Web document However would never achieve relational centralized data management
+Why would actually want use XML first place
+I mean
+While one could argue flexible easy understand format applies manual editing file
+When actually interact common interface fetch data X meet requirement Y Z data X advantage become void
+Short answer It depends
+Long answer From point view strongly depends amount data want store
+
+couple object application runtime want store running tool XML file perfectly fine
+However webshop custumers even order database would appropriate data storage
+Additionally I think storing setting database file like case useful I think example prof quote wrong
+XML excellent choice configuration setting
+Not XML file easy IDE easy edit
+I find incredibly useful web development scenario maintenance task performed designer content manager
+XML typically used primary data source application
+The overhead alone begs different solution
+The term refer either raw data database management system well
+This definition make big difference entire argument
+If use RDBMS definition XML little sense
+You get little term ACID guarantee write code accomplish
+If need transactional system already major trouble
+I could give list hundred feature taken granted RDBMSes reinvent reimplement
+Think security model replication backup name basic one
+In sense XML database try use one
+If use raw data definition XML fare lot better still great
+As others pointed though hugely verbose general typically lacking binary encoding duplicate tag etc
+These made XML basically efficiency enemy requirement
+XML also particularly good fit even simplest situation inserting record continuously
+Assuming want XML file valid need single closing tag mean appending record mean need shift tag end
+This pretty expensive know tag begin
+multiple table move entire file
+want work around reinvent similar approach many database spreading table multiple file dynamically growing file needed
+There situation XML appropriate config file great example typically small human readability excellent feature
+Having database config file may overkill
+Databases hand excellent thousand million billion record many user concurrently updating
+So yes XML database use like one
+Your example happens one situation need DB first place XML better fit
+The way I see
+That really poor way spend time energy
+I think quote saying well
+I agree relational database
+I think author simply saying quote use one
+Having said though may may need one
+If really need much querying data intend store fetch later based limited query criterion need XML DOCUMENT storage retrieval relational database
+There plenty application simply need store document data retrieval whole later
+If case useless create SQL based schema parse XML serialize database reverse later
+There lot code overhead potentially involved
+There le though right
+You use ORM tool like Hibernate tool like Apache Axis order autogenerate practically code need build service handle simple CRU operation
+You wrap authentication course possibly might want segregate data based user level access etc
+You may even want limit operation given user allowed via SOAP service example
+In sense like content management anything else
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+ColdFusion complies JEE standard require use XML file server web application configuration
+The following section describe XML file used ColdFusion XML server configuration file XML file used store ColdFusion Administrator setting
+Facebook post covered term Creative Commons
+Selecting region change language content
+
+Subscriber portal The parameter provides Microsoft Dynamics CRM Server Setup required information
+The information supplied XML configuration file required installation screen
+Important The XML element must English US
+An XML configuration file localized XML element work correctly
+For example German version Microsoft Dynamics CRM Server XML file element must still English US
+By default Setup use e encoding Setup XML configuration file
+Setup load XML configuration file extended character file
+You receive error message Setup XML file invalid
+If XML configuration file contains extended character work around issue saving XML configuration file using encoding
+To open XML configuration file Notepad click list select click
+An explanation XML element sample XML file follows CRMSetup The configuration file must valid XML file us root element
+Server Specifies Microsoft Dynamics CRM Server installation
+All Microsoft Dynamics CRM Server entry follow must inside Server tag
+InstallType Specifies type installation Setup perform
+The following option available Uninstall
+Uninstalls Microsoft Dynamics CRM Server
+Repair
+Starts Setup repair mode
+Patch true false By default element specify location configures Setup search available update CRM Updates Internet site controlled Microsoft
+If want Setup install update another location share network add filepath file element shown example
+update
+Specifies whether Setup look download apply update Microsoft Dynamics CRM Server Setup
+We recommend let Setup download latest version selecting true
+By default value set false
+If value set false Setup ignore step continue installation
+For information obtain Setup update see
+SqlServer SQLServername Specifies name instance Microsoft SQL Server manage Microsoft Dynamics CRM Server database file
+If SQL Server running computer installing Microsoft Dynamics CRM Server specify
+localhost
+Database true false true false create Values parameter either true false
+True cause Setup create new Microsoft Dynamics CRM database
+False cause Setup connect existing Microsoft Dynamics CRM database indicated Active Directory organizational name see following element
+update Values parameter either true false
+When select true Setup write appropriate server deployment information configuration database
+Select false using pre existing configuration database want Setup update server deployment information
+When select false appropriate server deployment information computer Microsoft Dynamics CRM Server installed must already exist configuration database Setup complete successfully
+The default value true
+Organization Organization friendly long name Specifies long name organization
+The name character long extended character supported
+OrganizationUniqueName Specifies name organization
+There character limit
+Notice extended character space allowed
+If leave element blank Setup generate short name based OrganizationFriendlyName value
+OU The element specifies Active Directory organizational unit OU domain DC value Microsoft Dynamics CRM Server computer associated
+For example OU
+LicenseKey KeyValue Specifies license key deployment
+The configuration file contain one Microsoft Dynamics CRM license key
+For example licenseKey Note If purchase Microsoft Dynamics CRM Microsoft Volume Licensing program license key provided file
+The file included Microsoft Dynamics CRM installation file
+WebsiteUrl true false Specifies path Web site created Microsoft Dynamics CRM Server
+Use true create new Microsoft Dynamics CRM Web site leave value element tag blank
+Specify false use existing Web site must enter Web site node element tag default Web site
+Use valid available TCP port number specify port connecting Microsoft Dynamics CRM Server application
+If left blank port number used
+InstallDir c CRM Specifies folder Microsoft Dynamics CRM Server file copied
+basecurrency Specifies ISO display name symbol use base currency
+For example want use dollar base currency use USD
+You must use valid ISO currency description isocurrencycode attribute
+You must also specify display name ISO base currency
+For example ISO currency code USD currency name US Dollar currency symbol
+However use string want attribute
+Important After Setup complete change base ISO currency code
+However change name symbol
+A list supported ISO currency code available Microsoft Dynamics CRM Implementation Guide
+OrganizationCollation CollationName Specifies SQL Server database collation name use organization database
+For example default collation English US language deployment
+For information database collation see following Microsoft MSDN Web site CrmServiceAccount DomainUser Â Â Â Â Â ServiceAccountLogin Â Â Â Â Â ServiceAccountPassword Specifies Microsoft Dynamics CRM service account type
+Accepted value include NetworkService us Network Service system account DomainUser use specified domain user
+By default Setup use Network Service account
+If DomainUser specified required
+If option used Setup use Network Service
+Caution Maintaining configuration file value specified security risk storing password plain text
+Delete element soon configuration file used install Microsoft Dynamics CRM Server
+SQM true false Specifies whether participate Customer Experience Improvement Program
+If specify true participate program
+Note By default Customer Experience Improvement Program feature Microsoft Dynamics CRM turned
+Later decide want participate Customer Experience Improvement Program turn feature Microsoft Dynamics CRM Web application
+To Navigation Pane click click area click dialog box clear Customer Experience Improvement Program check box click
+Reporting true false http UseSSL
+If SQL Server Reporting Services Web site us SSL designate true otherwise enter false
+URL
+Specifies URL Report Server
+Groups Â Â Â Â Â PrivUserGroup Â Â Â Â Â SQLAccessGroup Â Â Â Â Â UserGroup Â Â Â Â Â ReportingGroup PrivReportingGroup Â Â Â Â Â When used Setup use existing group Active Directory instead creating installation
+If true Setup add remove member group
+Reboot If option specified default false
+This mean server restart end Setup
+Also option applies final install restart previous restarts may required component
+Email IncomingExchangeServer ServerName Specifies Microsoft Exchange Server computer used Router route incoming message
+Specifies server used routing
+InstallDir C Dynamics CRM configdb This parent following encryption key element Warning By default encryption key stored configuration database encrypted format
+We strongly recommend specify encryption run Setup using following entry
+For information see
+encryptionkeys CrmEncryptionCertificate true False SCpassword uniqueID The encryptionkeys element specifies whether encrypt key stored Microsoft Dynamics CRM system
+Use true enable key encrypted
+The keysource may value must different keysource value
+SCpassword password used create symmetric certificate
+Warning Maintaining configuration file password keysource value specified security risk storing password key information plain text
+We recommend save password secure location retrieved later recovery
+Then delete element soon configuration file used install Microsoft Dynamics CRM
+encryptionkey CrmSymmetricKey CrmKeyEncryptionKey Each encryptionkeys element specifies mapping symmetric key store Microsoft SQL Server database virtual key name Microsoft Dynamics CRM encrypting data configuration database
+For information see
+
+April If new programming XML may wondering get started
+The benefit using XML store structured data may obvious got data XML get back
+In article explore several alternative look concrete solution Perl
+The process alternative much Python Java favorite programming language
+We going build simple text processing application us XML store user preference configuration data
+It sort thing typically done plain text file past probably familiar reader
+Many application need store user preference sort configuration information
+One common way use text file
+There probably nearly many convention format file programmer created one common style Windows INI file format see
+The format simple The file divided named section within section name value associated assignment
+Most programmer probably written code process text file like one time another
+In language easy difficult
+But always algorithm You loop line file parse string get back
+On Windows system convenient function accessing data INI file format
+In article I going propose XML version configuration file format see explore several way get information file format using Perl
+We end version provide transparent access XML configuration file
+show simple XML version configuration file shown Example
+A DTD format seen
+The DTD serf mainly documentation intended format practice going treat XML INI file simple document
+The example presented article make simplifying assumption configuration file There repeated section name
+The underlying language transparently deal encoding issue
+The configuration file properly structured
+We wo worry validation try forgiving little variation file extra attribute example
+If willing reinvent lexical analysis XML file could process one line time worth effort
+XML consciously designed could effectively processed solution particular text processor like Perl using regular expression
+As seen ca process file one line time data file small enough load entirely memory parse regular expression
+Example show version us regular expression This code four important feature The entire document loaded memory
+This avoids problem associated reading XML file allows u match element contain newlines unexpected place
+The document processed time
+The regular expression match entire section
+Note regular expression allow possibility whitespace use modifier allow Perl match across newlines
+Beware code would work properly tag could nested
+Matching large regular expression performance impact although impact probably insignificant small file
+If tempted use method larger file impact may worth considering
+For complete discussion regular expression see Jeffrey Friedl
+The section stored variable
+By storing variable examine using another regular expression attribute
+Since attribute occur order matching one step quickly lead extremely hairy regular expression
+Once find section name perform analogous parse entry within section
+Using regular expression process XML file work many simple case handling XML document way difficult
+This task best left specialized XML parser
+Luckily XML parser available language
+One popular XML parser Perl Clark Cooper module currently version
+XML built top James Clark expat event based parser
+This simply mean tell parser interested let parser work
+Each time parser encounter something registered interest make call back code
+Here another version one us parser hard work Let take closer look going
+Using parser requires several step Tell Perl using parser module
+Setup variable use keep track thing seen
+It particularly elegant keep example fairly simple
+The module expose parser object
+This line creates new instance parser object
+tell parser many line XML file display XML document
+The next step tell parser event interested
+For purpose example care tell parser call function time encountered
+After establishing event interested run parser
+This function wo actually return entire document parsed
+Each time parser encounter call function passing several argument parser context provides access underlying parser safely ignore element name associative array holding attribute
+In article looked several way process XML document demonstrated benefit using XML parser hard work
+With example hand I hope ready tackle next XML project
+Let know go remember send XML question
+For next article series sample configuration file
+INI parser us regular expression test program us regular expression INI parser us another test program
+complete INI parsing application yet another tester
+Content licensed Media Inc
+
+âãÏÓ obj endobj obj endobj obj endobj obj stream ï endstream endobj obj stream î endstream endobj obj stream endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream Tþ hëy endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream
+endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream
+endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream ñ zz g endstream endobj obj stream î endstream endobj obj stream endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj stream î endstream endobj obj stream MÐé Y ét endstream endobj obj endobj obj stream QpÜpC ÔWEA
+v º z srâÉcu ódæd ú üî MAï ÿ wÑ u NÌa
+Ç à Ör î ÉÒé
+e ÿ ÿ ú Á K ôê J Ü þ ïÇ b
+â
+ì ö û Ç BFD Ê Ä Ób X ý ý Ç ìëJv
+Ã È Ú Þ Ìnü
+h â èTz ÝK î çà Ì Â Àú ømÓî W ÇÂÊ Ð ø Én c ør Ï è
+Ë á O Ór Ö ï ñðÌ º
+Å þ NcÅÐiÈEï lð C
+
+Written By Craig Claassen National Instruments Configuration important element computer based measurement automation system
+For simple system often implement entire application including system configuration custom code
+However application complexity need reuse increase must put thought managing system configuration information
+You also must devise method generate store access manage configuration data
+Starting scratch costly endevour
+You reduce software development cost set generic reusable tool handle configuration management various system type
+This document present set basic LabVIEW tool quickly easily generate maintain access configuration data
+In addition tool document discus file format storing data
+You use configuration platform numerous system type
+In previous document Considerations Managing Data Acquisition System Configuration Information discussed various configuration file format store configuration information use data acquisition system
+You may recall format database spreadsheet XML limit u area like platform independence
+We recommended configuration setting file file format
+Over next several document section discus utilize file format store configuration range simple complex
+INI file ASCII encoded consist section key
+In LabVIEW earlier refer information INI file
+In LabVIEW later refer LabVIEW Help topic Figure show INI file various configuration information contained within section key
+Notice extension denotes file configuration purpose
+Despite different file extension file follow format rule file
+Figure
+INI file used configuration Initially INI file structure seems limiting flat
+In subsequent section however work within basic format create flexible method handle complex system configuration
+In previous document Considerations Managing Data Acquisition System Configuration Information discussed various piece information system developer may want include configuration file
+For large complex system may account large number variable make complete configuration system development
+Coming logical way organize configuration information important
+Logically organized variable help ensure include necessary information properly configure various piece system
+It also make easier developer understand configuration future modification
+Generally view piece system fit system whole establish hierarchy
+We use heirarchy structure configuration
+To help clarify configuration concept used document apply configuration example system
+A hardware chassis embedded controller contains two data acquisition module comprises example system
+We use several piece information properly control system
+The associated IP address two module enabled information sample rate information
+The highest level hierarchy
+Below
+Lastly locate module
+We refer level hierarchy property system configuration
+Figure show hierarchy system configuration property listed
+Like typical computer file system system configuration architecture expand add configuration property without need modify existing property already included configuration
+Properties behave similar typical computer directory file
+A property may value string integer Boolean etc
+associated much like file contains data
+A property also may contain subproperties much like directory file system contains file multiple file
+This applies given level
+We also access property system configuration identifying path particular property using dot notation
+For example point property The path property within configuration unique given path never return one property value
+You need completely understand configuration file formatting order use
+The tool presented later document take care formatting detail
+However give brief overview formatting basic understanding configuration file structure
+In order support various hierarchical level within given configuration property subproperties entire path stored section
+For instance property path
+The configuration file store path section
+The configuration file store property associated value rather subproperties key underneath parent property
+For example locate property section key
+Since configuration file property may consist several different data type string integer Boolean float designate data type within configuration file
+Since INI file ASCII encoded every piece information within configuration file stored ASCII character
+We way knowing datatype specific key
+In Figure key data type particular property concatenated property name
+For example property contains end property name indicate string data type
+Note
+special character used section key name special implementation INI file
+Because use character part property name
+The tool discus subsequent section automatically apply special character appropriate way properly handle formatting write configuration file
+In previous section discussed hierarchical method organize configuration data format hierarchy reference property storage standard file format
+Later discus implement example configuration file
+First however need introduce set LabVIEW tool assist generating saving loading editing configuration file
+This way easily incorporate configuration strategy LabVIEW application
+At document end find link example include library file use within LabVIEW manipulate configuration file
+You may want install file proceeding much subsequent documentation reference example explain functionality tool
+The documentation accompanying example explains install various VIs correct location
+You access main VIs edit configuration Functions pallette navigating
+Figure show pallette
+You manage configuration using manageConfig VI pallette
+This polymorphic VI contains entire API used interface configuration information polymorphic VIs refer LabVIEW Help
+Click polymorphic VI selector located directly VI diagram access various function within API
+The flow program using tool simple
+First initialize configuration
+Then load existing configuration proceed directly adding modifying getting deleting property within configuration
+You save configuration back file close reference configuration
+Figure show basic block diagram program flow
+Figure Block diagram configuration application The following section outline instance Configuration Tool API
+This instance open reference local LabVIEW memory store local copy configuration
+We use every application
+The instance output configuration reference config ref pass VIs access configuration associated reference
+It open multiple configuration simultaneously using multiple call instance
+Each call generates unique reference particular configuration
+This instance load particular configuration file local memory
+Pass config ref generated Init Config instance Load Config instance
+Once load configuration instance subsequent VIs get set add delete configuration property
+The manageConfig polymorphic VI contains Add Property instance multiple data type
+These include string STR signed integer unsigned integer floating point value DBL Boolean BOOL
+Choose correct data type property would like add enter property path actual value property config ref
+The instance call automatically verifies entire path property exists
+If exist instance automatically add necessary parent property map entire path
+You also notice Raw data type option add value local copy configuration
+The Raw data type cluster three string property path data type value
+This represents actually store data local memory
+The Add Property instance automatically handle formatting making ideal choice possible
+The manageConfig polymorphic VI also contains Get Property instance multiple data type
+They return whether property found value property
+Besides STR DBL BOOL Raw data type two variation Raw data type appear
+The All data type return array data property within entire configuration
+The Subproperties data type output array subproperties specified property hierarchy configuration
+Remember Raw data contains string path data type value
+Again use standard function possible application
+The Set Property instance allows update value existing property current loaded configuration
+Again option include standard data type STR DBL BOOL along Raw type
+You also one addtional instance New Path raw
+This mode function like Raw added ability change name property path particular property
+This mode allows update property path subproperties may exist particular property interest
+You must update path subproperties accordingly modify name path parent property
+The old property path input contain original path property name path change
+The property data contain new path want apply property subproperties
+The Delete Property instance deletes specific property associated subproperties
+Pass property path along config ref function perform operation
+The Delete All Properties instance deletes every property configuration requires config ref perform operation
+The Save Config instance allows store copy configuration file
+The function automatically convert property storage configuration format discussed earlier
+If file exists automatically overwrite file current configuration information
+If would like prevent overwriting programmatically check see file exists calling Save Config instance
+Simply pas config ref function save desired configuration file
+The final instance manageConfig polymorphic VI Close Config
+Once manipulate configuration store back file must close reference LabVIEW memory used store local copy configuration
+Pass config ref instance close appropriate configuration
+Now discussed individual tool Configuration Tool library turn implementing several application using set tool
+We based subsequent example application configuration discussed earlier
+You find example file end document
+We discus example first
+The VI programmatically generates configuration information save file
+Figure show block diagram example
+Figure Generate Save Configuration VI block diagram Figure Initialize Configuration Once save configuration file clear LabVIEW resource Close Config instance
+Figure Load Configuration Get Properties VI block diagram The Load Configuration Get Properties VI initializes configuration load configuration file get requested property configuration close configuration reference
+See detailed description LabVIEW code using manageConfig polymorphic VI
+The Init Config instance initializes configuration setting aside local LabVIEW memory temporary storage configuration data
+The Load Config instance load desired configuration file local memory
+We query file add get set property
+Pass property path data type Get Property instance property would like retrieve
+Once query configuration clear LabVIEW resource Close Config instance
+Finally discus editing configuration file using
+Figure show block diagram example
+The Editing Existing Configuration VI initializes configuration load configuration file get requested property configuration set property new value save configuration back file close reference configuration
+See detailed description LabVIEW code using manageConfig polymorphic VI
+The Init Config instance initializes configuration setting aside local LabVIEW memory temporary storage configuration data
+The Load Config instance load desired configuration file local memory
+We query file add get set property
+Figure Set Properties After editing desired property call Save Config instance store configuration file
+Once save configuration file clear LabVIEW resource Close Config instance
+In previous document Considerations Managing Data Acquisition System Configuration Information discussed three different level configuration editor interface used manipulate configuration data
+We make basic edits using simple text editor Notepad
+We also use fully functional configuration GUI often seen deployed application assist end user managing configuration
+Lastly hybrid simple text editor fully functional GUI editor
+This type editor give enough functionality easily manipulate configuration without addtional GUI interface
+An engineer developing entire system would likely use type editor
+We included intermediate editor called ConfigEditor example code
+You downloaded
+For installation instruction please refer Readme documentation included example
+Once install editord access LabVIEW navigating Figure show basic interface Configuration Property Editor configuration file loaded
+Figure Configuration Property Editor The Configuration Property Editor allows interactively build configuration file without create file hand programmatically
+We built Configuration Property Editor using Configuration Tool Library discussed previous section
+The source code editor well documented
+The editor delivers basic functionality easily generate maintain configuration file
+We encourage add functionality change existing functionality editor needed
+We highlight main feature Configuration Property Editor
+For explanation functionality included interface refer online help included Configuration Property Editor
+In Configuration Property Editor find option menu create new configuration open existing configuration save configuration specific location
+Also option menu allow edit specific property
+When select menu item window open allowing edit data type initial value property
+You also specify whether property contain subproperties
+The main interface us tree control represent hierarchy configuration display data type value associated property
+You expand collapse various branch tree browse amidst property associated subproperties
+given property edit delete add subproperties
+In addition generating maintaining configuration file Configuration Property Editor also open editor load configuration file building application
+When building code dependent configuration quickly scan configuration information extract path data type information
+This may aid development process
+See Figure example developer workspace
+Figure Using Configuration Property Editor assist building application
+Ensuring correct property path common obstacle
+To help alleviate issue highlight path window Configuration Property Editor copy Windows clipboard
+Then go block diagram paste entire path string constant
+This help avoid misspelling syntax error
+Keeping Configuration Property Editor open building code also allows access configuration data
+Configuration management important piece computer based system
+Having set generic configuration management tool along platform independent configuration file structure allows system developer easily generate maintain utilize configuration data within system development
+This document showcased set reusable tool benefit flexible configuration file structure
+You download configuration tool
+Oct By When attempting install LabVIEW Full Development System version received error LabVIEW higher required
+Checked LabVIEW technical support
+Did install LabVIEW Oct The example VI contain broken wire opened LabView Mar By The ConfigTool installs Configuration Property Editor link Conclusion part document Mar By There also free configuration tool available
+OpenG Moore Good Ideas http tool allow cluster array written configuration file
+In fact palette screenshot shown show author OpenG tool installed
+There probably ini file tool well
+Disclaimer I work company mentioned Moore Good Ideas
+Feb http correct link link page match Dec By The doc say An intermediate editor called ConfigEditor included example code linked end document link exists
+Where I find example code
+Dec By It sound interesting
+The thing add straight forward cluster array support
+That would really generic package much useable
+Writing key key quite difficult task especially development stage
+Attachments Rate document Answered Your Question
+Yes No This site us cooky offer better browsing experience
+Learn NI equips engineer scientist system accelerate productivity innovation discovery
+copy National Instruments
+All right reserved
+

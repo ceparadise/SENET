@@ -1,0 +1,161 @@
+The need backward execution debugger raised number time
+Backward execution help user naturally think backwards turn easily locate cause bug
+Backward execution implemented mostly checkpointing inherently scalable
+In paper present method generate reverse code backtracking performed executing reverse code
+The novelty work generate reverse code running debugger make possible apply method even debugging program
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer startxref EOF obj stream Çá z ôSö êx Zf È Nb þ ùt ð jãw Óÿ ú endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream ð Déê ì endstream endobj obj endobj obj stream Ñ ß V V Öc kÁîùû À çZÉXò ööè ÞÞd º
+ç F Ô ÑÀÆ Q ùBzòÁ È xkGiø ä
+e Ùi ÿPw ñ â ÎcÌyØâùþÁ K e C b ØK ÔT QÊ l Æ ãë á ì
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I understand forward backward analysis work situation would use
+Why need able way
+Do compiler certain type perform one way efficiently
+You different analysis forward backward flow algorithm provide information code future code along normal path execution
+A good example provide value variable code line
+provide information future property back time
+A good example remove assignment variable never read future
+Real compiler like gcc llvm perform kind analysis even optimization require kind analysis simultaneously one requiring algorithm It try move code place
+By posting answer agree
+asked viewed active Get In get see site design logo Stack Exchange Inc user contribution licensed
+
+Share Powered
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Looking seems forward Symbolic Execution SE tool choice top team
+For example Maybe stupid question purpose find input reach location
+one cause intuitively going backward location much easier searching forward
+However obviously scientist think I wonder
+Moreover paper forward SE appear software engineering conference survey every year
+But I remember last time I read paper backward SE possibly stupid question
+Are challenge make backward SE either Forward SE easier implement composes better testing method thus scalable
+Usually workload possible enumerate path program test simply many path
+So need way deal sample subset path still reasonable chance finding bug
+With forward SE easy way deal test case run program concretely switch forward SE partway execution
+Or run program concretely terminates recording path took use SE generate new input cause go similar identical path
+The tool tend combine fuzzing random testing SE approach nice way enable sort composition
+Second forward SE implementation benefit
+Inevitably kind operation ca want model symbolically floating point system call etc
+With forward SE problem execute program concretely keep part state symbolic treating result operation concrete concretize forcing input match observed concrete value output
+It usually possible concretization backwards SE
+So forward SE allows concolic execution state program concrete single value treated symbolic represented variable accumulate constraint
+Finally many modern tool consider single path program construct path expression set constraint characterize set input cause program follow path
+This convenient multiple reason
+When take approach difference forward SE backwards SE largely disappear state merging consider single path time
+So taking approach sense need choose two choice inconsequential basically equivalent choose whichever want based one find convenient way think
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Share Powered
+
+A instruction cause computer begin executing different instruction sequence thus deviate default behavior executing instruction order
+may also refer act switching execution different instruction sequence result executing branch instruction
+A branch instruction either always result branching may may cause branching depending condition
+Branch instruction used implement program loop conditionals executing particular sequence instruction certain condition satisfied
+Mechanically branch instruction change PC
+The program counter memory address next instruction
+Therefore branch cause CPU begin fetching instruction different sequence memory cell
+When branch CPU program counter set jump instruction
+So next instruction becomes instruction address
+Therefore flow control change
+When branch CPU program counter unchanged
+Therefore next instruction executed instruction branch instruction
+Therefore flow control unchanged
+The term used referring program high level language well program written
+In branch usually take form various form encapsulate instruction sequence executed condition satisfied
+Unconditional branch instruction used unconditionally jump begin execution different instruction sequence
+Machine level branch instruction sometimes called instruction
+Machine level jump instruction typically form latter may depending condition
+Usually distinct form jump often called subroutine invokations known automatically save originating address return address stack allowing single subroutine invoked multiple location code
+In CPUs earlier instruction set condition flag register
+The earlier instruction may instruction
+It often close branch though necessarily instruction branch
+The stored condition used branch
+This temporary information often stored flag register may also located elsewhere
+A flag register design simple slower simple computer
+In fast computer flag register place bottleneck speed instruction could otherwise operate parallel several need set flag bit particular sequence
+There also machine particular instruction condition may checked jump instruction
+In simple computer design comparison branch execute arithmetic use power flag register branch
+In fast computer design comparison branch run faster flag register branch comparison branch access register parallelism using CPU mechanism calculation
+Some early simple CPU architecture still found microcontrollers may implement conditional jump rather conditional skip next instruction operation
+A conditional jump call thus implemented conditional skip unconditional jump call instruction
+Depending jump instruction typically shortened form word word often along informative letter extra parameter representing condition
+Sometimes detail included well range jump offset size special addressing mode used locate actual effective offset
+This table list machine level branch jump instruction found several architecture VAX others set signal clear signal
+ARM PIC others opposite subtractive operation
+This inverted function carry flag certain instruction marked part table otherwise noted
+However carry additive operation handled way architecture
+To achieve high performance modern processor
+They consist multiple part partially process instruction feed result next stage pipeline start working next instruction program
+This design expects instruction execute particular unchanging sequence
+Conditional branch instruction make impossible know sequence
+So conditional branch cause stall pipeline restarted different part program
+Several technique improve speed reducing stall conditional branch
+Historically branch prediction took statistic used result optimize code
+A programmer would compile test version program run test data
+The test code counted branch actually taken
+The statistic test code used compiler optimize branch released code
+The optimization would arrange fastest branch direction taken would always frequently taken control flow path
+To permit CPUs must designed least predictable branch timing
+Some CPUs even instruction set designed branch hint compiler tell CPU branch taken
+The problem software branch prediction requires complex software development process
+To run software hardware moved statistic electronics
+Branch predictor part processor guess outcome conditional branch
+Then processor logic gamble guess beginning execute expected instruction flow
+An example simple hardware branch prediction scheme assume backward branch
+smaller program counter taken part loop forward branch larger program counter taken leave loop
+Better branch predictor developed validated statistically running simulation variety test program
+Good predictor usually count outcome previous execution branch
+Faster expensive computer run faster investing better branch prediction electronics
+In CPU hardware branch prediction branch hint let compiler presumably superior branch prediction override hardware simplistic branch prediction
+Some logic written without branch fewer branch
+It often possible use instead branch
+Another technique
+In approach one instruction branch always executed
+Therefore computer use instruction useful work whether pipeline stall
+This approach historically popular computer
+In family compatible CPUs complicates multicycle CPUs pipeline faster CPUs pipeline superscalar CPUs execute instruction order
+
+Peter Dinges Knowing input cover specific branch statement program useful debugging regression testing
+Symbolic backward execution SBE natural approach find targeted input
+However SBE struggle complicated arithmetic external method call datadependent loop occur many program
+We propose symcretic execution novel combination SBE concrete forward execution efficiently find targeted input despite challenge
+An evaluation approach range test case show symcretic execution find input case concolic testing tool exploring fewer path segment
+Integration approach allow test generation tool fill coverage gap static bug detector verify candidate bug concrete test case
+Dinges Peter
+TY CHAP Targeted test input generation using backward execution AU Dinges Peter AU Agha Gul PY Knowing input cover specific branch statement program useful debugging regression testing
+Symbolic backward execution SBE natural approach find targeted input
+However SBE struggle complicated arithmetic external method call datadependent loop occur many program
+We propose symcretic execution novel combination SBE concrete forward execution efficiently find targeted input despite challenge
+An evaluation approach range test case show symcretic execution find input case concolic testing tool exploring fewer path segment
+Integration approach allow test generation tool fill coverage gap static bug detector verify candidate bug concrete test case
+AB Knowing input cover specific branch statement program useful debugging regression testing
+Symbolic backward execution SBE natural approach find targeted input
+However SBE struggle complicated arithmetic external method call datadependent loop occur many program
+We propose symcretic execution novel combination SBE concrete forward execution efficiently find targeted input despite challenge
+An evaluation approach range test case show symcretic execution find input case concolic testing tool exploring fewer path segment
+Integration approach allow test generation tool fill coverage gap static bug detector verify candidate bug concrete test case
+KW Backward execution KW Concolic KW KW Symcretic UR http UR http DO Conference contribution SP EP BT ASE Proceedings International Conference Automated Software Engineering PB Association Computing Machinery Inc ER Powered
+Cookies used site
+To decline learn visit
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I never used debugger run program backwards I would like
+Now I wonder much evidence theory backwards runnable programming program run backwards
+Intuitively I find computer able run program backwards run program forward knowing program run backwards hence saving state program otherwise might get lost deallocated
+Debugging practical example
+I also interested sake theory reversibility program run backwards program reversible
+In theory actually run program backwards would require undo effect program execution
+Doing relatively simple inefficient memory change harder change disk impossible networking
+And code depends external state time day file disk could modified another process rewinding running wo produce result
+In practice possible allow state program point execution without allowing restart point
+This way problem external state form rewinding need undo state change except memory stepping forward always produce result code actually executed
+This form rewinding implemented Visual Studio name though record program state every instruction line code every method call
+There lot research subject
+I sometimes seen called debugging literature sometimes reverse debugging
+A minute Google Scholar turn bunch research publication subject
+See also
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+

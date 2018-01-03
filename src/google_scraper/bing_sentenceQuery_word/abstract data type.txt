@@ -1,0 +1,433 @@
+learn share knowledge build career
+I currently studying Abstract Data Types ADT I get concept
+Can someone please explain actually
+Also collection bag List ADT
+simple term
+Abstract Data Type ADT data type behavior defined implementation
+Opposite ADT Concrete Data Type CDT contains implementation ADT
+ADTs
+Each ADTs many implementation
+CDT
+Container ADT ADTs
+Book Abstract Telephone Book implementation The Wikipedia article lot say
+In computer science abstract data type ADT mathematical model certain class data structure similar behavior certain data type one programming language similar semantics
+An abstract data type defined indirectly operation may performed mathematical constraint effect possibly cost operation
+In slightly concrete term take Java interface example
+The interface explicitly define behavior concrete class
+The interface defines set method class
+must implement order considered
+A another abstract data type
+In case Java interface even abstract since The interface place additional stipulation beyond specified interface contract method
+A also known
+In mathematics notion multiset bag generalization notion set member allowed appear
+For example unique set contains element b others many multisets property multiset contains two copy one b multiset contains three copy b
+In Java Bag would collection implement simple interface
+You need able add item bag check size iterate item contains
+See example implementation Sedgewick Wayne
+A truly abstract data type describes property instance without commitment representation particular operation
+For example abstract mathematical type Integer discrete unlimited linearly ordered set instance
+A concrete type give specific representation instance implement specific set operation
+ADT set data value associated operation precisely independent paticular implementaition
+The strength ADT implementaion hidden interface declared mean ADT various way Simply Abstract Data Type nothing set operation set data used storing data efficiently machine
+There need perticular type declaration
+It require implementation ADT
+Abstract Data type mathematical module includes data various operation
+Implementation detail hidden called abstract
+Abstraction allowed organise complexity task focusing logical property data action
+In programming language type data associated operation
+An ADT user defined data aggregate operation data characterized data operation represented list declared single syntactic unit relevant operation visible user ADT ADT way normal data type programming language
+It abstraction internal representation data implementation operation concern ADT user
+An abstract data type could defined mathematical model collection operation defined
+A simple example set integer together operation union intersection defined set
+The generalization primitive data type integer char etc encapsulate data type sense definition type operation type localized one section program
+They treated primitive data type outside section operation defined
+An implementation translation statement programming language declaration defines variable plus procedure language operation
+The implementation ADT chooses data structure represent
+A useful tool specifying logical property data type abstract data type
+Fundamentally data type collection value set operation value
+That collection operation form mathematical construct may implemented using particular hardware software data structure
+The term refers basic mathematical concept defines data type
+In defining abstract data type mathamatical concept concerned space time efficinecy
+Those implementation issue
+Infact defination concerned implementaion detail
+It may even possible implement particular particular piece hardware using particular software system
+For example already seen integer universally implementable
+To illustrate concept specification method consider corresponds mathematical concept rational number
+A rational number number expressed quotient two integer
+The operation rational number define creation rational number two integer addition multiplication testing equality
+The following initial specification
+An consists two part The value definition defines collection value ADT consists two part For example value definition RATIONAL state RATIONAL value consists two integer second equal
+The keyword abstract typedef introduces value definition keyword condition used specify condition newly defined data type
+In definition condition specifies denominator may
+The definition clause required condition may necessary every
+Each operator defined abstract junction three part
+For example operator definition ADT RATIONAL includes operation creation makerational addition add multiplication mult well test equality equal
+Let u consider specification multiplication first since simplest
+It contains header
+The header definition first two line like C function header
+The keyword abstract indicates C function ADT operator definition
+The specifies operation
+In name function case mult used denote result operation
+Thus mult represents numerator result mult represents denominator result
+That specifies condition become true operation executed
+In example specifies neumerator result rational multiplication equal integer product numerator two input denominator equal th einteger product two denominator
+InÂ computer science aÂ listÂ orÂ sequenceÂ anÂ abstract data typeÂ represents countable number orderedÂ value value may occur
+An instance list computer representation theÂ mathematicalÂ concept finiteÂ sequence potentially infinite analog list aÂ Lists basic example ofÂ container contain value
+If value occurs multiple time occurrence considered distinct item The name list also used several concrete data structure used implement abstract list especially linked list
+Image List A bag collection object keep adding object bag remove added bag
+So bag data structure collect object iterate
+You bag normally program Java
+Image Bag A collection Java sense refers class implement Collection interface
+A collection generic sense group object
+Image collection Before defining let u considers different view data type
+We know default primitive data type int float etc
+support basic operation addition subtraction
+The system provides implementation primitive data type
+For data type also need define operation
+The implementation operation done want actually use
+That mean general data type defined along operation
+To simplify process solving problem combine data structure operation call
+ADT
+Commonly used include Linked List Stacks Queues Binary Tree Dictionaries Disjoint Sets Union find Hash Tables many others
+consist two type To solve problem combine data structure operation
+An ADT consists two part Commonly used ADT Linked Lists Stacks Queues Priority Queues Trees etc
+While defining ADTs need worry implementation detals
+They come picture want use
+like user defined data type perform function without knowing inside datatype operation performed
+As information exposed abstracted
+eg
+List Array Stack Queue
+On Stack perform function like Push Pop sure implemented behind curtain
+ADT set object operation definition mention set operation implemented
+Programmers use collection need know instantiate access data manner without concern detail collection implementation
+In word perspective collection abstraction reason computer science collection referred abstract data type ADTs
+The user concern learning interface set operation performs By posting answer agree
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+In data type defined behavior point view data specifically term possible value possible operation data type behavior operation
+This contrast concrete representation data point view implementer user
+Formally ADT may defined class object whose logical behavior defined set value set operation analogous mathematics
+What meant behavior varies author two main type formal specification behavior correspond respectively
+Some author also include cost term time computing operation space representing value
+In practice many common data type ADTs abstraction perfect user must aware issue like due representation
+For example integer often stored fixed width value binary number thus experience maximum value exceeded
+ADTs theoretical concept computer science used design analysis algorithm data structure software system correspond specific feature computer language directly support formally specified ADTs
+However various language feature correspond certain aspect ADTs easily confused ADTs proper include
+ADTs first proposed Stephen Zilles part development language
+For example ADT defined value operation addition subtraction multiplication division together greater le behave according familiar mathematics care independently integer represented computer
+Explicitly behavior includes obeying various axiom associativity commutativity addition etc
+precondition operation divide zero
+Typically integer represented data structure often might user abstracted concrete choice representation simply use data integer
+An ADT consists operation also value underlying data constraint operation
+An interface typically refers operation perhaps constraint operation notably constraint relation operation
+For example abstract structure could defined three operation insert data item onto stack remove data item access data item top stack without removal
+An abstract structure would also three operation insert data item queue remove first data item access serf first data item queue
+There would way differentiating two data type unless mathematical constraint introduced stack specifies pop always return recently pushed item popped yet
+When algorithm use stack one may also specify operation take time matter many data item pushed stack stack us constant amount storage element
+Abstract data type purely theoretical entity used among thing simplify description abstract algorithm classify evaluate data structure formally describe programming language
+However ADT may specific many way many programming language described
+ADTs often implemented module declares procedure correspond ADT operation sometimes describe constraint
+This strategy allows implementation module changed without disturbing program
+The term abstract data type also regarded generalized approach number algebraic structure lattice group ring
+The notion abstract data type related concept important methodology
+An abstract data type defined mathematical model data object make data type well function operate object
+There standard convention defining
+A broad division may drawn imperative functional definition style
+In philosophy language abstract data structure conceived entity may different different time
+Some operation may change state ADT therefore order operation evaluated important operation entity may different effect executed different like instruction computer command procedure imperative language
+To underscore view customary say operation rather
+The imperative style often used describing abstract algorithm
+See detail definition ADT often depend concept may regarded simplest ADT
+An abstract variable mutable entity admits two operation constraint As many programming language operation often written similar notation implied whenever variable used context value required
+Thus example commonly understood shorthand
+In definition implicitly assumed storing value variable effect state distinct variable
+To make assumption explicit one could add constraint More generally ADT definition often assume operation change state one ADT instance effect state instance including instance ADT unless ADT axiom imply two instance connected sense
+For example extending definition abstract variable include abstract operation selects field record variable must yield variable aliased part
+The definition abstract variable may also restrict stored value member specific set called
+As programming language restriction may simplify description improve readability
+Note definition imply anything result evaluating performing operation
+An algorithm usually considered invalid effect defined
+However important algorithm whose efficiency strongly depends assumption legal return arbitrary value variable range
+Some algorithm need create new instance ADT new variable new stack
+To describe algorithm one usually includes ADT definition operation yield instance ADT usually axiom equivalent This axiom may strengthened exclude also partial aliasing instance
+On hand axiom still allows implementation yield previously created instance become inaccessible program
+As another example definition abstract stack could specify state stack modified operation constraint Since assignment definition change state condition implies restores state
+From condition property abstract variable follows example sequence value pairwise distinct variable equivalent Here implicitly assumed operation stack instance modify state ADT instance including stack An abstract stack definition usually includes also function operation return stack instance axiom equivalent Sometimes ADT defined one instance existed execution algorithm operation applied instance explicitly notated
+For example abstract stack could defined operation operate existing stack
+ADT definition style easily rewritten admit multiple coexisting instance ADT adding explicit instance parameter like previous example every operation us modifies implicit instance
+On hand ADTs meaningfully defined without assuming multiple instance
+This case single operation take two distinct instance ADT parameter
+For example consider augmenting definition abstract stack operation check whether stack contain item order
+Another way define ADT closer spirit consider state structure separate entity
+In view operation modifies ADT modeled take old state argument return new state part result
+Unlike imperative operation function
+Therefore order evaluated immaterial operation applied argument including input state always return result output state
+In functional view particular way need define abstract variable semantics imperative variable namely operation
+Instead storing value variable one pass argument function
+For example complete definition abstract stack could use three operation In definition need operation
+Indeed notion stack instance
+The stack state thought potential state single stack structure two stack state contain value order considered identical state
+This view actually mirror behavior concrete implementation
+Instead definition abstract stack may assume existence special stack state designated special symbol like Λ define operation take argument return special stack state
+Note axiom imply In definition stack one need predicate instead one test whether stack empty testing whether equal Λ
+Note axiom define effect unless stack state returned
+Since leaf stack two operation undefined hence invalid Λ
+On hand axiom lack side effect imply
+As branch mathematics customary assume also stack state whose existence proved axiom finite number step
+In abstract stack example rule mean every stack sequence value becomes empty stack Λ finite number By axiom exclude existence infinite stack ed forever time yielding different state circular stack return state finite number
+In particular exclude state
+However since one obtain stack state given operation assumed exist
+Aside behavior term axiom also possible include definition ADT operation
+designer included complexity guarantee STL specification arguing The reason introducing notion abstract data type allow interchangeable software module
+You interchangeable module unless module share similar complexity behavior
+If I replace one module another module functional behavior different complexity tradeoff user code unpleasantly surprised
+I could tell anything I like data abstraction still would want use code
+Complexity assertion part interface
+provides promise implementation ADT certain property ability knowing required make use ADT object
+The user need technical knowledge implementation work use ADT
+In way implementation may complex encapsulated simple interface actually used
+Code us ADT object need edited implementation ADT changed
+Since change implementation must still comply interface since code using ADT object may refer property ability specified interface change may made implementation without requiring change code ADT used
+Different implementation ADT property ability equivalent may used somewhat interchangeably code us ADT
+This give great deal flexibility using ADT object different situation
+For example different implementation ADT may efficient different situation possible use situation preferable thus increasing overall efficiency
+Some operation often specified ADTs possibly name In ADT definition one often find also The operation normally relevant meaningful since ADTs theoretical entity use memory
+However may necessary one need analyze storage used algorithm us ADT
+In case one need additional axiom specify much memory ADT instance us function state much returned pool
+Some common ADTs proved useful great variety application Each ADTs may defined many way variant necessarily equivalent
+For example abstract stack may may operation tell many item pushed yet popped
+This choice make difference client also implementation
+An extension ADT computer graphic proposed AGDT
+It introduced
+AGDTs provide advantage ADTs facility build graphical object structured way
+Implementing ADT mean providing one abstract operation
+The ADT instance represented concrete manipulated procedure according ADT specification
+Usually many way implement ADT using several different concrete data structure
+Thus example abstract stack implemented
+In order prevent client depending implementation ADT often packaged one whose interface contains signature number type parameter result operation
+The implementation body procedure concrete data structure hidden client module
+This make possible change implementation without affecting client
+If implementation exposed known instead When implementing ADT instance definition state definition usually represented sort
+Modern language support form abstract data type
+When class used type abstract type refers hidden representation
+In model ADT typically implemented instance ADT usually class
+The module interface typically declares constructor ordinary procedure ADT operation class
+However approach easily encapsulate multiple representational variant found ADT
+It also undermine extensibility program
+In pure program us interface type type refer behavior representation
+As example implementation abstract stack
+An interface might This interface could used following manner This interface implemented many way
+The implementation may arbitrarily inefficient since formal definition ADT specify much space stack may use long operation take
+It also specify whether stack state continues exist call
+In practice formal definition specify space proportional number item pushed yet popped every one operation must finish constant amount time independently number
+To comply additional specification implementation could use linked list array dynamic resizing together two integer item count array size
+ADT definition appropriate functional programming language vice versa
+However one provide interface even imperative language like For example Many modern programming language Java come standard library implement several common ADTs listed
+The specification programming language intentionally vague representation certain data type defining operation done
+Therefore type viewed ADTs
+Examples array many scripting language regarded implementation abstract list
+
+learn share knowledge build career
+I currently studying Abstract Data Types ADT I get concept
+Can someone please explain actually
+Also collection bag List ADT
+simple term
+Abstract Data Type ADT data type behavior defined implementation
+Opposite ADT Concrete Data Type CDT contains implementation ADT
+ADTs
+Each ADTs many implementation
+CDT
+Container ADT ADTs
+Book Abstract Telephone Book implementation The Wikipedia article lot say
+In computer science abstract data type ADT mathematical model certain class data structure similar behavior certain data type one programming language similar semantics
+An abstract data type defined indirectly operation may performed mathematical constraint effect possibly cost operation
+In slightly concrete term take Java interface example
+The interface explicitly define behavior concrete class
+The interface defines set method class
+must implement order considered
+A another abstract data type
+In case Java interface even abstract since The interface place additional stipulation beyond specified interface contract method
+A also known
+In mathematics notion multiset bag generalization notion set member allowed appear
+For example unique set contains element b others many multisets property multiset contains two copy one b multiset contains three copy b
+In Java Bag would collection implement simple interface
+You need able add item bag check size iterate item contains
+See example implementation Sedgewick Wayne
+A truly abstract data type describes property instance without commitment representation particular operation
+For example abstract mathematical type Integer discrete unlimited linearly ordered set instance
+A concrete type give specific representation instance implement specific set operation
+ADT set data value associated operation precisely independent paticular implementaition
+The strength ADT implementaion hidden interface declared mean ADT various way Simply Abstract Data Type nothing set operation set data used storing data efficiently machine
+There need perticular type declaration
+It require implementation ADT
+Abstract Data type mathematical module includes data various operation
+Implementation detail hidden called abstract
+Abstraction allowed organise complexity task focusing logical property data action
+In programming language type data associated operation
+An ADT user defined data aggregate operation data characterized data operation represented list declared single syntactic unit relevant operation visible user ADT ADT way normal data type programming language
+It abstraction internal representation data implementation operation concern ADT user
+An abstract data type could defined mathematical model collection operation defined
+A simple example set integer together operation union intersection defined set
+The generalization primitive data type integer char etc encapsulate data type sense definition type operation type localized one section program
+They treated primitive data type outside section operation defined
+An implementation translation statement programming language declaration defines variable plus procedure language operation
+The implementation ADT chooses data structure represent
+A useful tool specifying logical property data type abstract data type
+Fundamentally data type collection value set operation value
+That collection operation form mathematical construct may implemented using particular hardware software data structure
+The term refers basic mathematical concept defines data type
+In defining abstract data type mathamatical concept concerned space time efficinecy
+Those implementation issue
+Infact defination concerned implementaion detail
+It may even possible implement particular particular piece hardware using particular software system
+For example already seen integer universally implementable
+To illustrate concept specification method consider corresponds mathematical concept rational number
+A rational number number expressed quotient two integer
+The operation rational number define creation rational number two integer addition multiplication testing equality
+The following initial specification
+An consists two part The value definition defines collection value ADT consists two part For example value definition RATIONAL state RATIONAL value consists two integer second equal
+The keyword abstract typedef introduces value definition keyword condition used specify condition newly defined data type
+In definition condition specifies denominator may
+The definition clause required condition may necessary every
+Each operator defined abstract junction three part
+For example operator definition ADT RATIONAL includes operation creation makerational addition add multiplication mult well test equality equal
+Let u consider specification multiplication first since simplest
+It contains header
+The header definition first two line like C function header
+The keyword abstract indicates C function ADT operator definition
+The specifies operation
+In name function case mult used denote result operation
+Thus mult represents numerator result mult represents denominator result
+That specifies condition become true operation executed
+In example specifies neumerator result rational multiplication equal integer product numerator two input denominator equal th einteger product two denominator
+InÂ computer science aÂ listÂ orÂ sequenceÂ anÂ abstract data typeÂ represents countable number orderedÂ value value may occur
+An instance list computer representation theÂ mathematicalÂ concept finiteÂ sequence potentially infinite analog list aÂ Lists basic example ofÂ container contain value
+If value occurs multiple time occurrence considered distinct item The name list also used several concrete data structure used implement abstract list especially linked list
+Image List A bag collection object keep adding object bag remove added bag
+So bag data structure collect object iterate
+You bag normally program Java
+Image Bag A collection Java sense refers class implement Collection interface
+A collection generic sense group object
+Image collection Before defining let u considers different view data type
+We know default primitive data type int float etc
+support basic operation addition subtraction
+The system provides implementation primitive data type
+For data type also need define operation
+The implementation operation done want actually use
+That mean general data type defined along operation
+To simplify process solving problem combine data structure operation call
+ADT
+Commonly used include Linked List Stacks Queues Binary Tree Dictionaries Disjoint Sets Union find Hash Tables many others
+consist two type To solve problem combine data structure operation
+An ADT consists two part Commonly used ADT Linked Lists Stacks Queues Priority Queues Trees etc
+While defining ADTs need worry implementation detals
+They come picture want use
+like user defined data type perform function without knowing inside datatype operation performed
+As information exposed abstracted
+eg
+List Array Stack Queue
+On Stack perform function like Push Pop sure implemented behind curtain
+ADT set object operation definition mention set operation implemented
+Programmers use collection need know instantiate access data manner without concern detail collection implementation
+In word perspective collection abstraction reason computer science collection referred abstract data type ADTs
+The user concern learning interface set operation performs By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+I taking CS course frankly I idea lecturer talking regard abstract data type algebra
+It something I readily able find solution web I thought maybe someone community would greater insight undestanding problem
+Stack Queue notation certainly bit odd mean real term understand general behaviour queue stack first first v first last
+Abstract Data Types used behavior type must without specifying implementation
+You define type set axiom rule describe condition must hold every moment
+said ADTs useful tool describe behavior queue
+But well leaving Djikstra known humor aside I think least one real application ADT
+Assertions allow specify type work formal compilable runnable language opposed natural language documentation
+In methodoloy often written predicate must hold execution method general operation type source language form
+Frameworks support assertion automatic check every predicate hold
+This way code violates one assertion know bug
+So sense seen form unit testing specifying test case would empirical testing methodology specifying precondition invariant type must fit would theoretical testing methodology
+Although used mainstream software development far I know checking assertion performance hit used testing
+From purely theoretical point view ADTs abstraction allows u reason behavior type regardless specific implementation
+If like formalism like I nothing better developer give list theorem rather ambiguous babble describing code supposed
+On hand alternative programming paradigm alternative alternative secondary unimportant etc
+logic functional programming heavy based ADTs type construction
+A interesting example language
+It give hole new picture type inheritance polymorphism
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In computer science abstract data type theoretical data type largely defined operation work limitation apply
+Professionals describe abstract data type mathematical model group data type value associated operation independent particular implementation
+When talking abstract data type helpful knowledge concrete data type defined clearly
+By contrast abstract data type supposed broader definition
+For example exploration abstract data type Java often includes List data type open various implementation
+IT expert might also use idea real life example abstract identifier like car represents abstract data type narrower precise identifier like Nissan Altima represents defined concrete data type
+Techopedia Terms Copyright Techopedia
+
+This action might possible undo
+Are sure want continue
+Abstract Data Type ADBMS available
+
+In represents countable number ordered value may occur
+An instance list computer representation concept finite potentially infinite analog list
+Lists basic example contain value
+If value occurs multiple time occurrence considered distinct item
+The name also used several concrete used implement abstract list especially
+Many provide support special syntax semantics list list operation
+A list often constructed writing item sequence separated within pair delimiters
+Some language may allow list type like case data type accurately described array
+In list usually provided subclass generic list class traversed via separate
+List data type often implemented using linked list sort may appropriate application
+In context programming term list may refer specifically linked list rather array
+In abstract list usually defined two operation yield empty list add item beginning list
+Implementation list data structure may provide following Lists typically implemented either either singly doubly linked usually variable length
+The standard way implementing list originating programming language element list contain value pointer indicating location next element list
+This result either depending whether list nested sublists
+Some older Lisp implementation Lisp implementation also supported compressed list using special internal representation invisible user
+Lists manipulated using
+The former often preferred latter norm
+Lists implemented holding pair providing access element
+residing fringe internal node storing child index used guide search taking time logarithmic list size long change much provide illusion enable swap prefix append operation logarithmic time well
+Some language offer list offer use kind table emulate list
+For example provides table
+Although Lua store list numerical index array internally still appear dictionary
+In list fundamental data type represent program code data
+In dialect list first three prime number could written
+In several dialect Lisp including list collection pair consisting value pointer next pair null value making singly linked list
+As name implies list used store list element
+However unlike traditional list expand shrink stored dynamically memory
+In computing list easier implement set
+A finite mathematical sense realized list additional restriction duplicate element disallowed order irrelevant
+Sorting list speed determining given item already set order ensure order requires time add new entry list
+In efficient implementation however set implemented using rather list
+Lists also form basis including variation
+The abstract list type element type list defined following function axiom element list
+It implicit Note first nil rest nil defined
+These axiom equivalent abstract data type
+In definition simply regarded defined term constructor
+In algebraic term represented transformation
+obtained constructor separately handling case
+The list type form following function using rather represent monomorphic list element type defined Alternatively monad may defined term operation Note since applied progressively deeper argument recursive call
+The list type additive monad monadic zero monadic sum
+Lists form operation
+The identity element monoid empty list
+In fact set list element
+
+Abstract Data Types Classes Methods Flash JavaScript required feature
+Download video
+Abstract data type class method Eric Grimson John Guttag Introduction Goals Branching Conditionals Common Code Patterns It Abstraction Func Floating Point Numbers Bisection Methods Newto Lists Mutability Di Complexity Log Linear Binary Search Bubble Divide Conquer Meth Testing Debugging Debugging Knapsack Pro Dynamic Programming Ov Introduction Abstract Data Types Cl Encapsulation Inherita Computational Models R Presenting Simulation R Biased Random Walks Di Monte Carlo Simulations Validating Simulation R Normal Uniform Ex Stock Market Simulation Course Overview What D Handout Transcript This one course OCW
+Find material course page linked along left
+free open publication material thousand MIT course covering entire MIT curriculum
+Freely browse use OCW material pace
+There signup start end date
+Use OCW guide learning teach others
+We offer credit certification using OCW
+
+Download file later
+Send friend colleague
+Modify remix reuse remember cite OCW source
+Learn MIT OpenCourseWare make material used teaching almost MIT subject available Web free charge
+With course available OCW delivering promise open sharing knowledge
+Massachusetts Institute Technology Your use MIT OpenCourseWare site material subject
+

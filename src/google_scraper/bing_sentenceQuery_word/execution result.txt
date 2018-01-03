@@ -1,0 +1,352 @@
+In execution smallest sequence programmed instruction managed independently typically part
+The implementation thread differs operating system case thread component process
+Multiple thread exist within one process executing sharing resource different process share resource
+In particular thread process share executable code value variable given time
+Systems single processor generally implement multithreading CPU switch different
+This generally happens often rapidly enough user perceive thread task running parallel
+On system multiple thread execute every processor core executing separate thread simultaneously processor core separate software thread also executed concurrently separate hardware thread
+Threads made early appearance MVT context called task
+The term thread attributed
+many modern operating system directly support multiprocessor threading allows programmer manipulate thread exposing required functionality interface
+Some threading implementation called whereas LWP specific type kernel thread share state information
+Furthermore program threading timer signal method interrupt execution performing sort time slicing
+Threads differ traditional operating system Systems said thread process operating system great difference except cost switch architecture notably result TLB flush
+In one time
+The opposite multithreading
+While suggested term misleading term widely accepted within community
+Multithreading mainly found multitasking operating system
+Multithreading widespread programming execution model allows multiple thread exist within context one process
+These thread share process resource able execute independently
+The threaded programming model provides developer useful abstraction concurrent execution
+Multithreading also applied one process enable system
+Multithreaded application following advantage Multithreading following drawback Operating system schedule thread either cooperatively
+On widely used approach finer grained control execution time via
+However preemptive scheduling may context switch thread moment unanticipated programmer therefore causing
+In contrast relies thread relinquish control execution thus ensuring thread
+This create problem cooperatively multitasked thread waiting thread yielding control execution intensive computation
+Until early desktop computer one CPU support although thread still used computer switching thread generally still quicker
+In added support processor name introduced processor introduced processor
+Processors higher requirement behavior might support multithreading decreasing time perhaps allocating dedicated thread instead common register file
+Scheduling done kernel level user level multitasking done preemptively cooperatively
+This yield variety related concept
+At kernel level contains one share process resource memory file handle process unit resource thread unit scheduling execution
+Kernel scheduling typically uniformly done preemptively le commonly cooperatively
+At user level process schedule multiple thread execution
+If share data Erlang usually analogously called process share data usually called particularly preemptively scheduled
+Cooperatively scheduled user thread known different process may schedule user thread differently
+User thread may executed kernel thread various way
+The term variously refers user thread kernel mechanism scheduling user thread onto kernel thread
+A heavyweight unit kernel scheduling creating destroying switching process relatively expensive
+Processes allocated operating system
+Resources include memory code data socket device handle window
+Processes share address space file resource except explicit method inheriting file handle shared memory segment mapping file shared way see
+Creating destroying process relatively expensive resource must acquired released
+Processes typically preemptively multitasked process switching relatively expensive beyond basic cost due issue cache flushing
+A lightweight unit kernel scheduling
+At least one kernel thread exists within process
+If multiple kernel thread exist within process share memory file resource
+Kernel thread preemptively multitasked operating system process preemptive
+Kernel thread resource except copy including thus relatively cheap create destroy
+Thread switching also relatively cheap requires context switch saving restoring register stack pointer change virtual memory thus leaving TLB valid
+The kernel assign one thread logical core system processor split multiple logical core support multithreading support one logical core per physical core swap thread get blocked
+However kernel thread take much longer user thread swapped
+Threads sometimes implemented library thus called
+The kernel unaware managed scheduled
+Some implementation base user thread top several kernel thread benefit machine
+In article term thread without kernel user qualifier default referring kernel thread
+User thread implemented also called
+User thread generally fast create manage take advantage multithreading multiprocessing get blocked associated kernel thread get blocked even user thread ready run
+even lighter unit scheduling running fiber must explicitly allow another fiber run make implementation much easier kernel
+A fiber scheduled run thread process
+This permit application gain performance improvement managing scheduling instead relying kernel scheduler may tuned application
+Parallel programming environment typically implement task fiber
+Closely related fiber distinction coroutines construct fiber construct
+Threads process share address space
+This allows concurrently running code tightly conveniently exchange data without overhead complexity
+When shared thread however even simple data structure become prone require one CPU instruction update two thread may end attempting update data structure time find unexpectedly changing underfoot
+Bugs caused race condition difficult reproduce isolate
+To prevent threading APIs offer data structure concurrent access
+On uniprocessor system thread running locked mutex must sleep hence trigger context switch
+On system thread may instead poll mutex
+Both may sap performance force processor SMP system contend memory bus especially locking fine
+Although thread seem small step sequential computation fact represent huge step
+They discard essential appealing property sequential computation understandability predictability determinism
+Threads model computation wildly job programmer becomes one pruning nondeterminism
+User thread fiber implementation typically entirely
+As result context switching user thread fiber within process extremely efficient require interaction kernel context switch performed locally saving CPU register used currently executing user thread fiber loading register required user thread fiber executed
+Since scheduling occurs userspace scheduling policy easily tailored requirement program workload
+However use blocking system call user thread opposed kernel thread fiber problematic
+If user thread fiber performs system call block user thread fiber process unable run system call return
+A typical example problem performing program written perform synchronously
+When operation initiated system call made return operation completed
+In intervening period entire process blocked kernel run starves user thread fiber process executing
+A common solution problem providing API implement synchronous interface using internally scheduling another user thread fiber operation progress
+Similar solution provided blocking system call
+Alternatively program written avoid use synchronous blocking system call
+implemented LWPs
+implement LWPs kernel thread model
+SunOS SunOS well NetBSD NetBSD implemented two level model multiplexing one user level thread kernel thread M N model
+SunOS later well NetBSD eliminated user thread support returning model
+FreeBSD implemented M N model
+FreeBSD supported M N user could choose one used given program using
+Starting FreeBSD became default
+FreeBSD longer support M N model
+The use kernel thread simplifies user code moving complex aspect threading kernel
+The program need schedule thread explicitly yield processor
+User code written familiar procedural style including call blocking APIs without starving thread
+However kernel threading may force context switch thread time thus expose race hazard concurrency would otherwise lie latent
+On SMP system exacerbated kernel thread may literally execute separate processor parallel
+Threads created user correspondence schedulable entity kernel simplest possible threading implementation
+used approach start implement approach via older
+This approach also used
+An model implies thread map one scheduled entity kernel knowledge application thread
+With approach context switching done quickly addition implemented even simple kernel support threading
+One major drawback however benefit hardware acceleration processor computer never one thread scheduled time
+For example If one thread need execute request whole process blocked threading advantage used
+The us threading
+M N map M number application thread onto N number kernel entity virtual processor
+This compromise threading
+In general M N threading system complex implement either kernel user thread change kernel code required
+In M N implementation threading library responsible scheduling user thread available schedulable entity make context switching thread fast avoids system call
+However increase complexity likelihood well suboptimal scheduling without extensive expensive coordination userland scheduler kernel scheduler
+Fibers implemented without operating system support although operating system library provide explicit support
+IBM F included support multithreading called late continued Optimizing Compiler later version
+The IBM Enterprise compiler introduced new model thread API
+Neither version part standard
+Many programming language support threading capacity
+Many implementation support threading provide access native threading APIs operating system
+Some usually programming language language expose threading developer abstracting platform specific difference threading implementation runtime
+Several programming language language extension also try abstract concept concurrency threading developer fully MPI
+Some language designed sequential parallelism instead especially using GPUs without requiring concurrency thread
+A interpreted programming language implementation Ruby Python support threading concurrency parallel execution thread due GIL
+The GIL mutual exclusion lock held interpreter prevent interpreter simultaneously interpreting application code two thread effectively limit parallelism multiple core system
+This limit performance mostly thread require processor much one
+Other implementation interpreted programming language using Thread extension avoid GIL limit using Apartment model data code must explicitly shared thread
+In Tcl thread one interpreter
+different threading model support extremely large number thread modeling hardware
+A standardized interface thread implementation Pthreads set library call
+OS vendor free implement interface desired application developer able use interface across multiple platform
+Most platform including Linux support Pthreads
+Microsoft Windows set thread function interface multithreading like
+Java provides yet another standardized interface host operating system using library
+Multithreading library provide function call create new thread take function parameter
+A concurrent thread created start running passed function end function return
+The thread library also offer synchronization function make possible implement free multithreading function using condition variable synchronization primitive
+Another paradigm thread usage set number thread created startup wait task assigned
+When new task arrives wake completes task go back waiting
+This avoids relatively expensive thread creation destruction function every task performed take thread management application developer hand leaf library operating system better suited optimize thread management
+For example framework like
+In programming model designed array thread run parallel using ID find data memory
+In essence application must designed thread performs operation different segment memory operate parallel use GPU architecture
+
+In time program running contrast
+A error detected execution running state program whereas error detected program ever executed
+code optimization typically done compile time may done run time depending particular language compiler
+When program executed first performs necessary setup link program need execution begin starting program
+In case language implementation task done language runtime instead though unusual mainstream language common consumer operating system
+Some program debugging performed efficient accurate performed runtime
+bound checking example
+For reason programming discovered program tested real data despite sophisticated checking testing
+In case end user may encounter message
+one language feature designed handle runtime error providing structured way catch completely unexpected situation well predictable error unusual result without amount inline error checking required language without
+More recent advancement runtime engine enable provides debug information every exception interest implemented independent source code attaching special software product runtime engine
+
+obj null null endobj obj null null endobj obj R endobj obj http endobj obj R endobj obj R endobj obj R endobj obj stream xÚ R
+Qî ÚeÔàP ITÄ î
+endstream endobj obj R endobj obj R R R endobj obj R endobj obj null null endobj obj R endobj obj R endobj obj R endobj obj R endobj obj R endobj obj stream Rþ zJJ ÿYya yÛ í MÌÆ aÖåõÕRÒZ Kßt
+Ðê bAÆ lé l í c CóóÓ ÈqÞéQ ÚpÃ ÃÇ
+g pO äâC éòmtÅM ñòzñ mø ÄóT jXHúCVøÛÿ endstream endobj obj R R R R R R endobj obj R endobj obj null null endobj obj R endobj obj R endobj obj R endobj obj stream eÜº Èv ÂM Ô
+å Ä LEiüáÊõ H Eäw shÐ
+Ê ým
+ç Ý iè G à endstream endobj obj R R R R R R R R endobj obj R endobj obj null null endobj obj R endobj obj R endobj obj R endobj obj R endobj obj endobj obj R endobj obj null null endobj obj stream UUeÇÎ oá Á S µÛ òñS å ú ø Á rQ
+B ÂW
+C
+ç Òe È x Ê ËÂ u sA ÇA MÌF ü Ù endstream endobj obj R endobj obj R R R R R R R R R R R R endobj obj R endobj obj null null endobj obj R endobj obj R endobj obj stream LÇï ÏÏÕ yjtV VómS Ä ñ áöì q Á
+ÇÅ ÿØ ê ì íôq ÅBÅVi w fëJg endstream endobj obj R R R R R R endobj obj R endobj obj null null endobj obj stream à óBÇÏô Ö RÚ ì G ÊÞ à Å NU N E T ªÊæ S ùJµ ÿÕ å ÅYsLgÑ ÜÍeé º û iåz ðf zÞæNý c jã iy
+Z Ê endstream endobj obj R R R R R R endobj obj R endobj obj null null endobj obj R R stream W Ð endstream endobj obj R endobj obj R endobj obj R R endobj obj stream eB øÝ iÆï W ÿîÝ Ì é úè aó Òc æÂ W ÝÛÛ K g cT úE Îæ ÌÝÁú ÜÉrS P ë f ï b Í J h ÿþ E ûúõëø ûûûs Y áßâ ZC UIU j AêÐ Ú ÁD ù R ÀCçôk b Á O çÇÙ ù Þ gb T ß
+
+ìàÇ Â V ÉqÁ æR ZÿÉ FôQ ò cßF éÃj X A D V ÃX ì F uêq CP ÔÔgI ó ÕÅé endstream endobj obj stream endstream endobj obj stream endstream endobj obj stream ïÁ O cTEhþYþé Þ û NZ X ºö Öë
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+When looking concurrent programming two term commonly used
+concurrent parallel
+And programming language specifically claim support parallel programming
+Does mean parallel concurrent programming actually different
+This question came site theoretical computer scientist researcher related field
+Distinguish parallelism using extra computational unit work per unit time concurrency managing access shared resource
+Teach parallelism easier help establish sequential mindset
+From A Introduction Parallelism Concurrency Dan Grossman version November Conurrency parallelism differ problem solve cause independent
+Executing two task mean individual step task executed interleaved fashion
+If disregard parallelism assume one statement executed point time priori guarantee task get execute next step
+This useful regard Some main challenge Executing two task mean statement executed
+This mainly useful Key challenge include See also distinguishing parallel distributed computing
+In addition Nish answer let recommend Simon Marlow book
+They answer first question Haskell perspective could better suited theoretically inclined reader Haskell purely functional lazy programming language much closer Mathematics language
+Quoting In many field word parallel concurrent synonym programming used describe fundamentally different concept
+A parallel program one us multiplicity computational hardware
+multiple processor core order perform computation quickly
+Different part computation delegated different processor execute time parallel result may delivered earlier computation performed sequentially
+In contrast concurrency technique multiple thread control
+Notionally thread control execute time user see effect interleaved
+Whether actually execute time implementation detail concurrent program execute single processor interleaved execution multiple physical processor
+I recommend reading rest tutorial let quote remainder section connects programming paradigm quantitative qualitative characteristic program efficiency modularity determinism
+While parallel programming concerned efficiency concurrent programming concerned structuring program need interact multiple independent external agent example user database server external client
+Concurrency allows program modular thread interacts user distinct thread talk database
+In absence concurrency program written event loop callback indeed event loop callback often used even concurrency available many language concurrency either expensive difficult use
+The notion thread control make sense purely functional program effect observe evaluation order irrelevant
+So concurrency structuring technique effectful code Haskell mean code IO monad
+A related distinction deterministic nondeterministic programming model
+A deterministic programming model one program give one result whereas nondeterministic programming model admits program may different result depending aspect execution
+Concurrent programming model necessarily nondeterministic must interact external agent cause event unpredictable time
+Nondeterminism notable drawback however program become signifficantly harder test reason
+For parallel programming would like use deterministic programming model possible
+Since goal arrive answer quickly would rather make program harder debug process
+Deterministic parallel programming best world testing debugging reasoning performed sequential program program run faster processor added
+Indeed computer processor implement deterministic parallelism form pipelining multiple execution unit
+While possible parallel programming using concurrency often poor choice concurrency sacriffices determinism
+In Haskell parallel programming model deterministic
+However important note deterministic programming model sufficient express kind parallel algorithm algorithm depend internal nondeterminism particularly problem involve searching solution space
+In Haskell class algorithm expressible using concurrency
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+Can one explain use used property even
+It mostly used result task container tell SSIS execution engine caller status instead actual status task container execution
+See clear detailed explanation
+Also
+You use property task container test use checkpoint package
+By setting ForceExecutionResult task container Failure imitate failure
+When rerun package failed task container rerun
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+learn share knowledge build career
+What difference asynchronous synchronous execution
+When execute something synchronously wait finish moving another task
+When execute something asynchronously move another task finish
+That said context computer translates executing process task another thread
+A thread series command block code exists unit work
+The operating system manage multiple thread assign thread piece slice processor time switching another thread give turn work
+At core pardon pun processor simply execute command concept two thing one time
+The operating system simulates allocating slice time different thread
+Now introduce multiple mix thing CAN actually happen time
+The operating system allocate time one thread first processor allocate block time another thread different processor
+All allowing operating system manage completion task go code thing
+Asynchronous programming complicated topic semantics thing tie together time
+There numerous article book subject look
+Synchronous mean connected dependent way
+In word two synchronous task must aware one another one task must execute way dependent wait start task completed
+Asynchronous mean totally independent neither one must consider way either initiation execution
+Synchronous one thread Synchronous Asynchronous one thread Asynchronous Technically concept really
+Although general unusual find asynchronous task running thread possible see example find two task executing synchronously thread No concept whether second subsequent task initiated first task completed whether must wait
+That
+What thread thread process CPUs indeed hardware task executed relevant
+Indeed make point I edited graphic show
+ASYNCHRONOUS EXAMPLE
+In solving many engineering problem software designed split overall problem multiple individual task execute asynchronously
+Inverting matrix finite element analysis problem good example
+In computing sorting list example
+The quick sort routine example split list two list sort calling recursively
+In example two task often executed asynchronously
+They need separate thread
+Even machine one CPU one thread execution coded initiate processing second task first one completed
+The criterion
+As long start end time task overlap possible output neither needed input executed asynchronously matter many thread use
+SYNCHRONOUS EXAMPLE
+Any process consisting multiple task task must executed sequence one must executed another machine Fetch update data get stock quote financial service etc
+If separate machine separate thread whether synchronous asynchronous
+In simpler term SYNCHRONOUS You queue get movie ticket
+You get one everybody front get one applies people queued behind
+ASYNCHRONOUS You restaurant many people
+You order food
+Other people also order food wait food cooked served order
+In kitchen restaurant worker continuously cooking serving taking order
+People get food served soon cooked
+I try explain simply I hopefully remember My bos busy man
+He tell write code
+I tell Fine
+I get started watching like vulture standing behind shoulder
+I like Dude WTF go something I finish
+like No I finish
+This synchronous
+The bos tell rather waiting right work bos go task
+When I finish job I simply report bos say I DONE
+This Asynchronous Execution
+It really simple
+Hope help
+Take advice NEVER work bos behind
+mean execution happens single series
+
+If calling routine run finish start finish start etc
+With begin routine let run background start next point say wait finish
+It like finish The advantage execute still running background separate thread take better advantage resource fewer hang wait
+Synchronous mean caller wait response completion asynchronous caller continues response come later applicable
+As example This always ouput But make doSomething asynchronous multiple way output become Because method making asynchronous call would immediately continue next line code
+I say could order execution ca guaranteed asynch operation
+It could also execute original depending thread timing etc
+I think bit explanation still clarifies using real life example
+Small Example Let say playing audio involves three step If audio player step sequentially every song synchronous
+You wait time hear song till song actually get fetched decompressed
+If audio player step independent asynchronous
+ie
+While playing audio step fetch audio harddisk parallel step decompresses audio parallel
+step You end hearing song without waiting much fetch decompress
+In nutshell synchronization refers two process point
+In example Process A endpoint synchronized Process B start point Asynchronous process hand start endpoint synchronized Where Process A overlap Process B running concurrently dictionary definition hence confusion
+It might helpful think term asynchronous synchronous instead asynchronous synchronous
+Simply said asynchronous execution stuff background
+For example want download file internet might use synchronous function block thread file finished downloading
+This make application unresponsive user input
+Instead could download file background using asynchronous method
+In case download function return immediately program execution continues normally
+All download operation done background program notified finished
+When executing sequence like b c get failure middle execution like Then beginning synchronous If however sequence execute b c failure middle instead restarting beginning point failure know asynchronous
+You confusing Synchronous Parallel v Series
+Synchronous mean time
+Syncronized mean related othere mean series fixed interval
+While program running series
+Get dictionary unsweet tea
+You tea sweetened tea
+Synchronous basically mean execute one thing time
+Asynchronous mean execute multiple thing time finish executing current thing order move next one
+As really simple example Imagine school student instructed walk queue road
+The student got shoelace untied
+Now stopped tying
+All student behind stopped waiting get tied
+The student walked past continuing usual pace
+Just Imagine random people walking road
+They queue course randomly walking different place road different pace
+person shoelace got untied
+She stopped get tied
+But nobody waiting get tied
+Everyone else still walking way pace
+A synchronous operation work returning caller
+An asynchronous operation work returning caller
+When task executed synchronously wait task completed moving another task
+One task depends end another When task executed asynchronously directly switch another task previous completed
+One task depend
+In programming task executed
+It necessary understand several thread created task order avoid stacking single queue
+That said concept synchronous asynchronous much thread reason I mention rare see task running asynchronously single thread although technically possible
+In regard definition synchronous execution sometimes confusing good way understand Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+
+code add code subtract The outcome allow determine following fact mean The cause value stored This number interpretated code
+The Notice ready stored processed
+When finished step turn cmputer
+The represented memory fact The
+The Changing contains The result operation often stored
+
+µµµµ obj endobj obj endobj obj R endobj obj stream Grõ ïß æ õbb
+
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n trailer b ÿ
+yï ôkÌvÓû Ô Âr QÈÕ ÆÂo ÚAó ÿIèÃÙ CHÉØà SV
+

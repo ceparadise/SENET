@@ -1,0 +1,496 @@
+This action might possible undo
+Are sure want continue
+Function available
+
+This action might possible undo
+Are sure want continue
+Function Point Counting Sample available
+
+learn share knowledge build career
+This question theoretical computing
+I came question like Consider project following functional unit Assuming complexity adjustment factor weighing factor average function point project The answer
+How calculated
+complexity respectively
+
+Sum complexity
+parameter provided question Value added Factor
+Total Degree Influence General System Characteristics
+Thus function point calculated Thus function point project
+Checkout detailed calculation
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+One topic seems come regularly mailing list online discussion merit lack thereof Computer Science Degree
+An argument seems come time negative party coding number year never used recursion
+So question This question exists historical significance please use evidence ask similar question
+This question answer frozen changed
+More info
+There number good explanation thread answer use language
+In majority major imperative language implementation
+every major implementation C Basic Python Ruby Java C vastly preferable recursion
+To see walk step language use call function Doing step take time usually little bit take iterate loop
+However real problem step
+When many program start allocate single chunk memory stack run memory often always due recursion program crash due
+So language recursion slower make vulnerable crashing
+There still argument using though
+In general code written recursively shorter bit elegant know read
+There technique language implementers use called eliminate class stack overflow
+Put succinctly function return expression simply result function call need add new level onto stack reuse current one function called
+Regrettably imperative optimization built
+By way Mario typical name ArrangeString function join I surprised language choice already implementation
+Simple english example recursion
+In basic computer science sense recursion function call
+Say linked list structure And want find long linked list recursion This could course done loop well useful illustration concept Whenever function call creating loop recursion
+As anything good us bad us recursion
+The simple example tail recursion last line function call However lame almost pointless example easily replaced efficient iteration
+After recursion suffers function call overhead example could substantial compared operation inside function
+So whole reason recursion rather iteration take advantage clever stuff
+For example call function multiple time different parameter inside loop way accomplish
+A classic example
+You draw one simply recursion call stack branch direction If attempt thing iteration I think find take lot code accomplish
+Other common use case might include traversing hierarchy
+website crawler directory comparison etc
+In practical term recursion make sense whenever need iterative branching
+Recursion method solving problem based divide conquer mentality
+The basic idea take original problem divide smaller easily solved instance solve smaller instance usually using algorithm reassemble final solution
+The canonical example routine generate Factorial The Factorial n calculated multiplying number An iterative solution C look like There nothing surprising iterative solution make sense anyone familiar C
+The recursive solution found recognising nth Factorial n Fact
+Or put another way know particular Factorial number calculate next one
+Here recursive solution C The first part function known sometimes Guard Clause prevents algorithm running forever
+It return value whenever function called value le
+The second part interesting known
+Here call method slightly modified parameter decrement multiply result copy When first encountered kind confusing instructive examine work run
+Imagine call FactRec
+We enter routine picked base case end like If method parameter stopped guard clause end If substitute return value return value get This give clue final solution arrived fast track show step way That final substitution happens base case triggered
+At point simple algrebraic formula solve equates directly definition Factorials first place
+It instructive note every call method result either base case triggered call method parameter closer base case often called recursive call
+If case method run forever
+Recursion solving problem function call
+A good example factorial function
+Factorial math problem factorial example
+This function solves C positive integer tested may bug
+The canonical example factorial look like In general recursion necessarily fast function call overhead tends high recursive function tend small see suffer problem stack overflow anyone
+Some say tend hard get case I really buy
+In situation recursion make sense elegant clear way write particular function
+It noted language favor recursive solution optimize much LISP come mind
+Recursion refers method solves problem solving smaller version problem using result plus computation formulate answer original problem
+Often time process solving smaller version method solve yet smaller version problem reach base case trivial solve
+For instance calculate factorial number one represent
+Thus method recurses find factorial multiplies whatever got give final answer
+Of course find factorial first calculate factorial
+The base case would case know return since
+Consider In mathematics gcd two integer largest positive integer divide number without remainder
+The definition gcd surprisingly simple mod remainder integer division
+In English definition say greatest common divisor number zero number greatest common divisor two number greatest common divisor remainder dividing
+If like know work see Wikipedia article
+Let compute gcd example
+Each step equal one In first step equal zero second part definition applies
+mod go remainder
+At step second part applies time mod divide remainder
+At step second argument answer
+Did notice gcd appears left right side equal sign
+A mathematician would say definition recursive expression defining inside definition
+Recursive definition tend elegant
+For example recursive definition sum list first element list rest list
+Note recurs inside definition end
+Maybe prefer maximum value list instead You might define multiplication integer recursively turn series addition If bit transforming multiplication series addition make sense try expanding simple example see work
+lovely recursive definition Recursive definition around know look
+Notice definition simple base case gcd The recursive case whittle away problem get easy answer
+With understanding appreciate algorithm
+A recursive function one call
+The common reason I found use traversing tree structure
+For example I TreeView checkboxes think installation new program choose feature install page I might want check button would something like pseudocode So see checkRecursively first check node passed call node child
+You need bit careful recursion
+If get infinite recursive loop get Stack Overflow exception I ca think reason people use appropriate
+It useful circumstance others
+I think interesting technique coder perhaps end using often without real justification
+This given recursion bad name circle
+Recursion work best I like call fractal problem dealing big thing made smaller version big thing even smaller version big thing
+If ever traverse search something like tree nested identical structure got problem might good candidate recursion
+People avoid recursion number reason Most people included cut programming teeth procedural programming opposed functional programming
+To people iterative approach typically using loop feel natural
+Those u cut programming teeth procedural programming often told avoid recursion error prone
+We often told recursion slow
+Calling returning routine repeatedly involves lot stack pushing popping slower looping
+I think language handle better others language likely dominant paradigm procedural
+For least couple programming language I used I remember hearing recommendation use recursion get beyond certain depth stack deep
+Recursion expression directly indirectly referencing
+Consider recursive acronym simple example Here simple example many element set
+better way count thing nice simple recursive example
+First need two rule Suppose set like x x x
+let count many item
+We represent When applying recursive solution usually least rule If translate pseudocode get There lot useful example traversing tree example I sure people cover
+For example take factorial But easy see factorial also So generally Of course tricky thing recursion want define thing term already done need place start
+In example make special case defining factorial
+Now see bottom Since defined factorial reach bottom
+Generally speaking recursive procedure two part The recursive part defines procedure term new input combined already done via procedure
+
+A base part make sure process repeat forever giving place start
+It bit confusing get head around first look bunch example come together
+If want much deeper understanding concept study mathematical induction
+Also aware language optimize recursive call others
+It pretty easy make insanely slow recursive function careful also technique make performant case
+Hope help
+I like definition In recursion routine solves small part problem divide problem smaller piece call solve smaller piece
+I also like Steve McConnells discussion recursion Code Complete criticises example used Computer Science book Recursion
+One problem textbook present silly example recursion
+The typical example computing factorial computing Fibonacci sequence
+Recursion powerful tool really dumb use either case
+If programmer worked used recursion compute factorial hire someone else
+I thought interesting point raise may reason recursion often misunderstood
+EDIT This dig Dav answer I seen reply I posted
+A method recursive call either directly indirectly
+When use recursion
+People use recursion complex write iterative code
+For example tree traversal technique like preorder postorder made iterative recursive
+But usually use recursive simplicity
+To recurse solved problem nothing done
+To recurse open problem next step recurse rest
+Well pretty decent definition
+And wikipedia good definition
+So I add another probably worse definition
+When people refer recursion usually talking function written call repeatedly done work
+Recursion helpful traversing hierarchy data structure
+An example A recursive definition staircase A staircase consists single step staircase recursion single step termination In plain English Assume thing The process repeating thing till done called recursion
+I hope plain english answer looking
+A recursive function function contains call
+A recursive struct struct contains instance
+You combine two recursive class
+The key part recursive item contains
+Consider two mirror facing
+We seen neat infinity effect make
+Each reflection instance mirror contained within another instance mirror etc
+The mirror containing reflection recursion
+A good programming example recursion
+The structure recursive Node containing instance Node
+Functions work binary search tree also recursive
+This old question I want add answer logistical point view algorithm correctness point view performance point view
+I use Java work Java support nested function
+As I want recursion I might define external function exists code bump Java bureaucratic rule I might refactor code altogether I really hate
+Thus I often avoid recursion use stack operation instead recursion essentially stack operation
+You want use anytime tree structure
+It useful reading XML
+Recursion applies programming basically calling function inside definition inside different parameter accomplish task
+Recursion strategy problem every step turn small thing one bigger thing time hammer
+Suppose desk covered disorganized mess paper
+How make one neat clean stack paper mess using recursion
+Notice pretty intuitive aside counting everything strictly necessary
+You might go way stack reality could would still work
+The important part hammer With arm always put one stack top make bigger stack matter within reason big either stack
+Recursion process method call iself able perform certain task
+It reduces redundency code
+Most recurssive function method must condifiton break recussive call
+stop calling condition met prevents creating infinite loop
+Not function suited used recursively
+hey sorry opinion agrees someone I trying explain recursion plain english
+suppose three manager Jack John Morgan
+Jack manages programmer John Morgan going give every manager want know would cost
+The answer obvious employee also manager
+HERE come recursion
+start top hierarchy
+summery cost
+start Jack Then check manager employee
+find check manager employee
+Add summery cost every time find manager
+finished Jack go John employee Morgan
+You never know much cycle go getting answer though know many manager many Budget spend
+Recursion tree branch leaf called parent child respectively
+When use recursion algorithm le consciously building tree data
+In plain English recursion mean repeat someting
+In programming one example calling function within
+Look following example calculating factorial number Any algorithm exhibit recursion datatype basically consists case case datatype
+example working type structural recursive algorithm would form really obvious way write algorith work data structure
+look integer well natural number defined using Peano axiom see structural recursive algorithm integer look like factorial function trivial example form
+function call use definition
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+This action might possible undo
+Are sure want continue
+Function available
+
+Compute function point value project following information domain characteristic Assume complexity adjustment value average
+Use algorithm noted Chapter
+Choose Subject Â Select Duration Â Schedule Session Get notified immediately answer question available
+Compute function point value project following information domain characteristic Number user input Number user output Number user inquiry Compute function point value embedded system following characteristic Internal data structure External data structure Number user input Number
+Weapons Manufacturing Specialized Contractor General Construction Contractor Modeling Agency Your term project MUST include following item Complete
+Please comment criticize following submission regarding ATM model CRC Cards Regards HM need attach full assignment solution due date
+solve part assignment per requirement
+By creating account agree We post anything without permission Attach Files
+
+ÐÔÅØ obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj stream ð ë S Ê
+Q fÑ æbâ ÀpdóÕ Ó ÑÏà upgP e
+ôe E ö Ç óÙY è ÝV ªÌ ò td ªÆ Ã
+w j íÂIÑ îH Ã n Dg Ï ÌÛo ý à Ù ËÉ õÓ é endstream endobj obj stream Ç MÃb A yß
+kl ñ ÈØY Ó CW Lp Óeö Ì ífl Ã ä endstream endobj obj stream
+J ö ü Í Ë ÛXK à ylÞþ é ë M ð þgs ø ûâgb Ïõ endstream endobj obj stream ôLp H ÎU I â MFq dò SþV ynÖ B v î D hì endstream endobj obj stream MÜ Ù Ï MÛ Å í óã j Wå cZnt Ë Q endstream endobj obj stream È q õ e åûºöO à ü endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj R stream xÚÓÎP Îà ýð endstream endobj obj stream ïx üíßüó þêo üã ø J j ÏZºüÊ Ï ûgåú ÚÈ Ñê fô
+Fä ãü
+NÑ Âì é Ì Þ ùü K çÝ S ØQ QÅ pEC u ÇzÏû Èd áaÊÂ
+ðæ z j Çà µà Ë õ
+Ù þ dg
+Ò Àõp
+Û Ñ âSò x JÕNvI Ñûèî Ø
+ó ÿ pOËÙÇÉ íûÙ
+k jÌ j iëê ÎÑ UC Bº Óâ
+á r ÈG ØD µ TïK CªÜ ÓµRÏ Zæåh ªÃÍ ßÊF ªà E
+E HÅî v xZ Æ ÝV
+
+obj stream Í óÝ uÜ É K öü
+ßÿÚU ÇTì óxi í
+
+Software system unless thoroughly understood like ice berg
+They becoming difficult understand
+Improvement coding tool allows software developer produce large amount software meet ever expanding need user
+As system grow method understand communicate size need used
+Function Point Analysis structured technique problem solving
+It method break system smaller component better understood analyzed
+Function point unit measure software much like hour measuring time mile measuring distance Celsius measuring temperature
+Function Points ordinal measure much like measure kilometer Fahrenheit hour forth Human being solve problem breaking smaller understandable piece
+Problems may appear difficult simple broken smaller part dissected class
+Classifying thing placing category familiar process
+Everyone one time another shopkeeper take stock shelf librarian catalog book secretary file letter document
+When object classified content system set definition rule must used place object appropriate category scheme classification
+Function Point Analysis structured technique classifying component system
+It method break system smaller component better understood analyzed
+It provides structured technique problem solving
+In world Function Point Analysis system divided five large class general system characteristic
+The first three class component External Inputs External Outputs External Inquires component transact file therefore called transaction
+The next two Internal Logical Files External Interface Files data stored combined form logical information
+The general system characteristic ass general functionality system
+Brief History Function Point Analysis developed first Allan Albrecht mid
+It attempt overcome difficulty associated line code measure software size assist developing mechanism predict effort associated software development
+The method first published later
+In Albrecht refined method since International Function Point User Group IFPUG set several version Function Point Counting Practices Manual published IFPUG
+The current version IFPUG Manual
+A full downloaded website
+Objectives Function Point Analysis Frequently term end user user used without specifying meant
+In case user sophisticated user
+Someone would understand system functional perspective likely someone would provide requirement acceptance testing
+Since Function Points measure system functional perspective independent technology
+Regardless language development method hardware platform used number function point system remain constant
+The variable amount effort needed deliver given set function point therefore Function Point Analysis used determine whether tool environment language productive compared others within organization among organization
+This critical point one greatest value Function Point Analysis
+Function Point Analysis provide mechanism track monitor scope creep
+Function Point Counts end requirement analysis design code testing implementation compared
+The function point count end requirement design compared function point actually delivered
+If project grown scope creep
+The amount growth indication well requirement gathered communicated project team
+If amount growth project decline time natural assumption communication user improved
+Characteristic Quality Function Point Analysis Function Point Analysis performed trained experienced personnel
+If Function Point Analysis conducted untrained personnel reasonable assume analysis done incorrectly
+The personnel counting function point utilize current version Function Point Counting Practices Manual Current application documentation utilized complete function point count
+For example screen format report layout listing interface system system logical preliminary physical data model assist Function Points Analysis
+The task counting function point included part overall project plan
+That counting function point scheduled planned
+The first function point count developed provide sizing used estimating
+The Five Major Components Since common computer system interact computer system boundary must drawn around system measured prior classifying component
+This boundary must drawn according point view
+In short boundary indicates border project application measured external application user domain
+Once border established component classified ranked tallied
+elementary process data cross boundary outside inside
+This data may come data input screen another application
+The data may used maintain one internal logical file
+The data either control information business information
+If data control information update internal logical file
+The graphic represents simple EI update ILF FTR
+
+elementary process derived data pass across boundary inside outside
+Additionally EO may update ILF
+The data creates report output file sent application
+These report file created one internal logical file external interface file
+The following graphic represents EO FTR derived information green derived ILF elementary process input output component result data retrieval one internal logical file external interface file
+The input process update Internal Logical Files output side contain derived data
+The graphic represents EQ two ILF derived data
+user identifiable group logically related data resides entirely within application boundary maintained external input
+user identifiable group logically related data used reference purpose
+The data resides entirely outside application maintained another application
+The external interface file internal logical file another application
+After component classified one five major component ranking low average high assigned
+For transaction ranking based upon number file updated referenced number data element type
+For file ranking based upon record element type data element type
+A record element type user recognizable subgroup data element within ILF EIF
+A data element type unique user recognizable non recursive field
+Each following table assist ranking process numerical rating parenthesis
+For example EI reference update File Types Referenced data element would assigned ranking average associated rating
+Where combined number Internal Logical Files referenced updated External Interface Files referenced
+Like component rated scored
+Basically EQ rated Low Average High like EO assigned value like EI
+The rating based upon total number unique combined unique input side data element file type referenced combined unique input output side
+If FTR used input output side counted one time
+If DET used input output side counted one time
+For number record element type number data element type used determine ranking low average high
+A Record Element Type user recognizable subgroup data element within ILF EIF
+A Data Element Type DET unique user recognizable non recursive field ILF EIF
+The count level complexity type component entered table following one
+Each count multiplied numerical rating shown determine rated value
+The rated value row summed across table giving total value type component
+These total summed across table giving total value type component
+These total summoned arrive Total Number Unadjusted Function Points
+The value adjustment factor VAF based general system characteristic GSC rate general functionality application counted
+Each characteristic associated description help determine degree influence characteristic
+The degree influence range scale zero five influence strong influence
+The IFPUG Counting Practices Manual provides detailed evaluation criterion GSC table intended provide overview GSC
+Brief Description Once answered tabulated using IFPUG Value Adjustment Equation VAF Ci degree influence General System Characteristic VAF Ci representing GSC
+summation
+The final Function Point Count obtained multiplying VAF time Unadjusted Function Point UAF
+FP UAF VAF Summary benefit Function Point Analysis Function Points used size software application accurately
+Sizing important component determining productivity
+They counted different people different time obtain measure within reasonable margin error
+Function Points easily understood non technical user
+This help communicate sizing information user customer
+Function Points used determine whether tool language environment productive compared others
+For complete list us benefit FP please see online article
+Conclusions Accurately predicting size software plagued software industry year
+Function Points becoming widely accepted standard metric measuring software size
+Now Function Points made adequate sizing possible anticipated overall rate progress software productivity software quality improve
+Understanding software size key understanding productivity quality
+Without reliable sizing metric relative change productivity Function Points per Work Month relative change quality Defects per Function Point calculated
+If relative change productivity quality calculated plotted time focus put upon organization strength weakness
+Most important attempt correct weakness measured effectiveness
+For information Share copy distribute transmit work Remix adapt work make commercial use work
+

@@ -1,0 +1,320 @@
+learn share knowledge build career
+I Googled long time I still understand work explanation technical illustration make clearer
+My primary confusion virtual memory
+I hope question good explanation people ask question find Google
+I admit two concept seem quite complicated similar beginning
+Sometimes also taught confusingly
+A good reference opinion found For sake completion I try explain I guarantee correctness I developed OS month
+Segmentation older concept opinion confusing
+Segmentation work name say
+A segment continuous block memory specific size
+To access memory within segment need
+This make total two address component fact stored two register
+One idea segmentation enlarge memory register
+The sort protection elaborate one paging
+Because use two register access memory split memory chunk said called segment
+Consider memory
+This split bit register segment byte
+Of course also bit register offset
+Addressing byte bit quite useless decided segment overlap I think also performance programming reason back
+The following formula used access memory segmentation This mean segment time offset
+This also mean address accessed many way
+also
+This segmentation old day
+If look assembler program try something see even called register assembler CS DS code segment data segment
+Later called GDT introduced
+This global table specific position RAM segment number memory address several option segment given
+This brings u nearer concept paging still
+So programmer decide segment start
+A new concept also GDT one could decide long segment
+So segment long bit register limit could defined programmer
+You could overlapping segment also purely separated segment
+When accessing A B still two register used accessing memory A entry GDT
+So look entry GDT see memory location segment start large
+We check B offset within allowed memory area
+Now paging different newer segmentation approach paging page fixed size
+So limit longer programmable page currently
+Furthermore unlike segmentation logical address space continuous without physical address continuous
+Paging also us table look stuff still split logical address part
+The first part number entry page table second part offset
+However offset fixed length bit access
+You also two part multiple page table used
+Two level page table quite common system I think even three level page table common
+I hope I able explain least bit I think exaplanation also confusing
+Best thing dive kernel programming try implement basic stuff booting OS
+Then find everything due backwards compability everything still modern PCs
+I direct Segmentation starting die
+I suspect paging well future
+Edit Let add clarification Segmentation paging two difference mean memory management typically two thing
+At risk oversimplification Segmentation allows process access memory natural pointer size would allow
+Paging allows process access memory system physically support
+Segments The bit system
+That allows addressing memory
+Late system much memory
+A process could map different segment physical memory
+A process could access memory could change memory could access within
+The successor brought segmenting high art
+Using even complex system base register process could access larger area memory
+Paging Is system process see continuous relatively range memory address divided page
+For example VAX processor bit address allowing access memory theoretically computer typically memory
+A process could access much memory system physically plus multiple process
+These system presented continuous range memory process virtual memory divided page around byte defined set table mapped disk storage
+If process accessed page memory triggered hardware exception
+The operating system would intercept exception allocate new page physical memory load memory disk restart instruction
+If operating system needed memory handle request would page memory already loaded
+If data read usually would loaded executable image would paged
+The page could marked invalid
+If memory page would written page file storage needed
+The Intel chip introduced bizarre system combined segment paging
+Segments used data protection
+The processor mode away
+By posting answer agree
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+division
+In computer system using segmentation reference memory location includes value identifies segment within segment
+Segments section also used compiled program together image memory
+Segments usually correspond natural division program individual routine data table segmentation generally visible programmer paging alone
+Different segment may created different program different class memory usage
+Certain segment may shared program
+In system using segmentation computer memory address consist segment id offset within segment
+A hardware MMU responsible translating segment offset performing check make sure translation done reference segment offset permitted
+Each segment length set permission example associated
+A allowed make reference segment type reference allowed permission offset within segment within range specified length segment
+Otherwise raised
+Segments may also used implement
+In case segment associated flag indicating whether present main memory
+If segment accessed present main memory exception raised read segment memory secondary storage
+Segmentation one method implementing
+another combined
+The size memory segment generally fixed may small single
+Segmentation implemented several different way different hardware without paging
+Intel fit either model discussed separately also greater detail separate article
+Associated segment information indicates segment located
+When program reference memory location offset added segment base generate physical memory address
+An implementation virtual memory system using segmentation without paging requires entire segment swapped back forth main memory secondary storage
+When segment swapped operating system allocate enough contiguous free memory hold entire segment
+Often result enough contiguous memory even though may enough total
+Instead actual memory location segment information includes address segment
+When program reference memory location offset translated memory address using page table
+A segment extended simply allocating another memory page adding segment page table
+An implementation system using segmentation paging usually move individual page back forth main memory secondary storage similar paged system
+Pages segment located anywhere main memory need contiguous
+This usually result reduced amount primary secondary storage reduced memory fragmentation
+The computer one first implement segmentation perhaps first commercial computer provide virtual memory based segmentation
+The later computer also implemented segmentation version architecture still use today Unisys ClearPath Libra server
+The computer modification segmentation paging support added designed support
+The begun attempted implement true segmented architecture memory protection microprocessor
+computer use memory segmentation
+The memory segmentation used early processor beginning provide protection
+Any program running processor access segment restriction
+A segment identified starting location length checking
+Segmentation later provides protection introduction Intel retroactively named sole operating mode previous CPU model introduced new protection feature
+For backward compatibility CPUs start real mode memory protection fixed KiB segment KiB addressing
+An later processor must switched another mode software order use full address space advanced MMU feature
+In implementation segmentation segment table rather pointing page table segment contains segment address
+This address mapped physical address using separate page table
+Unlike paged implementation segmentation prevents segment dynamically growing size
+The architecture use segmentation long mode mode
+Four segment register CS SS DS ES forced limit
+The segment register FS GS still nonzero base address
+This allows operating system use segment special purpose
+
+Segmentation Definition Breaking packet smaller piece transmitter
+This may necessary restriction communication channel
+The piece joined back together right order receiver
+Segmentation may performed router routing packet network smaller maximum packet size
+Search Segmentation UK US Search Segmentation rest Computing Students
+
+What would like
+Would like merge question
+Would like make primary merge question
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+Supervisor CONTRIBUTIONS What would like
+What would like
+
+may refer
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+The following problem final I understand solve Different method memory management different overhead What relation among overhead concurrent execution process
+P S T b S P c S T T S P This question came site theoretical computer scientist researcher related field
+I guessing overhead P S T exclude per overhead overhead overhead adjustment obvious overhead process would P byte paging S byte segmentation T byte byte segmentation paging
+The inclusion maximum segment size confusing since insufficient information provided determine segment process larger KB though one segment
+Since mean segment size significantly le maximum allowed size I assume segment need use two segment table entry
+It might help clarify equation substitute A B C A B C greater zero
+It straightforward determine value needed equality derive condition memory management method greater overhead negative value course impossible
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+page block segment job read main memory needed
+Questions much actual main memory space allocate user page returned disk swapped make room incoming page must addressed
+
+Get grade money back bullet bullet Delivered time Get grade money back bullet bullet Delivered time Trusted Students Since This essay submitted student
+This example work written professional essay writer
+Any opinion finding conclusion recommendation expressed material author necessarily reflect view UK Essays
+To use processor facility efficiently desirable maintain many process possible main memory
+In addition desirable free programmer size restriction program development restrict small size happened older computer
+The restriction predefined size redirects programmer effort use better programming technique continuously effort make fit size solution necessarily optimal one
+The way address concern virtual memory VM
+Virtual memory system abstraction primary memory von Neumann computer
+Even time decreasing physical memory cost contemporary computer devote considerable resource supporting virtual address space much larger physical memory allocated process
+Contemporary software relies heavily virtual memory support application image management huge memory requirement
+Sami Hamed
+To basic approach providing virtual memory paging segmentation
+Paging
+With paging process divided relatively small page
+Paging system transfer block information primary secondary memory
+Because fixed page size page frame size translation binary virtual address corresponding physical address relatively simple provided system efficient table lookup mechanism
+Paging system use associative memory implement page translation table
+Paging us address like used address cell within particular segment
+In paging virtual address space linear sequence virtual address format differs hierarchical segmentation address space
+In paging system programmer specific mechanism informing virtual memory system logical unit virtual address space done segmentation
+Instead virtual memory manager completely responsible defining unit transfer page moved back forth primary secondary memory
+The programmer need aware unit virtual address space loaded unloaded physical memory
+In fact page size transparent process
+Philip
+Segmentation
+Segmentation provides use piece varying size
+It also possible combine segmentation paging single scheme
+Segmentation alternative paging
+It differs paging unit transfer primary secondary memory varies
+The size segment also explicitly known programmer
+Translating segment virtual address physical
+Segmentation extension idea suggested use register relocating bound checking block memory
+The program part loaded unloaded defined programmer segment
+Segment may defined explicitly language directive implicit program semantics text data stack segment created UNIX C compiler
+Address complex translating paging virtual address
+Michael
+Process management refers full spectrum service support orderly administration collection process
+The processor manager responsible creating environment sequential process executes including implementing resource management
+The community process exists given time derived initial process created computer begin operation
+The initial process boot turn create process service interactive user printer network connection
+A program image created set source module previously compiled library module form
+The combine various object module create absolute program secondary memory
+The loader place absolute program primary memory process executes program
+The program image along entity process reference constitutes process address space
+The address space stored different part machine memory hierarchy execution
+No external fragmentation Segments grow without reshuffling Can run process page swapped disk Increases flexibility sharing Decreases size page table If segment used need page table Increases flexibility sharing Share either single page entire segment Overhead accessing memory Page table reside main memory Overhead reference every real memory reference Large page table Must allocate page table contiguously More problematic address bit Page table size Assume bit segment bit page number bit offset Algorithm block memory card side cache line
+Method Which country necessary define cache block busy
+Three technique used direct associative associative
+In associative mapping request made cash requested address compared directory entry directory
+If requested address found directory hit appropriate place cache fetched returned processor otherwise miss occurs
+figure
+Address length bit Number addressable unit word byte Block Size line size word byte Number block main memory Number line cache undetermined Size tag bit Flexibility block replace new block read cache Replacement algorithm designed maximize cache hit ratio Complex circuitry required examine tag cache line parallel In direct mapping cache Lower Row address bit used access directory
+Several address line card place cache directory upper address bit tag bit compared address ensure hit
+If comparison valid result cache miss simply miss
+The address given cache processor actually subdivided several piece different role accessing data figure
+Direct Mapping Cache Figure Philip Operates fashion somewhat similar cache
+Bits line address used address cache directory
+However multiple choice two four complete line address may present directory
+Each line address corresponds location
+The collection form total cache array
+In set associative cache cache accessed simultaneously together cache directory
+If entry cache directory match reference address hit particular array selected gated back processor figure William No choice Each block map one line Must replace line Must implemented hardware speed
+Most effective Least Recently Used LRU Replace block set cache longest reference
+set associative line includes USE bit
+FIFO Replace block set cache longest
+Uses circular buffer technique
+Least Frequently Used LFU
+Replace block set experienced fewest reference
+Associate counter line Pick line random based usage
+Only slightly inferior performance algorithm based usage
+The basic idea RAID Redundant Array Independent Disks combine multiple cheap disk array disk drive obtain performance capacity reliability exceeds large disk
+The array drive appears host computer one logical drive
+The Mean Time Between Failure MTBF array equal MTBF individual drive divided number drive array
+Because MTBF array RAID low system
+However disk array made fault tolerant redundantly storing information various way
+Five type array architecture RAID RAID originally determined provides disk fault tolerance different compromise feature performance
+In addition five redundant array architecture become popular refer array disk drive RAID array
+RAID fastest efficient array type offer fault tolerance
+RAID requires minimum two drive
+William
+Increasing Logical Drive Performance Without array controller connecting extra physical disk system increase total storage capacity
+However effect efficiency operation data transferred one physical disk time see Figure
+With array controller connecting extra physical disk system increase total storage capacity efficiency
+The capacity several physical disk combined one virtual unit called logical drive also called logical volume
+The head physical disk logical drive active simultaneously improving performance reducing total time required data transfer see Figure
+William Because head physical disk active simultaneously amount data written disk given time interval
+Each unit data called block
+The block form set data stripe spread evenly physical disk logical drive see Figure William
+For data logical drive readable data block sequence must every stripe
+This sequencing process performed Smart Array Controller sends data block physical disk writing head correct order
+In striped array physical disk logical drive contains amount data
+If one physical disk larger capacity physical disk logical drive extra capacity used
+A logical drive extend one channel controller extend one controller
+Disk failure although rare potentially catastrophic array
+If physical disk fails logical drive assigned fails data logical drive lost
+Peng Hai Xinrong Qiong Jiangling
+RAID fastest efficient array type offer fault tolerance
+RAID requires minimum two drive
+RAID best choice environment
+RAID choice two drive used
+RAID seldom used today since ECC embedded hard drive
+RAID supported Adaptec RAID controller
+RAID used speed data transfer provide fault tolerance environment access long sequential record
+However RAID allow overlapping multiple operation requires drive avoid performance degradation short record
+Because RAID small stripe size offer
+Similar performance RAID supported Adaptec RAID controller
+RAID offer advantage RAID support multiple simultaneous write operation
+RAID supported Adaptec RAID controller
+RAID combine efficient data storage good performance characteristic
+However write performance performance drive failure slower RAID
+Rebuild operation also require time parity information also reconstructed
+At least three drive required RAID array
+Striped data dual distributed parity except us second level independently calculated distributed parity information additional fault tolerance
+This extra fault tolerance provides data security event two drive fail drive replaced
+While RAID level provide greater fault tolerance level significant loss write performance due requirement storing parity twice write operation
+A configuration also requires drive accommodate additional parity data make le cost effective equivalent storage capacity
+RAID Stripe set mirrored array RAID also called RAID combination RAID level
+In type implementation stripe set data created across array performance benefit
+A duplicate first stripe set mirrored another array fault tolerance
+While configuration provides performance benefit redundancy level costly implement minimum four disk necessary create RAID configuration
+NOTE A RAID configuration continue operation even two disk failed provided two disk part mirror set
+RAID Stripe set parity array RAID level also called RAID combination RAID level
+Multiple array striped together using
+Parity maintained separately group striped array
+This level provides advantage small data transfer added performance striping disk operation
+Also parity calculated independently component one array degraded effect overall operation significant single array
+However overhead incurred parity generation still present
+Normally cause noticeable degradation unless dependent XOR functionality large number disk array
+RAID subsystem support XOR provide performance nearly equal configuration added protection data parity information event disk failure
+A minimum six disk required RAID configuration
+NOTE A RAID configuration continue operation even two disk failed provided two disk part parity group
+Adaptec
+Take look essay writing service Our Dissertation Writing service help everything full dissertation individual chapter
+Our Marking Service help pick area work need improvement
+Fully referenced delivered time
+Get extra support require
+If original writer essay longer wish essay published UK Essays website please click link request removal Copyright UK Essays trading name All Answers Ltd company registered England Wales
+Company Registration No
+VAT Registration No
+Registered Data Controller No
+Registered office Venture House Cross Street Arnold Nottingham Nottinghamshire
+
+In portion swapped
+Contrast
+In graphic piece portion data
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Earn industry credential earn degree
+As nonprofit university WGU put student first
+Earn degree half cost online university
+Western Governors University
+All Rights Reserved WGU Indiana accredited online university offering online bachelor master degree program
+
+You still full access site functionality may lost
+For best experience upgrade browser following link
+

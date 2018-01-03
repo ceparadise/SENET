@@ -1,0 +1,172 @@
+In asserted said algorithm correct respect
+correctness refers behaviour algorithm input produce expected output
+A distinction made requires answer returned correct additionally requires algorithm terminates
+Since general solution total correctness assertion may lie much deeper
+A type play critical role total correctness algorithm depends termination
+For example successively searching see find example odd quite easy write partially correct program using long division two check perfect
+But say program totally correct would assert something
+A proof would mathematical proof assuming algorithm specification given formally
+In particular expected correctness assertion given program implementing algorithm given machine
+That would involve consideration limitation
+A state proof functional correctness corresponds certain program
+Converting proof way called
+specific reasoning rigorously correctness computer program
+It us axiomatic technique define programming language semantics argue correctness program assertion known Hoare triple
+Software testing activity aimed evaluating attribute capability program system determining meet required result
+Although crucial software quality widely deployed programmer tester software testing still remains art due limited understanding principle software
+The difficulty software testing stem complexity software completely test program moderate complexity
+Testing debugging
+The purpose testing quality assurance verification validation reliability estimation
+Testing used generic metric well
+Correctness testing reliability testing two major area testing
+Software testing budget time quality
+
+The proof correctness algorithm generally us type invariant algorithm show correctly performs task type input
+You necessarily need proof correctness implement algorithm definitely aid understanding algorithm work
+Writing proof correctness requires understanding discrete math logic especially since proof algorithm especially recursive nature quick sort binary search require mathematical induction
+Some proof correctness also rely method proof proof contradiction proof case
+Understanding general structure type proof definitely aid generating proof correctness algorithm
+example inductive style proof quick sort Still question
+Ask
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+How I prove algorithm correctness
+face problem come solution way know valid solution trying test case
+pas algorithm produce expected output algorithm properly true
+obviously hold time may forget corner case hard figure test case
+So I prove mathematically algorithm produce expected output
+For example consider program
+given read array n integer
+Find integer occurs time array linear time constant additional space
+Algorithm We use array size count occurrence number let count adding number count array proper count
+If reach size count array decrement one count number
+If number count becomes zero safely eliminated count array
+Here example We make another loop input array count occurrence one exceeds printed
+Please edit question limit specific problem enough detail identify adequate answer
+Avoid asking multiple distinct question
+See page help clarifying question
+In practice prove algorithm search good invariant property loop
+For example compute given order sum n integer loop indexed invariant could At end iteration sum variable contains sum first value
+It invariant iteration number always true easy prove recurrence iteration number
+Afterwards easily conclude end loop thus sum expected sum
+Then several level strictness simple algorithm generally conclude promptly since correction algorithm becomes almost always trivial loop invariant
+A classical approach prove algorithm finish algorithm correct end
+For complete example look
+For subtil algorithm also need mathematical theorem provide link beetween object
+Your example close algorithm
+You look proof algorithm try adapt try bound number time count frequent number decreased
+In general systematic way find algorithm produce expected output
+Indeed systematic way would algorithm algorithm ca exist
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Does anyone complete example proof program correctness
+I talking something includes usual predicate base case inductive hypothesis inductive step
+But also important loop invariant termination
+I sure proper format something like
+The thing I able find powerpoint slide random school teaching purpose place
+I looking something start finish easy follow formatted nicely submitted academically
+I wish understand program proof look like used real rather proof sketch toy example classroom
+You find collection proof technique illustrated poof small program following paper Manna Ness Vuillemin CACM August
+It made available web one author
+It also first paper I ever read subject I remember enjoying
+But I would expect literature web refereed paper textbook source
+include considerable number proof considering today people working proof real program help mechanized proof system
+OF course aware thing correctness absolute sense
+Correctness defined respect specification
+predicate logic also express meaning program whatever part relevant
+Of course different way defining semantics program
+So one might expect proof technique vary accordingly
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Correctness meaningful respect specification
+So rephrased version question algorithm correct respect given specification
+Essentially want prove algorithm indeed computes want
+Therefore able specify want formally
+For example Say want write subroutine take two number computes maximum two number For need specify formally want
+Assume use place holder return value subroutine
+I would recommend write logical formula specifies maximum two argument provided
+The formula would call formula In fact formula specifies post condition subroutine
+A condition hold subroutine completes execution
+Since restriction input function would say precondition condition hold beginning subroutine work properly
+Now say one implementation follows Now see branch subroutine return So logically say Similarly branch logical formula representing program The reason I put quote logical formula specifies transition relation input related output
+It capture relation possible value input concrete execution program deal one particular input value
+Since program take either path corresponding logical formula capture would call formula Note Or T P logical implication
+Because implication hold say program correct
+If implication hold might case T would true P would false
+This scenario would represent case program behave way intended behave
+If want study formally study
+It one tool used formally prove correctness program
+What I discussed one many way people argue correctness
+I hope helped bit
+Still question
+Ask
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I found proof correctness Quick sort version Please refer proof correctness Quick sort provide proof appropriated
+typical implementation Quick sort like pointer j different move track different data many case consider proof j pointed right index recursion element index le j le equal pivot element index great great equal pivot
+A detailed proof find online Stanford course Tim Roughgarden If want slide sign
+Tobias Nipkow formalised proof look I check right proof time right I super familiar please feel free edit find better formalisation
+The paper Yoshida Honda contains sketch proof polymorphic quicksort
+The sketch assumes logic provides positive inductive definition logic discus rest paper keep presentation simple
+It easy add
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This service advanced JavaScript available learn A proof result applying one correctness test
+
+There affiliation available Over million scientific document fingertip Springer International Publishing AG
+Part
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I asking following computer science result thoroughly checked one correctness still uncertain
+I understand proof hard check due length intricacy technicality case elementary proof found first published one Dinur proof PCP theorem
+Apparently longest proof CS SPGT Chudnovsky et Graph Minors series paper I understand ongoing effort simplify latter
+The question applies mathematics long proof CFSG correctness debated expert see
+By posting answer agree
+asked viewed site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Let k multiple n
+Show n language Bn regular
+Proof construction Let set multiple n So language Let try construct NFA So regular Let Cn x binary number multiple n
+Show n language Cn regular
+Proof Construction Let set binary number multiple n So construct following NFA The number arrow leaving state equal cardinality set
+represents NFA l n Showing exists NFA accepts binary number trivial
+Therefore regular
+I know I kind took easy way I think work
+Let focus second problem
+I use example
+Every natural number divided give remainder one
+Our goal build automaton whose state grouped according
+In case going three class two state shall see
+The automaton state class number give remainder
+For simplicity assume read number least significant bit significant bit could make opposite assumption well
+The next important observation value bit string represents unsigned binary number given n
+Each element summation contributes total remainder independently others modular addition commutative associative
+In particular case otherwise
+case The independence contribution make possible u read number either end
+The final observation alternate
+For example
+It whether even odd matter
+If automaton read six state read nine three namely state zero remainder reading even number bit
+After reading thirty another state remembers remainder reading odd number bit
+Since state must remember whether read even number bit even odd number bit odd use right value need six state namely e e e
+The first component state keep track remainder accumulated far second component even odd tell u value
+If state read know even though lost track exact value know even remainder far
+The next remainder therefore next state e accordingly
+You complete construction
+The initial state e accepting state e
+This method generalizes arbitrary n follows There exactly n possible residue n different value n
+Hence state automaton
+What really matter finitely many
+For signed integer say represented two complement thing bit messier approach
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Grammarly corrects hundred grammar punctuation spelling mistake also catching contextual error improving vocabulary suggesting style improvement
+Come grammar checking stay added polish keep text clear effective
+Grammarly powerful online algorithm developed world leading authority linguistic technology
+You trust grammar checker improved day team truly understands building block English language
+

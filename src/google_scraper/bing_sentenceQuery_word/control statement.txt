@@ -1,0 +1,356 @@
+In order individual imperative evaluated
+The emphasis explicit control flow distinguishes language language
+Within imperative statement execution result choice made two path follow
+For functional language function language construct exist achieve result usually termed control flow statement
+A set statement turn generally structured addition grouping also defines
+mechanism alter flow control way similar subroutine usually occur response external stimulus event occur rather execution control flow statement
+At level control flow instruction usually work altering
+For CPUs control flow instruction available conditional unconditional instruction also termed jump
+The kind control flow statement supported different language vary categorized effect A explicit name number assigned fixed position within may referenced control flow statement appearing elsewhere source code
+A label mark position within source code effect
+alternative named label used language placed start line text source code
+Languages use often impose constraint line number must increase value following line may require consecutive
+For example BASIC In language label usually appearing start line immediately followed colon
+For example C The language allowed whole number identifier label linked colon following statement variant allowed whole number
+The statement combination English word pronounced accordingly basic form unconditional transfer control
+Although may either upper lower case depending language usually written The effect goto statement cause next statement executed statement appearing immediately indicated label
+Goto statement many computer scientist notably
+The terminology varies may alternatively known routine procedure function especially return result method especially belong
+In computer memory small current standard subroutine used mainly reduce program size
+A piece code written used many time various place program
+Today subroutine often used help make program structured isolating algorithm hiding data access method
+If many programmer working one program subroutine one kind help divide work
+In structured programming ordered sequencing successive command considered one basic control structure used building block program alongside iteration recursion choice
+In May Böhm Jacopini published article showed program could transformed form involving choice IF THEN ELSE loop WHILE condition DO xxx possibly duplicated code addition Boolean variable flag
+Later author showed choice replaced loop yet Boolean variable
+That minimalism possible mean necessarily desirable computer theoretically need subtract one number another branch result negative practical computer dozen even hundred machine instruction
+What Böhm Jacopini article showed program could
+Other research showed control structure one entry one exit much easier understand form mainly could used anywhere statement without disrupting control flow
+In word
+Later development recently composable continued strategy making component program even freely composable
+Some academic took purist approach result argued even instruction like middle loop bad practice needed proof thus advocated loop single exit point
+This purist approach embodied language designed preferred tool teaching introductory programming academia
+The direct application theorem may result additional local variable introduced structured chart may also result
+The latter issue called context
+Pascal affected problem according empirical study cited student programmer difficulty formulating correct solution Pascal several simple problem including writing function searching element array
+A study Henry Shapiro cited Roberts found using control structure correct solution given subject subject wrote incorrect code problem allowed write return middle loop
+Most programming language control structure initial keyword indicates type control structure involved
+Languages divide whether control structure final keyword
+Conditional expression conditional construct feature perform different computation action depending whether evaluates true false
+Less common variation include compare given value specified constant take action according first constant match
+There usually provision default action else otherwise taken match succeeds
+Switch statement allow compiler optimization
+In case may limited constant expression might extend example right implement default case matching string
+Case logic also implemented functional form statement
+A loop sequence statement specified may carried several time succession
+The code inside loop loop shown obeyed specified number time collection item condition met
+In language loop expressed using rather explicit looping construct
+special case recursion easily transformed iteration
+Most programming language construction repeating loop certain number time
+In case counting go downwards instead upwards step size used
+In example N body loop may execute I value depending programming language
+In many programming language integer reliably used loop
+number represented imprecisely due hardware constraint loop might repeated time depending rounding error hardware compiler version
+Furthermore increment X occurs repeated addition accumulated rounding error may mean value X iteration differ quite significantly expected sequence
+Most programming language construction repeating loop condition change
+Some variation test condition start loop others test end
+If test start body may skipped completely end body always executed least
+A value change detection method used within ordinary loop trigger processing group value
+Values monitored within loop change diverts program flow handling group event associated
+Several programming language later special construct allow implicit looping element array member set collection
+generalise loop also support us
+comprehension together provide similar function Scala
+General iteration construct C statement form used express sort loop others looping number collection parallel
+Where specific looping construct used usually preferred general iteration construct since often make purpose expression clearer
+used assure program segment loop forever exceptional condition arises error
+For instance program loop forever handling event occur stopping process terminated operator
+Infinite loop implemented using control flow construct
+Most commonly unstructured programming jump back goto structured programming indefinite loop loop set never end either omitting condition explicitly setting true
+Some language special construct infinite loop typically omitting condition indefinite loop
+Examples include Ada Fortran Go Ruby
+Often infinite loop unintentionally created programming error loop wherein loop condition us variable never change within loop
+Sometimes within body loop desire skip remainder loop body continue next iteration loop
+Some language provide statement language Perl Ruby
+The effect prematurely terminate innermost loop body resume normal next iteration
+If iteration last one loop effect terminate entire loop early
+Some language like Perl Ruby statement restarts current iteration start
+Ruby statement restarts entire loop initial iteration
+When using loop search table might desirable stop searching soon required item found
+Some programming language provide statement language Perl effect terminate current loop immediately transfer control statement immediately loop
+The following example done support
+Both feature similar comparing code snippet show difference must combined statement construct
+support conditional execution code depending whether loop exited early statement using loop
+For example The clause example linked statement inner statement
+Both Python loop support else clause executed early exit loop occurred
+Some language support breaking nested loop theory circle called break
+One common use example searching table
+This done either via multilevel break break level bash PHP via labeled break break continue given label Java Perl
+Alternatives multilevel break include single break together state variable tested break another level exception caught level broken placing nested loop function using return effect termination entire nested loop using label goto statement
+C include multilevel break usual alternative use goto implement labeled break
+Python multilevel break continue proposed rejected basis added complexity worth rare legitimate use
+The notion break interest give rise today called
+In refined proving possible avoid adding additional variable structured programming long break loop allowed
+Furthermore Kosaraju proved strict hierarchy program exists every integer exists program containing break depth rewritten program break depth le without introducing added variable
+One also subroutine executing looped statement breaking nested loop subroutine
+There multiple break generally implemented exception instead
+In textbook us Tennent notion explain similarity break return statement
+Watt note class sequencer known defined sequencer terminates execution textually enclosing command procedure encompasses break loop including break return statement
+As commonly implemented however return sequencer may also carry return value whereas break sequencer implemented contemporary language usually
+used express correctness loop
+In practical term loop variant integer expression initial value
+The variant value must decrease loop iteration must never become negative correct execution loop
+Loop variant used guarantee loop terminate
+A loop invariant assertion must true first loop iteration remain true iteration
+This implies loop terminates correctly exit condition loop invariant satisfied
+Loop invariant used monitor specific property loop successive iteration
+Some programming language contain native support loop variant invariant
+In case support specification
+Some dialect provide extensive sublanguage describing Loops
+An early example found Conversional Lisp
+provides Loop macro implement sublanguage
+Many programming language especially favoring dynamic style programming offer construct
+These cause flow execution jump given context resume predeclared point
+three common sort control construct exotic one also exist keyword
+standard condition ZERODIVIDE SUBSCRIPTRANGE ENDFILE raised intercepted ON action Programmers also define use named condition
+Like one statement specified many case GOTO needed decide flow control resume
+Unfortunately implementation substantial overhead space time especially SUBSCRIPTRANGE many programmer tried avoid using condition
+Common Syntax example Modern language specialized structured construct exception handling rely use break return
+For example one write Any number variety clause used
+If matching particular control percolate back subroutine call nested block matching found end main program reached point program forcibly stopped suitable error message
+Via influence keyword reserved declaring exception handler language popular today like Java C
+Some language like Ada use keyword introduce exception handler may even employ different keyword Ada pattern matching
+A language like incorporate placeholder exception handler syntax automatically extract several piece information exception occurs
+This approach exemplified construct AppleScript David Watt textbook also analyzes exception handling framework sequencer introduced article section early exit loop
+Watt note abnormal situation generally exemplified arithmetic overflow failure like file found kind error detected program unit handler naturally located program unit
+For example program might contain several call read file action perform file found depends meaning purpose file question program thus handling routine abnormal situation located system code
+Watts note introducing status flag testing caller structured programming even return sequencer would entail result situation application code tends get cluttered test status flag programmer might forgetfully lazily omit test status flag
+In fact abnormal situation represented status flag default ignored
+Watt note contrast status flag testing exception opposite causing program terminate unless programmer explicitly deal exception way possibly adding explicit code ignore
+Based argument Watt concludes jump sequencer escape sequencer suitable dedicated exception sequencer semantics discussed
+In Object Pascal D Java C Python clause added construct
+No matter control leaf code inside clause guaranteed execute
+This useful writing code must relinquish expensive resource opened file database connection finished processing Since pattern fairly common C special syntax Upon leaving compiler guarantee object released effectively variable file stream abstracting side effect initializing releasing file
+Python statement Ruby block argument used similar effect
+All language mentioned define standard exception circumstance thrown
+Users throw exception fact allows user throw catch almost type including basic type like whereas language like Java permissive
+C introduced async keyword supporting direct style
+also known semicoroutines allow control yielded consumer method temporarily typically using keyword
+Like async keyword support programming direct style
+function yield control form without thread
+Coroutines implemented library programming language provides either continuation generator distinction coroutines generator practice technical detail
+In spoof article Lawrence Clark suggested GOTO statement could replaced statement provides entertaining example
+COMEFROM implemented one named
+article Structured Programming go Statements identifies two situation covered control structure listed gave example control structure could handle situation
+Despite utility construct yet found way mainstream programming language
+The following proposed If omitted get loop test top
+If omitted get loop test bottom
+If omitted get infinite loop
+Hence single construction replace several construction programming language
+A possible variant allow one test within loop use see next section appears cover case better
+Languages lacking construct generally emulate using equivalent idiom In loop construct represented using standard infinite loop clause middle confused statement following section
+Naming loop like example optional permit leaving outer loop several nested loop
+This proposed
+A modified version presented
+used specify event may occur within occurrence indicated using name event statement
+When event occur relevant action carried control pass
+This construction provides clear separation determining situation applies action taken situation
+conceptually similar exception similar construct used purpose many language
+The following simple example involves searching table particular item
+One way attack piece software redirect flow execution program
+A variety technique including shadow stack pointer verification used defend attack
+
+In syntactic unit express action carried
+A program written language formed sequence one statement
+A statement may internal component
+Many imperative language
+make distinction statement definition statement containing executable code definition instantiating expression evaluates value
+A distinction also made simple compound statement latter may contain statement component
+The following major generic kind statement pseudocoded
+These pseudocoded statement immediate corresponding syntax typical imperative language like Pascal C Fortran etc
+The appearance statement shape look program
+Programming language characterized type statement use
+family
+Many statement introduced like
+Often statement reserved used name
+Imperative language typically use special syntax statement look quite different function call
+Common method describe syntax statement
+Semantically many statement differ call handling
+Usually actual subroutine parameter evaluated subroutine called
+This contrast many statement parameter evaluated several time
+condition
+loop body loop
+Technically statement parameter parameter
+parameter evaluated needed see also
+When parameter available statement like behaviour implemented subroutine see
+For language without parameter semantic description usually beyond capability language
+Therefore standard document often refer semantic description natural language
+In language statement contrast statement return result executed solely expression always return result often side effect
+Among imperative programming language one statement return result
+In language mix imperative style family distinction expression statement made even expression executed sequential context solely side effect whose return value used considered
+In statement everything expression
+This distinction frequently observed wording statement expression
+This found function found language Python found applied statement applied expression
+Most language fixed set statement defined language experiment allow programmer define new statement
+
+hold Computer Science MCSE MCDBA CCNA CCNP SCJP certification
+Dinesh author hugely popular blog
+Where writes guide around Computer fundamental computer software Computer programming web apps
+For type query something think missing please feel free
+Search Content Popular Article Basic Courses Advance Courses
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+A control structure block programming analyzes variable chooses direction go based given parameter
+The term detail direction program take way program control flow
+Hence basic process computing flow control determines computer respond given certain condition parameter
+Those initial condition parameter called Preconditions state variable entering control structure
+Based precondition computer run control structure determine
+The result called Postconditions state variable algorithm run
+Let u analyze flow control using traffic flow model
+A vehicle arriving intersection
+Thus precondition vehicle motion
+Suppose traffic light intersection red
+The control structure must determine proper course action assign vehicle
+Thus upon exiting control structure vehicle stopped
+also form structure The statement simple control test whether condition true false
+The condition include variable variable
+If variable integer true number zero true
+If condition true action occurs
+If condition false nothing done
+To illustrate If variable indeed hold value consistent true course action taken
+If variable true course action taken
+statement test one action
+With statement control look way speak take secondary course action
+If condition true action occurs
+If condition false take alternate action
+To illustrate In case variable true take certain course action completely skip ELSE clause
+If variable false control structure call routine completely skip THEN clause
+Note combine ELSE IF allowing several test made
+In structure test stop soon condition true
+That probably want put likely test first efficiency Remembering ELSE skipped first condition true meaning remaining portion would processed
+eg You many ELSE IF like
+A loop process loop initiated condition met
+This structure useful performing iterative instruction satisfy certain parameter
+To illustrate This routine add X X equal point control structure quit move next instruction
+Note structure quits execute Add function X equal skip clause attached WHILE
+This instruction useful parameter need tested repeatedly acceptance
+A loop nearly exact opposite WHILE loop
+A WHILE loop initially check see parameter satisfied executing instruction
+A loop executes instruction checking parameter
+To illustrate As see example differs first illustration DO action taken WHILE
+The WHILE inclusive DO
+As WHILE result false X control structure break perform another DO
+Note X equal greater prior entering loop loop never terminate
+A loop extension loop
+A loop usually three command
+The first used set starting point like x
+The second end condition loop run every round
+The third also run every round usually used modify value used condition block
+This loop would run time x wo think X variable loop put code
+Here loop Some programming language also foreach loop useful working array collection
+A foreach loop even automated loop cycle array
+Example
+
+Programs consist section block instruction sit idle needed
+When needed program move appropriate section accomplish task
+While one section code busy section inactive
+Control statement programmer indicate section code use specific time
+Control statement element control flow program execution
+They include block using bracket loop using using switch
+There also goto
+There two type control statement conditional unconditional
+At time program need execute depending particular condition
+Conditional statement executed one condition satisfied
+The common conditional statement statement take form This statement executes whenever condition true
+us many conditional statement including Unconditional control statement need satisfy condition
+They immediately move control one part program another part
+Unconditional statement include There error
+Please try
+Thank signing
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+A statement determines whether statement executed
+
+Computer program make use data control flow program
+There several main primitive data type
+Data value variable constant
+A used make choice based information
+An made intelligent using IF THEN ELSE repeat instruction move different part program
+You need JavaScript enabled view video clip
+An explanation selection used algorithm programming The algorithm entering room could changed account different condition
+For instance could change The sequence action carried based upon information
+The way computer discover circumstance collect input compare known value
+In case known value would value
+The computer look door check see current state match
+If match door need unlocked
+Otherwise nothing done
+The selection useful choice eg
+The alternative structure structure
+Using CASE algorithm search list option find correct condition
+For example quiz answer might A B C correct condition either A B Basically look correct option two choice CASE look correct option multiple choice
+You need JavaScript enabled play audio clip
+Andrew Robinson explains IF THEN ELSE statement used programming Python Sign choose GCSE subject see content tailored
+
+The availability array vector make possible structure many computation without using FOR done wherever possible make computation much faster algorithm code much easier people understand
+However time possible write program without explicit use FOR
+In fact FOR one common tool programming
+The format FOR statement follows Example FOR DO PRINT k The Index k Start number Stop number Step Statement PRINT k Start Stop describe range number index variable
+The Step specifies increment index variable
+A negative Step allows index variable step downward
+If Step positive Statement executed Index greater Stop
+If Step negative Statement executed Index le Stop
+If Step omitted value assumed
+Statement valid IDL statement BLOCK
+Operation FOR Statement
+The value Start evaluated stored specified variable called index variable
+The index variable set type expression
+
+The value Stop evaluated converted type index variable saved temporary location
+This value called limit value
+
+The value Step evaluated necessary stored
+If omitted value assumed
+
+If index variable greater limit value case positive step value FOR statement finished control resume next statement
+Similarly case negative step value index variable le equal limit value control resume FOR statement
+
+The statement block following DO executed
+
+The step value added index variable
+
+Steps repeated test Step fails
+The format WHILE statement follows WHILE statement used execute statement repeatedly condition remains true
+The WHILE statement similar REPEAT statement except condition checked prior execution statement
+When WHILE statement executed Expression tested true statement following DO executed
+Control return beginning WHILE statement condition tested
+This process repeated condition longer true point control program resume next statement
+In WHILE statement subject never executed condition initially false
+Statement valid IDL statement BLOCK
+EXAMPLE Generate sequence random number stop sum exceeds absolute value WHILE ABS LE DO BEGIN seed r ENDWHILE PLOT r This program interesting show many repetition game bias b needed win lose dollar
+Setting guarantee lose money iteration
+IF THEN BEGIN etc ENDIF IF THEN ELSE BEGIN ENDELSE IF THEN BEGIN ENDIF ELSE IF THEN BEGIN ENDIF ELSE BEGIN ENDELSE The statement part IF valid IDL statement
+This includes another IF
+This commonly used combination else form logical tree
+The form line continuation symbol IF THEN ELSE IF THEN ELSE
+IF PN THEN SN ELSE SX If condition true statement executed condition true statement executed etc
+If none condition true statement SX executed
+Conditions tested order written
+The construction similar statement except condition necessarily related
+Example The segment IDL code print type variable x
+It us SIZE function obtain type code variable print appropriate message
+Look SIZE IDL online help description information returned function
+We find type code position
+Can see true
+CASE OF ELSE ENDCASE Each preceded compared value
+If match found statement executed control resume directly CASE statement
+The ELSE clause CASE statement optional
+If included must last clause case statement
+The statement ELSE executed none preceding statement expression match
+If ELSE included none value match error occurs program execution stop
+EXAMPLE In following string compared entry directory
+If name corresponds one string expression field information printed
+We put case statement inside function make sure uppercase form
+

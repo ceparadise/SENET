@@ -1,0 +1,294 @@
+learn share knowledge build career
+What difference asynchronous synchronous execution
+When execute something synchronously wait finish moving another task
+When execute something asynchronously move another task finish
+That said context computer translates executing process task another thread
+A thread series command block code exists unit work
+The operating system manage multiple thread assign thread piece slice processor time switching another thread give turn work
+At core pardon pun processor simply execute command concept two thing one time
+The operating system simulates allocating slice time different thread
+Now introduce multiple mix thing CAN actually happen time
+The operating system allocate time one thread first processor allocate block time another thread different processor
+All allowing operating system manage completion task go code thing
+Asynchronous programming complicated topic semantics thing tie together time
+There numerous article book subject look
+Synchronous mean connected dependent way
+In word two synchronous task must aware one another one task must execute way dependent wait start task completed
+Asynchronous mean totally independent neither one must consider way either initiation execution
+Synchronous one thread Synchronous Asynchronous one thread Asynchronous Technically concept really
+Although general unusual find asynchronous task running thread possible see example find two task executing synchronously thread No concept whether second subsequent task initiated first task completed whether must wait
+That
+What thread thread process CPUs indeed hardware task executed relevant
+Indeed make point I edited graphic show
+ASYNCHRONOUS EXAMPLE
+In solving many engineering problem software designed split overall problem multiple individual task execute asynchronously
+Inverting matrix finite element analysis problem good example
+In computing sorting list example
+The quick sort routine example split list two list sort calling recursively
+In example two task often executed asynchronously
+They need separate thread
+Even machine one CPU one thread execution coded initiate processing second task first one completed
+The criterion
+As long start end time task overlap possible output neither needed input executed asynchronously matter many thread use
+SYNCHRONOUS EXAMPLE
+Any process consisting multiple task task must executed sequence one must executed another machine Fetch update data get stock quote financial service etc
+If separate machine separate thread whether synchronous asynchronous
+In simpler term SYNCHRONOUS You queue get movie ticket
+You get one everybody front get one applies people queued behind
+ASYNCHRONOUS You restaurant many people
+You order food
+Other people also order food wait food cooked served order
+In kitchen restaurant worker continuously cooking serving taking order
+People get food served soon cooked
+I try explain simply I hopefully remember My bos busy man
+He tell write code
+I tell Fine
+I get started watching like vulture standing behind shoulder
+I like Dude WTF go something I finish
+like No I finish
+This synchronous
+The bos tell rather waiting right work bos go task
+When I finish job I simply report bos say I DONE
+This Asynchronous Execution
+It really simple
+Hope help
+Take advice NEVER work bos behind
+mean execution happens single series
+
+If calling routine run finish start finish start etc
+With begin routine let run background start next point say wait finish
+It like finish The advantage execute still running background separate thread take better advantage resource fewer hang wait
+Synchronous mean caller wait response completion asynchronous caller continues response come later applicable
+As example This always ouput But make doSomething asynchronous multiple way output become Because method making asynchronous call would immediately continue next line code
+I say could order execution ca guaranteed asynch operation
+It could also execute original depending thread timing etc
+I think bit explanation still clarifies using real life example
+Small Example Let say playing audio involves three step If audio player step sequentially every song synchronous
+You wait time hear song till song actually get fetched decompressed
+If audio player step independent asynchronous
+ie
+While playing audio step fetch audio harddisk parallel step decompresses audio parallel
+step You end hearing song without waiting much fetch decompress
+In nutshell synchronization refers two process point
+In example Process A endpoint synchronized Process B start point Asynchronous process hand start endpoint synchronized Where Process A overlap Process B running concurrently dictionary definition hence confusion
+It might helpful think term asynchronous synchronous instead asynchronous synchronous
+Simply said asynchronous execution stuff background
+For example want download file internet might use synchronous function block thread file finished downloading
+This make application unresponsive user input
+Instead could download file background using asynchronous method
+In case download function return immediately program execution continues normally
+All download operation done background program notified finished
+When executing sequence like b c get failure middle execution like Then beginning synchronous If however sequence execute b c failure middle instead restarting beginning point failure know asynchronous
+You confusing Synchronous Parallel v Series
+Synchronous mean time
+Syncronized mean related othere mean series fixed interval
+While program running series
+Get dictionary unsweet tea
+You tea sweetened tea
+Synchronous basically mean execute one thing time
+Asynchronous mean execute multiple thing time finish executing current thing order move next one
+As really simple example Imagine school student instructed walk queue road
+The student got shoelace untied
+Now stopped tying
+All student behind stopped waiting get tied
+The student walked past continuing usual pace
+Just Imagine random people walking road
+They queue course randomly walking different place road different pace
+person shoelace got untied
+She stopped get tied
+But nobody waiting get tied
+Everyone else still walking way pace
+A synchronous operation work returning caller
+An asynchronous operation work returning caller
+When task executed synchronously wait task completed moving another task
+One task depends end another When task executed asynchronously directly switch another task previous completed
+One task depend
+In programming task executed
+It necessary understand several thread created task order avoid stacking single queue
+That said concept synchronous asynchronous much thread reason I mention rare see task running asynchronously single thread although technically possible
+In regard definition synchronous execution sometimes confusing good way understand Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+The operation may
+A synchronous operation process till operation completes
+An asynchronous operation operation
+The caller could discover completion mechanism discussed later
+Does make sense asynchronous RPC send
+The notion synchronous operation requires understanding mean operation complete
+In case remote assignment send receive complete message delivered receiver
+In case remote procedure call send receive reply complete result delivered sender assuming return value
+Otherwise send receive complete procedure finish execution
+During time procedure executing sender receiver rendezvous mentioned
+Note implies blocking vice versa every blocking operation synchronous every non blocking operation asynchronous
+For instance send block till receiver machine received message blocking synchronous since receiver process may received
+Similarly see later Xinu receive asynchronous
+These definition operation similar identical one given text book tend equate synchronous blocking
+Asynchronous message passing allows parallelism
+Since process block computation message transit
+In case receive mean process express interest receving message multiple port simultaneously
+The select primitive discussed later provides facility synchronous receives
+In synchronous system parallelism achieved forking separate process concurrent operation approach incurs cost extra process management
+This cost typically bearable lwps hwps
+Asynchronous message passing introduces several problem
+What happens message delivered
+The sender may never wait delivery message thus never hear error
+Similarly mechanism needed notify asynchronous receiver message arrived
+The operation invoker could learn polling getting software interrupt waiting explicitly completion later using special sycnhronous wait call
+An asynchronous operation need return id application need later notified operation
+At notification time id would placed global location passed argument handler wait call
+Another problem related asynchronous message passing buffering
+If message sent asynchronously buffered space managed OS process may fill space flooding system large number message
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+In general synchronous pronounced Greek meaning meaning time adjective describing object event coordinated time
+In information technology term several different usage
+In telecommunication signaling within network network synchronous signal occur clock rate clock based single reference clock
+signal almost quite synchronization signal run different clock different transition rate
+In communication synchronous communication requires end exchange communication respond turn without initiating new communication
+A typical activity might use synchronous protocol would transmission file one point another
+As transmission received response returned indicating success need resend
+Each successive transmission data requires response previous transmission new one initiated
+Synchronous program communication contrasted program communication
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+learn share knowledge build career
+difference asynchronous HTTP request synchronous HTTP request
+A synchronous request block client operation completes
+In case javascript engine browser blocked
+An asynchronous request block client
+browser responsive
+At time user perform another operation also
+In case javascript engine browser blocked
+Check previous discussion
+In short Asynchronous APIs block
+Every synchronous call wait block result come back
+This sleeping thread wasted computation
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+One operation timed Powered
+
+In sends message process may relies process supporting infrastructure select invoke actual code run
+Message passing differs conventional programming process subroutine function directly invoked name
+Message passing key
+Message passing used ubiquitously modern computer software
+It used way object make program work mean object system running different computer Internet interact
+Message passing may implemented various mechanism including
+Message passing technique invoking behavior running program computer
+In contrast traditional technique calling program name message passing us distinguish general function specific implementation
+The invoking program sends message relies object select execute appropriate code
+The justification using intermediate layer essentially fall two category encapsulation distribution
+idea software object able invoke service object without knowing caring service implemented
+Encapsulation reduce amount coding logic make system maintainable
+rather statement determine subroutine function call developer send message object object select appropriate code based type
+One first example used domain computer graphic
+There sort complexity involved manipulating graphic object
+For example simply using right formula compute area enclosed shape vary depending shape triangle rectangle elipse circle
+In traditional computer programming would result long statement testing sort object shape calling appropriate code
+The way handle define class called subclass turn subclass simply send message asking compute area
+Each object invoke subclass method formula appropriate kind object
+Distributed message passing provides developer layer architecture provides common service build system made run disparate computer different location different time
+When distributed object sending message messaging layer take care issue One important distinction among message passing system whether use synchronous asynchronous message passing
+Synchronous message passing occurs object running time
+With asynchronous message passing possible receiving object busy running requesting object sends message
+Synchronous message passing typical programming language Java Smalltalk use
+Asynchronous message passing requires additional capability storing retransmitting data system may run concurrently
+The advantage synchronous message passing conceptually le complex
+Synchronous message passing analogous function call message sender function caller message receiver called function
+Function calling easy familiar
+Just function caller stop called function completes sending process stop receiving process completes
+This alone make synchronous message unworkable application
+For example synchronous message passing would used exclusively large distributed system generally would perform well enough usable
+Such large distributed system may need continue operate subsystem subsystem may need go offline kind maintenance time subsystem open receiving input system
+Imagine busy business office desktop computer send email using synchronous message passing exclusively
+Because office system use asynchronous message passing one worker turning computer cause computer freeze worker turn computer back process single email
+Asynchronous message passing generally implemented complexity naturally occur trying synchronize system data handled intermediary level software
+Commercial vendor develop software product support intermediate level usually call software
+One common type middleware support asynchronous messaging called MOM
+With asynchronous message passing sending system wait response
+Continuing function call analogy asynchronous message passing would function call return immediately without waiting called function execute
+Such asynchronous function call would merely deliver argument called function tell called function execute return continue execution
+Asynchronous message passing simply sends message message bus
+The bus store message receiving process request message sent
+When receiving process arrives result sends result message bus message bus hold message original process designated next process pick message message bus
+Synchronous communication built top asynchronous communication using
+For example work ensuring sender always wait acknowledgement message receiver
+The sender sends next message acknowledgement received
+On hand asynchronous communication also built top synchronous communication
+For example modern generally provide primitive asynchronous messaging implemented top using
+The buffer required asynchronous communication cause problem full
+A decision made whether block sender whether discard future message
+If sender blocked may lead unexpected
+If message dropped communication longer reliable
+These example kind problem middleware vendor try address
+In addition distinction synchronous asynchronous message passing primary distinguishing feature message passing system whether use distributed local object
+With distributed object sender receiver may exist different computer running different operating system using different programming language etc
+In case bus layer take care detail converting data one system another sending receiving data across network etc
+The RPC protocol early example
+Note type message passing requirement either sender receiver implemented using programming
+It possible wrap system developed using procedural language treat large grained object capable sending receiving message
+Examples system support distributed object
+Distributed object system called shared nothing system message passing abstraction hide underlying state change may used implementation sending message
+Distributed asynchronous message passing overhead associated compared simpler way simply calling procedure
+In traditional argument passed receiver typically one containing address argument
+This form communication differs message passing least three crucial area In message passing transferring argument involved operation involves copying existing argument portion new message upon creation
+This applies regardless size argument case argument large document megabyte worth data
+The argument copied entirety transmitted receiving object
+By contrast standard procedure call address bit need passed argument may even passed requiring zero additional storage zero transfer time
+This course possible distributed system since absolute address caller address space normally meaningless remote program however might fact usable receiver copy least sender memory advance
+Web example process communicate message passing
+A example way referencing resource depend exposing internals process
+A call invocation exit invoked computation terminated
+Asynchronous message passing contrast result response arriving significant time request message sent
+A message handler general process message one sender
+This mean state change reason unrelated behavior single sender client process
+This contrast typical behavior object upon method invoked latter expected remain state method invocation
+In word message handler behaves analogously
+The prominent mathematical model message passing
+In mathematical term message single mean pas control object
+If object responds message message
+argued message passing important object OOP object often
+The programming model build upon observation us concept characterize behavior complex distributed system term message pattern using specification
+
+ABSTRACT Synchronous asynchronous model around since first computer say operate
+Although computer today mostly synchronous asynchronous logic still prominent within system however still fine line two determine better
+Type question upload image Brown University Tutors California Institute Technology Tutors Carnegie Mellon University Tutors Columbia University Tutors Dartmouth University Tutors Emory University Tutors Harvard University Tutors Massachusetts Institute Technology Tutors New York University Tutors Notre Dam University Tutors Oklahoma University Tutors Pennsylvania State University Tutors Princeton University Tutors Stanford University Tutors University California Tutors Oxford University Tutors Yale University Tutors Enter email address associated account email link reset password
+Business Finance How Works We Hiring Programming Homework Help Writing Become Tutor Media Press Mathematics Questions Archive Blog Accounting Contact Partnership Studypool Studypool marketplace help student get efficient academic help
+Studypool
+
+Synchronous Definition The opposite asynchronous
+Refers relative time event occur
+Asynchronous event take place time delay
+Search Synchronous UK US Search Synchronous rest Computing Students
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+As shown Byrant original paper time complexity composition algorithm cubic tight upper bound
+My question synchronous composition written f f n replace variable f synchronously Boolean function G X
+However I could find explicit reference mentioning time space complexity synchronous composition BDDs
+Is anyone aware result
+I aware result paper may relatively clear operation
+And
+Assume n variable c clause
+We allocate variable BDD manager build BDD B also BDDs encode clause
+Note BDDs size O c O n even independent variable ordering
+Now computing C B give u BDD represents set solution SAT problem application synchronous composition operator
+If could compute C time polynomial size SAT instance would give u polynomial time algorithm SAT
+Even C count number solution lie higher complexity class finding
+Also making use fixed variable ordering BDD argument extended talk QBF problem PSPACE complete
+Obviously answer question
+But light line reasoning I would find surprising algorithm actually implemented BDD library even polynomial time
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+

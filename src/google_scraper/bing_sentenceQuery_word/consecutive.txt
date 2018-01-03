@@ -1,0 +1,554 @@
+method solution problem depends solution smaller instance problem opposed
+The approach applied many type problem one central idea computer science
+The power recursion evidently lie possibility defining infinite set object finite statement
+In manner infinite number computation described finite recursive program even program contains explicit repetition
+Most computer programming language support recursion allowing call within program text
+Some define looping construct rely solely recursion repeatedly call code
+prof language computationally powerful Turing complete imperative language meaning solve kind problem imperative language even without iterative control structure
+A common tactic divide problem type original solve combine result
+This often referred combined store result solving avoid solving repeatedly incurring extra computation time referred
+A recursive function definition one meaning input function produce result without recurring one meaning input program recurs call
+For example function defined recursively equation
+Neither equation constitutes complete definition first base case second recursive case
+Because base case break chain recursion sometimes also called terminating case
+The job recursive case seen breaking complex input simpler one
+In properly designed recursive function recursive call input problem must simplified way eventually base case must reached
+Functions intended terminate normal example exception
+Neglecting write base case testing incorrectly cause
+For function one computes obvious base case implied input data one may add number term added series example provide criterion establishes base case
+Such example naturally treated successive term output partial sum converted recursion using indexing parameter say compute th term th partial sum
+Many must process generate arbitrarily large quantity
+Recursion one technique representing data whose exact size know programmer specify data definition
+There two type definition inductive definition
+An inductively defined recursive data definition one specifies construct instance data
+For example defined inductively using syntax The code specifies list string either empty structure contains string list string
+The definition permit construction list finite number string
+Another example inductive positive Similarly recursive often used model structure programming language
+Language designer often express grammar syntax grammar simple language arithmetic expression multiplication addition This say expression either number product two expression sum two expression
+By recursively referring expression second third line grammar permit arbitrarily complex arithmetic expression one product sum operation single expression
+A coinductive data definition one specifies operation may performed piece data typically coinductive definition used data structure infinite size
+A coinductive definition infinite string given informally might look like This similar inductive definition list string difference definition specifies access content data via function content may whereas inductive definition specifies create structure may created
+related coinduction used compute particular instance possibly infinite object
+As programming technique used often context programming language preferable recursion desired size precision program output unknown
+In case program requires definition infinitely large infinitely precise result mechanism taking finite portion result
+The problem computing first n one solved corecursive program
+
+Recursion contains single known recursion contains multiple known
+Standard example single recursion include list traversal linear search computing factorial function standard example multiple recursion include search
+Single recursion often much efficient multiple recursion generally replaced iterative computation running linear time requiring constant space
+Multiple recursion contrast may require exponential time space fundamentally recursive able replaced iteration without explicit stack
+Multiple recursion sometimes converted single recursion desired thence iteration
+For example computing Fibonacci sequence naively multiple iteration value requires two previous value computed single recursion passing two successive value parameter
+This naturally framed corecursion building initial value tracking step two successive value see
+A sophisticated example using allows iterative tree traversal rather multiple recursion
+Most basic example recursion example presented demonstrate function call
+recursion occurs function called another function called either directly indirectly
+For example call direct recursion call call indirect recursion Chains three function possible example function call function function call function function call function
+Indirect recursion also called symmetric term though simply difference emphasis different notion
+That call call turn call point view alone indirectly recursing point view alone indirectly recursing point view mutually recursing
+Similarly set three function call called set mutually recursive function
+Recursion usually done explicitly calling function name
+However recursion also done via implicitly calling function based current context particularly useful known
+Some author classify recursion either structural generative
+The distinction related recursive procedure get data work process data Functions consume structured data typically decompose argument immediate structural component process component
+If one immediate component belongs class data input function recursive
+For reason refer function STRUCTURALLY RECURSIVE FUNCTIONS
+Thus defining characteristic structurally recursive function argument recursive call content field original input
+Structural recursion includes nearly tree traversal including XML processing binary tree creation search etc
+By considering algebraic structure natural number natural number either zero successor natural number function factorial may also regarded structural recursion
+alternative Many recursive algorithm generate entirely new piece data given data recur
+refers kind generative recursion
+Examples generative recursion include
+This distinction important function
+A classic example recursive procedure function used calculate The function also written This evaluation recurrence relation demonstrates computation would performed evaluating pseudocode This factorial function also described without using recursion making use typical looping construct found imperative programming language The imperative code equivalent mathematical definition using accumulator variable The definition translates straightforwardly example iteration implemented recursively
+The computes two integer written recursively
+Function definition greatest common divisor express The recursive program equivalent iterative algorithm computation shown show step evaluation would performed language eliminates tail call
+Below version algorithm using explicit iteration suitable language eliminate tail call
+By maintaining state entirely variable using looping construct program avoids making recursive call growing call stack
+The iterative algorithm requires temporary variable even given knowledge Euclidean algorithm difficult understand process simple inspection although two algorithm similar step
+The Towers Hanoi mathematical puzzle whose solution illustrates recursion
+There three peg hold stack disk different diameter
+A larger disk may never stacked top smaller
+Starting disk one peg must moved another peg one time
+What smallest number step move stack
+Example implementation Although recursive function explicit solution Tower Hanoi sequence reduced explicit formula
+The algorithm method searching single element cutting array half recursive pas
+The trick pick midpoint near center array compare data point data searched responding one three possible condition data found midpoint data midpoint greater data searched data midpoint le data searched
+Recursion used algorithm pas new array created cutting old one half
+The binary search procedure called recursively time new smaller array
+Typically array size adjusted manipulating beginning ending index
+The algorithm exhibit logarithmic order growth essentially divide problem domain half pas
+Example implementation binary search C An important application recursion computer science defining dynamic data structure
+Recursive data structure dynamically grow theoretically infinite size response runtime requirement contrast size static array must set compile time
+Recursive algorithm particularly appropriate underlying problem data treated defined recursive term
+The example section illustrate known structural recursion
+This term refers fact recursive procedure acting data defined recursively
+As long programmer derives template data definition function employ structural recursion
+That recursion function body consume immediate piece given compound value
+Below C definition linked list node structure
+Notice especially node defined term
+The next element pointer another effectively creating list type
+Because data structure defined recursively procedure operate implemented naturally recursive procedure
+The procedure defined walk list list empty list pointer value NULL
+For node print data element integer
+In C implementation list remains unchanged procedure
+Below simple definition binary tree node
+Like node linked list defined term recursively
+There two pointer left pointing left right pointing right
+Operations tree implemented using recursion
+Note two pointer left right tree operation may require two recursive call At two recursive call made given call defined
+The example illustrates binary tree
+A special case binary tree data element node order
+Since number file may vary practical way traverse thus enumerate content
+Traversing filesystem similar therefore concept behind tree traversal applicable traversing filesystem
+More specifically code would example filesystem
+This code blend line least somewhat recursion
+It essentially recursive implementation best way traverse
+It also example direct indirect recursion
+The method rtraverse purely direct example method traverse indirect call rtraverse
+This example need base case scenario due fact always fixed number file directory given filesystem
+In actual implementation rather pure recursive function single check base case otherwise recursive step number modification may made purpose clarity efficiency
+These include On basis elegance wrapper function generally approved base case frowned upon particularly academia
+Hybrid algorithm often used efficiency reduce overhead recursion small case recursion special case
+A function directly called recurse instead calling separate auxiliary function actually recursion
+Wrapper function used validate parameter recursive function skip perform initialization allocate memory initialize variable particularly auxiliary variable level recursion partial computation handle exception error
+In language support auxiliary function nested inside wrapper function use shared scope
+In absence nested function auxiliary function instead separate function possible private called directly information shared wrapper function using
+base case also known consists checking base case making recursive call checking next call base case instead calling checking base case
+particularly done efficiency reason avoid overhead function call immediately return
+Note since base case already checked immediately recursive step need checked separately one need use wrapper function case overall recursion start base case
+For example factorial function properly base case
+immediately returning
+may miss mitigated wrapper function
+primarily concern many base case encountered Null pointer tree linear number function call hence significant saving algorithm illustrated search
+tree corresponds considering leaf node child base case rather considering empty node base case
+If single base case computing factorial provides saving
+Conceptually considered either base case recursive step checking base case recursion considered different base case one step removed standard base case complex recursive step namely check valid recurse considering leaf node rather Null node base case tree
+Because complicated flow compared clear separation base case recursive step standard recursion often considered poor style particularly academia
+A basic example given DFS binary tree see section standard recursive discussion
+The standard recursive algorithm DFS In instead In term standard step move base case check recursive step
+Alternatively considered different form base case recursive step respectively
+Note requires wrapper function handle case tree empty root node Null
+In case height node Null pointer child leaf cut number function call half worst case
+In C standard recursive algorithm may implemented The algorithm may implemented Note use Boolean AND operator recursive call made node valid
+Note first term AND pointer node second term bool overall expression evaluates bool
+This common idiom recursive
+This addition evaluation Boolean OR operator check right child left child fails
+In fact entire function replaced single Boolean expression return statement legibility suffers benefit efficiency
+Recursive algorithm often inefficient small data due overhead repeated function call return
+For reason efficient implementation recursive algorithm often start recursive algorithm switch different algorithm input becomes small
+An important example often implemented switching data sufficiently small
+Hybrid recursive algorithm often refined derived hybrid merge sort
+Recursion iteration equally expressive recursion replaced iteration explicit stack iteration replaced tail recursion
+Which approach preferable depends problem consideration language used
+In iteration preferred particularly simple recursion avoids overhead function call call stack management recursion generally used multiple recursion
+By contrast recursion preferred tail recursion optimization leading little overhead sometimes explicit iteration available
+Compare template compute x defined x f n x x For imperative language overhead define function functional language overhead define accumulator variable x
+For example factorial function may implemented iteratively C assigning loop index variable accumulator variable rather passing argument returning value recursion Most use today allow direct specification recursive function procedure
+When function called program keep track various instance function often using although method may used
+Every recursive function transformed iterative function replacing recursive call simulating call stack explicitly managed program
+Conversely iterative function procedure evaluated computer see expressed term recursive function iterative control construct routinely rewritten recursive form
+However practice rewriting depends feature language
+notable mainstream language function call including may cause stack allocation would occur use looping construct language working iterative program rewritten recursive form may although tail call elimination may feature covered language specification different implementation language may differ tail call elimination capability
+In language favor iterative looping construct usually significant time space cost associated recursive program due overhead required manage stack relative slowness function call function call particularly typically fast operation difference usually le noticeable
+As concrete example difference performance recursive iterative implementation factorial example depends highly compiler used
+In language looping construct preferred iterative version may much several order magnitude faster recursive one
+In functional language overall time difference two implementation may negligible fact cost multiplying larger number first rather smaller number iterative version given happens may overwhelm time saved choosing iteration
+In programming language maximum size much le space available recursive algorithm tend require stack space iterative algorithm
+Consequently language sometimes place limit depth recursion avoid stack overflow one language
+Note caveat regarding special case
+Multiply recursive problem inherently recursive prior state need track
+One example contrast list traversal linear search list singly recursive thus naturally iterative
+Other example include function
+All algorithm implemented iteratively help explicit programmer effort involved managing stack complexity resulting program arguably outweigh advantage iterative solution
+function function recursive call hence build deferred operation
+For example gcd function shown
+In contrast factorial function also recursive call tail position build deferred multiplication operation must performed final recursive call completes
+With treat call rather function call function gcd execute using constant space
+Thus program essentially iterative equivalent using imperative language control structure like loop
+The significance tail recursion making call tail call caller return position need saved recursive call return branch directly previously saved return position
+Therefore language recognize property tail call tail recursion save space time
+In simple case function calling instruction placed recursive call executed per recursion instruction placed recursive call
+The latter executed repeatedly maximum recursion reached
+Consider example The recursive algorithm expressed
+They usually simplified single term
+If function form Then thus represents number recursive call level recursion represents factor smaller input next level recursion
+number piece divide problem represents work function independent recursion
+partitioning recombining level recursion
+
+Still question
+Ask
+
+In also called basic
+A record collection possibly different data type typically fixed number sequence
+The field record may also called particularly
+Fields may also called though risk confusion element
+A may may considered record vice versa depending convention specific programming language
+For example date could stored record containing numeric field field represented string numeric field
+A Personnel record might contain
+A Circle record might contain instance center might represented record containing coordinate
+Records distinguished fact number field typically fixed field name field may different type
+A describes value variable
+Most modern computer language allow programmer define new record type
+The definition includes specifying data type field name label accessed
+In field name generally preferred due simplicity proper record type studied language
+Since record may contain field addition data express many feature
+Records exist storage medium including
+Records fundamental component data structure especially
+Many computer organized array often grouped larger physical record efficiency
+The parameter often viewed field record variable argument passed function viewed record value get assigned variable time call
+Also often used implement procedure call entry containing procedure parameter local variable return address internal field
+An object language essentially record contains procedure specialized handle record object type elaboration record type
+Indeed language record special case object known PODSs contrast object use OO feature
+A record viewed computer analog
+In vein record type viewed computer language analog two implementation abstract specific language
+A record may zero A key field set field record serf identifier
+A unique key often called simply
+For example employee file might contain employee number name department salary
+The employee number unique organization would primary key
+Depending storage medium file organization employee number might also stored separate file make lookup faster
+The department code may unique may also indexed case would considered
+If indexed entire employee file would scanned produce listing employee specific department
+The salary field would normally considered usable key
+Indexing one factor considered designing file
+The concept record traced various type used since remote time
+The modern notion record computer science field type size already implicit century mechanical calculator
+The original medium used data opposed control used record punch card single record
+Compare journal entry punch card
+Records well established first half century data processing done using punched card
+Typically record data file would recorded one punched card specific column assigned specific field
+Generally record smallest unit could read external storage
+card reader tape disk
+Most implementation early special syntax record concept available extensively used use
+Some early computer hardware support delimiting record field special instruction copying record
+The concept record field central early file utility
+first widespread programming language support record type record definition facility quite sophisticated time
+The language allows definition nested record alphanumeric integer fractional field arbitrary size precision well field automatically format value assigned insertion currency sign decimal point digit group separator
+Each file associated record variable data read written
+COBOL also provides statement assigns corresponding field two record according name
+The early language developed numeric computing support record type later version language add
+The original lacking record except provided adequate surrogate
+The one first language fully integrate record type basic type logically consistent type system
+The programming language provided record
+The programming language initially provided record concept kind template could laid top memory area rather true record data type
+The latter provided eventually declaration two concept still distinct language
+Most language designed Pascal also supported record
+The selection field record value yield value
+Some language may provide facility enumerate field record least field reference
+This facility needed implement certain service
+It requires degree
+In system record subtyping operation value record type may also include In setting specific record type implies specific set field present value type may contain additional field
+A record field would thus belong type record field would record field
+The rationale passing record function expects record argument work since function find field requires within record
+Many way practically implementing record programming language would trouble allowing variability matter central characteristic record type theoretical context
+Most language allow assignment record exactly record type including field type name order
+Depending language however two record data type defined separately may regarded distinct type even exactly field
+Some language may also allow assignment record whose field different name matching field value corresponding field variable position within record example field called assigned record variable field
+In alternative two operand still required sequence field type
+Some language may also require corresponding type size encoding well whole record assigned uninterpreted
+Other language may flexible regard require value field legally assigned corresponding variable field example field assigned field vice versa
+Other language may match field value name rather position
+These possibility apply comparison two record value equality
+Some language may also allow order comparison using based comparison individual field
+allows preceding type assignment also allows record structure terminology
+In Algol array record integer field one could write obtain array integer consisting field element
+As result statement would effect
+In command would execute command sequence field record declared variable
+So instead writing one could write
+The representation record memory varies depending programming language
+Usually field stored consecutive position memory order declared record type
+This may result two field stored word memory indeed feature often used access specific bit word
+On hand compiler add padding field mostly invisible programmer order comply alignment constraint imposed field must occupy single word
+Some language may implement record array address pointing field possibly name type
+Objects language often implemented rather complicated way especially language allow
+A type record contains information identify record type locate information within record
+It may contain offset element element therefore stored order may omitted
+Alternatively various element record including element identifier simply follow one another order
+The following show example record definition
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I want find longest substring repeated without gap repetition
+That given string x I want find longest yy substring x
+What I mean following case I looking various suffix prefix algorithm none gap part build
+Both seems suffer
+Googling Longest repeated substring give algorithm
+find I want
+From I understand looking maximal substring form
+By called string
+One first give algorithm finding Maxime Crochemore An optimal algorithm computing repetition word Inform
+Process
+Lett
+
+From I understand approach reformulated term suffix tree array
+After fiddling bit around different option discovered really needed simple regular expression
+This match least one character match least one match
+Having match present three time
+In match first twice
+Sidenote Now next problem implementing something string character
+object
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+An error occurred trying load video
+Try refreshing page contact customer support
+As member also get unlimited access lesson math English science history
+Plus get practice test quiz personalized coaching help succeed
+Want watch later
+currently grade teacher
+He master degree Educational Administration working toward
+Educational Leadership
+Jeff Omar sitting around talking great sport team
+Jeff friend brought New York Yankees dynasty late
+He said Yankees World Series three consecutive year starting
+Omar knowing first World Series tried think year two title
+How could figure
+First would figure consecutive number come
+To knowing consecutive mean would help
+mean follow continuously series sequence
+So mean consecutive number number follow order
+Another thing think solving problem three different kind consecutive number consecutive number even consecutive number odd consecutive number
+number follow order smallest largest call regular counting order
+Let take look example You see three series number go one time sequence without skipping number
+They series consecutive number
+even number follow order smallest largest counting two
+Some example even consecutive number include As might guessed number follow order smallest largest include odd number
+Some odd consecutive number series include Get FREE access day create account
+To go back trying figure year Yankees World Series Omar figure two consecutive year came
+Jeff say Yankees consecutive World Series even year odd year next two World Series title came directly
+That would make missing two year number follow directly
+In summary number go order smallest largest
+There different kind consecutive number
+There go order smallest largest like number series
+There number even go order smallest largest series
+Finally odd number go order smallest largest example
+After watching lesson able explain consecutive number identify
+To unlock lesson must Member
+Already member
+Did We college course prepare earn credit exam accepted college university
+You test first two year college save thousand degree
+Anyone earn regardless age education level
+To learn visit Not sure college want attend yet
+thousand article every imaginable degree area study career path help find school right
+Get unbiased info need find right school
+Browse area study degree level
+Back To Course chapter lesson Next Lesson copyright
+All trademark copyright property respective owner
+All right reserved
+Your Cart Empty
+Please Choose Product
+video lesson helped student
+I learned month chemistry class Ashlee I aced CLEP exam earned Clair video lesson helped engage student
+The video changed way I teach
+The video accomplish would take entire class
+Chris Students condition performed better receiving instruction
+Department Education
+
+Still question
+Ask
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Consider question CLRS state Suppose insert key n empty minimum degree
+How many node final
+My approach We add element one one
+We need element first namely element cause split
+This split root node split
+A normal node split result one extra node
+A root node split result extra node
+Thus element node total
+Now keep adding element see pattern splitting
+lower level split initially produce higher level split higher level split require split
+Since approximate disregard initial split condition go lower level split produce upper level split
+Notice atleast split insertion element That even number leaving
+Thus total split Total higher level split thus Total split higher level previous one Thus total split nth element inserted Which result n
+This expected
+I made two approximation Number higher level split equal half immediate lower level split
+Some starting element contribute split
+Maybe reason answer coming
+I ca enumerate value exactly
+Finding value exactly would help much
+Any help appreciated
+Moon We know every node except root must least key key
+The final tree node
+Unless ever n node since ever insert key node always least one node key
+Next observe never one key node right spine
+This every key insert larger key stored tree inserted right spine tree
+The fewest possible number node occurs every node except deepest node right spine key deepest node right spline key
+So height node height node level h node
+In case n h height number node node
+So n final must
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+An error occurred trying load video
+Try refreshing page contact customer support
+As member also get unlimited access lesson math English science history
+Plus get practice test quiz personalized coaching help succeed
+Want watch later
+Karin taught middle high school Health master degree social work
+An integer simply number like unlike whole number integer also include negative number like
+An integer decimal fraction
+simply integer follow patterned order usually one number like
+Let imagine counting new year
+The countdown welcome new year example consecutive integer
+They follow order backwards
+Let imagine teacher counting head student load bus field trip
+
+The teacher counted child
+Numbers represent consecutive integer
+We forget consecutive integer also include negative number
+Take look number line indicating consecutive number even number follow order
+The easiest example would
+another example even consecutive integer
+odd number follow order
+The easiest example would
+another example odd consecutive integer
+Ted middle school coach want make two fair team physical education class play indoor soccer game
+He asks class line tap every person saying etc
+person make team A
+He announces student tap student odd position make team B
+So Ted used even consecutive integer make team soccer game
+Get FREE access day create account
+Mira gift bag birthday pool party
+She boy girl coming party
+Her mother lined bag alternate boy girl
+Mira mother already filled girl bag goody
+She asks Mira help filling boy bag
+Mira mother asks fill bag first bag second last bag using odd consecutive integer
+Mira fill bag boy gift bag
+So Mira used odd consecutive integer fill party bag
+The formula consecutive integer pretty straightforward
+If x first consecutive integer second third fourth
+Let look example
+If first consecutive integer series number would
+Therefore second consecutive number series
+third consecutive number series
+If trying figure consecutive even odd integer formula little different
+If x first even odd consecutive integer second third fourth
+If trying find value sum series consecutive number formula would look like x Sum Consecutive Integers Depending many integer set continue adding
+Example There three consecutive integer sum
+What value x first consecutive integer
+Let solve problem x x x x x Let check result
+If mean first consecutive integer three
+Does
+Yes
+The formula worked
+Let review Integers simply odd even number including zero negative number including fraction decimal
+simply integer follow
+We well
+The formula find consecutive integer x etc
+depending many consecutive integer want find
+The formula find even odd consecutive integer x etc
+depending many even odd consecutive integer want find
+Remember asked find value x first consecutive integer set sum formula look like x Sum Consecutive Integers Depending many integer set continue adding etc
+To unlock lesson must Member
+Already member
+Did We college course prepare earn credit exam accepted college university
+You test first two year college save thousand degree
+Anyone earn regardless age education level
+To learn visit Not sure college want attend yet
+thousand article every imaginable degree area study career path help find school right
+Get unbiased info need find right school
+Browse area study degree level
+Back To Course chapter lesson Next Lesson copyright
+All trademark copyright property respective owner
+All right reserved
+Your Cart Empty
+Please Choose Product
+video lesson helped student
+I learned month chemistry class Ashlee I aced CLEP exam earned Clair video lesson helped engage student
+The video changed way I teach
+The video accomplish would take entire class
+Chris Students condition performed better receiving instruction
+Department Education
+
+way data stored efficient search retrieval
+Different data structure suited different problem
+Some data structure useful simple general problem retrieving data stored specific identifier
+For example online dictionary structured retrieve definition word
+On hand specialized data structure devised solve complex specific search problem
+The simplest data structure linear array stored element numbered consecutive content accessed number
+Data item stored nonconsecutively memory may linked pointer memory address stored item indicate next item item structure located
+Many developed sorting data efficiently apply structure residing main memory also structure information system
+data structure may incorporate element simpler data structure
+commonly use
+development optimal algorithm inserting deleting locating data constituted major area theoretical computer science since beginning heavy use structure virtually computer compiler operating system file system
+parallel machine
+A major area study computer science storage data efficient search retrieval
+The main memory computer linear consisting sequence memory cell numbered Whereas control structure organize algorithm data structure organize information
+In particular data structure specify type data thus operation performed eliminating need programmer keep track memory address
+Simple data structure positive negative number
+The integer generated set counting number
+
+
+operation subtraction
+When counting number subtracted result zero
+When larger number subtracted smaller systematic procedure finite number answer question solution problem
+The name derives Latin translation Muslim mathematician arithmetic treatise Concerning Hindu Art For question problem We welcome suggested improvement article
+You make easier u review hopefully publish contribution keeping point mind
+Your contribution may edited staff publication subject final approval
+Unfortunately editorial approach may able accommodate contribution
+Our editor review submitted meet criterion add article
+Please note editor may make formatting change correct spelling grammatical error may also contact clarification needed
+There problem submission
+Please try later
+Our editor review submitted determine whether revise article
+
+This post part series produced HuffPost Mentorship Program
+discus issue affecting woman science technology engineering math
+Transitioning sophomore year summer given lot time think reflect upon experience towards majoring Computer Science
+I feel extremely different way commonly portrayed medium even I expected
+So six reality computer science major Personally brother one encouraged take computer science class
+I tried learn code unsuccessful I could even set development environment
+Even though dropped intro CS class told I could field needed woman engineer like
+Through faith I took web development course jumped intro CS track Stanford stuck CS train ever since
+The number one thing attracts CS major fact I build stuff stay around forever said internet written ink bad deal
+b accessible many people c like teaching really stupid baby something
+Mehran Sahami really famous one awesome CS professor told u first day class computer really dumb really good following instruction
+Almost good point everything letter
+If talk computer language make want golden
+My problem solving skill become immensely better becoming computer science major
+In fact everything I think problem
+Running late morning
+I break problem going take time I effectively cut corner avoid wasting time
+My parent often rely fix anything technologically related television phone name
+I approach every issue software problem could wrong
+Look symptom problem see show
+Understand system could causing
+And usually I get solution
+It easy give say oh care someone else code
+Another one awesome CS Professors Eric Roberts showed u first day second introductory class even Stanford graduated student CS major Valley hired still need people fill job
+It surprising software job even working eBay talent one thing company aggressively looking
+You give could
+Maybe could code next app Learning CS involves experimentation
+You mess around code really get
+Sometimes mean break something already working
+But great thing return get learn something new sometimes something even documented fixed
+This definitely happens work everyday
+Sometimes I feel like taking lazy approach going back old way thing trust definitely lot better play around
+Being CS major hard probably many people
+You doubt everyday whether meant want give
+You see kid since two year old think Damn I even bother trying
+You fail programming ponder question personal experience
+The truth one talk hard want think
+Even year later I still doubting decision major CS software engineering
+I doubt day I set foot first second third CS class every exam I took first day internship day I push code Github
+But truth OK doubt long hold back
+You think best
+Of course
+Do afraid wo get anywhere unless try
+So someone contemplating computer science someone afraid stop
+Forget boy tell ca forget hater jealous zeal
+Code
+If broken get segmentation fault Java exception go fix
+Chances assume meant never able feel thrill getting something work even Hello World stopping
+Sometimes one stopping answer let go
+
+Earn industry credential earn degree
+As nonprofit university WGU put student first
+Earn degree half cost online university
+Western Governors University
+All Rights Reserved WGU Indiana accredited online university offering online bachelor master degree program
+
+You still full access site functionality may lost
+For best experience upgrade browser following link
+

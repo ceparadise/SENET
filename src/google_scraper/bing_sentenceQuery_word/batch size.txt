@@ -1,0 +1,159 @@
+may refer
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I following quotation compiler course context graph coloring Because slow graph coloring tends used batch compiler linear scan tends used JIT compiler
+I could find clear definition online
+So make compiler batch compiler
+A JIT compiler compiles code
+program running
+Therefore cost compilation part execution time program minimized
+The opposite AOT compiler basically synonymous batch compiler
+This convert source code machine code machine code distributed
+Therefore compiler slow impact execution time resulting program
+Nowadays people say compiler typically mean AOT compiler
+Indeed term AOT compiler really started becoming popular relatively recently people started making AOT compiler JIT compiled language particularly JavaScript
+Many language
+C compile intermediate language VM JIT compiled machine code
+The term AOT compiler connotation source code compiled directly machine code form JIT compilation required
+Batch compiler bit archaic term point
+The real contrast batch compiler term popular
+Incremental compilation often associated language like Lisp REPL could interactively request language implementation compile specific function
+If function executed whose compilation requested would typically interpreted
+A batch compiler contrast compiled function
+batch
+The meaning implied within quote give
+It stem computing term used task performed scheduled later execution operating system load often activity le
+A batch compiler one compiling user waiting result compilation
+It one would say using modern terminology done background
+This converse JIT done live exact time needed without luxury spending extra time processing thoroughly
+The slower speed batch compiling illustrated Or even By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I seen term size applied three different thing Is definition size
+Well one answer say another say
+I personally believe answer since volume set OG
+It seems like definition term I going close question
+Batch Size much package
+Think like cooking creating recipe shooting many cup want know many pancake
+example This process make gallon batch
+When I brewing I typically think volume going fermenters anything line
+This usually directly relates go keg bottle depends greatly loss later process
+To twist dana excellent example clear I completely disagree definition make batch batter final number pancake depends greatly size said pancake ok akin bottle size still good
+However process impact number pancake since loss bowel scooper dependent batter recipe
+So still little room interpretation
+I definitely agree nothing would mind considered batch size
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+So I large number command say I want send run server somewhere else get answer back
+All command together take long time execute roughly second
+I could group command together send server execute get result
+But significantly slower grouping command I send time execute server parallel
+However I ca make batch small I browser modern browser keep concurrent open connection server
+So get trade large batch size I sending enough concurrent command server
+For small batch size I sending many browser get backed
+I tried experimentally I wind data look something like pardon terrible drawing On x axis number batch I use axis time whole resulting calculation take
+I succeeded finding model really work data basic crude approximation
+All I really want know research kind thing I look
+Some way given code execution time server delay time getting I calculate optimal batch size
+I ca person wanted solve problem
+If think
+Here simplest model I think
+Assume command take second complete take second create connection
+Then I would expect would take k second complete batch size k
+If N command total need batch
+With concurrent TCP connection server time mean take k second complete batch
+As function batch size f k k You find optimal batch size finding k minimizes f k turn done using calculus taking derivative setting zero f k
+Note f k k k N Setting zero find f k minimized taking k large possible limit k f k N
+Obviously observe empirically suggests model accurate
+I suggest next step start brainstorm model might inaccurate factor might overlooking
+You might also want measure plot additional metric average time take batch complete function batch size time starting execution command batch starting execution command batch
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I reading tensorflow documentation I understand batch mean explanation model
+Please someone explain
+Here paragraph Recall inverts context target try predict context word target word task becomes predict etc
+Therefore dataset becomes quick quick brown brown quick brown fox input output pair
+The objective function defined entire dataset typically optimize stochastic gradient descent SGD using one example time example typically
+A minibatch group input output pair present neural net one pas epoch without computing stochastic gradient descent two pair end minibatch summing error pair
+This improve speed prevent learning single element thus improving learning
+It also need much memory since batch mini
+Some people call stochastic training size batch training size training dataset
+You get nice explanation
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+You must time looking screen scratching head wondering Why I typing three term code difference look similar
+To find difference term need know machine learning term like Gradient Descent help better understand
+Here short summary It optimization algorithm used machine learning find best result minimum curve
+mean inclination declination slope
+mean instance
+The algorithm mean need get result multiple time get optimal result
+The iterative quality gradient descent help graph make graph fit optimally data
+The Gradient descent parameter called As see left initially step bigger mean learning rate higher point go learning rate becomes smaller shorter size step
+Also Function decreasing cost decreasing might see people saying Function decreasing loss decreasing btw good thing decreasing
+We need terminology like epoch batch size iteration data big happens time machine learning pas data computer
+So overcome problem need divide data smaller size give computer one one update weight neural network end every step fit data given
+Since one epoch big feed computer divide several smaller batch
+I know make sense starting passing entire dataset neural network enough need pas full dataset multiple time neural network
+But keep mind using limited dataset optimise learning graph using process
+So As number epoch increase number time weight changed neural network curve go curve
+Unfortunately right answer question
+The answer different different datasets say number epoch related diverse data example Do black cat dataset much diverse dataset
+As I said pas entire dataset neural net
+So Just like divide big article multiple like Introduction Gradient descent Epoch Batch size Iterations make easy read entire article reader understand
+To get iteration need know multiplication table calculator
+Let say training example going use
+Follow get similar post
+Contact Any comment question Happy helpful
+
+
+
+
+By clapping le signal u story really stand
+I interested Programming Python Arduino Machine learning editor Arduino Community Medium
+I also like write stuff
+Sharing concept idea code
+
+Skip This document describes use cron system run program computer using AFS Stanford Computer Science Department
+Some familiarity AFS assumed
+One advantage using AFS offer strong protection file requiring Kerberos authentication list permission order access file
+The downside strong security difficult run program interact anyone daemon mail delivery agent cron job
+In particular cron job present problem ideally require system administrator intervention order work
+Each user able create cron job see fit
+The solution Computer Science Department offer called akcron
+Using command create avatar alternate identity CS ID run unattended job using identity
+user user normal CS ID
+The first time run akcron must create special principal
+To run akcron CS machine
+xenon
+You need
+The system wish run cron job must enabled
+To check run akcron token test
+If get error message look like please send request ask host using enabled akcron
+Since akcron execute special user must grant AFS permission user directory AFS want program access
+For example cron job read file home directory must grant read permission CSID CSID
+Similar step must taken directory different permission write
+To run command using akcron use flag
+For example cron job run program foo execute Gates Computer Science Building Serra Mall Stanford CA
+
+learn share knowledge build career
+The introductory documentation I reading introduces without defined
+Let say want digit recognition MNIST defined architecture network CNNs
+Now feed image training data one one network compute loss calculate gradient update weight proceed next image
+But want take advantage GPU good array operation specific
+So instead feed choice size upto depends problem
+Take look picture Author Martin Gorner Here since feeding image time
+Also picture Author Martin Gorner Now work perfectly fine taking advantage fast array operation hence faster training time
+If observe picture matter whether give image long fit hardware
+You simply get many prediction
+But please keep mind influence training time error achieve gradient shift There general rule thumb batch size perfect
+Just try size pick one work best
+But try use large batch size since overfit data
+To get good grasp crazy go batch size please give paper read By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+

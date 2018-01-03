@@ -1,0 +1,237 @@
+A also known one several description
+It class
+A Petri net directed node represent transition
+event may occur represented bar place
+condition represented circle
+The directed arc describe place postconditions transition signified arrow
+Some source state Petri net invented August age purpose describing chemical process
+Like industry standard Petri net offer stepwise process include choice
+Unlike standard Petri net exact mathematical definition execution semantics mathematical theory process analysis
+A Petri net consists
+Arcs run place transition vice versa never place transition
+The place arc run transition called transition place arc run transition called transition
+Graphically place Petri net may contain discrete number mark called
+Any distribution token place represent configuration net called
+In abstract sense relating Petri net diagram transition Petri net may
+sufficient token input place transition fire consumes required input token creates token output place
+A firing atomic
+single step
+Unless defined execution Petri net multiple transition enabled time one may fire
+Since firing nondeterministic multiple token may present anywhere net even place Petri net well suited modeling behavior distributed system
+Petri net extend class net called elementary net
+A Given net set
+An net form A net form extends elementary net If Petri net equivalent elementary net countable set element map form configuration
+Similarly Petri net elementary net interpreted representing set configuration
+In respect extends concept configuration elementary net Petri net
+In diagram Petri net see top figure right place conventionally depicted circle transition long narrow rectangle arc arrow show connection place transition transition place
+If diagram elementary net place configuration would conventionally depicted circle circle encompasses single dot called
+In given diagram Petri net see right place circle may encompass one token show number time place appears configuration
+The configuration token distributed entire Petri net diagram called
+In top figure see right place input place transition whereas place output place transition
+Let Fig
+top Petri net marking configured Fig
+bottom Petri net marking configured
+The configuration transition property input place sufficient number token shown figure dot equal greater multiplicity respective arc
+Once transition enabled transition fire
+In example transition generates map marking configured image result Petri net seen bottom figure
+In diagram firing rule transition characterised subtracting number token input place equal multiplicity respective input arc accumulating new number token output place equal multiplicity respective output arc
+The precise meaning equal greater depend precise algebraic property addition applied firing rule subtle variation algebraic property lead class Petri net example Algebraic Petri net
+The following formal definition loosely based
+Many alternative definition exist
+A called see The set arc
+In many textbook arc multiplicity
+These text often define Petri net using instead
+When using convention Petri net graph node partition
+The transition set set
+Definitions postsets place analogous
+A Petri net graph multiset place mapping
+We say marking assigns place number
+A called see In word We generally interested may happen transition may continually fire arbitrary order
+We say marking marking say reachable step
+For marked Petri net interested firing performed starting initial marking
+Its set set The transition relation restricted reachable marking
+It net
+A Petri net graph initial marking sequence transition
+The set firing sequence denoted
+As already remarked common variation disallow arc multiplicity replace arc simple set called
+This limit represent
+Another common variation
+Desel Juhás allow defined place
+This discussed
+The marking Petri net regarded nonnegative integer length
+Its transition relation described pair Then difference used describe reachable marking term matrix multiplication follows
+For sequence transition write vector map every transition number occurrence
+Then Note must required firing sequence allowing arbitrary sequence transition generally produce larger set
+One thing make Petri net interesting provide balance modeling power analyzability many thing one would like know concurrent system automatically determined Petri net although thing expensive determine general case
+Several subclass Petri net studied still model interesting class concurrent system problem become easier
+An overview decidability complexity result Petri net subclass found Esparza Nielsen
+The Petri net decide given Petri net marking whether
+Clearly matter walking reachability graph defined either reach requested marking know longer found
+This harder may seem first reachability graph generally infinite easy determine safe stop
+In fact problem shown year shown decidable Mayr
+Papers continue published efficiently
+While reachability seems good tool find erroneous state practical problem constructed graph usually far many state calculate
+To alleviate problem usually used conjunction prove state reached
+LTL us find indeed state reached finding set necessary condition state reached proving condition satisfied
+Petri net described different degree liveness
+A Petri net called transition transition Note increasingly stringent requirement implies
+These definition accordance Murata overview additionally us term
+A place Petri net called contain token reachable marking including initial marking said
+A marked Petri net called place
+A Petri net graph called bounded every possible initial marking
+Note Petri net bounded reachability graph finite
+Boundedness decidable looking constructing Tree
+It useful explicitly impose bound place given net
+This used model limited system resource
+Some definition Petri net explicitly allow syntactic feature
+Formally defined tuples Petri net assignment capacity place transition relation usual one restricted marking place capacity many token
+For example net place assigned capacity obtain Petri net place capacity say reachability graph displayed right
+Alternatively place made bounded extending net
+To exact place made adding flow opposite place adding token make total place
+As well discrete event Petri net continuous hybrid process useful discrete continuous hybrid related discrete continuous hybrid
+There many extension Petri net
+Some completely
+original Petri net add property modelled original Petri net formalism
+timed Petri net
+Although model extend computational power Petri net may succinct representation may convenient modeling
+Extensions transformed Petri net sometimes powerful usually lack full range mathematical tool available analyse ordinary Petri net
+The term used many Petri net formalism extend basic net formalism includes coloured Petri net hierarchical Petri net extension sketched section
+The term also used specifically type coloured net supported
+A short list possible extension There many extension Petri net however important keep mind complexity net increase term extended property harder use standard tool evaluate certain property net
+For reason good idea use simple net type possible given modelling task
+Instead extending Petri net formalism also look restricting look particular type Petri net obtained restricting syntax particular way
+Ordinary Petri net net arc weight
+Restricting following type ordinary Petri net commonly used studied subclass Petri net intending model process activity
+The transition assigned task activity place assigned condition
+The additional structural operational requirement mainly addition single input source place previous transition output place sink following transition
+Accordingly start termination marking defined represent process status
+property indicating process start marking k token source place reach termination state marking k token sink place defined
+Additionally transition process could fire transition reachable state transition enabled
+A general sound defined every k
+A directed Petri net defined sequence node place transition linked directed arc
+An includes every node sequence
+A Petri net net fully distinct elementary path place transition transition place two path pair node path share node
+An acyclic sound
+Extended Petri net composed additional transition feedback transition
+The sink place connected input place transition source place output place
+Firing transition cause iteration process Note extended
+WRI Regular Iteration extended acyclic
+built composition net replacing transition within subnet
+The result also
+therefore using building block one get construction
+The DSM model process relation utilized process planning
+The realization plan workflow process Petri net equivalent
+The construction process ensures soundness property resulting net
+Other way modelling concurrent computation proposed including
+Different model provide tradeoff concept locality
+An approach relating model concurrency proposed chapter Winskel Nielsen
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I want ask petri net PN boundedness
+When I state find state since I declare PN NOT bounded
+Because I PN PN bounded u find
+So question
+Am I wrong boundedness petri net something wrong PT picture
+Unboundedness studied fixed initial marking
+Then want find state reachable firing transition larger initial one
+You mention state picture
+The problem I see either one reached
+So start initial state analyse transition fired
+For given Petri Net number token represented respectively
+Based definition boundedness Petri Net given Petri Net bounded
+In word natural number case number token never exceeds number
+I also providing example unbounded Petri Net example bounded Petri Net
+Regardless initial marking Petri Net Figure bounded unbounded keep firing
+For given initial marking Petri Net Figure bounded
+In general Petri Net Figure bounded let initial value initial value
+Chapter The Classic Petri Net Electronic version
+Time Petri Nets
+Berlin Heidelerg
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+full formatting system displaying text graphic audio retrieved monitor
+Each retrieval unit known Web page page frequently contain link allow related page retrieved
+HTML encoding Web page
+It designed British scientist nuclear physic laboratory Switzerland defined DTD document type definition
+HTML markup tag specify document element heading paragraph table
+They mark document display known Web
+The browser interprets tag displaying heading paragraph table layout adapted screen size font available
+HTML document also contain tag specify link Web page
+An anchor form A http Encyclopædia Britannica quoted string universal resource locator link point Web address text following appears Web browser underlined show link another page
+What displayed single page may also formed multiple URLs containing text others graphic
+The World Wide Web system displaying text graphic audio retrieved Internet computer monitor
+Each retrieval unit known Web page page frequently contain link allow related page retrieved
+reader
+The language HyperText Markup Language allows nonprogrammers design Web page specifying structure content leaf detailed presentation extraction information client Web browser
+hyperlink written HyperText Markup Language assigned online address called Uniform Resource Locator URL
+system architecture revolutionized communication method commerce allowing various computer network around world interconnect
+Sometimes referred network network Internet emerged United States become visible general public device processing storing displaying information
+meant person computation term almost universally refers automated electronic machinery
+We welcome suggested improvement article
+You make easier u review hopefully publish contribution keeping point mind
+Your contribution may edited staff publication subject final approval
+Unfortunately editorial approach may able accommodate contribution
+Our editor review submitted meet criterion add article
+Please note editor may make formatting change correct spelling grammatical error may also contact clarification needed
+There problem submission
+Please try later
+Our editor review submitted determine whether revise article
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Let V E directed graph
+We define v V nearly root path v least vertex
+How find set nearly root linear time
+What tried build strongly connected graph scc obtained G topological sort
+Now went backwards scc count many vertex reach scanning outgoing edge summing vertex reachable successor
+This seems wrong since may count vertex
+The following algorithm solve problem The task decomposed subtasks Perform DFS G
+It used tool identify contract cycle keeping tab number contracted node
+For cycle contraction suffices detect backward edge node entering node first time leaving last time
+Each time backward edge w v detected node current DFS path p v w coalesced new node v edge node p retained
+These modification done situ x x p v x x p v p contraction starting E V
+Mark node attribute containing number node V represents
+initialising attribute adding cycle length subtracted contraction
+case contracted node also record represented node adding stack attribute
+The resulting graph G particular irreflexive
+Next perform BFS G
+Propagate attribute V N along way locally computes reachable v represents v w pred v V reachable w denoting set predecessor initialised maximal element G
+node v G reachable v mark represented node original graph G nearly root
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n trailer R R éSø r ç Ç ÁP á k µÉ Ìyñ µp ã µ elçJ é O wk Dß Ó ÿÎét p É Ù ÑÝ endstream endobj obj stream Ë Þf ñÌ Ú ûäf û õJ éðÑÀ èÃNìÄð lçñgÛù UY DÇ etëk Eä EøÙÑsä øÖH Õ Ëù Xñº þ ò ÑÈÙÑáØ Ä Â sÓøëj h ú Ý èb Õ âhsF Ä vt v ÓT ÇNx ô µfTzáV G íî c
+EÈ ô D
+
+âãÏÓ obj stream Î üé JM â ñ ç üMå Z º Ó D Õ Ù ó KÈ âEaqÆ ÓPî Ag ñy Ê ôFyéÙ Jy ý MÆ c ÚqÖ ð e Ó Ð ÿnL ßþ Xs Jä ÇîÁy æñ È WJ Os ÊÜù ÞÊÚ Ì ör òËÅ
+q Û wæû p
+ßùòdP ûÙ Ð z ôòmU Q òí jË endstream endobj obj stream f dHnXß ª R Ä
+Cªm KdúÎ
+µ endstream endobj obj stream I gn u Úz Û ï A g IMIüÈ D õÎ aMi ù endstream endobj obj stream ûþ óØ ã M Û pYH O TÚ yâÔ ª Ç
+LÊÍ jÉ endstream endobj obj stream v ë Ç
+âß p ëæÜÆÁ Ñ l ÐÔ qP eY â z ÃÄ hèÌ ÿÂ VDk
+í pt J endstream endobj obj stream Á
+zL
+Z øm ª º ÏÎú oµ w endstream endobj obj stream E
+Ãçz BKr KåVY
+Ý ÁÓÜê Ö vH î éñR îóH Ö endstream endobj obj stream hßet õ v U Ñ v Ã
+zXäº Ó sz é àðêH æ iý ËlË Ã endstream endobj obj stream
+ö þ òY g ß xV µþ ø A ö
+
+mÚt ÏÃ B ïJÇb ÑòGªTs üÓ F ëºD endstream endobj obj stream Jáïtp ÇD
+Õ UÿÇ û âª È Kë endstream endobj obj stream E l
+mý wðÆ Ò ÖÄàÓ ôl yFJñ
+éWm ô h øz UÂFn
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R R null null null R R R true endobj obj R endobj obj R endobj obj R R R R endobj obj R stream B F wg Ë ÒÌ endstream endobj obj endobj obj R R R R R R R R R R R R R R R R R R R endobj obj Bold R endobj obj Bold R endobj obj endobj obj R endobj obj R endobj obj endobj obj endobj obj R stream V µ þìXµ Åßÿ Á Ò q Xo F wB tÇ hþ On j R rnfl ìÀí zÐøåK Üó ñþÄg ã endstream endobj obj R endobj obj R endobj obj endobj obj R stream Ïèå jæÌ W ÚÛ LÔ p Ó ïVVU ã
+ã oä äuéuPTè är endstream endobj obj BoldItalic R endobj obj BoldItalic R endobj obj endobj obj R stream ßÌp Þ wË ËÆÄ Oª
+ú â Eíýº vÕî O KkÚ endstream endobj obj endobj obj R stream xK ùmAF n S î uØ ë D í ö TOßzÕÔóa ÙýP pEû Aä Fé Ëpë
+ò ï endstream endobj obj endobj obj R stream Ó shÕ Ö Â í NàºØ Aû ñ Ñ wäçBb Ð n ÅyCÑ K à âûð endstream endobj obj endobj obj R stream öÊ õ ëuÊ ÆÊím VË Ñ
+ËÂQçR gÈ ÕÈþ Úæ º ý ýz aqæÐ µö yz endstream endobj obj endobj obj R stream Ò pYüf L öBÇË áÉvI ñ ÚY Ê Gí J Ûâ mÈóTÎóÌ Ú
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R endobj obj R stream B î q ð ïÉ e mC ÛobfajW mhinlªqNóª x
+
+NñRÓ C súüÐ ðÚ AT hRé îb A
+
+âãÏÓ obj endobj obj
+

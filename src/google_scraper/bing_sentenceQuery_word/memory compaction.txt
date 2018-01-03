@@ -1,0 +1,293 @@
+
+
+
+memory compaction
+
+
+January
+memory compaction
+
+
+Retrieved January give ability cite reference entry article according common style Modern Language Association MLA The Chicago Manual Style American Psychological Association APA
+Within Cite article tool pick style see available information look formatted according style
+Then copy paste text bibliography work cited list
+Because style formatting nuance evolve time information available every reference entry article guarantee citation generates
+Therefore best use citation starting point checking style school publication requirement information available site
+
+learn share knowledge build career
+My operating system textbook say compaction process rearranges disk block free disk block form contiguous chunk free disk space
+But I always thought defragmentation
+Are two term
+Or I missing something
+In modern disk operating system file subdivided block may stored arbitrary location disk
+Files read quickly physical disk block stored consecutively I think every OS created since without difficulty create file larger single largest consecutive free area disk provided total size free area sufficient hold file
+Such file end different piece stored different part disk thus accessing often fast entire file stored consecutively
+Conceptually ideal disk arrangement would content every file stored consecutively file stored unused block consecutive range
+Such arrangement would compacted defragmented
+In general though amount effort arrange everything perfectly seldom worthwhile obvious exception disk written never modified would typically case
+
+Defragmenting disk move block make file consecutive sequence block disk necessarily attempt eliminate free area file
+Compacting disk consolidate free area moving data later part disk unused location earlier part may cause fragmentation existing file
+Generally software performs defragmentation try avoid creating many scattered free area software performs compaction try avoid causing needle fragmentation depending upon software trying
+maximize efficiency existing file versus preparing large contiguous area space preparation large operation need run smoothly software may focus one kind operation expense
+mean moving memory area eliminate hole caused terminated five process A B C D E allocated memory
+After sometime process B D terminated
+Now memory layout
+After applying compaction instead two memory unit one memory unit
+mean storing complete file smallest number contiguous region
+That try store file one complete unit size contiguous memory available
+Suppose process A fragment process B fragment
+Now suppose memory layout defragmentation
+Defragmentation also contribute compaction
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In form automatic
+The attempt reclaim memory occupied longer use
+Garbage collection invented around simplify manual memory management
+Garbage collection often portrayed opposite requires programmer specify object deallocate return memory system
+However many system use combination approach including technique
+Like memory management technique garbage collection may take significant proportion total processing time program result significant influence performance
+With good implementation enough memory depending application garbage collection faster manual memory management opposite also true often case past GC algorithm
+Resources memory database device descriptor typically handled garbage collection
+Methods used manage resource particularly may suffice manage memory well leaving need GC
+Some GC system allow resource associated region memory collected cause resource reclaimed called
+Finalization may introduce complication limiting usability intolerable latency disuse reclaim especially limited resource lack control performs work reclaiming
+The basic principle garbage collection find data object program accessed future reclaim resource used object
+Many require garbage collection either part example effectively practical implementation example formal language like said
+Other language designed use manual memory management implementation available example
+Some language like allow garbage collection application using separate collected manually managed object others like allow user manually delete object also entirely disable garbage collection speed required
+While integrating garbage collection language enables much wider choice method GC system exist including require recompilation
+GC sometimes distinguished
+The garbage collector almost always closely integrated
+Garbage collection free programmer manually dealing memory deallocation
+As result certain category eliminated substantially reduced Some bug addressed garbage collection security implication
+Typically garbage collection certain disadvantage including consuming additional resource performance impact possible stall program execution incompatibility manual resource management
+Garbage collection consumes computing resource deciding memory free even though programmer may already known information
+The penalty convenience annotating object lifetime manually source code lead decreased uneven performance
+A paper came conclusion GC need five time memory compensate overhead perform fast explicit memory management
+Interaction memory hierarchy effect make overhead intolerable circumstance hard predict detect routine testing
+The impact performance also given Apple reason adopting garbage collection despite desired feature
+The moment garbage actually collected unpredictable resulting stall pause memory scattered throughout session
+Unpredictable stall unacceptable interactive program
+Incremental concurrent garbage collector address problem varying
+The modern GC implementation try minimize blocking stall much work possible background
+separate thread example marking unreachable garbage instance application process continues run
+In spite advancement example still difficult maintain large heap million object resident object get promoted older generation without incurring noticeable delay sometimes second
+GC incompatible based management resource
+As result need explicit manual resource management resource becomes transitive composition
+That GC system resource object requires manual resource management object used part another object composed object also become object requires manual resource management
+common type garbage collection much garbage collection often refers tracing garbage collection rather method
+The overall strategy consists determining object garbage collected tracing object chain reference certain root object considering rest garbage collecting
+However large number algorithm used implementation widely varying complexity performance characteristic
+Reference counting garbage collection object count number reference
+Garbage identified reference count zero
+An object reference count incremented reference created decremented reference destroyed
+When count reach zero object memory reclaimed
+As manual memory management unlike tracing garbage collection reference counting guarantee object destroyed soon last reference destroyed usually access memory either CPU cache object freed directly pointed thus tends significant negative side effect CPU cache virtual memory operation
+There number disadvantage reference counting generally solved mitigated sophisticated algorithm used convert thus reducing amount work needed done garbage collector
+This done using analysis determine whether object allocated within function accessible outside
+escape function thread
+In case object may allocated directly thread stack released function return reducing potential garbage collection overhead
+Generally speaking likely garbage collection standard feature
+In language built garbage collection added library C
+Most garbage collection built
+especially notable first first language introduce garbage collection
+Other dynamic language version use reference counting also tend use GC
+language usually provide integrated garbage collection
+Notable exception
+Historically language intended beginner often used garbage collection data type string list burden programmer manual memory management
+On early microcomputer limited memory slow processor BASIC garbage collection could often cause apparently random inexplicable pause midst program operation
+Some BASIC interpreter Apple II family repeatedly scanned string descriptor string highest address order compact toward high memory resulting performance could introduce pause execution program
+A replacement garbage collector Applesoft BASIC published January page identified group string every pas heap cut collection time dramatically
+released provided windowing garbage collector BASIC reduced collection fraction second
+While traditionally garbage collection release introduced garbage collection using developed runtime collector
+However release garbage collection deprecated favor ARC introduced
+Furthermore since May Apple even forbids usage garbage collection new OS X application
+For garbage collection never introduced due problem application responsivity performance instead iOS us ARC
+Garbage collection rarely used system perceived need tight control use limited resource
+However garbage collector compatible limited environment developed
+The Microsoft embedded software platform like larger cousin include garbage collection
+form allowing memory reused reclaimed based invariant known compilation
+This form garbage collection studied saw greater usage introduction ARC Apple ecosystem iOS OS X
+Incremental concurrent garbage collector developed algorithm algorithm
+In Baker algorithm allocation done either half single region memory
+When becomes half full garbage collection performed move live object half remaining object implicitly deallocated
+The running program check object reference correct half move across background task finding object
+scheme based empirical observation object die young
+In generational garbage collection two allocation region generation kept kept separate based object age
+New object created young generation regularly collected generation full object still referenced older region copied next oldest generation
+Occasionally full scan performed
+Some include hardware support garbage collection
+Most implementation garbage collector
+Such garbage collector meet constraint used operating system
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+So I looking Operating Systems exercise A swapping system eliminates hole compaction
+Assuming random distribution many hole many data segment time read write memory word nsec long take compact MB
+For simplicity assume word part hole highest word memory contains valid data
+The solution memory address Problem I dont understand part
+How get case
+I gues byte bit I kinda understand
+Now
+A megabyte byte
+The factor need count read writes
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Add comment Add comment Add comment Add comment Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see
+
+Can provide definition Compaction Memory
+Add comment Compaction Reduce external fragmentation Compaction Shuffle memory content place free memory together one large block Compaction possible relocation dynamic done execution time problem Latch job memory involved Do OS buffer Source Add comment Concretion assault issue fragmentation simply moving designated block conclusion associated storage hence pairing many slot
+Add comment Share question friend
+
+In compaction reduction consolidation hardware make better use physical floor space
+Although goal compaction maximize real estate increased hardware compaction put demand power consumption cooling requirement two major cost element maintaining large data center
+When come data center job interview rattling common DevOps automation term get far must establish knowledge IT infrastructure scalability resiliency well culture business really impress
+Download COMPLIMENTARY Data Center Terminology guide learn ace next interview
+You forgot provide Email Address
+This email address appear valid
+This email address already registered
+Please
+You exceeded maximum character limit
+Please provide Corporate Address
+By submitting Email address I confirm I read accepted Terms Use By submitting personal information agree TechTarget may contact regarding relevant content product special offer
+You also agree personal information may transferred processed United States read agree
+In storage area management compaction automatic removal expired data storage area network condense existing archive make room new data
+Find content member offer By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+Windows Server hardening procedure drew renewed interest following rash ransomware outbreak year
+See tip For enterprise data protection need Microsoft Azure Backup offering might suit organization need unified approach Windows Server administrator focus patching effort Remote Procedure Call vulnerability could allow Use PowerShell cmdlets remove VM development
+This includes removing VHDs reconfiguring VM Infrastructure Code offer virtualization admins framework automation tool configuration management DevOps method Virtualization increasingly central data center often remains isolated
+Admins need set example openly
+IT professional want achieve Microsoft Azure certification choose concentration around area From AWS Azure machine learning partnership Google grab hybrid cloud exciting year cloud
+As admins continue seek efficient way troubleshoot debug OpenStack recent advancement platform along All Rights Reserved
+
+Get grade money back bullet bullet Delivered time Get grade money back bullet bullet Delivered time Trusted Students Since This essay submitted student
+This example work written professional essay writer
+Any opinion finding conclusion recommendation expressed material author necessarily reflect view UK Essays
+According Leon UNIX operating system OS software manages hardware software resource computer
+UNIX first developed constant development ever since
+UNIX one widely used operating system industry government education
+It stable system server desktop laptop
+Memory important resource computer
+Memory management process managing computer memory consists primary memory secondary memory
+The goal memory management keep track part memory use part use allocate memory process need done
+UNIX memory management scheme includes swapping demand paging
+The simplest form memory management splitting main memory multiple logical space called partition
+Each partition used separate program
+There type memory partitioning Single partition allocation separate main memory operating system one user process area
+Operating system able virtual memory using single partition
+Using single partition ineffective allows one process run memory one time
+C Figure Single Partitioning Most operating system nowadays using multiple partition flexible
+Multiple partition allocation enabled multiple program run main memory
+Each partition used one process
+There two different form multiple partition allocation fixed partitioning variable partitioning
+Fixed partitioning divide memory many fixed partition change
+However variable partitioning flexible partition vary dynamically later process come go
+Variable partitioning Variable memory used UNIX
+C variable Figure Fixed Partitioning Variable Partitioning Program place memory execution
+However large program divide small piece loading piece needed
+Overlays replace new piece program unused
+UNIX using technique run new program fork running process also known
+The overlay technique illustrated
+C Figure Overlay Process Swapping consists bringing process physical memory entirely running
+When process longer use process terminated swapped disk
+The procedure swapping illustrated figure
+C Figure Swapping Initially process A memory
+Then process B swapped memory disk
+After process A terminates swapped disk
+Then process C swapped free space
+The size process different therefore process swapped multiple hole memory UNIX using variable partitioning
+C Figure External Fragmentation There two technique solve problem memory compaction fit process using algorithm Compaction C Figure Compaction Memory compaction move process upward far possible free memory placed one large block
+However good idea requires lot CPU time
+Most process grow run process data segment grow many programming language process grow
+If hole next process allocated process allowed grow hole
+Therefore good allocate extra memory whenever process swapped
+Figure Allocating Space Growing Data Extracted http April Algorithms There three different type algorithm used load program wherever memory space unused first fit best fit worst fit
+Algorithms Descriptions First Fit The memory manager scan along list allocates first space fit process
+First fit fast algorithm search little possible
+Best Fit The memory manager scan whole list take smallest hole fit process
+Best fit slower first fit must search whole list every time called
+Worst Fit The memory manager scan whole list take largest available hole hole broken big enough useful
+UNIX operating system allows user fully utilize physical memory installed system well part hard disk called swap space designated use kernel physical memory insufficient handle task
+Virtual memory manager create virtual address space secondary memory hard disk determine part address space loaded physical memory given time
+The benefit virtual memory relies separation logical physical memory
+C Figure Logical Memory Physical Memory Paging memory allocation strategy transferring unit virtual address space called virtual page whenever page needed execute program
+As size frame page logical page placed physical frame memory
+Every process logical divided allocate virtual address space
+There page table virtual memory allocate keep tracking page map frame
+C Figure The relation virtual address physical memory address given page table UNIX perform page swapping program need certain page
+This procedure called demand paging
+The page paged memory needed execute
+The whole process paged memory page needed swapped
+Demand paging decrease paging time physical memory needed needed page paged reading time unused page avoided
+C Figure Demand paging As example figure page needed Process A
+Therefore page paged memory
+A page fault occurs program try use page memory due demand paging paged page memory needed
+For example figure program try use Page Process A memory operating system interrupt occurs result trying access missing page Page paged memory
+C Fault Figure Page Fault Handling Retrieved Slides Material Chapter slide The diagram illustrated step handling page fault
+When page fault occurs program execution kernel first locate missing page backing store disk
+After located page find free memory frame physical memory copy
+The page table reset instruction restart
+When frame memory used problem occurs
+This cause page unable paged memory
+Solution free frame problem find memory frame idle free frame using page replacement algorithm
+There three common type page replacement algorithm First First FIFO Optimal Least Recently Used LRU
+UNIX using least recently used algorithm page replacement
+The least recently used algorithm replaces page used longest time assumption page needed
+The page table record every time page referenced page replacement needed every page checked find oldest recorded time
+Every operating system different memory management
+UNIX also exclusive memory management strategy manage memory resource optimally
+UNIX using multiple variable partitioning memory stored use flexible
+UNIX us overlay swapping replace unused program
+However facing external fragmentation problem solve loading program memory using best fit algorithm
+Besides UNIX also fully utilized virtual memory physical memory swap space using demand paging
+It allows user store physical memory hard disk RAM memory always insufficient
+UNIX owns private memory space called Kernel memory
+Kernel us RAM keep memory resident ensure user program overwrite corrupt kernel data structure
+Strong memory protection implemented kernel memory management keep user corrupting system area
+C Figure Kernel memory Fork function used duplicate process
+The newly created process called Child original process called Parent
+Bringing process physical memory entirely running
+Only needed page execute program swapped
+Not using Virtual Memory
+Use advantage Virtual Memory
+Process size must equal le main memory
+Process size greater main memory
+Less flexible handling memory
+More flexible handling memory
+Layered Architecture UNIX system Extracted Fundamentals Computer Technology
+LEON
+Text Segment Initialized Part Data Segment Uninitialized Part Data Segment Heap Storage Stack Segment Environment Variables etc Low Address High Address The Memory layout Extracted Operations Systems Gary Nutt Chapter Memory Management Take look essay writing service Our Dissertation Writing service help everything full dissertation individual chapter
+Our Marking Service help pick area work need improvement
+Fully referenced delivered time
+Get extra support require
+If original writer essay longer wish essay published UK Essays website please click link request removal Copyright UK Essays trading name All Answers Ltd company registered England Wales
+Company Registration No
+VAT Registration No
+Registered Data Controller No
+Registered office Venture House Cross Street Arnold Nottingham Nottinghamshire
+
+The performance CPU affected number core clock speed memory
+There different type volatile memory
+Computers require input hardware processing hardware output hardware
+The hardware defines computer
+Without computer could function
+The CPU memory work together run program
+You need JavaScript enabled view video clip
+Most computer CPU separate graphic processing unit GPU image
+The GPU around time faster CPU
+It optimised produce graphic game film
+The GPU responsible handling image free CPU task
+CPU memory speed affect overall speed computer
+If one significantly slower slow others
+test used ass performance computer
+Different type benchmark software used different kind application might want computer
+It difficult ass performance CPU computer might excel task well others
+For example computer going used gaming require best combination hardware handle intensive graphic quickly
+The computer might perform well used analyse vast amount scientific data
+Sign choose GCSE subject see content tailored
+
+There currently user browsing thread
+

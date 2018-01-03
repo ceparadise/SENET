@@ -1,0 +1,662 @@
+type many calculation execution carried simultaneously
+Large problem often divided smaller one solved time
+There several different form parallel computing
+Parallelism employed many year mainly interest grown lately due physical constraint preventing
+As power consumption consequently heat generation computer become concern recent year parallel computing become dominant paradigm mainly form
+Parallel computing closely related frequently used together often conflated though two distinct possible parallelism without concurrency concurrency without parallelism multitasking CPU
+In parallel computing computational task typically broken several often many similar subtasks processed independently whose result combined afterwards upon completion
+In contrast concurrent computing various process often address related task typical separate task may varied nature often require execution
+Parallel computer roughly classified according level hardware support parallelism computer multiple within single machine use multiple computer work task
+Specialized parallel computer architecture sometimes used alongside traditional processor accelerating specific task
+In case parallelism transparent programmer parallelism explicitly particularly use concurrency difficult write sequential one concurrency introduces several new class potential common
+different subtasks typically greatest obstacle getting good parallel program performance
+A theoretical single program result parallelization given
+Traditionally written
+To solve problem constructed implemented serial stream instruction
+These instruction executed one computer
+Only one instruction may execute instruction finished next one executed
+Parallel computing hand us multiple processing element simultaneously solve problem
+This accomplished breaking problem independent part processing element execute part algorithm simultaneously others
+The processing element diverse include resource single computer multiple processor several networked computer specialized hardware combination
+dominant reason improvement
+The runtime program equal number instruction multiplied average time per instruction
+Maintaining everything else constant increasing clock frequency decrease average time take execute instruction
+An increase frequency thus decrease runtime program
+However power consumption chip given equation switched per clock cycle proportional number transistor whose input change processor frequency cycle per second
+Increases frequency increase amount power used processor
+Increasing processor power consumption led ultimately May cancellation processor generally cited end frequency scaling dominant computer architecture paradigm
+empirical observation number transistor microprocessor double every month
+Despite power consumption issue repeated prediction end Moore law still effect
+With end frequency scaling additional transistor longer used frequency scaling used add extra hardware parallel computing
+Optimally parallelization would number processing element halve runtime doubling second time halve runtime
+However parallel algorithm achieve optimal speedup
+Most speedup small number processing element flattens constant value large number processing element
+The potential speedup algorithm parallel computing platform given Since show small part program parallelized limit overall speedup available parallelization
+A program solving large mathematical engineering problem typically consist several parallelizable part several serial part
+If part program account runtime get time speedup regardless many processor added
+This put upper limit usefulness adding parallel execution unit
+When task partitioned sequential constraint application effort effect schedule
+The bearing child take nine month matter many woman assigned
+Amdahl law applies case problem size fixed
+In practice computing resource become available tend get used larger problem larger datasets time spent parallelizable part often grows much faster inherently serial work
+In case give le pessimistic realistic assessment parallel performance Both Amdahl law Gustafson law assume running time serial part program independent number processor
+Amdahl law assumes entire problem fixed size total amount work done parallel also whereas Gustafson law assumes total amount work done parallel
+Understanding fundamental implementing
+No program run quickly longest chain dependent calculation known since calculation depend upon prior calculation chain must executed order
+However algorithm consist long chain dependent calculation usually opportunity execute independent calculation parallel
+Let two program segment
+Bernstein condition describe two independent executed parallel
+For let input variable output variable likewise
+independent satisfy Violation first condition introduces flow dependency corresponding first segment producing result used second segment
+The second condition represents second segment produce variable needed first segment
+The third final condition represents output dependency two segment write location result come logically last executed segment
+Consider following function demonstrate several kind dependency In example instruction executed even parallel instruction instruction us result instruction
+It violates condition thus introduces flow dependency
+In example dependency instruction run parallel
+Bernstein condition allow memory shared different process
+For mean enforcing ordering access necessary
+Subtasks parallel program often called
+Some parallel computer architecture use smaller lightweight version thread known others use bigger version known
+However thread generally accepted generic term subtasks
+Threads often need update shared
+The instruction two program may interleaved order
+For example consider following program If instruction executed instruction executed program produce incorrect data
+This known
+The programmer must use provide
+A lock programming language construct allows one thread take control variable prevent thread reading writing variable unlocked
+The thread holding lock free execute section program requires exclusive access variable unlock data finished
+Therefore guarantee correct program execution program rewritten use lock One thread successfully lock variable V thread proceed V unlocked
+This guarantee correct execution program
+Locks necessary ensure correct program execution greatly slow program
+Locking multiple variable using lock introduces possibility program
+An lock multiple variable
+If lock lock
+If two thread need lock two variable using lock possible one thread lock one second thread lock second variable
+In case neither thread complete deadlock result
+Many parallel program require subtasks
+This requires use
+Barriers typically implemented using software lock
+One class algorithm known altogether avoids use lock barrier
+However approach generally difficult implement requires correctly designed data structure
+Not parallelization result
+Generally task split thread thread spend portion time communicating
+Eventually overhead communication dominates time spent solving problem parallelization splitting workload even thread increase rather decrease amount time required finish
+This known
+Applications often classified according often subtasks need synchronize communicate
+An application exhibit parallelism subtasks must communicate many time per second exhibit parallelism communicate many time per second exhibit rarely never communicate
+Embarrassingly parallel application considered easiest parallelize
+Parallel programming language parallel computer must also known memory model
+The consistency model defines rule operation occur result produced
+One first consistency model model
+Sequential consistency property parallel program parallel execution produce result sequential program
+Specifically program sequentially consistent result execution operation processor executed sequential order operation individual processor appear sequence order specified program
+common type consistency model
+Software transactional memory borrows concept applies memory access
+Mathematically model represented several way
+introduced Carl Adam Petri doctoral thesis early attempt codify rule consistency model
+Dataflow theory later built upon created physically implement idea dataflow theory
+Beginning late developed permit algebraic reasoning system composed interacting component
+More recent addition process calculus family added capability reasoning dynamic topology
+Logics Lamport mathematical model also developed describe behavior concurrent system
+created one earliest classification system parallel sequential computer program known
+Flynn classified program computer whether operating using single set multiple set instruction whether instruction using single set multiple set data
+The SISD classification equivalent entirely sequential program
+The SIMD classification analogous operation repeatedly large data set
+This commonly done application
+MISD rarely used classification
+While computer architecture deal devised application fit class materialized
+MIMD program far common type parallel program
+According Some machine hybrid category course classic model survived simple easy understand give good first approximation
+It widely used scheme
+From advent VLSI fabrication technology computer architecture driven doubling amount information processor manipulate per cycle
+Increasing word size reduces number instruction processor must execute perform operation variable whose size greater length word
+For example processor must add two processor must first add bit integer using standard addition instruction add bit using instruction lower order addition thus processor requires two instruction complete single operation processor would able complete operation single instruction
+Historically microprocessor replaced microprocessor
+This trend generally came end introduction processor standard computing two decade
+Not early advent architecture processor become commonplace
+A computer program essence stream instruction executed processor
+Without parallelism processor issue le one
+These processor known processor
+These instruction combined group executed parallel without changing result program
+This known parallelism
+Advances parallelism dominated computer architecture
+All modern processor
+Each stage pipeline corresponds different action processor performs instruction stage processor pipeline different instruction different stage completion thus issue one instruction per clock cycle
+These processor known processor
+The canonical example pipelined processor processor five stage instruction fetch IF instruction decode ID execute EX memory access MEM register write back WB
+The processor pipeline
+Most modern processor also multiple
+They usually combine feature pipelining thus issue one instruction per clock cycle
+These processor known processor
+Instructions grouped together
+similar scoreboarding make use two common technique implementing execution parallelism
+Task parallelism characteristic parallel program entirely different calculation performed either different set data
+This contrast data parallelism calculation performed different set data
+Task parallelism involves decomposition task allocating processor execution
+The processor would execute simultaneously often cooperatively
+Task parallelism usually scale size problem
+Main memory parallel computer either shared processing element single processing element local address space
+Distributed memory refers fact memory logically distributed often implies physically distributed well
+combine two approach processing element local memory access memory processor
+Accesses local memory typically faster access memory
+Computer architecture element main memory accessed equal known UMA system
+Typically achieved system memory physically distributed
+A system property known NUMA architecture
+Distributed memory system memory access
+Computer system make use fast memory located close processor store temporary copy memory value nearby physical logical sense
+Parallel computer system difficulty cache may store value one location possibility incorrect program execution
+These computer require system keep track cached value strategically purge thus ensuring correct program execution
+one common method keeping track value accessed thus purged
+Designing large cache coherence system difficult problem computer architecture
+As result shared memory computer architecture scale well distributed memory system
+communication implemented hardware several way including via shared either multiported memory shared interconnect network myriad including fat hypercube hypercube one processor node
+Parallel computer based interconnected network need kind enable passing message node directly connected
+The medium used communication processor likely hierarchical large multiprocessor machine
+Parallel computer roughly classified according level hardware support parallelism
+This classification broadly analogous distance basic computing node
+These mutually exclusive example cluster symmetric multiprocessor relatively common
+A processor processor includes multiple called core chip
+This processor differs processor includes multiple issue multiple instruction per clock cycle one instruction stream thread contrast processor issue multiple instruction per clock cycle multiple instruction stream
+designed use prominent processor
+Each core processor potentially superscalar every clock cycle core issue multiple instruction one thread
+Intel best known early form
+A processor capable simultaneous multithreading includes multiple execution unit processing superscalar issue multiple instruction per clock cycle thread
+hand includes single execution unit processing unit issue one instruction time thread
+A symmetric multiprocessor SMP computer system multiple identical processor share memory connect via bus
+prevents bus architecture scaling
+As result SMPs generally comprise processor
+Because small size processor significant reduction requirement bus bandwidth achieved large cache symmetric multiprocessor extremely provided sufficient amount memory bandwidth exists
+A distributed computer also known distributed memory multiprocessor distributed memory computer system processing element connected network
+Distributed computer highly scalable
+The term distributed computing lot overlap clear distinction exists
+The system may characterized parallel distributed processor typical distributed system run concurrently parallel
+A cluster group loosely coupled computer work together closely respect regarded single computer
+Clusters composed multiple standalone machine connected network
+While machine cluster symmetric difficult
+The common type cluster cluster implemented multiple identical computer connected
+Beowulf technology originally developed
+The vast majority supercomputer cluster
+Because grid computing system described easily handle embarrassingly parallel problem modern cluster typically designed handle difficult require node share intermediate result often
+This requires high bandwidth importantly interconnection network
+Many historic current supercomputer use customized network hardware specifically designed cluster computing Cray Gemini network
+As current supercomputer use standard network hardware often
+A massively parallel processor MPP single computer many networked processor
+MPPs many characteristic cluster MPPs specialized interconnect network whereas cluster use commodity hardware networking
+MPPs also tend larger cluster typically far processor
+In MPP CPU contains memory copy operating system application
+Each subsystem communicates others via interconnect
+fifth fastest world according June ranking MPP
+Grid computing distributed form parallel computing
+It make use computer communicating work given problem
+Because low bandwidth extremely high latency available Internet distributed computing typically deal problem
+created example
+Most grid computing application use software sits operating system application manage network resource standardize software interface
+The common distributed computing middleware BOINC
+Often distributed computing software make use spare cycle performing computation time computer idling
+Within parallel computing specialized parallel device remain niche area interest
+While tend applicable class parallel problem
+use FPGA computer
+An FPGA essence computer chip rewire given task
+FPGAs programmed
+However programming language tedious
+Several vendor created language attempt emulate syntax semantics programmer familiar
+The best known C HDL language
+Specific subset based also used purpose
+AMD decision open technology vendor become enabling technology reconfigurable computing
+According Michael Chief Operating Officer first walked AMD called u stealer
+Now call u partner
+computing GPGPU fairly recent trend computer engineering research
+GPUs heavily optimized processing
+Computer graphic processing field dominated data parallel operation
+In early day GPGPU program used normal graphic APIs executing program
+However several new programming language platform built general purpose computation GPUs releasing programming environment respectively
+Other GPU programming language include
+Nvidia also released specific product computation
+The technology consortium Khronos Group released specification framework writing program execute across platform consisting CPUs GPUs
+others supporting
+Several ASIC approach devised dealing parallel application
+Because ASIC definition specific given application fully optimized application
+As result given application ASIC tends outperform computer
+However ASICs created
+This process requires mask set extremely expensive
+A mask set cost million US dollar
+The smaller transistor required chip expensive mask
+Meanwhile performance increase computing time described tend wipe gain one two chip generation
+High initial cost tendency overtaken computing rendered ASICs unfeasible parallel computing application
+However built
+One example PFLOPS machine us custom ASICs simulation
+A vector processor CPU computer system execute instruction large set data
+Vector processor operation work linear array number vector
+An example vector operation vector number
+They closely related Flynn SIMD classification
+computer became famous computer
+However vector CPUs full computer generally disappeared
+Modern include vector processing instruction SSE
+created programming parallel computer
+These generally divided class based assumption make underlying memory memory distributed memory shared distributed memory
+Shared memory programming language communicate manipulating shared memory variable
+Distributed memory us
+two widely used shared memory APIs whereas MPI widely used system API
+One concept used programming parallel program one part program promise deliver required datum another part program future time
+also coordinating effort make HMPP directive open standard called
+The OpenHMPP programming model offer syntax efficiently offload computation hardware accelerator optimize data movement hardware memory
+OpenHMPP directive describe remote procedure call RPC accelerator device
+GPU generally set core
+The directive annotate code describe two set functionality offloading procedure denoted codelets onto remote device optimization data transfer CPU main memory accelerator memory
+The rise consumer GPUs led support either graphic APIs referred dedicated APIs language extension
+Automatic parallelization sequential program parallel computing
+Despite decade work compiler researcher automatic parallelization limited success
+Mainstream parallel programming language remain either best programmer give compiler parallelization
+A fully implicit parallel programming language Parallel
+As computer system grows complexity usually decrease
+technique whereby computer system take snapshot record current resource allocation variable state akin information used restore program computer fail
+Application checkpointing mean program restart last checkpoint rather beginning
+While checkpointing provides benefit variety situation especially useful highly parallel system large number processor used
+As parallel computer become larger faster becomes feasible solve problem previously took long run
+Parallel computing used wide range field economics
+Common type problem found parallel computing application Parallel computing also applied design particularly via system performing operation parallel
+This provides case one component fail also allows automatic result differ
+These method used help prevent single event upset caused transient error
+Although additional measure may required embedded specialized system method provide cost effective approach achieve redundancy commercial system
+The origin true MIMD parallelism go back
+In April Gill Ferranti discussed parallel programming need branching waiting
+Also IBM researcher discussed use parallelism numerical calculation first time
+introduced computer accessed memory module
+In Amdahl Slotnick published debate feasibility parallel processing American Federation Information Processing Societies Conference
+It debate coined define limit due parallelism
+In company introduced first Multics system symmetric multiprocessor system capable running eight processor parallel
+project among first multiprocessor processor
+The first multiprocessor snooping cache
+SIMD parallel computer traced back
+The motivation behind early SIMD computer amortize processor multiple instruction
+In Slotnick proposed building massively parallel computer
+His design funded earliest SIMD effort
+The key design fairly high parallelism processor allowed machine work large datasets would later known
+However ILLIAC IV called infamous supercomputer project one fourth completed took year cost almost four time original estimate
+When finally ready run first real application outperformed existing commercial supercomputer
+In early started developing came known theory view biological brain
+In Minsky published claim mind formed many little agent mindless
+The theory attempt explain call intelligence could product interaction part
+Minsky say biggest source idea theory came work trying create machine us robotic arm video camera computer build child block
+Similar model also view biological brain massively parallel computer
+brain made constellation independent agent also described
+
+Before I explain parallel computing important understand Suppose lot work done want get done much faster hire worker
+If work separate job depend take amount time easily parceled worker get done time faster
+This easy called
+Just embarrassing mean fact probably exactly
+A different option would parallelize job discussed run parallelizations one another
+However shown probably le efficient way work
+Occasionally true computer job one processor may require storing many result disk parallel job may spread intermediate result RAM different processor
+RAM much faster disk
+However program spending lot time using disk embarrassingly parallel smart way go
+Assume unless analyze situation determine
+Embarrassingly parallel simple get worker free cheapest solution well
+What job take widely different amount time still interaction
+If enough start handing every worker one worker done come back request another
+This work fairly well especially put longer job first shorter one later
+This form parallelization still pretty simple unless teenager job see Do Teenagers Deserve Negative Wages
+Many departmental computer one processor run fashion servicing job arrive
+This also many airline run queue queuing theory known single queue multiple server system efficient multiple queue multiple server system common checkout line grocery store
+Suppose instead work single job take long time
+Now something reorganize job somehow breaking piece done concurrently
+For example job build house broken plumbing electrical etc
+However many job done time specific ordering putting foundation wall go
+If worker time period waiting around task foundation finished
+Not getting job done time faster
+Such life parallel programmer
+Definition use two processor core computer combination solve single problem
+The programmer figure break problem piece figure piece relate
+For example parallel program play chess might look possible first move could make
+Each different first move could explored different processor see game would continue point
+At end result combined figure best first move
+Actually situation even complicated program looking ahead several move different start end board position
+To efficient program would keep track one processor already evaluated position others would waste time duplicating effort
+This must parallel system work including famous IBM machine beat Kasparov
+Other parallel computer system SGI Cray system every processor directly read write data every memory location
+Think like everyone using blackboard calculation everyone chalk eraser decide write anywhere board
+For system standard known collection language extension Fortran
+Shared memory computer must use many part support sharing hence tend expensive distributed memory system
+However often easier write program shared memory system distributed memory one
+Yet computer exploit graphic processor GPUs achieve parallelism
+However GPU may core serious restriction programability serious performance problem much data movement
+Further language use GPUs rapidly evolving unclear use CUDA OpenCL accelerator extension incorporated OpenMP etc
+What doubled however number processor single chip
+Some smartphones core processor buy CPU chip core number soon increase
+Even Apple watch core
+These called chip
+There also graphic processing unit GPUs highly specialized processor
+This closer Moore talking really said number transistor would keep doubling
+The rate improvement slow significant increase number transistor continue least decade
+If core computer pretty easy find task done simultaneously waiting keystroke running browser embarrassingly parallel
+However number processor keep increasing parallelization problem mentioned become increasingly serious
+There parallel computer core people planning one
+Overall mean massive need make use parallelism chip almost problem use many combined together large problem
+Job security
+learn parallel computing There also resource available via web pointer manual software parallel computer etc
+Here video I presented Michigan
+The quality good I hope better person
+Quentin Stout Computer Science Engineering University Michigan Ann Arbor MI office message fax qstout umich middot edu If close enough Hi effective address
+
+In computer parallel processing processing instruction dividing among multiple objective running program le time
+In earliest computer one program ran time
+A program took one hour run tape copying program took one hour run would take total two hour run
+An early form parallel processing allowed interleaved execution program together
+The computer would start operation waiting operation complete would execute program
+The total execution time two job would little one hour
+But see organization power balance
+Does another setup work better
+Learn expert say goal data center power distribution load differential among phase
+You forgot provide Email Address
+This email address appear valid
+This email address already registered
+Please
+You exceeded maximum character limit
+Please provide Corporate Address
+By submitting Email address I confirm I read accepted Terms Use By submitting personal information agree TechTarget may contact regarding relevant content product special offer
+You also agree personal information may transferred processed United States read agree
+The next improvement
+In multiprogramming system multiple program submitted user allowed use processor short time
+To user appeared program executing time
+Problems resource contention first arose system
+Explicit request resource led problem
+Competition resource machine instruction lead
+Vector processing another attempt increase performance one thing time
+In case capability added machine allow single instruction add subtract multiply otherwise manipulate two array number
+This valuable certain engineering application data naturally occurred form matrix
+In application le data vector processing valuable
+The next step parallel processing introduction
+In system two processor shared work done
+The earliest version configuration
+One processor master programmed responsible work system slave performed task assigned master
+This arrangement necessary understood program machine could cooperate managing resource system
+Solving problem led symmetric multiprocessing system
+In SMP system processor equally capable responsible managing flow work system
+Initially goal make SMP system appear programmer exactly single processor multiprogramming system
+This standard behavior known
+However engineer found system performance could increased someplace range executing instruction order requiring programmer deal increased complexity
+The problem become visible two program simultaneously read write operand thus burden dealing increased complexity fall programmer specialized circumstance
+The question SMP machine behave shared data yet resolved
+As number processor SMP system increase time take data propagate one part system part grows also
+When number processor somewhere range several dozen performance benefit adding processor system small justify additional expense
+To get around problem long propagation time message passing system created
+In system program share data send message announce particular operand assigned new value
+Instead broadcast operand new value part system new value communicated program need know new value
+Instead shared memory network support transfer message program
+This simplification allows hundred even thousand processor work together efficiently one system
+In vernacular system architecture system scale well
+Hence system given name massively parallel processing system
+The successful MPP application problem broken many separate independent operation vast quantity data
+In need perform multiple search static database
+In need analyze multiple alternative chess game
+Often MPP system structured cluster processor
+Within processor interact SMP system
+It cluster message passed
+Because operand may addressed either via message via memory address MPP system called machine Memory Addressing
+SMP machine relatively simple program MPP machine
+SMP machine well type problem providing amount data involved large
+For certain problem data mining vast data base MPP system serve
+Find content member offer By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+Windows Server hardening procedure drew renewed interest following rash ransomware outbreak year
+See tip For enterprise data protection need Microsoft Azure Backup offering might suit organization need unified approach Windows Server administrator focus patching effort Remote Procedure Call vulnerability could allow Use PowerShell cmdlets remove VM development
+This includes removing VHDs reconfiguring VM Infrastructure Code offer virtualization admins framework automation tool configuration management DevOps method Virtualization increasingly central data center often remains isolated
+Admins need set example openly
+IT professional want achieve Microsoft Azure certification choose concentration around area From AWS Azure machine learning partnership Google grab hybrid cloud exciting year cloud
+As admins continue seek efficient way troubleshoot debug OpenStack recent advancement platform along All Rights Reserved
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+What difference term execution
+I never quite able grasp distinction
+The tag defines concurrency manner running two process simultaneously I thought parallelism exactly thing
+separate thread process potentially run separate processor
+Also consider something like asynchronous dealing concurrency parallelism
+Concurrency parallelism two related distinct concept
+Concurrency mean essentially task A task B need happen independently A start running B start A finished
+There various different way accomplishing concurrency
+One parallelism multiple CPUs working different task time
+But way
+Another work like Task A work certain point CPU working stop switch task B work switch back task A
+If time slice small enough may appear user thing run parallel even though actually processed serial multitasking CPU
+The two concept related different
+mean two calculation happen within time frame usually sort dependency
+mean two calculation happen simultaneously
+Put boldly concurrency describes problem two thing need happen together parallelism describes solution two processor core used execute two thing simultaneously
+Parallelism one way implement concurrency one
+Another popular solution interleaved processing
+coroutines split task atomic step switch back forth two
+By far best known example concurrency JavaScript work one thread asynchronous callback wait previous chunk code finished executing
+This important know guarantee function write atomic callback interrupt return
+But also mean busy loop wo work ca set timeout loop fire loop prevent timeout callback executing
+Concurrent execution generalized form parallel execution
+For example parallel program also called concurrent reverse true
+For detail read research paper Parallel processing subset concurrent processing
+Concurrent processing describes two task occurring asynchronously meaning order task executed predetermined
+Two thread run concurrently processor core interleaving executable instruction
+For example thread run thread run etc
+Parallel processing type concurrent processing one set instruction executing simultaneously
+This could multiple system working common problem distributed computing multiple core system
+In opinion application programming perspective difference two concept two word confusing confusion sake
+I think thread interleaving brought simulate multicore processing back day multicore possibility
+Why word outdated mindset
+Mason Wheeler Penguin given answer
+One Core task switching multicore concurrent strictly multicore parallel
+My opinion two term rolled one I make effort avoid saying concurrent
+I guess OS programming level distinction important application programmer perspective matter much
+I written mapReduce Spark MPI cuda openCL multithreaded I never stop think job running interleaved thread multiple core
+For example I write multithreaded sometimes I sure many core I get though way make demand many core get described
+In spark I map reduce operation idea jvm handling hardware level
+On GPUs I every thread assigned simple processor I always sync thread wherever problem might arise
+With MPI communication machine specified explicitly could interleave function running multiple machine single core combine result via appropriate single threaded function
+And use MPI coordinate bunch single core machine one multithreading
+What difference make
+I say none
+Call parallel done
+tdammer statement come close rest besides point
+He say Put boldly concurrency describes problem two thing need happen together parallelism describes solution two processor core used execute two thing simultaneously Let analyse word
+Current mean happening actual relevant moment
+Con mean counter aligning
+Parallel mean direction without crossing without eachother way
+So concurrency implies competing resource
+Parallelism
+Parallel process may using resource considered problem issue
+With concurrency issue dealt
+Obviously term used differently different culture
+My understanding following Parallelism way speed processing
+Whether matrix multiplication single core multiple core even GPU outcome else program broken
+It add new functionality program speed
+While concurrency thing could sequentially
+For example serving different webpage time client waiting next request
+Though could simulate degree interleaving done elder day
+Note behaviour concurrent program nondeterministic
+It example clear client completly served first
+You could run quite test get different result time regarding order request finished
+The system guarantee client served b reasonable amount time
+Usually work horse parallel computation aware care parallelism
+While concurrent task often explicitly employ communication blocking queue synchronization locking mechanism
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Learn something new every day email Parallel operating system type platform break large task smaller piece done time different place different mechanism
+They sometimes also described processor
+This type system usually efficient handling large file complex numerical code
+It commonly seen research setting central server system handling lot different job useful time multiple computer similar job connecting shared infrastructure simultaneously
+They difficult set first require bit expertise technology expert agree long term much cost effective efficient counterpart
+A parallel operating system work dividing set calculation smaller part distributing machine network
+To facilitate communication processor core memory array routing software either share memory assigning address space networked computer distribute memory assigning different address space processing core
+Sharing memory allows operating system run quickly usually powerful
+When using distributed processor access local memory memory processor distribution may slow operating system often flexible efficient
+The architecture software typically build around platform allows coordinate distributed load multiple computer network
+Parallel system able use software manage different resource computer running parallel memory cache storage space processing power
+These system also allow user directly interface computer network
+In Gene Amdahl American computer working IBM conceptualized idea using software coordinate
+He released finding paper called outlined theoretical increase processing power one could expect running network parallel operating system
+His research led development packet switching thus modern parallel operating system
+This development packet switching widely regarded breakthrough later started Arpanet Project responsible basic foundation Internet world largest parallel computer network
+Most field science use sort operating system including biotechnology cosmology theoretical physic astrophysics
+The complexity capacity system also help create efficiency industry consulting finance defense telecom weather forecasting
+In fact parallel computing become robust used many leading cosmologist answer question origin universe
+Scientists able run simulation large section space
+It took one month scientist compile simulation formation Milky Way using sort operating system instance feat previously thought impossible complex cumbersome
+Scientists research industry leader often choose use sort operating system primarily efficiency cost usually factor
+In general cost far le assemble parallel computer network would cost develop build super computer research invest numerous smaller computer divide work
+Parallel system also completely modular case allows inexpensive repair upgrade
+International Business Machines Corporation better known IBM founded calling Computing Tabulating Recording Company
+In IBM adopted current name
+The name formerly given South American Canadian subsidiary
+The company gone many change year purchase selling different portion
+Today IBM household name present many electronics people home
+One editor review suggestion make change warranted
+Note depending number suggestion receive take anywhere hour day
+Thank helping improve wiseGEEK
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+In context Internet computing parallel mean one event happening time
+It usually contrasted meaning one event happening time
+In data transmission technique time division space division used time separate transmission individual bit information sent serially space multiple line path used multiple bit sent parallel
+In context computer hardware data transmission serial connection operation medium usually indicate simpler slower operation think serial mouse attachment
+Parallel connection operation think multiple character sent printer indicates faster operation
+This indication always hold since serial medium example fiber optic cable much faster slower medium carry multiple signal parallel
+A conventional phone connection generally thought serial line since usual transmission protocol serial
+Conventional computer program operate serial manner computer reading program performing instruction one
+However today computer multiple processor divide instruction perform parallel
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+This first tutorial Livermore Computing Getting Started workshop
+It intended provide quick overview extensive broad topic Parallel Computing tutorial follow
+As cover basic parallel computing intended someone becoming acquainted subject planning attend one tutorial workshop
+It intended cover Parallel Programming depth would require significantly time
+The tutorial begin discussion parallel computing used followed discussion concept terminology associated parallel computing
+The topic parallel memory architecture programming model explored
+These topic followed series practical discussion number complex issue related designing running parallel program
+The tutorial concludes several example parallelize simple serial program
+Synchronization usually involves waiting least one task therefore cause parallel application wall clock execution time increase
+One simplest widely used indicator parallel program performance
+P parallel fraction N number processor S serial fraction
+We increase problem size doubling grid dimension halving time step
+This result four time number grid point twice number time step
+The timing look like In case programmer responsible determining parallelism although compiler sometimes help
+This problem able solved parallel
+Each molecular conformation independently determinable
+The calculation minimum energy conformation also parallelizable problem
+F n F F The calculation F n value us F F must computed first
+The need communication task depends upon problem There number important factor consider designing program communication The value A must computed value A J therefore A J exhibit data dependency A
+Parallelism inhibited
+If Task A J task A computing correct value A J necessitates As previous example parallelism inhibited
+The value Y dependent Master Process Worker Process repeatedly following c constant
+
+strategy system implementation new system slowly assumes role older system system operate simultaneously
+This conversion take place technology old system outdated new system needed installed replace old one
+After period time system proved working correctly old system removed completely user depend solely new system
+The phrase parallel running refer process changing fragment business information technology operation new system technique applied human resource department existing staff stay board transition new staff
+The new system need implemented built tested carrying job well according objective
+This involves initial step To implement new system parallel running strategy applied new system run alongside old system specified time
+Parallel running different term
+There also possible strategy used implementation new system
+All implementation strategy come advantage disadvantage
+So depends requirement organisation choose implementation strategy want apply
+During changeover new system existing system run side side agreed period time
+This long enough ensure aspect new system confirmed work properly
+Both input data perform
+This compare prove new system
+If new system accepted existing system stop running replaced new one
+If old new system computerized input data held disk tape run concurrently system
+If changing manual system computerized system main problem inputting data
+Data need input manually may take long time
+Parallel running allows result compared ensure new system working without error
+If error found user refer old system resolve problem make modification new system thus operation continue old system problem sorted
+This also allows training staff help gain confidence new system
+The cost implementation expensive need operate two system time
+It great expense term electricity operation cost
+This would prohibitive large complex system
+Parallel running implementation also requires lot time need frequent maintenance
+This slow production firm worker need twice normal workload period time order achieve goal system
+This involves inputting changing data system ensure information identical system
+The practical example parallel running
+New staff old staff work job
+If new staff performance OK existing staff may needed replaced
+Another example new firm undergos change ownership want recruit new staff operate firm
+Making change cause problem new staff know basic operation
+For reason firm keep existing staff board specified time normal job new staff shadow get experience require
+Once result new staff match result existing staff term productivity operational job existing staff let go
+Many business firm use strategy parallel running way ensure computer software capable task designed
+The old software new software receive input business firm
+The output software program compared period time make sure transition new system completely fault free
+Another example publishing firm producing textbook
+They decide run account part business investing new computerized system
+The existing account system outdated suitable use new hardware
+The new system implemented using parallel running strategy account invoice handled new old system
+If new system function correctly data old system used
+However everything need done twice slow account department cost money hiring staff
+This system safe new system precisely tested every transaction compared result old system
+It also applied using new computerized system create brief reference record generate order maintaining old manual system final financial control new system confirmed function correctly
+After implementing new system come review phase normally take place three six review conducted Other Parallel Running pilot running
+old system completely removed immediately replaced new option risky may still problem new system
+It cheapest simplest form changeover something go wrong user fall back old system
+The staff must fully trained advance file must input new system go live
+In system introduced gradually
+Parts old system replaced remaining part still running old system
+As example school introducing Management Information System aspect school operation
+It could introduce enrolment system four month later examination system four month timetabling system
+As new module activated confirmed functioning correctly next module installed
+It likely module work
+For example timetable module assume student data order introduced must considered
+new system installed small number user test evaluate new system
+The new system implemented user considered fully tested able function correctly
+The test user assist training others use new system
+This implementation strategy useful system large number user ensure user use system effectively
+Implementation computerized system manual system cause restructuring within organisation
+People position status may change
+These change alter people awareness employment security authority interaction staff
+People refuse change new computer system may related inability system specific job requirement security aspect possible loss data concern making mistake using system effect health
+Likewise computerized system affect manager term management role decision making process
+Systems user friendly often meet le refusal user feel comfortable system sense control able evaluate stored input data
+The system also sufficiently adaptable suit different background proficiency level user
+Overcoming refusal change adoption new system management issue
+This may influenced attitude towards system knowledge interaction
+Thus communication skill required convince people benefit new system
+People given opportunity learn evaluate system
+Once seen experienced benefit new system ready accept run system The success system implementation affected way system operated
+Thus education training using system carried various level considering size complexity system
+Staff personal need informed overall information structure operate system
+This give overall understanding system place information handled throughout organisation
+Information system infrastructure organisation need determined order decide training requirement carried
+Firms complex system involving operation regional office network distributed system need information system manager system operator support staff
+In order deal problem staff need training operation equipment support service
+For small organisation information system handled departmental computer software staff may well responsibility managing computer system addition user
+This may organisation system developed use application package
+Various training course available relation organisation information system
+Software house university often provide general training course much depend upon organisation requirement location training centre
+Supplier particular product also provides specific training related product system
+Many company supply software training division whose main purpose support customer training usually conducted supplier premise organisation choose training take place organisation facility
+It essential operator user new system undergo training ensure run system correctly
+The cost involved therefore viewed investment organisation order achieve expected goal
+
+The simultaneous use one
+Ideally parallel processing make program faster engine CPUs running
+In practice often difficult divide program way separate CPUs execute different portion without interfering
+Most one CPU model several
+There even computer thousand CPUs
+With computer possible perform parallel processing connecting computer
+However type parallel processing requires sophisticated called software
+Note parallel processing differs single CPU executes several program
+Parallel processing also called Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+

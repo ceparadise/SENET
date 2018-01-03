@@ -1,0 +1,378 @@
+Apache Ant Java library tool whose mission drive process described build file target extension point dependent upon
+The main known usage Ant build Java application
+Ant supply number task allowing compile assemble test run Java application
+Ant also used effectively build non Java application instance C application
+More generally Ant used pilot type process described term target task
+Ant written Java
+Users Ant develop antlibs containing Ant task type offered large number commercial antlibs
+Ant extremely flexible impose coding convention directory layout Java project adopt build tool
+Software development project looking solution combining build tool dependency management use Ant combination
+The Apache Ant project part
+Apache Ant available download source binary
+The Apache Ant team currently maintains two line development
+The release require runtime requires runtime
+Both line based Ant release mostly bug fix release additional new feature developed
+We recommend using unless required use version Java prior build process
+Ant contains superset exception task feature longer work anyway like task
+The new release revert change broke Eclipse integration also fix wrapper script Solaris
+In addition add task type support XZ compression help library
+The Ant PMC archive EasyAnt subproject module
+This mean resource removed made read development done
+It also mean community grows subproject could
+Apache Compress Ant Library available download release
+This release adapts release Apache Commons Compress add support Brotli format full support Snappy LZMA addition support offered version
+Apache Ivy available download source binary without dependency
+Key feature release For information see
+The Apache IvyDE project pleased announce release
+The Apache IvyDE Eclipse plugin integrates Apache Ivy dependency management Eclipse
+It let manage dependency declared Java Eclipse project kind project need dependency management
+Apache IvyDE contribute classpath Java project make retrieve dependency directly project
+Last least Apache IvyDE offer editor file completion
+Get preview This release considered stable
+The beta long time
+A detailed release note read Download release Or use directly Apache IvyDE updatesite Issues reported More information found Apache IvyDE website You view documentation current release Apache Ant Comprehensive documentation included source binary distribution
+Copyright The Apache Software Foundation Licensed Apache License Version
+Apache Ant Apache Ivy Apache EasyAnt Ant Ivy EasyAnt Apache Apache feather logo Apache Ant project logo trademark The Apache Software Foundation
+
+Apache Ant software build tool developed Apache Software Foundation
+It similar make utility mainly functional Java platform
+Unlike make Ant script written XML describe build process dependency
+Portability simplicity use two main benefit Ant
+Ant acronym another neat tool
+Sometimes software described similar insect share name although ant small build large well
+Ant commonly used project
+It requires Java platform implemented using Java language
+Ant build file easily transferred another platform inherit Java platform independency
+Techopedia Terms Copyright Techopedia
+
+Ever find boring repetitive task web developer
+Today I going show cut development cycle little bit automation
+In tutorial learn easily perform repetitive task
+Every week revisit reader favorite post throughout history site
+This tutorial first published March
+Ant make incredibly easy define set task execute command
+Ant piece software originally built automating software build
+It made Apache yes Apache server primarily purpose build Java application
+When building software case several task identical time build publish deploy project
+It waste valuable time manually
+Ant make incredibly easy define set task execute command terminal
+Ready
+Let Get started
+Before get Ant need project work
+Here file I using As see explains rest project
+If download project link top get CSS JavaScript file
+So going project
+As see got multiple CSS JavaScript file linked project
+What compile compress respective file FTP server
+Before start installing Ant
+Installing Ant rather daunting task
+Thankfully Windows Mac installation process pretty similar
+If Linux I going assume either Ant installed already know figure without
+If Mac probably already Ant installed however advanced task case FTP work
+So install latest version
+Before begin I point full instruction Apache offer
+Unfortunately whole manual Ant I better done frame
+You see Installing Apache Ant link left frame
+What I tell found besides version little friendly
+First let make sure right Java dependency
+Whether Windows Mac need Java Development Kit JDK least version
+You
+If sure version JDK run command terminal command line
+As I understand JDK version number Java version number
+Now let download latest version Ant
+You get course compile roll
+You find link page Once downloaded unzipped install
+This get The first part installation differs platform
+Let start Windows step First choose folder like install Ant
+I went
+Create folder move folder download folder folder
+You also want move
+Once done setup environmental variable
+If sure Make system truthfully matter
+This need set Now got Ant installed Windows
+There one important step though skip pver Mac piece keep following along
+You already got ant installed Mac see running command terminal
+This output something along line path Ant executable use
+However actually go folder find symlink real stuff
+As see linked
+Now could use I tried I able use FTP component
+Rather install Ant somewhere else mess symlink I chose move folder subfolder called move new stuff
+You move folder plus file
+Now symlink point updated version ant
+If run terminal see got version whatever version latest time reading
+There one step finish installation
+There several optional component come Ant need project may want use road
+Let get
+You start opening command line terminal changing directory installed Ant
+More importantly directory put file
+Now run command This download install quite optional component one command could take minute
+Now got Ant installed ready run let get work
+Ant us XML file store task current project
+Ant us XML file store task current project project directory command line able run command find appropriate task within XML file execute
+If familiar XML worry
+XML stand eXtensible Markup Language similar HTML
+It us tag attribute define data
+Actually similar XHTML RIP rule strict tag attribute must lowercase value quoted doctype required etc
+Don worry though get hang
+The XML file Ant look default named want put project folder
+So exactly going XML file
+Here start Looks like HTML eh
+The first line XML doctype
+Next root node
+I added two attribute explains list task defines default task run
+See default task idea work
+Let say create task called
+We could run terminal If find time run Ant project calling task want make default
+In case set default task one run tell ant run anything
+These
+Now got file let create first task
+Tasks called within file
+Check Plug file run console
+You output look something like In output Ant entry task run
+Then output task displayed tabbed appropriate task name
+As see called task print whatever put inside
+But I know echo task
+Well get list task
+This good time point many task several way called
+For example could also done
+What I show way thing
+Now starting warm idea Ant let talk property
+Ant property like variable programming language
+As use Ant might find boilerplate file tweak slightly
+One tweak might name
+Ant property like variable programming language
+You create way done inside task
+You also move property separate file import file
+That
+This brings u creating first real task We called task
+It involves two action first use task import file attribute
+Then echo message saying successful
+It simple
+Of course need create file
+This one use today You might think actually make harder variable name longer value
+Well true give u flexibility use file make reusable shareable
+Okay let get serious
+We obviously got quite task create useful file
+Here list task need create We going use different tactic give good overview Ant work
+Let start compiling task take set file concatenate one file
+Ant task named
+I named task
+Inside running task
+As see file concatenated destination file
+You notice I use property substitute correct value
+You must wrap usage property notation
+Inside task define This one way grab bunch file
+I using allows define order I like file concatenated
+I giving id give u access file set way use parameter although
+It also attribute tell task folder find file
+Then inside define appropriate node attribute holding filename
+There first real task
+Hopefully make sense
+While JavaScript one different Compression get bit trickier built Ant
+However Ant support outside task via java file
+This incredibly handy u YUI Compressor available file way available
+You download
+You want save smart location maybe rename
+I saved
+Do plea
+Now YUI Compressor compress JavaScript CSS
+What create one task call two specific task
+We Ant support calling task passing parameter
+Let see work We using command
+This similar running jar file command line
+The attribute point jar file
+If attribute true jar run Java virtual machine separate one Ant running
+Then inside node define argument
+On command line would pas
+So thing
+But property coming
+From This CSS compression task
+First notice node second attribute
+You probably guess mean task depends task must run first
+This way call automatically call first
+Now going inside
+We executing task simply call another task within case task
+Inside create many parameter need name value
+Yep much like calling function
+This parameter use within task
+And JavaScript version Don forget one dependant
+Way back root set task
+We created task yet let
+This task depends two task one created yet use comma separated list require multiple task
+Inside first task create asset directory task like command line
+Next make two one compress CSS one compress JavaScript
+Remember two task depend respective concatenation function call
+Finally message letting user know done
+What task depends
+It pretty simple It merely deletes asset directory
+This completely necessary might find useful
+Let create one task want upload project server
+Thanks command cinch
+We calling task depends
+We using FTP task
+As see important info stored attribute
+If worked FTP client option familiar
+Once fill server information task upload file
+Notice arranged task though
+If run command line concatenate compress CSS JavaScript upload default
+If want upload run since depends call first
+Of course call individual task like example
+Before close odds end I like mention And wrap
+I hope learned new technique save time future
+If question feel free post
+Thank much reading
+Envato tutorial translated language community involved
+
+learn share knowledge build career
+I want install SMSlib installation instruction
+In I must install Apache Ant I understand
+I already download Apache Ant read manual In I must RPM version right
+I already go must I
+I already try many link
+I know witch one must I download If Windows use Windows installer Apache Ant I made
+Download install Download Ant
+Go click download binary
+Because talking Windows choose download ZIP file rather others
+Scroll say release click ZIP filename
+Once downloaded unzip file
+need choose permanent home Ant computer
+often used put wherever want
+Set environment variable To set environment variable Windows XP right click My Computer select Properties
+Then go Advanced tab click Environment Variables button bottom
+To set environment variable Windows right click Computer select Properties
+Click Advanced System Settings click Environment Variables button bottom
+The environment variable absolutely need tell Ant location JRE
+If installed JDK likely Windows XP Windows
+note space path cause problem
+You need use mangled name instead complete name
+So Windows XP use C Windows use C installed Program Files folder That alone enough get Ant work convenience good idea add Ant binary path PATH variable
+This variable list directory search executables
+To able run ant directory Windows need know location ant binary java binary
+need add end PATH variable
+For Windows XP likely add something like For Windows look something like Once done applied change need open new command prompt see variable set properly
+You able simply run ant see something like That mean Ant installed properly looking file
+You follow Download latest version ant Unzip save C directory ant
+Add bin directory PATH environment variable
+Add environment variable set C
+use following command set variable C set C set C set C ant Apache Ant version compiled April java installed machine Add environment variable set
+This need install ant machine
+Download Unzip copy c Files Right Click My Computer property Advanced Environment variable Edit variable PATH append value C C Click OK
+open cmd type ant checking
+installation ant smslib pretty simple
+All need extract directory
+Export path case Linux set PATH variable access directory shell
+root directory ant installed
+For SMSLib Download zip file guide step step basis Sound like using Linux
+If easiest way would use package management frontend like Synaptic install ant
+Its simple install Apache ant installer window give link need set Environment automatically every thing
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+Ant tool program putting together piece program Software Foundation
+The utility commonly used build tool program written
+Although similar GNU utility replaces Ant said portable simpler use
+Unlike many build tool Ant independent platform development environment
+Make common build tool alternative based particular command interface reason limited type operating system us shell
+Ant us Java e rather command
+Developers use describe module program build module dependency part program
+Ant determines part program changed since last compilation well part program dependent component compiles part require proper order
+Ant part Apache Jakarta project
+Software consultant James Duncan Davidson created Ant transatlantic flight
+Davidson working program build running problem using available build tool created
+Davidson said named tool Ant little thing build big thing
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+software tool process originated project early
+It replacement build tool unix created due number problem unix make
+It similar Make implemented using language requires Java platform best suited building Java project
+The immediately noticeable difference Ant Make Ant us describe build process dependency whereas Make us
+By default XML file named
+Ant released
+Ant Another Neat Tool conceived preparing engine later release
+A version Make used build platform world way controlling platform used build Tomcat Ant created simple tool build Tomcat directive XML build file
+Ant version officially released product July
+Several proposal Ant version made AntEater James Duncan Davidson Myrmidon Mutant none able find large acceptance developer community
+At one time Ant build tool used Java development project
+For example open source Java developer include file distribution
+Because Ant made trivial integrate test build process Ant made easy willing developer adopt even
+one many example task extension written Ant
+These extension installed copying file ant directory
+Once done task extension invoked directly typical file
+The WOProject extension allow developer use ant building framework apps instead using suite
+provides collection task conditional statement operation property well useful task
+implement task type networking user interface processing
+Other task extension exist filesystem manipulation
+Below listed sample file simple Java Hello world application
+It defines four target associated description
+The target list target dependency
+This tell Ant start target must first complete target
+Within target action Ant must take build target performed using task
+For example build target Ant must first create directory called Ant already exist invoke Java compiler
+Therefore task used
+These perform similar task utility name
+Another task used example named This Ant task name common Java utility JAR really call Ant program file support
+This detail relevant end user get JAR wanted file asked
+Many Ant task delegate work external program either native Java
+They use Ant task set command line handle detail mapping information build file program argument interpreting return value
+Users see task
+trying execute task system without underlying program path without full Java Development Kit JDK installed
+One primary aim Ant solve Make portability problem
+The first portability issue Makefile action required create target specified command specific Make run
+Different platform require different shell command
+Ant solves problem providing large amount functionality designed behave platform
+For example sample file target deletes directory everything
+In Makefile would typically done command command unavailable environment
+example would use In Ant build file goal would accomplished using command A second portability issue result fact symbol used delimit element file system directory path component differs one platform another
+Unix us forward slash delimit component whereas Windows us backslash
+Ant build file let author choose favorite convention forward slash backslash directory semicolon colon path separator
+It convert symbol appropriate platform executes
+There exists myriad Ant extension called provide much missing functionality
+Also IDE build execute Ant script IDE us Ant internal build system
+As IDEs popular development platform simplify Ant use significantly
+As bonus Ant script generated NetBeans used outside IDE standalone script
+
+This action might possible undo
+Are sure want continue
+Apache ANT estará disponible el
+
+learn share knowledge build career
+I would like specify classpath fpt task directly Ant Build script
+I tried following The first approach give following error message The second approach give following error message Is possible set classpath build script ftp task I outside build script server
+Would nice build script
+Just ftp task classpath reference Have tried solution commented
+I similar problem time ago I solved adding new classloader
+Regards By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer startxref EOF obj stream JJ ý uEQB
+ãé ÝO ºqózÇÕÊ Êù Ä e ØM Wº
+
+api eclipse svn checkout http
+lucene art
+
+A Apache Ant available
+simply build scripting language used heavily Open Source community
+Ant automates task compiling source code building deployment package automatically checking dependency item need updated build set
+This wikibook based presentation created Minnesota
+Dan felt strongly gentle introduction Ant necessary new people easily learn Ant
+The existing Ant documentation although useful advanced Ant user meet need beginner
+For example Apache documentation advanced concept token filter placed directly introduction beginner
+The introductory material also contain full example complete sample build file expected output
+Something else needed
+At time introductory material assumed reader familiar XML
+This material cover material need know XML build Ant script
+This wikibook also designed work programming wikibooks
+This document introduction page people getting started
+Mostly hello world information get flavor Ant used
+At end six section Ant used process XML document
+

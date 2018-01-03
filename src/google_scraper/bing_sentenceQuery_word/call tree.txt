@@ -1,0 +1,785 @@
+In widely used ADT implementing simulates hierarchical root value child parent node represented set linked
+A tree data structure defined locally collection starting root node node data structure consisting value together list reference node child constraint reference duplicated none point root
+Alternatively tree defined abstractly whole globally value assigned node
+Both perspective useful tree analyzed mathematically whole actually represented data structure usually represented worked separately node rather set node edge node one may represent instance
+For example looking tree whole one talk parent node given node general data structure given node contains list child contain reference parent A tree data structure made node vertex edge without cycle
+The tree node called tree
+A tree empty consists root node potentially many level additional node form hierarchy
+There distinction tree abstract data type concrete data structure analogous distinction
+As data type tree value child child tree value child tree interpreted value root node subtrees child root node
+To allow finite tree one must either allow list child empty case tree required empty tree instead represented forest zero tree allow tree empty case list child fixed size especially binary desired
+As data structure linked tree group node value list node child
+There also requirement two downward reference point node
+Nodes tree could reference reference parent node
+Due use tree linked tree data structure tree often discussed implicitly assuming represented reference root node often actually implemented
+For example rather empty tree one may null reference tree always reference tree may null
+Recursively data type tree defined value data type possibly empty together list tree possibly empty list subtrees child symbolically A tree consists value list tree
+More elegantly via tree one basic example tree defined term forest list tree tree consists value forest subtrees child Note definition term value appropriate assumes different tree connection simply list value
+As data structure tree defined node root consists value data type possibly empty together list reference node list possibly empty reference possibly null symbolically A node consists value list reference node
+This data structure defines directed graph tree one must add condition global structure topology namely one reference point given node node single parent node tree point root
+In fact every node root must exactly one parent root must parent
+Indeed given list node node list reference child one tell structure tree without analyzing global structure fact topologically tree defined
+As abstract tree type value type defined using abstract forest type list tree function axiom In term tree defined constructor empty forest tree root node given value child
+Viewed whole tree data structure generally value attached node
+Concretely required together Often tree fixed properly bounded particularly always two child node possibly empty hence two child node hence binary tree
+Allowing empty tree make definition simpler complicated rooted tree must hence empty tree allowed definition instead becomes empty tree rooted tree
+On hand empty tree simplify defining fixed branching factor empty tree allowed binary tree tree every node exactly two child tree possibly empty complete set operation tree must include fork operation
+A structure may contain value condition represent separate data structure could tree
+Each node tree zero tree convention tree drawn growing downwards
+A node child called child
+A node one parent
+An also known short node tree child node
+Similarly also known node child node
+The topmost node tree called
+Depending definition tree may required root node case tree may allowed empty case necessarily root node
+Being topmost node root node parent
+It node algorithm tree begin since data structure one pas parent child
+Note algorithm search begin root first visit leaf node access value leaf node visit root last first access child root access root last
+All node reached following
+In formal definition path also unique
+In diagram root node conventionally drawn top
+In tree root node special property
+Every node tree seen root node subtree rooted node
+The node length longest downward path leaf node
+The height root height tree
+The node length path root
+This commonly needed manipulation various tree particular
+The root node depth zero leaf node height zero tree single node hence root leaf depth height zero
+Conventionally empty tree tree node allowed height
+A tree tree consisting node descendant
+Nodes thus correspond subtrees node corresponds subtree descendant subtree corresponding root node entire tree node root node subtree determines subtree corresponding node called analogy
+Trees often drawn plane
+Ordered tree represented essentially uniquely plane hence called follows one fix conventional order say counterclockwise arranges child node order first incoming parent edge first child edge etc
+yield embedding tree plane unique
+Conversely embedding determines ordering child node
+If one place root top parent child place node given distance root term number edge level tree given horizontal line one obtains standard drawing tree
+Given binary tree first child left left node second child right right node
+There many different way represent tree common representation represent node record pointer child parent item relationship determined position array
+Indeed binary tree implemented list list list value list head list value first term left child subtree tail list second subsequent term right child subtree
+This modified allow value well Lisp head value first term value node head tail value second term left child tail tail list third subsequent term right child
+In general node tree pointer parent information included expanding data structure also include pointer parent stored separately
+Alternatively upward link included child node data
+If edge child node thought reference tree special case digraph tree data structure generalized represent removing constraint node may one parent cycle allowed
+Edges still abstractly considered pair node however term usually replaced different terminology example
+Different exist digraph represented local data structure tree node value list child assuming list child list reference globally structure
+In connected acyclic unless stated otherwise graph theory tree graph assumed undirected
+There correspondence tree tree data structure
+We take arbitrary undirected tree arbitrarily pick one make edge directed making point away root node producing assign order node
+The result corresponds tree data structure
+Picking different root different ordering produce different one
+Given node tree child define ordered forest union subtrees given child equivalently taking subtree given node erasing root
+Just subtrees natural recursion search forest natural search
+Via forest defined list tree represented root node node tree consists value forest child Stepping item tree mean connection parent child called action tree
+Often operation might performed pointer arrives particular node
+A walk parent node traversed child called walk walk child traversed respective parent traversed called walk walk node left subtree node finally right subtree traversed called traversal
+This last scenario referring exactly two subtrees left subtree right subtree assumes specifically
+A walk effectively performs entirety tree node traversed level level root node visited first followed direct child node sibling followed grandchild node sibling node tree traversed
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R endobj obj R stream yÃÀÆÀ np ïèèh iU e èÃPw äB endstream endobj obj endobj obj R R R R R R R R R R endobj obj R R R R R R R R R endobj obj R endobj obj R endobj obj Bold R endobj obj R endobj obj Bold R endobj obj Bold R endobj obj R R endobj obj Bold R endobj obj endobj obj R stream Ø wãª ÆLp w ãY oËv JdÕh âWD
+
+Lists stack queue structure three data structure one item follows another
+Trees first structure Trees many us A tree sequence zero connected node example path tree shown The path number node path
+The tree length longest path root leaf example height longest path root leaf A C E G A C E J
+An empty tree height
+The node length path root node example Given two connected node like Node A called node B called
+A given node includes one child child
+The descendant node node reachable child child etc
+In original example node A three subtrees An important special kind tree tree
+In binary tree The two tree different child node B different first tree B left child D right child E second tree B left child E right child Also note line used instead arrow
+We sometimes clear edge go higher node lower node
+Since node never two child node represented using class field one data node plus two child pointer However since node arbitrary number child fixed number field wo work
+Instead use List keep child pointer As know list represented using either array
+For example consider general tree simplified version original example For array representation List array initial size would Draw similar picture tree List field implemented using linked list
+It often useful iterate node tree When iterated List started first node visited node turn
+Since node visited best possible complexity O N tree N node
+All traversal method achieve complexity
+For tree many different order might visit node
+There three common traversal order general tree one binary tree preorder postorder level order described
+We use illustrate traversal Preorder A preorder traversal defined recursively follows If use preorder traversal example tree given print letter node visit node following printed A B D C E G F H Postorder A postorder traversal similar preorder traversal except root subtree visited rather first If use postorder traversal example tree given print letter node visit node following printed D B G E H I F C A
+Level order The idea traversal visit root visit node level away depth root left right node level away depth root etc
+For example tree goal visit node following order A traversal requires using queue rather recursive algorithm implicitly us stack
+Here print data tree level order using queue Q using iterator access child node assume root node called Treenode class provides method Draw picture Q would time around outer loop code given given
+An traversal involves visiting root visiting left right subtrees
+Therefore traversal make sense binary tree
+The recursive definition If print letter node example tree using traversal following printed D B A E G C H F I The primary difference preorder postorder traversal node visited relation recursive call
+What printed following tree visited using preorder traversal b postorder traversal c traversal traversal
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+What would technical term tree grows direction starting root middle
+The central idea new element added tree Now I sure even okay call one direction
+But used traversal purpose need follow directed link
+There couple simple category fit graph make easier classify
+The graph drawn often called DAG short
+Most thing refer tree fall category people usually call graph either undirected cyclic tree draw one give appearance root grown tree
+People usually resort term graph case Above commonly seen well known classifier digging around Wikipedia may find others le known A tree special kind graph
+More specifically
+So graph tree
+It matter grows
+Yours directed graph really matter anyways
+It binary tree asking I believe special name simply tree
+Growing direction purely artifact drew tree
+Also little hard tell ASCII art top bottom connected cycle technically tree graph tree specific case
+Based updated picture tree directed graph
+What labeled root root multiple edge leading
+A tree specific sort Directed Acyclic Graph additional constraint must single node without edge leading
+That node root
+As see none node graph satisfy definition
+A tree acyclic graph
+In undirected tree node root since edge undirected therefore child relationship
+Most typically thought tree drawn mathematical definition apply
+In directed tree usually single root define direction edge parent child
+Which one usually implementation detail structure typically pointer parent child relational database use foreign key child parent
+Note directed tree root direction arc represent relationship
+This still three implementation simplification typical directed three le obvious
+In case implementation could either treat three undirected add underlying rooted tree labeling relationship separately
+In case edge direction drawn inconsistently I guess implementation would pick one flip arrow one half end pretty standard rooted tree
+Of course keep subtree separate one would either use two independent tree initialize root two fixed node grow one independently
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+method solution problem depends solution smaller instance problem opposed
+The approach applied many type problem one central idea computer science
+The power recursion evidently lie possibility defining infinite set object finite statement
+In manner infinite number computation described finite recursive program even program contains explicit repetition
+Most computer programming language support recursion allowing call within program text
+Some define looping construct rely solely recursion repeatedly call code
+prof language computationally powerful Turing complete imperative language meaning solve kind problem imperative language even without iterative control structure
+A common tactic divide problem type original solve combine result
+This often referred combined store result solving avoid solving repeatedly incurring extra computation time referred
+A recursive function definition one meaning input function produce result without recurring one meaning input program recurs call
+For example function defined recursively equation
+Neither equation constitutes complete definition first base case second recursive case
+Because base case break chain recursion sometimes also called terminating case
+The job recursive case seen breaking complex input simpler one
+In properly designed recursive function recursive call input problem must simplified way eventually base case must reached
+Functions intended terminate normal example exception
+Neglecting write base case testing incorrectly cause
+For function one computes obvious base case implied input data one may add number term added series example provide criterion establishes base case
+Such example naturally treated successive term output partial sum converted recursion using indexing parameter say compute th term th partial sum
+Many must process generate arbitrarily large quantity
+Recursion one technique representing data whose exact size know programmer specify data definition
+There two type definition inductive definition
+An inductively defined recursive data definition one specifies construct instance data
+For example defined inductively using syntax The code specifies list string either empty structure contains string list string
+The definition permit construction list finite number string
+Another example inductive positive Similarly recursive often used model structure programming language
+Language designer often express grammar syntax grammar simple language arithmetic expression multiplication addition This say expression either number product two expression sum two expression
+By recursively referring expression second third line grammar permit arbitrarily complex arithmetic expression one product sum operation single expression
+A coinductive data definition one specifies operation may performed piece data typically coinductive definition used data structure infinite size
+A coinductive definition infinite string given informally might look like This similar inductive definition list string difference definition specifies access content data via function content may whereas inductive definition specifies create structure may created
+related coinduction used compute particular instance possibly infinite object
+As programming technique used often context programming language preferable recursion desired size precision program output unknown
+In case program requires definition infinitely large infinitely precise result mechanism taking finite portion result
+The problem computing first n one solved corecursive program
+
+Recursion contains single known recursion contains multiple known
+Standard example single recursion include list traversal linear search computing factorial function standard example multiple recursion include search
+Single recursion often much efficient multiple recursion generally replaced iterative computation running linear time requiring constant space
+Multiple recursion contrast may require exponential time space fundamentally recursive able replaced iteration without explicit stack
+Multiple recursion sometimes converted single recursion desired thence iteration
+For example computing Fibonacci sequence naively multiple iteration value requires two previous value computed single recursion passing two successive value parameter
+This naturally framed corecursion building initial value tracking step two successive value see
+A sophisticated example using allows iterative tree traversal rather multiple recursion
+Most basic example recursion example presented demonstrate function call
+recursion occurs function called another function called either directly indirectly
+For example call direct recursion call call indirect recursion Chains three function possible example function call function function call function function call function
+Indirect recursion also called symmetric term though simply difference emphasis different notion
+That call call turn call point view alone indirectly recursing point view alone indirectly recursing point view mutually recursing
+Similarly set three function call called set mutually recursive function
+Recursion usually done explicitly calling function name
+However recursion also done via implicitly calling function based current context particularly useful known
+Some author classify recursion either structural generative
+The distinction related recursive procedure get data work process data Functions consume structured data typically decompose argument immediate structural component process component
+If one immediate component belongs class data input function recursive
+For reason refer function STRUCTURALLY RECURSIVE FUNCTIONS
+Thus defining characteristic structurally recursive function argument recursive call content field original input
+Structural recursion includes nearly tree traversal including XML processing binary tree creation search etc
+By considering algebraic structure natural number natural number either zero successor natural number function factorial may also regarded structural recursion
+alternative Many recursive algorithm generate entirely new piece data given data recur
+refers kind generative recursion
+Examples generative recursion include
+This distinction important function
+A classic example recursive procedure function used calculate The function also written This evaluation recurrence relation demonstrates computation would performed evaluating pseudocode This factorial function also described without using recursion making use typical looping construct found imperative programming language The imperative code equivalent mathematical definition using accumulator variable The definition translates straightforwardly example iteration implemented recursively
+The computes two integer written recursively
+Function definition greatest common divisor express The recursive program equivalent iterative algorithm computation shown show step evaluation would performed language eliminates tail call
+Below version algorithm using explicit iteration suitable language eliminate tail call
+By maintaining state entirely variable using looping construct program avoids making recursive call growing call stack
+The iterative algorithm requires temporary variable even given knowledge Euclidean algorithm difficult understand process simple inspection although two algorithm similar step
+The Towers Hanoi mathematical puzzle whose solution illustrates recursion
+There three peg hold stack disk different diameter
+A larger disk may never stacked top smaller
+Starting disk one peg must moved another peg one time
+What smallest number step move stack
+Example implementation Although recursive function explicit solution Tower Hanoi sequence reduced explicit formula
+The algorithm method searching single element cutting array half recursive pas
+The trick pick midpoint near center array compare data point data searched responding one three possible condition data found midpoint data midpoint greater data searched data midpoint le data searched
+Recursion used algorithm pas new array created cutting old one half
+The binary search procedure called recursively time new smaller array
+Typically array size adjusted manipulating beginning ending index
+The algorithm exhibit logarithmic order growth essentially divide problem domain half pas
+Example implementation binary search C An important application recursion computer science defining dynamic data structure
+Recursive data structure dynamically grow theoretically infinite size response runtime requirement contrast size static array must set compile time
+Recursive algorithm particularly appropriate underlying problem data treated defined recursive term
+The example section illustrate known structural recursion
+This term refers fact recursive procedure acting data defined recursively
+As long programmer derives template data definition function employ structural recursion
+That recursion function body consume immediate piece given compound value
+Below C definition linked list node structure
+Notice especially node defined term
+The next element pointer another effectively creating list type
+Because data structure defined recursively procedure operate implemented naturally recursive procedure
+The procedure defined walk list list empty list pointer value NULL
+For node print data element integer
+In C implementation list remains unchanged procedure
+Below simple definition binary tree node
+Like node linked list defined term recursively
+There two pointer left pointing left right pointing right
+Operations tree implemented using recursion
+Note two pointer left right tree operation may require two recursive call At two recursive call made given call defined
+The example illustrates binary tree
+A special case binary tree data element node order
+Since number file may vary practical way traverse thus enumerate content
+Traversing filesystem similar therefore concept behind tree traversal applicable traversing filesystem
+More specifically code would example filesystem
+This code blend line least somewhat recursion
+It essentially recursive implementation best way traverse
+It also example direct indirect recursion
+The method rtraverse purely direct example method traverse indirect call rtraverse
+This example need base case scenario due fact always fixed number file directory given filesystem
+In actual implementation rather pure recursive function single check base case otherwise recursive step number modification may made purpose clarity efficiency
+These include On basis elegance wrapper function generally approved base case frowned upon particularly academia
+Hybrid algorithm often used efficiency reduce overhead recursion small case recursion special case
+A function directly called recurse instead calling separate auxiliary function actually recursion
+Wrapper function used validate parameter recursive function skip perform initialization allocate memory initialize variable particularly auxiliary variable level recursion partial computation handle exception error
+In language support auxiliary function nested inside wrapper function use shared scope
+In absence nested function auxiliary function instead separate function possible private called directly information shared wrapper function using
+base case also known consists checking base case making recursive call checking next call base case instead calling checking base case
+particularly done efficiency reason avoid overhead function call immediately return
+Note since base case already checked immediately recursive step need checked separately one need use wrapper function case overall recursion start base case
+For example factorial function properly base case
+immediately returning
+may miss mitigated wrapper function
+primarily concern many base case encountered Null pointer tree linear number function call hence significant saving algorithm illustrated search
+tree corresponds considering leaf node child base case rather considering empty node base case
+If single base case computing factorial provides saving
+Conceptually considered either base case recursive step checking base case recursion considered different base case one step removed standard base case complex recursive step namely check valid recurse considering leaf node rather Null node base case tree
+Because complicated flow compared clear separation base case recursive step standard recursion often considered poor style particularly academia
+A basic example given DFS binary tree see section standard recursive discussion
+The standard recursive algorithm DFS In instead In term standard step move base case check recursive step
+Alternatively considered different form base case recursive step respectively
+Note requires wrapper function handle case tree empty root node Null
+In case height node Null pointer child leaf cut number function call half worst case
+In C standard recursive algorithm may implemented The algorithm may implemented Note use Boolean AND operator recursive call made node valid
+Note first term AND pointer node second term bool overall expression evaluates bool
+This common idiom recursive
+This addition evaluation Boolean OR operator check right child left child fails
+In fact entire function replaced single Boolean expression return statement legibility suffers benefit efficiency
+Recursive algorithm often inefficient small data due overhead repeated function call return
+For reason efficient implementation recursive algorithm often start recursive algorithm switch different algorithm input becomes small
+An important example often implemented switching data sufficiently small
+Hybrid recursive algorithm often refined derived hybrid merge sort
+Recursion iteration equally expressive recursion replaced iteration explicit stack iteration replaced tail recursion
+Which approach preferable depends problem consideration language used
+In iteration preferred particularly simple recursion avoids overhead function call call stack management recursion generally used multiple recursion
+By contrast recursion preferred tail recursion optimization leading little overhead sometimes explicit iteration available
+Compare template compute x defined x f n x x For imperative language overhead define function functional language overhead define accumulator variable x
+For example factorial function may implemented iteratively C assigning loop index variable accumulator variable rather passing argument returning value recursion Most use today allow direct specification recursive function procedure
+When function called program keep track various instance function often using although method may used
+Every recursive function transformed iterative function replacing recursive call simulating call stack explicitly managed program
+Conversely iterative function procedure evaluated computer see expressed term recursive function iterative control construct routinely rewritten recursive form
+However practice rewriting depends feature language
+notable mainstream language function call including may cause stack allocation would occur use looping construct language working iterative program rewritten recursive form may although tail call elimination may feature covered language specification different implementation language may differ tail call elimination capability
+In language favor iterative looping construct usually significant time space cost associated recursive program due overhead required manage stack relative slowness function call function call particularly typically fast operation difference usually le noticeable
+As concrete example difference performance recursive iterative implementation factorial example depends highly compiler used
+In language looping construct preferred iterative version may much several order magnitude faster recursive one
+In functional language overall time difference two implementation may negligible fact cost multiplying larger number first rather smaller number iterative version given happens may overwhelm time saved choosing iteration
+In programming language maximum size much le space available recursive algorithm tend require stack space iterative algorithm
+Consequently language sometimes place limit depth recursion avoid stack overflow one language
+Note caveat regarding special case
+Multiply recursive problem inherently recursive prior state need track
+One example contrast list traversal linear search list singly recursive thus naturally iterative
+Other example include function
+All algorithm implemented iteratively help explicit programmer effort involved managing stack complexity resulting program arguably outweigh advantage iterative solution
+function function recursive call hence build deferred operation
+For example gcd function shown
+In contrast factorial function also recursive call tail position build deferred multiplication operation must performed final recursive call completes
+With treat call rather function call function gcd execute using constant space
+Thus program essentially iterative equivalent using imperative language control structure like loop
+The significance tail recursion making call tail call caller return position need saved recursive call return branch directly previously saved return position
+Therefore language recognize property tail call tail recursion save space time
+In simple case function calling instruction placed recursive call executed per recursion instruction placed recursive call
+The latter executed repeatedly maximum recursion reached
+Consider example The recursive algorithm expressed
+They usually simplified single term
+If function form Then thus represents number recursive call level recursion represents factor smaller input next level recursion
+number piece divide problem represents work function independent recursion
+partitioning recombining level recursion
+
+The big advantage list sentence ability represent data mean sublists
+In chapter look example use list sublists represent information structure
+The kind structure consider called resemble tree nature The component tree called At top tree interior diagram bottom branch extend
+We going begin considering tree abstract data type without thinking list used represent tree
+For example construct tree using procedure named Scheme primitive
+About halfway chapter explore relationship tree list
+Here tree represents world Each node tree represents region world
+Consider node labeled Great Britain
+There two part node The obvious part label name Great Britain
+But region world included within Great node attached beneath Great Britain also part node
+We say every node zero For moment let say datum either word sentence
+The child tree
+Notice definition tree made tree
+What base case
+This family metaphor also part terminology tree
+We say node another node two node In advanced treatment even hear thing like grandparent cousin wo get
+What happens prune actual tree cutting branch
+The part essentially tree smaller trunk fewer branch
+The metaphor perfect part root still stick end ground hope end take root new tree
+It country example country branch node entire world tree also tree
+Depending think Great Britain either component entire world collection smaller location
+So branch node represents Great Britain root node entire tree
+What node
+It might seem natural think node information one circle think node including datum
+In way thinking node would separate every node word sentence separate element
+However useful think node structure includes everything circle also datum child
+So think node Great Britain thinking name Great Britain also everything Great Britain
+From perspective root node tree includes entire tree
+We might well say node tree
+The constructor tree actually constructor one node root node
+Our constructor tree therefore called
+It take two argument datum possibly empty list child
+As following example show constructing think one tree requires construction many node
+You notice defined place shown figure
+That got tired typing going invent abbreviation later
+For take time show selector tree
+tree node return datum node
+node return list child node
+A list tree called Here abbreviation help u construct world tree le typing
+Unlike intended work tree general abbreviation designed world tree specifically mind With abbreviation world tree somewhat easier define Now tree many city world
+At first glance may seem like simple case recursion calling
+But since look like single recursive call really call equivalent recursive call one child given tree node
+Note call call
+This pattern called Mutual recursion often useful technique dealing tree
+In typical recursion seen chapter moved sequentially list sentence recursive call taking u one step right
+In following paragraph present three different model help think shape tree give rise mutual recursion
+In first model going think initialization procedure helper procedure
+Suppose want count leaf tree
+Unless argument shallow tree involve counting leaf child tree
+What want straightforward sequential recursion list child
+But given wrong argument tree list child
+So need initialization procedure whose job extract list child invoke helper procedure list argument
+The helper procedure follows usual sequential list pattern Do something list recursively handle list
+Now
+In usual sequential recursion list something simple word
+What special tree tree like entire data structure started
+Therefore must invoke procedure whose domain tree
+This model built two idea
+One idea domain function reason need two procedure need one take tree argument one take list tree argument
+The idea leap faith assume invocation within correctly handle child without tracing exact sequence event
+The second model easier state le rigorous
+Because nature tree order visit every node able move two different direction
+From given node able move child child must able move next sibling
+The job move left right list child
+It using familiar kind recursion invokes directly
+The downward motion happens move one level invoking
+How program move one level
+At level invoked recursively
+The third model also based nature tree
+Imagine moment node tree one child
+In case could move root single leaf structure similar actual procedure carrying sequential recursion The trouble course downward step single next node
+Instead single path root leaf multiple path root many leaf
+To make idea downward motion sequential recursion work real tree level must clone many time child
+factory manufacture clone
+It hire one little person child accumulates result
+The key point recursion tree child tree perfectly good tree
+This recursiveness nature tree give rise recursive structure program use tree
+The reason say recursive invocation cause one several recursive invocation one child way
+In fact use name situation procedure invocation result one recursive call even argument tree
+The computation Fibonacci number Chapter example tree recursion tree
+The recursion Chapter also tree recursion structured somewhat character even though use formal mechanism exploring chapter
+The recursion horizontal one moving one element another within list recursion vertical one exploring sublist given list
+Procedures explore tree always simple
+We started example could write using function understand structure problem take complexity mutual recursion
+But many tree problem quite fit function
+For example let write predicate take name place tree argument tell whether place tree
+It possible make work This awkward construction however also performs unnecessary computation
+If place looking happens first child node nevertheless look child well
+We better replacing use mutual recursion Although mutual recursion little tricky read structure program fit way describe algorithm English
+A place tree one two condition hold place datum root tree place recursively one child tree tree
+That say
+As say place one group tree place first tree one remaining tree
+Our next project similar previous one little intricate
+We like able locate city find larger region enclose city
+For example want say Instead getting answer whether city tree want find
+The algorithm recursive To look Berkeley within world need able look Berkeley within subtree
+The node several child country
+recursively asks child find path Berkeley
+All one child return ca find Berkeley within territory
+But node return To make complete path prepend name current node path
+What happens try look Berkeley Australia
+Since Australia child return path Berkeley Australia return
+Compare structure
+The helper procedure almost identical
+The main procedure look different harder job check two possibility The city might datum argument node might belong one child tree
+We done lot tree yet talked way Scheme store tree internally
+How work
+It turn convenient represent tree term list
+In word tree list whose first element datum whose remaining element subtrees
+Ordinarily however going print tree entirety
+As example extract subset information put readable form
+The procedure define abstract data type tree
+Using ADT able write several useful procedure manipulate tree pinning exactly tree represented Scheme list
+Although would possible refer part node using directly program readable use selector constructor
+Consider example What mean context
+Is tree datum
+A child
+A forest
+Of course could work careful reasoning form presented example originally much clearer Even better would Using appropriate selector constructor called data abstraction
+Failing use appropriate selector constructor called Since wrote selector constructor tree could defined use different representation You might expect change representation would require change procedure wrote earlier
+But fact procedure would continue work perfectly see representation
+They respect data abstraction
+As long find right information matter tree stored
+All matter constructor selector compatible
+On hand example section violated data abstraction using find second child would fail changed representation
+Many case like one formerly working program failed change representation led programmer use moralistic term respecting violating data abstraction
+Consider notation arithmetic expression
+Scheme us notation
+By contrast people Scheme programmer generally represent arithmetic computation using notation function symbol go two argument
+Our goal section translate infix arithmetic expression tree representing computation
+This translation process called expression
+For example turn expression tree The point using tree going easy perform computation tree form
+In original infix form hard know first rule determine implicit grouping Multiplication division come addition subtraction operation precedence done left right
+Our sample expression equivalent In tree representation easy see operation nearer leaf done first root node last operation depends result operation
+Our program take argument infix arithmetic expression form list Each element list must one three thing number one four symbol sublist list example satisfying rule
+You imagine implementing pocket calculator
+If implementing computer programming language also accept variable name operand
+But bothering complication really affect part problem turning expression tree
+What make problem tricky ca put list element tree soon see
+For example first three element sample list
+It tempting build subtree three element But compare picture earlier picture correct tree see second argument invocation number rather subexpression
+By reasoning might think examine entire expression start building tree
+But fact sometimes build subtree confidence
+For example see minus sign sample expression tell subexpression come complete higher precedence
+Here plan
+The program examine argument left right
+Since program ca finish processing list element right away maintain information element examined entirely processed
+It going easier maintain information two part one list operation another operand
+Here first step parsing sample expression program examines element argument putting number onto operand list operation symbol onto operation list At point program looking operator infix expression
+If newly seen operator lower precedence already head list operation would time carry operation creating tree root first two operand list child
+Instead since higher precedence program ready create subtree must instead add operation list
+This time newly seen operation lower precedence head operation list
+Therefore time program operator making subtree containing operator first two element operand list
+This new subtree becomes new first element operand list
+Because program decided handle waiting operator still moved operator infix expression operator list
+Now program must compare head list
+These two operator precedence
+Since want carry operator left right time handle operator
+Finally program move operator onto operator list
+The next several step similar one already seen
+This new situation The first unseen element infix expression neither number operator sublist
+We recursively subexpression adding resulting tree operand list
+Then proceed processing higher precedence priority
+Once program examined every element infix expression operator remaining operator list must handled
+In case one operator
+Once operator handled one element remaining operand list element desired tree entire original expression
+The following program implement algorithm
+It work correctly formed infix expression given argument like give incorrect result Scheme error
+We promised building tree would easy compute value expression
+Here program A leaf node perfectly good actual argument tree procedure even though picture leaf node look treeish branch
+A common mistake make base case recursion node whose child leaf instead node leaf
+The value returned tree forest
+therefore suitable actual argument procedure expects tree
+What mean printout
+Why two set parenthesis
+Suppose change definition tree constructor us instead How change selector everything still work
+Write procedure take tree argument return largest number node connected link
+That leaf node depth tree child root node leaf depth
+Our world tree depth longest path root leaf example world country state city
+Write procedure take tree argument return total number node tree
+Earlier counted number node
+Write procedure take tree argument return copy tree leaf node original tree removed
+If argument tree root node child return result removing root node would tree
+Write program par Scheme arithmetic expression kind tree produce infix expression
+Assume procedure invocation Scheme expression two argument
+The resulting tree valid argument You solve problem without restriction invocation rewrite assume every branch node two child
+You probably think tree short tall
+But since tree convention call shallow deep
+Another example data abstraction violation Chapter
+When creates empty database use constructor
+Instead merely used quoted empty sentence Actually see shortly element operand list tree put operand list tree whose datum number
+chapter thread
+
+learn share knowledge build career
+One topic seems come regularly mailing list online discussion merit lack thereof Computer Science Degree
+An argument seems come time negative party coding number year never used recursion
+So question This question exists historical significance please use evidence ask similar question
+This question answer frozen changed
+More info
+There number good explanation thread answer use language
+In majority major imperative language implementation
+every major implementation C Basic Python Ruby Java C vastly preferable recursion
+To see walk step language use call function Doing step take time usually little bit take iterate loop
+However real problem step
+When many program start allocate single chunk memory stack run memory often always due recursion program crash due
+So language recursion slower make vulnerable crashing
+There still argument using though
+In general code written recursively shorter bit elegant know read
+There technique language implementers use called eliminate class stack overflow
+Put succinctly function return expression simply result function call need add new level onto stack reuse current one function called
+Regrettably imperative optimization built
+By way Mario typical name ArrangeString function join I surprised language choice already implementation
+Simple english example recursion
+In basic computer science sense recursion function call
+Say linked list structure And want find long linked list recursion This could course done loop well useful illustration concept Whenever function call creating loop recursion
+As anything good us bad us recursion
+The simple example tail recursion last line function call However lame almost pointless example easily replaced efficient iteration
+After recursion suffers function call overhead example could substantial compared operation inside function
+So whole reason recursion rather iteration take advantage clever stuff
+For example call function multiple time different parameter inside loop way accomplish
+A classic example
+You draw one simply recursion call stack branch direction If attempt thing iteration I think find take lot code accomplish
+Other common use case might include traversing hierarchy
+website crawler directory comparison etc
+In practical term recursion make sense whenever need iterative branching
+Recursion method solving problem based divide conquer mentality
+The basic idea take original problem divide smaller easily solved instance solve smaller instance usually using algorithm reassemble final solution
+The canonical example routine generate Factorial The Factorial n calculated multiplying number An iterative solution C look like There nothing surprising iterative solution make sense anyone familiar C
+The recursive solution found recognising nth Factorial n Fact
+Or put another way know particular Factorial number calculate next one
+Here recursive solution C The first part function known sometimes Guard Clause prevents algorithm running forever
+It return value whenever function called value le
+The second part interesting known
+Here call method slightly modified parameter decrement multiply result copy When first encountered kind confusing instructive examine work run
+Imagine call FactRec
+We enter routine picked base case end like If method parameter stopped guard clause end If substitute return value return value get This give clue final solution arrived fast track show step way That final substitution happens base case triggered
+At point simple algrebraic formula solve equates directly definition Factorials first place
+It instructive note every call method result either base case triggered call method parameter closer base case often called recursive call
+If case method run forever
+Recursion solving problem function call
+A good example factorial function
+Factorial math problem factorial example
+This function solves C positive integer tested may bug
+The canonical example factorial look like In general recursion necessarily fast function call overhead tends high recursive function tend small see suffer problem stack overflow anyone
+Some say tend hard get case I really buy
+In situation recursion make sense elegant clear way write particular function
+It noted language favor recursive solution optimize much LISP come mind
+Recursion refers method solves problem solving smaller version problem using result plus computation formulate answer original problem
+Often time process solving smaller version method solve yet smaller version problem reach base case trivial solve
+For instance calculate factorial number one represent
+Thus method recurses find factorial multiplies whatever got give final answer
+Of course find factorial first calculate factorial
+The base case would case know return since
+Consider In mathematics gcd two integer largest positive integer divide number without remainder
+The definition gcd surprisingly simple mod remainder integer division
+In English definition say greatest common divisor number zero number greatest common divisor two number greatest common divisor remainder dividing
+If like know work see Wikipedia article
+Let compute gcd example
+Each step equal one In first step equal zero second part definition applies
+mod go remainder
+At step second part applies time mod divide remainder
+At step second argument answer
+Did notice gcd appears left right side equal sign
+A mathematician would say definition recursive expression defining inside definition
+Recursive definition tend elegant
+For example recursive definition sum list first element list rest list
+Note recurs inside definition end
+Maybe prefer maximum value list instead You might define multiplication integer recursively turn series addition If bit transforming multiplication series addition make sense try expanding simple example see work
+lovely recursive definition Recursive definition around know look
+Notice definition simple base case gcd The recursive case whittle away problem get easy answer
+With understanding appreciate algorithm
+A recursive function one call
+The common reason I found use traversing tree structure
+For example I TreeView checkboxes think installation new program choose feature install page I might want check button would something like pseudocode So see checkRecursively first check node passed call node child
+You need bit careful recursion
+If get infinite recursive loop get Stack Overflow exception I ca think reason people use appropriate
+It useful circumstance others
+I think interesting technique coder perhaps end using often without real justification
+This given recursion bad name circle
+Recursion work best I like call fractal problem dealing big thing made smaller version big thing even smaller version big thing
+If ever traverse search something like tree nested identical structure got problem might good candidate recursion
+People avoid recursion number reason Most people included cut programming teeth procedural programming opposed functional programming
+To people iterative approach typically using loop feel natural
+Those u cut programming teeth procedural programming often told avoid recursion error prone
+We often told recursion slow
+Calling returning routine repeatedly involves lot stack pushing popping slower looping
+I think language handle better others language likely dominant paradigm procedural
+For least couple programming language I used I remember hearing recommendation use recursion get beyond certain depth stack deep
+Recursion expression directly indirectly referencing
+Consider recursive acronym simple example Here simple example many element set
+better way count thing nice simple recursive example
+First need two rule Suppose set like x x x
+let count many item
+We represent When applying recursive solution usually least rule If translate pseudocode get There lot useful example traversing tree example I sure people cover
+For example take factorial But easy see factorial also So generally Of course tricky thing recursion want define thing term already done need place start
+In example make special case defining factorial
+Now see bottom Since defined factorial reach bottom
+Generally speaking recursive procedure two part The recursive part defines procedure term new input combined already done via procedure
+
+A base part make sure process repeat forever giving place start
+It bit confusing get head around first look bunch example come together
+If want much deeper understanding concept study mathematical induction
+Also aware language optimize recursive call others
+It pretty easy make insanely slow recursive function careful also technique make performant case
+Hope help
+I like definition In recursion routine solves small part problem divide problem smaller piece call solve smaller piece
+I also like Steve McConnells discussion recursion Code Complete criticises example used Computer Science book Recursion
+One problem textbook present silly example recursion
+The typical example computing factorial computing Fibonacci sequence
+Recursion powerful tool really dumb use either case
+If programmer worked used recursion compute factorial hire someone else
+I thought interesting point raise may reason recursion often misunderstood
+EDIT This dig Dav answer I seen reply I posted
+A method recursive call either directly indirectly
+When use recursion
+People use recursion complex write iterative code
+For example tree traversal technique like preorder postorder made iterative recursive
+But usually use recursive simplicity
+To recurse solved problem nothing done
+To recurse open problem next step recurse rest
+Well pretty decent definition
+And wikipedia good definition
+So I add another probably worse definition
+When people refer recursion usually talking function written call repeatedly done work
+Recursion helpful traversing hierarchy data structure
+An example A recursive definition staircase A staircase consists single step staircase recursion single step termination In plain English Assume thing The process repeating thing till done called recursion
+I hope plain english answer looking
+A recursive function function contains call
+A recursive struct struct contains instance
+You combine two recursive class
+The key part recursive item contains
+Consider two mirror facing
+We seen neat infinity effect make
+Each reflection instance mirror contained within another instance mirror etc
+The mirror containing reflection recursion
+A good programming example recursion
+The structure recursive Node containing instance Node
+Functions work binary search tree also recursive
+This old question I want add answer logistical point view algorithm correctness point view performance point view
+I use Java work Java support nested function
+As I want recursion I might define external function exists code bump Java bureaucratic rule I might refactor code altogether I really hate
+Thus I often avoid recursion use stack operation instead recursion essentially stack operation
+You want use anytime tree structure
+It useful reading XML
+Recursion applies programming basically calling function inside definition inside different parameter accomplish task
+Recursion strategy problem every step turn small thing one bigger thing time hammer
+Suppose desk covered disorganized mess paper
+How make one neat clean stack paper mess using recursion
+Notice pretty intuitive aside counting everything strictly necessary
+You might go way stack reality could would still work
+The important part hammer With arm always put one stack top make bigger stack matter within reason big either stack
+Recursion process method call iself able perform certain task
+It reduces redundency code
+Most recurssive function method must condifiton break recussive call
+stop calling condition met prevents creating infinite loop
+Not function suited used recursively
+hey sorry opinion agrees someone I trying explain recursion plain english
+suppose three manager Jack John Morgan
+Jack manages programmer John Morgan going give every manager want know would cost
+The answer obvious employee also manager
+HERE come recursion
+start top hierarchy
+summery cost
+start Jack Then check manager employee
+find check manager employee
+Add summery cost every time find manager
+finished Jack go John employee Morgan
+You never know much cycle go getting answer though know many manager many Budget spend
+Recursion tree branch leaf called parent child respectively
+When use recursion algorithm le consciously building tree data
+In plain English recursion mean repeat someting
+In programming one example calling function within
+Look following example calculating factorial number Any algorithm exhibit recursion datatype basically consists case case datatype
+example working type structural recursive algorithm would form really obvious way write algorith work data structure
+look integer well natural number defined using Peano axiom see structural recursive algorithm integer look like factorial function trivial example form
+function call use definition
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+A call tree layered communication model used notify specific individual event typically unplanned nature coordinate recovery necessary
+A call tree also known phone tree call list phone chain text chain
+Download checklist completing actionable business continuity BC download PDF containing BC planning mistake avoid step ensure continuity
+You forgot provide Email Address
+This email address appear valid
+This email address already registered
+Please
+You exceeded maximum character limit
+Please provide Corporate Address
+By submitting Email address I confirm I read accepted Terms Use By submitting personal information agree TechTarget may contact regarding relevant content product special offer
+You also agree personal information may transferred processed United States read agree
+Call tree play important role
+They automated contact individual using landline email cellphone text message another type communication
+Smaller organization often use manual call tree person receives call responsible calling others tree
+The team creating call tree coordinate gathering contact data typically come department
+Each listed employee may several contact including office home cellphone number email address
+The list contact sequence notification approved emergency management team company management
+The emergency call tree available several location company format someone keep information date
+In term format call tree exist simple worksheet tabular structure listing call
+During call tree initiated emergency management team completed assessment determined employee must notified
+One employee designated launch emergency call tree
+An organization alternate call tree lead event original lead available
+As call tree progress member take note people ca reach data must relayed back emergency team
+To ensure call completed planned last person list confirm receipt final call designated employee
+Another designated employee serve communication list manager monitor response contact backup staff necessary
+Once entire call tree notified procedure proceed
+Call tree benefit include human interaction ability relay important information creation comprehensive list employee contact information
+In manual case person call tree contact next person list everyone contacted
+In event next person list reached caller continues next level phone tree chain break
+The manual call tree procedure often simple effective may could take long large number employee need contacted
+To address limitation automated method allows business continuity manager record employee
+During call manager system receive input user Press need assistance
+Because automated method place call simultaneously help reduce eliminate possible break emergency call tree
+The keep track call made response received
+Emergency notification system two form Call tree software available vendor AtHoc Everbridge One Call Now Send Word Now
+An emergency communication plan may include automated notification system traditional landline tree case internet cellular service disrupted
+The phone tree tested conference room another office location
+This process ensures everyone know emergency call tree initiated confirms call tree procedure work according plan validates contact information correct
+Call tree testing guideline include A testing exercise provides critical check call tree procedure event incident
+A company complete call tree testing perform part
+At one time manual call tree may option available organization due technological limitation
+But tree sustainable used cellphone coverage lost emergency employee use variety device medium communicate information
+For example text message may easier way reach someone phone call
+Automated call tree software option increased recent year
+Functionalities beyond emergency notification include Find content member offer asks By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+The debate still rage whether array make hybrid array obsolete cost matter SAS SATA battle enterprise data storage show hard drive SAS interface trending cheaper MLC SSDs outnumber SLC Latest TechTarget cloud survey find cloud backup cloud file sync share disaster recovery archiving popular
+Cloud storage implementation user range backup DR tiering
+We reveal cloud storage application Assistant Editor Rachel Kossman tweet link content well analysis industry expert
+Interact let u WannaCry Amazon bucket put greater focus data protection security
+Converged appliance Veeam CEO shift We compiled top five piece data protection backup advice given copy data management product Veeam add physical cloud capability Availability Suite update
+The backup recovery vendor also accelerating
+Most organization understand benefit SDDC widespread adoption hit yet
+Challenges
+Storage acquisition included Hewlett Packard Enterprise buy SimpliVity Nimble Storage Toshiba move
+The physical virtualization management layer SDDC make possible pool physical component logical All Rights Reserved
+
+We need clarify question tutor
+TutorSense Course Hero homework study help need succeed
+We got note study guide practice test along expert tutor customizable anywhere anytime
+Find best study resource around tagged specific course
+Share gain free Course Hero access earn money Marketplace
+Get homework help expert online
+Ask question browse existing Q A thread
+Satisfaction guaranteed
+Browse existing set create using digital flashcard system
+A simple yet effective studying tool help earn grade want
+Or get help Computer Science expert
+Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+A computer operator person responsible monitoring controlling computer system especially computer system company organization
+Responsibilities include troubleshooting software hardware problem monitoring processing maintaining improving system performance online availability maintaining system documentation assisting personnel computer problem
+Other responsibility depend employer might include system backup maintaining computer room equipment including printer tape storage device providing customer support
+A computer operator may often asked know learn main computer operating system IBM Job Entry Subsystem local area network operation application used employer
+A high school diploma usually required
+Most employer also require formal technical training one three year experience
+A computer operator must effectively interact communicate others able work independently strong analytical skill able recognize respond problem situation
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+

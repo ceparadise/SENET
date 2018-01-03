@@ -1,0 +1,1711 @@
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+In computer programming task basic unit programming control
+Depending operating system defines task design unit programming may entire successive invocation program
+Since one program may make request program utility program may also considered task subtasks
+All today operating system support allows multiple task run concurrently taking turn using resource computer
+In task may assigned priority depending relative importance amount resource consuming factor
+The operating system preempt cut short task lower priority value higher priority task given turn
+example operating system use preemptive multitasking
+ability operating system manage multiple task application program time without ability necessarily preempt
+It easy confuse term
+Multithreading management multiple concurrent us program
+Most operating system modern computer language also support multithreading
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+In execution smallest sequence programmed instruction managed independently typically part
+The implementation thread differs operating system case thread component process
+Multiple thread exist within one process executing sharing resource different process share resource
+In particular thread process share executable code value variable given time
+Systems single processor generally implement multithreading CPU switch different
+This generally happens often rapidly enough user perceive thread task running parallel
+On system multiple thread execute every processor core executing separate thread simultaneously processor core separate software thread also executed concurrently separate hardware thread
+Threads made early appearance MVT context called task
+The term thread attributed
+many modern operating system directly support multiprocessor threading allows programmer manipulate thread exposing required functionality interface
+Some threading implementation called whereas LWP specific type kernel thread share state information
+Furthermore program threading timer signal method interrupt execution performing sort time slicing
+Threads differ traditional operating system Systems said thread process operating system great difference except cost switch architecture notably result TLB flush
+In one time
+The opposite multithreading
+While suggested term misleading term widely accepted within community
+Multithreading mainly found multitasking operating system
+Multithreading widespread programming execution model allows multiple thread exist within context one process
+These thread share process resource able execute independently
+The threaded programming model provides developer useful abstraction concurrent execution
+Multithreading also applied one process enable system
+Multithreaded application following advantage Multithreading following drawback Operating system schedule thread either cooperatively
+On widely used approach finer grained control execution time via
+However preemptive scheduling may context switch thread moment unanticipated programmer therefore causing
+In contrast relies thread relinquish control execution thus ensuring thread
+This create problem cooperatively multitasked thread waiting thread yielding control execution intensive computation
+Until early desktop computer one CPU support although thread still used computer switching thread generally still quicker
+In added support processor name introduced processor introduced processor
+Processors higher requirement behavior might support multithreading decreasing time perhaps allocating dedicated thread instead common register file
+Scheduling done kernel level user level multitasking done preemptively cooperatively
+This yield variety related concept
+At kernel level contains one share process resource memory file handle process unit resource thread unit scheduling execution
+Kernel scheduling typically uniformly done preemptively le commonly cooperatively
+At user level process schedule multiple thread execution
+If share data Erlang usually analogously called process share data usually called particularly preemptively scheduled
+Cooperatively scheduled user thread known different process may schedule user thread differently
+User thread may executed kernel thread various way
+The term variously refers user thread kernel mechanism scheduling user thread onto kernel thread
+A heavyweight unit kernel scheduling creating destroying switching process relatively expensive
+Processes allocated operating system
+Resources include memory code data socket device handle window
+Processes share address space file resource except explicit method inheriting file handle shared memory segment mapping file shared way see
+Creating destroying process relatively expensive resource must acquired released
+Processes typically preemptively multitasked process switching relatively expensive beyond basic cost due issue cache flushing
+A lightweight unit kernel scheduling
+At least one kernel thread exists within process
+If multiple kernel thread exist within process share memory file resource
+Kernel thread preemptively multitasked operating system process preemptive
+Kernel thread resource except copy including thus relatively cheap create destroy
+Thread switching also relatively cheap requires context switch saving restoring register stack pointer change virtual memory thus leaving TLB valid
+The kernel assign one thread logical core system processor split multiple logical core support multithreading support one logical core per physical core swap thread get blocked
+However kernel thread take much longer user thread swapped
+Threads sometimes implemented library thus called
+The kernel unaware managed scheduled
+Some implementation base user thread top several kernel thread benefit machine
+In article term thread without kernel user qualifier default referring kernel thread
+User thread implemented also called
+User thread generally fast create manage take advantage multithreading multiprocessing get blocked associated kernel thread get blocked even user thread ready run
+even lighter unit scheduling running fiber must explicitly allow another fiber run make implementation much easier kernel
+A fiber scheduled run thread process
+This permit application gain performance improvement managing scheduling instead relying kernel scheduler may tuned application
+Parallel programming environment typically implement task fiber
+Closely related fiber distinction coroutines construct fiber construct
+Threads process share address space
+This allows concurrently running code tightly conveniently exchange data without overhead complexity
+When shared thread however even simple data structure become prone require one CPU instruction update two thread may end attempting update data structure time find unexpectedly changing underfoot
+Bugs caused race condition difficult reproduce isolate
+To prevent threading APIs offer data structure concurrent access
+On uniprocessor system thread running locked mutex must sleep hence trigger context switch
+On system thread may instead poll mutex
+Both may sap performance force processor SMP system contend memory bus especially locking fine
+Although thread seem small step sequential computation fact represent huge step
+They discard essential appealing property sequential computation understandability predictability determinism
+Threads model computation wildly job programmer becomes one pruning nondeterminism
+User thread fiber implementation typically entirely
+As result context switching user thread fiber within process extremely efficient require interaction kernel context switch performed locally saving CPU register used currently executing user thread fiber loading register required user thread fiber executed
+Since scheduling occurs userspace scheduling policy easily tailored requirement program workload
+However use blocking system call user thread opposed kernel thread fiber problematic
+If user thread fiber performs system call block user thread fiber process unable run system call return
+A typical example problem performing program written perform synchronously
+When operation initiated system call made return operation completed
+In intervening period entire process blocked kernel run starves user thread fiber process executing
+A common solution problem providing API implement synchronous interface using internally scheduling another user thread fiber operation progress
+Similar solution provided blocking system call
+Alternatively program written avoid use synchronous blocking system call
+implemented LWPs
+implement LWPs kernel thread model
+SunOS SunOS well NetBSD NetBSD implemented two level model multiplexing one user level thread kernel thread M N model
+SunOS later well NetBSD eliminated user thread support returning model
+FreeBSD implemented M N model
+FreeBSD supported M N user could choose one used given program using
+Starting FreeBSD became default
+FreeBSD longer support M N model
+The use kernel thread simplifies user code moving complex aspect threading kernel
+The program need schedule thread explicitly yield processor
+User code written familiar procedural style including call blocking APIs without starving thread
+However kernel threading may force context switch thread time thus expose race hazard concurrency would otherwise lie latent
+On SMP system exacerbated kernel thread may literally execute separate processor parallel
+Threads created user correspondence schedulable entity kernel simplest possible threading implementation
+used approach start implement approach via older
+This approach also used
+An model implies thread map one scheduled entity kernel knowledge application thread
+With approach context switching done quickly addition implemented even simple kernel support threading
+One major drawback however benefit hardware acceleration processor computer never one thread scheduled time
+For example If one thread need execute request whole process blocked threading advantage used
+The us threading
+M N map M number application thread onto N number kernel entity virtual processor
+This compromise threading
+In general M N threading system complex implement either kernel user thread change kernel code required
+In M N implementation threading library responsible scheduling user thread available schedulable entity make context switching thread fast avoids system call
+However increase complexity likelihood well suboptimal scheduling without extensive expensive coordination userland scheduler kernel scheduler
+Fibers implemented without operating system support although operating system library provide explicit support
+IBM F included support multithreading called late continued Optimizing Compiler later version
+The IBM Enterprise compiler introduced new model thread API
+Neither version part standard
+Many programming language support threading capacity
+Many implementation support threading provide access native threading APIs operating system
+Some usually programming language language expose threading developer abstracting platform specific difference threading implementation runtime
+Several programming language language extension also try abstract concept concurrency threading developer fully MPI
+Some language designed sequential parallelism instead especially using GPUs without requiring concurrency thread
+A interpreted programming language implementation Ruby Python support threading concurrency parallel execution thread due GIL
+The GIL mutual exclusion lock held interpreter prevent interpreter simultaneously interpreting application code two thread effectively limit parallelism multiple core system
+This limit performance mostly thread require processor much one
+Other implementation interpreted programming language using Thread extension avoid GIL limit using Apartment model data code must explicitly shared thread
+In Tcl thread one interpreter
+different threading model support extremely large number thread modeling hardware
+A standardized interface thread implementation Pthreads set library call
+OS vendor free implement interface desired application developer able use interface across multiple platform
+Most platform including Linux support Pthreads
+Microsoft Windows set thread function interface multithreading like
+Java provides yet another standardized interface host operating system using library
+Multithreading library provide function call create new thread take function parameter
+A concurrent thread created start running passed function end function return
+The thread library also offer synchronization function make possible implement free multithreading function using condition variable synchronization primitive
+Another paradigm thread usage set number thread created startup wait task assigned
+When new task arrives wake completes task go back waiting
+This avoids relatively expensive thread creation destruction function every task performed take thread management application developer hand leaf library operating system better suited optimize thread management
+For example framework like
+In programming model designed array thread run parallel using ID find data memory
+In essence application must designed thread performs operation different segment memory operate parallel use GPU architecture
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+Drawing upon decade experience RAND provides research service systematic analysis innovative thinking global clientele includes government agency foundation firm
+The Pardee RAND Graduate School largest public policy program nation program based independent public policy research RAND Corporation
+Senior Policy Researcher Faculty Member Pardee RAND Graduate School Assistant Policy Researcher
+Candidate Pardee RAND Graduate School APPROVED FOR PUBLIC RELEASE DISTRIBUTION UNLIMITED In October Task Force organized Advanced Research Projects Agency Defense Advanced Research Projects Agency study recommend appropriate computer security safeguard would protect classified information computer system
+The report Task Force functioned auspex Defense Science Board published The Rand Corporation February Office Director Defense Research Engineering Department Defense
+A slightly modified version report omission two memoranda transmittal Task Force Chairman Defense Science Board onward Secretary Defense subsequently published Rand Report
+At time felt representative government agency participated work Task Force information report would appear official nature suggestive policy guideline would eventually established
+Consequently felt prudent classify report Confidential overall
+On October Defense Advanced Research Projects Agency declassified
+Nearly decade later report still valuable comprehensive discussion security control computer system
+Ideas first expressed report even occasional figure gradually seeped technical literature still contains material published elsewhere
+For example includes appendix outline formally specifies set access control accommodate intricate structure classification system used defense establishment
+The original classification report limited distribution largely defense agency defense contractor civil agency government industry large generally access
+Because continuing importance computer security report reissued time wider distribution
+The support The Rand Corporation reprinting report gratefully acknowledged
+The question security control system brought focus Department Defense series event spring summer
+Such system procured increasing number government installation problem security becoming pressing concern defense contractor military operation Research Security Administrators forwarded position paper Defense Supply Agency Director Security Policy Office Assistant Secretary Defense Administration soliciting action
+Since matter involved technical issue paper referred Office Director Defense Research Engineering consideration
+In June Deputy Director Administration Evaluation Management requested Director Advanced Research Projects Agency ARPA form Task Force study recommend hardware software safeguard would satisfactorily protect classified information computer system
+Within ARPA responsibility task forwarded Robert Taylor Director Office Information Processing Techniques
+A series discussion held summer fall month people university industrial community culminating formation October Task Force consisting Steering Group two Panels
+The organizational meeting held following month thereafter Panels Steering Group met regular basis formulate recommendation constitute body Report
+The Task Force operated formally authority Defense Science Board
+Following member Steering Group Patrick Haverty Deputy Chairman Robert Mosier Vice Chairman Arthur Bushkin Secretary Elliot Cassidy John Egan Edward Glaser John Kuipers Jerome Moskowitz Lawrence Roberts formerly Robert Taylor Robert von Buelow The two panel organized Steering Group Policy Panel Technical Panel
+The following member Policy Panel Donal Burns Thomas Chittenden Richard Cleaveland Roy McCabe Barry Wessler Ronald Wigington Edward Glaser Willis Ware The Technical Panel consists following Arthur Bushkin Secretary James Anderson Edward Bensley Charles Blair Daniel Edwards Harold Jayne Lawrence Roberts Jerome Saltzer Jerome Moskowitz Willis Ware Initially representative Directorate Security Policy Lieutenant Commander Armen Chertavian USN representative Policy Panel Central Intelligence Agency Fred Ohm
+The member Task Force participated individual knowledgeable technical policy administrative issue involved
+Thus view stated herein reflect policy Federal Government agency university industrial corporation
+Ultimately Report written one person
+The original draft written Willis Ware using source noted
+It critiqued modified emended shaped member Steering Group Panels
+A second complete draft written Thomas Chittenden final version Willis Ware
+Each Panel produced series paper formed basis recommendation software hardware procedure policy
+The Introduction portion Part A initially authored Wade Holland utilizing material provided Willis Ware source
+Section V Part A System Characteristics largely Willis Ware incorporating material paper Technical Panel information personal letter Glaser
+Part B Policy Considerations Recommendations substantially final paper produced Policy Panel
+Many explanatory comment come original paper although added final writing
+The Technical Recommendations Part C mainly reflect content two paper produced Technical Panel modified minor extent information personal letter Glaser
+Finally Part D Management Administrative Control written Willis Ware utilizes idea Security Classified Information Defense Intelligence Analyst Support Research System February Security Procedures RYE System Ellis December
+The Appendix first drafted Arthur Bushkin Willis Ware subsequently extended rewritten Bushkin Robert Balzer
+The final editing detail format style due Wade Holland
+The Report printed published The Rand Corporation ARPA sponsorship
+The success venture depends upon personal dedication volunteer participation individual involved
+In addition listed member Steering Group Panels also pleasure acknowledge contribution Robert Balzer Wade Holland The Rand Corporation Santa Monica California Miss Hilda Faust National Security Agency Fort George Meade Maryland Clark Weissman System Development Corporation Santa Monica California
+A special acknowledgment due Thomas Chittenden National Security Agency Fort George Meade Maryland rewrote entire document produce second draft
+The subject security control computer system sufficiently wide interest many member Steering Group Panels contacted number individual organization agency course effort
+It would impossible mention every person talked way influenced final recommendation
+Among others however interacted Colonel Roy Morgan Defense Intelligence Agency representing ANSR computing system George Hicken National Security Agency representing RYE COINS system
+The Steering Group Panels also acknowledge contribution many individual read draft material supplied valuable comment suggestion
+With advent computer system distribute capability component machine configuration among several user several task new dimension added problem safeguarding classified information
+The basic problem associated machine processing classified information new
+They encountered mode operation recently use remote system method used safeguard information system part extension traditional manual mean handling classified document
+The increasingly widespread use system introduced new complexity problem
+Moreover use system focused attention broader issue using computer regardless configuration store process classified information
+system distribute resource computer system memory space arithmetic unit peripheral equipment channel among number simultaneous user
+The term includes system commonly called two processor share primary memory
+The principle distinction among system whether user must present terminal example interact job whether job execute autonomously multiprogrammed remote batch
+allows many people use complex computer equipment concurrently
+The user generally although necessarily geographically separated central processing equipment interact machine via remote terminal console
+Each user program executed order period time necessarily completion
+The central processing equipment devotes resource servicing user turn resuming left previous processing cycle
+Due speed modern computer individual user rarely aware receiving fraction system attention job fragmented piece processing
+Multiprogramming technique accomplished
+Several job simultaneously resident system handled various system component maximize efficient utilization entire configuration
+The operating system switch control one job another way advantage taken powerful expensive resource
+In practice one basic feature multiprogramming prevent job demanding large amount time input output function job tying central processor accomplished usually allowing job execute input output operation required point another job begin execute concurrently request
+On hand system regularly interrupt job turn allowing execute interval time determined computer system rather structure job
+Systems incorporating capability type enumerated represent latest advance computer technology
+Basically intended provide efficient utilization expensive computing facility widest range user
+A single system able handle several user several set data simultaneously contributing economical operation
+In addition direct advantage vastly improved resource utilization greatly increased economy operation drastically reduce service time enable user little formal knowledge programming interact directly machine extend computing capability many smaller installation would unable support dedicated machine
+This study receiving impetus concern generated increasing number system addressed computer system may process classified material
+Methods developed insure security system applicable kind computing system
+The wide use computer military defense installation long necessitated application rule regulation
+A basic principle underlying security computer system traditionally removing entire system physical environment penetrability acceptably minimized
+The increasing use system equipment component user access terminal widely spread geographically introduced new complexity issue
+These problem amenable solution elementary safeguard physical isolation
+In one sense expanded problem security provoked system might viewed price one pay advantage system offer
+However viewing question aspect simplistic tradeoff obscures fundamental issue
+First security problem unique one type computer system configuration applies across spectrum computational technology
+While present paper frame discussion term multiprogramming really dealing system configuration security computational technology served catalyst focusing attention problem protecting classified information resident computer system
+Secondly system problem security admittedly acute present must designed protect user interference another user system must provide sort privacy protection user wish preserve integrity data program
+Thus designer manufacturer system concerned fundamental problem protecting information
+In protecting classified information difference degree new surface problem basic issue generally equivalent
+The solution manufacturer design hardware software must augmented refined provide additional level protection demanded machine functioning security environment
+The recommendation Defense Science Board Task Force Computer Security represent compilation technique procedure considered separately combination designing adopting data processing system provide security user privacy
+The solution specific problem intended flexible adaptive need installation rather oriented one application environment
+It intended general guideline Report use DOD component government installation contractor
+There several way computer system physically operationally organized serve user
+The security control depend configuration sensitivity data processed system
+The following discussion present two way viewing physical operational configuration
+The organization central processing facility batch processing arrangement access capability local remote interaction depicted Fig
+
+Simple batch processing historical still prevalent mode operation wherein number job transaction grouped processed unit
+The batch usually manually organized part individual job processed completion order received machine
+An important characteristic batched system integrated file management system memory medium system need management awareness job job
+Sensitive material erased removed computer quickly relatively cheaply mass memory medium containing sensitive information physically separated system secured protection
+This characteristic explains solution problem treating urgent past
+In multiprogramming hand job organized processed system according algorithm designed maximize efficiency total system handling complete set transaction
+In system element physically located within computer central facility system unit geographically distant central processor connected communication line
+Another way viewing type system shown Fig
+based level computing capability available user
+Type I enable user execute limited application program embedded system available alteration change
+He selects execution one available application program
+He may able couple several program together automatic execution sequence insert parameter selected program
+Type II provide user programming capability term input language symbol result direct execution within computer operation denote
+Such symbol used construct internal machine language program subsequently executed upon command user
+Thus user obtain control machine directly buffered interpretive software
+Type III provide user programming capability term language execute compiler embedded system
+The instruction compiler translated assembly language basic machine language program
+Program execution controlled user however available limited compiler language
+Type IV give user extensive unrestrained programming capability
+Not execute program written standard compiler language also create new programming language write compiler embed within system
+This give user intimate interaction control machine complete resource excepting course resource prohibited safeguard memory protection base register control hardware control
+In principle combination equipment configuration Fig
+operational capability Fig
+exist
+In practice possible combination implemented possibility would provide useful operational characteristic
+By nature computer system bring together series vulnerability
+There human vulnerability throughout individual act accidentally deliberately jeopardize system information protection capability
+Hardware vulnerability shared among computer communication facility remote unit console
+There software vulnerability level machine operating system supporting software vulnerability organization protection system access control user identification authentication etc
+How serious one might depends sensitivity classification information handled class user computational capability available user operating environment skill system designed capability potential attacker system
+These point vulnerability applicable industrial environment handling proprietary information government installation processing classified data
+This Report concerned directly latter sufficient acknowledge entire range issue considered also civil side work relevant
+The design secure system must provide protection various type vulnerability
+These fall three major category accidental disclosure deliberate penetration physical attack
+A failure component equipment software subsystem resulting exposure information violation element system
+Accidental disclosure frequently result failure hardware software
+Such failure involve coupling information one user computer program another user clobbering information rendering file program unusable defeat circumvention security measure unintended change security status user file terminal
+Accidental disclosure may also occur improper action machine operating maintenance personnel without deliberate intent
+A deliberate covert attempt obtain information contained system cause system operate advantage threatening party manipulate system render unreliable unusable legitimate operator
+Deliberate effort penetrate secure system either active passive
+method include wire tapping monitoring electromagnetic emanation
+infiltration attempt enter system obtain data file interfere data file system
+One method accomplishing active infiltration legitimate user penetrate portion system authorization
+The design problem one preventing access file someone aware access control mechanism knowledge desire manipulate advantage
+For example access control code number user pick number gained access file begin interacting order learn content
+Another class active infiltration technique involves exploitation entry point system control facility permit direct access file
+entry point often created deliberately design development stage simplify insertion authorized program change legitimate system programmer intent closing prior operational use
+Unauthorized entry point created system programmer wish provide mean bypassing internal security control thus subverting system
+There also risk implicit may exist incomplete system loophole protection mechanism
+For example might possible find unusual combination system control variable create entry path around safeguard
+Another potential mode active infiltration use special terminal illegally tied communication system
+Such terminal used intercept information flowing legitimate terminal central processor manipulate system
+For example legitimate signal intercepted cancelled illegal terminal take interaction processor
+Or illegal terminal maintain activity period legitimate user inactive still maintaining open line
+Finally illegal terminal might drain output directed legitimate terminal pas error message place delay detection
+Active infiltration also agent operating within secure organization
+This technique may restricted taking advantage system protection inadequacy order commit act appear accidental disruptive system user could result acquisition classified information
+At extreme agent may actively seek obtain removable file create trap door exploited later date Finally agent might placed organization simply learn system operation installation obtain piece information come way without particularly covert attempt part subversion
+In passive subversion mean applied monitor information resident within system transmitted communication line without corollary attempt interfere manipulate system
+The obvious method passive infiltration wire tap
+If communication remote terminal central processor unprotected circuit problem applying wire tap computer line similar bugging telephone call
+It also possible monitor electromagnetic emanation radiated electronic circuit characterize much equipment used computational system
+Energy given form remotely recorded without gain physical access system component communication line
+The possibility successful exploitation technique must always considered
+Overt assault attack upon physical environment mob action type vulnerability outside scope Report
+The system designer must aware point vulnerability may thought leakage point must provide adequate mechanism counteract accidental deliberate event
+The specific leakage point touched upon foregoing discussion classified five group physical surroundings hardware software communication link organizational personnel procedure
+The overall safeguarding information computer system regardless configuration achieved combination protection feature aimed different area leakage point
+Procedures regulation doctrine area already established within DOD therefore within purview Task Force
+However overlap various area application security control computer system raise new aspect old problem issue discussed
+An overview threat point depicted Fig
+
+Security control applied safeguard physical equipment apply computer equipment terminal also removable item printout magnetic tape magnetic disc pack punchcards etc
+Adequate DOD regulation exist dissemination control storage accountability classified removable item
+Therefore security measure element system examined Report unless unique consideration
+The following general guideline apply physical protection
+b Physical protection must continuous time threat posed possibility physical tampering equipment likelihood classified information stored within computer system even operating
+c Remote terminal device must afforded physical protection commensurate classification sensitivity information handled
+While responsibility instituting maintaining physical protection measure normally assigned organization control terminal advisable central authority establish uniform physical security standard specific protection measure regulation terminal given system insure specified security level achieved entire system
+Terminal protection important order If part computer system magnetic disc file copy printout contain unusually sensitive data
+must physically isolated maintenance procedure may necessary physically separate independently control access
+In case may practical provide direct remote visual surveillance area
+If visual surveillance used must designed installed manner used highly sensitive material intended protect
+Hardware portion system subject malfunction result directly leak cause failure security protection mechanism elsewhere system including inducing software malfunction
+In addition properly operating equipment susceptible tapped otherwise exploited
+The type failure directly affect security include malfunctioning circuit protection bound register memory protect privileged mode operation priority interrupt
+Any hardware failure potentially affect security control error memory
+Both active passive penetration technique used hardware leakage point
+In passive mode intervener may attempt monitor system tapping communication line monitoring compromising emanation
+Wholly isolated system physically shielded eliminate emanation beyond limit secure installation geographically dispersed system comprehensive shielding difficult expensive
+Currently practical solution used protect communication system
+The problem emanation security covered existing regulation new aspect problem raised modern computing system
+It emphasized however control spurious emanation must applied main computing center remote equipment well
+Although difficult accomplish possibility exists covert monitoring device installed within central processor
+The problem computer hardware involved complexity easy knowledgeable person incorporate necessary equipment way make detection difficult
+His capability assumes access equipment manufacture major maintenance
+Equipment also vulnerable deliberate accidental rewiring maintenance personnel installed hardware appears function normally fact change protection mechanism
+Remote console also present potential radiation vulnerability
+Moreover possibility recording device might attached console pirate information
+Other remote peripheral equipment present danger
+Printer ribbon platen may bear impression analyzed removable storage medium magnetic tape disc pack even punchcards stolen least removed long enough copied
+Erasure standard magnetic medium within scope Task Force review establish
+However system designer aware phenomenon retentivity magnetic material inadequately understood threat system security
+Software leakage point include vulnerability directly related software computer system
+Of special concern operating system supplementary program support operating system contain software safeguard
+Weaknesses result improper design failure check adequately combination circumstance lead unpredictable consequence
+More serious however fact operating system large complex structure thus impossible exhaustively test every conceivable set condition might arise
+Unanticipated behavior triggered particular user program rare combination user action
+Malfunctions might disrupt particular user file program might risk security serious implication system reliability utility
+On hand operating system malfunction might couple information one program user another clobber information system including information within operating system software change classification user file program
+Thus malfunction system software represent potentially serious security risk
+Conceivably clever attacker might establish capability induce software malfunction deliberately hiding beneath apparently genuine trouble agent may able tap file interfere system operation long period without detection
+The security safeguard provided operating system software include access control user identification memory bound control etc
+As result hardware malfunction especially transient one control become inoperative
+Thus internal check necessary insure protection operative
+Even done simultaneous failure protection feature check mechanism must always regarded possibility
+With proper design awareness risk appears possible reduce probability undetected failure software safeguard acceptable level
+Probably serious risk system software incomplete design sense inadvertent loophole exist protective barrier foreseen designer
+Thus unusual action part user unusual way program behave induce loophole
+There may result security breach suspension modification software safeguard perhaps undetected wholesale clobbering internal program data file
+It conceivable attacker could mount deliberate search loophole expectation exploiting acquire information either system system detail information safe guard
+The communication linking central processor switching center remote terminal present potential vulnerability
+Wiretapping may employed steal information land line radio intercept equipment microwave link
+Techniques intercepting compromising emanation may employed communication equipment even readily central processor terminal equipment
+For example crosstalk communication line within switching central present vulnerability
+Lastly switch gear subject error link central processor wrong user terminal
+There two prime organizational leakage point personnel security clearance institutional operating procedure
+The first concern structure administration mechanism national apparatus granting personnel security clearance
+It accepted adequate standard technique exist used cognizant authority insure reliability cleared
+This however relieve system designer severe obligation incorporate technique minimize damage done subversive individual working within secure organization
+A secure system must based concept isolating given individual element system need access
+In past accomplished denying physical access anyone without security clearance appropriate level
+In system future population user ranging uncleared highest clearance level interact system simultaneously
+This place heavy burden overall security control apparatus insure control mechanism incorporated computer system properly informed clearance restriction applicable user
+The machine system must designed apply user access restriction reliably
+In installation may feasible reserve certain terminal highly classified highly sensitive restricted work terminal used exclusively le sensitive operation
+Conversely installation terminal used degree classification sensitivity depending clearance need user given moment
+In either case authentication verification mechanism built machine system relied upon degree data personnel operational characteristic provided security apparatus accurate
+The second element organizational leakage point concern institutional operating procedure
+The consequence inadequate organizational procedure haphazard application unsupervised use severe malfunction
+Procedures include insertion clearance status information security checking mechanism machine system method authenticating user receipting classified information scheduling computing operation maintenance period provision storing keeping track removable storage medium handling printed machine output report monitoring control record security apparatus function whose purpose insure reliable unobtrusive operation security control viewpoint
+Procedural shortcoming represent area potential weakness exploited manipulated provide agent innumerable opportunity system subversion
+Thus installation operating procedure dual function providing overall management efficiency providing administrative bridge security control apparatus computing system user
+The Task Force specific comment make respect personnel security issue note control movement people must include control access remote terminal handle classified information even intermittently
+The machine room staff must capability responsibility control movement personnel within central computing area order insure authorized individual operate equipment located access removable storage medium access machine part ordinarily open casual inspection
+In dealing threat system security various leakage point considered individually
+Almost imaginable deliberate attempt exploit weakness necessarily involve combination factor
+Deliberate act mounted system take advantage create leakage point would usually require system design shortcoming either unforeseen undetected placement someone position initiate action
+Thus espionage activity based exploiting combination deficiency circumstance
+A software leak may caused hardware malfunction
+The capability tap tamper hardware may enhanced deficiency software checking routine
+A minor ostensibly acceptable weakness one area combination similar shortcoming seemingly unrelated activity may add serious potential system subversion
+The system designer must aware totality potential leakage point system order create prescribe technique procedure block entry exploitation
+The security problem specific computer system must solved basis employing best judgment team consisting system programmer technical hardware communication specialist security expert
+This Report address multitude detail arise operation particular computer system individual installation
+Instead intended Report provide guideline responsible designing certifying given system satisfactory security control procedure
+On hand security control described Parts B D markedly reduce probability undetected attempt penetrate computer system succeed
+This Report address difficult security control situation system serving geographically distributed user
+Where circumstance warrant lesser set control may satisfactory intended case prohibition implementing system lesser set safeguard
+The recommendation framed provide maximum latitude freedom action adapting idea specific installation
+The Government classifies defense information within well defined long established structure
+Although might desirable computer point view modify rule would equivalent tailoring structure fit computer operation would constitute inappropriate recommendation
+Obviously constraint secure computer system must consonant existing security classification structure
+A second constraint least initially assumption general tenet existing familiar manual security control procedure prevail
+For example Task Force recommendation require secure computer system identify user also user establish prove authenticity furthermore asked receipt simple response classified information made available type terminal
+This desirable feature consideration system accountability also point view protection user
+It conceivable error computer system might result allegation given user certain information fact
+In formulating recommendation Task Force recognized following general characteristic desirable secure system
+The system convenient mechanism procedure maintaining condition shifting job assignment issuance withdrawal clearance change parameter transfer personnel one duty assignment another etc
+The system changing operational condition particularly time emergency
+While aspect security control per se important system responsive deny service completely class user total system load increase
+It may prove desirable design special emergency feature system suspend modify security control impose special restriction grant broad access privilege designated individual facilitate rapid change security parameter
+The system
+It must provide record security control supervisor system performance security safeguard user activity monitored
+This implies manual automatic monitoring facility desirable
+The system security point view
+It ought sense system fulfill security control make proper decision grant access pas internal withhold information user uncertain ideally continue provide service verified user
+A fallback independent set security safeguard must available function provide best level security possible degraded condition system continue operation
+The system point view security control
+The record audit control visual display manual input used monitor system supplemented capability make appropriate modification operational status system event catastrophic system failure degradation performance change workload condition crisis etc
+The system security control adjusted reflect change classification sensitivity file operation need local installation
+There convenient mechanism whereby special security control needed particular user embedded easily system
+Thus security control problem ideally must solved generality economy
+It would costly treat installation individual instance conceive appropriate set unique safeguard
+The system must must deny service user
+In time crisis urgent need system must self protecting reject effort capture thus make unavailable legitimate user
+This point bear number kind internal record system must keep implies form rationing algorithm must incorporated penetration would capture specified share system capability
+system must automatically assure
+It must violate safeguard deliberately attempt illegal operation monitor communication continuity monitor user action short time basis
+The Task Force identified several aspect secure computer system currently impractical impossible ass
+In present state computer technology impossible completely anticipate much le specify hardware failure mode software design error omission seriously failure mode hardware malfunction lead software malfunction Existing commercial machine minimum redundancy circuit thus military application may unsatisfactory hardware facility assist control malfunction
+Furthermore present state knowledge difficult predict probability failure complex hardware software configuration thus redundancy important design concept
+Because failure mode probability occurrence completely cataloged stated difficult arrive overall probability accidental divulgence classified information system
+Therefore difficult make quantitative measurement security system also difficult design priori absolute demonstrable security
+Since security risk probability present manual system well known difficult determine whether given design secure computer system well better corresponding manual arrangement
+This issue likely raise considerable discussion time official policy decision security control computer system must made
+As described computer system differ widely capability make available user
+In sophisticated highest security risk case user construct new program new programming language console
+embed new language computer system use
+In computer system
+offering broadest capability user
+security problem risk considerably greater user following two class must served simultaneously It opinion Task Force unwise present time attempt accommodate class user simultaneously
+However recognized many installation operational need serve uncleared cleared user recommendation addressed point presented Parts B Unfortunately easy time estimate cost security control computer system
+Only computer system currently operation attempt provide service broad base user working classified information
+While system serving practical need user product research effort good data reflecting incremental cost adding security control system operating yet available
+In computer system designed application capability present order make system work also applicable provision security control
+In computing system facility security control would specially installed
+Thus Task Force give accurate estimate cost security
+It depend age software hardware certainly security control cheapest considered system architecture prior hardware software design
+In opinion investment security control give good return tighter accurate accountability dissemination classified information improved system reliability
+The cost may depend workload installation
+If classified operation accommodated single computer unclassified operation second computer least expensive way maintain integrity classified information may retain machine
+Such configuration present operational inefficiency user need work classified unclassified data base concept dual installation one machine working clear second machine fully protected summarily rejected
+There many term commonly used connection security control usage completely standardized
+Terms used throughout Report defined group certain term especially one defined appropriate place text
+The privilege granted individual basis prescribed investigative procedure formal access classified information access necessary work
+The three formal national clearance
+However also expedient computer point view recognize fourth level clearance
+A clearance necessary sufficient condition access classified information
+By extension concept clearance applied also equipment
+For example computer terminal spoken given level clearance implied certain investigative procedure test established corresponding level classified information safely transmitted terminal
+When referring aggregation equipment together management control procedure time used
+An administrative action certifying given individual requires access specified classified information order perform assigned duty
+The combination clearance constitutes necessary sufficient condition granting access classified information
+The act identifying sensitivity defense information ascertaining potential level damage interest United States information divulged unfriendly foreign agent
+The classification formation formally defined Executive Order
+There three formal level national classification expedient computer point view also consider fourth level classification
+The identifier associated item classified information indicating level classification special status generically called label
+Category Compartment
+Classified defense information segregated entrusted particular agency organizational group safeguarding
+For example portion defense classified information concern nuclear matter entrusted Atomic Energy Commission responsible establishing promulgating rule regulation safeguarding controlling dissemination
+Classified information special category normally identified special marking label letter AEC information whether classified Confidential Secret Top Secret collectively identified
+It often called note use classification extended sense formal usage word
+Sometimes special investigative procedure stipulated granting access information special category
+Thus formally three broadly defined national clearance level practice structure within level
+In part reflects separation information special category part fact many different agency authorized grant clearance
+For example individual functioning within AEC domain cleared Top Secret said authorized access Top Secret information entrusted AEC safeguarding identified special category Q
+These special type clearance given level always specifically identified unique additional marking label
+A special letter word phrase sentence marking combination thereof label classified material special category hence subject additional access control
+Thus caveat indicator special subset information within one level classification
+The caveat may juxtaposed classification label may appear sometimes appear explicitly inferred
+Particular kind caveat Access Control Labels
+A group word imposes additional restriction classified information used disseminated divulged label additional mean controlling access
+Examples No Foreign Dissemination
+Eyes Only Not Releasable Outside Department Defense
+A group word conveys recipient information additional guidance information may disseminated controlled transmitted protected utilized
+Examples Limited Distribution Special Handling Required Group Excluded Automatic Downgrading Declassification
+An individual clearance authorization granting access classified information contained computer system
+By extension term applied equipment case implies necessary safeguard present enable equipment store process information many level classification caveated many different way
+For purpose Report
+convenient introduce new term
+It composite term reflecting level classification
+caveat including codewords label requirement together indicator establishing access restriction information access privilege individual
+By extension concept applied equipment
+indicates class information stored processed
+Thus security flag contains information necessary control access
+One security flag considered equal higher second requestor first flag authorized access information second flag
+The totality information user file terminal communication computer system requires order exercise security control information contains
+Included thing user name clearance authorization physical location terminal location clearance file classification dissemination restriction
+Thus set security parameter particularizes generalized security control system specific equipment configuration class information class user given installation
+The policy recommendation follow intended provide security skeleton around specific secure computer system may built
+Additionally recommendation set forth responsibility function personnel needed evaluate supervise operate secure system
+This new field Report represents first major attempt codify principle
+In case rationale behind specific recommendation appropriate example presented Comment
+Automatic data processing system shall accommodate without exception responsibility individual ensure certain official information affecting national defense protected unauthorized disclosure pursuant Executive Order Amended Safeguarding Official Information Interests Defense United States
+A computer system shall grant access classified information person determine official duty require access received proper security clearance authorization
+The mean employed achieve system security objective shall based combination software hardware procedural measure sufficient assure suitable protection classification category resident system
+To maximum extent possible policy procedure incorporated achieve system security shall unclassified
+However specific key password authentication word specifically designated sensitive procedure shall require classification
+Depending upon nature individual computing installation following category personnel associated
+It recognized given individual may one responsibility either simultaneously different time perform one function
+It also recognized scope responsibility may imply substantial organizational group function
+The head department agency responsible proper operation secured computer system
+Any individual interacts directly computer system virtue inserting information system accepting information
+Information considered include computer program data
+An individual designated responsible overall management system resource physical resource system personnel attached
+An individual designated appropriate authority verify certify security measure given computer system operation meet applicable current criterion handling classified information establish maximum security level system part operate
+An individual designated Responsible Authority specifically responsible proper verification personnel clearance authorization determination operational system security status including terminal surveillance maintenance system security insertion security parameter computing system well general system matter security assurance
+The individual designated responsible technical maintenance hardware software system feature must operate high reliability order maintain system integrity respect security matter maintain basic functioning system
+Those personnel responsible performing manual procedure necessary provide maintain service operation system
+System Administrators System Security Officers System Maintenance Operations Personnel shall formally designated Responsible Authority
+The total number personnel kept minimum
+Where necessary meet special operational need particular installation special restriction affecting personnel may incorporated individual agency procedure formulated cognizance Responsible Authority
+Each user specific group user shall administratively designated identified computer system System Administrator concurrence System Security Officer
+The designation shall include indicator user status sufficient detail enable system provide material authorized access
+Each user shall required identify authenticate identity system time requested using authentication technique device assigned System Security Officer
+Such technique device shall sufficient reduce risk unauthorized divulgence compromise sabotage required sensitivity data resident system
+A properly authenticated user responsible action given terminal time identity established verified interaction system terminated acknowledged
+Termination occur notifies system departure system suspends operation
+The user responsible observing designated procedure insuring observation classified material person cleared access includes proper protection classified hard copy
+Furthermore responsible reporting system anomaly malfunction appear related system security control System Security Officer especially occurrence suggest system security control measure may degraded deliberate attempt tamper penetrate system occurring
+Other system anomaly reported System Maintenance Personnel turn must report System Security Officer hardware software malfunction investigation show affected security control
+Access classified information stored within computer system shall basis specific authorization System Security Officer receive information automatic process operating control authority
+The authority System Security Officer authorize system user access classified information stored system implicitly apply System Security Officer
+Separate specific restraint access classified information shall established System Administrator
+A specific algorithm combination algorithm controlling access classified information shall specified embedded system
+Moreover specific protocol mechanism shall specified inserting computer system security parameter grant rescind access privilege
+For purpose hardware software procedural mechanism shall implemented insure neither access control algorithm insertion mechanism circumvented either accidentally component failure intentionally
+Data storage shall organized controlled level basic computer system term information unit classification descriptor plus applicable category required presence caveat label apply information unit whole
+It explicit responsibility individual directing computational process declare verify classification applicable caveat label information unit produced result computer process calculation bomber range weapon effectiveness result transformation previously existing unit merging sorting file
+This responsibility extends security control management information
+Procedures analogous force controlling introduction information release information entity outside system must observed described Sec
+VI Information Security Labels
+Since hierarchical structure information classification usually exist composite unit must least highest level classification unit contained composite fact may higher
+Automatic algorithm may used aid user execution responsibility
+All relevant transaction user computer system shall automatically logged including date time computer system audit transaction involving access generation classification reclassification destruction file possible
+The provision paragraph also apply unclassified information resides system containing cleared contain classified information
+Supplementary manual log including date time must record significant event automatically logged
+Where required applicable regulation receipt shall obtained user received classified information system
+Receipting shall require overt action part user following delivery presentation classified information
+The purpose receipt insure user aware received classified data
+For purpose requirement bound dialogue user computer system defined based beginning ending access particular unit information contained within system transferred system
+All security control assurance mechanism procedure shall designed include sufficient redundancy independent check failure one control mechanism allow undetected compromise occur
+Frequent automatic check protection mechanism computing system periodic check procedure system personnel shall made
+The computing system shall capability guaranteeing specified minimum fraction time spent performing automatic system checking
+The percentage time spent automatic checking shall design parameter computing system capable change local installation necessary shall established concurrence System Certifier
+The interval automatic internal self check may depend classification sensitivity information system designed accommodate
+The System Security Officer shall provided mean establishing fraction time installed system spends responsible controlling time spent depending classification sensitivity information system handling
+Means shall provided System Security Officer initiate check manually
+A detected failure protection mechanism shall cause system enter unique operating mode wherein information may transmitted accepted user community
+In order unnecessary interruption service
+system must concurrently check internal protection mechanism
+Should detected failure prove consequence transient error system notify System Security Officer returned full operational status overt action System Security Officer
+In event failure persists shall responsibility System Security Officer take action indicated
+He may return system full partial operational status spite impaired security control may attempt remove malfunctioning equipment restore modified configuration full status
+In event
+action required must sufficiently overt possible security implication action patently clear
+Special instruction shall provided System Security Officer installation deal information high sensitivity special procedure deemed necessary order insure system allowed operate manner increase risk compromise unauthorized disclosure
+The system shall accept information even temporary use without first receiving user declaration relevant security parameter case include classification caveat label
+These parameter used system control use dissemination information
+The security parameter handled declaration covering definable set interaction user system totality dialogue user system beginning user log ending log
+The capability specifying security parameter declaration covering set interaction provided order user burdened specifying security information often absolutely necessary
+Each user shall notified least classification level special access caveat information furnished system
+Where physical limitation prohibit discourage presentation caveat label associated separate page display information mean must provided user obtain request
+Allocation use erasure storage resource type computing system shall handled system operational procedure way information prior use storage medium leak current use
+A storage medium shall carry classification highly classified information stored since recent sanitization
+All sanitization degaussing shall done way insure even medium removed computing system subjected test laboratory condition residual information could extracted
+The alternative sanitization treat storage medium classified destruction
+This requirement imply information read storage device must treated classified highest level data ever recorded medium
+Information extracted device normal mean via computer system may properly handled classification information per se provided however criterion relate handling information classification level satisfied
+The specific technique test required insure sanitization medium required preceding paragraph shall discretion Responsible Authority
+Certification process measuring
+testing evaluating effectiveness security control feature system
+It must accomplished system used operationally classified information
+The three type system certification Design Certification performed system construction Installation Certification performed prior authorizing system operational use Recertification performed major change correction failure
+Certification overall system determined basis inspection test result shall characterized term highest classification restrictive specific category may handled
+Where test show overall system effectively maintain integrity boundary portion system certification may differ various portion subsystem
+Any computer system used process classified information shall subjected inspection test expert technical personnel acting Responsible Authority
+The extent duration inspection test shall discretion Responsible Authority
+The inspection test shall conducted determine degree system conforms requirement recommended derivative regulation applicable regulation
+A series test inspection establish safeguard designed hardware software system operative function intended collectively constitute acceptable control safeguarding classified information
+Production model given design need tested verify safeguard present properly functioning
+It recommended certification performed agency special team part using agency separate design maintenance group
+Specifications procedure test inspection subsequent certification review must produced part design certification process
+A series test inspection performed according specification established design certification phase insure required set security safeguard hardware software procedural fact present operational installed equipment communication link carry classified information remote terminal computer
+This certification must also examine operational procedure administrative structure organization control equipment must establish procedural administrative environment supplement complement hardware software safeguard physical safeguard appropriate
+It anticipated certification review extensive thorough time installation system
+Installation certification probably conducted special team necessarily control Responsible Authority
+Ideally System Security Officer participate certification becomes familiar safeguard system process intent certification order conduct subsequent certification
+Some level recertification must accomplished periodically
+indicated operational circumstance
+These instance follows Depending upon system malfunctioned remedial action taken recertification procedure desirable security control fully functioning
+The responsibility determining recertification test inspection necessary rest System Security Officer although may solicit expert opinion System Maintenance Personnel System Administrator
+As system malfunction level recertification undoubtedly necessary modification made computing equipment system software
+The scope depth test inspection reflect maintenance performed change made
+The ultimate judgment recertification procedure necessary must responsibility System Security Officer although may solicit expert opinion
+For sufficiently extensive modification maintenance recertification procedure may well approximate extensive set test inspection made time initial installation
+The necessary operational security parameter overall system portion shall inserted system System Security Officer
+Information shall passed accepted portion system security level commensurate security parameter portion system
+The use uncleared person terminal certified highly classified information permissible without need recertification long precaution escorting continuous surveillance prevent tampering etc
+taken prevent subversion security mechanism needed previously certified effective protect stipulated classification terminal
+Changes hardware software system shall installed normal operation designated System Maintenance Personnel personnel operating observation supervision concurrence System Security Officer
+An explicit report change shall made certifying authority particular system addition normal manual automatic logging system transaction
+Equipment associated material medium containing copy program used handling classified information must continuously protected unauthorized change commensurate security level recently certified
+Copies operating software classified used actual insertion system generate program insertion system need subject requirement
+It important understand present technology protecting classified information system
+Present technology offer way absolutely protect information computer operating system security threat posed human being around
+As consequence procedural administrative safeguard must applied computer center supplement protection available hardware software
+As could observed policy recommendation two type environment secure computing system operate
+One environment consisting cleared user function physically protected terminal connected physically protected computing central protected communication circuit
+The main security problem largely one maintaining data program integrity individual user
+An inadvertent divergence classified information system analogous cleared person finding classified document authorized access
+The type environment one mixture uncleared user working unprotected console connected computing central unprotected communication circuit cleared user protected console protected communication line
+The security problem system must able withstand effort penetrate inside outside
+For purpose Report term used indicate security controlled computing system operate wholly different realistic environment
+From technical point view secure closed system one acceptably resistant external attack accidental disclosure internal subversion denial use legitimate user presenting difficult problem provided contemporary technology secure open system provided contemporary technology
+In fact special concern risk compromise classified information vulnerability open system potential penetration today b The state system design large software system frequent change system expected
+c Certification system fully developed technique detail thoroughly worked
+System failure mode thoroughly understood cataloged protected
+e Large hardware complex absolutely guaranteed
+Since adequate control provided technology alone necessary rely combination hardware software procedural safeguard
+Thus recommendation refer issue already discussed Part B
+The precise mix control safeguard necessary given case depend operational environment sensitivity information class user type service rendered noted
+We believe recommendation necessary sufficient closed secure system
+However sufficiency open system guaranteed abstract
+Only intelligent adaptation specific open environment utilizing experience closed system extremely objective stringent testing evaluation adequacy established specific open system
+Central processor hardware must provide following mechanism depending class service render user user isolation supervisory software protection assurance unanticipated condition
+Each user worker program must isolated program computing system
+The currently known principal hardware mechanism isolating program include register various form hardware checking circuit assure memory address generated within processor fact restricted permitted program particular user
+In addition contemporary machine provide memory protection register bound register storage lock
+The characteristic system software determine whether hardware feature required system provide user capability Type I Fig
+full programming capability interpretive mode restricted set language compiler Types II III Fig
+
+Sometimes hardware feature necessary principle practical matter use relevant hardware feature greatly simplifies achievement isolation
+It recommended hardware mechanism required system Types I II III Fig
+
+It recommended isolation hardware mandatory system provide extensive programming capability user language compiler choice including machine language computer Type IV Fig
+
+While many contemporary machine designed environment incorporate hardware safeguard provide user isolation little internal hardware guard malfunction
+Older machine operating security controlling mode may able fully meet recommendation
+To extent user isolation achieved mean hardware mechanism exchanged isolation via software mechanism
+This done caution protection mechanism effected must safeguarded collapse due hardware software malfunction
+The objective Supervisor protection deny user program ability penetrate Supervisor contains security control safeguard without detection Supervisor
+A user program might attempt subversion purpose manipulating supervisory information way disable security control barrier system deny service user
+It recommended computer system provide programming via interpretation via limited language compiler system provide extensive programming capability Types II III IV Fig
+incorporate hardware technique effect providing least two distinct operating state user state supervisor state also called worker slave master privileged respectively
+Any hardware configuration acceptable create one internal operating state penetrated software user program execute
+In machine able execute instruction including affect security control
+In user state instruction initiate input output operation reference file attempt modify register used isolate user protect Supervisor attempt suspend modify security control must executed
+Thus user state user program able execute certain instruction operation prohibited
+Entrance supervisor state must hardware controlled
+This frequently established providing facility detect special instruction creating hardware mean interrupt signal return computing system supervisor state
+If user program attempt execute prohibited instruction attempt must thwarted immediately suspending user program returning control Supervisor
+Furthermore user program attempt execute undefined instruction must thwarted immediately suspending execution user program returning control Supervisor
+Since virtually impossible determine every situation whether computing system working designed obvious machine operating properly doubtful utility also pose grave risk security information handled
+Thus desirable incorporate safeguard protect system unanticipated condition might arise
+As minimum condition mandatory computer produce known response possible instruction legal one specifically machine repertoire undefined one together possible combination tag modifier whether legal
+The software system includes Supervisor language processor compiler assembler etc
+program library utility program sort program file copying program
+The design computer system must consider software component system well hardware software run
+While Supervisor sort required type system enumerated Fig
+broad range user software capability inherent system Types III IV implies much complex Supervisor required
+With respect language processor utility program little said assistance design development secure system
+In Type III system permitting programming via limited language certified compiler care thoroughness language processor examined prior approval limit threat user system might able mount classified information contains
+A careful analysis language translator particularly assumption made regarding execution environment user program essential four type computing system
+Assembly language processor impose particularly difficult problem manifold opportunity user create seemingly safe instruction sequence turn construct executable instruction sequence designed disrupt service security control operating system
+Little said language processor utility program except require thoroughly tested user agency correct operation detection rejection incorrect sequence instruction error
+As recommended earlier respect hardware language processor provide maximum extent possible known response various error condition
+Comment This discussion applies structure software component
+Additional safeguard misuse software malfunction incorporated appropriate procedural control
+Examination software really aspect certification conceivable technical expertise implied examination testing software efficiently done certifying group
+The detailed structure Supervisor computer system function hardware configuration type service provided system user
+Because variety Supervisors fact system delivered manufacturer Supervisor difficult specify requirement detail
+In general however software design clean sense modular possible
+There aspect Supervisor design sufficiently important qualify requirement
+It recommended Supervisors designed system include following feature
+As much Supervisor possible must run user state opposed supervisor state part Supervisor much freedom machine need job
+This provide Supervisor protection given user program faulty programming machine error
+Supervisor function separated individual module explicit communication module
+Each module must fully described flowchart assist security analysis
+
+The Supervisor must assure extent technically feasible classified information remain residue either primary secondary storage
+This includes form secondary storage magnetic drum magnetic disc magnetic tape well primary core store register
+One technique Supervisor erase segment primary core storage making segment available another program
+
+The Supervisor must provision bringing computing system operational status orderly manner
+There also must provision orderly shutdown system including feature automatic logging user access closure file classified information
+Furthermore must possible system personnel working control console selected user deny access given user terminal attempt access system improper authorization detected
+
+The Supervisor must certified capability control access file
+This point critical treated separately
+In computer system access system access information file program contained system must separately controlled
+If system computer operating local opposed remote access operation personnel visually identify individual granting access system
+Furthermore operation people perform whatever verification procedure necessary releasing particular file program user
+Alternatively user information authentication word access protocol must protected punchcard form arrangement made card deck read visual surveillance owner immediately returned
+For remote batch computer system function must performed mechanism system software hardware
+In system user must announce system procedure requires standard identification accounting information specific user authentication step computer system verify identity individual terminal
+For system permanent protected communication link physical control access terminal may used lieu authentication
+In case responsibility authentication transferred administrative jurisdiction cognizance terminal
+For system utilize communication link physical access control undesirable password scheme equivalent must used provide authentication
+Authentication word technique must classified protected user accordance highest level information permit access
+Authentication word technique must obtained approved source alternatively must generated distributed cognizance System Security Officer approved technique
+Specifically user generate password
+Depending sensitivity information operating condition circuit noise interruption etc
+contained within system user may required reauthenticate time time single terminal session
+Authentication word must changed frequently prescribed approved issuing source
+Provided technique approved appropriate cognizant agency used system utilized generate authentication word provided output available designated terminal procedure carried cognizance System Security Officer
+The Supervisor software must constructed user identification authentication word list maintained part normal operation system terminal designated System Security Officer sole responsibility list
+The fact user granted access system imply authorization access classified file data program contained system
+For example may authorized perform online computation file processing
+Before user given access classified file user clearance level access privilege must checked access restriction file
+If information file delivered user terminal terminal designated status designated terminal must also verified
+To computer system must internal catalog user clearance level access privilege well catalog characteristic terminal connected system
+Each file must marked clearance restriction use
+Finally must explicit separate capability update internal catalog
+If responsibility maintaining catalog divided among several people must restricted part responsible
+A user must able acquire information security control file access denied reason
+Assuming inadvertence part user system assist identifying mistake procedural error
+However system log record unsuccessful attempt access classified file
+Because system vulnerable security threat posed operation maintenance personnel strongly recommended system handling extremely sensitive information software hardware maintenance performed joint action two person
+In particular debugging Supervisor software expressly prohibited except storage device containing classified file needed performance maintenance physically electrically disconnected maintenance personnel access system
+In order maintain good security control recommended modification installed system software currently operation done specifically designated terminal system software maintenance personnel assigned unique access privilege including authentication word permit access test file system function etc
+action specially privileged console continuous positive control responsible individual maintains written log console use including positive identification individual using
+Such special log addition automatic logging performed system
+The system designed assist user determining appropriate classification applicable caveat new file
+In many case determined algorithmically computer consideration classification caveat file referenced program utilized create file input
+In case determined user
+Whenever user notified system based internal information assigned tentative classification status newly created file must indicate verified accepts status desire change
+If user chooses change classification either raising lowering add remove caveat system record transaction log specially note review System Security Officer
+In either case action must recorded system log
+If classification lowered caveat removed file must released user System Security Officer verified new status correct
+In operational situation may prudent limit downgrading authorization user entitled write file
+When new file created combining information existing file adding interpretation combined result conceivable purely algorithmically determined maximum classification caveat may exceed user access privilege
+In case access control mechanism must designed withhold information user bring situation attention System Security Officer
+It recommended software trap incorporated detect input output information identified security flag exceeds authorized either user terminal file specified job
+Such condition must immediately suspend service terminal notify System Security Officer record event system log
+Typically Supervisor designed receive remote input information terminal originates job correspondingly output information terminal
+If operational requirement dictate otherwise
+Supervisor must designed identify authenticate terminal user originating one information exchanged
+As user Job actually run computer carry security flag initially determined security flag user terminal work unless user specifically designates otherwise beginning job
+In either case job unfolds security flag may modified automatically system reflect security flag file information file program used
+The job flag need limited terminal flag
+For example individual cleared Top Secret might run entirely Top Secret secret job Secret terminal Top Secret input output terminal output
+example might directed Top Secret printer
+A situation might common remotely initiated batch operation deception indicated since user cleared job even though terminal
+The basic point security flag user absolute limit access privilege unless program question certified access higher security flag produce information exceed flag user
+The access control limitation outlined represented shown Fig
+
+It read user device flag greater equal input job output flag
+It may prove difficult specific case certify program access highly classified information produce result lower level
+If strongly recommended user job never allowed access information either data program whose security flag exceeds user
+Since part Supervisor run user state user program access case accounting control file must excluded restriction
+In principle following item carry security flag user terminal job program job data file data input output
+The question job user run possible circumstance become complex
+Unfortunately Supervisor determine user privilege algorithmically exert judgment
+Thus issue must examined carefully operational environment appropriate rule formulated match user need security restriction installation
+It possible demonstrate many computer system may safe direct user attack terminal proving particular component effective blocking attack various kind
+However recurring question risk inadvertent disclosure classified information software hardware combination failure case would necessary prove single failure combination failure occur
+Since complete within present state art particularly existing computer system recommended system designer estimate probability occurrence single failure combination failure could result disclosure classified information
+Based information Responsible Authority determine whether risk probability acceptable
+If decision risk great used system certification made accordingly
+A system functioning segregated mode requires user cleared specified level terminal physically protected level communication line secure level
+If within level classification special caveat information introduced new determination must made whether risk consequence exposure special caveat information cleared authorized person operating within system warrant segregated operation entire system special caveat level
+If classification level system certified function hierarchically subsumes level classification authorized user system may execute program lower level classification
+However scheduled mode system establishes level classification mutually exclusive level user restricted program classified current mode system
+Fig
+illustrates relation
+Access may may authorized depending relation Special Category given national classification
+The concept segregated operational mode requires user various clearance level scheduled separately
+In addition special control needed assure highly classified caveated material become accessible classification differently caveated mode begin operation The precise procedure mechanism necessary change operational status system must tailored precise configuration
+The following step representative procedure necessary maintain segregation system status change
+b Before file device made available user restricted access privilege using must sanitized checked approved procedure classified information highly classified restricted access appropriate new mode operation
+c Each user must notified change operational status system whether scheduled
+This notification transmitted prior change active terminal able access system new mode operation
+However terminal authorized access system new mode given information specific classification status new mode
+A change mode operation must accomplished recessing logging appropriate active user forcing new procedure including authentication new level
+A change operational status system obviously inconvenience user
+While required terminate work completely required momentarily suspend operation change status new accomplished
+To maximum extent possible procedure changing status machine designed user convenience mind
+Since operational clearance status system change segregated style operation user granted access system must informed system current status
+e When initiating new operational mode terminal work area cleared receive information forthcoming level operation must disconnected communication link computer certified electronic switching unplugging manual operation switch
+f When initiating new operational mode special software relevant new mode must replace previous mode
+g In event failure Supervisor software hardware resulting operational malfunction system must restarted appropriate clearance level approved restart procedure part returning operational status mode
+Depending upon nature malfunction may necessary verify security flag data file order assure malfunction affect
+The recommendation indicate general way required additional issue following must considered
+b The disabling read head magnetic disc device may required
+c Appropriate key lock may needed operator assured certain action taken action lock must electrically reported
+Checklists helpful assure system operating personnel methodically verify step process
+e Storage classified material punchcards printed paper magnetic tape must provided
+f Printers punchcard equipment must sanitized running blank paper blank card ribbon must changed protected
+g Positive control procedure used assure magnetic tape magnetic disc pack containing classified information one level classification special category accidentally used inappropriate level
+h There must detailed instruction system operating personnel mode relative thing console action online file status procedure mode shut mode initiation message insertion via console typewriter etc
+There must continuous surveillance operation area fully cleared personnel
+It possible consider explicitly change must take place computer system change operational clearance level
+In general recommendation given parallel practice common existing security doctrine
+At particular installation System Security Officer aware level classification special access category system must able formulate detailed procedure shifting operational mode system one another
+Any communication line pass classified information terminal central computer facility computer system must protected accordance communication security method
+They may include provision approved secure cable terminal central location approved cryptographic equipment
+Intelligent deception link spoofing must possible
+There may operational requirement maintain continuity service remote user spite communication circuit failure
+If must emergency provision procedure establishing alternate channel remote location action must accomplished properly cleared authorized individual accordance established operating procedure secure communication
+If computer system operates environment wherein reasonable probability one terminal captured essential employ technique cryptographic isolation use unique key terminal
+In event capture confines operational information loss captured terminal prevents captor intruding communication link system intercepting classified information intended terminal
+Any terminal user gain access classified information central computing facility must physically protected accordance highest classification information processed terminal
+Furthermore protection requirement specified cryptographic equipment collocated terminal physical protection must accordance protection requirement specified cryptographic equipment
+In addition system closed protection must consistent specified overall system
+To guard covert emplacement illegal intelligence sensor recorder terminal maintenance personnel must cleared highest level classified information handled terminal terminal maintenance must performed surveillance appropriately cleared technically knowledgeable person
+Because present security doctrine depends heavily upon identification necessary system require positive identification terminal communicates system able interrogate terminal identification time
+Certifying computer system secure represents difficult issue
+It involves examination safeguard hardware software procedural administrative provided
+ideally quantitative estimate probability inadvertent disclosure classified information
+It almost impossible identify protect possible failure mode system
+Design certification process measuring testing evaluating probable effectiveness operating condition security control feature stable system one whose software hardware completed
+In order make measuring process meaningful security protection designed system must quantified maximum extent possible
+It strongly recommended design certification performed group responsible design construction maintenance operational system
+A suggested procedure given Hardware failure cause incorrect operation inherent check intended detect failure parity check transfer The probability failure hardware upon security control depends Possible software check consistency operation accuracy parameter address used function Combinations data parameter table etc
+result incorrect operation Its dependence function operation The probable effect failure Specific test either software electronic made determine function really work specified
+b Based determination factor test result make overall estimate probability failure total function
+c Based probability failure security function estimate overall probability system security failure would result compromise classified information illegal entry system
+The matter overall equipment configuration becomes especially important large system containing many computer either collocated geographically distributed
+The overall hardware configuration must examined order establish consequence security control total partial loss major component system
+For example controller group magnetic disc fail necessary determine whether crucial segment software would made unavailable security control
+Whenever possible security control designed failure portion system invalidate weaken control balance system remaining operational
+Conversely design permit rapid simple physical disconnection inoperative portion system
+Following point considered
+b The loss component may seriously affect operational performance accuracy remainder system shut reason even though significant security control continue function
+c Loss communication element system may force shut data critical security control system transferred
+If Supervisor software designed monitor operating status remote station sending information loss remote station security threat although incident must reported System Security Officer
+e Loss operator console may require associated computer must shut properly controlled alternate location operator control available
+At time installation certification administrative procedural environment system function must examined verify support control present complex provides additional control people paper magnetic tape system
+Also installation certification communication arrangement must verified secure level spurious emanation must demonstrated acceptable physical protection must shown adequate control remote equipment physical personnel emanation must verified
+Complete certification performed changing closed system open system even though may operated segregated mode previously described processing highly sensitive information
+After system certified change system must similarly examined incorporated
+Such examination required whether change originate either hardware software vendor
+After general reliability system established operating successfully reasonable length time limited recertification process performed appropriate interval consisting test inspection intended reveal change surreptitiously made system detect inadvertent change made system maintenance validate continuing performance system security control
+The technique used verify system operating correctly importantly used properly
+For purpose monitoring security control recommended system contain software automatically record date time least following b All maintenance whatever purpose including name maintenance personnel nature maintenance file accessed c All function including name function point view log operator treated user Each attempt user program access file program authorized including name terminal identification program e All incident including name program user terminal time abort f Any special usage system generation password changing classification modifying security parameter record type transaction including authority person whose cognizance usage conducted terminal used g Groups output operation system performs request user including directs sent terminal one request made including identification file accessed measure amount information read file requesting receiving terminal
+Similar information logged input operation create destroy file instruction change file classification security parameter
+To extent deemed necessary System Security Officer log record must contain sufficient detail permit reconstruction event indicate unsuccessful attempt penetrate system clearly resulted compromise information security violation
+For example repeated unsuccessful attempt gain access system software file promptly reported Supervisor software order alert system operation personnel necessary System Security Officer
+The audit trail enable security investigation personnel identify terminal involved user target file program system reaction
+In general log complete enough permit System Security Officer monitor system performance periodic basis needed
+The data collected system log also aggregated interval provide performance statistic indicate efficacy existing security safeguard develop new improved procedure control
+Supplementary manual log kept operator record event following may useful
+b Restarts system including detail loading system software checking verification file manual operation taken etc
+c All change Supervisor program library system file made way operator console Each running unusually privileged system program e Each instance hardware software maintenance purpose
+As mean verifying continued correct operation security safeguard computing system system testing program must inserted system status user program
+The function program verify hardware software safeguard operative
+At minimum testing program attempt violate security control verify correct response received case
+The security testing program must communicate computer system directing information turnaround channel one leaf central processor proper traverse channel controller turn around order verify integrity channel controller well
+If test program succeeds attempt violate either hardware software safeguard system shall immediately enter unique degraded operating mode withholds information user community situation assessed appropriate action taken see Part B pp
+
+If user program violates security control running operationally debugging program must immediately suspended System Security Officer notified
+Appropriate remedial action must taken verified program returned operational status
+If violation occurs debugging application program program accessed file sensitive information sufficient notify user alert System Security Officer record event system log allowing program continue user acknowledges event responds appropriate remedial action
+In conflict user program security control especially case open system may advisable interrupt system operation first feasible opportunity run security testing program verify correct functioning security control
+As stated earlier simpler create secure system closed environment open one largely inadequacy present state technology
+The foregoing recommendation present technique method relevant protecting information open environment may assure security situation
+A comment order practicability reducing degree openness mean coping security problem
+The system closed uncleared user classified information resident simple possible course action
+However may impractical workload population user many installation single computer system required economically serve cleared uncleared user
+On hand might also true volume classified volume unclassified work economic solution might separate machine part workload
+A modification approach schedule system operate alternately uncleared classified mode appropriate operational procedure sanitize system certify mode
+All information within system might rendered unclassified implies internal encryption used
+Finally might possible find special configuration hardware could certified secure even open environment processor control management system security control vested completely third independent machine
+With respect internal encryption noted principal threat countered recovery information
+The threat system denial intelligent deception must countered control
+A possible benefit internal encryption may reduces scope system certification manageable proportion
+A possible drawback possibility malfunction encryption device permanently freezing information encrypted impenetrable state
+Internal encryption could applied primary magnetic core storage also secondary file storage
+All program data resident core storage could encrypted form decrypted pas storage processing unit execution
+As information returned processing unit storage would reencrypted
+Incorporation technique system would protect unauthorized access data resident primary storage
+In addition information secondary storage could protected encrypting mechanism connected directly encrypted primary storage way information could transferred primary secondary storage without intermediate stage occurring
+The purpose securing secondary storage fashion protect physical access storage device
+On hand encryption secondary storage greatly complicates file management problem
+In addition continuing research internal encryption device mentioned research requirement include special hardware configuration maintain absolute segregation uncleared user special software configuration automatic recertification procedure used system configuration change comprehensive automatic monitor hardware software security control reliable hardware architecture methodology identifying failure mode accurate prediction failure probability new machine architecture whose security control minimally affect efficiency cost system
+Security control computer system especially one problem solution must based system point view
+A number problem covered preceding discussion brought together briefly importance system whole
+Given present state computer hardware software technology expect even best designed system relatively frequent malfunction
+While system designer ingenious attempting arrange safeguard malfunction result serious consequence nonetheless given present lack experience computer system contain security safeguard strongly recommended redundancy incorporated throughout system safeguard
+Redundancy might take form duplicate software residing different part memory software check verify hardware check vice versa hardware arrangement information representation duplication procedural check internal catalog security flag audit process monitor performance software hardware function
+A particular point note absence parity check memory information transfer permit error perturb disable mislead security control
+In absence parity check throughout machine configuration equivalent procedure must incorporated software
+As system designer system operator acquire insight behavior configuration new revised certification test developed check one another aspect system behavior
+Certification continuing process
+It experience designer system even best ingenious design user system find way chaining together action foreseen designer many case lead undesirable disastrous consequence
+Therefore order establish confidence security control certification procedure must include phase deliberately attempt penetrate best design conducted technically competent individual part design group operating agency administratively responsible either
+During debugging new program testing program new data likelihood error much greater
+It inappropriate levy security violation user security error occurring debugging phase dangerous risk agent conceal activity debugging error
+Possibilities dealing problem include requiring user state intention debugging mode fact noted possibly authenticated system System Security Officer requiring debugging operate certified interpreter requiring debugging program operate dummy unclassified data reflecting error violation security control back user enforced delay resume work
+Each system component individual user operator maintenance person etc
+must isolated component system maximum practicable degree except needed job
+Strict adherence principle isolation necessary order avoid undesirable unpredictable side effect case failure malfunction particular item system
+System design must fault malfunction either equipment Supervisor software readily detectable
+The damage resulting fault depends upon importance faulting element security control structure length time fault go undetected unremedied
+Intermittent fault may go undetected procedure system system may automatically repeat faulting operation
+Faults Supervisor tend subtle immediately detectable general principle desirable design Supervisor fault result gross misbehavior thus facilitating detection
+However practice principle difficult apply complexity Supervisor software operational experience indicate general manner given software design fault
+Where possible security control designed operator input action recorded automatically log transmitted System Security Officer thus minimizing opportunity operator take undetected hostile action
+Also maximum extent possible check security control cross system component manual action checked equipment record software check hardware depend hardware checked
+In principle number type depth security control system depend sensitivity information system class user served geographical distribution system nature service system provides user operational situation system support
+In several place suggested detailed decision must made System Security Officer consideration sensitivity information classification level involved
+The cost providing security control may turn substantially independent factor noted may strongly depend
+Thus positive statement gradation security control await design implementation operational experience system
+Examples feature whose presence frequency operation completeness checking might subject gradation At several place indicated system must designed aid user behave way helpful convenient
+This point must taken lightly
+User convenience important aspect achieving security control determines whether user tend find way get around ignore subvert control
+Care must exercised create inadvertently system weakness centralizing much responsibility one individual
+For example System Security Officer oversees protective feature system well controlling operational security status
+Thus broad critical power becomes potential target subversion
+Appropriate administrative procedural safeguard plus division responsibility power System Security Office required offset threat
+A computer system malfunction way readily noticeable operator thus conceivable security control also malfunction fail without noticeable evidence
+All security control must implemented way failure malfunction positively unambiguously transmitted preferably redundant fashion System Security Officer
+In addition overall policy guidance technical method must effective set management administrative control procedure governing flow information computer system movement action within system environment people movable component demountable magnetic tape disc
+An essential aspect effective control standardization activity need standard throughout system
+Their presence make attempt subvert system much visible detectable
+The discussion present typical procedure required suggests detail
+For necessary provide form recording initiating controlling event definition documentation procedure checklist aiding execution procedure training aid periodic archival summary activity specification limitation personnel responsibility etc
+Procedures must established putting system operation must include provision loading fresh certified copy Supervisor software verification correct loading validation system security check inserting relevant security parameter certification system security status System Security Officer
+The procedure scheduled shutdown operation must take account proper notification System Security Officer physical protection demountable storage tape disc required orderly closing internal file validation suspension operation terminal demounting copy required part Supervisor software erasure part Supervisor software remaining working storage verification erasure Supervisor disconnection remote communication circuit physical securing power control
+An unscheduled shutdown must initiate procedure immediate surveillance recording indicator help ascertain happened needed emergency action case fire water hazard etc
+special surveillance physical protection measure guarantee demountable item removed immediate notification System Security Officer special security control example protecting printout including terminal accordance protection rule highest classification handled system situation resolved
+If trouble condition caused system shut necessary procedure handle restart including loading new certified copy Supervisor software clearing internal state equipment order clean memory untidiness resulting shutdown verifying correct loading Supervisor validating security control security parameter certifying system security status System Security Officer
+File control procedure include identifying cognizant agency file scheduling change file modifying access restriction file giving operator access demountable file moving file computing area handling file including mounting demounting tape disc sanitization file
+These procedure must account control circulation storage tape disc use reuse sanitization classification marking entrance release area
+Procedures punchcards form printout must cover accountability classification marking storage entrance release area
+Additionally manual guide various system document must covered
+Personnel control procedure include measure verifying clearance authorization personnel entry area system visual surveillance operating maintenance area logging escorting uncleared visitor
+The reporting suspicious behavior security infraction included among personnel control procedure
+Various procedure required respect operation remote terminal
+These include provision logging user entry terminal area removal hardcopy proper marking hardcopy marked system clearing display securing required orderly shutdown
+Procedures must provided authorizing security parameter entered system verifying correct entry changing basis shift day week etc
+receiving processing request modify action taken case system emergency external crisis
+These include procedure rigid control protection certified copy Supervisor software bearing system security threat system loading Supervisor making change verifying change
+All maintenance performed hardware software must covered appropriate procedure including measure surveillance maintenance personnel properly cleared personnel verifying System Administrator adjustment made system configuration manually logging change adjustment made error discovered
+Certification procedure embrace various personnel responsibility test inspection performed conduct responsibility System Security Officer etc
+The production distribution document control manual guide job procedure must covered appropriate procedure must approved way conducting personnel training
+These procedure include provision checklist action required changing mode removal storage paper medium demountable file physical electronic surveillance machine area purging printer running paper purging punchcard equipment running card removal erasure Supervisor software previous mode proper verification thereof loading Supervisor new mode proper verification thereof clearing storage device residual information previous mode carry forward removal print ribbon printer terminal typewriter storage destruction mounting file new mode certification security status new mode
+Security control assurance includes procedure reporting anomalous behavior system security infraction monitoring security control including communication assuring continuity security control devolution responsibility case personnel nonavailability auditing user system behavior
+The basic multilevel security problem consists determining whether individual particular clearance access quantum classified information given physical environment
+While problem exists independently computer system introduction automated decision process requires formal specification decision rule used answer question
+This Appendix address one solution problem detailing language defining security clearance structure system given definition automate protect integrity
+This system provides classification protection information series authorization check verify impending user action permissible user current operational context
+The operating environment proposed system exist discussed certainly vary depending equipment configuration installation
+It assumed though operating environment posse following feature Since operating environment discussed detail implementation security system specified level logical processing insures integrity security system
+The detail monitoring system System Security Officer observe activity within security system also treated
+One important implementation issue covered however nature security system facilitating modification system security parameter minimizing problem separate certification system installation
+Because complexity overall scheme controlling access classified formation may full range security control mechanism necessary installation
+Furthermore matter precaution would undesirable divulge unnecessarily programming personnel detail security control method
+Therefore approach conceive scheme structure security control procedure need described programming personnel
+The specific security parameter available programmer must inserted hy local System Security Officer
+It proposed computer system contain following information The detail parameter used developed
+Certain assumption definition made purpose discussion b Access authorization must verified explicit reference name check organization check check combination check may required security procedure
+This addition verification clearance status user requesting access given file
+A status must associated user terminal status must associated file information
+The word used part security structure language defined semantically equivalent
+e The phrase taken mean normal defense clearance Top Secret Secret Confidential Uncleared hierarchical order
+The national clearance status individual taken major parameter controlling access classified information
+f If individual authorized access information Type A one national clearance level assumed principle granted access Type A information level national clearance
+This intended rule following case believe common present manual practice
+An individual national clearance Top Secret authorized access say cryptographic information granted Crypto access Secret level
+This regarded illegal use clearance control structure
+For purpose computer record individual granted say national Top Secret clearance access information Type A automatically assumed cleared Type A information Top Secret level imply however automatically authorized access level Type A information
+Thus said national clearance factor distributes special information type
+The phrase refer special clearance system compartment special grouping may within special clearance system major minor segment clearance system may specified
+h A dissemination label regarded additional mean access control require verification user status
+Examples label No Foreign Dissemination Not Releasable Outside Department Defense
+An regarded controlling access information rather giving guidance user information may disseminated controlled utilized etc
+Examples label Limited Distribution Special Handling Required Downgrading Group
+j All name code word assumed unique
+The computer system maintain catalog terminal may connected
+For terminal maintain following information b Special code word group name name modify clearance level terminal receive class information
+c A list user authorized use terminal may ALL
+The electrical address
+e The permanent identification number
+f Physical location including building location room number cognizant agency
+g Person responsible terminal perhaps telephone number
+The first three item may time date dependent different parameter may specified different period normal working hour holiday weekend night shift
+The computer system maintain catalog user authorized access user maintain following information b Special code word grouping word extend access class information date expiration special name
+c His agency affiliation
+His citizenship
+e His agency assignment
+f His permanent identification number Social Security
+g Special designators explicitly contained first third item
+The computer system maintain following information file Its national classification level
+b Special name code word compartment name handling label serve control access file
+c Access authorization list including one following may required Dissemination label
+e Information label
+f Background information file example information might desired The system automating multilevel security classification control described entirely table driven
+As software implementation used installation using machine
+The generation process described creates table used system affect software check
+Thus installation personnel need know implement part security control system expected allowed modify
+Each installation security control system generation process particularizes security table environment validity consistency check thus minimize recertification security control system
+The card deck magnetic tape magnetic disc detailing security control system table produced generation process contain sensitive information resident computer system
+As provision made directly classifying accessing information via file system rather special mechanism must provided limit access information responsible authority
+vehicle describing computer system parameter affect individual access information
+This consists describing relevant parameter individual permitted use system except information dealing security describing relevant parameter terminal may connected system except information dealing security describing relevant security parameter
+The Personnel Terminal Definitions discussed since installation dependent within scope Report
+process whereby System Security Officer responsible authority specifies Security Control Definition computer system
+The computer system process information thing validity checking internal table storage generation thus render system ready actual use
+After initial security system generated change Security Control Definition almost case handled directly system without cause regenerating security control system
+The Security Control Definition consists five separate specification Security Structure Definition Personnel Security Definition Authorization Group Definition Terminal Security Definition Releasability Definition
+specifies dissemination label way processed
+It discussed unable determine standardized rigorous order current practice using label
+We recommend area explored
+Note processing dissemination label depend upon Personnel Definition
+For example DoD Only file necessitate ability determine agency individual represents
+The four specification Security Control Definition discussed
+The reader directed Annex A formal System Access Specification slightly modified Form BNF
+In addition language specification necessary specify algorithm processing information
+These discussed obvious case
+The reader reference Annexes read remainder discussion particularly Annex B contains example Security Component Definitions
+The formally defines structure portion security classification control system applicable particular installation question
+The language presented Annex A sufficient describe special clearance compartment familiar although actual example demonstrating completeness approach presented level classification
+The Security Structure Definition consists number followed merge rule relating different component
+A may compartment special gory special access
+It reasonable expect change Security Structure Definition necessitate new system generation
+The security structure language formally defines set relation among entity including name clearance classification code word label etc
+The structure thought defining set decision rule computer system consult wish make decision ing security parameter
+It immaterial decision rule actually stored computer present left individual software system designer
+Following example Security Component Definition TOP SECRET SECRET CONFIDENTIAL UNCLEARED TOP SECRET TS SECRET S CONFIDENTIAL C UNCLEARED UR UNCLASSIFIED U TS IMPLIES S S IMPLIES C C IMPLIES UR TS ACCESSES TS S ACCESSES S C ACCESSES C UR ACCESSES U NONE NONE NONE TS S C U YIELDS TS S C U YIELDS S C U YIELDS C END The component name specified statement name normally applied classification system compartment special category
+It within component listed definition
+Note component name clearance name may
+allows commonly used abbreviation synonym
+The statement internal external particular component question handled way system software
+They stipulated separately definition merely assist System Security Officer organizing thought defines security structure
+A possible use statement create Universal Privileges discussed use also illustrated Example Annex B
+These statement describe hierarchical relationship exist one clearance defined component either another clearance within component clearance another component respectively
+This interpreted mean access authorized given clearance implies automatic access unless otherwise limited authorized clearance lower hierarchy
+For example individual Top Secret clearance Top Secret implies Secret sense individual cleared Top Secret also access information individual cleared Secret access
+Under one operator called access previously defined permit access information labelled
+These rule explicitly state relation name clearance security component defined label information security clearance permit access
+In many case word used specify clearance label indicating classification information example
+The normal classification label file
+For example certain security component require information within component handled via special channel fact explicitly stated piece information protected component
+In effect required label regarded accessed clearance listed Security Component Definition synonym
+The necessity view indicated Crypto example Annex B Example administrative traffic Crypto classification label still confined people must recognized system
+Note information dissemination label although required information included present usage neither standardized logically consistent
+When usage becomes standardized possible revise slightly scheme described accommodate handle automatically
+The statement vehicle describing situation particular clearance requires simultaneous existence existence clearance access authorization see Examples Annex B
+Note classification label mentioned since particular label accessed given clearance always determined
+discussed fully contain information allows system determine automatically classification information result merging information various classification
+Standard logical relationship utilizing Boolean connective permitted
+The operator YIELDS mean combination classification label left requires classification label right placed merged information
+After complete Security Structure Definition entered computer augmented set Requirement statement automatically constructed follows
+For implication statement form either Internal External Structure statement Requirement statement modified conjunction
+If previous Requirement statement
+one must created
+The purpose provide consistency minimization user clearance set
+For example individual granted Top Secret clearance already possessing Secret clearance system rightfully expect Secret clearance removed Top Secret granted
+Similarly instance interrelated component mandatory clearance mutually coexist another clearance implies see Example Annex B
+The system includes capability result following rule In example given mean security officer must remove user Secret clearance adding user Top Secret status system
+The system consistency checking mechanism described prevent Top Secret clearance accepted Secret clearance deleted
+After Security Component Definitions entered computer preprocessing completed two consistency check made
+The first insures clearance referenced defined clearance
+The second insures chain exist lead contradiction
+For example would form inconsistent set clearance clearance could never granted
+The consistency check performed follows clearance Security Structure Definition Form expression called consistency expression consisting clearance tested
+b Moving consistency expression left right pick next clearance expression replace conjuncted side Requirements statement clearance Security Component Definition enclosed parenthesis
+c Repeat step b time moving next clearance appearing consistency expression next one right one processed clearance consistency expression processed
+Assign value next clearance consistency expression one tested consistency rest security structure
+e If set assignment made clearance consistency expression result value expression evaluated according normal rule Boolean expression evaluation clearance tested consistent rest Security Structure Definition
+f If assignment found make consistency expression clearance tested inconsistent rest Security Structure Definition
+The consistency expression inconsistent clearance must output system facilitate correction inconsistency
+The consistency check continue look inconsistency particular Security Structure Definition accepted system
+The system allow type error Security Structure Definition
+After correcting inconsistency entire process Security Structure Definition must restarted beginning
+Also complex processing described provision definition new clearance
+g Repeat step e f time moving next clearance appearing consistency expression next one right one processed clearance consistency expression processed
+provided permit automatic determination classification information produced combination information dissimilar classification see example National Clearances also Examples Annex B
+Note relationship including hierarchical one must explicitly stated term classification label software expected infer one classification subsumes another
+The actual merge rule processing follows b Simplify resultant merge label following rule Apply merge rule side special merge rule match concatenated label portion thereof replace portion side rule
+Treat side merge Boolean expression evaluate according normal rule
+If label appears concatenated label set consider expression otherwise
+Hence right side substituted left side merge rule left side
+In attempting apply step label freely reordered promote simplification
+c If simplification result step b repeat step b c
+The next step system generation Personnel Security Definition
+It possible modify information subsequently use user clearance update language
+The processing involved initial system generation subsequent update follows b The granting agency expiration date may specified clearance put user information presently utilized
+The cognizant agency neither specified stored
+This implies within automated security system Top Secret clearance granted one agency also implies access Top Secret information another agency unless additional label deny access applied information
+c On addition deletion user clearance check made user exists addition clearance exists already granted user deletion user fact clearance deleted
+At time Personnel Security Definition time granting additional clearance removing existing clearance user consistency check made insure Requirements statement user clearance still satisfied addition deletion new old clearance accomplished follows Notice algorithm used generating set label user clearance permit access explained File Access Processing step b c c deleted
+For explicit clearance user granted including new one added excluding old one deleted check see requirement stated Requirements statement Security Component Definition satisfied occurrence absence clearance clearance set generated according normal rule Boolean expression evaluation
+Authorization Group Definition occurs system generation time like Personnel Definition also may updated
+There special processing explicitly required authorization group
+A user authorized use system name authorization group
+Updates made via authorization group update language
+Under emergency condition may necessary grant user group user unrestricted access file system set file regardless clearance special access category restriction
+Rather turning file safeguard system necessitating concern user identification protection terminal etc
+especially emergency condition special capability provided within system system security control impaired
+The System Security Officer normal Security Component Definition define universal emergency clearance implies clearance category system external requirement
+It granted given user first removing clearance prevent clearance inconsistency check granting universal emergency clearance
+Obviously number emergency clearance could set subset overall security system simply listing desired one External Structure statement
+Universal authorization group defined handle problem overriding system file manipulation access authorization restriction
+Membership group authorizes individual take action file permitted access either standing emergency basis
+Examples universal authorization universal universal etc
+Mechanisms described sufficient accommodating specific situation may arise assuming appropriate universal group predefined
+In addition allow routine handling two situation normally requiring special provision
+These privilege System Security Officer mechanism
+The System Security Officer addition normal clearance status universal authorization authorization list file classification
+The file backup program given clearance status handle file provide backup universal authorization enable read file
+handled manner similar personnel security information
+There exists capability update information
+In present specification capability specify terminal access list included list authorized user given terminal
+It appears present unnecessary complexity add already burdened system expect physical access terminal processing classified information normally controlled
+Further control seems unnecessary desired mechanism similar already specified used
+For example special clearance status defined access permitted particular terminal
+Each time file created creator may specify individual group individual permitted access file well may
+For file author may therefore specify authorization access list associated authorization
+If specified default access list assumed fallow It noted syntax authorization specification provides capability removal author name access list
+Unless explicitly done however author file permitted unrestricted access file well privilege changing authorization specification classification file
+At present deemed necessary provide capability able syntactically distinguish authorization group identifier user identifier
+Rather assumed processing algorithm check identifier question master list semantics obvious context
+Anyone ability write file principle add information higher classification file
+Therefore must way altering classification status file
+Whether provided allowing anyone write privilege alter file classification directly requesting original author file alter classification requesting System Security Officer alter classification operational policy decision
+The first alternative simplest may operationally desirable second person involved change classification
+The mechanism overall scheme provide capability specify separate group individual alter classification file
+The system must follow certain procedure attempting determine whether given user may reference particular file information
+First user clearance must sufficient permit access file classification determined follows b Obtain set label user clearance permit access
+This set may calculated needed time security system update time latter used updating user clearance System Security Officer allowed
+c If set label user clearance status permit access contains label file classification status formal security accessing requirement satisfied
+The method generating set label user clearance status permit access follows b Initialize null set label user clearance status permit access called
+c For entry clearance set Add clearance set clearance category implied particular clearance entry either Internal External Structure statement within Security Component Definition
+Delete entry clearance set
+Apply identity transformation yield accessible label set delete duplicate
+After user clearance status checked successfully permit access file security system must determine whether user satisfies authorization limitation file
+This check determines user right specifies type manipulation allowed file question
+The process carrying follows b For authorization type starting unrestricted access If authorization unrestricted access user qualifies grant block file authorization type stop processing right
+The information block consulted Supervisor every operation order determine whether operation file legal
+Thus authorization processing occurs linkage user file clearance status check made result creation data later used Supervisor controlling access file
+The universal authorization algorithm consists checking universal group presence user set either explicitly name implicitly membership another group specified member universal group
+If user sent set grant associated universal access privilege
+Notation Standard Form BNF plus Consider class information called Crypto regarded restriction access national clearance system
+Since Crypto information transmitted via special channel labelled administrative traffic without classification label Crypto still confined personnel regarding required label file accessed clearance listed definition
+CRYPTO CRYPTO CRYPTO CRP NONE CRP ACCESSES CRP HANDLE VIA SPECIAL CHANNELS NONE CRP REQUIRES TS S NONE END Consider hypothetical refinement national clearance system called DATATEL follows DATATEL III I NONE III IMPLIES II II IMPLIES I III ACCESSES ABLE II ACCESSES BAKER I ACCESSES CHARLIE HANDLE VIA DATATEL CHANNELS ONLY NONE III REQUIRE TS REQUIRES S I REQUIRES C ABLE BAKER CHARLIE YIELDS ABLE BAKER CHARLIE YIELDS BAKER END Now consider hypothetical compartment information within DATATEL structure
+It assumed APPLE information labelled carry codeword ALICE
+The APPLE definition relates APPLE III DATATEL definition relates III ABLE also Top Secret
+Thus system correctly determine proper classification label APPLE information TOP SECRET ABLE ALICE
+Note also information two required label rule precedence must specified handle situation
+APPLE APPLE NONE NONE APPLE ACCESSES ALICE HANDLE VIA APPLE CHANNELS ONLY NONE APPLE REQUIRES III NONE END Consider hypothetical example named ROUND ROBIN assumed Secret level two category information called AGILE BANANA accessing information labelled respectively ANN BETTY
+Further assume individual concurrently authorized access AGILE BANANA information
+Rather assume order access individual must cleared Top Secret case said access CHERRY information labelled CHICO well AGILE BANANA information
+Furthermore assume CHERRY access also allows individual access information person III access authorization see Example may access
+ROUND ROBIN CHERRY AGILE BANANA NONE CHERRY IMPLIES AGILE CHERRY IMPLIES BANANA CHERRY ACCESSES CHICO AGILE ACCESSES ANN BANANA ACCESSES BETTY NONE CHERRY IMPLIES III AGILE REQUIRES BANANA SECRET BANANA REQUIRES AGILE SECRET CHERRY REQUIRES TOP SECRET ANN AND BETTY YIELDS TOP SECRET CHICO
+END Transcription HTML
+The RAND Corporation research organization develops solution public policy challenge help make community throughout world safer secure healthier prosperous
+RAND nonprofit nonpartisan committed public interest
+Subscribe weekly Policy Currents newsletter receive update issue matter
+
+This handled process manager OS see First little
+So process program execution
+The first three letter program process probably clue something
+Think process An abstraction sequence instruction executed processor processor may need service hardware device process time sharing executing device driver instruction process
+make hardly sense understand process bit reading
+A process contains A really important thing remember process program disk would file
+Imagine recipe cake
+Now cake recipe instruction making cake like program disk
+The actual activity making cake process
+The thing take away section OS collection process
+The OS make computer productive switching CPU process
+The thing normally cause process created The system call creates process known fork execve Unix Windows CreateProcess
+These process called one process create another
+This known parent process creating child process
+There several reason process may terminated Things could become issue The OS table one entry per process
+Each entry known PCB
+Each entry The basic thing learn PCB info needed process stopped restarted
+Note This diagram taken source material post available slide
+All right reserved
+The diagram fairly simple
+You see actual switching process happening neither process executing CPU perform processing middle switching
+The actual switching time vary around microsecond second millisecond The concept processing used far assumed single address space used every process single thread control
+But multiple thread within one process
+It possible think way You multiple process sharing one computer multiple thread sharing process
+This would useful web browser example one thread receiving data network another display text
+With web browser could one thread getting input user another thread autosaving
+Imagine word processor single threaded You able type anything autosaving
+Note On version powerpoint I type anything autosaving
+It annoying
+You might hear something called
+This another way saying thread
+So thread multiple flow control sharing one address space
+Each one need program counter register value stack
+Remember thread process share code section global variable network connection open file
+You may heard
+This multiple thread share process
+Programs become responsive resource shared better
+If part program blocked keep running
+As IO CPU use shared thread process performance usually better
+It economical There lot cost associated making process
+Memory resource need allocated
+Creating thread faster
+There concern though I mentioned two thread share data
+Therefore one thread might read location another writing need take care stop problem like
+Implementing threading fast done user space
+However OS aware meaning user level thread get blocked whole process blocked
+This useful support multiprocessor dual core available
+This OS schedule individual thread
+However slow requires system call
+That
+Slightly detailed note available I super cool I computer science unrelated coolness Fill detail click icon log You commenting using account
+You commenting using Twitter account
+You commenting using Facebook account
+You commenting using account
+Connecting
+
+study manipulate manage transform
+There many different area computer science
+Some area consider problem way
+Some area need special called
+A person work computer often need order make use computer
+This find new easier way thing way approach problem information
+Computers thing easily example simple math sorting list name
+But computer answer question enough information real answer
+Also computer may take much time finish long
+For example may take long find shortest way town USA instead computer try make
+A computer answer simpler question much faster
+specific set instruction step complete task
+Think example
+A computer scientist want sort card
+First sort suit
+Then order number Jack Queen King Ace
+There many way sort card
+By deciding set step sort card created algorithm
+After making algorithm scientist need test whether algorithm work
+Then scientist see well algorithm sort card
+A simple slow algorithm could drop card pick check whether sorted
+If
+This method work take long time
+A better algorithm would finding first card smallest suit smallest number diamond putting start
+After look second card
+This work much faster need much space
+This sorting algorithm name selection sort
+Computer science began separated science
+Now computer science method technical term
+It related
+Computer science look part computer
+look physical computer hardware look use make
+
+Computer program make use data control flow program
+There several main primitive data type
+Data value variable constant
+A used make choice based information
+An made intelligent using IF THEN ELSE repeat instruction move different part program
+You need JavaScript enabled view video clip
+An explanation selection used algorithm programming The algorithm entering room could changed account different condition
+For instance could change The sequence action carried based upon information
+The way computer discover circumstance collect input compare known value
+In case known value would value
+The computer look door check see current state match
+If match door need unlocked
+Otherwise nothing done
+The selection useful choice eg
+The alternative structure structure
+Using CASE algorithm search list option find correct condition
+For example quiz answer might A B C correct condition either A B Basically look correct option two choice CASE look correct option multiple choice
+You need JavaScript enabled play audio clip
+Andrew Robinson explains IF THEN ELSE statement used programming Python Sign choose GCSE subject see content tailored
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+In unambiguous specification solve class problem
+Algorithms perform task
+An algorithm expressed within finite amount space time formal language calculating
+Starting initial state initial input perhaps instruction describe proceeds finite number successive state eventually producing output terminating final ending state
+The transition one state next necessarily algorithm known incorporate random input
+The concept existed century however partial formalization would become modern began attempt solve decision problem posed
+Subsequent formalization framed attempt define effective method formalization included
+Giving formal definition algorithm corresponding intuitive notion remains challenging problem
+The word combination word named word
+αριθμός meaning number
+mathematician scholar whose name mean native region part
+About wrote treatise Arabic language translated century title
+This title mean Algoritmi number Indians Algoritmi translator Latinization name
+widely read mathematician Europe late Middle Ages primarily book
+In late medieval Latin English corruption name simply meant decimal number system
+In century influence Greek word ἀριθμός Latin word altered corresponding English term first attested century modern sense introduced century
+In English first used
+English adopted French term late century algorithm took meaning modern English
+Another early use word manual titled composed
+It begin thus translates Algorism art present use Indian figure number two time five
+The poem hundred line long summarizes art calculating new style Indian dice Talibus Indorum Hindu numeral
+An informal definition could set rule precisely defines sequence operation
+would include computer program including program perform numeric calculation
+Generally program algorithm stop eventually
+A prototypical example algorithm determine maximum common divisor two integer example others described example later section
+offer informal meaning word following quotation No human write fast enough long enough small smaller smaller without limit trying write molecule atom electron list member enumerably infinite set writing name one another notation
+But human something equally useful case certain enumerably infinite set They give arbitrary finite
+Such instruction given quite explicitly form An enumerably infinite set one whose element put correspondence integer
+Thus Boolos Jeffrey saying algorithm implies instruction process creates output integer input integer integer theory arbitrarily large
+Thus algorithm algebraic equation two arbitrary input variable produce output
+But various author attempt define notion indicate word implies much something order addition example The concept also used define notion
+That notion central explaining come starting small set rule
+In time algorithm requires complete measured apparently related customary physical dimension
+From uncertainty characterize ongoing work stem unavailability definition suit concrete sense abstract usage term
+Algorithms essential way computer process data
+Many computer program contain algorithm detail specific instruction computer perform specific order carry specified task calculating employee paycheck printing student report card
+Thus algorithm considered sequence operation simulated system
+Authors assert thesis include Minsky Savage Gurevich Minsky But also maintain Turing
+
+
+procedure could naturally called effective fact realized simple machine
+Although may seem extreme argument
+
+
+favor hard refute
+Gurevich Turing informal argument favor thesis justifies stronger thesis every algorithm simulated Turing machine according Savage algorithm computational process defined Turing machine
+Typically algorithm associated processing information data read input source written output device stored processing
+Stored data regarded part internal state entity performing algorithm
+In practice state stored one
+For computational process algorithm must rigorously defined specified way applies possible circumstance could arise
+That conditional step must systematically dealt criterion case must clear computable
+Because algorithm precise list precise step order computation always crucial functioning algorithm
+Instructions usually assumed listed explicitly described starting top going bottom idea described formally
+So far discussion formalization algorithm assumed premise
+This common conception attempt describe task discrete mechanical mean
+Unique conception formalized algorithm setting value variable
+It derives intuition scratchpad
+There example assignment
+For alternate conception constitutes algorithm see
+Algorithms expressed many kind notation including processed
+Natural language expression algorithm tend verbose ambiguous rarely used complex technical algorithm
+Pseudocode flowchart control table structured way express algorithm avoid many ambiguity common natural language statement
+Programming language primarily intended expressing algorithm form executed computer often used way define document algorithm
+There wide variety representation possible one express given program sequence machine table see flowchart see form rudimentary called set quadruple see
+Representations algorithm classed three accepted level Turing machine description For example simple algorithm Add described three level see
+Most algorithm intended implemented
+However algorithm also implemented mean biological example implementing insect looking food mechanical device
+In algorithm basically instance written software software developer effective intended target computer produce given perhaps null
+An optimal algorithm even running old hardware would produce faster result higher algorithm purpose running efficient hardware algorithm like computer hardware considered technology
+The notion simplicity elegance appears informally Knuth precisely Chaitin Chaitin preface definition I show ca prove program proof would solve ibid
+For given function multiple algorithm may exist
+This true even without expanding available instruction set available programmer
+Rogers observes It
+
+
+important distinguish notion
+procedure notion
+mapping yielded procedure
+The function may several different algorithm
+Unfortunately may tradeoff goodness speed elegance compactness elegant program may take step complete computation one le elegant
+An example us Euclid algorithm appears
+A computer human computor restricted type machine discrete deterministic mechanical device blindly follows instruction
+Melzak Lambek primitive model reduced notion four element discrete distinguishable ii discrete indistinguishable iii agent iv list instruction relative capability agent
+Minsky describes congenial variation Lambek abacus model Very Simple Bases
+proceeds sequentially five six depending one count instruction unless either conditional GOTO unconditional GOTO change program flow sequence
+Besides HALT Minsky machine includes three replacement substitution operation ZERO
+content location replaced L SUCCESSOR
+L DECREMENT
+L L
+Rarely must programmer write code limited instruction set
+But Minsky show Melzak Lambek machine four general instruction conditional GOTO unconditional GOTO HALT
+Knuth advises reader best way learn algorithm try
+
+
+immediately take pen paper work example
+But simulation execution real thing
+The programmer must translate algorithm language execute
+Stone give example computing root quadratic equation computor must know take square root
+If algorithm effective must provide set rule extracting square root
+This mean programmer must know language effective relative target computing agent
+But model used simulation
+Van Emde Boas observes even base abstract instead concrete machine arbitrariness choice model remains
+It point notion enters
+When speed measured instruction set matter
+For example subprogram Euclid algorithm compute remainder would execute much faster programmer instruction available rather subtraction worse Minsky decrement
+Per algorithm computed model known per Minsky demonstration Turing completeness requires four instruction GOTO unconditional GOTO assignment HALT
+Kemeny Kurtz observe undisciplined use unconditional GOTOs conditional GOTOs result programmer write structured program using instruction hand also possible hard write badly structured program structured language
+Tausworthe augments three SEQUENCE two CASE
+An additional benefit structured program lends using
+The graphical aide called offer way describe document algorithm computer program one
+Like program flow Minsky machine flowchart always start top page proceeds
+Its primary symbol four directed arrow showing program flow rectangle SEQUENCE GOTO diamond dot
+The canonical structure made primitive shape
+nest rectangle single exit occurs superstructure
+The symbol use build canonical structure shown diagram
+One simplest algorithm find largest number list number random order
+Finding solution requires looking every number list
+From follows simple algorithm stated description English prose Written prose much closer language computer program following formal coding algorithm algorithm compute GCD two number appears Proposition II Book VII Elementary Number Theory
+Euclid pose problem thus Given two number prime one another find greatest common measure
+He defines A number multitude composed unit counting number positive integer including zero
+To measure place shorter measuring length successively time along longer length remaining portion le shorter length
+In modern word remainder quotient remainder modulus part left division
+For Euclid method succeed starting length must satisfy two requirement length must zero AND ii subtraction must proper test must guarantee smaller two number subtracted larger alternately two equal subtraction yield zero
+Euclid original proof add third requirement two length must prime one another
+Euclid stipulated could construct proof two number common measure fact
+While Nicomachus algorithm Euclid number prime one another yield number common measure
+So precise following really Nicomachus algorithm
+Only instruction required execute Euclid logical test conditional GOTO unconditional GOTO assignment replacement subtraction
+The following algorithm framed Knuth version Euclid Nicomachus rather using division find remainder us successive subtraction shorter length remaining length le
+The description shown boldface adapted Knuth Until remaining length R le shorter length S repeatedly subtract measuring number S remaining length EITHER last measure exact remainder R zero program halt OR ii algorithm must continue last measure left remainder R le measuring number The nut Euclid algorithm
+Use remainder measure previously smaller number L serf temporary location
+The following version Euclid algorithm requires six core instruction thirteen required Inelegant worse Inelegant requires instruction
+The flowchart Elegant found top article
+In unstructured Basic language step numbered instruction assignment instruction symbolized
+The following version used Object Oriented language In place outer Euclid loop Elegant shift back forth two A B loop computes A A B B A loop computes B B A
+This work last minuend M le equal subtrahend S Difference Minuend Subtrahend minuend become new measuring length subtrahend become new length measured word sense subtraction revers
+Does algorithm author want
+A test case usually suffice confirm core functionality
+One source us
+Knuth suggested
+Another interesting case two number
+But exceptional case must identified tested
+Will Inelegant perform properly R S S R R S
+Ditto Elegant B A A B A B
+Yes
+What happens one number zero number zero
+Inelegant computes forever case Elegant computes forever A
+What happens number entered
+Fractional number
+If input number
+function computed include positive integer including zero failure zero indicate algorithm program rather
+A notable failure due exception rocket failure June
+Knuth demonstrates application extended version Euclid algorithm proposes general method applicable proving validity algorithm
+Tausworthe proposes measure complexity program length correctness proof
+With six core instruction Elegant clear winner compared Inelegant thirteen instruction
+However Inelegant arrives HALT fewer step
+indicates case Elegant conditional test every subtraction loop whereas Inelegant one
+As algorithm usually requires many much time wasted B
+test needed remainder computed
+Once programmer judge program fit effective computes function intended question becomes improved
+The compactness Inelegant improved elimination five step
+But Chaitin proved compacting algorithm automated generalized algorithm rather done exhaustive search example found trial error cleverness insight application etc
+Observe step repeated step
+Comparison Elegant provides hint step together step eliminated
+This reduces number core instruction thirteen eight make elegant Elegant nine step
+The speed Elegant improved moving
+test outside two subtraction loop
+This change call addition three instruction B A GOTO
+Now Elegant computes faster whether always case given A B R S would require detailed analysis
+It frequently important know much particular resource time storage theoretically required given algorithm
+Methods developed obtain quantitative answer estimate example sorting algorithm time requirement O using length list
+At time algorithm need remember two value largest number found far current position input list
+Therefore said space requirement space required store input number counted O counted
+Different algorithm may complete task different set instruction le time space others
+For example algorithm cost O log n outperforms sequential search cost O n used sorted list array
+The discipline often practiced abstractly without use specific implementation
+In sense algorithm analysis resembles mathematical discipline focus underlying property algorithm specific particular implementation
+Usually used analysis simplest general representation
+However ultimately algorithm usually implemented particular hardware software platform eventually put test using real code
+For solution one problem efficiency particular algorithm may significant consequence unless n extremely large algorithm designed fast interactive commercial long life scientific usage may critical
+Scaling small n large n frequently expose inefficient algorithm otherwise benign
+Empirical testing useful may uncover unexpected interaction affect performance
+may used compare potential improvement algorithm program optimization
+To illustrate potential improvement possible even well established algorithm recent significant innovation relating algorithm used heavily field image processing decrease processing time time application like medical imaging
+In general speed improvement depend special property problem common practical application
+Speedups magnitude enable computing device make extensive use image processing like digital camera medical equipment consume le power
+There various way classify algorithm merit
+One way classify algorithm implementation mean
+Another way classifying algorithm design methodology paradigm
+There certain number paradigm different
+Furthermore category include many different type algorithm
+Some common paradigm For specific classification algorithm algorithm problem may fall one general category described well one following Every field science problem need efficient algorithm
+Related problem one field often studied together
+Some example class algorithm
+Fields tend overlap algorithm advance one field may improve sometimes completely unrelated field
+For example dynamic programming invented optimization resource consumption industry used solving broad range problem many field
+Algorithms classified amount time need complete compared input size Some problem may multiple algorithm differing complexity problem might algorithm known efficient algorithm
+There also mapping problem problem
+Owing found suitable classify problem instead algorithm equivalence class based complexity best possible algorithm
+The adjective continuous applied word algorithm mean Algorithms usually patentable
+In United States claim consisting solely simple manipulation abstract concept number signal constitute process USPTO hence algorithm patentable
+However practical application algorithm sometimes patentable
+For example application simple algorithm aid curing deemed patentable
+The highly controversial highly criticized patent involving algorithm especially algorithm
+Additionally cryptographic algorithm export restriction see
+Researcher argues algorithm overseen specialist regulatory agency similar FDA
+His academic work emphasizes rise increasingly complex algorithm call need think effect algorithm today
+Due nature complexity algorithm prove difficult hold algorithm accountable criminal law
+Tutt recognizes algorithm beneficial help meet technological demand others used sold fail meet safety requirement
+Thus Tutt algorithm require closer form federal uniformity expert judgment political independence review prevent introduction unacceptably dangerous algorithm market
+The issue responsibility algorithm designer provide evidence potential realised harm particular relevance field dynamic programmed system
+artificial neural network deep learning genetic algorithm see
+Algorithms used ancient Greece
+Two example described first described BC
+describe employ algorithmic procedure compute time place significant astronomical event
+To keep track flock sack grain money ancient used tallying accumulating stone mark scratched stick making discrete symbol clay
+Through Babylonian Egyptian use mark symbol eventually evolved Dilson
+Tally mark appear prominently arithmetic used computation
+The work ancient whose name term algorithm derived Western European mathematician culminated notion ca A good century half ahead time Leibniz proposed algebra logic algebra would specify rule manipulating logical concept manner ordinary algebra specifies rule manipulating number
+Bolter credit invention The key invention Europe Middle Ages particular provides u tick tock mechanical clock
+The accurate automatic machine led immediately mechanical beginning century finally computational machine Countess century
+Lovelace credited first creation algorithm intended processing computer Babbage analytical engine first device considered real computer instead sometimes called history first programmer result though full implementation Babbage second device would realized decade lifetime
+The technical problem reduce presented form similar known
+Jevons describes first simple abacus slip wood furnished pin contrived part class logical combination picked mechanically
+
+
+More recently however I reduced system completely mechanical form thus embodied whole indirect process inference may called His machine came equipped certain moveable wooden rod foot key like piano etc
+
+
+With machine could analyze simple logical argument
+This machine displayed Fellows Royal Society
+Another logician however turned jaundiced eye effort I high estimate interest importance sometimes called logical machine seem contrivance present known likely discovered really deserve name logical machine see
+But outdone presented plan somewhat analogous I apprehend Jevon And gain corresponding Jevons logical machine following contrivance may described
+I prefer call merely machine I suppose could completely rationally expected logical machine
+Bell Newell indicate precursor punch card telephone switching technology root tree leading development first computer
+By century precursor telephone use throughout world discrete distinguishable encoding letter dot dash common sound
+By late century ca use use Hollerith card census
+Then came ca
+use tape
+electromechanical invented behind work inventor digital adding device
+As worked Bell Laboratories observed burdensome use mechanical calculator gear
+He went home one evening intending test idea
+When tinkering Stibitz constructed binary adding device
+Davis observes particular importance electromechanical relay two binary state In rapid succession mathematics reduced arithmetic sequence symbol manipulated rule
+Peano first attempt axiomatization mathematics symbolic language
+But Heijenoort give Frege kudos Frege perhaps important single work ever written logic
+see language language written special symbol pure thought free rhetorical embellishment constructed specific symbol manipulated according definite rule
+The work Frege simplified amplified
+At time number disturbing paradox appeared literature particular
+The resultant consideration led paper specifically cite paradox completely reduces rule number
+In effort solve defined precisely Hilbert mathematician first set define meant effective method effective calculation effective calculability calculation would succeed
+In rapid succession following appeared finely honed definition general recursion work Gödel acting suggestion cf
+Gödel Princeton lecture subsequent simplification Kleene
+Church proof Entscheidungsproblem unsolvable definition effective calculability worker mindlessly following list instruction move left right sequence room either mark erase paper observe paper make decision next instruction
+Alan Turing proof Entscheidungsproblem unsolvable use machine effect almost identical Post formulation definition effective method term machine
+proposal precursor called Thesis I year later Kleene renaming Thesis Church Thesis proposing Turing Thesis
+Here remarkable coincidence two men knowing describing process working yield virtually identical definition
+described action computer human follows His symbol space would work preceded Stibitz unknown whether Stibitz knew work Turing
+Turing biographer believed Turing use model derived youthful interest Alan dreamt inventing typewriter boy Turing typewriter could well begun asking meant calling typewriter
+Given prevalence Morse code telegraphy ticker tape machine teletypewriter might conjecture influence
+model computation called Post analysis human computer whittle simple set basic motion state mind
+But continues step creates machine model computation number
+Turing reduction yield following It may change necessarily invoke change state mind
+The general single operation must therefore taken one following A year later Turing expanded analysis thesis definition forceful expression defined mathematical method following manner italicization added Rosser footnote No
+reference work Church Kleene definition particular Church use Herbrand Gödel use recursion particular Gödel use famous paper Post Turing computation
+defined Thesis I known
+But following context boldface original A number effort directed toward refinement definition algorithm activity issue surrounding particular especially especially argument
+For see
+
+second signup
+Nothing install
+No CC required
+Smartsheet project manager dream come true
+

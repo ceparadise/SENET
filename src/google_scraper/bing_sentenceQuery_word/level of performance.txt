@@ -1,0 +1,887 @@
+amount work accomplished computer system
+Depending context high computer performance may involve one following The performance computer system evaluated measurable technical term using one metric listed
+This way performance Whilst definition relates scientific technical approach following definition given would useful audience performance performance particularly response time aspect important
+Performance engineering within system engineering encompasses set role skill activity practice tool deliverable applied every phase system development life cycle ensures solution designed implemented operationally supported meet performance requirement defined solution
+Performance engineering continuously deal type performance
+Occasionally find way make CPU better overall performance improving one aspect performance presented without sacrificing CPU performance area
+For example building CPU better faster transistor
+However sometimes pushing one type performance extreme lead CPU worse overall performance important aspect sacrificed get one number example chip see
+Application Performance Engineering APE specific methodology within designed meet challenge associated application performance increasingly distributed mobile cloud terrestrial IT environment
+It includes role skill activity practice tool deliverable applied every phase application lifecycle ensure application designed implemented operationally supported meet performance requirement
+Computer performance thing measure include
+benchmark available
+Availability system typically measured factor reliability reliability increase availability le
+Availability system may also increased strategy focusing increasing testability maintainability reliability
+Improving maintainability generally easier reliability
+Maintainability estimate Repair rate also generally accurate
+However uncertainty reliability estimate case large likely dominate availability prediction uncertainty problem even maintainability level high
+Response time total amount time take respond request service
+In computing service unit work simple disk IO loading complex
+The response time sum three number Most consumer pick computer architecture normally architecture able run large base software
+Being relatively uninformed computer benchmark pick particular CPU based operating frequency see
+Some system designer building parallel computer pick CPUs based speed per dollar
+Channel capacity tightest upper bound rate reliably transmitted
+By channel capacity given limiting information rate unit per unit time achieved arbitrarily small error probability
+developed defines notion channel capacity provides mathematical model one compute
+The key result state capacity channel defined given maximum input output channel maximization respect input distribution
+Latency time delay cause effect physical change system observed
+Latency result limited velocity physical interaction take place
+This velocity always lower equal speed light
+Therefore every physical system spatial dimension different zero experience sort latency
+The precise definition latency depends system observed nature stimulation
+In communication lower limit latency determined medium used communication
+In reliable communication system latency limit maximum rate information transmitted often limit amount information one moment
+In field interaction perceptible latency delay user command computer provides result strong effect user satisfaction usability
+Computers run set instruction called process
+In operating system execution process postponed process also executing
+In addition operating system schedule perform action process commanding
+For example suppose process command computer card voltage output set rate Hz
+The operating system may choose adjust scheduling transition based internal clock
+The latency delay process instruction commanding transition hardware actually transitioning voltage high low low high
+System designer building system want guarantee response
+That easier CPU low deterministic response
+In computer networking bandwidth measurement available consumed data communication resource expressed bit per second multiple etc
+Bandwidth sometimes defines net bit rate aka
+peak bit rate information rate physical layer useful bit rate channel capacity maximum throughput logical physical communication path digital communication system
+For example bandwidth test measure maximum throughput computer network
+The reason usage according Hartley law maximum data rate physical communication link proportional bandwidth hertz sometimes called frequency bandwidth spectral bandwidth RF bandwidth signal bandwidth analog bandwidth
+In general term throughput rate production rate something processed
+In communication network throughput essentially synonymous digital bandwidth consumption
+In unit maximum system throughput aggregate throughput divided analog bandwidth measure system coverage area
+In integrated circuit often block single input single output operate discrete packet information
+Examples block module
+Because unit throughput reciprocal unit per message per output throughput used relate computational device performing dedicated function communication channel simplifying system analysis
+Scalability ability system network process handle growing amount work capable manner ability enlarged accommodate growth The amount electricity used computer
+This becomes especially important system limited power source solar battery human power
+System designer building pick CPUs based speed per watt power cost powering CPU outweighs cost CPU
+Compression useful help reduce resource usage data storage space transmission capacity
+Because compressed data must decompressed use extra processing imposes computational cost decompression situation far free lunch
+Data compression subject complexity
+This important performance feature mobile system smart phone keep pocket portable embedded system spacecraft
+The effect computer computer environment manufacturing recycling well use
+Measurements taken objective reducing waste reducing hazardous material minimizing computer
+Because many program test CPU aspect performance developed
+The famous benchmark SPECint benchmark developed benchmark developed Embedded Microprocessor Benchmark Consortium
+In software engineering performance testing general testing performed determine system performs term responsiveness stability particular workload
+It also serve investigate measure validate verify quality attribute system scalability reliability resource usage
+Performance testing subset performance engineering emerging computer science practice strives build performance implementation design architecture system
+In profiling program profiling software profiling form measure example space memory time frequency duration function call
+The common use profiling information aid program
+Profiling achieved instrumenting either program binary executable form using tool called
+A number different technique may used profilers statistical instrumented simulation method
+Performance tuning improvement performance
+This typically computer application method applied economic market bureaucracy complex system
+The motivation activity called performance problem real anticipated
+Most system respond increased degree decreasing performance
+A system ability accept higher load called modifying system handle higher load synonymous performance tuning
+Systematic tuning follows step Perceived performance computer engineering refers quickly software feature appears perform task
+The concept applies mainly user acceptance aspect
+The amount time application take start file download made faster showing startup screen see Splash screen file progress dialog box
+However satisfies human need appears faster user well providing visual cue let know system handling request
+In case increasing real performance increase perceived performance real performance increased due physical limitation technique used increase perceived performance cost marginally decreasing real performance
+The total amount time required execute particular benchmark program Even one machine different compiler compiler different switch change N benchmark executes faster new compiler improve N C without making worse often better example use complicated instruction take long time execute use instruction execute quickly although take execute benchmark
+A CPU designer often required implement particular change Sometimes designer focus improving performance making significant improvement f technique deeper pipeline faster cache hopefully sacrificing much CPU design
+Sometimes designer focus improving performance making significant improvement CPI technique CPUs larger cache cache improved hit rate improved branch prediction etc
+hopefully sacrificing much clock brainiac CPU design
+For given instruction set therefore fixed N semiconductor process maximum performance requires balance brainiac technique speedracer technique
+
+In process modifying software system make aspect work use fewer resource
+In general may optimized executes rapidly capable operating le resource draw le power
+Although word optimization share root optimal rare process optimization produce truly optimal system
+The optimized system typically optimal one application one audience
+One might reduce amount time program take perform task price making consume memory
+In application memory space premium one might deliberately choose slower order use le memory
+Often one size fit design work well case make optimize attribute greatest interest
+Additionally effort required make piece software completely optimal incapable improvement almost always reasonable benefit would accrued process optimization may halted completely optimal solution reached
+Fortunately often case greatest improvement come early process
+Optimization occur number level
+Typically higher level greater impact harder change later project requiring significant change complete rewrite need changed
+Thus optimization typically proceed via refinement higher lower initial gain larger achieved le work later gain smaller requiring work
+However case overall performance depends performance portion program small change late stage early consideration detail outsized impact
+Typically consideration given efficiency throughout project though varies significantly major optimization often considered refinement done late ever
+On project typically cycle optimization improving one area reveals limitation another typically curtailed performance acceptable gain become small costly
+As performance part specification program program unusably slow fit purpose video game Hz acceptable unacceptably choppy performance consideration start ensure system able deliver sufficient performance early prototype need roughly acceptable performance confidence final system optimization achieve acceptable performance
+This sometimes omitted belief optimization always done later resulting prototype system far slow often order magnitude factor system ultimately failure architecturally achieve performance goal one take year work achieve acceptable performance Java achieved acceptable performance
+The degree performance change prototype production system amenable optimization significant source uncertainty risk
+At highest level design may optimized make best use available resource given goal constraint expected
+The architectural design system overwhelmingly affect performance
+For example system network network latency main constraint overall performance would optimized minimize network trip ideally making single request request rather multiple roundtrips
+Choice design depends goal designing fast compilation key priority faster assuming work speed output code goal slower compiler fulfills goal better even though take longer
+Choice platform programming language occur level changing frequently requires complete rewrite though modular system may allow rewrite component example Python program may rewrite section In distributed system choice architecture etc
+occurs design level may difficult change particularly component replaced sync old client
+Given overall design good choice efficient implementation algorithm data structure come next
+After design choice data structure affect efficiency aspect program
+Generally data structure difficult change algorithm data structure assumption performance assumption used throughout program though minimized use abstract data type function definition keeping concrete data structure definition restricted place
+For algorithm primarily consists ensuring algorithm constant O logarithmic O log linear O case O log input space time
+Algorithms quadratic complexity O fail scale even linear algorithm cause problem repeatedly called typically replaced constant logarithmic possible
+Beyond asymptotic order growth constant factor matter asymptotically slower algorithm may faster smaller simpler asymptotically faster algorithm faced small input may case occurs reality
+Often provide best performance due tradeoff changing size
+A general technique improve performance avoid work
+A good example use common case improving performance avoiding unnecessary work
+For example using simple text layout algorithm Latin text switching complex layout algorithm complex script
+Another important technique caching particularly avoids redundant computation
+Because importance caching often many level caching system cause problem memory use correctness issue stale cache
+Beyond general algorithm implementation abstract machine concrete source code level choice make significant difference
+For example early C compiler slower unconditional loop evaluated conditional jump tested true unconditional jump
+Some optimization one nowadays performed
+This depends source language target machine language compiler difficult understand predict change time key place understanding compiler machine code improve performance
+example optimization reduce need auxiliary variable even result faster performance avoiding optimization
+Between source compile level used tune performance option source code compiler respectively using defines disable unneeded software feature optimizing specific processor model hardware capability predicting branching instance
+software distribution system take advantage form optimization
+Use tends ensure optimized least much compiler predict
+At lowest level writing code using designed particular hardware platform produce efficient compact code programmer take advantage full repertoire
+Many used traditionally written assembler code reason
+Programs small program seldom written start finish assembly due time cost involved
+Most compiled high level language assembly hand optimized
+When efficiency size le important large part may written language
+With modern greater complexity recent harder write efficient code compiler generates project need ultimate optimization step
+Much code written today intended run many machine possible
+As consequence programmer compiler always take advantage efficient instruction provided newer CPUs quirk older model
+Additionally assembly code tuned particular processor without using instruction might still suboptimal different processor expecting different tuning code
+Typically today rather writing assembly language programmer use analyze output compiler change source code compiled efficiently understand inefficient
+compiler produce customized machine code based data cost compilation overhead
+This technique date earliest engine become widespread Java HotSpot JavaScript
+In case may able perform optimization exceeding capability static compiler dynamically adjusting parameter according actual input factor
+AOT compilation optimization technique based runtime profile similar static average case analog dynamic technique adaptive optimization
+alter response run time condition order optimize code common assembly language program
+Some perform optimization runtime
+Some example include
+Compilers help program take advantage CPU feature example
+Code optimization also broadly categorized technique
+While latter one effective platform technique use specific property one platform rely parameter depending single platform even single processor
+Writing producing different version code different processor might therefore needed
+For instance case optimization technique generic technique reduction function call memory efficient routine reduction condition etc
+impact CPU architecture similar way
+Generally serve reduce total required complete program reduce total memory usage process
+On hand technique involve instruction scheduling parallelism parallelism cache optimization technique parameter differ among various platform optimal instruction scheduling might different even different processor architecture
+Computational task performed several different way varying efficiency
+A efficient version equivalent functionality known
+For example consider following code snippet whose intention obtain sum integer N This code assuming rewritten using mathematical formula like The optimization sometimes performed automatically optimizing compiler select method computationally efficient retaining functionality
+See discussion technique
+However significant improvement performance often achieved removing extraneous functionality
+Optimization always obvious intuitive process
+In example optimized version might actually slower original version N sufficiently small particular hardware happens much faster performing addition operation multiplication division
+In case however optimization relies using elaborate algorithm making use special case special trick performing complex
+A fully optimized program might difficult comprehend hence may contain unoptimized version
+Beyond eliminating obvious antipatterns code level optimization decrease maintainability
+Optimization generally focus improving one two aspect performance execution time memory usage disk space bandwidth power consumption resource
+This usually require one factor optimized expense others
+For example increasing size improves runtime performance also increase memory consumption
+Other common include code clarity conciseness
+There instance programmer performing optimization must decide make software better operation cost making operation le efficient
+These may sometimes nature competitor published result must beaten order improve commercial success come perhaps burden making normal usage software le efficient
+Such change sometimes jokingly referred
+Optimization may include finding system component limiting factor performance
+In term code often critical part code primary consumer needed resource though another factor latency network bandwidth
+In computer science resource consumption often follows form distribution applied resource optimization observing resource typically used operation
+In software engineering often better approximation execution time computer program spent executing code known law context
+More complex algorithm data structure perform well many item simple algorithm suitable small amount data setup initialization time constant factor complex algorithm outweigh benefit thus may faster single algorithm
+A performance profiler used narrow decision functionality fit condition
+In case adding help make program run faster
+For example filtering program commonly read line filter output line immediately
+This us enough memory one line performance typically poor due latency disk read
+Performance greatly improved reading entire file writing filtered result though us much memory
+Caching result similarly effective though also requiring larger memory use
+Optimization reduce add code used improve
+This may complicate program system making harder maintain debug
+As result optimization performance tuning often performed end
+made following two statement optimization We forget small efficiency say time premature optimization root evil
+Yet pas opportunity critical In established engineering discipline improvement easily obtained never considered marginal I believe viewpoint prevail software engineering Premature optimization phrase used describe situation programmer let performance consideration affect design piece code
+This result design clean could code incorrect code complicated optimization programmer distracted optimizing
+When deciding whether optimize specific part program always considered impact overall program depends much much time actually spent specific part always clear looking code without
+A better approach therefore design first code design resulting code see part optimized
+A simple elegant design often easier optimize stage profiling may reveal unexpected performance problem would addressed premature optimization
+In practice often necessary keep performance goal mind first designing software programmer balance goal design optimization
+Modern compiler operating system efficient intended performance increase often fail materialize
+As example caching data application level cached operating system level yield improvement execution
+Even rare case programmer remove failed optimization production code
+It also true advance hardware often obviate potential improvement yet obscuring code persist future long purpose negated
+Optimization code development using take different form different language
+In procedural language macro implemented using token substitution
+Nowadays used alternative many case
+In case inlined function body undergo optimization compiler including may move computation compile time
+In many language macro implemented using substitution parse syntax tree claimed make safer use
+Since many case interpretation used one way ensure computation performed sometimes way
+originated style macro macro often called macro
+A similar effect achieved using
+In case work moved
+The difference macro one side macro side latter tool allow performing arbitrary computation expansion macro perform computation relies optimizer ability perform
+Additionally macro directly support
+As optimization however often difficult predict tool impact project complete
+Optimization automated compiler performed programmer
+Gains usually limited local optimization larger global optimization
+Usually powerful optimization find superior
+Optimizing whole system usually undertaken programmer complex automated optimizers
+In situation programmer system administrator explicitly change code overall system performs better
+Although produce better efficiency far expensive automated optimization
+Use find section program taking resource
+Programmers sometimes believe clear idea bottleneck intuition frequently wrong
+Optimizing unimportant piece code typically little help overall performance
+When bottleneck localized optimization usually start rethinking algorithm used program
+More often particular algorithm specifically tailored particular problem yielding better performance generic algorithm
+For example task sorting huge list item usually done routine one efficient generic algorithm
+But characteristic item exploitable example already arranged particular order different method used even sort routine
+After programmer reasonably sure best algorithm selected code optimization start
+Loops unrolled lower loop overhead although often lead speed overload data type small possible used integer arithmetic used instead
+See article technique
+Performance bottleneck due language limitation rather algorithm data structure used program
+Sometimes critical part program different give direct access underlying machine
+For example common language like module written greater speed
+Programs already written C module written
+Programs written use
+Rewriting section pay circumstance general known state time spent code time remaining code
+So putting intellectual effort optimizing small part program huge effect overall speed correct part located
+Manual optimization sometimes side effect undermining readability
+Thus code optimization carefully documented preferably using comment effect future development evaluated
+The program performs automated optimization called
+Most optimizers embedded compiler operate compilation
+Optimizers often tailor generated code specific processor
+Today automated optimization almost exclusively limited
+However compiler optimization usually limited fixed set rather general optimization considerable demand optimizers accept description problem optimization allowing engineer specify custom optimization
+Tools accept description optimization called system beginning applied real software system
+Some language optimize program using
+aim optimize whole system moving task computer high usage computer idle time
+Sometimes time taken undertake optimization therein may issue
+Optimizing existing code usually add new feature worse might add new previously working code change might
+Because manually optimized code might sometimes le readability unoptimized code optimization might impact maintainability well
+Optimization come price important sure investment worthwhile
+An automatic optimizer program performs code optimization may optimized either improve efficiency target program else speed operation
+A compilation performed optimization turned usually take longer although usually problem program quite large
+In particular performance compile component executing together target code key improving overall execution speed
+
+MyNAP member online
+Not MyNAP member yet
+start saving receiving special member perk
+Fast inexpensive computer essential numerous human endeavor
+But le well understood need fast computer also computer better cost
+Exponential growth type scale fueled entire information technology industry ending
+In addition growing performance gap processor performance memory bandwidth challenge increasingly expensive energy use threat historical rate increase transistor density broad new class computing application pose new set challenge computer industry
+Meanwhile societal expectation increased technology performance continue apace show sign slowing underscore need way sustain exponentially increasing performance multiple dimension
+The essential engine met need last year considerable danger serious implication economy military research institution way life
+Five decade exponential growth processor performance led It difficult even seasoned veteran understand effect exponential growth sort seen computer industry
+On one level industry expert even consumer display implicit understanding term approach application system development expectation demand computing technology
+On another level implicit understanding make easy overlook extraordinary exponential improvement performance sort seen information technology industry actually
+rise dominance personal computer
+The success microcomputer due primarily economy scale devastating effect development alternative computer programming model
+The effect seen machine like supercomputer consumer device medium processor
+Even though alternative architecture approach might technically superior task built could easily compete marketplace readily overtaken processor available relatively low cost
+Hence personal computer dubbed killer Over year seen series revolution computer architecture starting minicomputer work station leading personal computer
+Today verge new generation smart phone perform many application run personal computer take advantage computing platform cloud computing needed
+With iteration machine lower cost per performance capability broadened user base
+The economy scale meant cost machine continued decrease size computer industry kept growing people company bought computer
+Perhaps even important single generation architecture taken advantage programmed using simple sequential programming abstraction root
+As result software investment model accumulated year led de facto standardization one instruction set Intel architecture dominance one desktop operating system Microsoft Windows
+The committee belief slowing exponential growth computing performance posing great risk may also create tremendous opportunity innovation diverse hardware software infrastructure excel measured characteristic low power consumption delivery throughput cycle
+In addition use computer becomes pervasive economical many variety computer
+Thus opportunity major change system architecture exemplified emergence powerful distributed embedded device together create truly ubiquitous invisible computer fabric
+Investment research needed lay foundation computing environment next generation
+See graph showing flattening curve performance power frequency
+Traditionally computer architect focused goal creating FIGURE Transistors frequency power performance core time
+The vertical scale logarithmic
+Data curated Mark Horowitz input Kunle Olukotun Lance Hammond Herb Sutter Burton Smith Chris Batten Krste Asanoviç
+computer perform single task fast possible
+That goal still important
+Because uniprocessor model today extremely powerful many application mapped run network processor dividing work coarse granularity
+Therefore great building block enable u create variety system programmed abstraction
+There serious need research education creation use abstraction parallel system
+However performance longer metric interest
+The market computer large plenty economic incentive create specialized hence machine
+Diversity already evident
+The current trend moving computation called cloud created great demand system
+For system making transaction run fast possible best thing
+It better example larger number processor optimize throughput rate minimize power consumption
+It similarly important conserve power device
+Thus power consumption The design desktop system often place considerable emphasis general CPU performance running desktop workload
+Particular attention paid graphic system directly determines consumer game run well
+Mobile platform laptop notebook attempt provide enough computing horsepower run modern operating system energy thermal constraint inherent mobile tend used serious gaming graphic solution would appropriate
+Servers run different kind workload either desktop mobile platform subject substantially different economic constraint design need graphic support
+Desktops mobile platform tend value legacy compatibility example existing operating system software application continue run new hardware compatibility requirement affect design system economics use pattern
+Although desktop mobile server computer system exhibit important difference one another natural group comparing embedded system
+It difficult define embedded system accurately space applicability magnitude larger computing system desktop laptop server
+Embedded computer system found everywhere car radio engine controller transmission controller airbag deployment antilock brake dozen place
+They refrigerator washer dryer furnace controller player television set alarm clock treadmill stationary bike Christmas light DVD player power tool garage
+They might even found ski boot tennis shoe greeting card
+They control elevator heating cooling system office video surveillance system parking lot lighting fire protection security system
+Every computer system economic constraint
+But various system tend fall characteristic financial range
+Desktop system cost cost hundred dollar around
+Mobile system cost high end perhaps hundred dollar low end
+Servers vary thousand dollar hundred thousand moderate Web server million dollar small corporate key performance metric server consumer handheld device
+See discussion embedded computing performance distinct traditional desktop system
+In general power consideration likely lead large variety specialized processor
+The rest chapter provides committee view matter related computer performance today
+These view summarized server farm order magnitude huge server farm fielded large company eBay Yahoo Google
+Embedded system tend inexpensive
+The engine controller hood car cost car manufacturer
+The chip cell phone also range
+The chip tennis shoe greeting card cost
+The embedded system run system elevator cost thousand dollar cost related system packaging design testing silicon us
+One hallmark embedded system versus computer unlike desktop server embedded performance boon
+Within cost power budget desktop laptop server system value much performance better
+Embedded system generally like
+The embedded chip cell phone set task perform monitoring phone button placing various message image display controlling phone energy budget configuration setting receiving call
+To accomplish task embedded computer system comprising central processor memory facility must capable overall performance level
+The difference computer level reached system design driving higher beneficial fact detrimental system
+Embedded computer system faster necessary meet requirement use energy dissipate heat lower reliability cost gain
+Does mean embedded processor fast enough need go faster
+Are exempt emphasis report sustaining growth computing performance
+No
+If embedded processor system become faster else held equal designer would find way using additional capability delivering new functionality would come expected device
+For example many embedded system GPS audio system car tend interface directly human being
+Voice speech recognition capability greatly enhance experience current system good noise suppression required make seamless enjoyable experience although progress made
+Faster computer system would help solve problem
+Embedded system benefited tremendously riding improvement curve equivalent system continue future
+bullet point follow paragraph
+Readers accept committee view may choose skip supporting argument move next chapter
+Humans design machinery solve problem
+Measuring well machine perform task vital importance improving conceiving better machine deploying economic benefit
+Such measurement often speak machine many aspect machine operation characterized performance
+For example one aspect automobile performance time take accelerate mph another average fuel economy
+Braking ability traction bad weather condition capacity tow trailer measure car performance
+Computer system machine designed perform information processing computation
+Their performance typically measured much information processing accomplish per unit time various perspective type information processing consider measuring performance right time scale measurement
+Those perspective reflect broad array us diversity end user modern computer system
+In general system deployed valued basis ability improve
+For user scientist information technology specialist improvement measured quantitative term
+For others office worker casual home user performance resulting productivity gain qualitative
+Thus single measure performance productivity adequately characterizes computer system possible us
+On technical level modern computer system deploy coordinate vast array hardware software technology produce result end user observe
+Although raw computational capability central processing unit CPU core tend get attention reality performance come complex balance among many cooperating subsystem
+In fact underlying performance bottleneck today commonly used application Web searching dominated characteristic memory device disk drive network connection rather CPU core involved processing
+Similarly interactive responsiveness perceived end user personal computer device typically defined characteristic operating system graphical user interface GUI storage component CPU core
+Moreover today ubiquitous networking among computing device seems setting stage future computing experience defined least much coordinated interaction multiple computer performance node network
+Nevertheless understand reason performance high level important understand fundamental contributor performance
+CPU performance driver force many system component feature contribute overall performance keep avoid becoming bottleneck The classic formulation raw computation single CPU core identifies Consider fact term computer system today encompasses everything small handheld device Netbooks corporate data center massive server farm offer cloud computing mass
+IPC fundamental component performance
+Each focus considerable amount research discovery last year
+Although detailed technical description beyond intended scope report brief description provide context discussion follow
+John Hennessy David Patterson Computer Architecture A Quantitative Approach fourth edition San Francisco Cal
+Morgan Kauffman
+core use advanced multiple instruction dispatch execution branch prediction speculative increase average IPC
+Those technique seek execute multiple instruction single cycle using additional resource reduce total number cycle needed execute program
+Some performance assessment focus peak capability machine example peak performance IBM Power six instruction per cycle Intel Pentium four
+In reality sophisticated CPU core actually sustain average slightly one instruction per cycle executing many program
+The difference theoretical peak performance actual sustained performance important aspect overall performance
+The program provides different form different machine organization exploit achieve performance
+The first type describes amount nondependent instruction available parallel execution given point program
+The program parallelism part determines IPC component raw performance mentioned
+IPC viewed describing degree particular machine organization harvest available performance
+The second type parallelism data element distributed among computational unit similar type processing
+parallelism exploited architectural microarchitectural technique direct instruction operate multiple piece data time
+This type processing often referred
+The third type degree program partitioned multiple sequence instruction intent executing concurrently cooperatively multiple processor
+To exploit program parallelism compiler system must map appropriate parallel hardware
+Throughout history modern computer architecture many attempt build machine exploit various form Providing detail microarchitecture technique beyond scope publication
+See Hennessey Patterson information related technique
+An instruction X depend instruction Y X performed without using result Y
+The instruction b c depends previous instruction produce result b c thus executed previous instruction completed
+parallelism
+In recent year owing largely emergence generalized programmable form graphic processing unit interest building machine exploit parallelism grown enormously
+The specialized machine offer compatibility existing program offer promise much performance presented code properly expose available parallelism
+Similarly emergence chip multiprocessor considerable renewed interest understanding exploit parallelism machine fully
+However technique also highlight importance full suite hardware component modern computer system communication must occur among software technology help automate application development order take advantage parallelism opportunity provided hardware
+The raw computational capability CPU core important component performance mean one
+To complete useful task CPU core must communicate memory broad array device CPU core many case computer system
+The overhead latency communication effect delay computational progress CPU wait data arrive interlock clear
+Such delay tend reduce peak computational rate effective computational rate substantially
+To understand effective performance important understand characteristic various form communication used modern computer system
+In general CPU core perform best operand input instruction stored architected register internal core
+However architecture tend register relatively high cost silicon area
+As result operand must often fetched memory actual computation specified instruction completed
+For computer system today amount time take access data memory time single cycle time CPU core
+And worse yet gap typical CPU cycle time time continues grow
+That imbalance would lead devastating loss performance program hardware cache system
+Caches hold frequently accessed part main memory special hardware structure much smaller latency main memory system example typical cache access time time slower single cycle time CPU core
+They leverage principle called characterizes common pattern exhibited computer program
+To accommodate large working set fit cache many computer system deploy hierarchy cache
+The later level cache tend increasingly large several megabyte result also longer access time resulting latency
+The concept locality important computer architecture highlight potential exploiting locality innovative way
+Main memory modern computer system typically implemented dynamic memory DRAM chip quite large many gigabyte
+However nowhere near large enough hold addressable memory space available application file system used storage data program
+Therefore nonvolatile storage commonly used hold much larger collection data
+The access time storage several order magnitude larger DRAM expose long delay request data return data
+As result many computer system operating system take advantage situation arranging context switch allow another pending program run window time provided long delay many computer system
+Although operating system improves multiprogram throughput overall computer system hurt performance single application associated overhead mechanic
+Similarly given program access system resource networking type storage device associated delay detract program ability make use full potential CPU core
+Because subsystem display different performance characteristic establishment appropriate among fundamental challenge modern design
+As future technology advance improve characteristic subsystem new challenge opportunity balancing overall system arise
+Today increasing number computer system deploy one CPU core potential improve system performance
+In fact several method taking advantage potential offered additional CPU core distinct advantage associated challenge
+Nonvolatile storage require power retain information
+A compact disk CD nonvolatile example computer hard drive USB flash key book like one
+Another key aspect modern computer system ability communicate network one another
+Programmers write program make use multiple CPU core within single computer system make use increase performance solve larger harder problem
+In case take much longer Amdahl law set limit parallel program sped
+Programs thought containing one parallel section code sped suitably parallel hardware sequential section sped
+Amdahl law Speedup P P proportion code run parallel N number processor
+The way think Amdahl law faster parallel section code run remaining sequential code loom performance bottleneck
+In limit parallel section responsible percent run time section sped infinitely run zero time percent constitutes entire run time
+It would therefore sped factor amount additional parallel hardware make go faster
+communicate synchronize coordinate progress overall program
+The program tend break problem task run parallel tend use explicit construct
+As result development optimization program quite different others mentioned
+In addition method described computer scientist actively researching new way exploit multiple CPU core multiple computer system parallelism future system
+Considering increased complexity system researcher also concerned easing associated programming complexity exposed application programmer inasmuch programming effort effect time solution given problem
+The magnitude challenge effect performance motivate much report
+In many way history computer performance best understood tracking development issue technology underlies machine
+If one interesting pattern start emerge
+As incumbent technology stretched practical limit innovation leveraged overcome limit
+At time set stage fresh round incremental advance eventually overtake remaining advantage older technology
+That cycle driving force history performance improvement
+A early electronic computing system called Colossus created
+Its core built although fairly limited utility ushered use electronic vacuum tube generation computer system followed
+As newer system ENIAC introduced generalized computing collective power consumption vacuum tube eventually limited ability continue scaling system
+In engineer Bell Laboratories created based computer system called TRADIC
+Although quite fast fastest system day much smaller consumed much le power
+More important heralded era computer system
+In Jack Kilby Robert Noyce separately invented first time allowed multiple transistor fabricated connected single piece silicon
+That technology quickly picked computer designer design computer system
+This technology breakthrough inaugurated modern computing era
+In Gordon Moore observed transistor density integrated circuit doubling new technology generation projected would continue future
+See Jack Copeland Colossus The Secrets Bletchley Park Codebreaking New York Oxford University Press
+Although many type mechanical electromechanical computing system demonstrated device substantially limited capability deployment leave discussion
+For history TRADIC see Louis Brown Flyable TRADIC The first airborne transistorized digital computer IEEE Annals History Computing
+It vacuum tube power requirement limiting computer industry back early
+Packaging significant challenge making connection needed carry signal power tube seriously degrading reliability connection probability failure greater
+All kind module packaging scheme tried none really solved manufacturability problem
+One transformative aspect integrated circuit technology get internal connection free chemical photolithography process make essentially free also make several order magnitude reliable
+Were effect transistor enjoyed ever since would limited usefulness expensive prone failure
+Gordon Moore Cramming component onto integrated circuit Electronics available online
+reprint seminal paper
+That projection commonly called Moore law remarkably accurate still hold true
+However year important shift integrated circuit used computer system
+Early various segment electronics industry made use different type transistor device
+For computer system BJT technology choice
+As BJT device integrated system power consumption chip also rose designer forced use exotic power delivery cooling solution
+In another type transistor r FET increasingly used smaller electronic device calculator small computer meant hobbyist
+By late characteristic computer system hit breaking point around time early use integrated circuit demonstrated power cost advantage technology
+Although underlying transistor fast characteristic enabled far greater integration potential much lower power consumption
+Today heart virtually computer system set chip
+It appears computer system integrated circuit hit practical limit power consumption
+Although today technologist understand continue increasing level integration number transistor device future chip able continue reducing voltage power
+There several potential new technology concept research carbon nanotube quantum dot none mature enough practical deployment
+Although reasonable optimism current research eventually bring one new technology breakthrough mainstream deployment appears today cycle substantial gap must overcome way
+The industry therefore shifting heritage constantly improving performance characteristic system sometimes referred performance increasing number processor system
+As described following section The committee emphasis transistor performance intended convey impression transistor sole determinant computer system performance
+The interconnect wiring transistor chip limiter system clock rate also contributes greatly overall power dissipation
+Memory system must also scale avoid becoming bottleneck faster computer system
+The focus transistor possible work around interconnect limitation already done least year far memory scaling enough avoid showstopper
+put substantial new demand new pressure software side system
+provides additional data historical trend
+It illustrates computer performance improved compound annual growth rate exceeding percent measured benchmark grew much slowly
+Moreover show recent slow growth due large part flattening improvement needed flatten untenable growth chip power requirement
+The appendix close Kurzweil observation century encourage u seek new computer technology
+As discussed earlier chapter another big challenge understanding performance choosing right hardware software metric measurement
+As committee already discussed potential machine particularly good metric inevitable overhead associated use resource communication diminish delivered performance substantially
+There innumerable effort year create benchmark suite define set workload measure metric many quite successful within limited application domain
+However designing general benchmark difficult
+Even considering hardware performance alone challenging computer hardware consists several different component see
+Computer system deployed used broad variety way
+As one might expect different market segment different use scenario stress system different way
+As result appropriate benchmark consider vary considerably market segment
+For example SPEC benchmark set artificial workload intended measure computer system speed
+A machine achieves SPEC benchmark score say percent faster another machine feel percent faster machine real workload
+given program important provides result integral part iterative research loop directed researcher
+That example performance time solution
+See time solution
+Complicating matter bit deployment define set important physical constraint system
+For example case system important constraint must met
+Similarly even largest supercomputer deployment constraint physical size weight power heat cost
+Those constraint several order magnitude larger notebook example still fundamental defining resulting performance utility system
+As result given market opportunity often make sense gauge value computer system according ratio performance constraint
+Indeed metric frequently used today ratio performance per watt performance per dollar performance per area
+More generally customer placing increasing emphasis efficiency computation rather gross performance metric
+A car engine
+It cooling system keep engine running efficiently safely environmental system driver passenger suspension system improve ride transmission engine torque applied drive wheel radio driver listen station cupholders convenience feature
+One might still useful vehicle radio cupholders missing feature must present work harmony achieve function propelling vehicle controllably safely
+Computer system similar
+The CPU tends get much proper share attention would useless without memory subsystem
+CPUs function fetching instruction memory
+How instruction get memory come
+The instruction came file hard disk traversed several bus communication pathway get memory
+Many instruction executed CPU cause additional memory traffic traffic
+When speak overall performance computer system implicitly referring overall performance system operating together
+For given workload common find one link chain fact weakest link
+For instance one write program executes CPU operation data reside CPU register file internal data cache
+We would refer program would run fast CPU alone could perform
+Speeding memory system would discernible effect measured performance benchmark
+Another benchmark could written however little else perform memory load store operation way CPU internal cache ineffective
+Such benchmark would bound speed Although amazing raw performance gain microprocessor last year garnered attention overall performance utility computer system strong function hardware software
+In fact computer system deployed hardware depended software technology harness computational capability
+Software exploited capability directly indirectly
+Software directly exploited increase computing capability adding new feature existing software solving larger problem accurately solving previously unsolvable problem
+It indirectly exploited capability use abstraction programming language library execution environment
+By using programming language exploiting layer abstraction programmer memory possibly bus carry traffic CPU memory
+A third benchmark could constructed hammer subsystem little dependence speed either CPU memory
+Handling real workload relies three computer subsystem performance metric therefore reflect combined speed three
+Speed CPU percent workload liable speed probably speed prorated way section code speed
+Likewise speed memory alone workload performance improves typically much le memory speedup isolation
+Numerous piece computer system make hardware
+The CPU architecture microarchitectures encompass instruction set algorithm technique higher performance
+Storage disk memory central component
+Memory flash drive traditional hard drive technical detail associated performance bandwidth latency cache volatility bus overhead critical system overall performance
+In fact information storage capacity understood increasing even faster transistor count traditional Moore law curve unknown long continue
+Switching interconnect component switch router line part every level computer system
+There also hardware interface device keyboard display mouse
+All piece contribute user perceive performance system interacting
+This phenomenon dubbed Kryder law Seagate executive Mark Kryder Chip Walter Kryder law Scientific American available online
+express algorithm succinctly modularly compose reuse software written others
+Those programming construct make easier programmer develop correct complex program faster
+Abstraction tends trade increased human programmer productivity reduced software performance past increase performance essentially hid much performance cost
+Thus modern software system rely multiple layer system software execute program
+The layer include operating system runtime system virtual machine compiler
+They offer opportunity introducing managing parallelism challenge layer must also understand exploit parallelism
+The committee discus issue detail summarizes performance implication
+The key performance driver date
+Once Consider jackhammer city street
+Assume using jackhammer pastime enjoyable goal get job done soon possible
+There possible avenue improvement try make jackhammer chisel strike pavement time per second make stroke jackhammer effective perhaps putting power behind stroke think way jackhammer drive multiple chisel per stroke
+All three possibility analogue computer design three continue used
+The notion getting job done soon possible known computer industry time solution traditional metric choice system performance since computer invented
+Modern computer system designed according synchronous pipelined schema
+mean occurring time
+Synchronous digital system based system clock specialized timer signal coordinate activity system
+Early computer clock frequency ten kilohertz
+Contemporary microprocessor design routinely sport clock frequency range
+To first approximation higher clock rate higher system performance
+System designer pick arbitrarily high clock frequency limit speed transistor logic gate reliably switch limit quickly signal traverse wire serious thermal power constraint worsen direct proportion clock frequency
+Just physical limit fast jackhammer chisel driven downward retracted next blow higher computer clock rate generally yield faster result several immutable physical constraint upper limit clock attainable performance speedup always proportional improvement
+How much computer system accomplish per clock cycle varies widely system system even workload workload given system
+More complex set Intel contain instruction intrinsically accomplish simpler instruction set embodied ARM processor cell phone effective complex instruction function well compiler use
+Recent program created debugged put practical use end user expectation program continue operate correctly buy new computer system also run faster new system advertised offering increased performance
+More generally large collection program become available particular computing platform broader expectation continue work speed later machine addition historical instruction Intel SSE accomplish work per clock cycle operating grouped data compressed format equivalent jackhammer drive multiple chisel per stroke
+Substantial improvement factor available workload happen fit constraint extension
+There special case workload successfully sped dedicated hardware accelerator
+Graphics processing unit GPUs NVIDIA ATI embedded Intel example
+These processor designed originally handle demanding computational memory bandwidth requirement graphic recently evolved include general programmability feature
+With intrinsically massive horsepower time higher available GP microprocessor chip become execution engine choice important workload
+Although GPUs constrained exponentially rising power dissipation modern silicon GPs GPUs order magnitude suitable workload therefore accomplish much processing within similar power budget
+Applying multiple jackhammer pavement direct analogue computer industry recently become primary development avenue hardware vendor The computer industry pattern hardware maker leverage new silicon process technology make chip substantially faster previous chip
+The new system capable executing software workload would previously infeasible attractiveness new software drive demand faster hardware virtuous cycle continues
+A year ago however dissipation grew limit air cooling accomplish began constrain attainable system performance directly
+When power constraint threatened diminish performance enhancement chipmakers Intel AMD turned away making ever complex microarchitectures single chip began placing multiple processor chip instead
+The new chip called multicore chip
+Current chip several processor single die future generation even
+tions
+Indeed remarkable speedup offered industry standard microprocessor last year forged compatibility expectation industry success hindered development alternative noncompatible computer system might otherwise kindled new scalable programming paradigm
+As microprocessor industry shift multicore processor rate improvement individual processor substantially diminished
+There another useful performance metric besides time solution Internet pushed center stage system throughput
+Consider Web server one machine search giant Google
+Those machine run continuously work never finished new request service continue arrive
+For given request service user made request may care time solution overall performance metric server throughput thought informally number job server satisfy simultaneously
+Throughput determine number configuration server hence overall installation cost server Before multicore chip computer industry effort aimed primarily decreasing time solution system
+When given workload required sequential execution several million operation faster clock capable microarchitecture would satisfy requirement
+But compiler generally capable targeting multiple processor pursuit single target know target one processor
+Multicore chip therefore tend used throughput enhancer
+Each available CPU core pop next runnable process ready list thus increasing throughput system running multiple process concurrently
+But type concurrency automatically improve time solution given process
+Modern multithreading programming environment routine successful use server application hold promise applying multiple thread single application may yet improve time solution multicore platform
+We yet know extent industry server multithreading success translate market segment mobile desktop computer
+It reasonably clear although performance topping throughput increased indefinitely
+The yet unanswered question whether buying public find throughput enhancement irresistible historically found improvement
+The net result industry ill prepared rather sudden shift performance presence increasing number processor computer system
+See architecture compatibility possible future outcome
+The reason industry ill prepared enormous amount existing software use need obtain performance improvement user simply needed buy new hardware get performance improvement
+However program type parallelism experience improved performance chip multiprocessor era
+thermore even application parallelism hard obtain improved performance chip multiprocessor hardware communication cost competition shared resource cache memory
+Although expert programmer application domain graphic information retrieval database successfully exploited type parallelism attained performance improvement increasing number processor application exception rather rule
+Writing software express type parallelism hardware based chip multiprocessor able improve main obstacle requires new
+The process tool include training programmer solve problem parallel computational thinking new programming language ease expression parallelism new software stack exploit map parallelism hardware evolving
+Indeed outlook overcoming obstacle ability academic industry primary subject report
+There little doubt computer become indispensable tool broad array business industry research endeavor educational institution
+They enabled profound improvement automation data analysis communication entertainment personal productivity
+In return advance created development new technology advanced computing system
+To understand sustainability continuing improvement computer performance important first understand health cycle critical economic underpinning computer industry
+From purely technological standpoint engineering community proved remarkably innovative finding way continue reduce microelectronic feature size
+First course industry integrated transistor chip make computer system
+Fortunate side effect improvement speed power efficiency individual transistor
+Computer architect learned make use increasing number improved characteristic transistor design continually computer system
+The demand increasingly powerful computer system generated sufficient revenue fuel development next round technology providing profit company leading charge
+Those relationship form basis virtuous economic This history computing hardware dominated franchise
+IBM first noticed trend increasing performance took advantage architecture
+That architecture became successful motivated many company make computer system would run software code IBM machine building computer
+The value approach clearest end user system worked expected right box recompilation alteration source code tracking software bug may exposed process migrating code new architecture toolset
+With rise personal computing compatibility come mean degree compliance Intel architecture also known
+Intel semiconductor company AMD managed find way remain compatible code earlier generation processor
+That compatibility come price
+For example register architecture organized stack randomly accessible register set integer register
+In stacking register may seemed like good idea would benefit compiler writer stack hindrance performance chip therefore expend many transistor give architecturally required appearance stacked register spend transistor hood undo stack modern performance technique applied
+encoding segmented addressing scheme example old baggage constitute tax every new chip
+There time industry much architecture research expended notion every new compatible generation chip must carry aggregated baggage past add idea architecture keep current surely architecture would eventually fail accord victim success
+But happened
+The baggage magic Moore law many additional transistor made available new generation always enough reimplement baggage incorporate enough innovation stay competitive
+Over time worthy competitor DEC Alpha SGI MIPS Sun SPARC PowerPC architecture either found niche market segment cell phone embedded product disappeared
+cycle key underlying driver industry last year
+There many important application semiconductor technology beyond desire build faster faster computer system
+In particular electronics industry leveraged advance The strength architecture dramatically demonstrated Intel original major supplier processor decided introduce new architecture transition addressing
+Around time however AMD created processor addressing compatible architecture customer driven existence large software base preferred processor AMD new processor Intel
+In end Intel also developed processor far outselling Itanium processor
+With rise cell phone portable medium computing appliance yet another dominant architectural approach emerged ARM architecture
+The rapidly growing software base portable application running ARM processor made compatible series processor licensed ARM dominant processor embedded portable application
+As seen dominance architecture mainframe computer personal computer networked server ARM architecture portable appliance opportunity new architecture architecture industry move multicore parallel computing system
+Initial move system made existing architecture based primarily
+The computing industry accumulated lot history subject appears safe say era compatibility absolute requirement probably end incompatible compellingly faster competitor appeared one following condition take hold create wide variety new device notebook computer smart phone GPS receiver name
+Although device tends substantial constraint size power cost traditional computer system often embody computational networking capability previous generation computer system
+In light capability smaller device probably play important role unleashing aggregate performance potential networked system future
+Those additional market opportunity strong economic underpinnings clearly reaped benefit deploying technology advance driven place industry
+In many way incredible utility computing provided direct improvement productivity many industry also set stage amazing growth wide array codependent product industry
+In recent year however seen potentially troublesome change traditional return investment embedded virtuous cycle
+As approach fundamental physical limit technology continue see dramatic increase cost associated technology development capital required build fabrication facility point company wherewithal even consider building facility
+At time although pack transistor given area silicon seeing diminishing improvement transistor performance power efficiency
+As result computer architect longer rely sort improvement mean building better computer system must rely much exclusively making use increased capability
+Our progress identifying meeting broader value proposition somewhat mixed
+On one hand multiple processor core feature integrated monolithic piece silicon
+On hand realize benefit multiprocessor machine software run must conceived written different way programmer accustomed
+From perspective hardware software must combine seamlessly offer increased value
+It increasingly clear industry need address software programmability concern risk ability offer next round compelling customer value
+Without performance incentive buy next generation hardware economic virtuous cycle likely break would widespread negative consequence many industry
+In summary sustained viability industry heavily influenced underlying virtuous cycle connects continuing customer perception value financial investment new product getting market quickly
+Although one primary indicator value traditionally performance individual compute node next round technology ments horizon automatically enhance value
+As result many computer system development betting ability exploit multiple processor alternative form parallelism place traditional increase performance individual computing node
+To make good bet need substantial breakthrough process enable new type computer system
+Moreover attention probably focused performance issue large system expense time market efficiency virtuous cycle
+The end dramatic exponential growth performance mark end dominance single microprocessor computing
+The era sequential computing must give way new era parallelism forefront
+Although important scientific engineering challenge lie ahead opportune time innovation programming system computing architecture
+We already begun see diversity computer design optimize consideration power throughput
+The next generation discovery likely require advance hardware software level computing system
+There guarantee make parallel computing common easy use yesterday sequential computer system unless aggressively pursue effort suggested recommendation book game growth computing performance
+If parallel programming related software effort fail become widespread development exciting new application drive computer industry stall innovation stall many part economy follow suit
+describes factor led future limitation growth single processor based complementary metal oxide semiconductor CMOS technology
+It explores challenge inherent parallel computing architecture including power consumption escalated requirement heat dissipation
+The book delineates research practice education agenda help overcome challenge
+guide researcher manufacturer information technology professional right direction sustainable growth computer performance may enjoy next level benefit society
+You looking OpenBook online reading room since
+Based feedback user made improvement make easier ever read thousand publication website
+Do want take quick tour OpenBook feature
+Show book jump chapter name
+use button go back chapter skip one
+Jump page one
+Also type page number press go directly page book
+Switch read report appeared print web version highlight search text
+To entire text book type search term press
+link book page preferred social network via email
+View chapter
+Ready take reading offline
+Click book print free PDF available
+Do enjoy reading report Academies online
+Sign email notification let know new publication area interest released
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R R null null null R R R true endobj obj R endobj obj R endobj obj R R R R endobj obj R stream B F wg Ë ÒÌ endstream endobj obj endobj obj R R R R R R R R R R R R R R R R R R R endobj obj Bold R endobj obj Bold R endobj obj endobj obj R endobj obj R endobj obj endobj obj endobj obj R stream V µ þìXµ Åßÿ Á Ò q Xo F wB tÇ hþ On j R rnfl ìÀí zÐøåK Üó ñþÄg ã endstream endobj obj R endobj obj R endobj obj endobj obj R stream Ïèå jæÌ W ÚÛ LÔ p Ó ïVVU ã
+ã oä äuéuPTè är endstream endobj obj BoldItalic R endobj obj BoldItalic R endobj obj endobj obj R stream ßÌp Þ wË ËÆÄ Oª
+ú â Eíýº vÕî O KkÚ endstream endobj obj endobj obj R stream xK ùmAF n S î uØ ë D í ö TOßzÕÔóa ÙýP pEû Aä Fé Ëpë
+ò ï endstream endobj obj endobj obj R stream Ó shÕ Ö Â í NàºØ Aû ñ Ñ wäçBb Ð n ÅyCÑ K à âûð endstream endobj obj endobj obj R stream öÊ õ ëuÊ ÆÊím VË Ñ
+ËÂQçR gÈ ÕÈþ Úæ º ý ýz aqæÐ µö yz endstream endobj obj endobj obj R stream Ò pYüf L öBÇË áÉvI ñ ÚY Ê Gí J Ûâ mÈóTÎóÌ Ú
+
+Computer science also strong connection discipline
+Many problem science engineering health care business area solved effectively computer finding solution requires computer science expertise knowledge particular application domain
+Thus computer scientist often become proficient subject
+Finally computer science wide range specialty
+These include computer architecture software system graphic artifical intelligence computational science software engineering
+Drawing common core computer science knowledge specialty area focus particular challenge
+Finally importantly computer scientist computer scientist fun
+Not mention lucrative career opportunity
+Computer Science The Profession Computer science discipline involves understanding design computer computational process
+In general form concerned understanding information transfer transformation
+Particular interest placed making process efficient endowing form intelligence
+The discipline range theoretical study algorithm practical problem implementation term computational hardware software
+A central focus process handling manipulating information
+Thus discipline span advancing fundamental understanding algorithm information process general well practical design efficient reliable software hardware meet given specification
+Computer science young discipline evolving rapidly beginning
+As includes theoretical study experimental method engineering design one discipline
+This differs radically physical science separate understanding advancement science application science field engineering design implementation
+In computer science inherent intermingling theoretical concept computability algorithmic efficiency modern practical advancement electronics continue stimulate advance discipline
+It close interaction theoretical design aspect field bind together single discipline
+Because rapid evolution difficult provide complete list computer science area
+Yet clear crucial area theory algorithm data structure programming methodology language computer element architecture
+Other area include software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation
+A professional computer scientist must firm foundation crucial area field likely knowledge one area discipline depending upon person particular area practice
+Thus well educated computer scientist able apply fundamental concept technique computation algorithm computer design specific design problem
+The work includes detailing specification analysis problem provides design function desired satisfactory performance reliable maintainable meet desired cost criterion
+Clearly computer scientist must sufficient training computer science area able accomplish task must also firm understanding area mathematics science well broad education liberal study provide basis understanding societal implication work performed
+Computer Science study principle application technology computing computer
+It involves study data data structure algorithm process structure principle computer hardware software design methodology topic numerical analysis operation research artificial intelligence language design structure translation technique
+Computer Science provides foundation knowledge student career objective wide range computing profession
+The study efficient effective software development technique
+Team work communication skill
+An interest applying technology problem wide variety discipline
+Computer Science concerned information much sense physic concerned energy devoted representation storage manipulation presentation information
+Computer Science concerned study machine communication man machine application machine
+Major area Computer Science include
+Operating Systems concerned development structure complex program facilitate communication
+
+Computational Science analysis numerical method solving mathematical problem computer
+
+Programming Languages study design property language human communicate computer
+
+Architecture study use mathematical logic design electronic circuit
+
+Intelligent Systems concerned mean computer may perform task might characterized intelligent performed human
+
+Automata Theory abstract study computer capability
+
+Information Storage Retrieval study method storing vast amount data computer method searching retrieving data
+
+Software Engineering study tool technique software design development testing maintenance
+
+ÐÄÆ obj R stream ph ÈÀ øy ZO
+ögþXkij yø hÿx N xãÏÂº E í AãðàË
+hi I Äd
+sÅ ÝÑ dì ëýþ ü Ç ñVßD pHñ K
+YÔ NÄT Fº c ÖeÝì Þí öaòc BÈe ëªe îpæXO ë èi ùT wÇk eiÏJ âJ K ç H Øª ÒüOi µîZ ÂÛ H Ô Ðwø
+OõSÛ p
+ÎÄ W u ß HôT É ØÚÉºùc ä vÉ
+á ÝÇz c lf º µA
+Ði AÐ ÙO øRkCûÝz fá èß K ÐÓÝ Þ ÐZÿõ endstream endobj obj endobj obj R R R endobj obj R R R R R R R R endobj obj R stream x IY ZE Þ ovß UÛìN VÃ Ó Ìî Â
+j Õ
+endstream endobj obj endobj obj R endobj obj R stream bÀh ó c Í Ó ÊÖ Å h ähíûê øê ôÑòkÀÐÈ Q wÈ CãÐïÐ ÁÏà
+
+This page address question What Computer Science discus place collection computer field usually referred The following short definition based used professional society respective field
+A longer discussion provided next section
+Computer science study theory design implementation performance computer software computer system including study computability computation
+Computer engineering concerned design computer hardware device
+To extent CE involves software software interacting tightly hardware embedded system device
+Information system field applying today information technology solve today problem typically area business enterprise In rest page give complete description three area computing represented UMaine campus
+Of three computer science CS oldest broadest
+Indeed information system IS seen derived CS computer engineering CE formed intersection CS electrical engineering
+The fact really three distinct field area study confirmed least three thing
+First three field routinely treated separately university across country generally embodied different department
+Second distinct professional society
+The primary professional society computer science
+For computer engineering primary professional society
+For information system primary society
+Third three field meet different accreditation criterion
+The best place look definition field information provided professional society
+This concisely provided various document created part society joint Computing Curricula project joint project IEEE ACM participation professional society
+Our definition draw overview document project Computing Curricula The Overview Report produced Joint Task Force Computing Curricula joint project Association Computing Machinery Association Information Systems Computer Society IEEE September
+This referred
+Other document series also exist useful understanding difference field Computing Curricula Computer Science The Joint Task Force Computing Curricula IEEE Computer Society Association Computing Machinery December
+Curriculum Guidelines Undergraduate Degree Programs Computer Engineering A Report Computing Curricula Series Joint Task Force Computer Engineering Curricula IEEE Computer Society Association Computing Machinery December
+IS Model Curriculum Guidelines Undergraduate Degree Programs Information Systems Association Computing Machinery Association Information Systems Association Information Technology Professionals part Computing Curricula Project
+Another document also exists software engineering take standard view software engineering considered part computer science certainly case campus major software engineering school
+For ease reference document available
+Computer science within purview study theory design implementation performance computer computer software including study computability computation
+In ACM IEEE say Computer science span wide range theoretical algorithmic foundation development robotics computer vision intelligent system bioinformatics exciting area
+We think work computer scientist falling three category
+They design implement software
+Computer scientist take challenging programming job
+They also supervise programmer keeping aware new approach
+They devise new way use computer
+Progress CS area networking database enabled development World Wide Web
+Now CS researcher working scientist field make robot become practical intelligent aide use database create new knowledge use computer help decipher secret DNA
+They develop effective way solve computing problem
+For example computer scientist develop best possible way store information database send data network display complex image
+Their theoretical background allows determine best performance possible study algorithm help develop new approach provide better performance
+Computer science span range theory programming
+Curricula reflect breadth sometimes criticized failing prepare graduate specific job
+While discipline may produce graduate immediately relevant skill computer science offer comprehensive foundation permit graduate adapt new technology new idea
+A recommended Computer Science Curricula published prepared The Joint Task Force Computing Curricula Association Computing Machinery ACM IEEE Computer Society published
+Computer engineering hand concerned computer hardware design design device system general computing general computing system
+The ACM IEEE say Computer engineering concerned design construction computer system
+It involves study hardware software communication interaction among
+Its curriculum focus theory principle practice traditional electrical engineering mathematics applies problem designing computer device
+Computer engineering student study design digital hardware system including communication system computer device contain computer
+They study software development focusing software digital device interface user device
+CE study may emphasize hardware software may balanced emphasis
+CE strong engineering flavor
+Currently dominant area within computing engineering embedded system development device software hardware embedded
+For example device cell phone digital audio player digital video recorder alarm system machine laser surgical tool require integration hardware embedded software result computer engineering
+As UMaine ECE Department state Web site Computer Engineering graduate equipped career engineer electrical designer electrical engineer design application engineer test engineer power system engineer product engineer
+accessed There often legitimate overlap CS CE
+For example quite common computer architecture taught studied CE CS UMaine
+It also common neural network computer vision robotics involving primarily hardware solution CE department also case UMaine
+VLSI design hand would reasonable find computer science department one would expect find basic computer science discipline CE IS AI graphic visualization computing apart hardware consideration computer network database system apart application software engineering forth
+Information system specialist focus integrating information technology solution business process meet information need business enterprise enabling achieve objective effective efficient way
+This discipline perspective information technology emphasizes information view technology instrument generating processing distributing information
+Professionals discipline primarily concerned information computer system provide aid enterprise defining achieving goal process enterprise implement improve using information technology
+A majority Information Systems IS program located business school
+All IS degree combine business computing coursework
+A variety IS program exist various label often reflect nature program
+For example program Computer Information Systems usually strongest technology focus program Management Information Systems emphasize organizational behavioral aspect IS
+Degree program name always consistent
+A fourth area campus New Media computing discipline rather overlap computing user computer technology The New Media Program University Maine offer interdisciplinary course study system technology history design theory information
+The curriculum enables student investigate creative applied process essential area study
+It prepares student technologically capable articulate thinker creative medium professional
+UMaine New Media Web site There confusion another area computing information technology
+Note information technology IT differs meaning term used UMaine Strategic Plan author essentially mean The ACM IEEE differentiate IS IT follows
+Whereas perspective IS emphasizes information technology viewed instrument generating processing distributing information Information Technology emphasize technology information conveys
+IT new rapidly growing field started grassroots response practical everyday need business organization
+Today organization every kind dependent information technology
+They need appropriate system place
+These system must work properly secure upgraded maintained replaced appropriate
+Employees throughout organization require support IT staff understand computer system software committed solving whatever problem might
+Graduates information technology program address need
+Degree program information technology arose degree program computing discipline producing adequate supply graduate capable handling real need
+IT program exist produce graduate posse right combination knowledge practical expertise take care organization information technology infrastructure people use
+IT specialist assume responsibility selecting hardware software product appropriate organization integrating product organizational need infrastructure installing customizing maintaining application organization computer user
+Examples responsibility include installation network network administration security design web page development multimedia resource installation communication component oversight email system planning management technology lifecycle organization technology maintained upgraded replaced
+Information technology represented UMaine campus
+There fact question suitability major university opposed technical college campus
+There additional confusion term information This original sense refers specific field study property information per se example Shannon work information theory
+The term sometimes used synonymously computing come mean academic study information representation storage use opposed addition computational manipulation information
+The School Computing Information Science home information science UMaine
+In addition computer science School strong emphasis information science research graduate education particular area geographical information science
+
+ÐÔÅØ obj stream Áe V DÀ h ëÈÞG Uaeò oG Lå XçåYY ÓcBhàíÜkR E Ûë GXuN endstream endobj obj R R R endobj obj R R R R R endobj obj stream xÚµV w ødHÌI pí Pà ç rb èc jZ ÅÊÞ æzGÓ endstream endobj obj R R R endobj obj R R R endobj obj stream Å ª L ßý V EO uMá Ð pzn ôò ol r UÝÍ
+R rúLËÖL ë
+JCB CmÃD
+Tø L ÿ Ghjå endstream endobj obj R R R endobj obj R R R R R R endobj obj stream e ü I çÎm T JÁC Ë Hà
+
+Find Degrees Subject We live world computer used every facet life especially workplace
+A computer science degree may open door many career option
+Read learn opportunity computer science
+Computer science professional take part design upgrade improvement computer system wide array industry
+From artificial intelligence security computer game graphic computer science graduate choose variety career path
+Students wish enter computer science degree program strong mathematical analytical skill
+According Bureau Labor Statistics BLS employer often seek job applicant advanced degree area though computer science program available undergraduate graduate level via certificate degree
+Many student obtain Bachelor Science Computer Science broad educational base cover aspect artificial intelligence information management
+Students computer science program expect take class network algorithm programming language
+In addition different concentration within computer science field available include network security computer forensics software engineering cryptography
+Review link detail program field study
+Do prefer learn comfort home
+There many online program offered computer science field study
+Here link article information online learning option
+From help desk technician database administrator many career path choose computer science field
+Those obtain bachelor degree generally work position field software engineering system analysis advanced degree work teacher college professor system engineer research scientist consultant
+Take look article sampling available
+The job outlook potential earnings graduate computer science program varies career path
+According BLS number employed computer support specialist expected increase faster national average occupation
+The median salary among specialist focused user support
+Job opening computer programmer expected increase average professional earned median per year
+The BLS reported median income computer information research scientist May
+In addition job outlook good employment computer scientist expected grow faster average occupation
+Enter zip Computers important part many profession field varied design production management
+This article explores With today rapidly changing technology computer career rise
+There many job ranging engineering Computers technology continue center business growth
+Choose computer career future make sure
+This article explores five alternative career business analyst discussing educational requirement
+There number alternative career choice individual work software engineer
+We look career
+Learn Mastercam programmer
+Find kind education training required employment
+See career Several national university offer physical campus location accredited online program
+Get
+The listing may include sponsored content popular choice among user
+An admission advisor school provide info School Info Program Info Programs Get Started The Art Institutes What highest level education
+School Info Program Info Online Programs Get Started Capella University What highest level education completed
+School Info Program Info Online Programs Get Started Utica College School Info Program Info Online Programs Get Started Grand Canyon University What highest level education
+School Info Program Info Online Programs Get Started Johns Hopkins University What highest level education
+School Info Program Info Online Programs Get Started Northcentral University What highest level education
+School Info Program Info Online Programs Get Started Strayer University What highest level education completed
+School Info Program Info Online Programs Get Started Georgetown University What highest level education completed
+School Info Program Info Online Programs Get Started Herzing University What highest level education
+School Info Program Info Online Programs Get Started City University Seattle What highest level education completed
+The listing may include sponsored content popular choice among user
+What highest level education
+What highest level education completed
+What highest level education
+What highest level education
+What highest level education
+What highest level education completed
+What highest level education completed
+What highest level education
+What highest level education completed
+What highest Help u match school offer program related Computer Sciences copyright
+All trademark copyright property respective owner
+All right reserved
+

@@ -1,0 +1,401 @@
+In program profiling software profiling form measure example space memory time frequency duration function call
+Most commonly profiling information serf aid program
+Profiling achieved either program binary executable form using tool called
+Profilers may use number different technique statistical instrumented simulation method
+Profilers use wide variety technique collect data including operating system
+Profilers used process
+Program analysis tool extremely important understanding program behavior
+Computer architect need tool evaluate well program perform new
+Software writer need tool analyze program identify critical section code
+writer often use tool find well algorithm performing
+The output profiler may tool existed platform early usually based timer interrupt recorded PSW set detect hot spot executing code
+This early example see
+In early permitted full trace feature
+program analysis Unix date back Unix system included basic tool listed function much program execution time used
+In extended concept complete analysis
+In Amitabh Srivastava published paper describing ATOM Analysis Tools OM
+The ATOM platform convert program profiler insert code program analyzed
+That inserted code output analysis data
+This technique modifying program analyze known
+In ATOM paper appeared list influential paper period ending
+Flat profilers compute average call time call break call time based callee context
+profilers show call time frequency function also involved based callee
+In tool full context preserved
+profilers add dimension flat profilers relating performance measure feature input workload input size input value
+They generate chart characterize application performance scale function input
+Profilers also program analyze target program collecting information execution
+Based data granularity profilers collect information classified event based statistical profilers
+Since profilers interrupt program execution collect information finite resolution time measurement taken grain salt
+The programming language listed profilers Some profilers operate
+A sampling profiler probe target program regular interval using
+Sampling profile typically le numerically accurate specific allow target program run near full speed
+The resulting data exact statistical approximation
+The actual amount error usually one sampling period
+In fact value n time sampling period expected error n sampling period
+In practice sampling profilers often provide accurate picture target program execution approach intrusive target program thus many side effect memory cache instruction decoding pipeline
+Also since affect execution speed much detect issue would otherwise hidden
+They also relatively immune cost small frequently called routine loop
+They show relative amount time spent user mode versus interruptible kernel mode processing
+Still kernel code handle interrupt entail minor loss CPU cycle diverted cache usage unable distinguish various task occurring uninterruptible kernel code activity
+Dedicated hardware go beyond ARM recent MIPS processor JTAG interface PCSAMPLE register sample truly undetectable manner allowing collection flat profile
+Some commonly used statistical profilers OSX Linux Parallel Amplifier part
+This technique effectively add instruction target program collect required information
+Note program cause performance change may case lead inaccurate result
+The effect depend information collected level detail required
+For example adding code count every call probably le effect counting many time statement obeyed
+A computer special hardware collect information case impact program minimal
+Instrumentation key determining level control amount time resolution available profilers
+
+learn share knowledge build career
+Sometimes I run application give error look like People referred stack trace
+What tell error happening program
+In simple term list method call application middle Exception thrown
+With example given question determine exactly exception thrown application
+Let look stack trace This simple stack trace
+If start beginning list tell error happened
+What looking method call part application
+In case To debug open look line This would indicate something probably code
+Sometimes application catch Exception cause another Exception
+This typically look like This might give stack trace look like What different one Caused
+Sometimes exception multiple Caused section
+For typically want find root cause one lowest Caused section stack trace
+In case Again exception want look line see might cause
+Usually stack trace much complex two example
+Here example long one demonstrates several level chained exception In example lot
+What mostly concerned looking method would anything package
+From second example first want look root cause However method call library code
+So move Caused look first method call originating code Like previous example look line error originated one bit obvious went wrong since SQLException state error debugging procedure
+I posting answer topmost answer sorted activity one plain wrong
+A stacktrace helpful debugging tool
+It show call stack meaning stack function called point time uncaught exception thrown time stacktrace generated manually
+This useful show error happened also program ended place code
+This lead next question An Exception runtime environment us tell error occurred
+Popular example NullPointerException IndexOutOfBoundsException ArithmeticException
+Each caused try something possible
+For example NullPointerException thrown try dereference At first find causing Exception
+Try googleing name exception find cause exception
+Most time caused incorrect code
+In given example exception caused incorrect code
+So NullPointerException example could make sure never null time
+You could example initialise include check like one This way offending line executed
+Same go example
+Sometimes ca make sure get exception
+For example using network connection program stop computer loosing internet connection
+ca stop user disconnecting computer network connection
+In case network library probably throw exception
+Now catch exception
+This mean example network connection try reopen connection notify user something like
+Also whenever use catch always catch exception want catch would catch exception
+This important otherwise might accidentally catch wrong exception react wrong way
+Let use small example show catch exception What code trying catch caused possible division
+But also catch possible thrown
+This mean might get treat ArithmeticException probably wrong thing
+In best case still miss NullPointerException
+Stuff like make debugging much harder
+If possible catch specific exception handle
+To add Rob mentioned
+Setting break point application allows processing stack
+This enables developer use debugger see exact point method something unanticipated
+Since Rob used NullPointerException NPE illustrate something common help remove issue following manner method take parameter In code would want evaluate firstName contains value would like The prevents u using firstName unsafe parameter
+Therefore null check processing help ensure code run properly
+To expand example utilizes object method look The proper order check null start base object dog case begin walking tree possibility make sure everything valid processing
+If order reversed NPE could potentially thrown program would crash
+There one stacktrace feature offered Throwable family possibility stack trace information
+Stack trace Stack trace A stack trace list Exceptions say list Cause surface Exception
+Service Layer Exception deepest one
+Database Exception
+Just like reason call stack First Last FILO deepest exception happened beginning chain exception generated series consequence surface Exception last one happened time see first place
+A tricky important thing need understand deepest cause may root cause write bad code may cause exception underneath deeper layer
+For example bad sql query may cause SQLServerException connection reset bottem instead syndax error may middle stack
+Another tricky important thing inside Cause block first line deepest layer happen first place block
+For instance called called root cause
+Here attach diagram sort trace stack chronological order
+Just add example displayed using sign
+For example Will result stack trace The post describe stack trace still hard work
+If get stack trace want trace cause exception good start point understanding use
+If use another IDE may similar feature answer Eclipse
+First ensure Java source accessible Eclipse project
+Then perspective click tab usually bottom
+If Console view visible go menu option select
+Then console window click following button right select list
+Paste stack trace console
+It provide list link source code source code available
+This might see image Eclipse documentation The recent method call made stack top line excluding message text
+Going stack go back time
+The second line method call first line etc
+If using software might need download attach project source want examine
+Download source jar project open folder find jar module one class file right click select attach source jar
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This action might possible undo
+Are sure want continue
+Call Trace Analyser available
+
+Java us stack keep track sequence method call within program
+This approach used trace recursive method hand
+The technique actually work sequence method call though usually worthwhile recursive method
+PDF Thank much
+I reference website often
+This first time I understood trace recursive method properly
+I finally get
+Thank much I definitely recommending site teacher
+Makes thing much easier
+Thanks technique
+Copyright President AP trademark The College Board involved production endorse site
+
+Free Downloaded time Viewed time problem Created A guide produced student CIE GCSE Computer Science
+Free Downloaded time Viewed time problem docx KB Created Updated docx problem Everything Excellent resource Excellent resource Very clear resource
+Thanks sharing
+
+Functions procedure summarise set programming instruction
+Modules used group function procedure specific purpose
+Computer program consist thousand line code like textbook thousand word
+In way textbook divided chapter program divided related functionality using
+In textbook specific concept covered basis
+Similarly computer program specific functionality divided named
+Programs usually integrate block code module already created project
+The program us implemented function procedure module
+You need JavaScript enabled play audio clip
+BBC Simon Lumb describes function used programming In computer program often section program want repeat
+Chunks instruction given name called
+Algorithms broken procedure function
+This save time call function required instead type whole instruction set
+Programming language set also known function procedure
+If programmer make one
+Functions differ procedure function return value unlike procedure
+However passed procedure function
+In program drawing shape program could ask user shape draw
+The instruction drawing square could captured
+The algorithm action could set task If computer program set instruction could given name sequence would executed calling
+A function could calculate VAT due good sold
+The algorithm function could If computer program set instruction could given name would executed running calling function
+In example function would called using The function would return value VAT used elsewhere
+Sign choose GCSE subject see content tailored
+
+There different model software development
+Testing major phase developing software
+It important use test plan carry different type test
+When testing complex example sometimes necessary test number condition time
+A also called used record outcome test
+The trace table simple example would look like A trace table might appear look similar without heading like outcome outcome
+Sign choose GCSE subject see content tailored
+
+Defining sub routine term
+Recursion key area computer science relies able solve problem cumulation solving increasingly smaller instance problem
+An example recursion name Operating System might well ask GNU stand Wait minute defined name restating name
+Luckily u computer code recursion tend towards end solving increasingly smaller instance problem tending towards end
+With GNU example name always remains size following example end Which pseudocode describe process revising essay revision process involves reading essay getting feedback applying change revising slightly better essay
+You keep essay complete
+Let take look computer science example A classic computer example recursive procedure function used calculate For example Did notice I final solution
+Instead writing I used
+result
+Looking back definition recursion used seem solve big problem solving smaller instance problem factorial ripe recursion As see n
+product n
+In summary Now let look would write code solve It look simple elegant
+But work
+Let build trace table see happens
+This trace table different one built going use stack
+If read must continuing All going well far get line
+Now
+We soon two value n one Function call one Function call
+Using trace table stack bottom stack top top stack bottom save data function call including value n make note line need return finished factorial
+We similar situation let store return address go factorial We similar situation let store return address go factorial Now another problem found end factorial
+What line go next
+As treating trace table stack pop previous value top look last function call stored away function call factorial even know line return line We know factorial previous returned value
+Therefore factorial return Again pop last function call stack leaving u function call factorial line
+We know factorial previous returned value
+Therefore factorial return Again pop last function call stack leaving u function call factorial line
+We know factorial previous returned value
+Therefore factorial return We reach end function call
+But go
+There nothing left stack finished code
+Therefore result
+Another good example method calculate
+By definition first two Fibonacci number subsequent number sum previous two
+For example take number
+This sum number number
+In mathematical term sequence Fibonacci number defined recursive statement first two value Let try create code version Recursion issue though consider much data store stack function call
+If perform memory used would incredibly large
+Define recursion Defining sub routine term Give output following recursive function call recur Give output following recursive function call recur Give output following recursive function call recur Draw trace table following recursive function Name one benefit one drawback recursive solution
+
+method solution problem depends solution smaller instance problem opposed
+The approach applied many type problem one central idea computer science
+The power recursion evidently lie possibility defining infinite set object finite statement
+In manner infinite number computation described finite recursive program even program contains explicit repetition
+Most computer programming language support recursion allowing call within program text
+Some define looping construct rely solely recursion repeatedly call code
+prof language computationally powerful Turing complete imperative language meaning solve kind problem imperative language even without iterative control structure
+A common tactic divide problem type original solve combine result
+This often referred combined store result solving avoid solving repeatedly incurring extra computation time referred
+A recursive function definition one meaning input function produce result without recurring one meaning input program recurs call
+For example function defined recursively equation
+Neither equation constitutes complete definition first base case second recursive case
+Because base case break chain recursion sometimes also called terminating case
+The job recursive case seen breaking complex input simpler one
+In properly designed recursive function recursive call input problem must simplified way eventually base case must reached
+Functions intended terminate normal example exception
+Neglecting write base case testing incorrectly cause
+For function one computes obvious base case implied input data one may add number term added series example provide criterion establishes base case
+Such example naturally treated successive term output partial sum converted recursion using indexing parameter say compute th term th partial sum
+Many must process generate arbitrarily large quantity
+Recursion one technique representing data whose exact size know programmer specify data definition
+There two type definition inductive definition
+An inductively defined recursive data definition one specifies construct instance data
+For example defined inductively using syntax The code specifies list string either empty structure contains string list string
+The definition permit construction list finite number string
+Another example inductive positive Similarly recursive often used model structure programming language
+Language designer often express grammar syntax grammar simple language arithmetic expression multiplication addition This say expression either number product two expression sum two expression
+By recursively referring expression second third line grammar permit arbitrarily complex arithmetic expression one product sum operation single expression
+A coinductive data definition one specifies operation may performed piece data typically coinductive definition used data structure infinite size
+A coinductive definition infinite string given informally might look like This similar inductive definition list string difference definition specifies access content data via function content may whereas inductive definition specifies create structure may created
+related coinduction used compute particular instance possibly infinite object
+As programming technique used often context programming language preferable recursion desired size precision program output unknown
+In case program requires definition infinitely large infinitely precise result mechanism taking finite portion result
+The problem computing first n one solved corecursive program
+
+Recursion contains single known recursion contains multiple known
+Standard example single recursion include list traversal linear search computing factorial function standard example multiple recursion include search
+Single recursion often much efficient multiple recursion generally replaced iterative computation running linear time requiring constant space
+Multiple recursion contrast may require exponential time space fundamentally recursive able replaced iteration without explicit stack
+Multiple recursion sometimes converted single recursion desired thence iteration
+For example computing Fibonacci sequence naively multiple iteration value requires two previous value computed single recursion passing two successive value parameter
+This naturally framed corecursion building initial value tracking step two successive value see
+A sophisticated example using allows iterative tree traversal rather multiple recursion
+Most basic example recursion example presented demonstrate function call
+recursion occurs function called another function called either directly indirectly
+For example call direct recursion call call indirect recursion Chains three function possible example function call function function call function function call function
+Indirect recursion also called symmetric term though simply difference emphasis different notion
+That call call turn call point view alone indirectly recursing point view alone indirectly recursing point view mutually recursing
+Similarly set three function call called set mutually recursive function
+Recursion usually done explicitly calling function name
+However recursion also done via implicitly calling function based current context particularly useful known
+Some author classify recursion either structural generative
+The distinction related recursive procedure get data work process data Functions consume structured data typically decompose argument immediate structural component process component
+If one immediate component belongs class data input function recursive
+For reason refer function STRUCTURALLY RECURSIVE FUNCTIONS
+Thus defining characteristic structurally recursive function argument recursive call content field original input
+Structural recursion includes nearly tree traversal including XML processing binary tree creation search etc
+By considering algebraic structure natural number natural number either zero successor natural number function factorial may also regarded structural recursion
+alternative Many recursive algorithm generate entirely new piece data given data recur
+refers kind generative recursion
+Examples generative recursion include
+This distinction important function
+A classic example recursive procedure function used calculate The function also written This evaluation recurrence relation demonstrates computation would performed evaluating pseudocode This factorial function also described without using recursion making use typical looping construct found imperative programming language The imperative code equivalent mathematical definition using accumulator variable The definition translates straightforwardly example iteration implemented recursively
+The computes two integer written recursively
+Function definition greatest common divisor express The recursive program equivalent iterative algorithm computation shown show step evaluation would performed language eliminates tail call
+Below version algorithm using explicit iteration suitable language eliminate tail call
+By maintaining state entirely variable using looping construct program avoids making recursive call growing call stack
+The iterative algorithm requires temporary variable even given knowledge Euclidean algorithm difficult understand process simple inspection although two algorithm similar step
+The Towers Hanoi mathematical puzzle whose solution illustrates recursion
+There three peg hold stack disk different diameter
+A larger disk may never stacked top smaller
+Starting disk one peg must moved another peg one time
+What smallest number step move stack
+Example implementation Although recursive function explicit solution Tower Hanoi sequence reduced explicit formula
+The algorithm method searching single element cutting array half recursive pas
+The trick pick midpoint near center array compare data point data searched responding one three possible condition data found midpoint data midpoint greater data searched data midpoint le data searched
+Recursion used algorithm pas new array created cutting old one half
+The binary search procedure called recursively time new smaller array
+Typically array size adjusted manipulating beginning ending index
+The algorithm exhibit logarithmic order growth essentially divide problem domain half pas
+Example implementation binary search C An important application recursion computer science defining dynamic data structure
+Recursive data structure dynamically grow theoretically infinite size response runtime requirement contrast size static array must set compile time
+Recursive algorithm particularly appropriate underlying problem data treated defined recursive term
+The example section illustrate known structural recursion
+This term refers fact recursive procedure acting data defined recursively
+As long programmer derives template data definition function employ structural recursion
+That recursion function body consume immediate piece given compound value
+Below C definition linked list node structure
+Notice especially node defined term
+The next element pointer another effectively creating list type
+Because data structure defined recursively procedure operate implemented naturally recursive procedure
+The procedure defined walk list list empty list pointer value NULL
+For node print data element integer
+In C implementation list remains unchanged procedure
+Below simple definition binary tree node
+Like node linked list defined term recursively
+There two pointer left pointing left right pointing right
+Operations tree implemented using recursion
+Note two pointer left right tree operation may require two recursive call At two recursive call made given call defined
+The example illustrates binary tree
+A special case binary tree data element node order
+Since number file may vary practical way traverse thus enumerate content
+Traversing filesystem similar therefore concept behind tree traversal applicable traversing filesystem
+More specifically code would example filesystem
+This code blend line least somewhat recursion
+It essentially recursive implementation best way traverse
+It also example direct indirect recursion
+The method rtraverse purely direct example method traverse indirect call rtraverse
+This example need base case scenario due fact always fixed number file directory given filesystem
+In actual implementation rather pure recursive function single check base case otherwise recursive step number modification may made purpose clarity efficiency
+These include On basis elegance wrapper function generally approved base case frowned upon particularly academia
+Hybrid algorithm often used efficiency reduce overhead recursion small case recursion special case
+A function directly called recurse instead calling separate auxiliary function actually recursion
+Wrapper function used validate parameter recursive function skip perform initialization allocate memory initialize variable particularly auxiliary variable level recursion partial computation handle exception error
+In language support auxiliary function nested inside wrapper function use shared scope
+In absence nested function auxiliary function instead separate function possible private called directly information shared wrapper function using
+base case also known consists checking base case making recursive call checking next call base case instead calling checking base case
+particularly done efficiency reason avoid overhead function call immediately return
+Note since base case already checked immediately recursive step need checked separately one need use wrapper function case overall recursion start base case
+For example factorial function properly base case
+immediately returning
+may miss mitigated wrapper function
+primarily concern many base case encountered Null pointer tree linear number function call hence significant saving algorithm illustrated search
+tree corresponds considering leaf node child base case rather considering empty node base case
+If single base case computing factorial provides saving
+Conceptually considered either base case recursive step checking base case recursion considered different base case one step removed standard base case complex recursive step namely check valid recurse considering leaf node rather Null node base case tree
+Because complicated flow compared clear separation base case recursive step standard recursion often considered poor style particularly academia
+A basic example given DFS binary tree see section standard recursive discussion
+The standard recursive algorithm DFS In instead In term standard step move base case check recursive step
+Alternatively considered different form base case recursive step respectively
+Note requires wrapper function handle case tree empty root node Null
+In case height node Null pointer child leaf cut number function call half worst case
+In C standard recursive algorithm may implemented The algorithm may implemented Note use Boolean AND operator recursive call made node valid
+Note first term AND pointer node second term bool overall expression evaluates bool
+This common idiom recursive
+This addition evaluation Boolean OR operator check right child left child fails
+In fact entire function replaced single Boolean expression return statement legibility suffers benefit efficiency
+Recursive algorithm often inefficient small data due overhead repeated function call return
+For reason efficient implementation recursive algorithm often start recursive algorithm switch different algorithm input becomes small
+An important example often implemented switching data sufficiently small
+Hybrid recursive algorithm often refined derived hybrid merge sort
+Recursion iteration equally expressive recursion replaced iteration explicit stack iteration replaced tail recursion
+Which approach preferable depends problem consideration language used
+In iteration preferred particularly simple recursion avoids overhead function call call stack management recursion generally used multiple recursion
+By contrast recursion preferred tail recursion optimization leading little overhead sometimes explicit iteration available
+Compare template compute x defined x f n x x For imperative language overhead define function functional language overhead define accumulator variable x
+For example factorial function may implemented iteratively C assigning loop index variable accumulator variable rather passing argument returning value recursion Most use today allow direct specification recursive function procedure
+When function called program keep track various instance function often using although method may used
+Every recursive function transformed iterative function replacing recursive call simulating call stack explicitly managed program
+Conversely iterative function procedure evaluated computer see expressed term recursive function iterative control construct routinely rewritten recursive form
+However practice rewriting depends feature language
+notable mainstream language function call including may cause stack allocation would occur use looping construct language working iterative program rewritten recursive form may although tail call elimination may feature covered language specification different implementation language may differ tail call elimination capability
+In language favor iterative looping construct usually significant time space cost associated recursive program due overhead required manage stack relative slowness function call function call particularly typically fast operation difference usually le noticeable
+As concrete example difference performance recursive iterative implementation factorial example depends highly compiler used
+In language looping construct preferred iterative version may much several order magnitude faster recursive one
+In functional language overall time difference two implementation may negligible fact cost multiplying larger number first rather smaller number iterative version given happens may overwhelm time saved choosing iteration
+In programming language maximum size much le space available recursive algorithm tend require stack space iterative algorithm
+Consequently language sometimes place limit depth recursion avoid stack overflow one language
+Note caveat regarding special case
+Multiply recursive problem inherently recursive prior state need track
+One example contrast list traversal linear search list singly recursive thus naturally iterative
+Other example include function
+All algorithm implemented iteratively help explicit programmer effort involved managing stack complexity resulting program arguably outweigh advantage iterative solution
+function function recursive call hence build deferred operation
+For example gcd function shown
+In contrast factorial function also recursive call tail position build deferred multiplication operation must performed final recursive call completes
+With treat call rather function call function gcd execute using constant space
+Thus program essentially iterative equivalent using imperative language control structure like loop
+The significance tail recursion making call tail call caller return position need saved recursive call return branch directly previously saved return position
+Therefore language recognize property tail call tail recursion save space time
+In simple case function calling instruction placed recursive call executed per recursion instruction placed recursive call
+The latter executed repeatedly maximum recursion reached
+Consider example The recursive algorithm expressed
+They usually simplified single term
+If function form Then thus represents number recursive call level recursion represents factor smaller input next level recursion
+number piece divide problem represents work function independent recursion
+partitioning recombining level recursion
+

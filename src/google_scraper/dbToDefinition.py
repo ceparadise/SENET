@@ -11,7 +11,8 @@ c = conn.cursor()
 user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 headers = {'User-Agent': user_agent, }
 
-existed_files = [f[:-4] for f in os.listdir('./bing_stackoverflow_word/') if os.path.isfile("./bing_stackoverflow_word/" + f)]
+existed_files = [f[:-4] for f in os.listdir('./bing_sentenceQuery_word/') if
+                 os.path.isfile("./bing_sentenceQuery_word/" + f)]
 
 from threading import Thread
 from threading import Lock
@@ -69,33 +70,32 @@ def get_page_content(link):
 
 
 def worker(sub_query_link, thread_num):
+    visited_doc = set()
+    last_visited_num = 0
+    for query in sub_query_link:
+        for link in sub_query_link[query]:
+            try:
+                mode = 'w'
+                if query in visited_doc:
+                    mode = 'a'
+                else:
+                    visited_doc.add(query)
 
-        visited_doc = set()
-        last_visited_num = 0
-        for query in sub_query_link:
-            for link in sub_query_link[query]:
-                try:
-                    mode = 'w'
-                    if query in visited_doc:
-                        mode = 'a'
-                    else:
-                        visited_doc.add(query)
-
-                    page_content = get_page_content(link)
-                    cur_visited_num = len(visited_doc)
-                    if cur_visited_num % 5 == 0 and last_visited_num != cur_visited_num:
-                        print("T{}: word processed = {}".format(thread_num, cur_visited_num))
-                        last_visited_num = cur_visited_num
-                    if page_content:
-                        with open("./bing_stackoverflow_word/" + query + ".txt", mode, encoding='utf8') as fout:
-                            for str in page_content:
-                                str = " ".join(str)
-                                fout.write(str + "\n")
-                            fout.write("\n")
-                            fout.flush()
-                    time.sleep(3)
-                except Exception as e:
-                    print(e)
+                page_content = get_page_content(link)
+                cur_visited_num = len(visited_doc)
+                if cur_visited_num % 5 == 0 and last_visited_num != cur_visited_num:
+                    print("T{}: word processed = {}".format(thread_num, cur_visited_num))
+                    last_visited_num = cur_visited_num
+                if page_content:
+                    with open("./bing_sentenceQuery_word/" + query + ".txt", mode, encoding='utf8') as fout:
+                        for str in page_content:
+                            str = " ".join(str)
+                            fout.write(str + "\n")
+                        fout.write("\n")
+                        fout.flush()
+                time.sleep(1)
+            except Exception as e:
+                print(e)
 
 
 word_num = c.execute("SELECT count(DISTINCT(query)) FROM serp JOIN link ON link.serp_id = serp.id");
@@ -107,7 +107,9 @@ count_lock = Lock()
 word_link = dict()
 for row in join_result:
     query = row[0]
-    query = query[:query.index("site:") - 1]
+    begin_index = len("what is ")
+    end_len = len(" in computer science")
+    query = query[begin_index:-end_len]
     if query in existed_files:
         continue
     link = row[1]

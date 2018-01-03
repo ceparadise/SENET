@@ -1,0 +1,301 @@
+In enables program indirectly access particular value
+The reference said datum accessing datum called reference
+A reference distinct datum
+Typically reference data stored memory given system reference implemented data stored memory storage device
+For reason reference often erroneously confused said point data
+However reference may also implemented way offset difference datum address fixed base address abstractly
+More broadly networking reference may address
+The concept reference must confused value uniquely identify data item give access operation
+References widely used especially efficiently pas large mutable data share data among various us
+In particular reference may point variable record contains reference data
+This idea basis many
+References cause significant complexity program partially due possibility partially data reference whose analysis quite complicated
+References increase flexibility object stored allocated passed area code
+As long one access reference data one access data data need moved
+They also make sharing data different code area easier keep reference
+The mechanism reference varying implementation fundamental programming language feature common nearly modern programming language
+Even language support direct use reference internal implicit use
+For example calling convention implemented either explicit implicit use reference
+primitive
+Due intimate relationship underlying hardware one powerful efficient type reference
+However also due relationship pointer require strong understanding programmer detail memory architecture
+Because pointer store memory location address instead value directly inappropriate use pointer lead program particularly due
+act like pointer accessed particular method
+A abstract reference may represented various way
+A common example FILE data structure used abstract file content
+It usually represents file requesting file specific position within file content reading file
+In reference may contain address identifier may also include embedded specification network protocol used locate access referenced object way information encoded serialized
+Thus example description remote web service viewed form reference includes complete specification locate bind particular
+A reference another example complete specification construct small software component called subsequently engage interaction local machine may gain access data replicated exists weakly consistent message stream
+In case reference includes full set instruction recipe access data sense serf purpose identifier address memory
+More generally reference considered piece data allows unique retrieval another piece data
+This includes key
+If set key set data object function defines type reference image key referring anything meaningful
+An alternative representation function directed graph called
+Here datum represented vertex edge datum refers datum
+The maximum one
+These graph valuable used separate accessible
+In many data structure large complex object composed smaller object
+These object typically stored one two way Internal storage usually efficient space cost reference metadata time cost associated dereferencing reference allocating memory smaller object
+Internal storage also enhances keeping different part large object close together memory
+However variety situation external storage preferred Some language support internal storage
+In language object uniformly accessed reference
+In first language used typical express reference using either raw memory address index table
+These work somewhat tricky use address tell nothing value point even large interpret information encoded program logic
+The result misinterpretation occur incorrect program causing bewildering error
+One earliest opaque reference language simply containing two reference Lisp object including possibly con cell
+This simple structure commonly used build singly also used build simple dotted list terminate null reference value
+Another early language Fortran explicit representation reference use implicitly calling semantics
+The still one popular type reference today
+It similar assembly representation raw address except carry static used ensure data refers misinterpreted
+However C violated using explicit conversion various pointer type pointer type integer misinterpretation still possible difficult
+Its successor tried increase pointer new cast operator smart pointer still retained ability circumvent safety mechanism compatibility
+A number popular mainstream language today adopted much opaque type reference usually referred simply
+These reference type like C pointer indicating interpret data reference typesafe interpreted raw address unsafe conversion permitted
+A reference best thought another object scalar variable row column array
+There syntax dereference reference manipulate content referent directly
+Fortran reference null
+As language reference facilitate processing dynamic structure linked list queue tree
+In setting concept data modified often make implicit use reference
+In many functional language value persistent modified assignment
+Assignable reference cell serve unavoidable purpose mutable reference imperative language make capability modified explicit
+Such reference cell hold value given type replaced type value pointed
+These mutable reference pointed different object lifetime
+For example permit building circular data structure
+The reference cell functionally equivalent array length
+To preserve safety efficient implementation reference ML pointer arithmetic performed
+It important note functional paradigm many structure would represented using pointer language like C represented using facility powerful mechanism
+The programmer able enjoy certain property guarantee immutability programming even though compiler often us machine pointer hood
+Some language like support string value contain name variable
+When value regular reference dereferenced Perl considers symbolic reference give variable name given value
+similar feature form syntax
+Many object oriented language make extensive use reference
+They may use reference access object
+References also used call message passing frequently used perform unused object
+
+Perelman Leslie James Paradis Edward Barrett
+Effective Technical Communication Characteristics
+
+Web
+Jun
+
+Kowalski Dawn
+Appendices
+
+Colorado State University
+Web
+Jun
+
+Buckley Robert
+Writing Software Documentation Some Guidelines
+
+California State University Sacramento Nov
+Web
+Jun
+
+Perelman Leslie James Paradis Edward Barrett
+Proposals
+
+Web
+Jun
+
+Miller Brett
+Project Proposal Software Development Sample
+
+Custom Software Preston Nov
+Web
+Jun
+
+Buckley Robert
+Guide Preparing Project Overview Specification Document
+
+California State University Sacramento Sep
+Web
+Jun
+
+Buckley Robert
+Guide Preparing Software Project Management Plan
+
+California State University Sacramento Nov
+Web
+Jun
+
+Buckley Robert
+Guide Preparing Software Requirements Specification Document
+
+California State University Sacramento Nov
+Web
+Jun
+
+Buckley Robert
+Guide Preparing Software Requirements Specification Document
+
+California State University Sacramento Oct
+Web
+Jun
+
+Buckley Robert
+Guide Preparing System Test Specification
+
+California State University Sacramento Oct
+Web
+Jun
+
+Buckley Robert
+Guide Preparing System Test Report
+
+California State University Sacramento Mar
+Web
+Jun
+
+Perelman Leslie James Paradis Edward Barrett
+User Documentation
+
+Web
+Jun
+
+Hinz Stefan Paul DuBois Jonathan Stephens Anthony Bedford John Russell
+MySQL Reference Manual
+
+Oracle Nov
+Web
+Jun
+Top Best Practices Consider
+
+Microsoft
+Web
+Jun
+
+
+First bit writing style
+Strunk White The Elements Style great starting point CS writer
+Yes prescriptive
+But need know rule even small rule capitalize put comma
+When deviate rule draw reader attention
+Be sure intentional receiving attention idea writing
+This advice specific English CS writing
+For insightful essay good writing English differs language I recommend Zinnser essay
+A thorough resource Knuth Larrabee Roberts book
+A brief pointer common mistake given
+For example The experiment required implement wrong The experiment required user implement fine The experiment required implementation Also The experiment involves implement wrong The experiment involves implementing correct
+In contrast I managed implement correct I managed implementing
+Some useful link google gerund infinitive
+See
+
+The purpose document summarize view academic writing Computer Science
+Comments welcome rlaz
+For interested detailed advice including structure paper use math pseudo code figure effectively I recommend consulting
+As aside example excellent essay writing Computer Science topic see particularly early work
+Writing clearly allows increase amount information reader take within fixed let face usually short amount time
+Some main issue address following Generally good academic writing one aim use secondary reference possible avoids ternary document cite secondary reference distant document altogether
+The reason avoid ternary distant reference people general bad keeping core document content use etc
+consider happens gossip analogy
+web dynamic file move regularly URLs hard read contain little information source also see section Bibliographic Formats
+Another reason avoid URLs web page unlike academic paper conference Computer Science web page usually many written persuade inform
+With current rate publication often impossible cite literature subject
+Choosing reference include discussion requires balance frequently cited paper often primary reference present key idea technique along paper
+Any reference contribute main discussion paper omitted Do aim maximize number citation paper
+In essence locating reference define support paper complex search problem skill take great deal practice people develop
+Make sure read paper abstract skim paper deciding read detail make search efficient
+While permitted quote source directly using offset indented block paragraph generally academic writing word
+If paraphrasing someone else word explaining
+another paper provide relevant citation end sentence
+Another option provide citation section text indicate concept came example As example copying pasting section document including one without explicitly citing source
+using number type plagiarism
+One frustration computing research lack standard biliographic format professional organization
+IEEE ACM SPIE often even individual conference use different citation bibliographic entry style
+Fortunately use LaTeX create paper publication venue often provide bibtex file automate citation bibliography style
+Make use bibliography database program easily collect select organize annotate reference
+Most modern system allow save entry even file useful feature
+There many system organizing paper database short list system I know include
+Personally I find paper I write I need copy entry bibtex bibliography database separate file different style use different field
+Further I find formatting amount information provided database online differs dramatically always editing bibliography entry needed
+Carefully editing bibliography sign respect importantly reader need accurate complete information choose find quickly scan reference cited paper
+Note using URL reference unacceptable proper paper citation available
+If must use URL accompany link name author document document title date web page
+
+obj endobj obj R R endobj obj R R endobj obj stream Xç UdOuDël T S ùu endstream endobj obj R R endobj obj R endobj obj R R endobj obj stream ó N Èh ÕÝ ûÝä ã ê Å z kKÝVÇ ªûÒHßýD endstream endobj obj R R R endobj obj R endobj obj R R endobj obj stream SÛFÇßû ô ÏÄí Ó ëb UóÂî Êë ì ëp I
+PÆ ê DoÄÆ eáT Ò É
+ß TJ þ x e å Á é aÉõ l wYÐJêW endstream endobj obj R R R endobj obj R endobj obj stream ë ÜäÕ R JÜo ÂÜá Ï ý z nv Ì L Æ Úú Z tµ KLÎ Æ ðÉU ÒN TuYo ZÒ Ûª Ï ÝÝ UbòpJÂ G NÎv endstream endobj obj R R endobj obj R endobj obj R R endobj obj stream v ðÃ Ùá ä JvCdZ hz Ûº ÒOMÓi ëÃÜ Ææ
+FÑA ãÔW
+RBz jÖÓ ÔUa E gJRdØï R
+êÑÆ U ÏòµéãÎ å óz
+endstream endobj obj R R R R endobj obj R endobj obj stream ðû
+Y Ó J
+FJæ µEíÖ ÑÔè GÀ C M è YW tÅ àr ÕÝüÈ ÃtrON
+õæEµ ø endstream endobj obj R R R endobj obj R endobj obj R stream XÀÐÄØLÏÄHÁØHY
+endstream endobj obj R endobj obj stream
+L x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ö c ÉSIÂ f cÉúH T êæILìÞ Ø Æ ðô J Å Ãº pjnû è ó ä ã êý ísdàØ K A èA ÄhµhIÒ
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Is citation style within computer science field
+By citation style I referring three general method Browsing show roughly split option occasional
+So I really two question The answer may I imagine something like Everyone us even though clearly easier read
+Regarding Both ACM IEEE use citation style safe say reader academic article CS familiar style
+Therefore use style paper look similar conference journal article CS
+Regarding experience citation style Smith effective reader
+This opinion shaped department Computational Social Science I read mix paper CS Statistics Social Science Economics others
+My reason favoring make easier read paper line
+Having read many paper given field I familiar cited seminal work
+If I see Padgett Powell I immediately know reference I guess
+But I see tell nothing
+I go look reference list memorize stand Padgett Powell every time I see
+But nature discipline nature paper lead difference role citation serve text
+In Social Sciences general citation structural discourse field
+Citations often mark school thought line argument research lens
+In contrast Computer Science citation much utilitarian function point paper provide theoretical foundation attempted approach problem solved
+In way intellectual bill material research behind CS paper
+The numbered reference sufficient giving anyone pointer bill material need
+Another justification citation style shorten page count paper
+In opinion le le justified era people read paper electronically print
+A computer science paper go either IEEE ACM use one standard citation style feel like computer science paper many reader
+Author guideline including found
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+µµµµ obj endobj obj endobj obj endobj obj stream Øy æsÅ üÃ O
+Yò IØËD Êùäý J ÔçJQ q Î ý zÈ ä
+Å T Æ A CÁÐ ñ F TF â Mè ÌìØ c né þó L ø Ð BçKÆ îz ð FHw I RS c iR Õñ LZ Í
+Uß ìðÝmO ÏA ZR endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj R endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj R endobj obj endobj obj endobj obj endobj obj R R R R R R endobj obj stream ÿ õZÚ ëRÎà GÿÇÞ Äu QÅ
+
+xæy G v ÛM õÞ P ËQ èáç ìú uÃ û R ìØ ÂT ÎÖû Vûf h ò u
+ð F N Oq í q çØw ê D ZÈ ús V ÌNuÈ ª
+xuñ mã Ò ÂI ÜFY ÞD q ðI D endstream endobj obj endobj obj R endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj R endobj obj endobj obj endobj obj endobj obj endobj obj
+
+Other area statistic use computer science include vision image analysis artificial intelligence network traffic modeling
+Statistics especially useful speech recognition software advent Apple Siri
+Statistics also back program Google Translate us data perform online translation
+Statistics used instance using spoken typed word changing sequence number match known dictionary
+Data mining performed help statistic using function find irregularity inconsistency within data
+Data compression us statistical algorithm compress data
+Statistics also used network traffic modeling whereby available bandwidth exploited usable use statistical program avoids network congestion
+Artificial intelligence try simulate human thought using algorithm similar voice recognition translation software
+Other statistical us computer science include quality management software engineering storage retrieval process software hardware engineering manufacturing
+Algorithms become necessary many facet computer programming data mining
+
+Computer science study computer appliance system control computation information processing programming
+Writing important skill develop computer science major matter type computer science project carrying
+For instance profound writing skill essential future career related computer science major teach explain solution clearly customer
+You must able make case approach used creating product
+Moreover computer user able understand use program important learn write instruction documentation well
+A number point essential writing assignment degree computer science
+First particularity consistency important writing paper technical subject
+While write assignment computer science project must able explain importance implemented specification implementation future work
+Furthermore learn sum idea audience understand logic
+The significance writing depends class taking
+In class Logic Computer Science writing necessary reach answer problem computer science project
+If taking software development class important learn write clearly deal customer future career
+Writing help understand course material consolidate different concept allows u make synthesis information
+Overall want earn degree computer science essential develop writing skill
+Students know become engaged communication writing succeed computer science field
+If difficult seek help
+This website provides online service high school college student
+We team professional writer relevant experience
+Our expert work student understand requirement know help write paper accordingly
+Our online team ready guide beginning filling order form process assignment writing last moment proofreading editing order
+We ready guide assist get grade computer science field
+offer help field computer science
+We special feature differentiate u others The main goal provide quality work affirm proudly helped thousand student around globe succeed writing assignment
+Required field marked FrogProg Limited
+All right reserved
+

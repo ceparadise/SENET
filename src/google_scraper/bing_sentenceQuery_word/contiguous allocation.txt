@@ -1,0 +1,138 @@
+Contiguous memory allocation classical memory allocation model assigns process consecutive memory block memory block consecutive address
+Contiguous memory allocation one oldest memory allocation scheme
+When process need execute memory requested process
+The size process compared amount contiguous main memory available execute process
+If sufficient contiguous memory found process allocated memory start execution
+Otherwise added queue waiting process sufficient free contiguous memory available
+The contiguous memory allocation scheme implemented operating system help two register known base limit register
+When process executing main memory base register contains starting address memory location process executing amount byte consumed process stored limit register
+A process directly refer actual address corresponding memory location
+Instead us relative address respect base register
+All address referred program considered virtual address
+The CPU generates logical virtual address converted actual address help memory management unit MMU
+The base address register used address translation MMU
+Thus physical address calculated follows The address memory location referenced process checked ensure refer address neighboring process
+This processing security handled underlying operating system
+One disadvantage contiguous memory allocation degree multiprogramming reduced due process waiting free memory
+Techopedia Terms Copyright Techopedia
+
+learn share knowledge build career
+Just like title contiguous memory block
+One without gap address occupies
+You probably think block think something gap middle two block
+The term come definition array contiguous
+That mean element laid discontinuity padding may padding inside element element
+So array element look like underscore character per byte symbol represent memory It look like And neither look like In case look like mean far address visible C concerned
+Something could contiguous virtual address space contiguous physical RAM
+For matter something could contiguous physical RAM address space actually adjacent physical RAM
+Half could one RAM chip half another RAM chip
+But C memory model ca see
+This contiguous memory block five byte spanning location location It represents byte light blue together memory gap byte white
+This set five byte interest It fragmented three group byte yellow starting location gap byte present group
+The gap byte location
+A block memory interrupted memory
+Or precise requires uninterrupted block virtual
+The real RAM backing address space need contiguous
+This important allocate large memory block
+The OS give contiguous block memory fragmented smaller piece free memory allocation satisfied even total free memory larger requested space
+This big problem bit apps since address space large
+But bit process happen heap get fragmented freed block still unfreed block larger allocation fail
+Answering context allocating memory invoke memory allocator request byte memory must able locate single block least byte unallocated memory
+If byte memory starting one address another byte starting address would create gap allocator satisfy request byte even though total byte free
+See also
+A memory block contiguous exactly defined start end address single linear address space hole
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+All file system I know make significant effort try allocate file contiguous bloc disk
+But disk SSD using flash technology underneath benefit contiguous allocation
+The benefit I see file system like use extent case contiguous allocation beneficial simply let u describe file layout succinctly seems like fairly minor advantage
+I guess another way write question SSDs still perform better sequential read writes scattered read writes
+By posting answer agree
+asked viewed site design logo Stack Exchange Inc user contribution licensed
+
+Contiguous mean immediately adjacent
+For example contiguous sector come one
+Frequently stored disk become fragmented mean stored sector
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Manoj Kumar professional technical trainer technical content writer field computer science
+He love read write science technology motivational social issue
+Your suggestion important improve post quality getting new idea
+So please write suggestion comment
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I want better understand OS provides heap memory process
+Here heap memory I mean memory allocated dynamically say call
+Heap allocator typically call system call reserve region page dole chunk call
+The system call Unix used implementation sometimes use well
+I think window us totally clear
+A good resource
+Short answer summarizing answer It done operating system
+Simple early operating system assigned fixed size area code data stack heap idea stack heap grew towards
+Early Unix system space stack area data used also heap could extended specialized system call
+More modern system use virtual memory bound limited contiguous address space anymore
+So program ask extra address usually via similar library handling heap dole part asked
+How exactly work depends programming language different language pose different requirement facility underlying kernel offer
+To answer question short answer yes
+The long answer executable linked also field executable header For Unix operating system
+Windows us
+determine initial size static data area stack heap
+For question short answer depends
+Since modern operating system today use virtual memory common use Virtual Memory Addressing program given separate memory space
+The size memory space either system system
+A good discussion layout running program Linux
+A request operating system map page extend range valid address program use
+These new range backed physical RAM swapped disk
+With said program type fixed size
+For example old era something known COre iMage file executable allocated fixed
+Although nature machine back day COM file could access entire memory map machine without consequence
+Other machine type different version
+Current Unix implementation however support ELF executable type possibly others
+Executable script file equivalent file Windows use interpreter ELF binary
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+To login Google please enable popups Email Password Forgot password
+Don account
+To signup Google please enable popups Sign Name Email Password Birthday To sign must older
+Other people see birthday
+By signing I agree StudyBlue Already account
+Sign free study better
+Anytime anywhere
+Get started today
+StudyBlue sponsored endorsed college university instructor
+Apple Apple logo trademark Apple registered country
+App Store service mark Apple StudyBlue All right reserved
+
+learn share knowledge build career
+What meaning contiguous memory
+It mean memory allocated single chunk
+This often used talking container
+For instance class use contiguous chunk memory
+This mean vector contains element assured get pointer first element vector incrementing pointer access second element incrementing access last element
+The deque class hand guarantee contiguous storage
+This mean deque contains element get pointer first element certain access second element incrementing pointer third incrementing
+Another example data structure would linked list
+With linked list almost unthinkable incrementing head pointer could return second element
+It rarely relevant assuming use good practice using iterators instead pointer much let collection manage store item without worry
+Usually need memory contiguous call C code code C function designed work contiguous memory simplest way
+If write following statement reserving contiguous memory cell type integer
+So say integer reserve byte memory address first memory cell The address arr memory The address arr memory The address arr memory They contiguous one another
+But write reserving memory cell
+So address may far away b For example The address memory The address b memory The address c memory They contiguous
+That First contiguous memory mean chunk memory allocated without gap address occupies
+It one single block memory
+Contiguous memory would mean various way allocating contiguous memory
+One simple way array C STL container like would also allocate contiguous memory
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+

@@ -1,0 +1,604 @@
+µµµµ obj endobj obj endobj obj R R endobj obj stream ÐYÈMà
+Âö Â Bß rW
+Ðµl
+e j ýgG Tì Ã ª µ
+ÿÍ qÎ Ë kl
+YMef PØ
+Lø æü Ûý uÕ ñ ÎÈ V Î T oµ Æ Âoc Â âl Avë Â e xÙ k
+
+ò Ù öD ÖÁ
+Mb ÁwFV Á ZqÉ ð aR JÝ EC äÞ q Û e H z A
+
+ÉõÉ dÚÎ íél x Goàësþ ú igjô ó é V
+Î qòÝõ Ç
+
+
+In alternative using Pause key use MORE display one screenful data time
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+In serf element two principal operation The order element come stack give rise alternative name
+Additionally operation may give access top without modifying stack
+The name stack type structure come analogy set physical item stacked top make easy take item top stack getting item deeper stack may require taking multiple item first
+Considered abstractly sequential collection push pop operation occur one end structure referred stack
+This make possible implement stack pointer top element
+A stack may implemented bounded capacity
+If stack full contain enough space accept entity pushed stack considered state
+The pop operation remove item top stack
+Stacks entered computer science literature used term bury unbury mean calling returning subroutine
+Subroutines already implemented proposed idea filed patent March Bauer received invention stack principle
+The concept developed independently Australian first half
+Stacks often described analogy stack plate cafeteria
+Clean plate placed top stack pushing already
+When plate removed stack one pop become new top
+In many implementation stack operation push pop
+An example top stack observes element without removing stack
+Since done pop push data essential
+An underflow condition occur stack top operation stack empty pop
+Also implementation often function return whether stack empty
+A stack easily implemented either
+What identifies data structure stack either case implementation interface user allowed pop push item onto array linked list helper operation
+The following demonstrate implementation using
+An array used implement bounded stack follows
+The first element usually bottom resulting first element pushed onto stack last element popped
+The program must keep track size length stack using variable record number item pushed far therefore pointing place array next element inserted assuming index convention
+Thus stack effectively implemented structure The operation add element increment index checking overflow Similarly decrement index checking underflow return item previously top one Using possible implement stack grow shrink much needed
+The size stack simply size dynamic array efficient implementation stack since adding item removing item end dynamic array requires amortized O time
+Another option implementing stack use
+A stack pointer head list perhaps counter keep track size list Pushing popping item happens head list overflow possible implementation unless memory exhausted Some language make stack operation push pop available standard type
+Some language notably family including designed around stack directly visible manipulated programmer
+The following example manipulating stack Lisp interpreter prompt line starting interpreter response expression Several container type operation LIFO semantics additionally template class adapts existing container provide restricted operation
+PHP class
+Java library contains class specialization
+Following example program language using class
+A common use stack architecture level mean allocating accessing memory
+A typical stack area computer memory fixed origin variable size
+Initially size stack zero
+A usually form hardware register point recently referenced location stack stack size zero stack pointer point origin stack
+The two operation applicable stack There many variation basic principle stack operation
+Every stack fixed location memory begin
+As data item added stack stack pointer displaced indicate current extent stack expands away origin
+Stack pointer may point origin stack limited range address either origin depending direction stack grows however stack pointer cross origin stack
+In word origin stack address stack grows downwards towards address stack pointer must never incremented beyond etc
+If pop operation stack cause stack pointer move past origin stack occurs
+If push operation cause stack pointer increment decrement beyond maximum extent stack occurs
+Some environment rely heavily stack may provide additional operation example Stacks often visualized growing bottom like stack
+They may also visualized growing left right topmost becomes rightmost even growing top bottom
+The important feature bottom stack fixed position
+The illustration section example growth visualization top stack bottom since stack top item pushed popped
+A move first element third position second first third second
+Here two equivalent visualization process A stack usually represented computer block memory cell bottom fixed location stack pointer holding address current top cell stack
+The top bottom terminology used irrespective whether stack actually grows towards lower memory address towards higher memory address
+Pushing item stack adjusts stack pointer size item either decrementing incrementing depending direction stack grows memory pointing next cell copy new top item stack area
+Depending exact implementation end push operation stack pointer may point next unused location stack may point topmost item stack
+If stack point current topmost item stack pointer updated new item pushed onto stack point next available location stack updated new item pushed onto stack
+Popping stack simply inverse pushing
+The topmost item stack removed stack pointer updated opposite order used push operation
+Many design including dedicated register use stack pointer dedicated call return push pop instruction implicitly update dedicated register thus increasing density
+Some CISC processor like also typically stack pointer well
+In contrast CPU design dedicated stack instruction therefore register may used stack pointer needed
+The architecture example set register organised stack direct access individual register relative current top also possible
+As machine general implicit argument allows small footprint good usage also prevents type optimization possible processor permitting two three operand
+A stack structure also make implementation somewhat complex implement although still feasible exemplified modern implementation
+example architecture using within another strategy avoid use slow main memory function argument return value
+There also number small microprocessor implement stack directly hardware stack directly accessible
+Examples line
+Many microprocessor used implement programming language level
+Stacks also used basis number mainframe mini computer
+Such machine called famous
+Calculators employing use stack structure hold value
+Expressions represented prefix postfix infix notation conversion one form another may accomplished using stack
+Many compiler use stack parsing syntax expression program block etc
+translating low level code
+Most programming language allowing parsed stack based machine
+Another important application stack
+Consider simple example finding correct path maze
+There series point starting point destination
+We start one point
+To reach final destination several path
+Suppose choose random path
+After following certain path realise path chosen wrong
+So need find way return beginning path
+This done use stack
+With help stack remember point reached
+This done pushing point stack
+In case end wrong path pop last point stack thus return last point continue quest find right path
+This called backtracking
+The prototypical example backtracking algorithm find vertex graph reached specified starting vertex
+Other application backtracking involve searching space represent potential solution optimization problem
+technique performing backtracking search without exhaustively searching potential solution space
+A number meaning define basic operation adding two number printing character taking argument stack placing return value back stack
+For example return stack operand stack also graphic state stack dictionary stack
+Many also including
+Almost way receive parameter return special stack hold information calling nesting order switch context called function restore caller function calling finish
+The function follow runtime protocol caller callee save argument return value stack
+Stacks important way supporting nested function call
+This type stack used implicitly compiler support CALL RETURN statement equivalent manipulated directly programmer
+Some programming language use stack store data local procedure
+Space local data item allocated stack procedure entered deallocated procedure exit
+The typically implemented way
+Using stack data procedure call important security implication see programmer must aware order avoid introducing serious security bug program
+Several use stack separate usual function call stack programming language principle organize information
+These include Some computing environment use stack way may make vulnerable security breach attack
+Programmers working environment must take special care avoid pitfall implementation
+For example programming language use common stack store data local called procedure linking information allows procedure return caller
+This mean program move data stack contains critical return address procedure call
+If data moved wrong location stack oversized data item moved stack location large enough contain return information procedure call may corrupted causing program fail
+Malicious party may attempt attack take advantage type implementation providing oversized data input program check length input
+Such program may copy data entirety location stack may change return address procedure called
+An attacker experiment find specific type data provided program return address current procedure reset point area within stack within data provided attacker turn contains instruction carry unauthorized operation
+This type attack variation attack extremely frequent source security breach software mainly popular compiler use shared stack data procedure call verify length data item
+Frequently programmer write code verify size data item either oversized undersized data item copied stack security breach may occur
+
+Computer Science Technology program prepares student work software developer small medium large enterprise use network Internet conduct business
+Course content constantly reviewed consultation industry ensure graduate able respond changing market demand
+The program encompasses two realm programming rapid application development RAD desktop system web programming dynamic web site mobile device application development
+Through intensive theoretical practical work Computer Science subject taking related course Business Mathematics Psychology student gain experience creating computer system support need goal modern business
+student take part industrial internship gain valuable experience workplace
+At various time program student asked prepare presentation enabling develop communication presentation skill
+The facility student Computer Science Dawson College
+From workstation server computer networked equipped software tool component regularly found industry
+Most software development tool used program compiler operating system also available student home use cost
+In realm RAD language used Java C
+For web development language XHTML Javascript PHP Java
+For mobile device development language Java
+The database management system DBMS Oracle MySQL commonly used industry used create application
+To better understand programming environment topic data communication operating system Windows Windows Server Linux distributed system covered depth
+To gain better appreciation computer course Computer Hardware Software
+Here student learn computer made also assemble complete system part configure software
+While Computer Science Technology program prepares student enter work force immediately graduation many student pursue study university various Computer Science degree program either
+Depending university student may granted credit towards degree program Dawson College Concordia University agreement Computer Science Technology student may receive credit undergraduate Computer Science program
+You required take additional course enter university
+Some employment opportunity include application programmer web designer programmer mobile programmer
+Graduates employed financial banking transportation manufacturing insurance health care government education research environment
+That anywhere business develops computer software part business model
+Last Modified November Site Search People Search
+
+Third year Computer Science student Brandon Edwards presenting On behalf School Computer Science Awards Committee pleased
+The University Guelph creating new home School Computer Over weekend September student School Over weekend September The School Over week July twenty child ranging Grade Congratulations School Computer Science PhD Candidate
+Frazer Seymour helped create device make accessing song manageable people memory loss
+The College Engineering Physical Sciences gathered celebrate winner undergraduate award
+The Natural Sciences Engineering Research Council Canada announced competition result Discovery Accelerator Supplements Program
+Gary Grewal Associate Professor named recipient School Computer Science Teaching Award
+ago RT First thing
+APPLY TO THE UNIVERSITY OF GUELPH
+ago Celebrating looking back success
+Happy everyone
+ago RT Check amazing prize coming
+This amazing hackathon coming soon follow The School Computer Science University Guelph instituted prepares student strong technical analytic skill
+Students gain experience leading edge technology problem solving software development preparing applied academic foundation
+
+See best job summarizing data US Bureau Labor Statistics A Science Technology Engineering Math STEM Georgetown University Center Education Workforce forecast percent STEM occupation computer occupation
+See also e report
+Within state Illinois importance Computer Occupations even pronounced STEM job Computer Occupations according Georgetown University Center education Workforce
+Alternatively see local In Obama state enough engineer call engineer per year
+indicates Network Systems Data Analysts Software Engineers fastest growing job America Biomedical Engineering
+The US Department Commerce forecast professional occupation
+The growing job Network Systems Data Communications Analysts projected grow
+Also included top job Computer Software Engineers Applications growth Systems Software growth
+Table taken Within Computer Science broken follows The Bureau Labor Statistics Employment Science Technology Engineering Math STEM made nice graphic The go state For foreseeable future By contrast traditional engineering job even fewer science mathematics
+What kind computing job
+The right break computing job different career category show predicting Note basic computer literacy knowing Microsoft Word Excel Powerpoint qualify one job
+These job require skill gain studying computer science information system software engineering
+In spirit full disclosure also see describing period unemployment even Computer Science unemployment
+The Computer Research Association CRA according United States Department Labor computer science graduate average earn percent average college graduate
+According Bureau Labor Statistics future job prospect computer science graduate higher science engineering field
+It also state CS enrollment first time year
+The Lohr report front page Business Day section hybrid career combining computing field increasingly new American job future labor expert say
+At time however fewer student becoming involved field computing
+The Chandler report decline portion school offer introductory computer science course figure dropped percent percent year corresponding decline AP course went percent survey result show
+The College Board even canceled AP computer science AB class declining enrollment
+Some see decline computer science surprising particularly given political initiative centered around fueling innovation sharpening math science technology skill future workforce
+Chris Stephenson executive director Computer Science Teachers Association said computer science class might unintentional casualty push increase academic standard considered core subject No Child Left Behind law
+report Amid worst job market year IT holding steady
+Most CIOs maintaining current staffing level hiring specialist IT skill
+America today according You may also interested seeing
+Top Jobs The top job taken Best Jobs Laurence Shatkin career information consultant crunched government data come list
+
+Registered nurse
+
+Teacher postsecondary
+
+Physical therapist
+
+Physician surgeon
+
+Dental hygienist
+
+Pharmacist
+
+Medical health service manager
+Nov report IT offshoring exaggerated IT labor shortage real
+Only IT job outsourced shortage trained people fill need IT
+April report US IT job year ago
+IT unemployment slightly
+The article describes US IT job growth coming See ACM recent article describing employment opportunity trend
+See March find visa inhibit domestic hiring
+The spring issue NACE Salary Survey show average salary offer bachelor degree candidate percent lower average offer made bachelor degree candidate
+As group graduate earning degree saw average salary offer soar comparison discipline Their average offer rose percent
+And average offer increased percent
+Graduates earning degree liberal art may hardest hit effect recession Currently average salary offer remain well last year level percent lower April Here tip incoming current college student If want job graduation day study computer science
+The article go describe enrollment rising job market fueling growth
+Network World November Science Technology Engineering Math STEM education difficult always taught compelling manner resulting many interested student dropping spite high demand field according
+June After decade decline number student pursuing degree increased last year according
+March The drop CS enrollment seems turning around
+According Network World computer science major rose
+For detail Taulbee Study see See NPR article March The number student enrolled computer science program lowest least decade
+Comp Sci one hottest major boom late number dropped bust
+Now despite strong market IT professional resurgence Web millionaire college student interested studying computing
+Larry Abramson talk student professor find
+Compared discipline science CS job opening
+The CRA site many article topic
+In particular see give recent enrollment statistic major
+The CRA site show see peak CS enrollment downward forecast
+Note spell opportunity combined job growth forecast CS IT described
+From CS undegrraduate enrollment may poised turn corner shown While yellow line graph forecast CS graduate graph show number actual major freshman rising
+If continues would lead rise number CS graduate starting around
+At see distribution CS Bachelor Degree recipient gender ethnicity See November NY Times fewer woman entering CS
+Not top IIT DePaul Loyola New York Times described December including article demographic shift change education
+Chicago voted best city world live Dilbert courtesy YouTube Last Update February
+See also previous year
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+A wait state situation computer waiting completion event resuming activity
+A program process wait state inactive duration wait state
+For example application program communicated one program might send program message go wait state reawakened message back program
+When computer processor work faster expressed million cycle per second random access memory sends instruction set go wait state one clock cycle synchronized RAM speed
+In general time processor spends wait state slower processor
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+ª Õ ï á SÛ å BÈ Ô ÐÜçOÝç GøÎu í
+h
+áòÕº TÆ fI g ÅYB b
+
+Webopedia study guide designed help high school IB International Baccalaureate university college student prepare computer science test quiz exam
+Our guide highlight specific topic covered many standard curriculum
+Each computing topic broken explanation link provided related definition similar topic covered Webopedia help better understand subject
+Learn five generation computer major technology development led computing device use today
+Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture design
+Java programming language
+This guide describes basic Java providing overview syntax variable data type operator
+A gentle introduction help understand basic TCP protocol
+This second Study Guide describes basic Java providing overview operator modifier control Structures
+The Open System Interconnection OSI model defines networking framework implement protocol seven layer
+Use handy guide compare different layer OSI model understand interact
+Companies organization use VPN communicate confidentially public network send voice video data
+Network Topology refers layout network
+How different node network connected communicate determined network topology
+Port number reserved privileged service designated port
+This list port number specified RFC
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+MyNAP member online
+Not MyNAP member yet
+start saving receiving special member perk
+Methods making class session effective Ways encourage student participation class Advantages collaborative learning Examples effective laboratory practice This chapter discus several method teaching science within traditional format lecture discussion session laboratory
+How help student learn science better efficiently format
+Although universal best way teach experience show general principle apply American Association Advancement Science McDermott et Mazur Teach scientific way thinking
+Actively involve student learning
+Help student develop conceptual framework well develop problem solving skill
+Promote student discussion group activity
+Help student experience science varied interesting enjoyable way
+Assess student understanding frequent interval throughout learning process
+Evidence number discipline suggests oral presentation large group passive student contribute little real learning
+In physic standard lecture help student develop conceptual understanding fundamental process electricity mechanic Arons McDermott Shaffer McDermott et
+Similarly student grade large general chemistry lecture course correlate lecturing skill experience instructor Birk Foster
+Despite limitation traditional lecture many institution forced offer introductory science course
+Many professor teach course feel lecturing option dream could accomplish smaller class
+However small growing group science faculty member developed way engage student process thinking questioning problem solving despite large class size
+Strategies use introductory course biology geology described sidebar
+Although many method described sidebar consistent expert know student learn see may welcomed student class
+There several way help student make transition passive listener active participant learning Orzechowksi Start slowly student may much experience active learning
+Introduce change beginning course rather midway
+Avoid giving student impression experimenting
+Biochemistry Genetics Molecular Biology Stanford University Professor Sharon Long Enrollment student One important tool I use engage student create opportunity thought active pursuit unknown class session
+If I give lecture I provide common always leave blank critical part note
+On board transparency I indicate unknown
+I pause I talk drawing student attention hole note
+If possible I ask suggested answer vote among possibility
+By arranging pause lecture give student chance puzzle question preview ability work question independently
+And attending class student gain important draw encourage class attendance
+In teaching formal genetics I draw genetic cross first general form example Drosophila eye color inheritance test w x w w Then I put lecture completely blank Punnett square show structure provide answer
+The student encounter unknown I address content line box question
+Everybody consult neighbor second row anybody tell two blank top
+What would genotype phenotype bottom right box
+Physical Geology Arizona State University Professor Ramon Arrowsmith Enrollment student I show example geology experience occasionally include funny slide video audio clip lighten thing
+I use multimedia presentation system composed vertical camera illuminated table I write place rock example book anything else I want student see
+The video signal projected screen classroom
+This form presentation worked well definitely improved student access material making thing visible
+Along presentation system I use laser disc containing movie photograph textbook publisher
+I easily switch multimedia laser disc output thus weave visual example lecture
+Occasionally I show student computer file video VHS player
+The student react well multimedia approach involve student I short exercise group talk
+For I walk side auditorium designate even odd row
+Then I say even people turn around face odd people exercise together
+This generates group people
+They put name onto single sheet turn
+Then student work together question minute
+I walk around room answering question
+When time TA stand overhead projector I walk crowd I lapel mike hear collecting answer question
+Then talk solution
+Usually time run student turn paper
+Of course get credit participation provides motivation I sure student understand concept better presented lecture
+This process engages student
+Of course grows student move assigned topic conversation come back fairly quickly
+It bit unnerving potential loss control class student seem either like indifferent certainly quite passive lectured
+Do give lecture completely
+Anticipate student anxiety prepared provide support encouragement adapt expectation
+Discuss approach colleague especially teaching course curriculum
+When lecturing chosen necessary teaching method one way keep student engaged pause periodically ass student understanding initiate short student discussion see sidebar
+Calling individual student answer question offer comment also hold student attention however student prefer feedback method anonymity
+If opportunity discus question small group group offer answer remove one student spotlight
+Another option student write answer index card pas card end row student seated select one answer present without disclosing whose
+The literature teaching learning contains example technique maintain student attention lecture setting Eble Davis Lowman McKeachie Avoid direct repetition material textbook remains useful alternative resource
+Use paradox puzzle apparent contradiction engage student
+Make connection current event everyday phenomenon
+Begin class something familiar important student
+End class summarizing main point made
+Adopt reasonable adjustable pace balance content coverage student understanding
+Consider using slide video film computer simulation enhance presentation remember Students take note darkened room
+The text need large enough read back room
+Students need time summarize observation draw note conclusion
+Pay attention delivery Maintain eye contact student part room
+Step behind lecture bench feasible
+Move around much distracting
+Talk student blackboard
+If using board avoid blocking AV projector screen
+Shift mood intensity
+Vary presentation technique
+At beginning course discus student several strategy effectively engaging learning class
+Some may listen others take note still others may try transcribe word
+Some student may want tape class session
+If want encourage particular form student participation make clear expectation reason student learning benefit
+Whether lecture discussion section laboratory individual encounter questioning important part guiding student learning
+When student ask question often seeking shortcut learning process getting right answer authority figure
+However process arriving answer assessing validity answer usually important particularly student apply process next question
+Both process obscured teacher simply give requested answer
+Often Socratic student question another perhaps leading student often frustrating offer possible answer supporting reason assessment
+In fact posing question effective teaching technique
+Here tip effective use question Wait long enough indicate expect student think answering
+Some student know silent professor give answer Rowe
+Solicit answer volunteer selected student
+Determine student confidence level listen answer
+Solicit alternative answer elaboration provide material comparison contrast assessment
+Solicit additional response student leading question observation
+Direct ensuing discussion comparison evaluation extension offered answer rather simple validation refutation right wrong answer
+Pose second question continue exploration
+Biochemistry Genetics Molecular Biology Stanford University Professor Sharon Long Enrollment student Even demonstration work large class us everyday object student recognize especially something student find use
+My favorite example use telephone cord demonstrate supercoiling DNA
+The phone cord intrinsic helicity DNA though usually phone cord left handed whereas DNA often discussed right handed B form
+Who experience coiled headset cord telephone show supercoils twist around
+This present student chance play home convince direction handedness supercoils depends direction original helix whether cord underwound overwound headset replaced constraining end
+Students learn important principle understanding nucleic acid handy practical tip let predict easiest way get kink phone cord
+They get chance test understanding making prediction one hope active scientific learning
+A professor question build confidence rather induce fear
+One technique encourage student propose several different answer question
+The student encouraged step outside answer begin develop skill necessary ass answer
+Some question seek fact simply measure student recall others demand higher reasoning skill elaborating explaining concept comparing contrasting several possibility speculating outcome speculating cause effect
+The type question asked response given student initial answer crucial type reasoning process student encouraged use
+Several aspect question formulate reasoning knowledge tested encouraged deal dialogue testing
+Chapters contain information question part assessment testing grading
+Demonstrations effective illustrating concept class result passive learning without careful attention engaging student
+They provoke student think especially helpful demonstration surprise challenge assumption illustrates otherwise abstract concept mechanism
+Demonstrations use everyday object especially effective require little preparation part faculty see sidebar
+Students interest peaked asked make prediction vote probable outcome
+There numerous resource available help faculty design conduct demonstration
+Many science education periodical contain one demonstration issue
+The Demonstrations column Favorite Demonstration column two many example
+The American Chemical Society University Wisconsin Press published excellent book chemical demonstration Shakhashiri Summerlin Ealy Summerlin et
+Similar volume physic demonstration published American Association Physics Teachers Freier Anderson Berry
+You consider number issue planning demonstration What concept want demonstration illustrate
+Which many demonstration selected topic generate greatest enhancement student learning
+Where class would effective
+What prior knowledge reviewed demonstration
+What design would effective given material hand target audience
+Which step demonstration procedure carried ahead time
+What question appropriate motivate direct student observation thought process demonstration
+What question used test stretch student understanding new concept
+If classroom lecture hall large consider whether student back able see demonstration
+Look videotaping demonstration projecting image larger screen student see
+Small group discussion section often used course complement lecture
+In course small enrollment substitute lecture lecture discussion format used class period
+The main distinction lecture discussion level student participation expected whole continuum exists
+Discussions student answer instructor question student address one another instructor mainly guide discussion toward important point
+In case discussion session productive student expected prepare advance
+Focused discussion effective way many student develop conceptual framework learn problem solving skill try idea student instructor
+The give take technical discussion also sharpens critical quantitative thinking skill
+Classes student must participate discussion force go beyond merely plugging number formula memorizing term
+They must learn explain word thinking
+Students motivated prepare class expected participate actively
+However discussion le predictable presentation time consuming require skill teacher
+To lead effective discussion teacher must good facilitator ensuring key point covered monitoring group dynamic
+Guidance needed keep discussion becoming disorganized irrelevant
+Some student like may function effectively class much time devoted student discussion
+Some may take point view paid hear expert teacher
+For student useful review benefit format contrast lecture whose purpose transmit information
+Sensitivity personality cultural linguistic gender difference may affect student participation discussion also important especially participation graded
+When student spontaneously engage discussion may unprepared may reluctant speak assertive
+Some may comfortable making comparison absolute statement others may comfortable narrative description quantitative analysis
+You might try various strategy engage student meaningful discussion posing question measure different level understanding knowledge application analysis comprehension see
+Probably best overall advice bold flexible willing adjust strategy fit character class
+If want experiment using discussion class thing consider Decide goal class discussion
+What want student get class session
+Concepts
+Problem solving skill
+skill
+The ability make connection discipline technology
+Broader perspective
+Keep mind goal may change progress material quarter semester
+Explain student discussion structured
+Will discussion involve whole class student work smaller group
+Make clear expect coming class session read chapter think question end chapter seriously try first five problem etc
+Let student see take attendance
+Students come class may studying
+If want student discus question concept small group explain student group form
+Do allow student dominate discussion
+Some student naturally respond quickly must encouraged let others chance
+Be sure student participate acceptable level
+In extreme case may speak outside class aggressive excessively reticent student
+Look opportunity student bring class illustrating important point day topic
+This effective way stimulate discussion
+Be willing adjust need student take advantage strength teacher
+Watch sign student need le guidance
+Are main point coming getting resolved
+Do need summarizing moderating
+Collaborative learning umbrella term variety educational approach involving joint intellectual effort student student teacher together Goodsell et
+Cooperative learning form collaborative learning instructional technique student work group achieve common goal contribute individually accountable way Stover et
+The interaction take different form study group discussion group project group class group role leader timekeeper technician spokesperson forth assigned rotated Although cooperative learning used effectively elementary middle high school number year discussed Johnson Johnson Slavin study done demonstrate effectiveness college classroom
+Nevertheless growing number practitioner assessing effectiveness Treisman Fullilove Johnson et Smith et Caprio Posner Markstein Cooper Watson Marshall
+While many advocate collaborative learning quick point advantage also sensitive perceived problem
+Cooper example point coverage lack control class student carry weight group need considered embarking collaborative learning
+In addition evaluation group work requires careful consideration see
+It hard imagine learning science learning science without laboratory field work
+Experimentation underlies scientific knowledge understanding
+Laboratories wonderful setting teaching learning science
+They provide student opportunity think discus solve real problem
+Developing teaching effective laboratory requires much skill creativity hard work proposing executing research project
+Despite importance experimentation science introductory lab fail convey excitement discovery majority student
+They generally give introductory science lab low mark often describing boring waste time
+What wrong
+It clear many introductory laboratory program suffering neglect
+Typically student work way list instruction trying reproduce expected result wondering get right answer
+While approach little science common practice efficient
+Laboratories costly time consuming predictable cookbook lab allow department offer lab course large number student
+Improving undergraduate laboratory instruction become priority many institution driven part exciting program developed wide range institution
+Some lab encourage critical quantitative thinking emphasize demonstration principle development lab technique help student deepen understanding fundamental concept Hake
+Where possible lab coincident lecture discussion
+Before begin develop laboratory program important think goal
+Here number possibility Develop intuition deepen understanding concept
+Apply concept learned class new situation
+Experience basic phenomenon
+Develop critical quantitative thinking
+Develop experimental data analysis skill
+Learn use scientific apparatus
+Learn estimate statistical error recognize systematic error
+Develop reporting skill written oral
+Practice collaborative problem solving
+Exercise curiosity creativity designing procedure test hypothesis
+Better appreciate role experimentation science
+Test important law rule
+Developing effective laboratory requires appropriate space equipment extraordinary effort department creative teacher
+Still invested innovative introductory laboratory program report encouraging result better understanding material much positive student attitude toward lab faculty participation lab Wilson
+Many science department implemented innovative laboratory program introductory course
+We encourage consult organization publication listed Appendices
+Education session professional society meeting another opportunity get good idea lab discipline
+Some faculty member given lecturing large Animal Behavior Laboratory Princeton University Professor James Gould Enrollment approximately student section A major goal course teach student science collect initial observation formulate testable hypothesis perform test refine overhaul original hypothesis devise new test
+Each lab two week long equipment animal available entire time
+All material student could plausibly need stored shelf easy immediate access
+In first hour discus lab possible hypothesis look material hand
+Each group formulates initial plan obtains approval plan conduct experiment
+The flexible lab utilize stimulus
+In one lab student asked determine feature prey toad responds
+Although begin live cricket worm encouraged use computer library virtual cricket toad
+Students given instruction making new prey model modifying existing one test toad response different feature
+The library includes variation shape motion color size plus variety cricket chirp call
+In general student quickly discover virtual cricket work almost well real provide data since toad never fill
+A simple statistical program computer help minimize drudgery data analysis enabling student concentrate experimental design result rather tedious computation
+A number lab course make use modified stimulus
+Labs using strategy deal mate recognition cricket fish competitor recognition fish predator recognition chick fish imprinting duckling color change lizard hemispheric dominance human
+Cooperative Learning Laboratory Students two laboratory section chemistry course nonscience major worked group three two experiment acid base buffer
+The experiment devised using modified jigsaw technique student group assigned particular part lesson unit responsible helping member group learn material
+The week prior laboratory student given list objective preparatory work divided three part
+Students decided divide responsibility preparatory laboratory task informed score exam would averaged member group would receive grade
+Two control section laboratory conducted traditional manner student working independently
+All four group student part lecture class significant difference age gender balance previous number chemistry class
+Although control section overall GPA higher cooperative learning section versus student cooperative section higher overall score test
+The author conclude use cooperative learning laboratory positive effect student achievement
+Smith et class meeting favor supervised collaborative learning laboratory setting
+Such workshop method devised teaching physic Laws chemistry Lisensky et mathematics
+Although feasible many institution idea developed course translate reasonably well course lab associated course Thornton press
+Laboratories enriched computer make data acquisition analysis easier much faster thus allowing student think result improved experiment
+Computers also used element experiment simulate response vary stimulus
+Computers offer convenience flexibility safety laboratory completely replace student interaction natural world
+Laboratory teaching method vary widely certainly substitute instructor circulating among student answering asking question pointing subtle detail possible application generally guiding student learning
+Although student work informally pair group many lab faculty formally introduced cooperative learning lab see sidebar
+Some instructor rely lab handout give cookbook instruction pose carefully constructed sequence question help student design experiment illustrate important concept Hake
+One advantage handout designer closely control student lab Moog Farrell
+The challenge design student must think creative
+In unstructured lab challenge prevent student getting stranded discouraged
+Easy access faculty member teaching assistant essential type lab
+Once decided goal laboratory familiar innovative idea field ready ask following question How others operated program
+Seek colleague department institution may implemented laboratory program similar one considering learn experience
+How much time energy willing invest
+Buying new equipment tinkering lab probably improve lab much required implement substantial change
+Changing way student learn involves rethinking way lab taught writing new lab handout setting training program teaching assistant perhaps designing new experiment
+What support
+Solicit interest support departmental colleague teaching assistant
+Are departmental institutional administration supportive project willing accept risk
+Determine likely provide needed resource
+Are prepared go still get mediocre student evaluation
+Helping Teaching Assistants Teach Laboratory All teaching assistant perform laboratory exercise student determine operational analytical difficulty test instructional note procedure
+Teachers discus usual student question misconception idea directing student learning
+Teachers review procedure circulating among student group ensure group get attention
+Groups visited early help get started
+Each group visited several time least midway lab discus preliminary result interpretation toward end lab review outcome interpretation
+Teachers review student notebook report meet discus difficulty misconception
+Discussions grading comment might made important procedure influence student performance attitude subsequent exercise
+The various method student report lab work different pedagogical objective
+The formal written report teach student communicate work journal style student sometimes sacrifice content appearance
+Keeping lab notebook graded teach student keep record experiment may develop good writing presentation skill
+Oral report motivate student understand work well enough explain others take time give student practice writing
+Oral report also motivate student keep good notebook especially consult presentation
+In choosing important aspect student lab experience consider student might report work future
+Many benefit carefully planned laboratory exercise realized instructional staff well prepared teach
+Often primary lab instruction come graduate undergraduate teaching assistant faculty member involved designing lab
+Time must invested training teaching staff focusing first mastery lab experiment method instruction
+It fine art guide student without either simply giving answer seeming obstinately obscure
+Teaching assistant taught way difficulty adapting innovative laboratory program suggestion help guide transition
+A good part success course depends group spirit whole team instructor teaching assistant
+Many group meet weekly perhaps informal structured way teaching assistant provide feedback instructor well learn effective way teach next laboratory experiment see sidebar
+The responsibility preparing teaching assistant largely dependent setting
+While many faculty member institution responsible preparing teaching assistant task handled basis program large number graduate student
+Many professional society publication topic see
+The American Association Higher Education another excellent source information
+Their publication Lambert Tice provides numerous example teaching assistant training program wide array discipline
+Effective science teaching requires creativity imagination innovation
+In light concern American science literacy scientist educator struggled teach discipline effectively
+provides undergraduate science educator path understanding student accommodating individual difference helping grasp method wonder science
+What impact teaching style
+How I plan course curriculum
+How I make lecture class laboratory effective
+How I tell student thinking
+Why understand
+This handbook provides productive approach question
+Written scientist also educator handbook offer suggestion greater impact classroom provides resource research
+You looking OpenBook online reading room since
+Based feedback user made improvement make easier ever read thousand publication website
+Do want take quick tour OpenBook feature
+Show book jump chapter name
+use button go back chapter skip one
+Jump page one
+Also type page number press go directly page book
+Switch read report appeared print web version highlight search text
+To entire text book type search term press
+link book page preferred social network via email
+View chapter
+Ready take reading offline
+Click book print free PDF available
+Do enjoy reading report Academies online
+Sign email notification let know new publication area interest released
+

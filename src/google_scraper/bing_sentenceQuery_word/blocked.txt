@@ -1,0 +1,360 @@
+In instance computer program executed
+A process always exists exactly one
+A process one waiting becoming available completion operation
+In computer system individual must share resource system
+Shared resource include CPU network network interface memory disk
+When one task using resource generally possible desirable another task access
+The technique used prevent concurrent use
+When task blocked unable execute first task finished using shared resource
+designed minimize effect blocking
+A process block may prevent local progressing
+In case blocking often seen wanted
+However may instead assigned independent process halting one little effect others since scheduling continue
+An example blocking passively waiting part polling spin loop part semantics channel
+Correctly engineered may used implement reactive system
+mean process pathologically wait circle
+As directly associated blocking
+Once event occurs process waiting blocked process advanced blocked state imminent one
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+What term block mean wrt computer science
+I seen used multiple occassions never understood mean
+Like blocking
+Googling seem help much
+Blocking mean program essentially asks Get data I wait ready
+This contrast
+There two flavor Get data I going go something else
+Interrupt data ready
+Get data I going go something else
+I ask later yet
+It important program block waiting data ca thing like respond mouse click repaint screen
+This happening see program labeled Not Responding task manager
+In summary mean process hang wait completes
+cover passing focussing block progress program communication progress leaving system resource idle
+When program make many operation mean processor spend almost time idle waiting operation complete Of course help much next step something data
+Blocking simpler move obvious way You ca since involves setting object connection fed single multiplexor constantly look next thing come
+Imagine two approach different thousand million connection
+You choose one factor like For example problem blocking holding several thousand connection open one thread system like several thousand thread
+But turn fairly complex issue
+Read perception including PDF
+In addition indicating programming context also mean
+First meaning block easy computer science block source code computer language
+For perl etc
+curly bracket block code delimits block code
+Python use indentation block
+The second meaning used context operating system usually called kernel seen supreme manager manages resource
+When different process thread ask system call resource CPU disk network memory resource may available due multiple competing thread process asking thing
+The kernel put process thread suspension wait queue allowing process thread working resource execution state
+The suspended process blocking state blocked
+Blocking achieve either hardware software mechanism operating system
+The running process also ask operating system suspend execution sleep command Shell perl
+Please edit interpretation wrong
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This handled process manager OS see First little
+So process program execution
+The first three letter program process probably clue something
+Think process An abstraction sequence instruction executed processor processor may need service hardware device process time sharing executing device driver instruction process
+make hardly sense understand process bit reading
+A process contains A really important thing remember process program disk would file
+Imagine recipe cake
+Now cake recipe instruction making cake like program disk
+The actual activity making cake process
+The thing take away section OS collection process
+The OS make computer productive switching CPU process
+The thing normally cause process created The system call creates process known fork execve Unix Windows CreateProcess
+These process called one process create another
+This known parent process creating child process
+There several reason process may terminated Things could become issue The OS table one entry per process
+Each entry known PCB
+Each entry The basic thing learn PCB info needed process stopped restarted
+Note This diagram taken source material post available slide
+All right reserved
+The diagram fairly simple
+You see actual switching process happening neither process executing CPU perform processing middle switching
+The actual switching time vary around microsecond second millisecond The concept processing used far assumed single address space used every process single thread control
+But multiple thread within one process
+It possible think way You multiple process sharing one computer multiple thread sharing process
+This would useful web browser example one thread receiving data network another display text
+With web browser could one thread getting input user another thread autosaving
+Imagine word processor single threaded You able type anything autosaving
+Note On version powerpoint I type anything autosaving
+It annoying
+You might hear something called
+This another way saying thread
+So thread multiple flow control sharing one address space
+Each one need program counter register value stack
+Remember thread process share code section global variable network connection open file
+You may heard
+This multiple thread share process
+Programs become responsive resource shared better
+If part program blocked keep running
+As IO CPU use shared thread process performance usually better
+It economical There lot cost associated making process
+Memory resource need allocated
+Creating thread faster
+There concern though I mentioned two thread share data
+Therefore one thread might read location another writing need take care stop problem like
+Implementing threading fast done user space
+However OS aware meaning user level thread get blocked whole process blocked
+This useful support multiprocessor dual core available
+This OS schedule individual thread
+However slow requires system call
+That
+Slightly detailed note available I super cool I computer science unrelated coolness Fill detail click icon log You commenting using account
+You commenting using Twitter account
+You commenting using Facebook account
+You commenting using account
+Connecting
+
+In execution smallest sequence programmed instruction managed independently typically part
+The implementation thread differs operating system case thread component process
+Multiple thread exist within one process executing sharing resource different process share resource
+In particular thread process share executable code value variable given time
+Systems single processor generally implement multithreading CPU switch different
+This generally happens often rapidly enough user perceive thread task running parallel
+On system multiple thread execute every processor core executing separate thread simultaneously processor core separate software thread also executed concurrently separate hardware thread
+Threads made early appearance MVT context called task
+The term thread attributed
+many modern operating system directly support multiprocessor threading allows programmer manipulate thread exposing required functionality interface
+Some threading implementation called whereas LWP specific type kernel thread share state information
+Furthermore program threading timer signal method interrupt execution performing sort time slicing
+Threads differ traditional operating system Systems said thread process operating system great difference except cost switch architecture notably result TLB flush
+In one time
+The opposite multithreading
+While suggested term misleading term widely accepted within community
+Multithreading mainly found multitasking operating system
+Multithreading widespread programming execution model allows multiple thread exist within context one process
+These thread share process resource able execute independently
+The threaded programming model provides developer useful abstraction concurrent execution
+Multithreading also applied one process enable system
+Multithreaded application following advantage Multithreading following drawback Operating system schedule thread either cooperatively
+On widely used approach finer grained control execution time via
+However preemptive scheduling may context switch thread moment unanticipated programmer therefore causing
+In contrast relies thread relinquish control execution thus ensuring thread
+This create problem cooperatively multitasked thread waiting thread yielding control execution intensive computation
+Until early desktop computer one CPU support although thread still used computer switching thread generally still quicker
+In added support processor name introduced processor introduced processor
+Processors higher requirement behavior might support multithreading decreasing time perhaps allocating dedicated thread instead common register file
+Scheduling done kernel level user level multitasking done preemptively cooperatively
+This yield variety related concept
+At kernel level contains one share process resource memory file handle process unit resource thread unit scheduling execution
+Kernel scheduling typically uniformly done preemptively le commonly cooperatively
+At user level process schedule multiple thread execution
+If share data Erlang usually analogously called process share data usually called particularly preemptively scheduled
+Cooperatively scheduled user thread known different process may schedule user thread differently
+User thread may executed kernel thread various way
+The term variously refers user thread kernel mechanism scheduling user thread onto kernel thread
+A heavyweight unit kernel scheduling creating destroying switching process relatively expensive
+Processes allocated operating system
+Resources include memory code data socket device handle window
+Processes share address space file resource except explicit method inheriting file handle shared memory segment mapping file shared way see
+Creating destroying process relatively expensive resource must acquired released
+Processes typically preemptively multitasked process switching relatively expensive beyond basic cost due issue cache flushing
+A lightweight unit kernel scheduling
+At least one kernel thread exists within process
+If multiple kernel thread exist within process share memory file resource
+Kernel thread preemptively multitasked operating system process preemptive
+Kernel thread resource except copy including thus relatively cheap create destroy
+Thread switching also relatively cheap requires context switch saving restoring register stack pointer change virtual memory thus leaving TLB valid
+The kernel assign one thread logical core system processor split multiple logical core support multithreading support one logical core per physical core swap thread get blocked
+However kernel thread take much longer user thread swapped
+Threads sometimes implemented library thus called
+The kernel unaware managed scheduled
+Some implementation base user thread top several kernel thread benefit machine
+In article term thread without kernel user qualifier default referring kernel thread
+User thread implemented also called
+User thread generally fast create manage take advantage multithreading multiprocessing get blocked associated kernel thread get blocked even user thread ready run
+even lighter unit scheduling running fiber must explicitly allow another fiber run make implementation much easier kernel
+A fiber scheduled run thread process
+This permit application gain performance improvement managing scheduling instead relying kernel scheduler may tuned application
+Parallel programming environment typically implement task fiber
+Closely related fiber distinction coroutines construct fiber construct
+Threads process share address space
+This allows concurrently running code tightly conveniently exchange data without overhead complexity
+When shared thread however even simple data structure become prone require one CPU instruction update two thread may end attempting update data structure time find unexpectedly changing underfoot
+Bugs caused race condition difficult reproduce isolate
+To prevent threading APIs offer data structure concurrent access
+On uniprocessor system thread running locked mutex must sleep hence trigger context switch
+On system thread may instead poll mutex
+Both may sap performance force processor SMP system contend memory bus especially locking fine
+Although thread seem small step sequential computation fact represent huge step
+They discard essential appealing property sequential computation understandability predictability determinism
+Threads model computation wildly job programmer becomes one pruning nondeterminism
+User thread fiber implementation typically entirely
+As result context switching user thread fiber within process extremely efficient require interaction kernel context switch performed locally saving CPU register used currently executing user thread fiber loading register required user thread fiber executed
+Since scheduling occurs userspace scheduling policy easily tailored requirement program workload
+However use blocking system call user thread opposed kernel thread fiber problematic
+If user thread fiber performs system call block user thread fiber process unable run system call return
+A typical example problem performing program written perform synchronously
+When operation initiated system call made return operation completed
+In intervening period entire process blocked kernel run starves user thread fiber process executing
+A common solution problem providing API implement synchronous interface using internally scheduling another user thread fiber operation progress
+Similar solution provided blocking system call
+Alternatively program written avoid use synchronous blocking system call
+implemented LWPs
+implement LWPs kernel thread model
+SunOS SunOS well NetBSD NetBSD implemented two level model multiplexing one user level thread kernel thread M N model
+SunOS later well NetBSD eliminated user thread support returning model
+FreeBSD implemented M N model
+FreeBSD supported M N user could choose one used given program using
+Starting FreeBSD became default
+FreeBSD longer support M N model
+The use kernel thread simplifies user code moving complex aspect threading kernel
+The program need schedule thread explicitly yield processor
+User code written familiar procedural style including call blocking APIs without starving thread
+However kernel threading may force context switch thread time thus expose race hazard concurrency would otherwise lie latent
+On SMP system exacerbated kernel thread may literally execute separate processor parallel
+Threads created user correspondence schedulable entity kernel simplest possible threading implementation
+used approach start implement approach via older
+This approach also used
+An model implies thread map one scheduled entity kernel knowledge application thread
+With approach context switching done quickly addition implemented even simple kernel support threading
+One major drawback however benefit hardware acceleration processor computer never one thread scheduled time
+For example If one thread need execute request whole process blocked threading advantage used
+The us threading
+M N map M number application thread onto N number kernel entity virtual processor
+This compromise threading
+In general M N threading system complex implement either kernel user thread change kernel code required
+In M N implementation threading library responsible scheduling user thread available schedulable entity make context switching thread fast avoids system call
+However increase complexity likelihood well suboptimal scheduling without extensive expensive coordination userland scheduler kernel scheduler
+Fibers implemented without operating system support although operating system library provide explicit support
+IBM F included support multithreading called late continued Optimizing Compiler later version
+The IBM Enterprise compiler introduced new model thread API
+Neither version part standard
+Many programming language support threading capacity
+Many implementation support threading provide access native threading APIs operating system
+Some usually programming language language expose threading developer abstracting platform specific difference threading implementation runtime
+Several programming language language extension also try abstract concept concurrency threading developer fully MPI
+Some language designed sequential parallelism instead especially using GPUs without requiring concurrency thread
+A interpreted programming language implementation Ruby Python support threading concurrency parallel execution thread due GIL
+The GIL mutual exclusion lock held interpreter prevent interpreter simultaneously interpreting application code two thread effectively limit parallelism multiple core system
+This limit performance mostly thread require processor much one
+Other implementation interpreted programming language using Thread extension avoid GIL limit using Apartment model data code must explicitly shared thread
+In Tcl thread one interpreter
+different threading model support extremely large number thread modeling hardware
+A standardized interface thread implementation Pthreads set library call
+OS vendor free implement interface desired application developer able use interface across multiple platform
+Most platform including Linux support Pthreads
+Microsoft Windows set thread function interface multithreading like
+Java provides yet another standardized interface host operating system using library
+Multithreading library provide function call create new thread take function parameter
+A concurrent thread created start running passed function end function return
+The thread library also offer synchronization function make possible implement free multithreading function using condition variable synchronization primitive
+Another paradigm thread usage set number thread created startup wait task assigned
+When new task arrives wake completes task go back waiting
+This avoids relatively expensive thread creation destruction function every task performed take thread management application developer hand leaf library operating system better suited optimize thread management
+For example framework like
+In programming model designed array thread run parallel using ID find data memory
+In essence application must designed thread performs operation different segment memory operate parallel use GPU architecture
+
+learn share knowledge build career
+Could someone provide layman definition use case
+Blocking mean caller wait callee finish processing
+For instance blocking read socket wait data return read return indication usually count whether something read
+You hear term mostly around APIs access resource necessarily require CPU attention instance
+You also hear A call Thread A Thread B might designed block hold Thread A Thread B achieves relevant state process least accept request
+The obvious example join usually mean I Thread A want wait Thread B terminated use exiting program
+In simple word If call function stop program continuing run user performed action action program controlling call called blocking call
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+To specify block text press special beginning end block
+The function key differ one another
+Word processor usually display block highlighting
+In data management block group
+Blocks manipulated unit
+For example often block
+In block unit data transferred together
+For example transfer block byte
+In general larger block size faster
+In word processing specify section text
+See definition
+Some call
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Measure much different material affect signal strength wireless router
+Ben Finio PhD Science Buddies Thank Amandip Sehmbey Motorola Solutions technical advice creation Project Idea
+Odds probably accessed Internet wireless device like smartphone tablet laptop
+Have ever frustrated slow connection
+In science project learn one aspect getting good reception material physically block signal
+Before start need learn little background information
+common name type communication allows electronic device exchange data connect Internet meaning need connect cable
+device using type
+You already familiar one type electromagnetic radiation visible light
+Visible light radio wave different part see Figure
+Each part electromagnetic spectrum different number wave per second
+Frequency measured one hertz Hz one cycle per second
+device operate either
+metric prefix one billion
+Electromagnetic radiation weakened pass different material
+Think visible light example
+Some material like air clear glass let visible light pas hardly attenuation
+Other material like water tinted glass let light others like wood metal completely block visible light
+Do think thing applies radio wave
+Will material weaken totally block radio wave material let pas
+In science project find testing ability different material block signal wireless router
+Wireless signal strength measured unit called
+different regular metric unit probably used working like meter gram second
+measure power level signal relative base level milliwatt mW equal dBm
+So positive dBm value power greater mW negative dBm value power le mW
+The dBm value measure project likely negative
+It important note value closer zero mean value farther away zero
+For example signal strength dBm fairly strong signal whereas signal strength dBm weak signal
+For detailed information dBm see reference Bibliography
+Science Buddies occasionally provides information part number supplier name supplier weblinks assist user Holographic Poster Letters Vinyl Letters Numbers ArtSkills Trifold Header Poster Making Kit ArtSkills Trifold Header Poster Lights Try one science activity quick anytime science exploration
+The perfect thing liven rainy day school vacation moment boredom
+You find page online http You may print distribute copy document annually charge personal classroom educational use
+When printing document may NOT modify way
+For use please contact Science Buddies
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+For several year sender unsolicited bulk email increasingly taken advantage large number vulnerable system available internet generate bulk mailing
+By sending message hundred thousand compromised host unscrupulous emailer hope mask location also thwart bulk email filter
+By blocking outbound packet port limit ability compromised host network send unsolicited bulk email site
+While case directly benefit department host others around internet still able send bulk email email server restricting ability send site small favor rest internet
+As October Computer Science Department firewall block outbound packet port host registered u legitimate need send packet
+This may require reconfigure email client
+In case able change port outbound SMTP server port instead
+Most major ISPs support configuration many case preferred
+If need help finding specific setting change OIT Helpdesk published document detailing make change several popular email client
+You find document Users CS Department Email service refer CS Guide documentation setting email client either
+
+follow All road Iraqi Kurdistan toward Baghdad closed road toward Syria also
+The government every opportunity challenge case merit
+The highway exit leading village dozen police vehicle
+In Kafr Kanna highway exit The Daily Beast forced use backdoor entry town
+Picasso worked photograph create jagged shape painted canvas
+All door lived alone one dig
+They vehicle kind footways crowded vegetable
+For three minute view everybody behind
+Then light shut great figure Jake doorway
+But surprise path Jed quietly stepped front
+solid piece Old French log block wood
+via Middle Dutch trunk tree Old High German common Germanic source PIE thick plank beam see
+Meaning mould hat
+Slang sense head
+Extended sense obstruction first recorded
+In cricket football
+The meaning notion compact mass building slang meaning fashionable promenade
+obstruct French block stop Old French see
+Meaning make smooth give shape block
+Stage theater sense
+Sense cricket football
+Related
+blŏk Interruption especially obstruction normal physiological function
+Interruption complete partial permanent temporary passage nervous impulse
+Atrioventricular block
+Sudden cessation speech thought process without immediate observable cause sometimes considered consequence repression
+adjective Stupid noun The head Related Terms
+

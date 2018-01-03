@@ -1,0 +1,412 @@
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+In computer architecture class lecturer explaining interface module somehow neither classmate understood almost word We still get part computer interface
+For example one interface
+A VGA card PCI Express
+I would use term refer set CPU instruction one us read write data device
+There generally two part
+One interrupt mechanism device communicate asynchronous information CPU
+Generally pin several pin CPU chip package used trigger interrupt
+Triggering external interrupt CPU architecture cause processor save register state jump predetermined location run interrupt service routine
+On architecture way triggering different interrupt routine different purpose others single external interrupt routine need additional communication done interrupt service routine figure device needed service
+The second part way data get communicated back forth CPU device
+This generally done one two different way memory mapped port mapped
+In register device mapped particular location CPU memory space CPU us normal load store instruction read write register
+In register device mapped particular location something called port space
+The instruction use access device register often called something like pretty similar load store instruction
+There possibility get complicated I probably already given detail want
+For every specific device set device register need read written specific value specific order
+The protocol need register get exceedingly complex
+To make clearer let give example
+Let take PC keyboard old day USB
+Here first thing came I googled
+The keyboard controller two register mapped port address hexadecmial
+You read register using instruction move data port CPU register
+The keyboard additionally cause interrupt interrupt number every time key pressed released
+So interrupt service routine associated interrupt read port look bit see data byte ready
+If read byte port copy memory buffer software read later
+The reason test several different hardware device may sharing interrupt
+An interface interface transfer data rest world
+Examples include graphic card output keyboard input disc drive input output
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+ÐÄÆ obj R stream xÚÍ UþÌ µ íxÕF ýÿÛíùf psLFõÙ Ie ú kû âDB C ý U k
+x ÇàöÑ Å aDíd hÑü I ii Yé Õ g K k S YoÜå Ò r ÔYjç K iÜt ä àOB h ú mÞg
+Á CeeÝ J ê ûo
+Ú CVgÈ Ù è ÁÀ ÜÕ Wa À PÎêÈOà ìÜvÄ endstream endobj obj endobj obj R R R endobj obj R R R R R R R R R endobj obj R R stream endstream endobj obj endobj obj R R endobj obj R R true stream xÚµ B âBL øð Èüæó ÃL áÎÒæË
+
+In shared boundary across two separate component exchange information
+The exchange device combination
+Some computer hardware device send receive data interface others mouse microphone may provide interface send data given system
+Hardware interface exist many component various device etc
+A hardware interface described mechanical electrical logical signal interface protocol sequencing sometimes called signaling
+A standard interface decouples design introduction computing hardware device design introduction component computing system thereby allowing user manufacturer great flexibility implementation computing system
+Hardware interface several electrical connection carrying part data simultaneously data sent one time
+A software interface may refer wide range different type interface different level operating system may interface piece hardware
+running operating system may need interact via object within application may need interact via
+A key principle design prohibit access resource default allowing access entry point
+interface
+Software interface provide access computer resource memory CPU storage etc
+underlying computer system direct access
+well designed interface resource software major disastrous functionality stability
+Interfaces software component provide type specification
+Sometimes public also defined part interface
+The interface software module deliberately defined separately module
+The latter contains actual code procedure method described interface well private variable procedure etc
+Another software module example interacts forced published interface
+One practical advantage arrangement replacing implementation another implementation interface cause internally meet requirement interface relevant specification interface
+See also
+In language term often used define contains data code defines behavior signature
+A code data method corresponding interface said interface
+Furthermore class implement multiple interface hence different type time
+An interface thus definition anywhere object exchanged example call object exchanged defined term interface rather specifying particular
+This approach mean class implement interface used
+For example may used allow development progress final implementation available
+In another case implementation may substituted testing
+Such implementation replaced real code later development process
+Usually method defined interface contains code thus called must implemented code run invoked
+An interface called might define two method
+It implemented different way example first fast working stack fixed size second using data structure resized cost somewhat lower speed
+Though interface contain many method may contain one even none
+For example language defines interface single method various implementation used different purpose including
+like contain method serve provide information generic processing using
+The use interface allows programming style called
+The idea behind approach base programming logic interface object used rather internal implementation detail
+Programming interface reduces dependency implementation specific make code reusable
+Pushing idea extreme leaf inject code specific implementation interface used perform work
+A point interaction computer human includes number graphic sound position movement etc
+data transferred user computer system
+
+âãÏÓ obj endobj xref n n n n n n n n n n n trailer startxref EOF obj stream xÚb øÁóGÎà Ò l endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream l r rà N Ë endstream endobj obj endobj obj endobj obj endobj obj endobj obj stream ÇsM UqñÍüâ UnÅo EË Â L ù YØa vè ë ë AÔW X Ý é Ív ïTÀ
+DQµ ØB
+eOù b ºO
+p ÜaíeãÞ ú å ÆX Zhû QËÞP OQ öw C ËÑõ û ö endstream endobj obj endobj obj endobj obj endobj obj stream þs ûªÕµn TÛªP Ë ýH ñ ÂPâï ðyÖ
+Ë óu ítÍ Ã Ë p Zµï þî éA éêµïë O j b Ìá mI HáÊ çö ÔhO x endstream endobj obj endobj obj endobj obj stream Á L lÄöN F Àç Ï
+ì qîã ônB ÞÜE tÕè Ðd mMSms Ü GdGT º
+Põru FYbáôßO wz WÞÂY fÄ ò dÁm f cúw Y endstream endobj obj stream PT Ú ç ÂDÆ ªñäK ò Éì Àã B Ã Ñ nËk
+ûºÐÙº Ãd ÖêÆ Ì IÂ BÂÃ ê ãÅæß ø yYîÑÙ
+æ ÆAdÂj gÍ ÂBX Ð ô Ñ w ÈÌf ü
+aO j ðP ÐU ÐÛ J cÉ Ù Íäÿ Í
+
+â Àòñ LÛ ú ÒWÇ x R av O Â
+ÑLLÿ QA Ñ X î Ú Ç ï l ÅçÒÏåsYyIËa A Õà v
+ÕÜÇ EÁnÇ h í Ý üý Õ ÓD LIéJ XIDÅ L ÑÇ Æ Óp lm Å H Ój ÍÁ Þ ÁuÌõ Õr xrÅ V RúÀÎºu Kk ò
+Íý ÿï RÜ endstream endobj obj endobj obj endobj obj stream ÝÙòÔ û endstream endobj obj endobj obj endobj obj stream Î ÝøøãS r ýÝÇý ò ï ÚÌVâÃ á Sd xÕMæ Düé v mr Ìæ Z ú ÓS ãØ oì L à Öv
+
+endstream endobj obj endobj obj endobj obj stream sÚF öÞsÎýàÅ â e Z Â lï M
+Ð M ã Ë eOèªoÅYqm È Áoe
+S Ø qK ç X endstream endobj obj endobj obj endobj obj stream SÕÝ óVlåÃ ò öª
+ª Jõø Ô b ÔfmÁ H Å TþlYx ïù àh fu ß Ö Cé w hË mjb lÈ endstream endobj obj endobj obj endobj obj stream òR ÿ ût ðû R Ñ çºÌ U fÒ è Q w ª k kÃþ ð Ùü M Íí endstream endobj obj endobj obj endobj obj stream é I x åEI Ö Ê
+óÛ ñÍªÒ H Xà yÆ
+mØC mÇn ñZ ÿ endstream endobj obj endobj obj endobj obj stream
+ûÖ Ý aGGíucd
+
+This chapter outline input output ATCS
+It complement mentioned The user interface requirement VLT SW dictated The graphical user interface rely ESO Graphical UIF Common Conventions For implementation graphical user interface framework The hardware interface shall obey two statement written Reliable shall provided every board used AT Control System
+They shall completely tested prove full access required board functionality correct exploitation resource
+All necessary device driver available VLT Common Software since board foreseen VME Standard board fully compatible existing board exception beacon interface board compatible Acromag Digital board
+All interface ATCS Electro Mechanical Hardware described specific Interface Control Document The ATCS different type software interface term used broad meaning external package depending interaction realized The following section define general characteristic interface detailed description pertains specific ICD document
+The CCS made WS WS platform LCU platform Device driver ESO standard LCU board comprehensive motor control package also available addition LCC kernel list standardized board available device driver found With aim helping developer control application homogeneous maintainable software ESO provides guideline Applications WS level use The ATCS access Astronomical Catalog System The ATCS access Astronomical Site Monitor permission mean corresponding library available within framework ATCS package
+The ASM collect information wind seeing humidity relevant environment variable
+The ATCS Control System CPUs shall rely Time Reference System TRS synchronized receive UTC
+The TRS get UTC GPS satellite distributes LCUs using dedicated Time Bus
+Each LCU requiring time synchronization better one second shall equipped Timer Interface Module TIM Within VLTICS hierarchy Interferometer Supervisor Software ISS control ATCS
+The ISS highest layer within hierarchy
+It functionally located top ATCS
+The ATCS formally part VLTICS also work standalone nevertheless ISS coordinate VLTICS system access point VLTICS
+The requirement communication interface described
+
+The noun sens chemistry surface forming common boundary two thing two object liquid chemical phase computer science program control display user usually computer monitor allows user interact system overlap two theory phenomenon affect link computer science computer circuit consisting hardware associated circuitry link one device another especially computer hard disk drive peripheral chemistry surface forming common boundary two thing two object liquid chemical phase Nouns denoting object extended outer boundary object branch chemistry dealing physical property chemical substance interface forming boundary liquid oil water computer science program control display user usually computer monitor allows user interact system Nouns denoting communicative process content interface computer science sequence instruction computer interpret execute branch engineering science study aid computer computable process structure user interface type command instead choosing menu selecting icon user interface based graphic icon picture menu instead text us mouse well keyboard input device The overlap two theory phenomenon affect link Nouns denoting cognitive process content interface chemistry biology representation common ground theory phenomenon computer science computer circuit consisting hardware associated circuitry link one device another especially computer hard disk drive peripheral Nouns denoting object interface circuit part computer branch engineering science study aid computer computable process structure interface computer printer computer sends multiple bit information printer simultaneously interface commonly used modem mouse printer transmits data bit time interface consisting standard port computer peripheral used computer INTERESTINGLY INTERESTINGNESS INTERFACIAL INTERFACIAL SURFACE TENSION INTERFACIAL TENSION INTERFAITH INTERFERE INTERFERENCE INTERFERING
+
+Degrees Policies Updated Feb EST Copyright University Buffalo All right reserved
+
+Cooperative education internship assignment provide experience related student academic interest
+The cooperative education opportunity open undergraduate computer science student completed hour undergraduate work
+Graduate student must hour graduate coursework
+For information potential assignment override restriction Contact Career Center PC
+None
+Cooperative education internship assignment provide experience related student academic interest
+The cooperative education opportunity open undergraduate informatics student completed hour undergraduate work
+Contact Pomerantz Career Center PC override restriction
+None
+Recognition practical work experience internship
+For information potential assignment override restriction Contact Career Center PC
+admission Graduate College
+None None Small discussion class taught faculty member topic chosen instructor may include outside activity film lecture performance reading visit research facility
+Open student
+It may taken twice
+None Exploration single topic series lecture faculty presenting divergent perspective illuminates intellectual adventure inherent liberal art science encourages discovery major area study within College Liberal Arts Sciences
+Same
+None Introduction computing student seeking broad overview discipline
+Students acquire necessary concept skill apply computing principle resource effectively chosen profession
+Topics include networking communication privacy ethic security limit computing algorithmic problem solving
+Lab assignment explore variety software tool support decision making emphasis HTML CSS building web page gentle introduction JavaScript programming language program web page spreadsheet advanced feature database management system data processing querying
+This course part computer science informatics major minor
+The course taught faculty member lab section led TAs
+Not open credit student completed CS course
+Quantitative Formal Reasoning Introductory course computer science study algorithm appropriate student discipline
+Topics include computer work simple algorithm efficiency networking database artificial intelligence graphic simulation modeling security social impact computing
+The course also includes gentle introduction programming concept Python
+The course taught faculty member lab section led TAs
+Not open credit student completed CS course
+Quantitative Formal Reasoning
+This introduction programming course computer science major minor curriculum
+Prior programming experience required although student previous exposure programming
+It emphasizes object oriented programming style methodology
+The lecture taught three time week
+The discussion period led TA used discus programming exercise answer question small classroom atmosphere
+Concepts presented context working example exercise
+Language syntax computing paradigm studied
+Programming project used reinforce key programming notion including iteration data type function object
+Projects may include graphic string processing network application
+Lectures taught faculty member discussion section led TAs
+Quantitative Formal Reasoning
+math placement calculus course An introduction programming computing principle fundamental aspect computer science
+Topics covered include programming Python fundamental relational database algorithmic idiom computational complexity example application
+After second course informatics major
+taken prerequisite
+This course review introductory programming concept practice Python
+It provides additional practice core programming concept taught Computer Science I Fundamentals Programming Informatics
+Students weekly programming assignment order enhance mastery key idea technique introductory programming
+It course
+Faculty Computer Science graduate student provide review material assignment meet regularly individual small group student review concept discus homework assignment
+
+This introduction mathematical method used studying problem computer science
+The topic covered include mathematical logic proof technique especially mathematical induction set theory function relation procedure recursion operation count recurrence relation analysis algorithm counting method permutation combination graph tree
+Calculus I recommended required prerequisite
+The course required computer science major minor
+Two exam final given plus weekly quiz weekly problem set text
+The course taught faculty member
+Calculus I recommended
+NOTE This course must taken concurrently whichever taken first
+It may taken AFTER either
+None
+Calculus I The second course required computer science major minor emphasizes design implementation analysis common data structure algorithm
+The goal teach data structure provide necessary data abstraction development large software system central role software engineering
+Data structure covered include set linked list stack queue hash table tree heap graph
+Students introduced algorithm searching sorting data structure manipulation learn technique analyze program efficiency
+Programming using recursion dynamic data structure covered
+The programming language Java
+The course involves midterm final exam multiple programming homework assignment
+Lectures taught faculty member discussion section led TAs
+None
+
+Design implementation relational database system introduction relational model database design database normalization use database query manipulation language SQL
+The basic theory principle guideline design evaluation interaction
+Topics include design methodology participatory design prototyping user interface technology input output device interaction style quantitative qualitative evaluation user interface expert review usability testing
+Introduction computer networking overview network organization management
+Students also develop basic understanding encryption network security well practical experience network programming
+This course two main goal teach student digital computer work introduce student assembly language programming
+The hardware component course begin introducing basic switching component digital circuit
+It next show analyze circuit also build circuit conform specified computational property
+It introduces many standard circuit used computer logic shift circuit arithmetic circuit memory circuit
+The course present design current digital computer class discussion cover interface computer external device
+It present alternative computer design contrasting computer CISCs computer RISCs
+The software component course introduces assembly language programming
+It describes instruction class including load store operate arithmetic logical shift rotate stack type conversion privileged
+The course also describes addressing mode utility
+The software component concludes describing software control hardware device
+Requirements include homework assignment two three exam
+The course taught faculty member
+Introduction potential integrating art technology providing foundation skill concept experimentation lecture demonstration introduce key concept idea well history digital art lab student develop skill form foundationfor future investigation work may include using Arduino programming developing interface control software project final project shared public way critical discourse form writing assignment allow reflection evaluation
+Same
+Engineering Be Creative
+The course continues presentation skill knowledge necessary effective software development building upon basic competence student gained
+Students taught basic software engineering use knowledge one group project develop software system substantial size
+The goal course educate student develop large software using analysis design programming testing technique
+The course also aim developing programming competence using paradigm associated concept class object method inheritance polymorphism
+The programming language instruction major language Java Ruby Scala
+Team project constitute major portion evaluation course also involves midterm final exam several individual programming assignment
+The course required computer science major minor
+The lecture taught faculty member discussion section led TAs
+This course offer rotating section covering different programming language Usually Java tool
+The topic covered section vary programming language
+The goal course expose student latest technology allow student learn new programming language understand fundamental programming
+Students assumed previous programming experience level
+The course count credit towards CS major minor
+The section taught instructor TA
+It may taken four time
+None
+Possible offering Topics include basic construct class specification multiple inheritance operator function name overloading virtual function template basic concept data abstraction programming
+This course intended major already know program language
+The course taught TAs
+This course cover use major portion C programming language variable expression statement program modularization function macro block control structure representation numeric textual data using scalar structured data type operating system interface file service
+Programming methodology topic using program design development tool managing program examined
+The course taught TAs
+This course cover philosophy Java Java language object class application Java package interface exception thread abstract window toolkit applet programming web
+This course intended major already know program language Java
+Not open credit student taken previous course Java
+The course taught faculty member TA
+Topics include algorithm design technique divide conquer dynamic programming greedy analysis technique notation recurrence sorting merge sort heapsort quicksort searching tree hashing basic graph algorithm search minimum spanning tree shortest path several programming project
+The course taught faculty member
+Introduction modern operating system including device control memory management addressing process scheduling interprocess communication interrupt synchronization security
+This course introduces student computer network application technique using network
+The course survey basic concept messaging medium transfer
+After introduction general concept subject matter turn important software application rely network parallel simulation network file sharing multiplayer game distributed database
+The course taught faculty member
+This course examines numerical method finding solution nonlinear equation polynomial interpolation approximation function numerical integration solution simultaneous linear algebraic equation solution ordinary differential equation
+Although required prerequisite student would benefit background linear algebra would sufficient
+Problem assignment require use computer generally done Matlab system language taught course
+Same
+This course examines advanced topic programming language example syntax specification informal semantic model program control structure including recursion backtracking concurrency data abstraction structuring method
+The course introduces programming paradigm functional logic programming contrast conventional language
+Examples project may rely several language C Ada Java Prolog logic programming part ML Haskell functional programming part
+Requirements include one two exam final exam several computer project
+This required course major computer science
+The course taught faculty member
+capstone course informatics major
+Students typically working small group design implement document test system using appropriate software tool
+A sample project might information management tool consisting database system
+Taught faculty member
+Complements material course
+Recent example include Game Design Performing Robots
+An instructor number approval required registration course
+Contact instructor designated individual instructor number enter section number register
+It may taken four time
+Depending content course may may count towards computer science minor
+This course allows individualized work honor project
+Open computer science major honor program
+Membership honor program open undergraduate maintains UI average higher
+If received permission instructor add section enrollment may administratively dropped
+It may taken twice
+Computer science informatics major honor standing
+Topics covered include Finite automaton regular set expression grammar property automaton standard universal Turing machine relationship formal language automaton undecidability consequence
+The main objective course expose undergraduate beginning graduate student symbolic logic
+Symbolic logic powerful tool modeling computation computational device reasoning formally
+It provides unifying foundational framework several area computer science engineering database artificial intelligence hardware design programming language software engineering security
+This course introduces several logic propositional predicate temporal modal differing expressive power focus discus us computer science
+Main theme represent knowledge logic represents valid argument prove disprove possibly automatically validity logical statement
+Two exam final usually given plus several written homework
+NOTE This course may used satisfy theory requirement BS student place
+Computer science math engineering major
+This course cover mostly relational database system
+First student learn effectively design create relational database use via SQL query manipulation language
+Next internals relational database system studied including relational database system store data optimize execute SQL query process transaction
+Finally course briefly discus advanced issue XML data model data integration data mining
+Students expected develop database associated application course project
+Topics include method representation heuristic search technique machine inference game playing knowledge representation overview expert system language processing system machine perception
+Requirements include weekly assignment midterm final exam term project
+The course taught faculty member
+The Web vast variegated growing resource interconnects world many interesting way
+One area study emerged somewhat recently web mining
+Research development web mining span spectrum goal method high quality retrieval monitoring information site stream distilling summarizing web information identifying social network discovering new opportunity idea
+This course study web mining landscape paper assignment term project
+Exposure Perl database technology preferred
+strongly recommended
+Analysis different kind health care data patient electronic medical record public health data biomedical publication social medium pertaining health ontology health care student read paper exploring different kind research application development involving data course run distinct module focused dataset type related research student must comfortable programming Java Python Perl
+Knowledge discovery process including data reduction cleansing transformation advanced modeling technique classification prediction clustering association evaluation integration
+Same
+Survey discussion application historical recent research field interaction emphasis visual presentation analysis communication data information research method technique current reading best practice
+This course expose student discipline problem challenge effectively interpreting communicating amount data
+The focus course research method interaction HCI
+Information Visualization related field focus HCI perspective effective presentation data information observer analyst identify trend make new discovery quantify relationship change
+Towards demystifying data analysis making accessible broader interdisciplinary audience course focus practical application modern tool technique leading participant traditional data information visualization innovative thinking term visual analytics digital storytelling
+Towards end encourages development experimenting new approach technique tailored varying analytic task audience informed partly participant experience data application interest
+Building mobile sensing system requires addressing issue sensor acquisition wireless communication middleware development project using embedded computer sensor includes significant writing presentation component research paper novel research project mobile computing expected knowledge Java assumed
+This class introduce student principal computer security research
+The covered topic include Cryptography cryptography cryptographic hash digital signature User Authentication textual graphical password cryptographic authentication Access control model DAC MAC RBAC OS Security CPU mode System call Filesystem permission Software Vulnerabilities Stack buffer overflow Buffer overflow Format string attack Integer overflow Automatic software vulnerability detection static analysis symbolic execution concolic execution testing Web Network Security SQL injection scripting DNS security Advanced topic Mobile security taint tracking
+The course taught faculty member
+Diverse aspect high performance scientific computing covered
+The core class basic parallel algorithm using standard library system MPI distributed computing OpenMP shared memory multicore computer
+All material covered starting sequential implementation
+Other issue encountered scientific computing programming general addressed including floating point arithmetic design style efficiency time memory
+Same
+Basic theory optimization use numerical algorithm solution optimization problem linear nonlinear programming sensitivity analysis convexity optimal control theory dynamic programming calculus variation
+The course taught faculty
+Same
+Current area deal problem Big Data technique computer science mathematics statistic high performance parallel computing matrix technique cluster analysis visualization variety application including Google PageRank seismology problem weather forecasting fusion data simulation project
+Same
+This course complement material course
+Recent offering included iOS App Development Compiler Pi Sensing World
+May taken six time
+Fundamentals computer science algorithm complexity relational database system concept programming Python
+Same
+Topics covered include Turing machine undecidability complexity class reduction problem randomized algorithm randomized complexity class approximation algorithm related complexity class dealing
+The course taught faculty
+Review design analysis technique advanced data structure graph algorithm network flow matching randomization approximation algorithm special topic string matching computational geometry number theoretic algorithm
+There three exam two project
+The course taught faculty member
+Use randomization design algorithm focus various fundamental principle design randomized algorithm first second moment method random sampling hashing probability amplification tool analysis tail bound Markov Chebyshev Chernoff Hoeffding Lovasz Local Lemma Martingale tail bound randomized rounding linear program application network routing combinatorial optimization random walk social network data streaming
+Study data structure geometric problem point location range searching finding nearest neighbor algorithm convex hull Voronoi diagram triangulation along us topic determined student interest focus algorithm design understanding implementation geometric algorithm assumes sound understanding material undergraduate algorithm course
+Fundamental machine learning technique well experience applying technique developing new technique solving problem real world topic include regression least square regression lasso classification naive Bayes nearest neighbor support vector machine logistic regression kernel method unsupervised method clustering spectral clustering dimensionality reduction stochastic optimization deep learning recent advance big data analytics
+Problems involved designing analyzing current machine architecture using hardware description language HDL simulation analysis hierarchical memory design pipeline processing vector machine numerical application multiprocessor architecture parallel algorithm design technique evaluation method determine relationship computer design design goal
+The course taught faculty member
+Same
+This course introduction distributed computing emphasis distributed algorithm
+It cover technique used advanced distributed system service including election algorithm distributed graph algorithm fault tolerance distributed agreement global snapshot object replication logical time multicast operation
+The course taught faculty member
+Explores infrastructure programming paradigm scalable system database provides experience popular cluster framework MapReduce Hadoop Spark Flink similar programming exercise project experiment assigned reading case study explore theme replication data sharding looser type consistency virtualization consensus barrier synchronization cloud system stack developed Google Amazon Facebook Microsoft
+Topics include treatment general idea error rootfinding method nonlinear equation interpolation theory approximation function numerical integration
+The two course form general introduction numerical analysis may taken either order
+The course taught small section approximately student per class
+Grades based two exam midterm final exam homework problem count significant portion grade
+The course recommended undergraduate
+Same
+Knowledge computer programming Numerical method initial value problem ordinary differential equation direct iterative method linear system equation eigenvalue problem matrix
+The course taught faculty member
+Same
+Knowledge computer programming This course introduction software engineering process
+Students examine lifecycle phase problem analysis requirement definition specification design implementation integration project management
+In addition human factor software validation verification group project experience examined
+Requirements include four homework exercise project two exam one midterm final
+Students significant programming exposure preferably undergraduate senior graduate standing
+The course taught faculty member
+Same
+This course introduces formal model method application various phase software engineering process
+The purpose formal method enable construction large highly reliable software
+Their foundation precise specification property software system expected satisfy
+The course present collection technique formal software development including operational algebraic specification method verification consistency completeness specification verification software property
+Course work includes exercise specification construction verification paper using formal tool
+The course taught faculty member
+Same
+
+Effective spring offering course Software Engineering Languages Tools substantially revised strongly focus modern agile software development practice cloud application using software engineering language tool technology
+Topics covered revised course include
+Agile Software Development Practices Design Development Refactoring Pair programming Teams collaborative development version control configuration management
+SaaS Architecture
+Architectural pattern SaaS Tiered MVC RESTful service Data management CRUD
+The Ruby Rails Development Framework
+The Ruby language More powerful Perl Python b
+The Rails framework web application development deployment Rails tool Cucumber Capybara rSpec
+Developing SaaS application using Ruby Rails SaaS Design Patterns b
+Incorporating JavaScript AJAX Web app performance security issue Same
+graduate standing solid understanding design programming facility least one programming language
+This course includes use concept model software system analysis design Booch OMT unified method notation Jacobson use case use design pattern software architecture case study team project real software project process project management
+The course taught faculty member
+Same
+This introductory course formal foundation programming language
+Its overall goal expose student established technique providing precise implementation independent definition programming language help student develop deeper insight key concept paradigm programming investigate method constructing correct program rigorously proving property
+The formal foundation presented using variety model including attribute grammar operational axiomatic denotational algebraic technique
+They involve generation proof program equivalence correctness termination
+The course taught faculty member
+Covers typed untyped version lambda calculus depth including essential theoretical result like confluence untyped lambda calculus normalization typed lambda calculus well application computer science logic linguistics course work includes theoretical exercise practical problem using software manipulating expression student devise final project prior experience lambda calculus programming logic linguistics required although ability grasp definition new concept follow detailed argument needed
+Various topic computer science covered course
+Recent example Research Topics Human Computer Interaction
+Students interested studying subject covered course developing unique programming project may negotiate faculty member individualized instruction
+May taken four time
+If received permission instructor add section enrollment may administratively dropped
+Presentations internal external speaker
+Repeatable
+Graduate standing computer science Individualized instruction candidate computer science covering subject covered course
+If received permission instructor add section enrollment may administratively dropped
+standing computer science
+Open PhD candidate computer science
+Repeatable
+candidacy postcomprehensive exam computer science
+MacLean Hall Iowa City IA The University Iowa
+
+A description developed
+It lay may include set describe user interaction software must provide
+Software requirement specification establishes basis agreement customer contractor supplier project role may played marketing development division software product well expected
+Software requirement specification permit rigorous assessment requirement design begin reduces later redesign
+It also provide realistic basis estimating product cost risk schedule
+Used appropriately software requirement specification help prevent software project failure
+The software requirement specification document enlists enough necessary requirement required project development
+To derive requirement developer need clear thorough understanding product developed developed
+This achieved refined detailed continuous communication project team customer till completion software
+The SRS may one contract form content
+An example organization SRS follows The Software Requirements Specification SRS communication tool stakeholder software designer
+The specific goal SRS Following idea notion proposed describe issue requirement specification requirement necessarily wrong could problematic
+In particular requirement smell Examples requirement smell
+Several smell also automatically detected tool like
+

@@ -1,0 +1,445 @@
+cover overlap field
+The topic essentially divided three main area Logic play fundamental role computer science
+Some key area logic particularly significant formerly called recursion theory
+The based concept defined logician mathematician
+Church first showed existence algorithmically unsolvable problem using notion
+Turing gave first compelling analysis called mechanical procedure asserted found Turing analysis perfect
+In addition major area theoretical overlap logic computer science One first application use term Logic Theorist system developed Shaw
+One thing logician take set statement logic deduce conclusion additional statement must true law logic
+For example If given logical system state All human mortal Socrates human valid conclusion Socrates mortal
+Of course trivial example
+In actual logical system statement numerous complex
+It realized early kind analysis could significantly aided use computer
+The Logic Theorist validated theoretical work influential work mathematical logic called
+In addition subsequent system utilized logician validate discover new logical theorem proof
+There always strong influence mathematical logic field
+From beginning field realized technology automate logical inference could great potential solve problem draw conclusion fact
+Ron Brachman described FOL metric AI knowledge representation formalism evaluated
+There general powerful known method describing analyzing information FOL
+The reason FOL simply used computer language actually expressive sense FOL easily express statement computer matter powerful could ever solve
+For reason every form knowledge representation sense trade expressivity computability
+The expressive language closer FOL likely slower prone infinite loop
+For example IF THEN rule used limited subset FOL
+Rather arbitrary formula full range logical operator starting point simply logician refer
+As result computability quite good especially take advantage optimization algorithm compilation
+Another major area research logical theory software engineering
+Research project Programmer Apprentice program applied logical theory validate correctness software specification
+They also used transform specification efficient code diverse platform prove equivalence implementation specification
+This formal transformation driven approach often far effort traditional software development
+However specific domain appropriate formalism reusable template approach proven viable commercial product
+The appropriate domain usually weapon system security system real time financial system failure system excessively high human financial cost
+An example domain process designing chip used CPU critical component digital device
+An error chip catastrophic
+Unlike software chip ca patched updated
+As result commercial justification using formal method prove implementation corresponds specification
+Another important application logic computer technology area automatic classifier
+rigid semantics
+Definitions directly mapped set theory predicate calculus
+This allows specialized theorem provers called classifier analyze various declaration set subset relation given model
+In way model validated inconsistent definition flagged
+The classifier also infer new information example define new set based existing information change definition existing set based new data
+The level flexibility ideal handling ever changing world Internet
+Classifier technology built top language allow logical semantic level existing Internet
+This layer called
+used reasoning
+
+obj endobj obj stream
+ûæ v endstream endobj obj endobj obj endobj obj endobj obj stream Áª ã endstream endobj obj endobj obj stream endstream endobj obj endobj obj stream lÌËêEõØâÊx iVF l Ì
+endstream endobj obj stream þS ÓûûÂ
+
+Á f Àb jÃÒtþ ÝªÒàÁ àa O ÚNÐ õm õoaé ßîNøa þ þÿÿ ëü Ä
+È zè
+Ó ir Òÿÿ I Fa Ñ
+xl Ð ÂAR ºI u ÔWºnßþßÿù ßøO rr L Ký ý u Üü YðÆ ýoío vô Z Ø xiìÖ jÈh
+ÿÿÒù ÿíîT úâ µ ûÇFg ëÿü Üa TýøI WÂðA UÐ PÃSÝ BÂ Ê gnçeÀ ýª k H Âý è Ó Áéø ÁûX ACPa ÿÿÿÀ endstream endobj obj stream Òý
+
+Propositional logic good vehicle introduce basic property logic
+It provide mean determine validity truth false atomic statement
+Instead allows evaluate validity compound statement given validity atomic component
+For example consider following Accept fact first two statement noting use exclusive thus could really thought saying I like Pat I like Joe I like
+Do statement imply I like Joe true
+Try convince I like Joe true consider another line reasoning We see answer case
+The two set statement abstracted follows Here concerned logical reasoning statement
+Thus instead working pig Pats simply write We begin study first syntax propositional logic describe element language logic written
+We describe semantics symbol symbol mean
+The syntax propositional logic composed propositional symbol logical connective parenthesis
+Rules govern element written together
+First treat propositional symbol merely set symbol purpose use letter Roman Greek alphabet refer set symbol Second logical connective Note minimal required set equivalently represented using single connective NOR NAND used lowest level computer hardware
+Finally use parenthesis denote expression later make parenthesis optional An string propositional symbol parenthesis logical connective
+The expression consider called
+The set formula smallest set expression Another way define formula language defined following grammar start symbol The context free grammar unambiguous
+The function formula create meaning statement given meaning atomic statement
+The semantics formula propositional symbol mapping associating truth assignment truth value
+The truth value used instead respectively well abbreviation
+The semantics well defined due Fact seen
+One way specify semantics logical connective via truth table Can one always find formula implement given semantics
+Yes truth table realized formula
+The formula found follows
+Represent row conjunction true proposition symbol negation false one
+Finally write disjunction result
+For example Every formula equivalent disjunction conjunction propositional symbol negation propositional symbol
+Dual DNF
+To get CNF There case DNF resp
+CNF exponentially larger original formula
+For example equivalent DNF exponential size
+Does truth table polynomial size formula implementing
+More precisely exist every truth table propositional symbol form size
+Answer
+Assume exists
+The number truth table propositional symbol
+The number formula size propositional symbol connective parenthesis
+Clearly sufficiently large
+TODO exposition explain definition provide context Note
+
+
+
+It also possible prove directly
+Special case SAT polynomial time
+Example A disjunction literal one positive
+There two kind possible Horn clause For every set Horn formula checking whether satisfiable
+Let subset containing clause type subset containing clause type
+Note first satisfiable
+To obtain minimum satisfying assignment start literal clause crank rule
+It remains check consistency clause
+To enough check clause true
+Consider set Horn clause The set clause type consists first clause consists last clause
+Note also written The minimum satisfying assignment obtained follows Thus minimum satisfying assignment make true
+This contradicts state must false
+Thus satisfiable
+A system mechanism proving new statement given statement
+Let set known valid statement propositional formula
+In deductive system two component inference rule proof
+If proof using inference rule write
+Natural deduction collection inference rule
+Let denote contradiction falsity
+The following inference rule natural deduction Rule allows u prove valid statement form If even know truth value statement set known valid statement
+Indeed rule start assuming valid
+If conclude valid world valid conclude relation true release assumption valid
+We show apply inference rule
+Example De Morgan Law negated say By rule prove infer desired result
+To prove first direction use rule assume hypothesis
+Then We prove second direction
+Proof Pierce Law Natural deduction sound
+To show natural deduction also complete need introduce propositional resolution
+Resolution another procedure checking validity statement
+It involves single rule
+Some terminology A proof system resolution contains single resolution rule resolvent defined follows
+Assume clause The smallest set clause containing closed resolution denoted
+If
+It possible show resolution rule defined computes clause inferred using natural deduction
+Let two clause
+Then
+In order prove validity statement prove statement unsatisfiable
+To prove unsatisfiability formula need define formula The resolution refutation tree formula tree rooted empty clause every leaf clause internal node computed resolvent two corresponding child
+Notice clause appear repeated leaf
+From claim conclude If exists resolution refutation tree formula unsatisfiable
+The formula following resolution refutation tree The order clause selected compute resolvent matter computing resolution refutation tree following example show Consider formula Even though resolution refutation tree may exist order important trying build tree
+Below two different resolution refutation tree one successful Propositional resolution sound exists resolution refutation tree given formula must unsatisfiable
+For formula
+Propositional resolution complete given formula unsatisfiable resolution refutation tree
+For formula
+By induction number variable
+We one variable say
+All possible clause
+If unsatisfiable clause occur therefore
+Suppose hypothesis true formula le variable
+Let formula variable
+Suppose show satisfiable
+Let variable
+Then either hold immediately
+Assume
+We define formula containing clause contain literal removed clause word equivalent formula resulting setting true
+Formally First notice thus Also since
+By induction hypothesis satisfiable
+Then satisfiable extension satisfying assignment equal true
+The case analogous
+Let set inference rule Natural Deduction
+If
+The idea behind proof completeness natural deduction follows
+Suppose valid unsatisfiable
+We show exists resolution refutation applying contradiction rule rule conclude inferred
+Sketch Given formula valid perform following step Step easily done repeated application De Morgan law
+Step proven using natural deduction
+Finally step proven induction number step obtain
+Clearly step simulated using natural deduction
+It likely algorithm propositional resolution take long worst case recall checking validity formula complete
+Linear resolution particular resolution strategy always resolve recent resolvent clause
+The resolution refutation tree obtained therefore linear
+It possible prove set clause Horn clause exists linear resolution strategy formula
+That linear resolution complete set Horn clause
+The language PROLOG us resolution set Horn clause
+Each clause called
+Moreover clause composed single literal called
+A clause single negated literal called
+The table show comparison different notation
+In PROLOG query statement idea negate statement perform resolution set known true statement
+If resolution refutation tree found statement implied program
+An example linear resolution formula shown
+
+Refers operation
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Programming logic fundamental construct applied computer science variety comprehensive way
+Programming logic involves logical operation hard data work according logical principle quantifiable result
+The term programming logic root advancement computer science
+Programming logic started fast logic compiled sophisticated algorithm expressed programming language like Prolog
+Basic computer developed way deal number logical state applying specific operator lead precise result
+The important distinction programming logic logic general fundamentally set kind programming built hard logic quantifiable state result
+For example modal logic nature set theoretical quantum operation provide specific set state computer apply logic
+Programming logic general rest foundation computational logic shared human machine explore continue interact new technology
+With mind one could develop specific definition programming logic basis piece code
+Techopedia Terms Copyright Techopedia
+
+This book discus logic tool computer science field us logic level
+It provides survey mathematical logic various application
+Some area particularly important include After covering basic material course present foundation
+Other topic including surveyed time allows
+These note taken student scribe
+You may also find following reference useful
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+No journal entirely access free page charge author
+There far hardcopy version
+In future reconsidered
+The journal consists outstanding researcher research area
+We set high acceptance criterion paper editor asked assign two three referee every paper accept paper rated excellent
+The journal published overlay Computing Research Repository part
+This repository auspex ACM Cornell University aim guarantee archived article available forever independent software development
+The journal covered
+Read offline
+Use Quote part article add article course pack anthology web site
+Print Give article colleague student
+All ask credit original author source see
+The copyright retained author
+They requested sign license agreement making us mentioned question legal
+Use web site
+Papers submitted Logical Methods Computer Science exceed page
+If author feel page needed explain cover letter
+You submit paper postscript pdf format
+For final version requested use journal submit
+Digital Object Identifiers DOIs type identifier serving identify article journal issue kind digital object
+DOIs persistent throughout time space remain fixed even though object web page may change
+This done via
+Logical Methods Computer Science provides DOIs paper issue
+For example DOI first paper published journal One access paper web visiting http typing DOI
+Within another paper DOI cited simultaneously turned archival quality live link using latex package hyperref follows Every paper Logical Methods Computer Science BIBTEX entry web page includes live link paper DOI
+For information DOIs type persistent identifier hyperref package see
+Please note policy Logical Methods Computer Science allow live link recognised archival quality
+Special Issues journal overlay every Special Issue paper published within day acceptance regular numbered issue simultaneously appears Special Issue web page
+Special Issues DOI number linked collectively
+This depends time refereeing process take average time first submission publication far le seven month
+We hope keep average time nine month
+To achieve editorial work supported tool
+However journal leaf ample time referee provide report high quality refereeing process achieved
+Every author chooses handling editor web page give suggested list topic editor
+Topics handled individual editor listed suggestion
+The editor right decline case another editor assigned handle submission
+The author submit new version paper provided handling editor agrees
+The journal provides original version new one
+
+This course introduce field computer science fundamental computer programming
+Introduction Computer Science I specifically designed student prior programming experience taking course require background Computer Science
+This course touch upon variety fundamental topic within field Computer Science use Java portable computer programming language developed Sun Microsystems Oracle demonstrate principle
+We begin overview course topic well brief history software development
+We cover basic programming terminology concept object class inheritance polymorphism well fundamental Java primitive data type relational operator control statement exception handling file input
+By end course strong understanding fundamental Computer Science Java programming language
+This course lay groundwork strong educational Computer Science successful career devoted implementing principle learn progress CS discipline
+We begin course identifying motivation learning fundamental programming concept learning history programming language general
+We discus hardware physical device make computer software Operating Systems application run computer computer
+We conclude brief discussion Java programming language use throughout rest course
+By end unit strong understanding history programming well prepared learn programming concept greater detail
+Java programming language
+Since programming OO currently one popular programming paradigm need learn fundamental concept order build career Computer Science
+This unit begin discussion make OO programming unique advantage made paradigm newly designed program
+We discus fundamental concept OO relate back Java
+By end unit strong understanding programming relates Java employed
+Now basic understanding OO programming move fundamental concept programming language studying semester Java
+The concept learn unit many case directly transferable number language
+We begin learning Hello World basic software application simply print Hello World In unit discus relational logical operator Java provide foundation topic like control structure discus Unit
+In unit start taking look operator notation
+We discus relational operator apply numeric operand object operand concluding unit introduction logical operator
+By end unit able perform comparison logic function Java fundamental understanding employed
+Control structure dictate behavior program circumstance
+Control structure belong one two family test value determine code executed based value loop performing identical operation multiple time
+Control structure like switch program behave differently based data fed
+The loop allow repeat block code often needed
+As see functionality useful designing complex program
+This unit introduce control structure way used moving discus switch loop
+We also discus advanced topic nesting scope
+By end unit able draw information learned previous unit create control structure allow create complex useful program
+In addition method predefined Java write method
+In unit discus name method declare parameter list specify return type
+This unit introduces scope variable well
+By end unit strong understanding define call method
+This unit discus Arrays
+An Array data structure allows element data type stored
+Each array element unique index associated value store
+Arrays commonly used loop structure loop
+In addition unit introduces array application
+In unit discus two important programming concept Java input output well exception handling
+Input output technique allow programmer design complex useful program
+For reason must fully understand use programming language functionality
+In unit discus function Java moving file writing reading data file
+Each unit contain discussion applicable Java class part standard programming language FileWriter PrintWriter FileReader BufferedReader IOException
+We identify common pitfall design concept keep mind programmer
+By end unit strong understanding write read file write Java program performs function
+Exception handling mechanism allows program continue executing even error occurs program instead terminating abruptly
+Saylor Academy except otherwise noted
+Excluding course final exam content authored Saylor Academy available license
+material copyright respective owner shared various license
+See
+Saylor Academy trade name Constitution Foundation c organization educational activity conducted
+
+

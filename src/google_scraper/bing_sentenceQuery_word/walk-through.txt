@@ -1,0 +1,818 @@
+learn share knowledge build career
+One topic seems come regularly mailing list online discussion merit lack thereof Computer Science Degree
+An argument seems come time negative party coding number year never used recursion
+So question This question exists historical significance please use evidence ask similar question
+This question answer frozen changed
+More info
+There number good explanation thread answer use language
+In majority major imperative language implementation
+every major implementation C Basic Python Ruby Java C vastly preferable recursion
+To see walk step language use call function Doing step take time usually little bit take iterate loop
+However real problem step
+When many program start allocate single chunk memory stack run memory often always due recursion program crash due
+So language recursion slower make vulnerable crashing
+There still argument using though
+In general code written recursively shorter bit elegant know read
+There technique language implementers use called eliminate class stack overflow
+Put succinctly function return expression simply result function call need add new level onto stack reuse current one function called
+Regrettably imperative optimization built
+By way Mario typical name ArrangeString function join I surprised language choice already implementation
+Simple english example recursion
+In basic computer science sense recursion function call
+Say linked list structure And want find long linked list recursion This could course done loop well useful illustration concept Whenever function call creating loop recursion
+As anything good us bad us recursion
+The simple example tail recursion last line function call However lame almost pointless example easily replaced efficient iteration
+After recursion suffers function call overhead example could substantial compared operation inside function
+So whole reason recursion rather iteration take advantage clever stuff
+For example call function multiple time different parameter inside loop way accomplish
+A classic example
+You draw one simply recursion call stack branch direction If attempt thing iteration I think find take lot code accomplish
+Other common use case might include traversing hierarchy
+website crawler directory comparison etc
+In practical term recursion make sense whenever need iterative branching
+Recursion method solving problem based divide conquer mentality
+The basic idea take original problem divide smaller easily solved instance solve smaller instance usually using algorithm reassemble final solution
+The canonical example routine generate Factorial The Factorial n calculated multiplying number An iterative solution C look like There nothing surprising iterative solution make sense anyone familiar C
+The recursive solution found recognising nth Factorial n Fact
+Or put another way know particular Factorial number calculate next one
+Here recursive solution C The first part function known sometimes Guard Clause prevents algorithm running forever
+It return value whenever function called value le
+The second part interesting known
+Here call method slightly modified parameter decrement multiply result copy When first encountered kind confusing instructive examine work run
+Imagine call FactRec
+We enter routine picked base case end like If method parameter stopped guard clause end If substitute return value return value get This give clue final solution arrived fast track show step way That final substitution happens base case triggered
+At point simple algrebraic formula solve equates directly definition Factorials first place
+It instructive note every call method result either base case triggered call method parameter closer base case often called recursive call
+If case method run forever
+Recursion solving problem function call
+A good example factorial function
+Factorial math problem factorial example
+This function solves C positive integer tested may bug
+The canonical example factorial look like In general recursion necessarily fast function call overhead tends high recursive function tend small see suffer problem stack overflow anyone
+Some say tend hard get case I really buy
+In situation recursion make sense elegant clear way write particular function
+It noted language favor recursive solution optimize much LISP come mind
+Recursion refers method solves problem solving smaller version problem using result plus computation formulate answer original problem
+Often time process solving smaller version method solve yet smaller version problem reach base case trivial solve
+For instance calculate factorial number one represent
+Thus method recurses find factorial multiplies whatever got give final answer
+Of course find factorial first calculate factorial
+The base case would case know return since
+Consider In mathematics gcd two integer largest positive integer divide number without remainder
+The definition gcd surprisingly simple mod remainder integer division
+In English definition say greatest common divisor number zero number greatest common divisor two number greatest common divisor remainder dividing
+If like know work see Wikipedia article
+Let compute gcd example
+Each step equal one In first step equal zero second part definition applies
+mod go remainder
+At step second part applies time mod divide remainder
+At step second argument answer
+Did notice gcd appears left right side equal sign
+A mathematician would say definition recursive expression defining inside definition
+Recursive definition tend elegant
+For example recursive definition sum list first element list rest list
+Note recurs inside definition end
+Maybe prefer maximum value list instead You might define multiplication integer recursively turn series addition If bit transforming multiplication series addition make sense try expanding simple example see work
+lovely recursive definition Recursive definition around know look
+Notice definition simple base case gcd The recursive case whittle away problem get easy answer
+With understanding appreciate algorithm
+A recursive function one call
+The common reason I found use traversing tree structure
+For example I TreeView checkboxes think installation new program choose feature install page I might want check button would something like pseudocode So see checkRecursively first check node passed call node child
+You need bit careful recursion
+If get infinite recursive loop get Stack Overflow exception I ca think reason people use appropriate
+It useful circumstance others
+I think interesting technique coder perhaps end using often without real justification
+This given recursion bad name circle
+Recursion work best I like call fractal problem dealing big thing made smaller version big thing even smaller version big thing
+If ever traverse search something like tree nested identical structure got problem might good candidate recursion
+People avoid recursion number reason Most people included cut programming teeth procedural programming opposed functional programming
+To people iterative approach typically using loop feel natural
+Those u cut programming teeth procedural programming often told avoid recursion error prone
+We often told recursion slow
+Calling returning routine repeatedly involves lot stack pushing popping slower looping
+I think language handle better others language likely dominant paradigm procedural
+For least couple programming language I used I remember hearing recommendation use recursion get beyond certain depth stack deep
+Recursion expression directly indirectly referencing
+Consider recursive acronym simple example Here simple example many element set
+better way count thing nice simple recursive example
+First need two rule Suppose set like x x x
+let count many item
+We represent When applying recursive solution usually least rule If translate pseudocode get There lot useful example traversing tree example I sure people cover
+For example take factorial But easy see factorial also So generally Of course tricky thing recursion want define thing term already done need place start
+In example make special case defining factorial
+Now see bottom Since defined factorial reach bottom
+Generally speaking recursive procedure two part The recursive part defines procedure term new input combined already done via procedure
+
+A base part make sure process repeat forever giving place start
+It bit confusing get head around first look bunch example come together
+If want much deeper understanding concept study mathematical induction
+Also aware language optimize recursive call others
+It pretty easy make insanely slow recursive function careful also technique make performant case
+Hope help
+I like definition In recursion routine solves small part problem divide problem smaller piece call solve smaller piece
+I also like Steve McConnells discussion recursion Code Complete criticises example used Computer Science book Recursion
+One problem textbook present silly example recursion
+The typical example computing factorial computing Fibonacci sequence
+Recursion powerful tool really dumb use either case
+If programmer worked used recursion compute factorial hire someone else
+I thought interesting point raise may reason recursion often misunderstood
+EDIT This dig Dav answer I seen reply I posted
+A method recursive call either directly indirectly
+When use recursion
+People use recursion complex write iterative code
+For example tree traversal technique like preorder postorder made iterative recursive
+But usually use recursive simplicity
+To recurse solved problem nothing done
+To recurse open problem next step recurse rest
+Well pretty decent definition
+And wikipedia good definition
+So I add another probably worse definition
+When people refer recursion usually talking function written call repeatedly done work
+Recursion helpful traversing hierarchy data structure
+An example A recursive definition staircase A staircase consists single step staircase recursion single step termination In plain English Assume thing The process repeating thing till done called recursion
+I hope plain english answer looking
+A recursive function function contains call
+A recursive struct struct contains instance
+You combine two recursive class
+The key part recursive item contains
+Consider two mirror facing
+We seen neat infinity effect make
+Each reflection instance mirror contained within another instance mirror etc
+The mirror containing reflection recursion
+A good programming example recursion
+The structure recursive Node containing instance Node
+Functions work binary search tree also recursive
+This old question I want add answer logistical point view algorithm correctness point view performance point view
+I use Java work Java support nested function
+As I want recursion I might define external function exists code bump Java bureaucratic rule I might refactor code altogether I really hate
+Thus I often avoid recursion use stack operation instead recursion essentially stack operation
+You want use anytime tree structure
+It useful reading XML
+Recursion applies programming basically calling function inside definition inside different parameter accomplish task
+Recursion strategy problem every step turn small thing one bigger thing time hammer
+Suppose desk covered disorganized mess paper
+How make one neat clean stack paper mess using recursion
+Notice pretty intuitive aside counting everything strictly necessary
+You might go way stack reality could would still work
+The important part hammer With arm always put one stack top make bigger stack matter within reason big either stack
+Recursion process method call iself able perform certain task
+It reduces redundency code
+Most recurssive function method must condifiton break recussive call
+stop calling condition met prevents creating infinite loop
+Not function suited used recursively
+hey sorry opinion agrees someone I trying explain recursion plain english
+suppose three manager Jack John Morgan
+Jack manages programmer John Morgan going give every manager want know would cost
+The answer obvious employee also manager
+HERE come recursion
+start top hierarchy
+summery cost
+start Jack Then check manager employee
+find check manager employee
+Add summery cost every time find manager
+finished Jack go John employee Morgan
+You never know much cycle go getting answer though know many manager many Budget spend
+Recursion tree branch leaf called parent child respectively
+When use recursion algorithm le consciously building tree data
+In plain English recursion mean repeat someting
+In programming one example calling function within
+Look following example calculating factorial number Any algorithm exhibit recursion datatype basically consists case case datatype
+example working type structural recursive algorithm would form really obvious way write algorith work data structure
+look integer well natural number defined using Peano axiom see structural recursive algorithm integer look like factorial function trivial example form
+function call use definition
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This post part series produced HuffPost Mentorship Program
+discus issue affecting woman science technology engineering math
+Transitioning sophomore year summer given lot time think reflect upon experience towards majoring Computer Science
+I feel extremely different way commonly portrayed medium even I expected
+So six reality computer science major Personally brother one encouraged take computer science class
+I tried learn code unsuccessful I could even set development environment
+Even though dropped intro CS class told I could field needed woman engineer like
+Through faith I took web development course jumped intro CS track Stanford stuck CS train ever since
+The number one thing attracts CS major fact I build stuff stay around forever said internet written ink bad deal
+b accessible many people c like teaching really stupid baby something
+Mehran Sahami really famous one awesome CS professor told u first day class computer really dumb really good following instruction
+Almost good point everything letter
+If talk computer language make want golden
+My problem solving skill become immensely better becoming computer science major
+In fact everything I think problem
+Running late morning
+I break problem going take time I effectively cut corner avoid wasting time
+My parent often rely fix anything technologically related television phone name
+I approach every issue software problem could wrong
+Look symptom problem see show
+Understand system could causing
+And usually I get solution
+It easy give say oh care someone else code
+Another one awesome CS Professors Eric Roberts showed u first day second introductory class even Stanford graduated student CS major Valley hired still need people fill job
+It surprising software job even working eBay talent one thing company aggressively looking
+You give could
+Maybe could code next app Learning CS involves experimentation
+You mess around code really get
+Sometimes mean break something already working
+But great thing return get learn something new sometimes something even documented fixed
+This definitely happens work everyday
+Sometimes I feel like taking lazy approach going back old way thing trust definitely lot better play around
+Being CS major hard probably many people
+You doubt everyday whether meant want give
+You see kid since two year old think Damn I even bother trying
+You fail programming ponder question personal experience
+The truth one talk hard want think
+Even year later I still doubting decision major CS software engineering
+I doubt day I set foot first second third CS class every exam I took first day internship day I push code Github
+But truth OK doubt long hold back
+You think best
+Of course
+Do afraid wo get anywhere unless try
+So someone contemplating computer science someone afraid stop
+Forget boy tell ca forget hater jealous zeal
+Code
+If broken get segmentation fault Java exception go fix
+Chances assume meant never able feel thrill getting something work even Hello World stopping
+Sometimes one stopping answer let go
+
+Computer science also strong connection discipline
+Many problem science engineering health care business area solved effectively computer finding solution requires computer science expertise knowledge particular application domain
+Thus computer scientist often become proficient subject
+Finally computer science wide range specialty
+These include computer architecture software system graphic artifical intelligence computational science software engineering
+Drawing common core computer science knowledge specialty area focus particular challenge
+Finally importantly computer scientist computer scientist fun
+Not mention lucrative career opportunity
+Computer Science The Profession Computer science discipline involves understanding design computer computational process
+In general form concerned understanding information transfer transformation
+Particular interest placed making process efficient endowing form intelligence
+The discipline range theoretical study algorithm practical problem implementation term computational hardware software
+A central focus process handling manipulating information
+Thus discipline span advancing fundamental understanding algorithm information process general well practical design efficient reliable software hardware meet given specification
+Computer science young discipline evolving rapidly beginning
+As includes theoretical study experimental method engineering design one discipline
+This differs radically physical science separate understanding advancement science application science field engineering design implementation
+In computer science inherent intermingling theoretical concept computability algorithmic efficiency modern practical advancement electronics continue stimulate advance discipline
+It close interaction theoretical design aspect field bind together single discipline
+Because rapid evolution difficult provide complete list computer science area
+Yet clear crucial area theory algorithm data structure programming methodology language computer element architecture
+Other area include software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation
+A professional computer scientist must firm foundation crucial area field likely knowledge one area discipline depending upon person particular area practice
+Thus well educated computer scientist able apply fundamental concept technique computation algorithm computer design specific design problem
+The work includes detailing specification analysis problem provides design function desired satisfactory performance reliable maintainable meet desired cost criterion
+Clearly computer scientist must sufficient training computer science area able accomplish task must also firm understanding area mathematics science well broad education liberal study provide basis understanding societal implication work performed
+Computer Science study principle application technology computing computer
+It involves study data data structure algorithm process structure principle computer hardware software design methodology topic numerical analysis operation research artificial intelligence language design structure translation technique
+Computer Science provides foundation knowledge student career objective wide range computing profession
+The study efficient effective software development technique
+Team work communication skill
+An interest applying technology problem wide variety discipline
+Computer Science concerned information much sense physic concerned energy devoted representation storage manipulation presentation information
+Computer Science concerned study machine communication man machine application machine
+Major area Computer Science include
+Operating Systems concerned development structure complex program facilitate communication
+
+Computational Science analysis numerical method solving mathematical problem computer
+
+Programming Languages study design property language human communicate computer
+
+Architecture study use mathematical logic design electronic circuit
+
+Intelligent Systems concerned mean computer may perform task might characterized intelligent performed human
+
+Automata Theory abstract study computer capability
+
+Information Storage Retrieval study method storing vast amount data computer method searching retrieving data
+
+Software Engineering study tool technique software design development testing maintenance
+
+In Lauren Orsini writes became easier ever learn computer science It true easier learn code ever
+There great resource available
+However mean easy learn computer science become software developer
+Treehouse CEO Ryan Carson declares A computer science degree rip know I Perhaps CS degree college good program maybe focus web development rarely need computer science
+I glad I CS degree
+It gave great foundation technology industry
+I gone building desktop application internet multimedia creating JavaScript framework web apps native mobile application
+The technology I used coding I college obsolete way thinking technique pretty much
+I believe learn everything learn school especially software developer
+That make degree worthless
+It privilege opportunity able spend year focused learning
+That said everyone software engineer learn computer science
+I believe everyone learn code
+Knowing work technology essential skill century
+Even good knowing code help people understand possible
+Also software advanced feature require thing use coding skill setting mail filter creating spreadsheet formula even style Microsoft Word
+There logic precondition consequence whole lot thing easier understand know code
+If go past conceptual understanding write script way ahead able connect disparate system simply use power computer human good let computer mindless repetitive task
+So please go already
+Who know
+Maybe want become software developer even worth effort might even fun
+The Google informs Ryan Carson got degree Colorado State University
+I would argue engineering applied science degree fit criterion
+It process learning learn gained quality BS degree
+CS provides quality instruction specific field knowing learn find source learn important part
+I say bigger issue academia different knowledge though matter
+For seems mean formal education obviously great thing mandatory good scientist
+Most even best education guarantee anything
+Some people benefit others method work better impression considerable amount people actually held back academia I mean fundamental aspect inherent institutionalization education
+That said though I mean disagree entirely often seems almost defensive idea whenever learning program reach mainstream preserve community seriousness comment
+The learning process something happens organically differently person
+There undermining process simply formalized idea expects stage b towards reaching expertise
+Cheers
+I rather discussion twitter platform want
+yamadapc everyone software engineer everyone software engineer Also paraphrased A CS degree important hey I one look great I Sorry bro buying
+Your shit probably smell great I think stink
+amonshiz And exactly human ability learn got formal credential
+Ryan S My point CS degree helped get started stuff I learned still help today
+Other people may want need learn
+Your paraphrasing accurate
+Ryan S rude lack degree
+No need insecure
+You allowed code degree degree think degree simply tell future employer look year told boss ie teacher go learn fairly difficult task subject able regurgitate demand next week good degree accuracy understanding useful entry level skill industry
+really think really high school prove get early go somewhere really kinda want integrate socially manner
+never educated real education done alone book computer small group like minded focused individual
+Which actually prof know anything I coding half life
+More recently past year I started full time
+I never finished college
+I could started career programmer much earlier I
+The reason I varied though finishing college may accelerated
+Then might
+One issue seems anyway lost general discussion let call Learn To Code incentive Science Mathematics Computer Science
+In word ever happened pursuit knowledge sake
+I know point get addressed
+But I think shallow way everyone ultimately clamoring money credential
+Competing marketplace basically
+So yes Computer Science important
+And learn useful beautiful
+And Math
+And probably interest
+As Keynes said Practical men believe quite exempt intellectual influence usually slave defunct economist Degrees introduce thin layer science
+A layer little curious passionate discover
+Ok
+If people learn magic mean CS degree become irrelevant context
+I degree intact I dropped school
+Going uni would waste time I sit focus read study
+I started programming book commadore code till I building Ulima Online server friend
+I coded taught
+A degree needed
+Passion
+So many devs lack passion
+If love programming
+Your job hobby
+After year I trade career go back degree
+I well grateful CS degree gave exposure lot thing I exposed investigated example much work Theory Computing Operating Systems Computer Architecture class
+The perfect CS program would balance practical theory
+I come across lot engineer education weighed much one direction either could code knowledge algo knowledge world convert code
+They rested laurel stopped learning instead seeing degree headstart marathon realizing stop running
+The point amonshiz brought also prevalent
+Just easier pick third spoken language picking second said programming language
+By graduation I real exposure language substantial coursework really pick additional language
+The hard work learning learn new programming language mostly done I could get quick start mental diff oh concept like language concept close one etc
+I believe harder get balanced education NOT impossible
+However made table long code clean I care le degree
+Plugging pocket calculator seeing pop onto screen science
+Coding simply writing instruction pretty damn specific feeding overgrown calculator
+Maybe programming reminds math
+The degree worthless perspective spend four year life group smart people without getting degree
+The degree useless
+Spending time smart people hanging building project thing worthless
+If hack build group people group educates people affordable price subject without handing degree
+Arguing CS degree ripoff would foolish
+I know dozen people define variable programming language idea variable represents memory
+That computer science kick
+A CS degree make scientist
+However many computer artist write code many able learn without formal education
+Many get formal education masquerade CS degree
+However ability write code qualify one scientist engineer
+Science engineering far structured disciplined average computer science There three different concept
+Ability Code Computer Science Software Engineering
+Just I math make mathematician
+And many mathematician even fewer invented engineered new math
+Similarly code today literacy like knowing math
+Many people skill better others
+However ignorantly confuse mathematician math engineer
+Can imagine getting physic degree knowing history physic
+And yet common situation people code teach code reinvent past poorly clue anybody done
+In fact figure clever reinventing
+I think point trying make require CS degree least traditional one
+As developer undergrad SE Masters I think traditional CS degree worth money
+In many traditional CS degree leave college lot theory math minor
+I would rather student get CS degree business minor far le math theory
+Most u write compiler algorithm
+The hard part understanding process turning business requirement software
+As someone else stated get college learn teach
+I CS graduate would agree point trying make
+Best phrase The technology I used coding I college obsolete way thinking technique pretty much But need pessimistic
+Reading comment cement belief NOT encouraging people learn coding
+The world need jerk If answer yes question mean feel free think equal better guy
+Otherwise please stop speaking people obviously much technically skilled ignorance ever allow
+Do know program C
+Are intimately familiar ISO
+
+While people neighbourhood partying sitting home bed making almost biblical study POSIX standard
+What The Open Group
+Do know write hash table
+Balanced tree
+Do know art algorithm
+Do know Knuth work like back hand
+Did teach everything computer one would otherwise learn paying thousand dollar Computer Science tuition
+Do know juggle assembly code head multiple architecture MIPS SPARC
+Do understand peculiarity architecture nittiest grittiest detail
+Can optimize assembly routine
+Can take advantage thing Pentium instruction pairing delay slot various RISC architecture
+Do understand deal MIPS
+Are fluent assembly language
+Hell even know SPARC stand
+Quadrants make sense
+Do know write exploit
+Do know audit software surgical precision intricate bug imaginable
+Do know take advantage buffer overflow
+Do know exploit error machine
+Do know integer overflow signedness issue
+Can exploit format string vulnerability
+Can gain control process vulnerable heap overflow via deep knowledge malloc implementation target host
+Do know bypass security afforded crap like Openwall StackGuard PaX
+Or knowledge thing limited paper publish
+You probably think people trying help security community bullshit like hacker fact hacker would ever publish thing aim improve security
+Have studied UNIX kernel much fervour would physical pursuit basketball baseball
+Do know data structure organization kernel various operating system
+Have read book UNIX internals cover cover
+Do know Linux work hood
+Can write kernel module defense offense
+Ever written kld FreeBSD
+Can write device driver peripheral OS support
+Can find flaw kernel src tree allow compromise machine given local access
+What know evading N IDS
+Your knowledge limited Thomas Ptacek Tim Newsham said year ago right
+Surely rely tool written people like Dug Song like think hacker fact traitor underground assuming ever part begin
+What know defeating firewall
+What technique innovated pioneered
+What tool written allow toy firewall
+Hell fucktard security community probably limited lameass crap like Firewalk
+What know web security
+Do sit back laugh scripting revolution governed idea around well sensation literally blew dumbass security community apart
+Must wasted lot brain cell gigantic stretch imagination
+Do laugh SQL injection paper overlook blatantly obvious believe fumble around kind convoluted query achieve something done minimal typing read fucking documentation various DBMS
+Their CGI expert like RFP Zenomorph call certain script condition
+get argument supplied binary managed trick Perl script running RFP mention Phrack article yet moron easily figure use POST method make script run instance run script choice fed stdin HTTP request POST data
+Oh God sorry pushing realm web security forward INCREDIBLY COMPLEX revelation
+Have written tool exploit protocol weakness
+Have written tool routing protocol weakness
+RIP BGP
+Have written tool play game DNS
+Have written ARP cache poisoning mitm tool
+Your tool shit like icmp redirects router advertisement
+Can write tool exploit TCP sequence number prediction IP spoofing vulnerability older day
+Or mock Mitnick attack calling scriptkiddy
+Or utter useless banter ISNs cooky digested textfile
+Who kidding
+Fuck read volume glorious Illustrated mumble useless crap handshake
+Do know code
+TCP algorithm
+TCP extension
+Perhaps fucking security expert memorized walking fucking getservbyport la subscription base
+Take homeless man street teach code ruby app GREAT
+BUT take homeless man teach exploit USE AFTER FREE TECHNIQUE maybe INT TOO BIG ATTACK
+Will homeless man able grasp PTMALLOC HEAP FUENG SHEI teqneeq
+I dont think
+The detail post kind thing know really consider good software developer fabulous
+I really understand angry tone post correction I homelessness way equates lack aptitude coding technique computer science concept
+I know coder lack skill navigating world might well become homeless found way software development profession
+In world dominate NODEJS RUBY dev dismiss true computer science knowledge make wake grumpy I apologize
+I seen guy cover full spectrum everything discussed
+people replying cant even code
+sorry CS degree important
+example remember learned SQL database understand lot think
+take course database SQL college learn relational algebra theory behind relationals database able understand concept
+want say CS degree important understand key concept theory computer science
+Ryan S You sound resentful
+It opinion brilliant developer without degree
+You high earning code monkey without degree
+You network admin database admin etc without degree
+You call scientist without degree
+You CAN NOT call engineer without degree
+And engineer explicitly implies formal training
+I work network admin
+I bachelor degree computer science
+I started coding learned write enterprise application intern worked developer short time college
+The CS degree teach software development teach anything network system server etc
+I learned math logic scientific computing natural science
+I would trade degree amount experience
+I see like A computer science degree make legitimate technologist
+classmate technologically savvy
+However degree legitimize professional ONLY AFTER demonstrate ability
+When proven ability coupled formal education extremely employable
+probably even written ROP chain hand talk like know anything kill
+sound like old fucker know jack shit real exploit environment
+srsly top kek art code social sperging Rizwan I degree although CS I think second degree way develop body knowledge learn learn suggested comment I replying
+Computer science really computer computer sense physic really particle accelerator biology microscope Petri geometry really using surveying instrument
+Now reason think computer science computer pretty much reason Egyptians thought geometry surveying instrument field getting started really understand well easy confuse essence tool Hal Abelson people replying never need learn C
+I worked huge traveling website based chicago
+You easily tell java monkey java people experience
+Everybody know everybody worked big company least
+I pretty surprised learning throughout year since young c degree still learning I thing mentioned thing I want mention
+But right nodejs ruby yajsmvc type write basic code anymore reuse every piece crap without thinking matter however crappy acronym spewed type people
+Mock testing crap give name dependency injection wt argggg code testable argggggg whatever way write code test For every code monkey churning slow insecure code understand CS fundamental ten CS graduate writing equally unmaintainable code found right balance NIH FOTM framework writing code ruby starting new rail app going What magic
+All I really need simple presenter delegator factory factory factory LifeRuiner Eh I call whatever I want thanks
+And plenty people would agree I design integrated circuit job title electrical engineer I engineer
+I degree computer science university whose computer science department consistently rated top United States
+I web developer
+There make relevant
+The computer science course one exception worst class I took year small margin
+Who need pay ten thousand dollar sit gigantic auditorium postdoc read textbook accent thick I barely understand
+That computer science class I imagine average school like
+I say degree worthless every degree value I believe I would exactly good developer today I gotten major mathematics physic engineering Attic Greek
+Most best developer I know degree computer science computer science I know come computer science class
+I would advise anyone going school today get degree computer science even want computer programmer
+Get physic mathematics linguistics Mandarin literature whatever excites
+It stop learning programming computer science million possible side project every department
+Sure take couple computer science course course happens something especially interest taught full professor recommended teaching ability
+But favor waste hour college year sitting auditorium listening postdoc try read CLR unable answer question
+And whatever lock degree program waste college career nonsense
+Maybe MIT Berkeley better go list school far get truly terrible CS teaching
+Just record I computer science degree
+I taught self computer science book written people like Donald Knuth Richard Stevens
+Formal v Informal education matter long end day actually understand computer work hood
+For people taking pride never learn write C ASM I hope also take pride go life nothing shallow understanding technology computer
+Speaking self I rather computer scientist solves REAL problem instead coding apps compromised nothing simplistic business logic written look like pseudo code
+It may difficult hipster accept tool like Linux chrome firefox interperters know like tool use everyday job
+Are programmed maintained hardcore developer
+SHOCKING I KNOW
+I completely agree title
+The two thing nothing
+Yet I would argue coding nothing software development
+To code nothing express oneself language
+It content count ability express
+Being able write make writer unfortunately
+I agree comment degree worthless technical sense
+You learn using available resource instead fed mainstream idea software software development make many people stumble get stuck
+Nevertheless worth want get specific job
+As much I dislike fact accepted
+Coding important absolute sense
+Relatively speaking I allow actually ignore
+To develop software truly understand problem solved separation ever smaller sub feature evaluation effort functional risk always far important
+Because thing hardly taught people aware important people try find salvation ever better coding never find
+Having least basic understanding software development make people general actually wary coding
+They ignore noise swayed hype go one thing important produce result
+It matter
+Great post
+I beginning programming career take advice
+Thank
+published
+
+DJ student Auburn University studying Computer Science Electrical Engineering amid campus student donned nearly uniformly short tennis shoe backpack carrying athletic gear bright sunny slightly humid spring day
+He born raised Alabama hope move California graduate
+He hope find job hopefully technology company
+In Auburn close relationship dad Danny see often
+In last year driven San Diego California help build house Mexican family need south border
+They thinking making family tradition fulfilling work free time
+DJ also difference expected surprising set apart folk age
+He go church regularly
+He sign oncoming quarter life crisis like many peer
+Nor pine thing like untold rich disproportionately sized career success unlimited number date beautiful woman
+When spoke DJ always calm collected accepting attitude towards life
+As guy make big deal
+He took conversation earnest serious give impression take joke
+Overall relaxed way explained answer question quizzing knowledge emotionally neutral topic like technology history
+We admire straight shooting attitude contentment towards life hope
+It great
+There everything need
+My dorm room supposed double anyone take bed I place
+I go class dining hall gym hang group friend
+There four u
+We know kindergarten Auburn three u parent know used go house time
+And fourth guy joined u freshman year South Korea parent know parent
+I really like Elon Musk idea AI artificial intelligence autonomous vehicle car
+The one thing probably work large truck around rural part lot difficult control high mass vehicle
+I agree woman minority treated differently anyone else dad I respect position
+Because say going
+He worked hard build company
+So earned deserves power
+Even though I agree everything say going leader okay accept
+He perfect one
+It taken South Carolina good u
+We fly outside house anymore
+It used hanging lot negativity around people think racism
+It racism traditional culture like Civil War economy way life
+It would wrong
+I know else say
+It right
+Yeah
+We group close friend would definitely intervention try set right path
+There way
+Because Bible
+You know evolution reproduce otherwise
+Last year dad go heart surgery
+We waiting finished got ER
+We worried though
+If died God would taken care would hand
+And said afterwards would fine died
+He regret anything
+Other dad I worried much
+I pretty happy life
+I know everything process
+Like I want move San Diego
+But I finish school
+So take time
+Things pretty good
+By clapping le signal u story really stand
+Overcoming fear adversity trauma live fully
+Bestselling author coach speaker featured Stanford Marie Claire New Scientist Virgin
+Follow u journey bridge political empathy gap America
+
+Maybe always liked solve problem decipher code
+Perhaps knack learning new language maybe intrigued enough computer rip cover tinker inner working
+If computer science might ideal career choice
+Computer science major need think devise system program must also enough troubleshoot problem
+They must able communicate people ass need convey technical information plain language
+essential computer science major hope come latest app technology gadget
+Given rapid rate change within technology computer science major need thirst learning keep latest development
+Computer science major also must curious world around since program system applied every possible area life commerce
+Given pervasiveness computer technology society today many different job possibility computer science major
+The right job depend personal skill value interest
+Here top job computer science major based income employment outlook job satisfaction
+Software developer create software program allows user perform specific task various device computer mobile device
+They responsible entire development testing maintenance software
+Software developer must technical creativity required solve problem unique way
+They need fluent computer language used write code program
+vital securing necessary information insight end user software functioning
+Database administrator analyze evaluate data need user
+They develop improve data resource store retrieve critical information
+They need problem solving skill computer science major order correct malfunction database modify system need user evolve
+Computer hardware engineer responsible designing developing testing computer component circuit board router memory device
+Computer hardware engineer need combination creativity technical expertise
+They must avid learner stay top emerging trend field create hardware accommodate latest program application
+Computer hardware engineer must perseverance perform comprehensive test system ensure hardware functioning properly
+Computer system analyst ass organization computer system recommend change hardware software enhance company efficiency
+Because job requires regular communication manager employee computer system analyst need strong
+Systems analyst need able convince staff management adopt technology solution meet organizational need
+In addition system analyst need curiosity thirst continual learning order track trend technology research cutting edge system
+Systems analyst also need business skill know best entire organization
+In fact similar job title business analyst business system analyst
+Computer network architect design implement maintain networking data communication system including local area network wide area network extranets intranet
+They ass need organization data sharing communication
+In addition computer network architect evaluate product service available marketplace
+Computer network architect test system prior implementation resolve problem occur place
+Computer network architect need analytical skill evaluate computer network
+Web developer ass need user resource
+They create technical structure website make sure web page accessible easily downloaded variety browser interface
+Web developer structure site maximize number page view visitor search engine optimization
+They must communication ability creativity make sure website meet user need
+Information security analyst create system protect information network website cyber attack security breach
+Their responsibility also include researching trend data security anticipate problem install system prevent issue occur
+Security analyst also need strong skill order investigate breach determine cause modify repair security system
+Computer programmer write code enables software operate intended software developer
+The computer science major equips student master common computer language used create program understand logic structure language easily learn new computer language
+Computer programmer debug problem existing program modify program need end user change
+Computer information system manager analyze company technology need oversee implementation appropriate data system
+They need able evaluate software hardware networking technology resource purchase development
+Since computer information system manager hire train supervise staff interpersonal skill vital role
+They must communicate effectively staff
+Project manager IT sector coordinate effort team programmer analyst complete project
+They also analyze technology problem company client organization proposing solution tip enhance productivity
+Problem solving skill broad knowledge technology computer system help computer science major excel role
+Here list skill employer seek hiring computer science major
+Skills vary job also review variety different occupation
+Highlight skill acquired study internship job held college cover letter resume job application
+Information best job college student graduate variety career field
+Computer Science Skills List There error
+Please try
+Please enter valid email address
+Thank signing
+
+By Use comma separate multiple email address Your message sent
+There error emailing page
+To begin making decision move forward toward advanced college degree brings year personal commitment large sum money opportunity cost mental commitment time money could otherwise spent
+Because personal enormity decision life please consider thought single data point decision move forward
+I would like begin answer using case study
+I began career software developer working software
+I also decided early career even though I truly loved technical work still I wanted move management rank
+I made decision based thought everyone rather analysis understanding I
+Because decision I started MBA program night Babson College aggressively moved coursework completed program three year
+For chosen direction IT management getting MBA wonderful decision
+I learned business professor also fellow student technical profession
+For given chosen career direction yes MBA certainly worth time money occasionally sweat tear
+If early career I made different decision stay technical rather aspire rank IT management I would pursued Masters Computer Science
+I believed I believe advanced degree may help one hurt
+The reason I say advanced degree necessarily help hired still perform well job
+The reason advanced decree hurt applying new job competing people Master degree
+On paper thing experience equal job candidate appear higher level professional expertise commitment career
+In essence Masters help open door ability professional reputation interview skill commitment professional excellence personal connection allow walk door get job
+Beyond simply word resume also significant reason Masters degree great value including following The knowledge gain coursework help throughout career The knowledge perspective gain talking classmate The ability using newly gained knowledge change grow current career path Assuming Masters different university undergraduate degree another alumnus group available professional networking mentoring The last question may waiting answer may worthwhile get Masters degree whether MBA computer science oriented
+I would like answer question asking series question Given specific career goal Masters degree help get
+Are position personally professionally spend time money needed get advanced degree
+If
+Will Masters job really want
+Would like pursue PhD later life
+If yes area Masters help get
+Do enjoy going school truly degree
+If degree willing grind end
+In closing MBA Masters Computer Science great degree serve well future goal aligned degree provide
+If learn interesting material meet interesting people help reach future goal
+On hand advanced degree align career goal help get get sooner greater success
+If question career IT please email find Twitter EricPBloom
+Until next time work hard work smart continue build professional brand
+Eric Bloom former CIO president company specializing IT leadership development
+IDG Communications Inc
+
+In widely used ADT implementing simulates hierarchical root value child parent node represented set linked
+A tree data structure defined locally collection starting root node node data structure consisting value together list reference node child constraint reference duplicated none point root
+Alternatively tree defined abstractly whole globally value assigned node
+Both perspective useful tree analyzed mathematically whole actually represented data structure usually represented worked separately node rather set node edge node one may represent instance
+For example looking tree whole one talk parent node given node general data structure given node contains list child contain reference parent A tree data structure made node vertex edge without cycle
+The tree node called tree
+A tree empty consists root node potentially many level additional node form hierarchy
+There distinction tree abstract data type concrete data structure analogous distinction
+As data type tree value child child tree value child tree interpreted value root node subtrees child root node
+To allow finite tree one must either allow list child empty case tree required empty tree instead represented forest zero tree allow tree empty case list child fixed size especially binary desired
+As data structure linked tree group node value list node child
+There also requirement two downward reference point node
+Nodes tree could reference reference parent node
+Due use tree linked tree data structure tree often discussed implicitly assuming represented reference root node often actually implemented
+For example rather empty tree one may null reference tree always reference tree may null
+Recursively data type tree defined value data type possibly empty together list tree possibly empty list subtrees child symbolically A tree consists value list tree
+More elegantly via tree one basic example tree defined term forest list tree tree consists value forest subtrees child Note definition term value appropriate assumes different tree connection simply list value
+As data structure tree defined node root consists value data type possibly empty together list reference node list possibly empty reference possibly null symbolically A node consists value list reference node
+This data structure defines directed graph tree one must add condition global structure topology namely one reference point given node node single parent node tree point root
+In fact every node root must exactly one parent root must parent
+Indeed given list node node list reference child one tell structure tree without analyzing global structure fact topologically tree defined
+As abstract tree type value type defined using abstract forest type list tree function axiom In term tree defined constructor empty forest tree root node given value child
+Viewed whole tree data structure generally value attached node
+Concretely required together Often tree fixed properly bounded particularly always two child node possibly empty hence two child node hence binary tree
+Allowing empty tree make definition simpler complicated rooted tree must hence empty tree allowed definition instead becomes empty tree rooted tree
+On hand empty tree simplify defining fixed branching factor empty tree allowed binary tree tree every node exactly two child tree possibly empty complete set operation tree must include fork operation
+A structure may contain value condition represent separate data structure could tree
+Each node tree zero tree convention tree drawn growing downwards
+A node child called child
+A node one parent
+An also known short node tree child node
+Similarly also known node child node
+The topmost node tree called
+Depending definition tree may required root node case tree may allowed empty case necessarily root node
+Being topmost node root node parent
+It node algorithm tree begin since data structure one pas parent child
+Note algorithm search begin root first visit leaf node access value leaf node visit root last first access child root access root last
+All node reached following
+In formal definition path also unique
+In diagram root node conventionally drawn top
+In tree root node special property
+Every node tree seen root node subtree rooted node
+The node length longest downward path leaf node
+The height root height tree
+The node length path root
+This commonly needed manipulation various tree particular
+The root node depth zero leaf node height zero tree single node hence root leaf depth height zero
+Conventionally empty tree tree node allowed height
+A tree tree consisting node descendant
+Nodes thus correspond subtrees node corresponds subtree descendant subtree corresponding root node entire tree node root node subtree determines subtree corresponding node called analogy
+Trees often drawn plane
+Ordered tree represented essentially uniquely plane hence called follows one fix conventional order say counterclockwise arranges child node order first incoming parent edge first child edge etc
+yield embedding tree plane unique
+Conversely embedding determines ordering child node
+If one place root top parent child place node given distance root term number edge level tree given horizontal line one obtains standard drawing tree
+Given binary tree first child left left node second child right right node
+There many different way represent tree common representation represent node record pointer child parent item relationship determined position array
+Indeed binary tree implemented list list list value list head list value first term left child subtree tail list second subsequent term right child subtree
+This modified allow value well Lisp head value first term value node head tail value second term left child tail tail list third subsequent term right child
+In general node tree pointer parent information included expanding data structure also include pointer parent stored separately
+Alternatively upward link included child node data
+If edge child node thought reference tree special case digraph tree data structure generalized represent removing constraint node may one parent cycle allowed
+Edges still abstractly considered pair node however term usually replaced different terminology example
+Different exist digraph represented local data structure tree node value list child assuming list child list reference globally structure
+In connected acyclic unless stated otherwise graph theory tree graph assumed undirected
+There correspondence tree tree data structure
+We take arbitrary undirected tree arbitrarily pick one make edge directed making point away root node producing assign order node
+The result corresponds tree data structure
+Picking different root different ordering produce different one
+Given node tree child define ordered forest union subtrees given child equivalently taking subtree given node erasing root
+Just subtrees natural recursion search forest natural search
+Via forest defined list tree represented root node node tree consists value forest child Stepping item tree mean connection parent child called action tree
+Often operation might performed pointer arrives particular node
+A walk parent node traversed child called walk walk child traversed respective parent traversed called walk walk node left subtree node finally right subtree traversed called traversal
+This last scenario referring exactly two subtrees left subtree right subtree assumes specifically
+A walk effectively performs entirety tree node traversed level level root node visited first followed direct child node sibling followed grandchild node sibling node tree traversed
+
+If looking shortcut go basic expert programmer book
+If wanted learn program using C probably thought difficult long process
+This actually case
+Learning C extremely easy
+Wish could learn memorize le time
+Stay focused quit frustrated absorb info like human sponge A fascinating exploration computer algorithm applied everyday life helping solve common problem Want master basic Java programming short period
+If right place
+This book exactly need Are interested getting computer hacking hacking general know start
+Here learn listening Python Programming Beginners When use Python use Python
+The Information Technology Infrastructure Library framework goal closing gap IT department need business
+Become applicant Google ca turn Is hacking want learn
+Always wondered one becomes hacker
+Does interest hacker never seem get caught
+Download Hacking discover
+The Information Age Computer Networking Jack Chmela aka Jack Blacknet Principal Chmelaeon Entrepreneur Author Innovator Adapter
+This book teach ethical hacking guide anyone interested discussion hacking
+Humans always need tell
+In dark millennium prehistory people used finger made incision bone
+For year early civilization developed elaborate numbering system record transaction everything business astronomy cycle
+The hand tool calculation appeared millennium later
+Today prodigious complexity calculation well whole set activity apparent relationship number made sophisticated electronic brain called computer
+Experts rushing point computer brain another tool another machine designed reduce work extend dominion world
+In book learn science computing subtle explanation summarized chapter
+Once learn importance necessity study history general specifically history science technology easy see study history computing impressive relief vast landscape scientific knowledge
+Just remember impact technology society immense increasing dependence
+

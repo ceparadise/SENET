@@ -147,14 +147,16 @@ class DataPrepare:
         define1 = ""
         define2 = ""
         try:
-            with open(BING_WORD_DIR + os.sep + words1 + ".txt", encoding='utf8') as f1:
-                define1 = f1.read()
+            for dir in BING_WORD_DIR:
+                with open(dir + os.sep + words1 + ".txt", encoding='utf8') as f1:
+                    define1 += f1.read()
         except Exception as e:
             print(e)
 
         try:
-            with open(BING_WORD_DIR + os.sep + words2 + ".txt", encoding='utf8') as f2:
-                define2 = f2.read()
+            for dir in BING_WORD_DIR:
+                with open(dir + os.sep + words2 + ".txt", encoding='utf8') as f2:
+                    define2 += f2.read()
         except Exception as e:
             print(e)
 
@@ -257,9 +259,15 @@ class DataPrepare:
                     w1 in train_vocab,
                     w2,
                     w2 in train_vocab)
+            test_entries = unbalance_dataset(test_entries, 5)
             print(len(train_entries), len(test_entries))
+
             train_set = DataSet(train_entries)
             test_set = DataSet(test_entries)
+            pos_cnt, neg_cnt = report_ration(test_entries)
+            print("test", pos_cnt, neg_cnt)
+            pos_cnt, neg_cnt = report_ration(train_entries)
+            print("train", pos_cnt, neg_cnt)
             return (train_set, test_set)
 
         train_test_pair = []

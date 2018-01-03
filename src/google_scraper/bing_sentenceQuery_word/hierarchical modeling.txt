@@ -1,0 +1,276 @@
+ÐÔÅØ obj stream iË YYSØ Á j CU åP eù íêk H dÓ Ôz endstream endobj obj stream îÇGeÌà C ö åÐ e É jòJ Ä é Ì EN Á Î çºLn endstream endobj obj R R R R stream pÄÀØ T Üti HuA ªÓÃK uÊÝê õ Íâ Ó r rº E q Çû iÿ Å clÆ A Tà ßË â Ð
+îäþÐ Ó dä Õ n endstream endobj obj R stream x IY ZE Þ ovß UÛìN VÃ Ó Ìî Â
+j Õ
+endstream endobj obj R stream x aÿ aYªf î wÓã X l ºKTn
+â ýf endstream endobj obj R stream ý ösû gÎ rÄ v rÄf ær Ë À ë îqîÇ Ý iS ÌØEÌØ É cE åz ÿAôÑÐ Úb õÚ h ÊgPþÏÔâü º ÿ
+ÖÛwZW QP
+
+Link back
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+A hierarchy organizational structure item ranked according level importance
+Most government corporation organized religion hierarchical
+In computing context various type hierarchical system
+Most example based hierarchical model file placed somewhere hierarchical tree model
+A placed folder Windows subdirectory desired place tree structure
+The computer hierarchy rank component term top pyramid structure bottom
+The word come Greek meaning sacred meaning rule
+The word first entered English fourteenth century
+According Oxford English Dictionary originally referred three division angel every one comprising three order system Dionysius By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+In section look complex scene built simple shape
+The key hierarchical structure
+That complex object made simpler object turn made even simpler object bottom simple drawn directly
+This called
+We see studied play important role hierarchical modeling
+Hierarchical structure key dealing complexity many area computer science rest reality surprise play important role computer graphic
+A major motivation introducing new coordinate system possible use coordinate system natural scene want draw
+We extend idea individual object scene When drawing object use coordinate system natural object
+Usually want object natural coordinate centered origin least use origin convenient reference point
+Then place scene use transform followed followed set size orientation position scene
+Recall transformation used way called
+The transforms often applied order scale rotate translate scaling rotation leave reference point fixed
+Once object scaled rotated easy use translation move reference point desired point scene
+Of course particular case might need three operation
+Remember code transformation specified opposite order order applied object transformation specified drawing object
+So code translation would come first followed rotation scaling
+Modeling transforms always composed order common usage
+The modeling transformation used place object scene affect object scene
+To limit application one object save current transformation starting work object restore afterwards
+How done differs one graphic another let suppose subroutine performing task
+That make copy modeling transformation currently effect store copy
+It change current transformation merely save copy
+Later called retrieve copy replace current modeling transform retrieved transform
+Typical code drawing object form Note know need know saved transform
+Perhaps simply transform modify coordinate applied
+Or might already another transform place coordinate transform affect scene whole
+The modeling transform object effectively applied addition transform specified previously
+The modeling transform move object natural coordinate proper place scene
+Then top coordinate transform applied scene whole would carry object along
+Now let extend idea
+Suppose object want draw complex picture made number smaller object
+Think example potted flower made pot stem leaf bloom
+We would like able draw smaller component object natural coordinate system main object
+For example would like specify bloom coordinate system center bloom
+But easy We draw small component object bloom coordinate system use modeling transformation move position
+We composing complex object natural coordinate system complete scene
+On top apply modeling transformation complex object whole move actual scene complex object carried along
+That overall transformation applies consists modeling transformation place complex object followed transformation place complex object scene
+In fact build object made smaller object turn made even smaller object level
+For example could draw bloom petal coordinate system apply modeling transformation place petal natural coordinate system bloom
+There another transformation move bloom position stem yet another transformation place entire potted flower scene
+This hierarchical modeling
+Let look little example
+Suppose want draw simple image cart two wheel
+This cart used one part complex scene example
+The body cart drawn pair rectangle
+For wheel suppose written subroutine draw wheel
+This subroutine draw wheel natural coordinate system
+In coordinate system wheel centered radius
+In cart coordinate system I found convenient use midpoint base large rectangle reference point
+I assume positive direction point upward common convention mathematics
+The rectangular body cart width height coordinate lower left corner rectangle draw command
+The top cart smaller red rectangle drawn similar way
+To complete cart need add two wheel object
+To make size wheel fit cart need scaled
+To place correct position relative body cart one wheel must translated left wheel right
+When I coded example I play around number get right size position wheel I found wheel looked better I also moved bit
+Using usual technique hierarchical modeling save current transform drawing wheel restore drawing wheel
+This restricts effect modeling transformation wheel wheel alone affect part cart
+Here pseudocode subroutine draw cart coordinate system It important note subroutine used draw wheel
+The reason two wheel appear picture different position different modeling transformation effect two subroutine call
+Once subroutine use add cart scene
+When apply another modeling transformation cart whole
+Indeed could add several cart scene wanted calling subroutine several time different modeling transformation
+You notice analogy Building complex scene object similar building complex program subroutine
+In case work piece problem separately compose solution big problem solution smaller problem solved problem reuse solution several place
+Here demo us cart animated scene You probably guess hierarchical modeling used draw three windmill example
+There method draw windmill coordinate system
+Each windmill scene produced applying different modeling transform standard windmill
+Furthermore windmill complex object constructed several using various modeling transformation
+It might easy see different part scene animated
+In fact animation another aspect modeling
+A computer consists sequence frame
+Each frame separate image small change one frame next
+From point view frame separate scene drawn separately
+The object appear many frame
+To animate object simply apply different modeling transformation object frame
+The parameter used transformation computed current time frame number
+To make cart move left right example might apply modeling transformation cart frame number
+In frame cart unit farther right previous frame
+In fact actual program translation applied cart move reference point cart along horizontal axis every frame
+In coordinate system used scene range put cart outside scene much loop
+The really neat thing type animation work hierarchical modeling
+For example method draw draw windmill turning vane
+That mean rotation applied vane depends frame number
+When modeling transformation applied windmill rotating vane scaled moved part object whole
+This example hierarchical modeling
+The vane windmill
+The rotation vane part modeling transformation place vane windmill object
+Then modeling transformation applied windmill object place scene
+The file contains complete source code Java version example
+The book cover graphic programming Java
+Once familiar take look source code especially method draw entire scene
+Logically component complex scene form structure
+In structure object associated contains
+If scene hierarchical structure hierarchical
+This structure known
+A scene graph structure root representing entire scene child root representing object scene
+We visualize scene graph sample scene In drawing single object several connection one parent object
+Each connection represents one occurrence object parent object
+For example filled square object occurs cart windmill
+It used twice cart windmill
+The cart contains two red rectangle created square scaling pole windmill made scaled square
+The filled circle used sun used twice wheel
+The line used time sun time wheel I drawn one thick arrow marked represent connection
+The wheel turn used twice cart
+My diagram leaf lack space two occurrence filled square scene It used make road line middle road
+Each arrow picture associated modeling transformation place parent object
+When object contains several copy arrow connecting object different associated modeling transformation
+The object copy transformation differs
+Although scene graph exists conceptually application exists implicitly
+For example Java version program mentioned draw image procedurally calling subroutine
+There data structure represent scene graph
+Instead scene graph implicit sequence subroutine call draw scene
+Each node graph subroutine arrow subroutine call
+The various object drawn using different modeling transformation
+As discussed computer keep track current transformation represents transforms applied object
+When object drawn subroutine program save current transformation calling subroutine
+After subroutine return saved transformation restored
+Inside subroutine object drawn coordinate system possibly calling subroutine draw modeling transformation
+Those extra transformation effect outside subroutine since transform effect subroutine called restored subroutine return
+It also possible scene graph represented actual data structure program
+In approach graphical object scene represented program object
+There many way build scene graph
+For simple example implemented Java take look
+This program draw animated scene previous example represents scene data structure rather procedurally
+The scene graph API implemented live demo shown earlier page might take look read graphic
+In example program Java JavaScript node scene graph represented object belonging class named
+abstract class actual node scene graph defined subclass class
+For example subclass named represent complex graphical object made
+A variable type includes method adding compound object
+When implementing scene graph data structure made object decision made handle transforms
+One option allow transformation associated node scene graph
+In case however I decided use special node represent transforms object type
+A contains link another also contains modeling transformation applied object
+The modeling transformation given term scaling rotation translation amount instance variable object
+It worth noting always applied order scale rotate translate matter order instance variable set code
+If want translation followed rotation need two implement since translation plus rotation would applied order
+It also worth noting setter method scaling rotation translation return value equal object
+This make possible chain call method single statement even say thing like This type chaining make compact code eliminate need lot extra temporary variable
+Another decision made handle color
+One possibility would make class similar
+However case I added method main class
+A color set compound object inherited unless different color set
+In word color compound object act default color color overridden
+In addition compound object transformed object need scene graph node represent basic graphical object occupy bottom level scene graph
+These node actual drawing end
+For familiar data structure I note scene graph actually example directed acyclic graph dag
+The process drawing scene involves traversal dag
+The term acyclic mean ca cycle graph
+For scene graph obvious requirement object either directly indirectly
+Suppose write subroutine draw object
+At beginning subroutine use routine save copy current transform
+At end subroutine call reset current transform back value saved
+Now order work correctly hierarchical graphic routine must actually use transforms
+Recall stack simply list item added pushed onto one end list removed popped end
+The problem drawing complex object one subroutine call subroutine
+This mean several drawing subroutine active time saved transform
+When transform saved another transform already saved system need remember transforms
+When called recently saved transform restored
+A stack exactly structure needed implement operation
+Before start drawing object would push current transform onto stack
+After drawing object would pop transform stack
+Between two operation object hierarchical transforms pushed onto popped stack needed
+Some graphic APIs come transform stack already defined
+For example original OpenGL API includes function using stack transformation matrix built OpenGL
+The Java graphic API include stack transforms method getting setting current transform get set method used explicit stack data structure implement necessary operation
+When turn HTML canvas API graphic see includes function named actually operation stack
+These function essential implementing hierarchical graphic HTML canvas
+Let try bring together considering applies simple object complex scene one filled circle part front wheel cart example scene
+Here I rearranged part scene graph scene I added label show modeling transformation applied object The rotation amount wheel translation amount cart shown variable since different different frame animation
+When computer start drawing scene modeling transform effect transform
+As prepares draw cart save copy current transform identity pushing onto stack
+It modifies current transform multiplying modeling transforms cart
+When come drawing wheel push current transform modeling transform cart whole onto stack modifies current transform take wheel modeling transforms account
+Similarly come filled circle save modeling transform wheel applies modeling transform circle
+When finally circle actually drawn scene transformed combined transform
+That transform place circle directly scene composed transform place circle wheel one place wheel cart one place cart scene
+After drawing circle computer replaces current transform one pop stack
+That modeling transform wheel whole transform used part wheel drawn
+When wheel done transform cart popped
+And cart done original transform identity popped
+When computer go onto next object scene start whole process identity transform starting point
+This might sound complicated I emphasize something computer
+Your responsibility simply design individual object natural coordinate system
+As part specify modeling transformation applied object
+You construct scene whole similar way
+The computer put everything together taking account many layer hierarchical structure
+You deal one component structure time
+That power hierarchical design help deal complexity
+
+This service advanced JavaScript available learn Diverse hierarchy play role modeling simulation computational biology
+category abstraction hierarchy composition hierarchy
+Composition hierarchy seem natural straightforward focus exploration
+What model component requirement composite approach
+How far support quest building block computational biology
+Modeling formalism provide different mean composing model
+We illuminate Discrete event system specification calculus
+Whereas distinction emphasized
+system environment property attributed system system distinction become fluent compact description calculus
+However share problem order support comfortable modeling series extension developed also influence possibility support hierarchical modeling
+Thus individual formalism two family formalism support composite modeling presented
+In computational biology one type composite model deserves closer inspection brings together wish compose model need describe system different level unique manner
+model
+Unable display preview
+Unable display preview
+Over million scientific document fingertip Springer International Publishing AG
+Part
+
+promptMessage promptMessage This intentionally section
+view full version
+This intentionally section
+view full version
+This intentionally section
+view full version
+This intentionally section
+view full version
+This intentionally section
+view full version
+CSE Viewing Bookmark view later
+Bookmark
+Bookmarked
+No bookmarked document
+EECS Trees snackBarMessage Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+âãÏÓ obj stream NÐ endstream endobj obj endobj obj stream N Ñ endstream endobj obj endobj obj stream NÒ endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream á Knö X endstream endobj obj R R R R R R endobj obj stream N Ñ endstream endobj obj stream NÓ endstream endobj obj stream NÐ endstream endobj obj stream NÒ endstream endobj obj stream N Ñ endstream endobj obj stream NÓ endstream endobj obj stream NÐ endstream endobj obj stream NÒ endstream endobj obj stream ñ ª
+
+Refers organized shape pyramid row object directly beneath
+Hierarchical system pervade everyday life
+The army example general top pyramid private bottom hierarchical system
+Similarly system classifying plant animal according specie family genus also hierarchical
+Hierarchical system popular walk life
+The obvious example hierarchical system beneath
+Such file organization fact called
+In addition file system many information hierarchical form
+also hierarchical contain top pyramid
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+

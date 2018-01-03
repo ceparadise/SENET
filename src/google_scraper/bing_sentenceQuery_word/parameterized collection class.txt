@@ -1,0 +1,534 @@
+learn share knowledge build career
+link state following The instantiation generic type actual type argument called parameterized type
+Example parameterized type So parameterized type
+They parameterized type type take type parameter
+The fact different type two side expression irrelevant polymorphic behavior
+subtype
+Parameterized type generally class deal object without interesting type
+The type may defined using symbolic name passed instance class created
+For example In example wrap object type executes method using fact method always exists
+Here class used Please pay attention say fact object created parameter dictate type constructor argument
+Coming back example mean collection string
+This mean add object type collection
+It seems generic type parameterized type synonymous
+But seems right call example generic type since sense word generic anymore
+So probably A generic type declaration formal type generic type A parameterized type declaration actual type parameterized type A raw type declaration generic type actual type
+raw type Both us collection parameterized type type used
+ParameterizedType represents parameterized type Collection
+A parameterized type created first time needed reflective method specified package
+When parameterized type p created generic type declaration p instantiates resolved type argument p created recursively
+See TypeVariable detail creation process type variable
+Repeated creation parameterized type effect
+Instances class implement interface must implement equal method equates two instance share generic type declaration equal type parameter
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+style written term needed specific type provided
+This approach pioneered permit writing common differ set type operate used thus reducing
+Such software entity known
+They known Haskell community also us term generic related somewhat different concept influential book
+The author note technique especially combined powerful however Dynamic highly parameterized software harder understand static software
+The term originally coined specific sense describe programming paradigm whereby fundamental requirement type abstracted across concrete example algorithm data structure formalised implemented term concept typically using language genericity mechanism described
+Generic programming defined follows Generic programming center around idea abstracting concrete efficient algorithm obtain generic algorithm combined different data representation produce wide variety useful software
+Generic programming paradigm approach software decomposition whereby fundamental requirement type abstracted across concrete example algorithm data structure formalised analogously abstraction algebraic theory
+Early example programming approach implemented Scheme Ada although best known example STL developed theory used decouple sequence data structure algorithm operating
+For example given sequence data structure
+singly linked list vector algorithm operate
+direct approach would implement algorithm specifically data structure giving combination implement
+However generic programming approach data structure return model iterator concept simple value type dereferenced retrieve current value changed point another value sequence algorithm instead written generically argument iterators
+pair iterators pointing beginning end subsequence process
+Thus data combination need implemented
+Several iterator concept specified STL refinement restrictive concept
+forward iterators provide movement next value sequence
+suitable singly linked list stream input data whereas iterator also provides direct access element sequence
+suitable vector
+An important point data structure return model general concept implemented requirement explicitly part concept definition
+This limit data structure given algorithm applied complexity requirement major determinant data structure choice
+Generic programming similarly applied domain
+graph algorithm
+Note although approach often utilizes language feature fact independent particular detail
+Generic programming pioneer Alexander Stepanov wrote Generic programming abstracting classifying algorithm data structure
+It get inspiration Knuth type theory
+Its goal incremental construction systematic catalog useful efficient abstract algorithm data structure
+Such undertaking still dream
+I believe iterator theory central Computer Science theory central Mathematics
+noted Following Stepanov define generic programming without mentioning language feature Lift algorithm data structure concrete example general abstract form
+Other programming paradigm described generic programming include described Generic Programming Introduction
+The approach lightweight generic programming approach Haskell
+In article distinguish programming language used implement see
+For discussion comparison generic programming paradigm see
+Genericity facility existed language since least language subsequently adopted many language including defunct language
+Genericity implemented supported differently various programming language term generic also used differently various programming context
+For example execute code compiling one create new new implementation word fly
+It expose compiler behaviour therefore naturally offer capacity however referred Forth text
+Similarly dynamically typed language especially interpreted one usually offer default passing value function value assignment behavior often utilized abstraction code terseness however typically labeled direct consequence dynamic typing system employed language
+The term used specifically language use type always parametric actual code type generic
+These usage still serve similar purpose rendering abstraction
+viewed predefined generic type
+Every usage array struct type instantiates new concrete type reuses previous instantiated type
+Array element type struct element type parameterized type used instantiate corresponding generic type
+All usually syntax differs generic construct
+Some try unify user defined generic type
+A broad survey genericity mechanism programming language follows
+For specific survey comparing suitability mechanism generic programming see
+When creating container class statically typed language inconvenient write specific implementation datatype contained especially code datatype virtually identical
+For example duplication code circumvented defining class template Above placeholder whatever type specified list created
+These commonly called allow class reused different datatypes long certain contract kept
+This genericity mechanism confused usage exchangeable instance list object type containing object type
+Templates also used function example The construct used widely cited genericity construct popularized notion among programmer language designer support many generic programming idiom
+The D programming language also offer fully template based precedent simplified syntax
+The Java programming language provided genericity facility syntactically based since introduction
+also known Chrome construct take advantage support generic present since version generic since first designed
+The standard library us generic provide many service
+Ada add comprehensive generic container library standard library inspired
+A package subprogram take one
+A value variable constant type subprogram even instance another designated generic unit
+For generic formal type syntax distinguishes discrete access pointer type etc
+Some formal parameter default value
+To generic unit programmer pass parameter formal
+The generic instance behaves like unit
+It possible instantiate generic unit example inside loop
+The specification generic package Instantiating generic package Using instance generic package The language syntax allows precise specification constraint generic formal parameter
+For example possible specify generic formal type accept modular type actual
+It also possible express constraint generic formal parameter example In example constrained
+When instantiating unit programmer must pas actual array type satisfies constraint
+The disadvantage control complicated syntax generic formal parameter completely defined specification instantiate generic without looking body generic
+Unlike Ada allow specialised generic instance requires generic instantiated explicitly
+These rule several consequence us template enable generic programming technique
+The Standard Library includes STL provides framework template common data structure algorithm
+Templates may also used way code rather
+Using template specialization Templates considered
+There two kind template function template class template
+A pattern creating ordinary function based upon parameterizing type supplied instantiated
+For example Standard Template Library contains function template creates function return either whichever larger
+could defined like function template instantiation specific type called like ordinary function The compiler examines argument used call determines call
+It instantiates version function parameterizing type making equivalent following function This work whether argument integer string type expression sensible specifically type defined
+Common inheritance needed set type used similar
+A program defining custom data type use operator overloading define meaning type thus allowing use function template
+While may seem minor benefit isolated example context comprehensive library like STL allows programmer get extensive functionality new data type defining operator
+Merely defining allows type used standard algorithm put inside data structure heap associative array
+template completely compile time
+As demonstration standard type define operator strict order
+Therefore fail compile error value
+Likewise template rely applied data unless comparison form functor function provided
+
+A used key unless comparison provided
+Unfortunately compiler historically generate somewhat esoteric long unhelpful error message sort error
+Ensuring certain object adheres alleviate issue
+Languages use instead also use value key
+The second kind template extends concept class
+A class template specialization class
+Class template often used make generic container
+For example STL container
+To make linked list integer one writes
+A list string denoted
+A set standard function associated work compatible parameterizing type
+A powerful feature template
+This allows alternative implementation provided based certain characteristic parameterized type instantiated
+Template specialization two purpose allow certain form optimization reduce code bloat
+For example consider template function
+One primary activity function swap exchange value two container position
+If value large term number byte take store often quicker first build separate list pointer object sort pointer build final sorted sequence
+If value quite small however usually fastest swap value needed
+Furthermore parameterized type already need build separate pointer array
+Template specialization allows template creator write different implementation specify characteristic parameterized type must implementation used
+Unlike function template class template
+That mean alternate version class template code provided template parameter known leaving template parameter generic
+This used example create default implementation assumes copying parameterizing type expensive create partial specialization type cheap copy thus increasing overall efficiency
+Clients class template use specialization without needing know whether compiler used primary specialization partial specialization case
+Class template also mean alternate implementation provided parameterizing type known
+Some us template function previously filled legacy
+For example possible macro Macros expanded compilation proper template expanded compile time
+Macros always expanded inline template also expanded inline function compiler deems appropriate
+Thus macro function template overhead
+However template generally considered improvement macro purpose
+Templates
+Templates avoid common error found code make heavy use macro evaluating parameter side effect twice
+Perhaps importantly template designed applicable much larger problem macro
+There three primary drawback use template compiler support poor error message
+Many compiler historically poor support template thus use template make code somewhat le portable
+Support may also poor compiler used attempting use template across boundary
+Most modern compiler however fairly robust standard template support new standard address issue
+Almost compiler produce confusing long sometimes unhelpful error message error detected code us template
+This make template difficult develop
+Finally use template requires compiler generate separate templated class function every type parameter used
+This necessary type size size data field important class work
+So indiscriminate use template lead resulting excessively large executables
+However judicious use template specialization derivation dramatically reduce code bloat case So derivation used reduce problem code replicated template used
+This would involve deriving template ordinary class
+This technique proved successful curbing code bloat real use
+People use technique like found replicated code cost megabyte code space even moderate size program
+In simple case template transformed generic causing code bloat creating class getting parameter derived type compile time wrapping template around class
+It nice approach creating generic container
+The extra instantiation generated template also cause debugger difficulty working gracefully template
+For example setting debug breakpoint within template source file may either miss setting breakpoint actual instantiation desired may set breakpoint every place template instantiated
+Also compiler need perform expansion template generate different instance compile time implementation source code templated class function must available
+included header code using
+Templated class function including much Standard Template Library STL included header file compiled
+This contrast code may compiled binary providing declaration header file code using
+This may disadvantage exposing implementing code remove abstraction could restrict use project
+The support template based design
+Most template idiom carry D without alteration D add additional functionality Templates D use different syntax whereas template parameter wrapped angular bracket D us exclamation sign parenthesis
+This avoids due ambiguity comparison operator
+If one parameter parenthesis omitted
+Conventionally D combine feature provide using generic programming
+For example input defined type satisfies check performed defined follows A function accepts input range use template template constraint In addition template metaprogramming D also provides several feature enable code generation Combining allows generating code based existing declaration
+For example D serialization framework enumerate type member generate specialized function serialized type perform serialization deserialization
+attribute could indicate serialization rule
+The expression function execution also allow efficiently implementing
+For example given function take string containing HTML template return equivalent D source code possible use following way Generic class part since original method language design
+The foundation publication Eiffel use term describe creation use generic class
+Generic class declared class name list one
+In following code class one formal generic parameter The formal generic parameter placeholder arbitrary class name supplied declaration generic class made shown two class name
+considered provide real class name substitute actual use
+Within Eiffel type system although class considered class considered type
+However generic derivation considered type
+For list class shown actual generic parameter substituting available class
+To constrain set class valid actual generic parameter chosen specified
+In declaration class generic constraint dictate valid actual generic parameter class inherits class
+The generic constraint ensures element fact sorted
+Support added part
+In Java generic checked compile time type correctness
+The generic type information removed via process called maintain compatibility old JVM implementation making unavailable runtime
+For example converted raw type
+The compiler insert convert element type retrieved list reducing performance compared implementation template
+Generics added part November based research prototype Microsoft Research started
+Although similar generic Java generic apply implement generic first class mechanism runtime using
+This design choice provides additional functionality allowing preservation generic type well alleviating limitation erasure unable create generic array
+This also mean performance hit runtime normally expensive
+When primitive value type used generic argument get specialized implementation allowing efficient generic method
+As Java nested generic type Dictionary string List int valid type however advised member signature code analysis design rule
+allows six variety generic type constraint using keyword including restricting generic type value type class constructor implement interface
+Below example interface constraint The method allows operation array element generic type
+The method type constraint indicates method applicable type implement generic interface
+This ensures error method called type support comparison
+The interface provides generic method
+The method could also written without generic type simply using type
+However since array casting would compiler may miss error would otherwise caught making use generic type
+In addition method would need access array item object instead would require compare two element
+For value type like type requires conversion although worked around using class done standard collection class
+A notable behavior static member generic class static member instantiation per type see example
+Object Pascal dialect acquired generic Delphi release initially discontinued compiler added native code one Delphi release
+The semantics capability Delphi generic largely modelled generic though implementation necessity quite different
+Here le direct translation first C example shown As C method well whole type one type parameter
+In example TArray generic type defined language MakeAtLeast generic method
+The available constraint similar available constraint C value type class specific class interface class parameterless constructor
+Multiple constraint act additive union
+implemented generic Delphi different syntax semantics
+However work underway implement Delphi generic alongside native FPC one see
+This allows Free Pascal programmer use generic whatever style prefer
+Delphi Free Pascal example The mechanism support generic programming
+Six predefined type class Haskell including type compared equality type whose value rendered string special property supporting This mean programmer defining new type state type instance one special type class without providing implementation class method usually necessary declaring class instance
+All necessary method derived constructed automatically based structure type
+For instance following declaration type state instance class This result equality function string representation function automatically defined type form provided support operation
+The support derived instance make method generic qualitatively different way parametrically polymorphic function function accurately family function applied value various type although behave differently every argument type little work needed add support new type
+Ralf Hinze shown similar effect achieved type class certain programming technique
+Other researcher proposed approach kind genericity context Haskell extension Haskell discussed
+PolyP first generic programming language extension
+In PolyP generic function called
+The language introduces special construct polytypic function defined via structural induction structure pattern functor regular datatype
+Regular datatypes PolyP subset Haskell datatypes
+A regular datatype must formal type argument definition recursive call must form
+These restriction rule datatypes well nested datatypes recursive call different form
+The flatten function PolyP provided example Generic Haskell another extension developed
+The extension provides The resulting value specialised type
+As example equality function Generic Haskell offer generic programming based PolyP generic Haskell supported GHC
+It parametrizes kind offer overloading
+The family programming language support generic programming generic called Both provide functors similar class template Ada generic package
+syntactic abstraction also connection genericity fact superset templating à la
+A module may take one parameter actual value assigned upon instantiation module
+One example generic array array width given via parameter
+Such array combined generic wire vector make generic buffer memory module arbitrary bit width single module implementation
+derived Ada also generic ability
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+In special kind used refer one piece data provided input subroutine
+These piece data called
+An ordered list parameter usually included time subroutine called argument call assigned corresponding parameter
+Just standard mathematical usage thus actual input passed function procedure routine whereas variable inside implementation subroutine
+For example one defines subroutine parameter called argument
+Note variable calling context argument subroutine called argument
+See section information
+In common case parameter act within subroutine variable initialized value argument isolated copy argument argument variable case
+argument supplied caller affected action within called subroutine discussed
+In call value one thus think argument value properly think argument argument general argument simply value
+The semantics parameter declared argument passed parameter subroutine defined language detail represented particular computer system depend system
+The following program defines function named one parameter named price
+The type price double
+number
+The function return type also double
+After function defined invoked follows In example function invoked
+When happens assigned price function begin calculating result
+The step producing result specified enclosed
+indicates first thing multiply value price give mean function produce result
+Therefore final result ignoring possible error one encounter representing decimal fraction format
+The term sometimes used interchangeably context used distinguish meaning
+The term sometimes called often used refer variable found function definition sometimes called refers actual input passed
+For example one defines function parameter called argument
+A parameter unbound variable argument thought value variable depending calling convention
+In case call value one think argument value properly argument example equivalent call call reference one think argument variable calling context
+Parameters appear procedure definition argument appear procedure call
+In function definition variable parameter function call value argument function
+Loosely parameter type argument instance
+A parameter intrinsic property procedure included definition
+For example many language procedure add two supplied integer together calculate sum would need two parameter one integer
+In general procedure may defined number parameter parameter
+If procedure parameter part definition specifies parameter called
+By contrast argument value supplied procedure called
+Unlike parameter form unchanging part procedure definition argument may vary call call
+Each time procedure called part procedure call specifies argument called
+Although parameter also commonly referred argument argument properly thought actual value reference assigned parameter variable subroutine called
+When discussing code calling subroutine value reference passed subroutine argument place code value reference given
+When discussing code inside subroutine definition variable subroutine parameter list parameter value parameter runtime argument
+For example C dealing thread common pas argument type cast expected type To better understand difference consider following function written The function two parameter named
+It add value passed parameter return result subroutine caller using technique automatically supplied C compiler
+The code call function might look like The variable initialized value
+argument function context
+At runtime value assigned variable passed function argument
+In function parameter evaluated yielding argument respectively
+The value argument added result returned caller assigned variable
+Because difference parameter argument possible supply inappropriate argument procedure
+The call may supply many argument one argument may wrong type argument may supplied wrong order
+Any situation cause mismatch parameter argument list procedure often return unintended answer generate
+Within software development method language term distinct us established convention
+The term used exclusively reference routine input term used exclusively type parameterization
+Consider following routine definition The routine take two argument called routine
+A call specifies shown
+Parameters also thought either
+used definition generic class
+In example class declared generic class two formal generic parameter representing data interest representing hash key data When class becomes client formal generic parameter substituted
+In following attribute declaration used character string based
+As data key formal generic parameter substituted actual generic parameter type
+In parameter must specified procedure declaration
+Languages using attempt discover type automatically function body usage
+Dynamically typed programming language defer type resolution
+Weakly typed language perform little type resolution relying instead programmer correctness
+Some language use special keyword
+indicate subroutine parameter formal function take empty parameter list whose type rather
+The exact mechanism assigning argument parameter called depends upon used parameter typically call value may specified using keywords
+Some programming language allow explicitly implicitly given subroutine declaration
+This allows caller omit argument calling subroutine
+If default argument explicitly given value used provided caller
+If default argument implicit sometimes using keyword language provides value zero empty string etc
+value provided caller
+PowerShell example Default argument seen special case argument list
+Some language allow subroutine defined accept
+For language subroutine must iterate list argument
+PowerShell example Some programming subroutine
+This allows calling code
+It also provides flexibility caller often allowing order argument changed argument omitted needed
+PowerShell example In function exactly one parameter
+What thought function multiple parameter usually represented lambda calculus function take first argument return function take rest argument transformation known
+Some programming language like follow scheme
+In language every function exactly one parameter may look like definition function multiple parameter actually definition function return function etc
+Function application language well lambda calculus look like application function multiple argument correctly evaluated function applied first argument resulting function applied second argument etc
+An also known parameter used output rather usual use input
+Using parameter call value parameter value reference output parameter idiom language notably C language support output parameter
+Languages support output parameter include see since see various procedural extension see scripting language see
+More precisely one may distinguish three type parameter often denoted
+An input argument argument input parameter must value initialized variable literal must redefined assigned output argument must assignable variable need initialized existing value accessible must assigned value argument must initialized assignable variable optionally assigned value
+The exact requirement enforcement vary language example output parameter assigned read even assignment removed remove need auxiliary accumulator variable
+These analogous notion expression value assigned value assigned respectively though term specialized meaning In case input distinguished output considered specific use case input output supported
+The default mode varies language Fortran default C SQL extension input default TScript parameter explicitly specified input output
+Syntactically parameter mode generally indicated keyword function declaration C
+Conventionally output parameter often put end parameter list clearly distinguish though always followed
+TScript us different approach function declaration input parameter listed output parameter separated colon return type function function computes size text fragment Parameter mode form stating programmer intent allowing compiler catch error apply optimization necessarily imply parameter passing actually occurs
+Notably input parameter implemented call value output parameter call reference straightforward way implement mode language without support always implemented
+This distinction discussed detail emphasizes parameter mode abstracted parameter passing mechanism reference copy actually implemented
+For instance C input parameter default keyword passed value output parameter passed reference input parameter passed reference output parameter default passed value result copied back passed reference using compiler hint
+A syntactically similar construction output parameter assign variable name function
+This found Pascal example This semantically different called function simply evaluated passed variable calling scope store output
+The primary use output parameter return multiple value function use parameter modify state using parameter passing rather shared environment global variable
+An important use returning multiple value solve returning value error status see
+For example return two variable function C one may write input parameter output parameter passed reference
+A common use case C related language function place return value output variable return boolean corresponding whether function succeeded
+An archetypal example method especially C par string integer returning success failure
+This following signature may used follows Similar consideration apply returning value one several possible type return value specify type value stored one several output variable
+Another use avoid assigning local variable function needing copy returning
+This done output parameter implemented
+For example instead usual one might instead write function need assign space object copy returning
+Output parameter often discouraged modern programming essentially awkward confusing commonplace return value considerably easier understand work
+Notably output parameter involve function side effect modifying output parameter semantically similar reference confusing pure function value distinction output parameter parameter subtle
+Further since common programming style parameter simply input parameter output parameter parameter unusual hence susceptible misunderstanding
+Output parameter prevent function composition since output stored variable rather value expression
+Thus one must initially declare variable step chain function must separate statement
+For example following function composition written output parameter instead becomes output parameter parameter In special case function single output parameter return value function composition possible output parameter address also returned function case becomes There various alternative use case output parameter
+For returning multiple value function alternative return
+Syntactically clearer automatic sequence unpacking used Python For returning value one several type used instead common case return value null indicate failure
+For exception handling one return nullable type raise exception
+For example Python one might either idiomatically The requiring local variable copying return using output variable also applied conventional function return value sufficiently sophisticated compiler
+The usual alternative output parameter C related language return single data structure containing return value
+For example given structure encapsulating width height one write In language instead using parameter one often use passing reference object mutating object though changing object variable refers
+
+In branch focus classifying according inherent difficulty respect parameter input output
+The complexity problem measured parameter
+This allows classification problem finer scale classical setting complexity problem measured number bit input
+The first systematic work parameterized complexity done
+Under assumption exist many natural problem require superpolynomial complexity measured term input size computable time polynomial input size exponential worse parameter
+Hence fixed small value growth function relatively small problem still considered tractable despite traditional classification intractable
+The existence efficient exact deterministic solving algorithm otherwise problem considered unlikely input parameter fixed known solving algorithm problem require time least superpolynomial total size input
+However problem solved algorithm exponential size fixed parameter polynomial size input
+Such algorithm called algorithm problem solved efficiently small value fixed parameter
+Problems parameter fixed called parameterized problem
+A parameterized problem allows said problem belongs class early name theory parameterized complexity
+Many problem following form given object nonnegative integer property depends
+For instance parameter number vertex cover
+In many application example modelling error correction one assume parameter small compared total input size
+Then interesting see whether find algorithm exponential input size
+In way parameterized complexity seen complexity theory
+This concept formalized follows For example algorithm solves vertex cover problem time number vertex size vertex cover
+This mean vertex cover tractable size solution parameter
+FPT contains problem solved time computable function
+Typically function thought single exponential definition admits function grow even faster
+This essential large part early history class
+The crucial part definition exclude function form
+The class fixed parameter linear class problem solvable time computable function
+FPL thus subclass FPT
+An example problem parameterised number variable
+A given formula size variable checked brute force time
+A size graph order found time problem also FPT
+An example problem thought FPT parameterised number color
+It known algorithm graph time would run polynomial time size input
+Thus graph coloring parameterised number color FPT
+There number alternative definition FPT
+For example running time requirement replaced
+Also parameterised problem FPT kernel
+preprocessing technique reduces original instance hard kernel possibly much smaller instance equivalent original instance size bounded function parameter
+FPT closed parameterised called simultaneously preserve instance size parameter
+Obviously FPT contains computable problem
+Moreover contains optimisation problem NP allow
+The collection computational complexity class
+A parameterised problem class every instance transformed combinatorial circuit satisfying assignment input assigns input
+The height thereby largest number logical unit unbounded path input output
+The number logical unit bounded path must limited constant hold instance problem
+Note
+The class hierarchy also closed
+Many natural computational problem occupy lower level
+Examples problem include Examples problem include defined using family Weighted SAT problem class parameterized problem problem
+Here following problem It shown problem Weighted SAT complete
+Here following problem class problem decided nondeterministic make nondeterministic choice computation
+It known FPT contained W P inclusion believed strict
+However resolving issue would imply solution problem
+Other connection unparameterised computational complexity FPT equal decided time computable nondecreasing unbounded function f language recognised nondeterministic Turing machine using f n log n nondeterministic choice
+class parameterized problem solved time computable function
+The collection computational complexity class similar W hierarchy
+However W hierarchy hierarchy contained NP A hierarchy closely mimic hierarchy classical complexity
+It known A W hold
+
+In branch focus classifying according inherent difficulty respect parameter input output
+The complexity problem measured parameter
+This allows classification problem finer scale classical setting complexity problem measured number bit input
+The first systematic work parameterized complexity done
+Under assumption exist many natural problem require superpolynomial complexity measured term input size computable time polynomial input size exponential worse parameter
+Hence fixed small value growth function relatively small problem still considered tractable despite traditional classification intractable
+The existence efficient exact deterministic solving algorithm otherwise problem considered unlikely input parameter fixed known solving algorithm problem require time least superpolynomial total size input
+However problem solved algorithm exponential size fixed parameter polynomial size input
+Such algorithm called algorithm problem solved efficiently small value fixed parameter
+Problems parameter fixed called parameterized problem
+A parameterized problem allows said problem belongs class early name theory parameterized complexity
+Many problem following form given object nonnegative integer property depends
+For instance parameter number vertex cover
+In many application example modelling error correction one assume parameter small compared total input size
+Then interesting see whether find algorithm exponential input size
+In way parameterized complexity seen complexity theory
+This concept formalized follows For example algorithm solves vertex cover problem time number vertex size vertex cover
+This mean vertex cover tractable size solution parameter
+FPT contains problem solved time computable function
+Typically function thought single exponential definition admits function grow even faster
+This essential large part early history class
+The crucial part definition exclude function form
+The class fixed parameter linear class problem solvable time computable function
+FPL thus subclass FPT
+An example problem parameterised number variable
+A given formula size variable checked brute force time
+A size graph order found time problem also FPT
+An example problem thought FPT parameterised number color
+It known algorithm graph time would run polynomial time size input
+Thus graph coloring parameterised number color FPT
+There number alternative definition FPT
+For example running time requirement replaced
+Also parameterised problem FPT kernel
+preprocessing technique reduces original instance hard kernel possibly much smaller instance equivalent original instance size bounded function parameter
+FPT closed parameterised called simultaneously preserve instance size parameter
+Obviously FPT contains computable problem
+Moreover contains optimisation problem NP allow
+The collection computational complexity class
+A parameterised problem class every instance transformed combinatorial circuit weft satisfying assignment input assigns input
+The height thereby largest number logical unit unbounded path input output
+The number logical unit bounded path must limited constant hold instance problem
+Note
+The class hierarchy also closed
+Many natural computational problem occupy lower level
+Examples problem include Examples problem include defined using family Weighted SAT problem class parameterized problem problem
+Here following problem It shown problem Weighted SAT complete
+Here following problem class problem decided nondeterministic make nondeterministic choice computation
+It known FPT contained W P inclusion believed strict
+However resolving issue would imply solution problem
+Other connection unparameterised computational complexity FPT equal decided time computable nondecreasing unbounded function f language recognised nondeterministic Turing machine using f n log n nondeterministic choice
+class parameterized problem solved time computable function
+The collection computational complexity class similar W hierarchy
+However W hierarchy hierarchy contained NP A hierarchy closely mimic hierarchy classical complexity
+It known A W hold
+
+µµµµ obj endobj obj endobj obj R endobj obj stream WÝÑâáº ÖD G º Ò æ I
+CE äËwótºª ÇãÍã ÈÈtªðË LÒlä Ë ÀÔBf ì Âª ùø ãå RÉ íZy é endstream endobj obj stream å ë ÞÐUBrð ë R Ýºÿ ùaÀø
+õé Ë Ü c Ì
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+The parameter class listed order dotted rectangle used type elsewhere
+Note parameter explicitly included constructor
+Note also bound parameter included argument return type method return written
+Note finally officially reason discus later
+
+Computer Science Fundamentals Acccelerated hour course designed year old student
+It taught week school club integrated unit longer technology class used intro computer science class
+Students learn create computer program help learn collaborate others develop skill persist difficult task
+They study programming concept computational thinking digital citizenship develop interactive game story share
+The course teach foundational concept programming using drag drop block rather programming language JavaScript Python
+Blocks easier way get started many top Universities today begin class block based programming
+The Accelerated Course combine concept taught accelerated fashion designed older student
+All lesson align relevant computer science standard well
+They additionally reinforce concept skill taught subject area integrating national standard
+Read
+No worry
+Most teacher never taught computer science
+Try one course learn ahead student
+Sign teacher see lesson plan join teacher forum get access resource need
+We also offer We take blended learning approach teaching computer science mean student learn mix online activity listed unplugged activity traditional activity use computer listed Our online activity use Blockly visual programming language drag drop block together write code
+Print send home
+You teach course computer science unit one day per week throughout semester
+Lesson time flexible
+Running time
+Students finish online lesson homework
+Offline lesson hour built adjustment adding subtracting minute
+Introduce computer science make exciting creative everyone
+Show student feature Microsoft founder Bill Gates Facebook founder Mark Zuckerberg Black Eyed Peas founder NBA star Chris Bosh talking importance programming
+Make use
+Students help relying le teacher actually retain knowledge
+Pair programming allows student see computer science social collaborative
+In addition allows teach course even enough computer every student
+The three rule pair programming school setting Your classroom likely wide range skill confidence level
+Use flexibility course engage every student
+Ask student finish tutorial early partner group still working
+Encourage student explore solution think problem asking question
+Teachers figure problem use good learning lesson class technology always work way want
+Together community learner
+When student come across technical difficulty public produce tutorial free service greater good spreading computer science education
+Are ready try
+Give whirl free
+
+Best Online Graduate Computer Information Technology Programs With employment growth area computer science information technology projected percent time advance career master degree graduate certificate Boston world leading research teaching institution
+Choose following online degree program BU Metropolitan College MET computer science IT graduate professional education offered evening online blended format
+Because MET focused knowledge tool skill learn MET today immediately remaining relevant useful valuable career growth year come
+MET degree certificate program computer science IT prepare job typically low unemployment rate
+rank following technology job top ten The meet need offer practical interactive learning
+Complete form receive news invitation upcoming information session
+The MSCIS concentration IT Project Management accredited Project Management Institute Global Accreditation Center Project Management Education Programs GAC
+Computer Science IT degree certified Committee National Security Systems CNSS
+The Health Informatics concentration accredited Commission Accreditation Health Informatics Information Management Education CAHIIM
+As part Boston University Metropolitan College accredited New England Association Schools Colleges NEASC one six nationally recognized accrediting agency
+

@@ -1,0 +1,220 @@
+In describing
+It member family mathematical theory concurrency known process algebra based via
+CSP highly influential design programming language also influenced design programming language
+CSP first described paper since evolved substantially
+CSP practically applied industry tool concurrent aspect variety different system well secure ecommerce system
+The theory CSP also still subject active research including work increase range practical applicability increasing scale system tractably analyzed
+The version CSP presented Hoare original paper essentially concurrent programming language rather
+It substantially different later version CSP posse mathematically defined semantics unable represent
+Programs original CSP written parallel composition fixed number sequential process communicating strictly synchronous
+In contrast later version CSP process assigned explicit name source destination message defined specifying name intended sending receiving process
+For example process repeatedly receives character process named sends character process named
+The parallel composition assigns name process process process executes three process concurrently
+Following publication original version CSP Hoare Stephen Brookes developed refined CSP modern process algebraic form
+The approach taken developing CSP process algebra influenced work CCS vice versa
+The theoretical version CSP initially presented article Brookes Hoare Roscoe later Hoare book published
+In September book still reference time according albeit unreliable source due nature sampling
+The theory CSP undergone minor change since publication Hoare book
+Most change motivated advent automated tool CSP process analysis verification
+Roscoe describes newer version CSP
+An early important application CSP use specification verification element INMOS complex superscalar pipelined processor designed support multiprocessing
+CSP employed verifying correctness processor pipeline Virtual Channel Processor managed communication processor
+Industrial application CSP software design usually focused dependable system
+For example Bremen Institute Safe Systems modeled fault management system avionics interface consisting line code intended use International Space Station CSP analyzed model confirm design free deadlock livelock
+The modeling analysis process able uncover number error would difficult detect using testing alone
+Similarly applied CSP modeling analysis development software approximately line code secure Certification Authority verify design secure free deadlock
+Praxis claim system much lower defect rate comparable system
+Since CSP modeling analyzing system incorporate complex message exchange also applied verification communication security protocol
+A prominent example sort application Lowe use CSP discover previously unknown attack develop corrected protocol able defeat attack
+As name suggests CSP allows description system term component process operate independently interact solely communication
+However part CSP name something misnomer since modern CSP allows component process defined sequential process parallel composition primitive process
+The relationship different process way process communicates environment described using various operator
+Using algebraic approach quite complex process description easily constructed primitive element
+CSP provides two class primitive process algebra CSP wide range algebraic operator
+The principal one One archetypal CSP example abstract representation chocolate vending machine interaction person wishing buy chocolate
+This vending machine might able carry two different event coin choc represent insertion payment delivery chocolate respectively
+A machine demand payment offering chocolate written A person might choose use coin card make payment could modelled These two process put parallel interact
+The behaviour composite process depends event two component process must synchronise
+Thus whereas synchronization required coin would obtain If abstract latter composite process hiding coin card event
+get nondeterministic process This process either offer choc event stop stop
+In word treat abstraction external view system someone see decision reached person introduced
+The syntax CSP defines legal way process event may combined
+Let event set event
+Then basic CSP defined Note interest brevity syntax presented omits process represents well various operator alphabetized parallel piping indexed choice
+CSP imbued several different define syntactically correct CSP expression
+The theory CSP includes mutually consistent
+The three major denotational model CSP model model model
+Semantic mapping process expression three model provide denotational semantics CSP
+The defines meaning process expression set sequence event trace process observed perform
+For example More formally meaning process trace model defined set possible finite sequence event
+The extends trace model refusal set set event process refuse perform
+A pair consisting trace refusal set identifies event process may refuse executed trace
+The observed behavior process stable failure model described pair
+For example The extends failure model handle
+The semantics process model pair defined set trace lead divergent behavior
+Over year number tool analyzing understanding system described using CSP produced
+Early tool implementation used variety syntax CSP making input file written different tool incompatible
+However CSP tool standardized dialect CSP devised Bryan Scattergood sometimes referred CSP
+The CSP dialect CSP posse formally defined includes embedded
+The CSP tool probably commercial product developed Formal Systems Europe often described technically checker convert two CSP process expression LTSs determines whether one process refinement within specified semantic model trace failure
+applies various compression algorithm process LTSs order reduce size must explored refinement check
+succeeded completely version incorporating amongst thing parallel execution integrated type checker
+It released University Oxford also released period
+The CSP refinement checker developed Formal Modelling Verification Group
+ARC differs internally represents CSP process OBDDs alleviates state explosion problem explicit LTS representation without requiring use compression algorithm used
+The project hosted Institut für Informatik Düsseldorf originally created support analysis specification constructed
+However also includes support analysis CSP process refinement checking
+ProB also used verify property combined CSP B specification
+A ProBE CSP Animator integrated
+The PAT CSP analysis tool developed School Computing
+PAT able perform refinement checking LTL simulation CSP Timed CSP process
+The PAT process language extends CSP support mutable shared variable asynchronous message passing variety fairness quantitative time related process construct
+The underlying design principle PAT process language combine specification language procedural program
+event PAT may sequential program even external C library call greater expressiveness
+Mutable shared variable asynchronous channel provide convenient process modelling pattern used standard CSP
+The PAT syntax similar identical CSP
+The principal difference PAT syntax standard CSP use semicolon terminate process expression inclusion syntactic sugar variable assignment use slightly different syntax internal choice parallel composition
+produce animated visualisation CSP system specification support timed CSP
+lazy simulator
+It model check CSP useful exploring large potentially infinite system
+CSP refinement checker interactive modeling analyzing environment
+It graphical diagram editor
+The user model behavior process CSP expression also diagram
+The result checking also reported graphically analyzed interactively peripheral inspecting tool
+In addition refinement check It perform deadlock check livelock check
+CSP parallel refinement checker
+The checking performance linearly scale physical core
+Several specification language formalism derived inspired classic untimed CSP including In much concerned concurrent process exchange message broadly similar CSP
+However two model make fundamentally different choice regard primitive provide
+
+In mean group element data memory array file accessed predetermined ordered
+Sequential access sometimes way accessing data example tape
+It may also access method choice example wanted process sequence data element order
+However consistent definition sequential access sequentiality
+In fact different sequentiality definition lead different sequentiality quantification result
+In spatial dimension request size strided distance backward access affect sequentiality
+For temporal sequentiality characteristic time threshold impact definition sequentiality
+In data structure said sequential access one visit value contains one particular order
+The canonical example
+Indexing list sequential access requires time index
+As result many algorithm degenerate bad algorithm even le efficient naive alternative algorithm impractical without
+On hand algorithm typically index require sequential access face penalty
+
+This preview shown page This preview shown page This preview shown page This preview shown page Concurrent sequential data processing Signal variable assignment Process statement Combinational process Clocked process If statement Case statement Multiple statement Null statement Wait statement Concurrent sequential data processing Designing sequential process present new design dimension hardware designer worked gate level First look concurrent sequential data processing The difference sequential concurrent assignment important understand Electronics parallel nature In practice gate circuit diagram seen concurrently executing unit In VHDL language construction handle concurrent sequential data processing Many VHDL command valid concurrent sequential part VHDL Concurrent VHDL construction statement else statement select statement declaration statement Sequential VHDL construction statement statement statement assignment statement statement statement statement VHDL command valid concurrent sequential part assignment Declaration call statement delay assignment Use command It important know various VHDL command used VHDL code concurrent sequential In brief said VHDL code concurrent throughout architecture except e rtl ex process c one concurrent statement Comparison signal variable assignment used frequently VHDL code represent completely different implementation
+used sequential execution like algorithmic program used concurrent execution
+assignment differentiated using symbol A declared used sequential part VHDL
+VHDL used sequential concurrent part
+A declared exactly data type
+It also permissible assign value vice versa provided data
+Variable assignment statement label target expression Examples var receives value
+b receives current value
+data receives result new value
+Signal assignment statement target waveform Example A B n The value assigned signal n
+The inertial delay model used
+Differences signal variable processing The line sequential VHDL code executed line line That called sequential VHDL In concurrent VHDL code line executed event sensitivity list occurs This sensitivity list explicit case process Anyway sensitivity list mean Differences signal variable signal n variable integer n Information transfer Variables transfer information outside sequential part VHDL declared previous example process
+If access needed value must declared signal value variable assigned signal
+ex integer bhv ex integer n end store temporally value inside
+Global introduced transfer information outside process
+Global variable accessible concurrent part VHDL code inside e
+Nor bhv ex v b v b c c Process statement The concept come software compared sequential program
+If several process architecture executed concurrently
+A Waiting Executing state
+Executing Waiting start If state Waiting condition must satisfied
+
+This mean process start
+Then process Executing
+Once executed code wait next rising edge
+The condition mean necessity value also necessity value
+Example test wait command circuit description entity cir port clk bit bit end architecture bhv cir begin process begin Example test wait command stimulus generator entity stm port clk bit bit end architecture dtf stm begin n f Example test wait command test bench I entity bnc end use Architecture str bnc Component cir port clk bit bit end Component Component stm port clk bit bit end Component cir use entity work cir bhv Example test wait command test bench II Begin cir port map clk stm port map clk header process variable dline line begin write dline string TIME clk Example test wait command test bench III process clk variable dline line begin write dline write dline write dline clk Example test wait command simulation result Loading c dard Loading c Loading c c str Example test wait command simulation result n TIME clk n n n Qualified expression In context expression involving overloaded item may need qualified So meaning may unambiguous An expression qualified enclosing expression parenthesis prefixing parenthesised expression name type Consider following procedure declaration procedure x character inout integer procedure x bit inout integer The procedure call n ambiguous Solution character n bit n Qualified expression previous example In package overloaded procedure write next procedure WRITE L inout LINE VALUE JUSTIFIED SIDE right FIELD WIDTH procedure WRITE L inout LINE VALUE string JUSTIFIED SIDE right FIELD WIDTH Since compiler check expression quotation mark next procedure call may ambiguous write dline TIME clk In case error message ERROR Subprogram write ambiguous
+ERROR type error resolving function call write ERROR VHDL Compiler exiting The solution write dline string TIME clk Process syntax example process process Example clock q n clock Process execution Once process started take time time simulator minimum resolution moved back Waiting state This mean time taken execute process A process also seen infinite loop comment posted one write first
+This preview shown page Share Embed document website
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I ask I currently learning Neural Networks subset machine learning algorithm Just trying get intuition sort problem categorized sequential others Thanks One kind sequential problem making control decision real time
+Consider problem driving vehicle
+The system state observe measurement must make decision
+You decision generates input affect future state vehicle whole process repeat
+A problem interacts external entity change behavior based decision sequential nature
+Other example include thing like optimally managing stock portfolio searching evading opponent optimally playing card game
+One problem classifying fruit scanner grocery store
+A measurement taken data processed output determined
+When output generated alter nature future output
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This preview shown page This preview shown page This preview shown page This preview shown page Sequential Design Sequential code Code written within following statement execute sequentially
+Process Functions Procedures Process A process sequential section VHDL code
+It characterized presence following statement IF Wait Case Loop Process A Process must installed main code executed every time signal sensitivity list change condition related WAIT fulfilled
+Syntax label Process sensitivity list variable name type range value Begin sequential code End Process label If statement If condition assignment elsif condition assignment else assignment end Case statement The format case statement branch branch Can number branch
+last branch Case cont
+The case statement similar statement
+All permutation must tested keyword OTHERS may used
+NULL may used action required take place
+
+When OTHERS NULL MUX A B C D BIT CTRL Z BIT MUX MUX TIME n PMUX A B C D CTRL TEMP BIT CTRL TEMP A TEMP B TEMP C TEMP D Z TEMP PMUX Loop Loop useful piece code must instantiated several time
+Loop intended exclusively sequential code
+The loop repeated fixed number time
+label FOR identifier IN range LOOP sequential statement END LOOP label Example FACTORIAL NUMBER N FACTORIAL FACTORIAL NUMBER NOTE Range must static
+Loop cont
+The loop repeated condition longer hold
+label WHILE condition LOOP sequential statement end LOOP label Example While I Loop wait clk event statement End loop Other statement EXIT Used ending loop label EXIT label WHEN condition NEXT Used skipping loop step
+label NEXT WHEN condition Example exit Next SUM J J SUM SUM also would sufficient
+Example next For I loop next skip jump next iteration comment posted one write first
+This preview shown page Share Embed document website
+
+January By Kato Mivule Parallel programming involves concurrent computation simultaneous execution process thread time
+While Sequential programming involves consecutive ordered execution process one another
+In word sequential programming process run one another succession fashion parallel computing multiple process execute time
+With sequential programming computation modeled problem chronological sequence event
+The program case execute process turn wait user input another process executed process return according user input creating series cascading event
+In contrast sequential computation parallel programming process might execute concurrently yet thread might communicate exchange signal execution therefore programmer place measure place allow transaction
+It type environment think CPU utilization
+Certainly parallel computation meant multi processor environment
+To avoid impasse Michael Suess article Mutual Exclusion Locks Introduction suggests number way solve problem stalemate implementing Mutual Exclusion prevents multiple thread running concurrently working data time
+In simplest term mutual exclusiveness achieved placing lock critical region thus allowing one thread time thread done unlocks door critical region giving access another process access critical region
+In case stalemate done away Michael Suess mention number method dealing impasse These method control thread communication execution process critical difference sequential programming parallel programming
+However benefit parallel computation way overhead multiple thread get executed concurrently making main difference sequential parallel computation
+Parallel computing Wikipedia free Online
+Available
+Accessed
+sequence programming Britannica Online Online
+Available
+Accessed
+Brian Harvey Matthew Wright
+Simply scheme introducing computer science Edition illustrated MIT Press Tokhi Mohammad Alamgir Hossain Mohammad Hasan Shaheed Parallel computing signal processing control Advanced textbook control signal processing Edition illustrated Springer ISBN Mutual Exclusion Locks Introduction Thinking Online
+Available
+Accessed
+Posted Leave Comment Fill detail click icon log You commenting using account
+You commenting using Twitter account
+You commenting using Facebook account
+You commenting using account
+Connecting WPThemes
+
+Loading Page Loading Page If found issue question please let u know
+With help community continue improve educational resource
+If believe content available mean Website defined Terms Service infringes one copyright please notify u providing written notice Infringement Notice containing information described designated agent listed
+If Varsity Tutors take action response Infringement Notice make good faith attempt contact party made content available mean recent email address provided party Varsity Tutors
+Your Infringement Notice may forwarded party made content available third party
+Please advised liable damage including cost attorney fee materially misrepresent product activity infringing copyright
+Thus sure content located Website infringes copyright consider first contacting attorney
+Please follow step file notice You must include following A physical electronic signature copyright owner person authorized act behalf An identification copyright claimed infringed A description nature exact location content claim infringe copyright sufficient detail permit Varsity Tutors find positively identify content example require link specific question name question contains content description specific portion question image link text etc complaint refers Your name address telephone number email address A statement believe good faith use content claim infringe copyright authorized law copyright owner owner agent b information contained Infringement Notice accurate c penalty perjury either copyright owner person authorized act behalf
+Send complaint designated agent Charles Cohn Varsity Tutors LLC Hanley Rd Suite Louis MO Or fill form
+
+Sequential access sequential order one record
+To read record example would first need read record
+This differs read write record order
+Some distinguish data data file allowing two type
+file faster always record order
+file faster need read write record random order
+also classified sequential access random access
+For example device get point drive need pas point
+A hand device drive access point without passing intervening point
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+

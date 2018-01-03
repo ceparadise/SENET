@@ -1,0 +1,295 @@
+may refer
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I understand composition OOP I able get clear idea Aggregation
+Can someone explain
+Simple rule Example A Company aggregation People
+A Company composition Accounts
+When Company cease business Accounts cease exist People continue exist
+Example simplified A Text Editor owns Buffer composition
+A Text Editor us File aggregation
+When Text Editor closed Buffer destroyed File destroyed
+From Aggregation differs ordinary composition imply ownership
+In composition owning object destroyed contained object
+In aggregation necessarily true
+For example university owns various department chemistry department number professor
+If university close department longer exist professor department continue exist
+Therefore University seen composition department whereas department aggregation professor
+In addition Professor could work one department department could part one university
+So ownership relationship composition owned object also destroyed owner aggregation object contained exist independently
+Update Apologies answer far simplistic hindsight
+provides excellent definition answer There single explanation
+Different author mean different thing aggregation
+Most really mean anything specific
+Composition Association Aggregation Association Composition Association If life contained object totally depends container object called strong association Aggregation Association If life contained object depends container object called weak association Example mixture way combine simple object data type complex one
+Compositions critical building block many basic data structure collection differs ordinary composition imply ownership
+In composition owning object destroyed contained object
+In aggregation necessarily true Both denotes relationship object differ strength
+UML notation different kind dependency two class Since Engine Car relationship Composition
+Here implemented Java class
+Since Organization Person employee relationship Aggregation
+Here look like term Java class aggregation simple collection like bag marble composition implies dependency like hinge box car aggregate passenger get without breaking car functionality tire component remove one car longer function correctly note spare tire aggregate
+I always look composition
+car engine I look aggregation related purpose
+So staying car analogy aggregation may represent journey may involve bringing car passenger together
+The journey car passenger I aggregating data related specific scenario
+When journey completed car passenger go
+When car ended car engine normally destroyed together
+Semantically set made subset right
+Therefore The aggregation subset exists independently father set
+As monitor unplugged computer connected another
+The composition subset depends existence father set
+As leaf part tree liver part body
+These concept talk kind dependency two object class conceptually
+Directly program aggregation father object disposes aggregate object disposed
+In scenario composition composite son object persist father object dispenses
+How simple example An array object composition
+An array pointer object aggregation
+If I delete first one content vanish
+The second one hand vanish without affecting member existence unless specific method deletes object pointer deleted
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Add comment Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see
+
+Association represents static relationship shared among object two class
+So relationship object two class called association
+An association say kind dependency object
+It either weak Strong dependency
+Consider example Teacher Student class
+Multiple student associate single teacher single student associate multiple teacher
+This kind weak relationship ownership student teacher life cycle maintained
+form call relationship
+It strong type
+Child object parent object deletes child object also deleted
+Consider example set class Engine Car
+The object Engine said composed Car object Engine leave without Car object relationship said whole Engine part Car object
+Here life cycle Engine managed Car object
+If Car get destructed associated composite object like Engine also get destroyed
+Thus composition relationship specifies lifetime part classifier dependent lifetime whole classifier
+public class Engine
+
+
+public class Car Engine e new Engine
+Yet another example Composite relationship consider set classed Person Leg Hand
+The object Leg Hand composed within Person object
+The life cycle Leg Hand object maintained Person object
+Also see Leg Hand object leave independently without Person object
+And note strong relationship Leg Hand object Person
+The difference aggregation composition object exists independently us aggregation object meaning outside relationship us composition Let take example Department teacher
+A single teacher belong multiple department delete department teacher object destroy
+We think relationship
+Let u take another example Company Employee class
+The employee said aggregated Company
+The Employee working company relationship company
+The employee object still survive even say Company object exists
+I conclude taking real world example aggregation composition
+Consider scenario University owns various department physic chemistry department number professor
+If university close department longer exist professor department continue exist
+Therefore University seen composition department whereas department aggregation professor
+In addition Professor could work one department department could part one university
+Tags Click Here Submit Click Here Submit Get latest project article mail box subscribe electrifriends Get latest project article mail box subscribe electrifriends This one stop educational site Electronic Computer student
+If want learn something new help
+We work Microcontroller project Basic Electronics Digital electronics Computer project also basic program
+
+learn share knowledge build career
+This question already answer What difference aggregation composition dependency
+This question asked already answer
+If answer fully address question please
+implies relationship child exist independently parent
+Example Class parent Student child
+Delete Class Students still exist
+implies relationship child exist independent parent
+Example House parent Room child
+Rooms exist separate House
+The two form hence relationship
+weaker form relationship code term indicates class us another parameter return type
+Dependency form
+almost completely identical except used life child completely controlled parent
+The taken object installed different one
+Also car get totaled tire necessarily destroyed
+When object destroyed get destroyed
+A relationship two object changing one may affect
+separable part whole
+The part identity separate part
+You could pick part move another object
+real world example wheel car bloodcell body part whole
+You move part another object
+like property
+real world example curve road personality person car property object object Note relation aggregate one design composition another
+Its relation used specific design
+sensitive change
+amount rain weather headposition bodyposition Note Bloodcell Blood could Composition Blood Cells exist without entity called Blood
+Blood Body could Aggregation Blood exist without entity called Body
+An object associated relationship exist outside containing object
+Appointment owner Person Calendar TestResult Patient
+On hand object containing object exist outside containing object
+Door House Employee Department
+A relates object request service another object therefor dependent object
+As client service want service interface remain constant even future service offered
+Aggregation composition term people OO world acquired via UML
+And UML poor job defining term demonstrated example Barbier What This Thing Called Aggregation
+Formalization Relationship Unified Modeling Language
+I think coherent definition aggregation composition given interested
+I suggest look cited work
+Regarding dependency highly abstract relationship type object mean almost anything
+Containment Here access inner object use outer object
+We reuse contained object
+Aggregation Here access inner object without using outer object
+One object may contain another part attribute
+So containment need physical
+computer system warranty
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R LºÎÄ endstream endobj obj endobj obj R R R R R R R R R R endobj obj R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R endobj obj R endobj obj R endobj obj R R endobj obj R endobj obj endobj obj R stream ke Îý Zß Õ ª ëB ÞÂB TÝ e
+g ýkîT J Yk tä RÉ ÃlÍÄwrbôßÃÔ G áUôgêèie å ø Üi
+v Âî Oi Ó øÕÜ
+L YËò ÆÕûx íÊÅ R û
+osýD ÞB êU µ í Ú Ï Zß oóK þ I K qH Þ ÈÆ
+q ò áÍì ñ Îä qKå rþ z ºÌ Þa ZÒFg
+
+In paper provide general description combine collection necessarily finite asymmetric distance order obtain single one output
+To end introduce notion asymmetric distance aggregation function generalizes one distance space given Borsik Borsik On product metricspaces Math
+Slovaca
+Among result characterization function obtained term monotony subadditivity
+Finally relate result Computer Science
+In particular show mathematical formalism based complexity distance introduced Romaguera Schellekens Romaguera Schellekens property complexity space Topol
+Appl
+complexity analysis program algorithm obtained particular case new framework using appropriate asymmetric aggregation distance function
+Check access login credential institution
+
+Want watch later
+Information come u direction
+Our bank provide u account information cell phone provide u phone number message information government provide u revenue tax information
+As constantly looking way slice dice effort understand
+But would surprised know also combine
+And put together way make easier manipulate
+Indeed
+This combining process creates whole easier describe work
+The process called aggregation
+process combining thing
+That putting thing together refer collectively
+As example think phone number cell phone
+You refer individually mother number best friend number etc
+But easier think collectively phone number list
+It also important realize member aggregation still property whole
+In word phone number list remains phone number
+The process combining altered way
+As mentioned use aggregation refer group item whole
+That main purpose
+But also provides one significant benefit simplifies accessing individual item refer part whole
+Consider
+This aggregating mechanism creates group ordered entry individual entry referred index
+If think powerful idea
+It mean group referred name say X
+And member referred index X X forth
+A number computer language support idea
+In addition array number aggregating mechanism used programming language
+Some example include Get FREE access day create account
+To recap process grouping thing together
+We use aggregation refer group item whole individual item part whole
+There number example aggregation computer programming language
+Some common one include
+To unlock lesson must Member
+Already member
+Did We college course prepare earn credit exam accepted college university
+You test first two year college save thousand degree
+Anyone earn regardless age education level
+To learn visit Not sure college want attend yet
+thousand article every imaginable degree area study career path help find school right
+Get unbiased info need find right school
+Browse area study degree level
+Back To Course chapter lesson Next Lesson copyright
+All trademark copyright property respective owner
+All right reserved
+Your Cart Empty
+Please Choose Product
+video lesson helped student
+I learned month chemistry class Ashlee I aced CLEP exam earned Clair video lesson helped engage student
+The video changed way I teach
+The video accomplish would take entire class
+Chris Students condition performed better receiving instruction
+Department Education
+
+In confused way simple complex one
+Compositions critical building block many basic data structure including well used programming
+In programming language object typed type often divided composite noncomposite type composition regarded relationship type object composite type
+object simpler type
+
+Consider relation automobile part specifically composed object including
+This relation might fixed computer program composition relation
+However real world relation softer fuzzier
+The engine one automobile may replaced engine another automobile meaning relation better described composition
+Generally speaking time pass look like composition tend turn aggregation aggregation tend turn looser
+Composition must distinguished process adding detail general data type create specific data type
+For instance car may specific type vehicle
+Subtyping describe relationship different object instead say object type simultaneously object another type
+In programming language composite object usually expressed mean reference one object another depending language reference may known resulting composition
+Fields given unique name one distinguished others
+However reference necessarily mean object composite
+It called composite object refers really part
+independent existence
+For detail see section
+In two way modelling composition Composition aggregation
+Beware UML composition narrow meaning ordinary language Composition depicted solid line
+Composition kind association composite object sole responsibility disposition component part
+The relationship composite component strong relationship composite object take ownership component
+This mean composite responsible creation destruction component part
+An object may part one composite
+If composite object destroyed component part must destroyed
+The part life transferred another object
+Composition enforces encapsulation component part usually member composite object
+The general form depicted solid line
+Aggregation kind association specifies relationship aggregate whole component part
+This relationship aggregate component weak relationship component may survive aggregate object
+The component object may accessed object without going aggregate object
+The aggregate object take part lifecycle component object meaning component object may outlive aggregate object
+The state component object still form part aggregate object
+The code show source code likely look like
+This example composition
+In example primitive type combined form composite structure
+Each structure age name employment type
+Objects composited recursively use
+Consider tree
+Each node tree may branch leaf word node tree time belongs another tree
+One implementation recursive composition let object reference others type
+In C example binary tree defined like If pointer valid node thought branch referring tree point
+If node leaf
+In way recursion terminated
+Another use tagged union
+For
+see
+call record structure language often keep record hidden inside instance language family simply call record
+first widespread support record directly got COBOL got le indirectly ALGOL provides structure class latter via
+Arrays composite data type
+For example traditional linked list declaration Note ALGOL newtype name appears left equality notably construction made read left right without regard priority
+Fortran array lacked formal definition
+Typically compound structure built using statement Ada brought OOP concept tagged type equivalent class Ada added support verification contract
+Arrays string inherited FORTRAN new reserved word introduced FORTRAN updated included concept called NAMELIST
+Common Lisp provides structure ANSI Common Lisp standard added CLOS class
+For detail composition see
+Aggregation differs ordinary composition imply ownership
+In composition owning object destroyed contained object
+In aggregation necessarily true
+For example owns various department department number professor
+If university close department longer exist professor department continue exist
+Therefore University seen composition department whereas department aggregation professor
+In addition Professor could work one department department could part one university
+Composition usually implemented object contains another object
+For example In aggregation object may contain reference pointer object responsibility
+Sometimes aggregation referred composition distinction ordinary composition aggregation unimportant
+The code would transform following UML Class diagram In Microsoft aggregation mean object export owner one several another object owns
+Formally similar aggregation
+However instead implementing exported interface calling interface owned object interface owned object exported
+The owned object responsible assuring method interface inherited actually invoke corresponding method owner
+This guarantee reference count owner correct interface owner accessible exported interface private interface owned object accessible
+Composition used store several instance composited data type referred containment
+Examples container
+In containment depicted multiplicity depending issue ownership indicating data type composed unknown number instance composited data type
+
+This action might possible undo
+Are sure want continue
+available
+

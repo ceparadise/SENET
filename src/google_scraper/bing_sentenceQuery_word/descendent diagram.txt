@@ -1,0 +1,612 @@
+In widely used ADT implementing simulates hierarchical root value child parent node represented set linked
+A tree data structure defined locally collection starting root node node data structure consisting value together list reference node child constraint reference duplicated none point root
+Alternatively tree defined abstractly whole globally value assigned node
+Both perspective useful tree analyzed mathematically whole actually represented data structure usually represented worked separately node rather set node edge node one may represent instance
+For example looking tree whole one talk parent node given node general data structure given node contains list child contain reference parent A tree data structure made node vertex edge without cycle
+The tree node called tree
+A tree empty consists root node potentially many level additional node form hierarchy
+There distinction tree abstract data type concrete data structure analogous distinction
+As data type tree value child child tree value child tree interpreted value root node subtrees child root node
+To allow finite tree one must either allow list child empty case tree required empty tree instead represented forest zero tree allow tree empty case list child fixed size especially binary desired
+As data structure linked tree group node value list node child
+There also requirement two downward reference point node
+Nodes tree could reference reference parent node
+Due use tree linked tree data structure tree often discussed implicitly assuming represented reference root node often actually implemented
+For example rather empty tree one may null reference tree always reference tree may null
+Recursively data type tree defined value data type possibly empty together list tree possibly empty list subtrees child symbolically A tree consists value list tree
+More elegantly via tree one basic example tree defined term forest list tree tree consists value forest subtrees child Note definition term value appropriate assumes different tree connection simply list value
+As data structure tree defined node root consists value data type possibly empty together list reference node list possibly empty reference possibly null symbolically A node consists value list reference node
+This data structure defines directed graph tree one must add condition global structure topology namely one reference point given node node single parent node tree point root
+In fact every node root must exactly one parent root must parent
+Indeed given list node node list reference child one tell structure tree without analyzing global structure fact topologically tree defined
+As abstract tree type value type defined using abstract forest type list tree function axiom In term tree defined constructor empty forest tree root node given value child
+Viewed whole tree data structure generally value attached node
+Concretely required together Often tree fixed properly bounded particularly always two child node possibly empty hence two child node hence binary tree
+Allowing empty tree make definition simpler complicated rooted tree must hence empty tree allowed definition instead becomes empty tree rooted tree
+On hand empty tree simplify defining fixed branching factor empty tree allowed binary tree tree every node exactly two child tree possibly empty complete set operation tree must include fork operation
+A structure may contain value condition represent separate data structure could tree
+Each node tree zero tree convention tree drawn growing downwards
+A node child called child
+A node one parent
+An also known short node tree child node
+Similarly also known node child node
+The topmost node tree called
+Depending definition tree may required root node case tree may allowed empty case necessarily root node
+Being topmost node root node parent
+It node algorithm tree begin since data structure one pas parent child
+Note algorithm search begin root first visit leaf node access value leaf node visit root last first access child root access root last
+All node reached following
+In formal definition path also unique
+In diagram root node conventionally drawn top
+In tree root node special property
+Every node tree seen root node subtree rooted node
+The node length longest downward path leaf node
+The height root height tree
+The node length path root
+This commonly needed manipulation various tree particular
+The root node depth zero leaf node height zero tree single node hence root leaf depth height zero
+Conventionally empty tree tree node allowed height
+A tree tree consisting node descendant
+Nodes thus correspond subtrees node corresponds subtree descendant subtree corresponding root node entire tree node root node subtree determines subtree corresponding node called analogy
+Trees often drawn plane
+Ordered tree represented essentially uniquely plane hence called follows one fix conventional order say counterclockwise arranges child node order first incoming parent edge first child edge etc
+yield embedding tree plane unique
+Conversely embedding determines ordering child node
+If one place root top parent child place node given distance root term number edge level tree given horizontal line one obtains standard drawing tree
+Given binary tree first child left left node second child right right node
+There many different way represent tree common representation represent node record pointer child parent item relationship determined position array
+Indeed binary tree implemented list list list value list head list value first term left child subtree tail list second subsequent term right child subtree
+This modified allow value well Lisp head value first term value node head tail value second term left child tail tail list third subsequent term right child
+In general node tree pointer parent information included expanding data structure also include pointer parent stored separately
+Alternatively upward link included child node data
+If edge child node thought reference tree special case digraph tree data structure generalized represent removing constraint node may one parent cycle allowed
+Edges still abstractly considered pair node however term usually replaced different terminology example
+Different exist digraph represented local data structure tree node value list child assuming list child list reference globally structure
+In connected acyclic unless stated otherwise graph theory tree graph assumed undirected
+There correspondence tree tree data structure
+We take arbitrary undirected tree arbitrarily pick one make edge directed making point away root node producing assign order node
+The result corresponds tree data structure
+Picking different root different ordering produce different one
+Given node tree child define ordered forest union subtrees given child equivalently taking subtree given node erasing root
+Just subtrees natural recursion search forest natural search
+Via forest defined list tree represented root node node tree consists value forest child Stepping item tree mean connection parent child called action tree
+Often operation might performed pointer arrives particular node
+A walk parent node traversed child called walk walk child traversed respective parent traversed called walk walk node left subtree node finally right subtree traversed called traversal
+This last scenario referring exactly two subtrees left subtree right subtree assumes specifically
+A walk effectively performs entirety tree node traversed level level root node visited first followed direct child node sibling followed grandchild node sibling node tree traversed
+
+In finite
+That consists finitely many edge directed one vertex another way start vertex follow sequence edge eventually loop back
+Equivalently DAG directed graph sequence vertex every edge directed earlier later sequence
+DAGs model many different kind information
+A modeled DAG vertex cell edge whenever formula one cell us value another topological ordering DAG used update cell value spreadsheet changed
+Similarly topological ordering DAGs used order compilation operation
+The us DAGs model milestone activity large human project schedule project use little total time possible
+block electronic circuit design operation language involve acyclic network processing element
+DAGs also represent collection event influence either probabilistic structure record historical data version history system
+DAGs also used sequence data representation collection string representation sequence binary choice
+More abstractly relation DAG form partial order may represented DAG using reachability
+Important computational problem DAGs include finding topological ordering construction largest smallest DAGs reachability relation respectively goal find subset vertex edge connecting rest graph
+Transforming directed graph cycle DAG deleting vertex edge possible problem respectively directed graph made DAG contracting single supervertex
+The problem finding solved DAGs contrast arbitrary graph shortest path algorithm slower longest path problem
+The corresponding concept undirected graph without cycle
+Choosing orientation forest produce special kind directed acyclic graph called
+However many kind directed acyclic graph formed orienting edge undirected acyclic graph
+Moreover every undirected graph assignment direction edge make directed acyclic graph
+To emphasize DAGs thing directed version undirected acyclic graph author call
+A formed collection vertex structureless object connected pair edge
+In case edge orientation one vertex another vertex
+A directed graph described sequence edge property ending vertex edge sequence starting vertex next edge sequence path form cycle starting vertex first edge equal ending vertex last edge
+A directed acyclic graph directed graph cycle
+A vertex directed graph said another vertex exists path start end
+As special case every vertex considered reachable path zero edge
+If vertex reach via nontrivial path path one edge path cycle another way define directed acyclic graph graph vertex reach via nontrivial path
+A directed graph ordering vertex sequence every edge start vertex edge occurs earlier sequence ending vertex edge
+A graph topological ordering cycle edge earliest vertex cycle would oriented wrong way
+Therefore every graph topological ordering acyclic
+Conversely every directed acyclic graph least one topological ordering
+Therefore property used alternative definition directed acyclic graph exactly graph topological ordering
+The relationship directed acyclic graph formalized vertex DAG
+In partial order two vertex ordered exactly exists directed path DAG reachable
+However different DAGs may give rise reachability relation partial order
+For example DAG two edge reachability relation graph three edge
+Both DAGS produce partial order vertex ordered
+If DAG graph edge represents reachability relation
+It edge whenever reach
+That edge every related pair distinct element reachability relation may therefore thought direct translation reachability relation term
+The method translating partial order DAGs work generally every finite partially ordered set graph vertex member edge pair element related automatically transitively closed DAG reachability relation
+In way every finite partially ordered set represented reachability relation DAG
+The DAG graph fewest edge represents reachability relation
+It subgraph formed discarding edge also contains longer path connecting two vertex
+Like transitive closure transitive reduction uniquely defined DAGs
+In contrast directed graph acyclic one minimal subgraph reachability relation
+If DAG reachability relation described partial order transitive reduction subgraph edge every pair
+Transitive reduction useful visualizing partial order represent fewer edge graph representing order therefore lead simpler
+A partial order drawing transitive reduction orientation edge shown placing starting vertex edge lower position ending vertex
+Every directed acyclic graph ordering vertex starting endpoint every edge occurs earlier ordering ending endpoint edge
+The existence ordering used characterize DAGs directed graph DAG topological ordering
+In general ordering unique DAG unique topological ordering directed path containing vertex case ordering order vertex appear path
+The family topological ordering DAG family reachability relation DAG two graph representing partial order set topological order
+The problem counting directed acyclic graph studied
+The number DAGs labeled vertex without restriction order number appear topological ordering DAG These number may computed conjectured proved number count positive
+The proof matrix DAG matrix eigenvalue positive denotes
+Because DAG adjacency matrix must zero diagonal adding preserve property matrix coefficient
+A directed graph formed orienting edge
+Every polytree DAG
+In particular true formed directing edge outwards root tree
+A also called strongly unambiguous graph mangrove directed graph one directed path either direction two vertex equivalently DAG every vertex subgraph reachable form tree
+algorithmic problem finding topological ordering given DAG
+It solved
+Kahn algorithm topological sorting build vertex ordering directly
+It maintains list vertex incoming edge vertex already included partially constructed topological ordering initially list consists vertex incoming edge
+Then repeatedly add one vertex list end partially constructed topological ordering check whether neighbor added list
+The algorithm terminates vertex processed way
+Alternatively topological ordering may constructed reversing numbering graph traversal
+It also possible check whether given directed graph DAG linear time either attempting find topological ordering testing edge whether resulting ordering valid alternatively topological sorting algorithm verifying algorithm successfully order vertex without meeting error condition
+Any undirected graph may made DAG choosing vertex directing every edge earlier endpoint order later endpoint
+The resulting edge called
+Different total order may lead acyclic orientation graph fewer acyclic orientation
+The number acyclic orientation equal given graph
+Any directed graph may made DAG removing set vertex edge respectively touch cycle
+However smallest set find
+An arbitrary directed graph may also transformed DAG called single supervertex
+When graph already acyclic smallest feedback vertex set feedback arc set condensation graph
+The transitive closure given DAG vertex edge may constructed time using either test reachability vertex
+Alternatively solved time exponent theoretical improvement bound
+In transitive closure algorithm possible distinguish pair vertex reachable least one path length two pair connected path
+The transitive reduction consists edge form path path connecting endpoint
+Therefore transitive reduction constructed asymptotic time bound transitive closure
+The take input directed acyclic graph weight vertex seek minimum maximum weight closure set vertex outgoing edge
+The problem may formulated directed graph without assumption acyclicity greater generality case equivalent problem condensation graph
+It may solved polynomial time using reduction
+Some algorithm become simpler used DAGs instead general graph based principle topological ordering
+For example possible find given starting vertex DAGs linear time processing vertex topological order calculating path length vertex minimum maximum length obtained via incoming edge
+In contrast arbitrary graph shortest path may require slower algorithm longest path arbitrary graph find
+Directed acyclic graph representation partial ordering many application system task ordering constraint
+An important class problem type concern collection object need updated cell one cell changed piece computer software changed
+In context graph vertex object updated edge connecting two object whenever one need updated earlier
+A cycle graph called generally allowed would way consistently schedule task involved cycle
+Dependency graph without circular dependency form DAGs
+For instance one cell change necessary recalculate value cell depend directly indirectly changed cell
+For problem task scheduled recalculation value individual cell spreadsheet
+Dependencies arise expression one cell us value another cell
+In case value used must recalculated earlier expression us
+Topologically ordering dependency graph using topological order schedule cell update allows whole spreadsheet updated single evaluation per cell
+Similar problem task ordering arise program compilation computer program optimization
+A somewhat different formulation scheduling constraint used PERT method management large human project one first application DAGs
+In method vertex DAG represent project rather specific task performed
+Instead task activity represented edge DAG connecting two milestone mark beginning completion task
+Each edge labeled estimate amount time take team worker perform task
+The DAG represents project one control total time project
+Individual milestone scheduled according length longest path ending vertex
+A directed acyclic graph may used represent network processing element
+In representation data enters processing element incoming edge leaf element outgoing edge
+For instance electronic circuit design static block represented acyclic system computes function input input output function represented individual
+In general output block used input unless captured register state element maintains acyclic property
+Electronic circuit schematic either paper database form directed acyclic graph using instance component form directed reference lower level component
+Electronic circuit necessarily acyclic directed
+language describe system operation connection output operation input others
+These language convenient describing repetitive data processing task collection operation applied many data item
+They executed operation performed parallel process soon another set input becomes available
+In straight line code sequence statement without loop conditional branch may represented DAG describing input output arithmetic operation performed within code
+This representation allows compiler perform efficiently
+At higher level code organization state dependency module component large software system form directed acyclic graph
+Graphs vertex represent event occurring definite time edge always point early time vertex late time vertex edge necessarily directed acyclic
+The lack cycle follows time associated vertex always increase follow graph never return vertex path
+This reflects natural intuition causality mean event affect future never affect past thus
+An example type directed acyclic graph encountered though case graph considered
+The version history example version software associated unique time typically time version saved committed released
+For citation graph document published one time refer older document
+Sometimes event associated specific physical time
+Provided pair event purely causal relationship edge represent event directed acyclic graph
+For instance represents system probabilistic event vertex directed acyclic graph likelihood event may calculated likelihood predecessor DAG
+In context DAG undirected graph created adding undirected edge parent vertex sometimes called replacing directed edge undirected edge
+Another type graph similar causal structure vertex represent either decision made unknown information edge represent causal influence one vertex another
+In instance diagram often used estimate expected value different choice intervention
+The converse also true
+That application represented directed acyclic graph causal structure either explicit order time example order derived derived graph structure
+This follows directed acyclic graph
+least one way put vertex order edge point direction along order
+may seen directed acyclic graph vertex family member edge relationship
+Despite name graph necessarily tree possibility marriage relative child common ancestor mother father side causing
+The graph descent mother relationship woman descent father relationship men tree within graph
+Because one become ancestor family tree acyclic
+For reason version history system generally structure directed acyclic graph vertex revision edge connecting pair revision directly derived
+These tree general due merges
+In many algorithm maintains representing version history geometric structure course sequence change structure
+For instance algorithm triangulation change replacing one triangle three smaller triangle point added flip operation replace pair triangle different pair triangle
+The history DAG algorithm vertex triangle constructed part algorithm edge triangle two three triangle replace
+This structure allows query answered efficiently find location query point Delaunay triangulation follow path history DAG step moving replacement triangle contains
+The final triangle reached path must Delaunay triangle contains
+In vertex document single publication date
+The edge represent citation bibliography one document necessarily earlier document
+The classic example come citation academic paper pointed article Networks Scientific Papers
+In case paper corresponding vertex citation network
+This important measure
+provide another example judge support conclusion one case recalling earlier decision made previous case
+A final example provided patent must refer earlier earlier patent relevant current patent claim
+By taking special property directed acyclic graph account one analyse graph technique available analysing general graph considered many study
+For instance give new insight citation distribution found different application highlighting clear difference mechanism creating citation network different context
+Another technique trace citation link suggests significant citation chain given
+Directed acyclic graph may also used collection sequence
+In type application one find DAG path form given sequence
+When many sequence share subsequence shared subsequence represented shared part DAG allowing representation use le space would take list sequence separately
+For example computer science formed directed acyclic graph single source edge labeled letter symbol path source sink graph represent set English word
+Any set sequence represented path tree forming tree vertex every prefix sequence making parent one vertex represent sequence one fewer element tree formed way set string called
+A directed acyclic word graph save space trie allowing path diverge rejoin set word possible suffix represented single tree vertex
+The idea using DAG represent family path occurs data structure representing binary function
+In binary decision diagram vertex labeled name binary variable sink edge labeled
+The function value variable value sink found following path starting single source vertex vertex follows outgoing edge labeled value vertex variable
+Just directed acyclic word graph viewed compressed form try binary decision diagram viewed compressed form save space allowing path rejoin agree result remaining decision
+
+A tree hierarchical data structure
+Generally tree consists value together pointer tree
+For example could see class definition like Here child array pointer also hold value
+At point child array empty make tree child base case recursive definition tree
+When draw pointer line look like tree hence name
+Here root node A
+The child list A pointer B C Then child list C contains H I example The child list leaf node empty called leaf node see tree top
+As might imagine tree useful representing hierarchy object
+They also useful maintaining set number collection number subdivided smaller range hierarchically
+A tree abstract data type node consists one element number upper bound tree node one one parent except root parent
+The consequence two may equal ie content equivalent ca exactly one path node therefore loop
+Since I specify rather arc tree I imply unidirectional flow specify
+Really come thing tree defined parent therefore far tree concerned nothing go reverse direction
+There formal abstract data type notation define tree general specific tree
+These give form set notation lambda calculus formal version
+It useful use formal notation eliminate ambiguity provide mean testing implementation ensure terminology consistent work across language
+A plain English description good enough though
+A different approach start graph collection node node point arbitrary number node arc may circular restrict spanning tree graph one path given point arc unidirectional
+It produce different abstract form form start readily generalized
+Finding effect two distinct ADTs always easy
+In A tree information structure capable apparatus arranging information object taking account key
+It valuable sorting different information object regarding various leveled connection think family tree youngster assembled guardian tree
+The binary tree essential information structure utilized part software engineering
+The binary tree valuable information structure quickly putting away sorted information quickly recovering put away information
+A binary tree made guardian hub leaf store information furthermore connection two youngster hub leaf envisioned spatially beneath first hub one set one side one set one side
+It relationship leaf connected connecting leaf otherwise called guardian hub make binary tree effective information structure
+It leaf left lesser key worth quality used hunt leaf tree leaf right equivalent noteworthy key quality
+Thus leaf distant left tree least value though leaf privilege tree best value
+All vitally every leaf join two different abandon start another littler binary tree
+Because nature conceivable effortlessly get embed information binary tree utilizing look embed work recursively approached progressive take
+Still question
+Ask
+
+promptMessage promptMessage This intentionally section
+view full version
+This intentionally section
+view full version
+This intentionally section
+view full version
+COP Viewing Bookmark view later
+Bookmark
+Bookmarked
+No bookmarked document
+snackBarMessage Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Is better algorithm naive O compute number descendant vertex DAG
+Is online algorithm assuming node added one one connect non empty subset existing node
+Context I interested case O n million vertex ten million edge typically
+Alternatively counting number descendant also sink would useful
+A probabilistic approach would way represent set descendant every node
+The union structure trivial cardinality union estimated number coincidence
+However I sure well behaved would propagating DAG intuitively look like error would compound pretty fast
+Very related And actually duplicate This question came site professional enthusiast programmer
+This course expensive node degree large
+Worst case complexity may significantly better unspecified naive algorithm
+The issue difficult problem solve
+Suppose DAG million node million edge etc
+I show portion graph How many descendant
+The number descendant plus number descendant minus number common descendant
+It third term creates difficulty
+You ca know number descendant need also know descendant
+Listing descendant vertex produce output size example graph linear graph vertex without incoming edge descendant following vertex
+This leaf question determine number descendant without enumerating
+I give proof I pretty confident answer
+Assume vertex child find cardinality intersection set descendant nothing know set may share single descendant may set descendant
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+CS Odessa CS Odessa Corp
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R endobj obj R stream yÃÀÆÀ np ïèèh iU e èÃPw äB endstream endobj obj endobj obj R R R R R R R R R R endobj obj R R R R R R R R R endobj obj R endobj obj R endobj obj Bold R endobj obj R endobj obj Bold R endobj obj Bold R endobj obj R R endobj obj Bold R endobj obj endobj obj R stream Ø wãª ÆLp w ãY oËv JdÕh âWD
+
+The Tree Relationship Calculator object accepts XML representation tree calculate relationship two member within
+This article describes relationship calculated term like second cousin first cousin removed mean
+This code includes object calculating relationship written JavaScript well web UI rendering interacting tree
+The setup classic ASP page
+Trees data structure many application Computer Science
+structure represent complex linking component
+Specifically tree type graph node one parent zero child node
+The topmost node tree called root node node tree root node
+The parent node one linked directly current node
+Much terminology used describing tree come name use describe family relationship
+For example two node parent called sibling
+We also use term ancestor descendant child describe relative position node
+For reference I including link explain concept terminology discussed
+The depth node another important concept use calculating relationship
+If start given node move upwards parent would call one step
+Moving parent parent would two step
+If keep moving tree root node counting step would distance node root
+While term like ancestor descendant offer vague reference relative position two node tree genealogist use much precise terminology describe relationship allows explain exact relative position two member
+The term third cousin removed one example type relationship program calculate
+There two component measure type relationship two people family tree measure distance horizontally vertically family member
+The first component describes horizontal distance two family member measured far apart closest common relative
+For example first cousin share common grandparent two level
+A second cousin someone closest common ancestor great grand parent three level
+To figure level cousin take number generation away closest common relative subtract one
+A common parent mean second cousin common grand parent mean first cousin
+A common parent mean call sibling
+The diagram show Cyclops Hemera first cousin share common grandparent
+The second component measure vertical distance tree describes far separated generation
+This removed part phrase first cousin removed
+For instance mother one generation older removed
+Your grandmother two generation older twice removed
+You direct descendent grandmother mother use removed terminology however principal distant relative
+Your second cousin twice removed would generation grandmother
+The diagram show Hemera Leto share Chaos closest common ancestor
+Chaos two generation away Hemera four Leto
+We use closer two determine cousin factor difference two calculate removed factor
+This tell u Hemera Leto first cousin twice removed
+Using two component calculate relationship member tree
+Most immediate family special name relationship follow rule distant second third fourth cousin
+For instance zero cousin removed would parent
+Your zero cousin zero time removed sibling
+The following table show named relationship match convention
+Our program calculating relationship take input XML document representing family tree represented root node hold one node turn contains node contain node
+Here entire representing example family tree
+Our example partial family tree Greek god I created information found worth taking look
+Here algorithm follow calculating arbitrary relationship Recursion two important concept Computer Science particularly useful dealing tree
+To find position member program call recursive search function navigate node tree record current position go
+When match found position saved
+The position stored array one element array generation
+The integer stored represents order child starting zero
+For instance position array Hemera would tracking order child tree Chaos Nyx Hemera
+Here recursive search function program
+This function accepts XML node check see match either ID looking call child node
+The function method initiate recursive search
+Once search complete two array describe position member tree
+The function called calculate relationship based position array
+The function compare two array determines distance closest common ancestor member
+This data sent calculate relationship
+The function take distance member closest common ancestor calculate removed cousin factor relationship
+This sent generates text name relationship
+Finally function create text name relationship
+For relationship simply need subtract factor get something like equal second cousin removed
+For named relationship zero cousin etc
+simple lookup match variable predefined name
+The gender variable passed know use aunt instead uncle mother instead father
+The function described make method object
+The entire object found file
+To calculate relationship simply instantiate object passing reference XML tree call function
+The result string representation relationship
+Our code also includes UI render XML visual tree using XHTML CSS
+The UI allows u visualize tree make call Relationship Calculator interface
+I wo go specific page rendered file interested
+You also try
+This article along associated source code file licensed General News Suggestion Question Bug Answer Joke Praise Rant Admin Use switch message switch thread switch page
+
+A question I gotten lot lately difference similarity Computer Science Computer Engineering
+At risk difference I written guide explain Computer Science Computer Engineering alike differ
+Computer Engineering marriage Computer Science Electrical Engineering
+It focus computing form microprocessor embedded computing device laptop desktop system supercomputer
+As concern electrical engineering consideration microprocessor function designed optimized data communicated among electronic component integrated system electronic component designed operate process instruction expressed software software written compiled optimized specific hardware platform
+Therefore computer engineer electrical engineer specialize software design hardware design system design integrates
+Computer Science study data instruction processed stored communicated computing device
+A modern descendant Applied Mathematics Electrical Engineering Computer Science deal algorithm processing data symbolic representation data instruction design instruction language processing data technique writing software process data variety computing platform protocol communicating data reliably securely across network organization data database various type scale emulation human intelligence learning computer algorithm statistical modeling data large database support inference trend technique protecting content authenticity data
+Therefore computer scientist scientist mathematician develop way process interpret store communicate secure data
+Because Computer Engineers Computer Scientists ultimately work data attempt ultimately harness meaning significant overlap coursework student two field take well career pursue
+This minimize distinctive nature two discipline
+It simply acknowledges fact type computer professional find context purpose similar kind project different aspect kind project
+Both Computer Engineers Computer Scientists advance computing technology solve problem using computing technology
+If consider computing technology term scale Computer Engineers operate often microscopic macroscopic end spectrum whereas Computer Scientists work middle part spectrum
+More specifically Computer Engineers deal physic semiconductor electronics may design hardware integrated circuit level small well integration hardware software optimized run realize complete computing system large
+Computer Scientists write software design database devise algorithm format communication secure data processed hardware make integrated system function
+Consider iPhone
+Apple employ Computer Scientists Computer Engineers design new version iPhone
+Computer Engineers Electrical Engineers designed chip house integrated circuit make iPhone various component cell radio screen control memory microprocessor function figured get various component work
+That involves looking device microscopic level integrated system level
+Computer Scientists wrote operating system manages memory concurrently running application apps app store run top operating system packing unpacking data packet network communication encrypting data prying eye see
+The computer scientist provide glue piece bring turn computer engineer beginning product component design computer engineer end product device people text browse web play Angry Birds
+From example easy imagine much dependence function realizing finished product significant overlap coursework Computer Engineers Computer Scientists take career opportunity pursue
+I found website provides particularly helpful description Computer Engineering identifies kind job Computer Engineers work company hire salary earn
+That page begin helpful list specialization area Computer Engineering
+I copied list specialization I marked asterisk Computer Scientists also specialize
+In case overlap Computer Scientists focus software development aspect specialization Computer Engineers study hardware design integration hardware software needed implement specialization
+That website present number interesting data Computer Engineering
+For example table express relationship among Electrical Engineering Computer Engineering Computer Science term class major take percentage class fall category hardware software
+You see computer science software computer engineering hardware theme play table
+That easiest way distinguish two field
+And yet enough overlap ensure kind student find plenty opportunity wide range career computer field
+Professor chair Mathematics Computer Science Director Master Science Information Security Lewis University
+You find
+Please also I would like ask difference Sc
+Computer Science Sc
+Mathematics Computer Science
+I computer science social science natural science
+That good question
+There consensus kind science Computer Science
+A good book subject The Science Computing Shaping Discipline Matti Tedre
+Personally I see Computer Science engineering discipline
+Like Electrical Engineering applies law Physics Math solve problem
+Computer Engineering Computer Science mean different thing different people
+I think article may explaining American view
+In Spain degree time I called Computer Science Engineering literally translated lasted year
+Actually amount work year degree number Credits standardized EU
+They teach math quite bit database software hardware
+I think equivalent Degree Master US
+Now education Spain changed programme I date I know issued kind lightweight degree year
+Later go buy master without knowing nearly much knew degree fundamental
+What business built top education
+I find bit shame actually
+But give older engineer competitive advantage opinion
+Greetings everyone I Computer Engineering Computer Science
+The simplest way I think explain difference BSCE BSCS considering two degree following A BSCE degree include coursework also required BSEE electrical engineering degree
+This prepare graduate work company develop product consisting software directly control hardware
+Some example Motorola Nokia texas instrument
+A BSCE degree include little hardware electrical engineering course required BSCE degree
+Instead computer science coursework operating system design compiler theory advanced algorithm design taken instead
+This best degree working company google amazon Citrix
+Which best depends interest want work
+In experience many company need kind
+While engineer Citrix never need interface hardware develop window kernel mode device driver
+good luck
+Required field marked Kathrynne Skonicki Director Media Relations Office Marketing Communications
+
+At point helpful introduce terminology
+The simply node top tree diagram
+In case one containing
+Note computer science tree root top branch go
+This simply customary way drawing tree
+The node one directly connected
+In example parent parent parent etc
+A node connected directly starting node
+Thus child child etc
+It simply reverse parent relationship
+Nodes parent called
+So sibling example
+An given node either parent parent parent parent etc
+In example ancestor node tree
+The counterpart ancestor
+For example descendant descendant
+The tree sometimes also called node child
+In example leaf
+Note leaf lowest level tree
+The node tree called sometimes
+Note node tree considered root subtree consisting node descendant
+For example subtree rooted follows A sequence node first parent second second parent third etc
+For example tree sequence branch
+The length branch number line segment traversed one le number node
+The branch length
+The tree maximum length branch root leaf
+The tree height since longest possible branch root leaf either length
+A formal definition tree written follows A consists set node either empty root node attached zero subtrees
+Of course subtree must tree
+Thus recursive definition
+Note left right ordering subtrees
+Reversing left right order sibling give different binary tree
+For example reversing subtrees rooted give following different binary tree
+It happens binary expression tree
+The following binary search tree node contains person name
+Only first name used order keep example simple
+Note name ordered alphabetically DAVE come DAWN DAVID come DAWN DAVE etc
+How one create binary search tree first place
+One way starting empty binary search tree adding data item one one
+The first item becomes root
+The next item placed either left child right child node depending ordering
+The third item compared root go left right depending result comparison etc
+find spot
+In case follow path root spot insert new item comparing new item item node encountered along way going left right node maintain ordering prescribed
+Note got data back ascending order
+This always happen inorder traversal binary search tree
+In fact sort done way
+One first insert data binary search tree inorder traversal obtain data ascending order
+Some people call
+Now exactly get list data
+Essentially following recursive definition inorder traversal
+First traverse left subtree root DAWN
+That left subtree one rooted DAVE
+How traverse
+By using process
+We first traverse left subtree one rooted BETH
+Of course go three step subtree rooted BETH
+We begin traversing left subtree empty visit root BETH
+That first data item printed
+Then traverse right subtree one rooted CINDI
+We use process since subtrees empty simply print root CINDI second item printed
+We back left subtree rooted DAVE
+We traversed left subtree go print root DAVE traverse right subtree
+Since right subtree empty subtrees end printing root DAVID
+We continue similar fashion rest binary search tree
+First traverse left subtree whole binary tree
+This subtree rooted
+To apply three step
+We traverse left subtree result printing
+Then traverse right subtree result printing
+Then visit root printing
+Next back left whole binary tree
+We traversed left subtree traverse right subtree printing
+Then visit root printing
+Overall end printing expression
+A postfix expression deciphered looking left right using fact operator applies two previous value
+Note traversal always work like postorder traversal binary expression tree yield postfix form expression
+You may familiar postfix expression calculator use
+In ordinary mathematics used using infix expression operator come two value apply
+For practice try preorder traversal binary expression tree
+The result
+This expression form binary operator precedes two quantity applies
+A preorder traversal binary expression tree always give prefix form expression
+The natural conjecture would inorder traversal binary expression tree would produce expression quite true
+With expression true
+However try infix expression
+Here parenthesis used indicate subtraction done multiplication
+The binary expression tree look like As verify inorder traversal binary expression tree produce infix form slightly different expression one multiplication done subtraction
+The problem get parenthesis back
+It possible modify code inorder traversal always parenthesizes thing plain inorder traversal give parenthesis
+Another use binary search tree storing data item fast lookup later
+In average case pretty fast insert new item binary tree average case data fairly random binary tree reasonably bushy
+In tree known height binary tree insertion operation
+Similarly lookup item already binary tree follows pattern used inserted
+Thus lookup average
+For example look GINA binary tree one compare GINA DAWN root
+Since GINA larger move right child MIKE
+Now compare GINA MIKE
+Since GINA smaller move left child GINA
+Now compare GINA item node also GINA see match
+All lookup like
+One start root follows path root matching item leaf match ever found
+Each node field hold data item two pointer field pointer left child right child respectively
+There constructor class default value two pointer parameter
+Note use initialization list copy field field etc
+There also function extract data node object
+Finally set type name pointer one node object
+The file easy follow let move file
+It set class shown There two data field private
+used keep track many item placed binary search tree
+pointer root node binary search tree
+As class function private helping function publicly available one
+The code file
+The operation publicly available one construct empty binary search tree object destructor function return number item binary search tree function tell binary search tree empty function insert new item still binary search tree finished function find item binary search tree
+The private helping function include one manufacture new node containing given data item left right pointer function free space used node function clear space used node binary search tree leaving empty function free space used subtree function try find given item subtree
+The latter function assist public function job
+Now examine code class function
+The constructor fill zero
+This object represents empty binary search tree
+The destructor us helping function wipe node tree
+As destructor object field automatically wiped
+Note need explicitly reclaim space used outside object handled automatically
+The function work calling function subtree rooted overall root
+This clear node binary search tree
+Then object set properly indicate empty binary search tree
+The code function interesting therefore shown detail
+Notice handed pointer node binary search tree follows postorder traversal pattern visit node subtree rooted given node
+Of course two recursive call
+The stopping case recursion whenever pointer
+In case nothing done clear subtree rooted subtree empty
+Why use postorder traversal one traversal
+Postorder used get rid root node gotten rid node subtrees
+If got rid root node got rid one descendant would likely lose way reach descendant via pointer
+The function us constructor create new node
+Then check dynamic memory allocation node worked
+This exactly procedure followed implemented linked list
+The next several class function simple let jump function
+Its code pasted This function us pair pointer point node currently examined point parent
+These advanced via loop appropriate comparison item inserted item current node moving left right appropriate
+The loop stop point node place new one
+A new node containing item manufactured linked parent either left child right child appropriate
+Of course special case also
+This mean inserting empty tree need field binary search tree object point newly manufactured node
+The function us starting root overall binary search tree
+written recursive function shown examination The first two case function stopping case recursion
+If pointer searching empty tree result item found
+This shown returning value
+If match return pointer current node
+If value looking le one current node search recursively left subtree
+Similarly value looking greater one current node search node right subtree
+Finally file contains test program one binary search tree object
+It simply insert item tree try find value tree etc
+Saint Vincent College Computing Information Science Department Fraser Purchase Road Latrobe PA
+

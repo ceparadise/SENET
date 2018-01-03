@@ -1,0 +1,464 @@
+Until recently software quality metric many development organization nature
+That designed track defect occurrence formal machine testing
+These listed briefly historical importance replacing upstream quality measure metric supersede
+usually highly correlated future defect rate field testing defect rate usually indicate high software complexity special development problem
+Although may counterintuitive experience show higher defect rate testing indicate higher defect rate later use
+If appear development manager set damage control scenario may apply correct quality problem testing becomes problem field
+us defect removal effectiveness DRE metric
+This simply defect removed development phase divided defect latent product time get result percentage
+Because number latent defect yet known estimated defect removed phase plus defect found later
+This metric best used code integration already well downstream development process unfortunately succeeding phase
+This simple metric become widely used tool large application development
+However ad hoc downstream nature naturally lead important metric include defect fix maintenance development process
+Four new metric introduced measure quality software delivered These metric rocket science
+The monthly BMI percent simply time number problem arrival month divided number problem closed month
+Fix responsiveness mean time problem arrival close
+If given problem turnaround time exceeds required standard response time declared delinquent
+The percentage delinquent fix time number get fixed time divided number
+Fix quality traditionally measured negatively lack quality
+It number defective work properly situation worse caused yet problem
+The real quality goal course zero defective fix
+Computer system complex engineered system software make complex
+A number approach taken calculate least estimate degree complexity
+The simplest basis LOC count executable statement computer program
+This metric began day assembly language programming still used today program written programming language
+Most procedural language FORTRAN COBOL ALGOL typically produce six executable ML statement per language statement
+language C Java produce three
+Recent study show curvilinear relationship defect rate executable LOC
+Defect density defect per KLOC appears decrease program size increase program module become large see Figure
+Curiously result suggests may optimum program size leading lowest defect course programming language project size product type computing environment
+Experience seems indicate small program defect rate defect per KLOC
+Programs larger line code similar defect rate
+Programs LOC defect rate near
+This almost certainly effect complexity small tight program usually intrinsically complex
+Programs larger LOC exhibit complexity size many piece
+This situation improve Programming greater latitude least greater convenience choice component size procedural programming
+As might expect interface coding although programming defect rate constant program size
+The Relationship Between LOC Defect Density In Professor Maurice Halstead distinguished software science computer science describing programming process collecting arranging software token either operand operator
+His measure follows He based set derivative measure primitive measure express total token vocabulary overall program length potential minimum volume programmed algorithm actual program volume bit program level complexity metric program difficulty among others
+For example minimum volume represented function perform task entire program
+mean number mental discrimination decision value estimated Halstead
+When metric first announced software development thought Halstead violated Aristotle first law scientific inquiry Do employ rigor subject matter bear
+But none could gainsay accuracy prediction quality result
+In fact latter established software metric issue importance computer scientist established Professor Halstead founder field inquiry
+The major criticism approach accurate metric program length dependent N N known sufficient accuracy program almost done
+Halstead formula fall short direct quantitative measure fail predict program size quality sufficiently upstream development process
+Also choice constant presumes unknown model human memory cognition unfortunately also constant depend program volume
+Thus number fault depends program size later experience supported
+The result shown Figure indicate number defect constant program size may rather take optimum value program LOC
+Perhaps Halstead elaborate quantification fully represent incredible intuition gained long experience
+About time Halstead founded software science McCabe proposed topological measure cyclomatic complexity measure number linearly independent path make computer program
+To compute cyclomatic complexity program graphed formula used More simply turn M equal number binary decision program plus
+An case statement would counted n
+binary decision
+The advantage measure additive program component module
+Usage recommends single module value M greater
+However average every fifth sixth program instruction executed branch M strongly correlate program size LOC
+As early quality measure focus program per se even module mask true source architectural module
+Later researcher proposed structure metric compensate deficiency quantifying program module interaction
+For example metric analogous number input output hardware circuit module attempt fill gap
+Similar metric include number subroutine call macro inclusion per module number design change module among others
+Kan report extensive experimental testing metric also report module length important predictor defect rate number design change complexity level however computed
+Quality metric based either directly indirectly counting line code program module unsatisfactory
+These metric merely surrogate indicator number opportunity make error perspective program coded
+More recently proposed meaningful cluster measurable code user rather programmer perspective
+Function point also surrogate error opportunity
+They represent user need anticipated application program rather programmer completion
+A large program may million LOC application function point would large application system indeed
+A may defined collection executable statement performs task together declaration formal parameter local variable manipulated statement
+A typical function point metric developed Albrecht IBM weighted sum five component characterize application These represent average weighting factor may vary program size complexity
+number component type application
+The function count FC double sum The second step employ scale ass impact general system characteristic term likely effect application The score characteristic summed based following formula find value adjustment factor VAF Finally number function point obtained multiplying number function count value adjustment factor This actually highly simplified version commonly used method documented IFPUG
+Although function point extrinsic counting metric method considered robust intrinsic LOC counting method appearance somewhat subjective experimental nature
+As used time organization develop large software system function point show amazingly high degree repeatability utility
+This probably enforce disciplined learning process software development organization much scientific credibility may posse
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer
+
+learn share knowledge build career
+I see chart Defect Arrival And Kill Rate Chart
+Where code
+I want use custom app
+Thanks Kay The chart embedded CA AC available via custom apps
+You may want review following app Github By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+I estimate software defect
+Well I two exception If I old defect burn I may estimate
+If I found new bug plan fix later sprint I may estimate though I really like defer defect fix
+Otherwise I estimate defect
+Before explaining important pause consider context
+To get away estimating software defect must high quality standard strong suite unit test habitual practice TDD must fix defect soon discovered sprint later
+If context stop reading go put TDD place
+Deciding estimate software defect condition easier make conservative release iteration planning estimate defect least include velocity
+It simple rule simple explain
+Here problem way If estimate new defect include point velocity fix divide backlog size velocity figure done
+By including velocity fixed defect excluding backlog stuff found yet
+It safe assume find defect backlog growing whether recognize
+Dividing inflated velocity number underestimated backlog risky planning
+Sure chart may show projection growth backlog intercept estimate defect correctly relative story
+There enough guessing estimating rate growth backlog considering new story scope increase
+Why make harder including defect computation
+For sake example let say one new defect sprint let assume point average
+Also assume initial velocity without estimating defect backlog point without measure unknown future defect
+If I fix defect without estimate I continue stable velocity
+I stable backlog
+My math easy sprint
+This easy teach
+And conservative
+The alternative estimating defect give stable velocity backlog increase point sprint
+This math let see slope
+something got intercept oh I know
+We compute easily know average defect size defect arrival rate team know average defect size defect arrival rate
+This harder teach
+It even harder get people remember account increasing backlog back envelope figuring head
+Additionally defect hard estimate estimate make defect often reflect behavior different variance different distribution mean effort per point typically significantly different story
+Relative estimation defect story best thing
+Finally organization find ready start next release going otherwise idle team fix defect Product Owner team get ready estimate defect
+Similarly spike I tend estimate I execute quickly possible
+I lean towards velocity measuring effort put toward Value Delivered defect rework research
+I I care greatly release
+If I inflate velocity due defect spike
+thing unplanned I end release velocity number higher actual known value delivered
+Let remind lot context important
+If team high quality standard fix defect soon find perhaps sprint later approach estimating work allow increasing backlog defect accumulate
+If however team defers defect AND intends fix later release approach really really bad poison estimate defect understand current arrival rate historical defect load per release
+I make exception rule I always held belief
+An older post subject discus might myriad different context
+Track quantify represent effect software defect separately
+We working video site tell story
+This This part three series estimating
+Part one Do Estimate Life full difficult decision sometimes make tradeoff
+The founding member
+Currently Enterprise Transformation Consultant Andrew previously held position management product management software development company like Internet Security Systems Allure Global IBM
+Andrew earned BS MS computer science MBA Duke University
+Your email address published
+Required field marked I would say simpler possible estimate defect
+The catastrophic fatal bug might simple one line fix spot correct minute simplest trivial issue one likely end back backlog could complex combination user server compiler code environment take day even isolate
+I would say Bugs estimated
+When I say Bugs I mean thing implemented missing bug missing feature
+I also mean thing unclear unclear requirement
+To Bugs thing coded expected work tested thought working working may may know
+They estimated know problem
+Many time I seen someone look bug order estimate long take fix effort tracked essentially first half fix
+Here old post I wrote A complication discussion deal capitalization
+If capitalize SW development finding fixing defect related current development capitalizable work
+Fixing defect related regression function capitalized prior period however expense
+defect however IS capitalizable
+Only half joking
+So
+If partition work time fix defect last sprint release clear defect backlog sprint release space separate team work training maintenance support defect etc
+choose estimate regression defect
+If batch time team could consider tracking hour ugh estimate defect ugh
+FOLLOW
+
+A organization IEEE world largest technical professional organization dedicated advancing technology benefit humanity
+Copyright IEEE All right reserved
+Use web site signifies agreement term condition
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer startxref EOF obj stream xÚb h Äy endstream endobj obj endobj obj endobj obj endobj obj endobj obj stream ÔÚÐÙÿoI endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream PçßåØ È POéÀUu
+g u Å
+
+deviation standard defect defect maintainability incorrect interface specification
+
+defect
+fixing defect
+None A
+Shows number newly discovered defect per unit time B
+Shows number open defect per unit time
+Shows cumulative total number defect found time
+Any depending company
+A
+The failure occurs reach statement taking TRUE branch IF statement got statement test passed F LSE branch
+B
+The failure depends program inability handle specific data value rather program flow control
+We required test code customer unlikely execute
+All A
+Even though number look appear better achieve number people aspect work much le well
+B
+We know measure variable measurement dysfunctional know interpret result
+You measuring wrong thing thus reaching wrong conclusion
+All
+
+According lecture several risk managing project schedule statistical reliability model
+These include choose one following Testers spend energy early product trying find bug preparing rest project work efficiently B
+Managers might realize testing effort ineffective late project expect low rate bug finding low rate achieved alarm
+It increase pressure tester find bug report bug
+All A
+We never certain program bug free
+B
+We definite stopping point testing make easier manager argue little testing
+We easy answer testing task always required every task take time could spent high importance task
+All
+A
+Security failure result untested part code
+B
+The development team achieved complete statement branch coverage missed serious bug MASPAR operating system
+An error code obscure test function almost every input value find two failure
+All
+A
+That tested every statement program
+B
+That tested every statement every branch program
+That tested every IF statement program
+That tested every combination value IF statement program A
+You discovered every bug program
+B
+You tested every statement branch combination branch program
+You completed every test test plan
+You reached scheduled ship date
+This action might possible undo
+Are sure want continue
+Istqb Sample Questions available
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R endobj obj R stream ÈÀ òÒÒ
+äw endstream endobj obj endobj obj R R R endobj obj R R R R R endobj obj Bold R endobj obj R endobj obj R endobj obj Bold R endobj obj R endobj obj stream ã ðj K ìU ÜäÞþpTÏî Aè Wõ çÞ b
+Þ À Á Â W µõ jÃ Ê ÔIp ôSä à oÖGl
+
+Software metric classified three category product metric process metric project metric
+Product metric describe characteristic product size complexity design feature performance quality level
+Process metric used improve software development maintenance
+Examples include effectiveness defect removal development pattern testing defect arrival response time fix process
+Project metric describe project characteristic execution
+Examples include number software developer staffing pattern life cycle software cost schedule productivity
+Some metric belong multiple category
+For example quality metric project process metric project metric
+Software quality metric subset software metric focus quality aspect product process project
+In general software quality metric closely associated process product metric project metric
+Nonetheless project parameter number developer skill level schedule size organization structure certainly affect quality product
+Software quality metric divided quality metric quality metric
+The essence software quality engineering investigate relationship among metric project characteristic quality based finding engineer improvement process product quality
+Moreover view quality entire software perspective regard include metric measure quality level maintenance process another category software quality metric
+In chapter discus several metric three group software quality metric product quality quality maintenance quality
+In last section also describe key metric used several major software developer discus software metric data collection
+As discussed Chapter de facto definition software quality consists two level intrinsic product quality customer satisfaction
+The metric discus cover level Intrinsic product quality usually measured number bug functional defect software long software run encountering crash
+In operational definition two metric defect density rate mean time failure MTTF
+The MTTF metric often used system airline traffic control system avionics weapon
+For instance government mandate air traffic control system unavailable three second per year
+In civilian airliner probability certain catastrophic failure must worse per hour Littlewood Strigini
+The defect density metric contrast used many commercial software system
+The two metric correlated different enough merit close attention
+First one measure failure measure relative software size line code function point etc
+Second although difficult separate defect failure actual measurement data tracking failure defect fault different meaning
+According American National Standards Institute ANSI standard An error human mistake result incorrect software
+The resulting fault accidental condition cause unit system fail function required
+A defect anomaly product
+A failure occurs functional unit system longer perform required function perform within specified limit
+From definition difference fault defect unclear
+For practical purpose difference two term
+Indeed many development organization two term used synonymously
+In book also use two term interchangeably
+Simply put error occurs development process fault defect injected software
+In operational mode failure caused fault defect failure materialization fault
+Sometimes fault cause one failure situation hand fault materialize software executed long time particular scenario
+Therefore defect failure correspondence
+Third defect cause higher failure rate usually discovered removed early
+The probability failure associated latent defect called size bug size
+For software system air traffic control system space shuttle control system operation profile scenario better defined therefore time failure metric appropriate
+For computer system software typical user profile software MTTF metric difficult implement may representative customer
+Fourth gathering data time failure expensive
+It requires recording occurrence time software failure
+It sometimes quite difficult record time failure observed testing operation
+To useful time failure data also requires high degree accuracy
+This perhaps reason MTTF metric widely used commercial developer
+Finally defect rate metric volume defect another appeal commercial software development organization
+The defect rate product expected number defect certain time period important cost resource estimate maintenance phase software life cycle
+Regardless difference similarity MTTF defect density two key metric intrinsic product quality
+Accordingly two main type software reliability growth time failure model defect count defect rate model
+We discus two type model provide several example type Chapter
+Although seemingly straightforward comparing defect rate software product involves many issue
+In section try articulate major point
+To define rate first operationalize numerator denominator specify time frame
+As discussed Chapter general concept defect rate number defect opportunity error OFE specific time frame
+We discussed definition software defect failure
+Because failure defect materialized use number unique cause observed failure approximate number defect software
+The denominator size software usually expressed thousand line code KLOC number function point
+In term time frame various operational definition used life product LOP ranging one year many year software product release general market
+In experience operating system usually defect found within four year software release
+For application software defect normally found within two year release
+The line code LOC metric anything simple
+The major problem come ambiguity operational definition actual counting
+In early day Assembler programming one physical line one instruction LOC definition clear
+With availability language correspondence broke
+Differences physical line instruction statement logical line code difference among language contribute huge variation counting LOCs
+Even within language method algorithm used different counting tool cause significant difference final count
+Jones describes several variation Count executable line
+Count executable line plus data definition
+Count executable line data definition comment
+Count executable line data definition comment job control language
+Count line physical line input screen
+Count line terminated logical delimiters
+To illustrate variation LOC count practice let u look example author software metric
+In Boehm book LOC counting method count line physical line includes executable line data definition comment
+In Conte et al
+LOC defined follows A line code line program text comment blank line regardless number statement fragment statement line
+This specifically includes line containing program header declaration executable statement
+Thus method count physical line including prologue data definition declaration comment
+In Jones source instruction logical line code method used
+The method used IBM Rochester also count source instruction including executable line data definition excluding comment program prologue
+The resultant difference program size counting physical line counting instruction statement difficult ass
+It even known method result larger number
+In language BASIC PASCAL C several instruction statement entered one physical line
+On hand instruction statement data declaration might span several physical line especially programming style aim easy maintenance necessarily done original code owner
+Languages fixed column format FORTRAN may ratio closest one
+According Jones difference count physical line count including instruction statement large average difference logical statement outnumbering physical line
+In contrast COBOL difference opposite direction physical line outnumbering instruction statement
+There strength weakness physical LOC logical LOC Jones
+In general logical statement somewhat rational choice quality data
+When data size program product quality presented method LOC counting described
+At minimum publication quality LOC data involved author state whether LOC counting method based physical LOC logical LOC
+Furthermore discussed Chapter company may use straight LOC count whatever LOC counting method used denominator calculating defect rate whereas others may use normalized count normalized LOC based conversion ratio denominator
+Therefore industrywide standard include conversion ratio language Assembler
+So far little research topic published
+The conversion ratio published Jones well known industry
+As language become available software development research needed area
+When straight LOC count data used size defect rate comparison across language often invalid
+Extreme caution exercised comparing defect rate two product operational definition counting LOC defect time frame identical
+Indeed recommend comparison
+We recommend comparison one history sake measuring improvement time
+The LOC discussion section context defect rate calculation
+For productivity study problem using LOC severe
+A basic problem amount LOC softare program negatively correlated design efficiency
+The purpose software provide certain functionality solving specific problem perform certain task
+Efficient design provides functionality lower implementation effort fewer LOCs
+Therefore using LOC data measure software productivity like using weight airplane measure speed capability
+In addition level language issue LOC data reflect noncoding work creation requirement specification user manual
+The LOC result misleading productivity study Jones state using line code productivity study involving multiple language full life cycle activity viewed professional malpractice
+For detailed discussion LOC function point metric see Jones work
+When software product released market first time certain LOC count method specified relatively easy state quality level projected actual
+For example statement following made This product total KLOC latent defect rate product next four year defect per KLOC
+However enhancement made subsequent version product released situation becomes complicated
+One need measure quality entire product well portion product new
+The latter measurement true development defect rate new changed code
+Although defect rate entire product improve release release due aging defect rate new changed code improve unless real improvement development process
+To calculate defect rate new changed code following must available The entire software product well new changed code release must available
+Defects must tracked release portion code contains defect release portion added changed enhanced
+When calculating defect rate entire product defect used calculating defect rate new changed code defect release origin new changed code included
+These task enabled practice change flagging
+Specifically new function added enhancement made existing function new changed line code flagged specific identification ID number use comment
+The ID linked requirement number usually described briefly module prologue
+Therefore change program module linked certain requirement
+This linkage procedure part software configuration management mechanism usually practiced organization established process
+If IDs requirement IDs linked release number product LOC counting tool use linkage count new changed code new release
+The practice also important developer deal problem determination maintenance
+When defect reported fault zone determined developer determine function enhancement pertaining requirement release origin defect injected
+The new changed LOC count also obtained via method
+By comparing program module original library new version current release library LOC count tool determine amount new changed code new release
+This method involve method
+However change flagging remains important maintenance
+In many software development environment tool automatic change flagging also available
+At IBM Rochester line code data based instruction statement logical LOC includes executable code data definition excludes comment
+LOC count obtained total product new changed code new release
+Because LOC count based source instruction two size metric called new respectively
+The relationship SSI count CSI count expressed following formula Defects release product tracked
+Defects field defect found customer internal defect found internally
+The several postrelease defect rate metric per thousand SSI KSSI per thousand CSI KCSI Total defect per KSSI measure code quality total product Field defect per KSSI measure defect rate field defect field internal per KCSI measure development quality field defect per KCSI measure development quality per defect found customer Metric measure total release code quality metric measure quality new changed code
+For initial release entire product new two metric
+Thereafter metric affected aging improvement deterioration metric
+Metrics process measure field counterpart metric represent customer perspective
+Given estimated defect rate KCSI KSSI software developer minimize impact customer finding fixing defect customer encounter
+The defect rate metric measure code quality per unit
+It useful drive quality improvement development team point view
+Good practice software quality engineering however also need consider customer perspective
+Assume set defect rate goal improvement one product
+From customer point view defect rate relevant total number defect might affect business
+Therefore good defect rate target lead reduction total number defect regardless size
+If new release larger predecessor mean defect rate goal new changed code significantly better previous release order reduce total number defect
+Consider following hypothetical example From initial release second release defect rate improved
+However customer experienced reduction number defect second release smaller
+The size factor work third release much larger second release
+Its defect rate better second release number new defect exceed second release
+Of course sometimes difference two defect rate target large new defect rate target deemed achievable
+In situation action planned improve quality base code reduce volume postrelease field defect finding internally
+Counting line code one way measure size
+Another one
+Both surrogate indicator opportunity error OFE defect density metric
+In recent year function point gaining acceptance application development term productivity function point per quality defect per function point
+In section provide concise summary subject
+A defined collection executable statement performs certain task together declaration formal parameter local variable manipulated statement Conte et
+The ultimate measure software productivity number function development team produce given certain amount resource regardless size software line code
+The defect rate metric ideally indexed number function software provides
+If defect per unit function low software better quality even though defect per KLOC value could function implemented fewer line code
+However measuring function theoretically promising realistically difficult
+The function point metric originated Albrecht colleague IBM however something misnomer technique measure function explicitly Albrecht
+It address problem associated LOC count size productivity measure especially difference LOC count result different level language used
+It weighted total five major component comprise application Number external input transaction type Number external output report type Number logical internal file file user might conceive physical file Number external interface file file accessed application maintained Number external inquiry type online inquiry supported These average weighting factor
+There also low high weighting factor depending complexity assessment application term five component Kemerer Porter Sprouls External input low complexity high complexity External output low complexity high complexity Logical internal file low complexity high complexity External interface file low complexity high complexity External inquiry low complexity high complexity The complexity classification component based set standard define complexity term objective guideline
+For instance external output component number data element type number file type referenced complexity high
+If number data element type fewer number file type referenced complexity low
+With weighting factor first step calculate function count FCs based following formula w weighting factor five component complexity level low average high x number component application
+The second step involves scale ass impact general system characteristic term likely effect application
+The characteristic The score ranging characteristic summed based following formula arrive value adjustment factor VAF score general system characteristic
+Finally number c function point obtained multiplying function count value adjustment factor This equation simplified description calculation function point
+One consult fully documented method International Function Point User Group Standard IFPUG complete treatment
+Over year function point metric gained acceptance key productivity measure application world
+In IFPUG established
+The IFPUG counting practice committee de facto standard organization function point counting method Jones
+Classes seminar function point counting application offered frequently consulting firm software conference
+In application contract work function point often used measure amount work quality expressed defect per function point
+In system software however function point slow gain acceptance
+This perhaps due incorrect impression function point work information system Jones inertia practice effort required function point counting
+Intriguingly similar observation made function point use academic research
+There also issue related function point metric
+Fundamentally meaning function point derivation algorithm rationale may need research theoretical groundwork
+There also many variation counting function point industry several major method IFPUG standard
+In Symons presented function point variant termed Mark II function point Symons
+According Jones Mark II function point widely used United Kingdom lesser degree Hong Kong Canada
+Some minor function point variant include feature point function point full function point
+In based comprehensive software benchmark work Jones set function point variant include least functional metric
+Function point counting expensive accurate counting requires certified function point specialist
+Nonetheless function point metric apparently robust data regard comparison across organization especially study involving multiple language productivity evaluation
+In based large body empirical study Jones published book All metric used throughout book based function point
+According study average number software defect approximately per function point entire software life cycle
+This number represents total number defect found measured early software requirement throughout life cycle software including defect reported user field
+Jones also estimate defect removal efficiency software organization level capability maturity model CMM developed Software Engineering Institute SEI
+By applying defect removal efficiency overall defect rate per function point following defect rate delivered software estimated
+The time frame defect rate specified appears defect rate maintenance life software
+The estimated defect rate per function point follows Another product quality metric used major developer software industry measure problem customer encounter using product
+For defect rate metric numerator number valid defect
+However customer standpoint problem encounter using software product valid defect problem software
+Problems valid defect may usability problem unclear documentation information duplicate valid defect defect reported customer fix available current customer know even user error
+These problem together defect problem constitute total problem space software customer perspective
+The problem metric usually expressed term problem per user month PUM PUM Total problem customer reported true defect problem time period Total number software period PUM usually calculated month software released market also monthly average year
+Note denominator number instead thousand line code function point numerator problem customer encountered
+Basically metric relates problem usage
+Approaches achieve low PUM include Improve development process reduce product defect
+Reduce problem improving aspect product usability documentation customer education support
+Increase sale number installed license product
+The first two approach reduce numerator PUM metric third increase denominator
+The result course action PUM metric lower value
+All three approach make good sense quality improvement business goal organization
+The PUM metric therefore good metric
+The minor drawback business excellent condition number software license rapidly increasing PUM metric look extraordinarily good low value hence need continue reduce number problem numerator metric may undermined
+Therefore total number customer problem also monitored aggressive improvement goal set number installed license increase
+However unlike valid code defect customer problem totally control software development organization
+Therefore may feasible set PUM goal total customer problem increase release release especially sale software increasing
+The key point defect rate metric customer problem metric briefly summarized Table
+The two metric represent two perspective product quality
+For metric numerator denominator match well Defects relate source instruction number function point problem relate usage product
+If numerator denominator mixed poor metric result
+Such metric could counterproductive organization quality improvement effort cause confusion wasted resource
+The customer problem metric regarded intermediate measurement defect measurement customer satisfaction
+To reduce customer problem one reduce functional defect product addition improve factor usability documentation problem rediscovery etc
+To improve customer satisfaction one reduce defect overall problem addition manage factor broader scope timing availability product company image service total customer solution forth
+From software quality standpoint relationship scope three metric represented Venn diagram
+Numerator Valid unique product defect All customer problem defect nondefects first time repeated Denominator Size product KLOC function point Customer usage product Measurement perspective development organization Customer Scope Intrinsic product quality Intrinsic product quality plus factor Customer satisfaction often measured customer survey data via scale Satisfaction overall quality product specific dimension usually obtained various method customer survey
+For example specific parameter customer satisfaction software monitored IBM include CUPRIMDSO category capability functionality usability performance reliability installability maintainability service overall FURPS functionality usability reliability performance service
+Based data several metric slight variation constructed used depending purpose analysis
+For example Percent completely satisfied customer Percent satisfied customer satisfied completely satisfied Percent dissatisfied customer dissatisfied completely dissatisfied Percent nonsatisfied neutral dissatisfied completely dissatisfied Usually second metric percent satisfaction used
+In practice focus reducing percentage nonsatisfaction much like reducing product defect metric used
+In addition forming percentage various satisfaction dissatisfaction category weighted index approach used
+For instance company use facilitate comparison across product
+The NSI following weighting factor NSI range customer completely dissatisfied customer completely satisfied
+If customer satisfied completely satisfied NSI value
+This weighting approach however may masking satisfaction profile one customer set
+For example half customer completely satisfied half neutral NSI value also equivalent scenario customer satisfied
+If satisfaction good indicator product loyalty half completely satisfied half neutral certainly le positive satisfied
+Furthermore sure rationale behind giving weight dissatisfied
+Therefore example NSI good metric inferior simple approach calculating percentage specific category
+If entire satisfaction profile desired one simply show percent distribution category via histogram
+A weighted index data summary multiple indicator cumbersome shown
+For example customer purchase decision expressed function satisfaction specific dimension product purchase decision index could useful
+In contrast simple indicator job weighted index approach avoided
+

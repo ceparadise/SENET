@@ -1,0 +1,414 @@
+When designing program often point decision must made
+This decision known selection implemented programming using IF statement
+An plan set designed solve problem
+When designing algorithm three basic building block construct used Algorithms used help design perform particular task
+You need JavaScript enabled view video clip
+An explanation selection used algorithm programming Selection decision question
+At point program may need ask question reached step one option available
+Depending answer given program follow certain step ignore others
+Many solution feature several choice decision
+These decision lead different path program
+These path represent result making choice
+Without selection would possible include different path program solution create would realistic
+Once algorithm designed perfected must translated code computer read
+We create program algorithm
+Algorithms consist step program consist
+Selection implemented programming using statement
+
+In defines function action input output used together build following organization A monad may value particular creating new type associated specific additional typically handle special case type
+For example simple monad encapsulates may representing automatically ensures null value passed argument function handle serving alternative programming technique throwing catching null value arise
+Another example constant value type List operator bind plain value head previous list
+The monad represents computation sequential structure monad defines mean chain operation together
+This enables programmer build process data series step
+series applied data action additional processing rule provided monad
+A monad defined creates value operator used link action pipeline definition must follow set called needed composition action pipeline work properly
+Monads allow program written putting together highly composable part combining flexible way possible action work particular type data
+As monad described programmable semicolon semicolon operator used chain together individual many language thus expression implies extra code executed action pipeline
+Monads also explained conveyor belt transport data functional unit transform one step time
+program use monad structure procedure include sequenced operation like found
+Many common programming concept described term monad structure without losing beneficial property including variable
+This allows concept defined purely functional manner without major extension language semantics
+Languages like provide monad standard core allowing programmer reuse large part formal definition apply many different library interface combining function
+The name concept come one particular kind mapping category
+In functional programming context thanks specific category used term denotes known category theory
+A monad created defining two operation often also called With element programmer composes sequence function call pipeline several operator chained together expression
+Each function call transforms input plain type value bind operator handle returned monadic value fed next step sequence
+Between pair composed function call bind operator inject monadic value additional information accessible within function pas along
+It also exert finer control flow execution example calling function condition executing function call particular order
+For example following code defines binary operator safe division avoids dividing zero using monad constructor
+The monadic value may form integer
+The integer value contained within extracted plain value processed plain division operator zero
+In fourth example expression pipeline chain together two safe division result first division fed input value second operator therefore result well
+Notice definition operator need check whether input value operator Maybe monad already handle definition either monadic parameter instead matching pattern expression evaluated
+The operation define monad must fulfil several property allow correct composition function
+function use value monad argument return value
+Because monad insert additional operation around program domain logic monad considered sort
+The defined application programmer pipeline required aside operation handled monad built advance
+The programming tend toward purely term shorthand function taking single parameter opposed dyad function taking two parameter
+This predates use term Haskell nearly thirty year meaning entirely different
+The concept monad programming appeared programming language even though called command never formally specified
+first described general use monad structure program
+Several people built work including programming language researcher involved specification
+Early version Haskell used problematic lazy list model Haskell introduced monad flexible way combine
+In addition programming language researcher Haskell library designer successfully applied monad topic including parser programming language interpreter
+The concept monad along Haskell also generalized form
+For long time Haskell derivative major user monad programming
+There also exist formulation monad option design new standard
+Recently included feature called attempt introduce monadic construct within syntax palatable programmer whose prior experience imperative language
+The functional language make heavy use monad includes make monadic composition convenient
+All code sample article written unless noted otherwise
+Two example often given introducing monad monad represent computation expression contain monad represent computation interact effect
+Of course monad restricted Haskell language
+The example section show monad accumulates separate log alongside main chain value computation
+Consider representing value either single value type value
+To distinguish two constructor containing value containing value
+We would like able use type simple sort point computation computation may fail cause rest computation skipped final result
+If step calculation succeed final result value
+In following example function take two argument type return result type
+If value want return sum either want return
+If naively attempt write function kind behavior end nested series else something case quickly become unwieldy To alleviate define operation chaining computation together
+The binary operator chain result one computation could fail function chooses another computation could fail
+If first argument second argument function ignored entire operation simply fails
+If first argument pas function get new value may may result value
+We already value constructor return value without affecting computation additional state
+We write example Using additional known example written The expression resembles imperative program assigns Int value contained monadic value temporary Int variable raise exception either value Nothing
+In case whole expression value Nothing
+The exception handling declared defining input parameter type
+Rather declare error case block behavior defined operator Maybe monad return Nothing executed case
+Since type operation quite common standard function Haskell take two monadic value two Maybes combine content two number using another function addition making possible write previous example Writing definition yield code presented
+In Haskell function externally visible side effect part function semantics
+Although function directly cause side effect construct value desired side effect caller apply convenient time
+In Haskell notation value type represents action performed produce value type
+We think value type take argument current state world return new world state changed according function return value
+For example function standard Haskell library following type So one think function given return action ensure world case underlying file system wo file named get
+Here internal value type mean caller care outcome
+On hand function return wrap boolean value conceptually represents new state world caller know certain whether present file system time performed
+The state world managed way passed action action thus defining series action applied order step state change
+This process similar represents passage time using proposition
+The following example clarifies detail chaining action occurs program using Haskell
+We would like able describe basic type operation
+write text read text standard input read write file send data network etc
+In addition need able compose primitive form larger program
+For example would like able write How formalize intuitive notation
+To need able perform basic operation action It necessarily obvious three preceding operation along suitable primitive set operation allow u define including data transformation using control flow looping control flow using recursion
+We write example one long expression The pipeline structure operator ensures operation get evaluated given order extracting text input stream writing output stream correctly handled functional pipeline
+This remains true even language performs function
+Clearly common structure definition Maybe definition even though different many way
+Monads abstraction upon structure described many similar structure find exploit commonality
+The general monad concept includes situation programmer want carry purely functional computation related computation carried side
+A monad construction given underlying embeds corresponding type system called monadic type act underlying type
+This monadic type system preserve significant aspect underlying type system adding feature particular monad
+The usual formulation monad programming known following component Given type constructor context value type thought action return value type
+The operation take value plain type put monadic container type operation chain monadic value type function type create monadic value type
+For monad behave correctly definition must obey axiom together called monad law
+The symbol indicates equivalence two Haskell expression following text
+The axiom also expressed using expression using monadic composition operator Although Haskell defines monad term function also possible define monad term two operation
+This formulation fit closely original definition monad category theory
+The operation type M take function two type produce function thing value monad
+The operation type M M flattens two layer monadic information one
+The two formulation related follows Here type M n type M M f type g type M underlying type
+The fmap function defined category type function monad
+It expected satisfy functor law The function characterizes category accounting ability lift value functor
+It satisfy following law This equivalent stating return natural transformation identity id fmap
+In addition function characterizes monad The first two law correspond monad axiom third state join natural transformation fmap
+fmap fmap
+An monad endowed monadic zero binary operator satisfying law monadic zero unit
+The operator type monad constructor underlying data type satisfies zero left right identity
+That Thus additive monad also monoid
+For hand mzero act
+Just multiplying number result binding function produce zero result type Similarly binding function always return zero result zero Intuitively zero represents value monad structure value underlying type
+In Maybe monad Nothing zero
+In List monad empty list zero
+Although time make sense use operator directly program typical use format called mimic appearance imperative language
+The compiler translates expression involving
+For example following definition safe division value Maybe monad equivalent As another example following code transformed compilation It helpful see implementation list monad know map function list concatenates flattens resulting list Therefore following transformation hold following expression equivalent Notice value list used
+The lack arrow translated binding function ignores argument indicates monadic structure interest value inside
+state monad might used changing state without producing result value
+The notation used monad simply syntactic sugar
+A similar example F using computation expression The syntactic sugar maybe block would get translated internally following expression Given value produced safe division might want carry calculation without check manually
+resulted attempted division zero
+We using function define arbitrary monad
+In Haskell called Recall arrow type function take binary function argument return another binary function
+The type signature say If monad lift binary function
+For example defines operator multiplies two number unless one case return
+The advantage need dive detail implementation monad need kind thing another function another monad using make immediately clear meant see
+Mathematically operator defined The simplest monad identity monad attache information value
+A monad performs substitution result
+From category theory point view identity monad derived adjunction
+Some familiar type including monad
+The definition list given
+special application list monad
+For example list comprehension corresponds computation list monad
+The notation list comprehension similar set ca made monad since restriction type computation comparable equality whereas monad put constraint type computation
+Actually Set
+The monad collection naturally represent
+The list collection represents possible result different nondeterministic path computation given time
+For example one executes one saying variable take value list
+If one return would evaluate list result path computation
+Notice bind operator follows theme performing current possible result concatenates result list together
+Statements like also often seen condition true choice performed one dummy path computation return value assigning anything however condition false monad value chooses value effectively terminating path computation
+Other path computation might still succeed
+This effectively serf guard enforce path computation satisfy certain condition continue
+So collection monad useful solving logic puzzle Sudoku similar problem
+In language like list evaluated degree element requested example one asks first element list first element computed
+With respect usage list monad computation mean generate lazy list result computation ask first much work performed needed get first result
+The process roughly corresponds backtracking path computation chosen fails point evaluates last branching point follows next path
+If second element requested enough work get second solution
+So list monad simple way implement backtracking algorithm lazy language
+From category theory point view collection monad derived underlying functor
+Taking different type monoids obtain different type collection table An environment monad also called allows computation depend value shared environment
+The monad type constructor map type function type type shared environment
+The monad function The following monadic operation useful The operation used retrieve current context executes computation modified subcontext
+As state monad computation environment monad may invoked simply providing environment value applying instance monad
+A state monad allows programmer attach state information type calculation
+Given value type corresponding type state monad function accepts state output new state type along return value type
+This similar environment monad except also return new state thus allows modeling environment
+Note monad unlike already seen take type parameter type state information
+The monad operation defined follows Useful state operation include Another operation applies state monad given initial state state monad sequence operation examine update state data
+Informally state monad state type map type return value function type underlying state
+The function From category theory point view state monad derived adjunction product functor exponential functor exists definition
+The writer monad allows program compute various kind auxiliary output composed accumulated addition main result computation
+It often used logging profiling
+Given underlying type value writer monad type type endowed operation satisfying law
+Namely binary operation associative neutral element property
+The monad function simply ε identity element monoid W associative operation respectively
+In JavaScript writer instance expressed array first element arbitrary value second element array collect extra information
+The work monad type constructor creating value monadic type Writer monad simpler component value position array log array position
+used place reserved word JavaScript creates new writer instance basic value empty accumulator array attached
+applies function writer instance return new writer instance composed result application algebraic sum initial new accumulator
+auxiliary function concatenates sequence applied list function
+Examples function return value type expected writer monad Finally example using monad build pipeline mathematical function debug information side array debug information concatenated returned result well A monad return type map type function type
+It used model
+The return bind function follows The function defined follows Other concept researcher expressed monad include Free monad similar intuitively speaking generic structure fulfill monad monoid law without depending type question
+For type free monoid associative binary operation unit element
+In Haskell write Whereas concrete monoid one could add value binary operation simply concatenated signifying belong together
+What belonging together mean however left unspecified
+The free monad based idea
+If take insert get free monad Unlike store list value store list functors wrapped around initial value
+Accordingly instance nothing handing given function list
+Comonads monad
+They defined type constructor two operation type type
+The operation expected satisfy law Alternatively comonads may defined term operation
+The operation define copointed functor
+The operation characterizes comonads type satisfies following law The two formulation related follows Whereas monad could said represent comonad represents kind
+The function extract value context function may used compose pipeline function type
+The identity comonad simplest comonad map type
+The operator identity operator function application
+The product comonad map type tuples type context type comonad
+The comonad operation The function comonad map type function type type endowed structure
+The comonad operation ε identity element associative operation
+The costate comonad map type type base type store
+The comonad operation
+
+Link back
+
+learn share knowledge build career
+There seems consensus use Parsec applicative rather monad
+What benefit applicative parsing monadic parsing
+Is monadic parsing
+The main difference monadic applicative parsing sequential composition handled
+In case applicative parser use whereas monad use
+The monadic approach flexible allows grammar second part depend result first one rarely need extra flexibility practice
+You might think extra flexibility ca hurt reality
+It prevents u useful static analysis parser without running
+For example let say want know whether parser match empty string possible first character match
+We want function With applicative parser easily answer question
+I cheating little
+Imagine data constructor corresponding candidate parser language
+However monadic parser know grammar second part without knowing input
+By allowing able reason le
+This similar choice dynamic static type system
+But point
+What might use extra static knowledge
+Well example use avoid backtracking LL parsing comparing next character set alternative
+We also determine statically whether would ambiguous checking set two alternative overlap
+Another example used error recovery shown paper Doaitse Swierstra Luc Duponcheel
+Usually however choice applicative monadic parsing already made author parsing library using
+When library Parsec expose interface choice one use purely stylistic one
+In case applicative code easier read monadic code sometimes way round
+If parser purely applicative possible analyse structure optimise running
+If parser monadic basically program performing almost interesting analysis equivalent solving halting problem impossible
+Oh yes stylistic difference
+The main reason I see prefer applicative parser monadic parser main reason prefer applicative code monadic code context le powerful applicatives simpler use
+This instance general engineering dictum Do use fork lift dolly
+Do use table saw cut coupon
+Do write code could pure
+Keep simple
+But sometimes extra power
+A sure sign need change course computation based computed far
+In parsing term mean determining parse come next based parsed far word construct grammar way
+With Parsec benefit using Applicative style
+Monad advantage powerful implement context sensitive parser
+Doaitse Swierstra UU parsing efficient used applicatively
+Monads strictly Applicatives
+You could write But way write Because Applicative strictly smaller interface Monad mean sometimes highly optimized
+But clever GHC rewrite rule one often achieve optimization regardless
+Is monadic parsing
+Since Monads subset Applicatives I would conclude applicative parsing subset monadic parsing
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+Like many foolhardy pioneer I endeavoring cross trackless wasteland Understanding Monads
+I still staggering I ca help noticing certain quality Python statement
+Consider fragment Consider open call unit block bind
+The actual monad exposed uh unless monad pattern
+Is
+Or I mistaking FP monadry
+Or morning anything seems plausible
+A related question monad need exception
+In fragment failure hidden code
+Disk corruption absence named file empty file treated
+So need visible IO Exception
+Certainly Scala typeclass eliminated dreaded Null Pointer Exception
+If rethought number Monads NaN DivideByZero special case Like I said morning
+Right definition In programming term type construction would correspond declaration monadic type unit function take role constructor method binding operation contains logic necessary execute registered callback monadic function
+This sound exactly like context manager protocol implementation context manager protocol object statement
+From Owen comment post Monads basic level le cool way use style take producer callback also basically producer like open block code called created
+The full Wikipedia definition A type construction defines every underlying type obtain corresponding monadic type
+In Haskell notation name monad represents type constructor
+If M name monad data type M corresponding type monad
+This sound like
+A unit function map value underlying type value corresponding monadic type
+The result simplest value corresponding type completely preserve original value simplicity understood appropriately monad
+In Haskell function called return due way used described later
+The unit function polymorphic type The actual implementation context manager protocol object
+A binding operation polymorphic type M u M u Haskell represents infix operator
+Its first argument value monadic type second argument function map underlying type first argument another monadic type result monadic type
+This corresponds suite
+So yes I say monad
+I searched related rejected withdrawn PEPs none mentioned word monad
+It certainly applies seems statement resource management monad useful way get
+It almost trivial mention first problem function take function argument
+You easily get around writing function wrapper Since trivial could bother distinguish
+The second problem monad statement rather expression value
+If could give type would actually type
+Speaking practically use Python get value statement
+In Python Since us function rather code block alternative return value function There another thing preventing monadic bind
+The value block would monadic type type constructor item
+As generic
+Considering agf note every interface type constructor I peg type M context manager interface method
+In type type
+To monad would fail runtime
+Moreover could use monadically bind operation would rarely make sense
+The reason need make subtle distinction mistakenly consider monadic wind misusing writing program fail due type error
+In word write garbage
+What need distinguish construct particular thing
+monad one used manner thing
+monad
+The latter requires discipline part programmer definition additional construct enforce discipline
+Here nearly monadic version type In final analysis could consider like combinator general one combinator required monad bind
+There function using monad two required list monad also con append length example defined appropriate bind operator context manager could monadic sense involving monad
+Haskell equivalent file called
+This equivalent Now might look like something monadic
+Its type right side look like
+Another similarity In Python skip Haskell use instead block without arrow
+So I answer question monadic
+You could think written like But type check
+And
+It Haskell write executed executed
+There backtrack clean end something like
+hand close handle block executed
+There another monad called continuation monad allows thing
+However two monad IO continuation using effect two monad requires using monad transformer
+That ugly
+So answer somewhat requires dealing lot subtlety make issue rather opaque
+Python simulate limited bit monad add entering finalization code
+I think simulate
+using might possible dirty hack
+Instead use And Haskell function I recommed reading bear resemblance monad A related question monad need exception
+Basically instead function throw A return B make function return
+The monad behave like exception one line code return error whole block
+However would mean division would type catch division zero
+You would detect error explicitly pattern match use bind code us division even slightest possibility going wrong
+Haskell us exception avoid
+I thought unnecesarily long I believe answer yes used certain way thanks outis reason I thought
+I mentioned comment agf continuation passing style give producer callback run producer feed callback
+But quite true
+Also important run producer result callback
+In case List monad would concatenating list
+This interaction make monad special
+But I believe Python interaction way might expect
+Here example python program employing two statement When run output Now Python imperative language instead merely producing data produce
+But think data like ca combine cool way could combine getting goal
+So focus operation order print statement
+Now compare program Haskell Which produce And ordering
+The analogy two program direct entering bit body exiting bit
+I used Strings instead IO action easier I think similar IO action correct
+And Python run entering statement feed value run exiting statement
+There another huge difference body depend entering statement
+Again I fixible
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+There many method prove I need prove language regular
+For instance I given L regular I prove following L regular
+L w L uv w u L v Can I draw nondeterministic finite automaton prove
+Yes come following language L L regular
+There common
+There also useful property outside computational world
+L also regular construct performing certain operation regular language operation In given example regular langage L basis want say something language L derived
+Following first approach construct suitable model L assume whichever equivalent model L desire remain abstract course since L unknown
+In second approach use L directly apply closure property order arrive description L
+Sophisticated pumping lemma
+See instance Jaffe A necessary sufficient pumping lemma regular language
+Ehrenfeucht Parikh Rozenberg Pumping lemma regular set
+Varricchio A pumping condition regular set
+Well quasi order
+See Bucher Ehrenfeucht Haussler On total regulator generated derivation relation
+Kunz
+Support N series
+Algebraic method based see also
+The answer Ran give fairly extensive listing equivalent model used specify regular language list go automaton MSO logic covered link equivalent model
+And Raphael stress need argument convince audience chosen representation indeed correct
+Reconsidering question add instance
+That mean give valid given model assume specify language L turn model one L
+This generally type model need
+start deterministic FSA L end nondeterminitic one L
+This includes possibility use closure operation explicitly given operation example L
+So point answer great add L L construction building specific language scratch
+Occasionally encounter language specified string every k substring satisfies k fixed constant
+In case language regular
+The idea define finite automaton whose state remember k input symbol answer
+A language regular iff write scanner decides arbitrary string whether belong language using amount memory
+recognition done space
+Another way build language using operation know closed
+This extension exhibiting regular expression many operation available reverse string complement intersection chop piece keep part homomorphism inverse homomorphism By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+mathematician computer scientist graciously agreed lecture series covering monadic design principle applied web development
+You met Greg
+The fundamental concept monad Greg novel conceptually simplified explanation monad matter
+This important required first step series since whole application monadic composition real world web development
+In Greg primarily focus idea view organization data control structure structure
+In OO term
+To make point concrete Greg explores one simplest possible data structure supporting least two different though consistent interpretation API
+The structure used turn investigation
+Not data structure requisite shape provides opportunity see necessary container implement monadic interface
+Running throughout presentation general comparison reuse OO approach functional one
+When monadic API mixed implementing structure get le reuse implementing structure passed type parameter
+Finally work put u unique position see generalize Conway construction also underlying pattern allows generalization suggest
+See See See Hey great
+What would look like F
+Thanks
+F DSL monad called Computation Expressions monad different F
+Also I think monad implementation DSL make easier use implementation code
+So F provides extra language support monad
+However unlike Scala F type compose two monad implementation together easily
+I struggled monad first I realized monad really function composition
+Here blog post emphasizes aspect monad may help understanding Thank Greg
+Thank Charles
+This one really giving blast still
+Today I got copy excellent little intro Conway number back I would like recommend
+I devoured one go read soon possible equipped pencil paper
+The book appearing slide I ordered already Greg book list Now settled praise something sparked quite towards end installment
+It abstracting container representation
+Hmm possibly good thing even Scala oddity immutable
+Sets see ShiNoNoir link
+Ok I got two thing second transfinite ordinal
+I know sound quite ai really much
+I put together postscript admittedly long post still I hope establishes relevant point presuming virtually nothing
+Please also leave comment particular attempt alone
+simplifying quite bit Greg mentioned lot devil detail Microsoft
+

@@ -1,0 +1,1354 @@
+In order individual imperative evaluated
+The emphasis explicit control flow distinguishes language language
+Within imperative statement execution result choice made two path follow
+For functional language function language construct exist achieve result usually termed control flow statement
+A set statement turn generally structured addition grouping also defines
+mechanism alter flow control way similar subroutine usually occur response external stimulus event occur rather execution control flow statement
+At level control flow instruction usually work altering
+For CPUs control flow instruction available conditional unconditional instruction also termed jump
+The kind control flow statement supported different language vary categorized effect A explicit name number assigned fixed position within may referenced control flow statement appearing elsewhere source code
+A label mark position within source code effect
+alternative named label used language placed start line text source code
+Languages use often impose constraint line number must increase value following line may require consecutive
+For example BASIC In language label usually appearing start line immediately followed colon
+For example C The language allowed whole number identifier label linked colon following statement variant allowed whole number
+The statement combination English word pronounced accordingly basic form unconditional transfer control
+Although may either upper lower case depending language usually written The effect goto statement cause next statement executed statement appearing immediately indicated label
+Goto statement many computer scientist notably
+The terminology varies may alternatively known routine procedure function especially return result method especially belong
+In computer memory small current standard subroutine used mainly reduce program size
+A piece code written used many time various place program
+Today subroutine often used help make program structured isolating algorithm hiding data access method
+If many programmer working one program subroutine one kind help divide work
+In structured programming ordered sequencing successive command considered one basic control structure used building block program alongside iteration recursion choice
+In May Böhm Jacopini published article showed program could transformed form involving choice IF THEN ELSE loop WHILE condition DO xxx possibly duplicated code addition Boolean variable flag
+Later author showed choice replaced loop yet Boolean variable
+That minimalism possible mean necessarily desirable computer theoretically need subtract one number another branch result negative practical computer dozen even hundred machine instruction
+What Böhm Jacopini article showed program could
+Other research showed control structure one entry one exit much easier understand form mainly could used anywhere statement without disrupting control flow
+In word
+Later development recently composable continued strategy making component program even freely composable
+Some academic took purist approach result argued even instruction like middle loop bad practice needed proof thus advocated loop single exit point
+This purist approach embodied language designed preferred tool teaching introductory programming academia
+The direct application theorem may result additional local variable introduced structured chart may also result
+The latter issue called context
+Pascal affected problem according empirical study cited student programmer difficulty formulating correct solution Pascal several simple problem including writing function searching element array
+A study Henry Shapiro cited Roberts found using control structure correct solution given subject subject wrote incorrect code problem allowed write return middle loop
+Most programming language control structure initial keyword indicates type control structure involved
+Languages divide whether control structure final keyword
+Conditional expression conditional construct feature perform different computation action depending whether evaluates true false
+Less common variation include compare given value specified constant take action according first constant match
+There usually provision default action else otherwise taken match succeeds
+Switch statement allow compiler optimization
+In case may limited constant expression might extend example right implement default case matching string
+Case logic also implemented functional form statement
+A loop sequence statement specified may carried several time succession
+The code inside loop loop shown obeyed specified number time collection item condition met
+In language loop expressed using rather explicit looping construct
+special case recursion easily transformed iteration
+Most programming language construction repeating loop certain number time
+In case counting go downwards instead upwards step size used
+In example N body loop may execute I value depending programming language
+In many programming language integer reliably used loop
+number represented imprecisely due hardware constraint loop might repeated time depending rounding error hardware compiler version
+Furthermore increment X occurs repeated addition accumulated rounding error may mean value X iteration differ quite significantly expected sequence
+Most programming language construction repeating loop condition change
+Some variation test condition start loop others test end
+If test start body may skipped completely end body always executed least
+A value change detection method used within ordinary loop trigger processing group value
+Values monitored within loop change diverts program flow handling group event associated
+Several programming language later special construct allow implicit looping element array member set collection
+generalise loop also support us
+comprehension together provide similar function Scala
+General iteration construct C statement form used express sort loop others looping number collection parallel
+Where specific looping construct used usually preferred general iteration construct since often make purpose expression clearer
+used assure program segment loop forever exceptional condition arises error
+For instance program loop forever handling event occur stopping process terminated operator
+Infinite loop implemented using control flow construct
+Most commonly unstructured programming jump back goto structured programming indefinite loop loop set never end either omitting condition explicitly setting true
+Some language special construct infinite loop typically omitting condition indefinite loop
+Examples include Ada Fortran Go Ruby
+Often infinite loop unintentionally created programming error loop wherein loop condition us variable never change within loop
+Sometimes within body loop desire skip remainder loop body continue next iteration loop
+Some language provide statement language Perl Ruby
+The effect prematurely terminate innermost loop body resume normal next iteration
+If iteration last one loop effect terminate entire loop early
+Some language like Perl Ruby statement restarts current iteration start
+Ruby statement restarts entire loop initial iteration
+When using loop search table might desirable stop searching soon required item found
+Some programming language provide statement language Perl effect terminate current loop immediately transfer control statement immediately loop
+The following example done support
+Both feature similar comparing code snippet show difference must combined statement construct
+support conditional execution code depending whether loop exited early statement using loop
+For example The clause example linked statement inner statement
+Both Python loop support else clause executed early exit loop occurred
+Some language support breaking nested loop theory circle called break
+One common use example searching table
+This done either via multilevel break break level bash PHP via labeled break break continue given label Java Perl
+Alternatives multilevel break include single break together state variable tested break another level exception caught level broken placing nested loop function using return effect termination entire nested loop using label goto statement
+C include multilevel break usual alternative use goto implement labeled break
+Python multilevel break continue proposed rejected basis added complexity worth rare legitimate use
+The notion break interest give rise today called
+In refined proving possible avoid adding additional variable structured programming long break loop allowed
+Furthermore Kosaraju proved strict hierarchy program exists every integer exists program containing break depth rewritten program break depth le without introducing added variable
+One also subroutine executing looped statement breaking nested loop subroutine
+There multiple break generally implemented exception instead
+In textbook us Tennent notion explain similarity break return statement
+Watt note class sequencer known defined sequencer terminates execution textually enclosing command procedure encompasses break loop including break return statement
+As commonly implemented however return sequencer may also carry return value whereas break sequencer implemented contemporary language usually
+used express correctness loop
+In practical term loop variant integer expression initial value
+The variant value must decrease loop iteration must never become negative correct execution loop
+Loop variant used guarantee loop terminate
+A loop invariant assertion must true first loop iteration remain true iteration
+This implies loop terminates correctly exit condition loop invariant satisfied
+Loop invariant used monitor specific property loop successive iteration
+Some programming language contain native support loop variant invariant
+In case support specification
+Some dialect provide extensive sublanguage describing Loops
+An early example found Conversional Lisp
+provides Loop macro implement sublanguage
+Many programming language especially favoring dynamic style programming offer construct
+These cause flow execution jump given context resume predeclared point
+three common sort control construct exotic one also exist keyword
+standard condition ZERODIVIDE SUBSCRIPTRANGE ENDFILE raised intercepted ON action Programmers also define use named condition
+Like one statement specified many case GOTO needed decide flow control resume
+Unfortunately implementation substantial overhead space time especially SUBSCRIPTRANGE many programmer tried avoid using condition
+Common Syntax example Modern language specialized structured construct exception handling rely use break return
+For example one write Any number variety clause used
+If matching particular control percolate back subroutine call nested block matching found end main program reached point program forcibly stopped suitable error message
+Via influence keyword reserved declaring exception handler language popular today like Java C
+Some language like Ada use keyword introduce exception handler may even employ different keyword Ada pattern matching
+A language like incorporate placeholder exception handler syntax automatically extract several piece information exception occurs
+This approach exemplified construct AppleScript David Watt textbook also analyzes exception handling framework sequencer introduced article section early exit loop
+Watt note abnormal situation generally exemplified arithmetic overflow failure like file found kind error detected program unit handler naturally located program unit
+For example program might contain several call read file action perform file found depends meaning purpose file question program thus handling routine abnormal situation located system code
+Watts note introducing status flag testing caller structured programming even return sequencer would entail result situation application code tends get cluttered test status flag programmer might forgetfully lazily omit test status flag
+In fact abnormal situation represented status flag default ignored
+Watt note contrast status flag testing exception opposite causing program terminate unless programmer explicitly deal exception way possibly adding explicit code ignore
+Based argument Watt concludes jump sequencer escape sequencer suitable dedicated exception sequencer semantics discussed
+In Object Pascal D Java C Python clause added construct
+No matter control leaf code inside clause guaranteed execute
+This useful writing code must relinquish expensive resource opened file database connection finished processing Since pattern fairly common C special syntax Upon leaving compiler guarantee object released effectively variable file stream abstracting side effect initializing releasing file
+Python statement Ruby block argument used similar effect
+All language mentioned define standard exception circumstance thrown
+Users throw exception fact allows user throw catch almost type including basic type like whereas language like Java permissive
+C introduced async keyword supporting direct style
+also known semicoroutines allow control yielded consumer method temporarily typically using keyword
+Like async keyword support programming direct style
+function yield control form without thread
+Coroutines implemented library programming language provides either continuation generator distinction coroutines generator practice technical detail
+In spoof article Lawrence Clark suggested GOTO statement could replaced statement provides entertaining example
+COMEFROM implemented one named
+article Structured Programming go Statements identifies two situation covered control structure listed gave example control structure could handle situation
+Despite utility construct yet found way mainstream programming language
+The following proposed If omitted get loop test top
+If omitted get loop test bottom
+If omitted get infinite loop
+Hence single construction replace several construction programming language
+A possible variant allow one test within loop use see next section appears cover case better
+Languages lacking construct generally emulate using equivalent idiom In loop construct represented using standard infinite loop clause middle confused statement following section
+Naming loop like example optional permit leaving outer loop several nested loop
+This proposed
+A modified version presented
+used specify event may occur within occurrence indicated using name event statement
+When event occur relevant action carried control pass
+This construction provides clear separation determining situation applies action taken situation
+conceptually similar exception similar construct used purpose many language
+The following simple example involves searching table particular item
+One way attack piece software redirect flow execution program
+A variety technique including shadow stack pointer verification used defend attack
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+computer scientist Internet entrepreneur
+He chief executive officer Sporcle
+He best known early employee key technical contributor original Napster
+Aydar bought Fanning first book programming language would use two year later build Napster software
+January April American computer scientist
+She founded Institute Women Technology Anita Borg Institute Women Technology
+While Digital Equipment developed patented method generating complete address trace analyzing designing memory system
+born August Canadian computer scientist best known work programming language compiler related algorithm textbook art science computer programming
+Aho received
+Engineering Physics University Toronto
+born December Danish computer scientist notable creation development widely used programming language
+He Distinguished Research Professor hold College Engineering Chair Computer Science
+born October American business magnate philanthropist investor computer programmer inventor
+Gates former chief executive chairman Microsoft world largest software company Paul Allen
+born Minneapolis Minnesota American computer scientist
+He graduated Purdue University BS EE started computing career wiring programming IBM hybrid mechanical electronic Card Programmed Allison Division General Motors
+born American technologist creator JavaScript scripting language
+He cofounded Mozilla project Mozilla Foundation Mozilla Corporation served Mozilla Corporation chief technical officer briefly chief executive officer
+born American software engineer Distinguished Professor Computer Science Industrial Systems Engineering TRW Professor Software Engineering
+He known many contribution area software engineering
+born November The Hague Netherlands computer scientist
+He studied mathematics University Groningen wrote PhD thesis Rapid user interface development script language Gist
+In joined World Wide Web Consortium work Cascading Style Sheets CSS
+born American Software Engineer worked Sun Microsystems later Oracle Corporation following acquisition Sun
+Cantrill included list development DTrace function OS Solaris provides mean tracing diagnosis software
+He currently Chief Technology Officer Joyent
+FRS December October English polymath
+He mathematician philosopher inventor mechanical engineer best remembered originating concept programmable computer
+September October American computer scientist
+He created C programming language colleague Ken Thompson Unix operating system
+Ritchie Thompson received Turing Award ACM American computer scientist
+He one small group helped develop system Stanford later resulted Sun Microsystems later founder Silicon Graphics
+He define application binary interface Solaris Sun principal system software product
+August April English computer scientist working IBM invented relational model database management theoretical basis relational database
+He made valuable contribution computer science
+born August American computer scientist pioneer field optimizing compiler
+Her achievement include seminal work compiler code optimization parallelization
+She also role intelligence work programming language
+born August American electrical engineer manager
+An early employee Digital Equipment Corporation DEC Bell designed several PDP machine later became Vice President Engineering overseeing development VAX
+born
+November Argentina mathematician computer scientist
+Beginning late Chaitin made contribution algorithmic information theory metamathematics particular result equivalent Godel incompleteness theorem
+OC born May Canadian computer scientist best known father Java programming language
+In Gosling received Bachelor Science Computer Science University Calgary
+December March American computer scientist
+He directed team invented first widely used programming language FORTRAN inventor form BNF widely used notation define formal language syntax
+born November Marconi Professor Communications Systems Computer Laboratory University Cambridge
+Professor Jon Crowcroft distinguished many seminal contribution development Internet
+His work satellite link interconnection technique paved way rural broadband
+born March American business magnate computer scientist Google alongside Sergey Brin
+On April Page succeeded Eric Schmidt chief executive officer Google
+As Page personal wealth estimated US
+billion ranking Forbes list billionaire
+born September computer programmer author widely known creator Perl programming language Camelia spunky spokesbug Perl
+Wall grew south Los Angeles Bremerton Washington starting higher education Seattle Pacific University
+born December Finnish American software engineer well known architect development Linux kernel
+He honored along Shinya Yamanaka Millennium Technology Prize Technology Academy Finland recognition creation new open source operating system computer leading widely used Linux kernel
+born Guatemalan entrepreneur associate professor Computer Science Department Carnegie Mellon University
+He known one pioneer crowdsourcing
+He founder company reCAPTCHA sold Google CEO Duolingo popular platform
+FRS Italian computer scientist Assistant Director Microsoft Research Cambridge UK
+Cardelli well known research type theory operational semantics
+Among contribution helped design implemented first compiler functional programming language ML
+born February American business magnate investor philanthropist author
+He known founder CEO Dell one world leading seller personal computer PCs
+November August Professor Massachusetts Institute Technology Director
+Laboratory Computer Science LCS
+During Dertouzos term LCS innovated variety area including RSA encryption spreadsheet NuBus X Window System Internet
+June November British computer scientist credited several important development computing
+At time death Wilkes Emeritus Professor University Cambridge
+He received number distinction
+born Professor Artificial Intelligence University Bristol recipient Royal Society Wolfson Research Merit Award
+His research contribution across different area machine learning artificial intelligence bioinformatics
+Specifically work concentrated statistical analysis learning algorithm
+June August known Don Estridge led development original IBM Personal Computer PC thus known father IBM PC
+His decision dramatically changed computer industry resulting vast increase number personal computer sold bought
+November Scharnhausen today part Ostfildern May Echterdingen today part German priest inventor
+In devised precision sundial heliochronometer incorporated correction equation time
+November July computer scientist known concurrent programming theory
+In research computer science focused concurrent programming Inspired Dahl Kristen Nygaard programming language Simula invented monitor concept
+born November Greenlandic programmer Canadian citizenship
+He created PHP scripting language authoring first two version language participating development later version led group developer including Jim Winstead
+born March American software freedom activist computer programmer
+He best known launching GNU Project founding Free Software Foundation developing GNU Compiler Collection GNU Emacs writing GNU General Public License
+retired professor computer science mathematics philosophy The University Texas Austin
+He J Strother Moore invented string search algorithm particularly efficient string searching algorithm
+He Moore also collaborated automated theorem prover Nqthm
+born December Amercian engineer one father Internet sharing title American Internet pioneer Vint Cerf
+In December Kahn Cerf received National Medal Technology founding developing Internet
+Kahn protocol important communication protocol Internet
+He responsible originating DARPA Internet program
+In Kahn recipient prestigious ACM Alan Turing award
+In received Presidential Medal Freedom highest civilian award United States
+born Chandigarh December
+He grew Bangalore early education Bishop School Pune St Joseph Boys High School Bangalore
+Sabeer Bhatia Indian American entrepreneur founded Hotmail email service Jaxt
+born August American computer scientist internet entrepreneur Larry Page Google one profitable Internet company
+As June personal wealth estimated US billion
+Together Brin Page percent company
+computer scientist working area data management database theory finite model theory
+He currently senior researcher Institute national de recherche en informatique et en automatique INRIA French national research institute focussing computer science related area professor College de France
+Better known Apple Computers Steve Jobs American inventor pioneered microcomputer revolution
+Born San Francisco California Jobs laid foundation Apple Computers along partner Steve Wozniak
+Under Steve leadership Apple launched series revolutionary product iPhone iPod iPad major contribution modern technology
+Steve also known architect Macintosh widely popular operating system catalyzed mass production computer GUI
+Steve passed away long battle pancreatic cancer
+born June also known TimBL British computer scientist best known inventor World Wide Web
+Berners Lee director World Wide Web Consortium oversees Web continued development
+born June American internet pioneer recognized one father Internet sharing title American engineer Bob Kahn
+His contribution acknowledged lauded repeatedly
+He instrumental development first commercial email system MCI Mail connected Internet
+Copyright
+All Rights Reserved
+
+Numbers integer floating point number
+Negative number represented using sign magnitude two complement
+In CPUs binary number need added together
+One important function perform operation number adding value together
+In program number defined
+
+Computers use fixed number represent integer
+The common integer
+Programmers choose appropriate number bit represent integer program
+If use integer variable program largest value take
+In difficult represent number contain decimal point
+It also difficult represent extremely small large number
+difficult number computer represent infinite number decimal place
+Every device internet unique
+The version used recent year version four also known us number system
+A complete IP address normally viewed number series whole number example
+Each number allows billion unique address
+coming use
+us bit section address creating address
+This allows potentially almost unique IP address
+Sign choose GCSE subject see content tailored
+
+study computer including design architecture us computation system control
+The field includes engineering activity design computer hardware make computer system
+It also theoretical mathematical activity design performance study system component mean technique like queueing theory estimation reliability availability system probabilistic technique
+Since computer system often large complicated allow designer predict failure success without testing experimentation incorporated development cycle
+Computer generally considered separate computer engineering although two overlap extensively area design study computer system
+The major subdisciplines computer science traditionally architecture including level hardware design well hardware software component form computer system software program set instruction tell computer carry task subdivided software engineering programming language operating system information system database artificial intelligence computer graphic theory includes computational method one hand data structure
+Computer science independent discipline date although electronic object study invented two decade earlier
+The root computer science lie primarily related field electrical engineering mathematics
+provides basic circuit idea electrical impulse input circuit combined produce arbitrary output
+The transistor miniaturization circuit along invention electronic magnetic optical medium storage information resulted advance electrical engineering
+source one key concept development idea information represented sequence zero one
+In number represented sequence binary digit way number familiar decimal system represented using digit
+The relative ease two state high low voltage realized electrical electronic device led naturally bit becoming basic unit data storage transmission
+The developed century supplied designing circuit binary input value false true respectively terminology logic yield desired combination output
+Theoretical work computability began provided needed extension design whole machine milestone specification theoretical device manipulates string British mathematician model computational power
+Another breakthrough concept computer usually credited mathematician
+This instruction well data stored fast access critical development modern computer
+Previous thinking limited calculator approach instruction entered one time
+The need user application provided main driving force early day computer science still great extent today
+The difficulty writing program led first development allows programmer use instruction ADD symbol variable
+Such program translated program known assembler binary encoding used computer
+Other piece system software known linking loader combine piece assembled load machine main memory unit ready execution
+The concept linking separate piece code important since allowed library program built carry common first step toward increasingly emphasized notion software reuse
+Assembly language found sufficiently inconvenient language closer natural language invented easier faster programming along came need compiler program translate language program machine code
+As programming language became powerful abstract building efficient compiler create code term execution speed storage became interesting computer science problem
+Increasing use computer early provided development consist software automatically handle input output execution job
+The historical development operating system summarized topic
+Throughout history computer machine utilized two major application computational support scientific engineering discipline data processing business need
+The demand better computational technique led resurgence interest numerical method area mathematics traced method devised several century ago physicist hand computation made validate theory
+Improved method computation obvious potential revolutionize business conducted pursuit business application new information system developed consisted file record stored
+The invention allows rapid access arbitrary record disk led cleverly designed file system also concept development sophisticated database management system commonly use
+development optimal algorithm inserting deleting locating data major area theoretical computer science since beginning heavy use structure virtually computer compiler operating system file system
+Another goal computer science creation machine capable carrying task typically thought requiring
+goal known actually predates first electronic computer although term coined introduced early display data crude image paper plot CRT screen
+Expensive hardware limited availability software kept field growing early computer memory required became affordable
+A bit map binary representation main memory rectangular array point pixel picture element screen
+Because first display used one binary bit per pixel capable displaying one two colour commonly black green black amber
+Later computer memory assigned binary bit per pixel obtain colour
+together display screen development graphic standard make software le led explosive growth field
+Software engineering arose distinct area study late part attempt introduce discipline structure software design development process
+For thorough discussion development computing see
+Architecture deal design computer component hardware creation operating system software control computer
+Although designing building computer often considered province computer engineering practice exists considerable overlap computer science
+field computer science
+From logical vantage point instructive observation offered Dutch Evert Beth independently slightly different form Finnish philosopher Jaakko Hintikka
+Both pointed certain proof method Beth called Curry others computer science become branch mathematics
+Thus theoretical computer science object study theorem also proof well calculation program algorithm
+Theoretical computer science turn close connection investigation idealized computer ramification theory finite automaton mathematical linguistics
+philosophy computer science artificial intelligence AI neuroscience neurology anthropology
+The term used cognitive scientist refers many kind thinking including involved perception branch engineering concerned practical application electricity form including field electronics
+Electronics engineering branch electrical engineering concerned us electromagnetic spectrum application electronic device We welcome suggested improvement article
+You make easier u review hopefully publish contribution keeping point mind
+Your contribution may edited staff publication subject final approval
+Unfortunately editorial approach may able accommodate contribution
+Our editor review submitted meet criterion add article
+Please note editor may make formatting change correct spelling grammatical error may also contact clarification needed
+There problem submission
+Please try later
+Our editor review submitted determine whether revise article
+
+learn share knowledge build career
+One topic seems come regularly mailing list online discussion merit lack thereof Computer Science Degree
+An argument seems come time negative party coding number year never used recursion
+So question This question exists historical significance please use evidence ask similar question
+This question answer frozen changed
+More info
+There number good explanation thread answer use language
+In majority major imperative language implementation
+every major implementation C Basic Python Ruby Java C vastly preferable recursion
+To see walk step language use call function Doing step take time usually little bit take iterate loop
+However real problem step
+When many program start allocate single chunk memory stack run memory often always due recursion program crash due
+So language recursion slower make vulnerable crashing
+There still argument using though
+In general code written recursively shorter bit elegant know read
+There technique language implementers use called eliminate class stack overflow
+Put succinctly function return expression simply result function call need add new level onto stack reuse current one function called
+Regrettably imperative optimization built
+By way Mario typical name ArrangeString function join I surprised language choice already implementation
+Simple english example recursion
+In basic computer science sense recursion function call
+Say linked list structure And want find long linked list recursion This could course done loop well useful illustration concept Whenever function call creating loop recursion
+As anything good us bad us recursion
+The simple example tail recursion last line function call However lame almost pointless example easily replaced efficient iteration
+After recursion suffers function call overhead example could substantial compared operation inside function
+So whole reason recursion rather iteration take advantage clever stuff
+For example call function multiple time different parameter inside loop way accomplish
+A classic example
+You draw one simply recursion call stack branch direction If attempt thing iteration I think find take lot code accomplish
+Other common use case might include traversing hierarchy
+website crawler directory comparison etc
+In practical term recursion make sense whenever need iterative branching
+Recursion method solving problem based divide conquer mentality
+The basic idea take original problem divide smaller easily solved instance solve smaller instance usually using algorithm reassemble final solution
+The canonical example routine generate Factorial The Factorial n calculated multiplying number An iterative solution C look like There nothing surprising iterative solution make sense anyone familiar C
+The recursive solution found recognising nth Factorial n Fact
+Or put another way know particular Factorial number calculate next one
+Here recursive solution C The first part function known sometimes Guard Clause prevents algorithm running forever
+It return value whenever function called value le
+The second part interesting known
+Here call method slightly modified parameter decrement multiply result copy When first encountered kind confusing instructive examine work run
+Imagine call FactRec
+We enter routine picked base case end like If method parameter stopped guard clause end If substitute return value return value get This give clue final solution arrived fast track show step way That final substitution happens base case triggered
+At point simple algrebraic formula solve equates directly definition Factorials first place
+It instructive note every call method result either base case triggered call method parameter closer base case often called recursive call
+If case method run forever
+Recursion solving problem function call
+A good example factorial function
+Factorial math problem factorial example
+This function solves C positive integer tested may bug
+The canonical example factorial look like In general recursion necessarily fast function call overhead tends high recursive function tend small see suffer problem stack overflow anyone
+Some say tend hard get case I really buy
+In situation recursion make sense elegant clear way write particular function
+It noted language favor recursive solution optimize much LISP come mind
+Recursion refers method solves problem solving smaller version problem using result plus computation formulate answer original problem
+Often time process solving smaller version method solve yet smaller version problem reach base case trivial solve
+For instance calculate factorial number one represent
+Thus method recurses find factorial multiplies whatever got give final answer
+Of course find factorial first calculate factorial
+The base case would case know return since
+Consider In mathematics gcd two integer largest positive integer divide number without remainder
+The definition gcd surprisingly simple mod remainder integer division
+In English definition say greatest common divisor number zero number greatest common divisor two number greatest common divisor remainder dividing
+If like know work see Wikipedia article
+Let compute gcd example
+Each step equal one In first step equal zero second part definition applies
+mod go remainder
+At step second part applies time mod divide remainder
+At step second argument answer
+Did notice gcd appears left right side equal sign
+A mathematician would say definition recursive expression defining inside definition
+Recursive definition tend elegant
+For example recursive definition sum list first element list rest list
+Note recurs inside definition end
+Maybe prefer maximum value list instead You might define multiplication integer recursively turn series addition If bit transforming multiplication series addition make sense try expanding simple example see work
+lovely recursive definition Recursive definition around know look
+Notice definition simple base case gcd The recursive case whittle away problem get easy answer
+With understanding appreciate algorithm
+A recursive function one call
+The common reason I found use traversing tree structure
+For example I TreeView checkboxes think installation new program choose feature install page I might want check button would something like pseudocode So see checkRecursively first check node passed call node child
+You need bit careful recursion
+If get infinite recursive loop get Stack Overflow exception I ca think reason people use appropriate
+It useful circumstance others
+I think interesting technique coder perhaps end using often without real justification
+This given recursion bad name circle
+Recursion work best I like call fractal problem dealing big thing made smaller version big thing even smaller version big thing
+If ever traverse search something like tree nested identical structure got problem might good candidate recursion
+People avoid recursion number reason Most people included cut programming teeth procedural programming opposed functional programming
+To people iterative approach typically using loop feel natural
+Those u cut programming teeth procedural programming often told avoid recursion error prone
+We often told recursion slow
+Calling returning routine repeatedly involves lot stack pushing popping slower looping
+I think language handle better others language likely dominant paradigm procedural
+For least couple programming language I used I remember hearing recommendation use recursion get beyond certain depth stack deep
+Recursion expression directly indirectly referencing
+Consider recursive acronym simple example Here simple example many element set
+better way count thing nice simple recursive example
+First need two rule Suppose set like x x x
+let count many item
+We represent When applying recursive solution usually least rule If translate pseudocode get There lot useful example traversing tree example I sure people cover
+For example take factorial But easy see factorial also So generally Of course tricky thing recursion want define thing term already done need place start
+In example make special case defining factorial
+Now see bottom Since defined factorial reach bottom
+Generally speaking recursive procedure two part The recursive part defines procedure term new input combined already done via procedure
+
+A base part make sure process repeat forever giving place start
+It bit confusing get head around first look bunch example come together
+If want much deeper understanding concept study mathematical induction
+Also aware language optimize recursive call others
+It pretty easy make insanely slow recursive function careful also technique make performant case
+Hope help
+I like definition In recursion routine solves small part problem divide problem smaller piece call solve smaller piece
+I also like Steve McConnells discussion recursion Code Complete criticises example used Computer Science book Recursion
+One problem textbook present silly example recursion
+The typical example computing factorial computing Fibonacci sequence
+Recursion powerful tool really dumb use either case
+If programmer worked used recursion compute factorial hire someone else
+I thought interesting point raise may reason recursion often misunderstood
+EDIT This dig Dav answer I seen reply I posted
+A method recursive call either directly indirectly
+When use recursion
+People use recursion complex write iterative code
+For example tree traversal technique like preorder postorder made iterative recursive
+But usually use recursive simplicity
+To recurse solved problem nothing done
+To recurse open problem next step recurse rest
+Well pretty decent definition
+And wikipedia good definition
+So I add another probably worse definition
+When people refer recursion usually talking function written call repeatedly done work
+Recursion helpful traversing hierarchy data structure
+An example A recursive definition staircase A staircase consists single step staircase recursion single step termination In plain English Assume thing The process repeating thing till done called recursion
+I hope plain english answer looking
+A recursive function function contains call
+A recursive struct struct contains instance
+You combine two recursive class
+The key part recursive item contains
+Consider two mirror facing
+We seen neat infinity effect make
+Each reflection instance mirror contained within another instance mirror etc
+The mirror containing reflection recursion
+A good programming example recursion
+The structure recursive Node containing instance Node
+Functions work binary search tree also recursive
+This old question I want add answer logistical point view algorithm correctness point view performance point view
+I use Java work Java support nested function
+As I want recursion I might define external function exists code bump Java bureaucratic rule I might refactor code altogether I really hate
+Thus I often avoid recursion use stack operation instead recursion essentially stack operation
+You want use anytime tree structure
+It useful reading XML
+Recursion applies programming basically calling function inside definition inside different parameter accomplish task
+Recursion strategy problem every step turn small thing one bigger thing time hammer
+Suppose desk covered disorganized mess paper
+How make one neat clean stack paper mess using recursion
+Notice pretty intuitive aside counting everything strictly necessary
+You might go way stack reality could would still work
+The important part hammer With arm always put one stack top make bigger stack matter within reason big either stack
+Recursion process method call iself able perform certain task
+It reduces redundency code
+Most recurssive function method must condifiton break recussive call
+stop calling condition met prevents creating infinite loop
+Not function suited used recursively
+hey sorry opinion agrees someone I trying explain recursion plain english
+suppose three manager Jack John Morgan
+Jack manages programmer John Morgan going give every manager want know would cost
+The answer obvious employee also manager
+HERE come recursion
+start top hierarchy
+summery cost
+start Jack Then check manager employee
+find check manager employee
+Add summery cost every time find manager
+finished Jack go John employee Morgan
+You never know much cycle go getting answer though know many manager many Budget spend
+Recursion tree branch leaf called parent child respectively
+When use recursion algorithm le consciously building tree data
+In plain English recursion mean repeat someting
+In programming one example calling function within
+Look following example calculating factorial number Any algorithm exhibit recursion datatype basically consists case case datatype
+example working type structural recursive algorithm would form really obvious way write algorith work data structure
+look integer well natural number defined using Peano axiom see structural recursive algorithm integer look like factorial function trivial example form
+function call use definition
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This course introduce field computer science fundamental computer programming
+Introduction Computer Science I specifically designed student prior programming experience taking course require background Computer Science
+This course touch upon variety fundamental topic within field Computer Science use Java portable computer programming language developed Sun Microsystems Oracle demonstrate principle
+We begin overview course topic well brief history software development
+We cover basic programming terminology concept object class inheritance polymorphism well fundamental Java primitive data type relational operator control statement exception handling file input
+By end course strong understanding fundamental Computer Science Java programming language
+This course lay groundwork strong educational Computer Science successful career devoted implementing principle learn progress CS discipline
+We begin course identifying motivation learning fundamental programming concept learning history programming language general
+We discus hardware physical device make computer software Operating Systems application run computer computer
+We conclude brief discussion Java programming language use throughout rest course
+By end unit strong understanding history programming well prepared learn programming concept greater detail
+Java programming language
+Since programming OO currently one popular programming paradigm need learn fundamental concept order build career Computer Science
+This unit begin discussion make OO programming unique advantage made paradigm newly designed program
+We discus fundamental concept OO relate back Java
+By end unit strong understanding programming relates Java employed
+Now basic understanding OO programming move fundamental concept programming language studying semester Java
+The concept learn unit many case directly transferable number language
+We begin learning Hello World basic software application simply print Hello World In unit discus relational logical operator Java provide foundation topic like control structure discus Unit
+In unit start taking look operator notation
+We discus relational operator apply numeric operand object operand concluding unit introduction logical operator
+By end unit able perform comparison logic function Java fundamental understanding employed
+Control structure dictate behavior program circumstance
+Control structure belong one two family test value determine code executed based value loop performing identical operation multiple time
+Control structure like switch program behave differently based data fed
+The loop allow repeat block code often needed
+As see functionality useful designing complex program
+This unit introduce control structure way used moving discus switch loop
+We also discus advanced topic nesting scope
+By end unit able draw information learned previous unit create control structure allow create complex useful program
+In addition method predefined Java write method
+In unit discus name method declare parameter list specify return type
+This unit introduces scope variable well
+By end unit strong understanding define call method
+This unit discus Arrays
+An Array data structure allows element data type stored
+Each array element unique index associated value store
+Arrays commonly used loop structure loop
+In addition unit introduces array application
+In unit discus two important programming concept Java input output well exception handling
+Input output technique allow programmer design complex useful program
+For reason must fully understand use programming language functionality
+In unit discus function Java moving file writing reading data file
+Each unit contain discussion applicable Java class part standard programming language FileWriter PrintWriter FileReader BufferedReader IOException
+We identify common pitfall design concept keep mind programmer
+By end unit strong understanding write read file write Java program performs function
+Exception handling mechanism allows program continue executing even error occurs program instead terminating abruptly
+Saylor Academy except otherwise noted
+Excluding course final exam content authored Saylor Academy available license
+material copyright respective owner shared various license
+See
+Saylor Academy trade name Constitution Foundation c organization educational activity conducted
+
+
+learn share knowledge build career
+I ca understand fixed point floating point number due hard read definition Google
+But none I read provide simple enough explanation really
+Can I get plain definition example
+A fixed point number specific number bit digit reserved integer part part left decimal point specific number bit reserved fractional part part right decimal point
+No matter large small number always use number bit portion
+For example fixed point format decimal largest number could represent would smallest would
+Every bit code process number knowledge decimal point
+A floating point number reserve specific number bit integer part fractional part
+Instead reserve certain number bit number called certain number bit say within number decimal place sits called
+So floating point number took digit digit reserved exponent might represent largest value smallest value
+A fixed point number mean fixed number digit decimal point
+A floating point number allows varying number digit decimal point
+For example way storing number requires exactly four digit decimal point fixed point
+Without restriction floating point
+Often fixed point used programmer actually us integer make assumption digit beyond decimal point
+For example I might want keep two digit precision value mean actually mean mean mean etc
+Floating point number general purpose represent small large number way small penalty extra storage decimal place go
+The term refers corresponding manner number represented fixed number digit sometimes decimal point
+With representation placement decimal point relative significant digit number
+For example representation uniform decimal point placement convention represent number etc whereas representation could addition represent etc
+From understanding arithmetic done using integer
+decimal part stored fixed amount bit number multiplied many digit decimal precision needed
+For example If number need stored need two digit precision decimal point number multiplied get
+When performing math number use rule set
+Adding number would yield data
+If want calculate decimal part number use modulo operand
+pseudocode Floating point number completely different story programming
+The current standard floating point number use something like bit data number bit exponent sign
+Take number Floating point let represent every number great deal precision
+Fixed le precise simpler By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In object whose value refers another value stored elsewhere using
+A pointer location memory obtaining value stored location known pointer
+As analogy page number book index could considered pointer corresponding page dereferencing pointer would done flipping page given page number reading text found indexed page
+Pointers data significantly improve performance repetitive operation traversing structure
+In particular often much cheaper time space copy dereference pointer copy access data pointer point
+Pointers also used hold address entry point subroutine
+In used often using called
+A pointer simple concrete implementation abstract
+Several language support type pointer although restriction use others
+While pointer used refer reference general properly applies whose explicitly allows pointer manipulated arithmetically via memory address opposed possible
+Because pointer allow protected unprotected access memory address risk associated using particularly latter case
+Primitive pointer often stored format similar however attempting dereference look pointer whose value never valid memory address would cause program crash
+To alleviate potential problem matter pointer considered separate type parameterized type data point even underlying representation integer
+Other measure may also taken validation bound checking verify content pointer variable contain value valid memory address within numerical range processor capable addressing
+credited invention pointer
+In Lawson presented Computer Pioneer Award f inventing pointer variable introducing concept thus providing first time capability flexibly treat linked list high level language
+According first appeared print technical memorandum
+In pointer kind
+A datum read written using one memory access instance primitive
+A group primitive contiguous memory viewed collectively one datum instance aggregate could logically contiguous byte value represent coordinate point space
+When aggregate entirely composed type primitive aggregate may called sense primitive array byte program use word way
+In context definition smallest primitive specifies different byte
+The memory address initial byte datum considered memory address entire datum
+A primitive value intended used memory address said
+It also said pointer value datum memory address
+More generally pointer kind said obtain datum
+The feature separate pointer kind reference pointer value meant interpreted memory address rather concept
+References serve level indirection A pointer value determines memory address datum used calculation
+Because indirection fundamental aspect algorithm pointer often expressed fundamental typed programming language pointer determines type datum pointer point
+When setting like tree necessary pointer help manage structure implemented controlled
+Typical example pointer start pointer end pointer pointer
+These pointer either actual absolute start address base typically us fewer bit full address usually require one additional arithmetic operation resolve
+Relative address form manual share many advantage disadvantage
+A offset containing unsigned integer used provide relative addressing kilobyte data structure
+This easily extended address pointed forced word boundary requiring additional shift left order adjust offset factor addition base address
+Generally though scheme lot trouble convenience programmer absolute address underlying preferred
+A one byte offset hexadecimal value character
+used point alternative integer value index array
+
+In way character efficiently translated usable sequential absolute address without
+used control usually make extensive use pointer
+The pointer usually embedded table entry may instance used hold entry point executed based certain condition defined table entry
+The pointer however simply index separate associated table comprising array actual address address depending upon programming language construct available
+They also used point earlier table entry loop processing forward skip table entry early exit loop
+For latter purpose pointer may simply table entry number transformed actual address simple arithmetic
+Pointers thin top addressing capability provided modern
+In simplest scheme numeric assigned unit memory system unit typically either depending whether architecture effectively transforming memory large
+The system would also provide operation retrieve value stored memory unit given address usually utilizing machine
+In usual case pointer large enough hold address unit memory system
+This introduces possibility program may attempt access address corresponds unit memory either enough memory installed
+beyond range available memory architecture support address
+The first case may certain platform architecture called segfault
+The second case possible current implementation pointer bit long address extend bit
+Pointers must conform certain rule canonical address pointer dereferenced processor raise
+On hand system unit memory address
+In case complex scheme employed use different part memory different time
+The last incarnation architecture support bit physical memory address mapped linear address space paging mechanism
+Thus possible total memory may accessed time
+Another example computer family processor though supporting MB physical memory could access GB virtual memory combination address segment register made accessing KB one data structure cumbersome
+In order provide consistent interface architecture provide allows address refer unit memory others refer device computer
+There analogous concept file offset array index remote object reference serve purpose address type object
+Pointers directly supported without restriction language implicitly
+They primarily used constructing turn fundamental constructing nearly well passing data different part program
+In functional programming language rely heavily list pointer reference managed abstractly language using internal construct like
+When dealing array critical operation typically involves stage called involves constructing pointer desired data element array
+In data structure pointer used reference explicitly tie one piece structure another
+Pointers used pas parameter reference
+This useful programmer want function modification parameter visible function caller
+This also useful returning multiple value function
+Pointers also used deallocate dynamic variable array memory
+Since variable often become redundant served purpose waste memory keep therefore good practice deallocate using original pointer reference longer needed
+Failure may result available free memory gradually severe case rapidly diminishes accumulation numerous redundant memory block
+The basic define pointer This declares identifier object following type This usually stated succinctly pointer
+Because C language specify implicit initialization object automatic storage duration care often taken ensure address point valid sometimes suggested pointer explicitly initialized value traditionally specified C standardized macro Dereferencing null pointer C produce could catastrophic
+However implementation simply halt execution program question usually
+However initializing pointer unnecessarily could hinder program analysis thereby hiding bug
+In case pointer declared next logical step point something This assigns value address
+For example stored memory location value assignment
+To dereference pointer asterisk used This mean take content locate address memory set value
+If later accessed new value
+This example may clearer memory examined directly
+Assume located address memory also assume machine int wide
+The following would memory following code snippet executed The NULL pointer shown
+By assigning address yield following memory value Then dereferencing coding computer take content address assign location yielding following memory Clearly accessing yield value previous instruction modified content way pointer
+In C array indexing formally defined term pointer arithmetic language specification requires equivalent
+Thus C array thought pointer consecutive area memory gap syntax accessing array identical used dereference pointer
+For example array declared used following manner This allocates block five integer name block act pointer block
+Another common use pointer point dynamically allocated memory return consecutive block memory le requested size used array
+While operator array pointer equivalent result operator differs
+In example evaluate size array evaluate size pointer
+Default value array declared like If located memory starting address machine memory contain following value like address Represented five integer
+These five integer occupy bit byte byte stored first stored consecutively starting address
+The syntax C pointer The last example access content
+Breaking Below example definition This definition essentially definition empty list cell type another link also type
+The definition reference however use potentially confusing signal value
+For reason data structure C usually dealt via carefully checked correctness
+Pointers used pas variable address allowing value changed
+For example consider following code In program required memory depends may enter
+In case programmer need allocate memory dynamically
+This done allocating memory rather variable usually stored
+Variables also stored CPU register another matter Dynamic memory allocation made pointer name like common variable ca given
+Pointers used store manage address block memory
+Such block used store data object array object
+Most structured language provide area memory called object dynamically allocated
+The example C code illustrates structure object dynamically allocated referenced
+The provides function allocating memory block heap
+It take size object allocate parameter return pointer newly allocated block memory suitable storing object return null pointer allocation failed
+The code illustrates memory object dynamically deallocated returned heap free store
+The standard C library provides function deallocating previously allocated memory block returning back heap
+On computing architecture pointer used directly manipulate memory device
+Assigning address pointer invaluable tool programming
+Below simple example declaring pointer type int initialising address example constant In mid using access video capability PCs slow
+Applications typically used access video memory directly casting constant pointer array unsigned int value
+Each value consisted code low byte colour high byte
+Thus put letter row column bright white blue one would write code like following In many language pointer additional restriction object point specific
+For example pointer may declared point language attempt prevent programmer pointing object integer eliminating error
+For example C would integer pointer would char pointer
+The following would yield compiler warning assignment incompatible pointer type declared different type
+To suppress compiler warning must made explicit indeed wish make assignment say cast integer pointer char pointer assign
+A draft C standard requires casting pointer derived one type one another type maintain alignment correctness type Pointers par
+In language allow pointer arithmetic arithmetic pointer take account size type
+For example adding integer number pointer produce another pointer point address higher number time size type
+This allows u easily compute address element array given type shown C array example
+When pointer one type cast another type different size programmer expect pointer arithmetic calculated differently
+In C example array start byte whereas byte point would point
+Other risk casting include loss data wide data written narrow location
+unexpected result value comparison problem especially signed v unsigned value
+Although impossible general determine cast safe language store used confirm dangerous cast valid runtime
+Other language merely accept conservative approximation safe cast none
+As pointer allows program attempt access object may defined pointer origin variety
+However usefulness pointer great difficult perform programming task without
+Consequently many language created construct designed provide useful feature pointer without also sometimes referred
+In context pointer directly address memory used article referred contrast smart pointer variant
+One major problem pointer long directly manipulated number made point unused address data used purpose
+Many language including recent like replace pointer opaque type reference typically referred simply used refer object manipulated number preventing type error
+Array indexing handled special case
+A pointer address assigned called
+Any attempt use uninitialized pointer cause unexpected behavior either initial value valid address using may damage part program
+The result often used function pointer branch address
+In system explicit memory allocation possible create deallocating memory region point
+This type pointer dangerous subtle deallocated memory region may contain data deallocated may reallocated overwritten unrelated code unknown earlier code
+Languages prevent type error deallocation performed automatically reference scope
+Some language like support use simple form help track allocation dynamic memory addition acting reference
+In absence reference cycle object refers indirectly sequence smart pointer eliminate possibility dangling pointer memory leak
+string support reference counting natively
+The introduces optimisation based around eliminate pointer bug without resorting
+A value reserved indicating pointer refer valid object
+Null pointer routinely used represent condition end unknown length failure perform action use null pointer compared value
+An pointer whose value interpreted offset address pointer thus data structure autorelative pointer member point portion data structure data structure may relocated memory without update value auto relative pointer
+The cited patent also us term mean thing
+However meaning term used way A pointer whose value offset value another pointer
+This used store load block data assigning address beginning block base pointer
+In language pointer reference another pointer requiring multiple dereference operation get original value
+While level indirection may add performance cost sometimes necessary order provide correct behavior complex
+For example C typical define term element contains pointer next element list This implementation us pointer first element list surrogate entire list
+If new value added beginning list changed point new element
+Since C argument always passed value using double indirection allows insertion implemented correctly desirable eliminating special case code deal insertion front list In case value le caller properly updated address new item
+A basic example argument given prototype variable pointer array string array array pointer string convention name program character string
+In language pointer reference executable code point function method procedure
+A store address function invoked
+While facility used call function dynamically often favorite technique virus malicious software writer
+A pointer point valid object consequently may make program crash behave oddly
+In pointer specifically initialized may point unpredictable address memory
+The following example code show dangling pointer Here may point anywhere memory performing assignment corrupt unknown area memory trigger
+In doubly back pointer held element back item referring current element
+These useful navigation manipulation expense greater memory use
+These pointer declaration cover variant pointer declaration
+Of course possible triple pointer main principle behind triple pointer already exist double pointer
+The higher priority
+Where pointer used address entry point program start also either uninitialized corrupted call nevertheless made address said occurred
+The consequence usually unpredictable error may present several different way depending upon whether pointer valid address whether coincidentally valid instruction opcode address
+The detection wild branch present one difficult frustrating debugging exercise since much evidence may already destroyed beforehand execution one inappropriate instruction branch location
+If available usually detect wild branch take effect also provide complete partial trace history
+It possible simulate pointer behavior using index normally array
+Primarily language support pointer explicitly support array thought processed entire memory range within scope particular array index thought equivalent assembly language point individual byte whose actual value relative start array absolute address memory
+Assuming array say contiguous character individual byte contiguous byte within array directly addressed manipulated using name array bit unsigned simulated pointer quite similar example shown
+Pointer arithmetic simulated adding subtracting index minimal additional overhead compared genuine pointer arithmetic
+It even theoretically possible using technique together suitable simulate intermediate another language support pointer example
+To achieve code initially loaded contiguous byte array simulator read interpret action entirely within memory contained array
+If necessary completely avoid problem usually actioned compiler hand coded simulator
+strongly typed language pointer typed safe type conversion permitted
+All pointer default initialized attempt access data pointer cause raised
+Pointers Ada called
+Ada permit arithmetic access type although many compiler vendor provided feature Ada support safe arithmetic access type via package
+Several old version Windows platform support STRPTR return address string VARPTR return address variable
+Visual Basic also support OBJPTR return address object interface ADDRESSOF operator return address function
+The type integer value equivalent held pointer type
+Newer dialect exhaustive pointer implementation however
+In FreeBASIC arithmetic pointer equivalent C treated though pointer byte width
+pointer dereferenced Also casting type pointer generate warning
+In pointer variable store address
+Each pointer type point one freely cast pointer type function pointer object pointer
+A special pointer type called void pointer allows pointing object limited fact dereferenced directly shall cast
+The address often directly manipulated casting pointer integral type sufficient size though result may indeed cause undefined behavior earlier C standard integral type guaranteed large enough specifies defined implementation need provide
+fully support C pointer C typecasting
+It also support new group typecasting operator help catch unintended dangerous cast
+Since also provides used situation safer alternative primitive C pointer
+also support another form reference quite different pointer called simply
+ability modify pointer target address arithmetic operation well magnitude comparison restricted language standard remain within bound single array object otherwise invoke
+Adding subtracting pointer move multiple size
+For example adding pointer integer value increment pointer
+This effect incrementing pointer point next element contiguous array often intended result
+Pointer arithmetic performed pointer size thus pointed address added although compiler perform byte arithmetic extension treating
+Pointer arithmetic provides programmer single way dealing different type adding subtracting number element required instead actual offset byte
+Pointer arithmetic pointer us byte offset definition
+In particular C definition explicitly declares syntax element array equivalent content element pointed
+This implies equivalent one write equally well access fourth element array
+While powerful pointer arithmetic source
+It tends confuse novice forcing different context expression ordinary arithmetic one pointer arithmetic one sometimes easy mistake one
+In response many modern computer language example permit direct access memory using address
+Also safe C dialect address many issue pointer
+See discussion
+The supported ANSI C generic pointer type
+A pointer store address object function C implicitly converted object pointer type assignment must explicitly cast dereferenced
+C used pointer purpose ANSI C
+allow implicit conversion pointer type even assignment
+This design decision avoid careless even unintended cast though compiler output warning error encountering cast
+In reference void complement pointer void reference behave like alias variable point never variable whose type
+In pointer supported certain condition block code including pointer must marked keyword
+Such block usually require higher security permission allowed run
+The syntax essentially address pointed either memory
+However pointer managed memory pointer managed object must declared using keyword prevents moving pointed object part memory management pointer scope thus keeping pointer address valid
+An exception using structure safe managed equivalent require unsafe code
+This type often returned using method example The framework includes many class method namespaces class convert type example many type pointer example allow communication
+Most method security permission requirement unmanaged code since affect arbitrary place memory
+The programming language support pointer variable
+Primitive group record data object declared within program inherently memory allocated within program space address data item typically single memory word
+In program source code data item used like variable content implicitly accessed indirectly pointer
+Memory space data object typically using external statement via embedded extended language construct statement
+Extended version COBOL also provide pointer variable declared clause
+The value pointer variable established modified using statement
+Some extended version COBOL also provide variable capable storing
+The language provides full support pointer data type including pointer structure string handling extensive
+quite leap forward compared programming language time
+The derivative C fully support C pointer C typecasting
+The employ value reference semantics without pointer arithmetic
+Nevertheless pointer class provided
+They offer pointer arithmetic typecasting explicit memory management interfacing software feature
+introduced strongly typed pointer capability
+Fortran pointer contain simple memory address
+They also encapsulate lower upper bound array dimension stride example support arbitrary array section metadata
+An used associate variable attribute
+The statement may also used associate pointer block memory
+For example following code might used define create linked list structure add support procedure pointer
+Also part feature support intrinsic function converting pointer Fortran pointer back
+pointer
+Its declaration syntax equivalent C written way around ending type
+Unlike C Go garbage collection disallows pointer arithmetic
+Reference type like exist
+Some type like map channel boxed
+internally pointer mutable structure initialized using function
+In approach unified syntax pointer arrow operator dropped dot operator pointer refers field method dereferenced object
+This however work level indirection
+Unlike explicit representation pointer
+Instead complex data structure like implemented using
+The language provide explicit pointer manipulation operator
+It still possible code attempt dereference null reference null pointer however result thrown
+The space occupied unreferenced memory object recovered automatically
+Pointers implemented much Pascal parameter procedure call
+even strongly typed Pascal fewer way escape type system
+Some variant include garbage collection
+Much pointer available
+There still fewer way evade type system variant still safer respect pointer variant
+As garbage collection part language specification
+Unlike many language feature pointer standard allows pointer reference dynamically created variable anonymous allow reference standard static local variable
+It pointer arithmetic
+Pointers also must associated type pointer one type compatible pointer another type
+pointer char compatible pointer integer
+This help eliminate type security issue inherent pointer implementation particularly used
+It also remove risk caused ability dynamically let go referenced space using standard procedure effect library function found mean risk dangling pointer entirely eliminated
+However commercial open source Pascal derivative compiler implementation pointer allowed reference standard static local variable cast one pointer type another
+Moreover pointer arithmetic unrestricted adding subtracting pointer move number byte either direction using standard procedure move pointer size point
+An untyped pointer also provided name compatible pointer type
+The support pointer although rarely used form pack unpack function
+These intended simple interaction compiled OS library
+In case Perl us typed allow form pointer arithmetic
+They used construct complex data structure
+
+Outline architecture central processing unit CPU function arithmetic logic unit ALU control unit CU register within CPU
+A major defining point history computing realisation data instruction manipulate data logically could stored place
+The computer design built upon principle became known still basis computer today
+Although name honour John von Neumann brilliant mathematician worked construction atomic bomb idea probably originated Presper Echkert John Mauchly two early pioneer worked ENIAC Moore School University Pennsylvania time period
+Another major characteristic von Neumann architecture unit process information separate unit store information
+This characteristic lead following component von Neumann architecture
+Memory collection cell unique physical address
+We use generic word cell rather byte number bit addressable location called memory varies one machine another
+Today computer byte addressable
+To fully illustrate concept memory take computer RAM example
+The memory consists byte mean byte computer uniquely addressable machine bit
+The cell memory numbered consecutively beginning
+For example cell memory cell would addressed follows What content address
+The bit pattern stored location
+However content actually represents instruction value sign etc
+discussed later
+What important however understand bit pattern information interpreted
+When referring bit byte word bit numbered right left beginning zero
+The bit address numbered follows The capable performing basic arithmetic operation adding subtracting multiplying dividing two number
+This unit also capable performing logical operation
+The operates word natural unit data associated particular computer design
+Historically word length computer number bit processed
+However current Intel line processor blurred definition defining word length bit
+The processor work word bit double word bit quadwords bit
+In rest wiki referring word historical nature aforementioned
+Most modern small number special storage unit called
+These register contain one word used store information needed immediately
+For example calculation
+first added result multiplied
+Rather storing result adding memory retrieving multiply result left register content register multiplied
+Access register much faster access memory location
+All computing power world would useful one could input value calculation outside report outside result said calculation
+Input output unit channel computer communicates outside world
+An device data program outside world entered computer
+The first input unit interpreted hole punched paper tape card
+input device however include limited keyboard mouse camera also known simply webcam scanning device
+An device result stored computer memory made available outside world
+Examples include printer screen monitor
+The organising force computer charge
+There two special register control unit
+The contains instruction executed contains address next instruction executed
+Because control unit work closely together often thought one unit called
+Above simplified view flow information part von Neumann machine
+The part connected one another collection wire called bus data travel computer
+Each bus carry three kind information address data control
+An address used select memory location device data go taken
+Data flow bus CPU memory Devices
+The control information used manage flow address data
+For example control signal typically used determine direction data flowing either CPU
+The number bit transfer simultaneously
+The wider bus address data bit move
+Explain use cache memory
+Because memory access time consuming relative speed processor many architecture provide
+Cache memory small amount memory copy frequently used data stored
+Before main memory access made CPU check whether data stored cache memory
+another technique used speed
+This technique split instruction smaller step overlapped
+In personal computer component von Neumann machine reside physically printed circuit board called
+The motherboard also connection attaching device bus mouse keyboard additional storage device
+So mean say machine processor
+The variable usually refers number bit CPU general register Two number added single instruction
+It also refer width bus size addressable always
+In addition refer width data always
+Explain machine instruction cycle
+Before looking computer let u look
+The definition computer outline capability computer electronic device store retrieve process data
+Therefore instruction give computer relate storing retrieving processing data
+The underlying principle von Neumann machine data instruction stored memory treated alike
+This mean instruction data addressable
+Instructions stored contiguous memory location data manipulated stored together different part memory
+To start Cycle first data loaded main memory operating system address first instruction placed onto
+The process cycle includes four step The increment one one point next instruction executed control unit go address memory address register hold address next instruction specified take main memory address bus return memory buffer register via data bus
+The MBR two way register temporarily hold data fetched Memory cache RAM make copy content place copy
+At point contains instruction executed
+Before going next step cycle must updated hold address next instruction executed current instruction completed
+There instruction register responsible instruction solved CU
+CU check status instruction allows execution
+Because instruction stored contiguously memory adding number byte current instruction put address next instruction
+Thus control unit increment
+It possible may changed later instruction executed
+In case instruction must get additional data memory sends address memory bus memory responds returning value location
+In computer data retrieved memory may immediately participate arithmetic logical operation
+Other computer simply save data returned memory register processing subsequent instruction
+At end execution result instruction may saved either register memory
+To execute instruction instruction register control unit determine instruction
+It might instruction access data input device send data output device perform operation data value
+At phase instruction decoded control signal
+That logic circuitry determines operation executed
+This step show computer execute instruction expressed machine language
+The instruction literally built circuit
+The instruction executed may potentially require additional memory access complete task
+For example instruction say add content memory location register control unit must get content memory location
+Once instruction decoded operand data fetched control unit ready execute instruction
+Execution involves sending signal unit carry processing
+In case adding number register operand sent added content register
+When execution complete cycle begin
+If last instruction add value content register next instruction probably say store result place memory
+However next instruction might control instruction asks question result last instruction perhaps change content program counter
+Hardware changed dramatically last yet von Neumann model remains basis computer today
+As Alan Perlis computer scientist said Describe primary memory
+RAM stand Memory
+RAM memory cell usually byte directly accessed
+Inherent idea able access location ability content location
+That storing something else place change bit pattern cell
+In addition RAM computer contain second kind memory called ROM
+ROM stand Memory
+The content location ROM changed
+Their content permanent altered second operation
+Placing bit pattern ROM called
+The bit pattern burnt either time ROM manufactured time computer part assembled
+RAM ROM differentiated basic property RAM ROM
+This mean RAM retain bit configuration power turned ROM
+Because ROM stable changed used store instruction computer need start
+Frequently used software also stored ROM system read software time machine turned
+Main memory usually contains ROM along RAM
+Identify need persistent storage
+An input device mean data program entered computer stored memory
+An output device mean result sent back user
+Because main memory volatile limited essential type storage device program data stored longer processed machine turned
+These type storage device main memory called storage device
+Because data must read written storage device also input output device
+Examples secondary storage device include Describe main function operating system
+Outline use range application software
+As early end first generation software development split programmer wrote tool help programmer used solve problem
+Modern software divided two category system software application software reflecting separation goal
+written address specific need solve problem real world
+Word processing program game inventory control system automobile diagnostic program missile guidance program application software
+manages computer system fundamental level
+It provides tool environment application software created run
+System software often interacts directly hardware provides functionality hardware
+The computer core system software
+An operating system manages computer resource memory device provides interface human interact computer
+Other system software support specific application goal library graphic software render image display
+The operating system allows application program interact system resource
+The diagram illustrates operating system interacts many aspect computer system
+The operating system manages hardware resource
+It allows application software access system resource either directly system software
+It provides direct user interface computer system
+Recall executing program resides main memory instruction processed one another cycle
+technique keeping multiple program main memory time program compete access CPU work
+All modern operating system employ multiprogramming one degree another
+An operating system must therefore perform keep track program memory memory reside
+Another key operating system concept idea defined program execution
+A program static set instruction
+A process dynamic entity represents program executed
+Through multiprogramming computer system might many active process
+The operating system must manage process carefully
+At point time specific instruction may next executed
+Intermediate value calculated
+A process might interrupted execution operating system performs carefully track progress process intermediate state
+Related idea memory management process management need determines process memory executed CPU given point
+One must remember however OS program must executed
+Operating system process must managed maintained main memory along system software application program
+The OS executes CPU program must take turn among
+The following section Single Contiguous Memory Management Partition Memory Management Paged Memory Management interest purpose
+The Computer Science Guide clearly note technical detail needed
+For example memory management described handled multitasking environment expected
+Therefore section serve purpose illustrating memory management technique summarised rather utilised exam
+Has operating system one program memory one time
+This basic type memory management
+The memory broken different part
+Has operating system number program running time different partition
+The partition base bound register
+Base register Bounds register Partition selection First fit Best fit Worst fit A technique process divided page stored memory frame loaded
+Frame Page The number system specifies number digit used system
+The digit always begin continue one le base
+For example digit base
+There digit base
+There digit base
+The base also determines position digit mean
+When one add last digit number system one carry digit position left
+Numbers written using
+The rightmost digit represents value multiplied base zeroth power
+The digit left one represents value multiplied base first power
+The next digit represents value multiplied base second power
+The next digit represents value multiplied base third power
+One usually familiar positional notation even aware
+One instinctively inclined utilise method calculate number one A formal way defining positional notation say value represented polynomial base number system
+But polynomial
+A polynomial sum two algebriac term consists constant multiplied one variable raised integral power
+When defining positional notation variable base number system
+Thus represented polynomial follows acting base To express idea formally number number system digit represented follows represents digit th position number Look complicated
+Take concrete example base
+Here number exactly digit base
+The formula state fifth digit last digit left multiplied base fourth power fourth digit multiplied base third power In previous calculation one assumed number base
+This logical assumption generic number system base
+However reason number could represent value base
+In order distinguish value general notation utilised order represent number base
+Therefore number found base system
+In order turn turn one simply us previous calculation Therefore base equal base
+One must keep mind two number equivalent value
+That represent number thing
+If one bag contains bean second bag contains bean bag contain exact number bean
+The number system allow one represent value various way
+Note base rightmost digit one position
+In base rightmost digit also one position
+In fact true base anything raised power zero one
+Why would anyone want represent value base
+It done often granted sometimes helpful understand work
+For example computing technique called hashing take number scramble one way scramble number interpret different base
+Other base base binary particularly important computer processing
+The binary number system particularly important computing
+It also helpful familiar number system power ase base octal base hexadecimal
+Recall base digit base two digit base eight digit
+Therefore number could represent value base le digit exist base
+It however valid number base base higher
+Likewise number valid number base higher simply exist us digit base lower
+What digit base higher
+One need assign symbol represent digit correspond decimal value beyond
+In base higher one generally look towards letter digit
+The letter A consequently represent number B represent C represent forth
+Therefore digit base Focusing value binary octal hexadecimal represent number base one calculate example decimal equivalent octal base simply put finding
+As case expanding number polynomial form adding number And converting hexadecimal number decimal Define Boolean operator AND OR NOT NAND NOR XOR
+Construct truth table using operator
+The gate computer sometimes referred logic gate perform one logical function
+That gate accepts one input value produce single output value
+Because one dealing binary information input output either corresponding signal corresponding signal
+The type gate input value determine output value
+A NOT gate accepts one input value produce one output value
+The table right illustrates NOT gate three way Boolean expression logical diagram symbol using truth table
+In representation variable represents input signal either
+The variable represents output signal whose value determined value
+By definition input value NOT gate output input value output
+A NOT gate sometimes referred inverts input value
+In Boolean expression NOT operation represented mark value begin negated
+Sometimes operation shown horizontal bar value begin negated
+In Boolean expression table assigned value determined applying NOT operation input value
+In variable left equal sign take value expression side
+The logical diagram symbol NOT gate triangle small circle called end
+The input output shown line flowing gate
+Sometimes line labeled though always
+The truth table show possible input value NOT gate well corresponding output value
+Because one input signal NOT gate signal two possibility column labelled A truth table
+The column labelled show output gate inverse input
+Note three representation truth table actually defines behaviour gate situation
+These three notation different way representing thing example result Boolean expression always result Boolean expression always
+This behaviour consistent value shown truth table
+Unlike NOT gate accepts one input signal AND gate accepts two input signal
+The value input signal determine output signal
+If two input value AND gate output otherwise output
+The AND operation Boolean algebra expressed using single dot case asterisk
+Often operator assumed example often written
+Because two input two possible value input four possible combination provided input AND gate
+Therefore four situation occur AND operator used Boolean expression
+Likewise truth table showing behaviour AND gate four row showing four possible input combination
+Like AND gate two input OR gate
+If two input value output value otherwise input
+The Boolean algebra OR operation expressed using plus sign
+The OR gate two input one two value AND gate four input combination therefore four row truth table
+The XOR OR gate illustrated right
+An XOR gate produce two input otherwise
+Note difference XOR gate OR gate differ one input situation
+When input signal OR gate produce XOR produce
+Sometimes regular OR gate referred OR produce either input
+The XOR produce input mixed one one
+Think XOR gate saying When I say I mean one
+The Boolean algebra symbol sometimes used express XOR operation
+However XOR operation also expressed using operator leave exercise
+Note logic diagram symbol XOR gate like symbol OR gate except extra curved line connecting input signal
+The NAND NOR gate accept two input value
+The NAND NOR gate essentially opposite AND OR gate respectively
+That output NAND gate one took output AND gate put inverter NOT gate
+There typically specific symbol used express NAND NOR gate operation Boolean algebra
+Instead one rely definition express concept
+That Boolean algebra expression NAND negation AND operation
+Likewise Boolean algebra expression NOR negation OR operation
+The logic diagram symbol NAND NOR AND OR except NAND NOR symbol inversion bubble indicate negation
+Compare output column truth table AND NAND
+They opposite row row
+The true OR NOR gate
+Six specific type gate observed
+It may seem difficult task keep straight remember work
+Well probably depends one think
+One encouraged try memorise truth table
+The processing gate described briefly general term
+If one think way one produce appropriate truth table time needed
+Some description term input value cause gate produce n output case produce Construct logic diagram using AND OR NOT NAND NOR XOR
+A combinational circuit consists logic gate whose output determined time present combination input irrespective previous consists input variable logic gate output variable
+The logic gate accept signal input generate signal example combinational circuit binary adder decimal adder decoder multiplexer half adder half subtractor etc
+A logic circuit addition two number called half adder
+addition process reproduced truth table
+
+Eliminate Admin Tasks Secure Environment Govern SharePoint Remediate Content Monitor Activity Tech Specs Resources Even modest SharePoint environment simple administrative task consume significant portion daily focusing higher value task many administrator spend day working administrative task responding simple user request
+Metalogix ControlPoint provides robust set solution automating simplifying common administrative task leaving administrator time focus higher value activity
+From configuring reporting user permission automating provisioning site ControlPoint combine support automating common task feature available provide extensive SharePoint administration solution available
+Properly securing SharePoint requires fine balance protecting organization risk hampering user ability job productive efficient manner
+Improperly configured permission impact user adoption expose organization unnecessary risk
+Complicating issue lack support identifying document contains personal sensitive information well monitoring user behavior suspicious activity
+Metalogix ControlPoint provides full range security solution including permission management backup permission enforcement permission template policy identification remediation sensitive content suspicious user activity monitoring
+Successful SharePoint governance merely function technology
+Instead start people process reliant technology ability support enforce policy governance strategy
+ControlPoint exactly
+An extensive policy engine give technical control need successfully implement monitor SharePoint governance strategy
+SharePoint growth pose significant challenge identification management document contain personal financial sensitive freedom decentralized management combined explosive SharePoint growth put organization risk exposure sensitive content
+Metalogix ControlPoint provides robust set feature identifying managing remediating sensitive content providing extra layer protection SharePoint environment
+While managing reporting enforcement user permission provides layer protection SharePoint environment protect malicious activity privileged user
+The leakage sensitive information often result user correct access acting malicious intent
+Metalogix ControlPoint provides ability monitor user activity identify suspicious behavior triggering corrective action simple alert disabling user account
+As study Metalogix Ponemon Institute reveals organization taking sufficient step protect content accidental exposure data breach
+

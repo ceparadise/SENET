@@ -1,0 +1,487 @@
+learn share knowledge build career
+In computer science two definition word map
+The first associative array type container map value one type value another type
+An example
+The second definition functional programming map applies function take list function applies function element list order return list result
+What origin different definition map
+I guessing second definition might come I sure derived another useful
+The first definition make intuitive sense I sure came
+Both construct define map mathematical sense mapping element one set another
+Well mathematical meaning pairing element one set another
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Get grade money back bullet bullet Delivered time Get grade money back bullet bullet Delivered time Trusted Students Since This essay submitted student
+This example work written professional essay writer
+Any opinion finding conclusion recommendation expressed material author necessarily reflect view UK Essays
+Draw Entity Relationship Data Model describes content structure data held Petcare
+Specify cardinality ratio participation constraint relationship type
+To design database system Petcare need draw Entity Relationship Diagram show entity relationship enteritis
+The ERD model static relationship amongst information preserved maintained database
+The ERD show item data relate statically
+First step need define entity database
+According requirement Petcare entity involved database system record Petcare information Information pet included type breed sex age owner Information pet owner included name address home telephone number mobile telephone number Information included pet appointment owner pet particular branch Petcare attending veterinary Veterinarian date time appointment
+Information veterinary Veterinarian included name address home telephone number mobile telephone number branch report specialize
+The outcome appointment included prescription charge made
+Next step define relationship entity
+The relationship included Participation Constraint Cardinality Ratio
+There two type participation constraint named participation
+A participation mandatory participation constraint specifies every member entity must participate member another linked entity generalization
+A participation optional participation constraint specifies member entity belong member another linked entity generalization
+Three type cardinality described Relation two entity linked primary key
+M N Relation two entity linked without primary key
+It also chance create redundancy error
+Therefore better break two relation
+M Relation two entity linked primary key foreign key
+The relationship Pet The pet raised owner pet owner owner keep pet
+The owner also keep difference kind pet
+There fore relationship Pet Owner Total one many
+Relationship Owner The pet owner would make appointment Veterinarian
+In real case owner would make appointment also Veterinarian also handle case
+A relational database allowed condition
+To solve issue another entity added Owner Veterinarian
+The Owner may make appointment visit veterinarian also also without appointment
+In order simple database design see also new appointment
+Therefore relationship Owner Appointment Total one many
+Relationship Appointment appointment created pet owner handled Veterinarian
+However Veterinarian may respond special case would handle appointment
+Therefore relationship Appointment Veterinarian Partial many one relationship
+Relationship Veterinarian On already mentioned Veterinarian would attend one appointment
+Also Veterinarian would issue diagnosis
+Diagnosis outcome appointment issued veterinarian
+The relationship Veterinarian Diagnosis Total one many
+According entity relationship design got first ERD The ERD showed logical database design Petcare
+The ERD identifies list data element must included database
+Fig
+
+The ERD Petcare
+Produce resulting normalized table clearly indicating primary foreign key
+After complete logical design database draw ERD start physical design database
+The first thing create table define need store database
+A good database design make content table related entity
+In order meet requirement normalization process implemented
+The normalization process need step step transform database step specify name called Form UNF First Normal Form Second Normal Form Third Normal Form Normal Form BCNF The step carried normalization
+Collect Transform form table first normal form Transform first normal form table second normal form Transform second normal form table third normal form According ERD design requirement Petcare Tables database created also attribute added indentify
+PetID attribute also Primary table
+Fig
+
+The Form table The table included requested data information requested Petcare
+However attribute difference table
+The table form table
+We need make content table related entity
+Therefore normalization process implemented
+The first step transforming form table first normal form
+The definition first normal form attribute relation functionally dependent upon primary key
+According definition first normal form avulse attribute relate primary key create another table attribute
+For example table Veterinarian Branch Specialise related Primary key need avulse attribute create another table Branch Specialise
+Another table Diagnosis also issue
+Fig
+
+Normalized table Fig
+Normalized table After process first normalized got First Normal Form table Fig
+
+First Normal Form table The second step transfer first normal form second normal form
+The definition second normal form relation first normal form every attribute fully functionally dependent primary key
+After second normalization got table Fig
+
+Second Normalized table The definition third normal form relation second normal form every attribute dependent primary key
+Because second normalized table already meet equipment
+Therefore third normal form
+The next step design physical database defining Primary Key Foreign key
+This step also defining relationship table
+The Primary Key used identify record table
+The Foreign Key key attribute link table
+The final normalized table detail relationship Primary key Foreign key showed diagram
+Fig
+
+Final table design The last step design database define property attribute
+The property attribute design coding attribute
+A good coding design important good coding design let use easy understand take le mistake input data also determined usability extensibility database
+A good coding design meet requirement Uniqueness one value code may applied entity
+Expandability must sufficient space entry new item
+Conciseness use minimum number character define item
+Uniform size format addition prefix suffix
+Simplicity simple apply understand
+Versatility easy modify change condition
+Sortability may code long correlated sortable code
+Stability need regular updating costly
+Meaningful circumstance useful code reflect characteristic coded entity
+Operability code sufficient meet current future need data identification also minimise clerical system resource required operate
+Other coding design sequence table create also important table may relation table
+We first create table relate table create table relate table
+The sequence table create list sequence Data dictionary
+According requirement table attribute created detail listed Data Dictionary OwnerID char PK The ID owner char Not NULL Name owner varchar NULL Address owner char NULL Phone number owner char NULL Mobile number owner TypeID char PK The ID pet type char Not NULL name pet type BreedID char PK The ID breed type char Not NULL Name Breed type TypeID char FK relate PetType PetID char PK The ID Pet OwnerID char FK relate Owner PetName char Not NULL Name pet Sex char Not NULL sex pet Age numeric Not NULL age pet Breedid char FK relate Breed BranchID char PK The ID branch char Not NULL Name branch char Not NULL Address branch char Not NULL Phone number branch SpeID char PK The ID specialize Specialise char Not NULL Name specialization VetID char PK The ID veterinaria char Not NULL Name veterinaria varchar Not NULL Address veterinaria char Not NULL Phone number veterinaria char Not NULL Mobile number veterinaria SpecID char FK relate Specialisation BranchID char Not NULL The branch veterinaria working AppID char PK The ID appointment VetID char FK relate Veterinarian OwnerID char FK relate owner BranchID char FK relate Branch PetID char FK relate Pet Date date Not NULL date appointment Time time Not NULL time appointment char PK The ID Drug Type char Not NULL Name drug type DrugID char PK The ID drug char FK relate DrugType DrugName char Not NULL Name drug Category char Not NULL How use drug Period char Not NULL Number day use drug PrescID char PK The ID Prescription char FK relate Drug char FK relate Drug char FK relate Drug DiagID char PK The ID diagnosis VelID char FK relate Velerinarian PrescID char FK relate Prescription Price Numeric Not NULL The price diagnosis Using Database Management System DBMS normalized table populate test After completely designed database start create
+Concerning popularity easy use determined use Microsoft Access Database Management System DBMS Petcare database
+We use SQL command create table attribute relationship table
+The SQL command create table list CREATE TABLE Owner OwnerID CHAR PRIMARY KEY CHAR VARCHAR CHAR CHAR CREATE TABLE PetType TypeID CHAR PRIMARY KEY CHAR CREATE TABLE Breed BreedID CHAR PRIMARY KEY CHAR TypeID CHAR REFERENCES PetType TypeID ON DELETE CASCADE ON UPDATE CASCADE CREATE TABLE Pet PetID CHAR PRIMARY KEY OwnerID CHAR REFERENCES Owner OwnerID ON DELETE CASCADE ON UPDATE CASCADE PetName CHAR Sex CHAR Age NUMERIC BreedID CHAR REFERENCES Breed BreedID ON DELETE CASCADE ON UPDATE CASCADE All table also used similar SQL command create would repeat
+After table attribute relationship created
+The whole table diagram showed figure
+Fig
+
+Tables MS Access After table creation finished
+We input test data database test database functioned expended
+We would input least record table
+The screen showed test data table Fig
+
+Table Owner Pet PetType Breed Fig
+
+Table Veterinarian Specialization Appointment Branch Fig
+
+Table Prescription Diagnosis Drug DrugType test following query using Structured Query Language SQL
+In order test database design data input correct need query data form database
+The case test database meet Petcare requirement
+Display name address branch Petcare name veterinary doctor working branch
+Any specialism veterinary doctor also shown
+This general query database goal requirement need join Branch Veterinarian Specialization table select requested data
+The query statement result listed Fig
+
+Result Query
+Display appointment whole Petcare organization
+This ordered date
+The result display branch appointment name veterinary doctor appointment date time appointment name animal appointment type animal breed animal
+Case two difficulty need join Appointment Branch Veterinary Pet PetType Breed total table
+The query complex easy make mistake
+The query statement query result showed Fig
+
+Result query Explain assumption made analyzing designing implementing Each appointment ID one pet
+Same owner bring pet Petcare whould see new appointment
+One prescription maximum list drug
+Normally drug enough case
+If pet issue need drug veterinary open multi prescription difference type drug
+
+need skin medication Painkiller
+also see new appointment
+In assignment database system PatCare included user interface
+The database system used store data DBMS used manager database see bridge Database User interface
+DBMS designed user mainly use command line manager database query data
+Even new DBMS system MS Access SQL GUI also hard normal user use database query data
+In order let user easy use database User Interface must
+The user interface let user easy input data update record check record
+And also form report user print
+The user interface need gorgeous complex
+A good user interface simple convenient easy understand easy use
+We design web base interface web base interface simple easy manage
+The important web base interface need install additional program therefore additional budget buy application
+Take look essay writing service Our Dissertation Writing service help everything full dissertation individual chapter
+Our Marking Service help pick area work need improvement
+Fully referenced delivered time
+Get extra support require
+If original writer essay longer wish essay published UK Essays website please click link request removal Copyright UK Essays trading name All Answers Ltd company registered England Wales
+Company Registration No
+VAT Registration No
+Registered Data Controller No
+Registered office Venture House Cross Street Arnold Nottingham Nottinghamshire
+
+This action might possible undo
+Are sure want continue
+Entity Relationship Diagram available
+
+This action might possible undo
+Are sure want continue
+Entity Relationship Diagram available
+
+Entity Definition An entity thing interest organisation data held
+In business example entity would item customer employee item stock
+Each entity described
+Search Entity UK US Search Entity rest Computing Students
+
+An also called graphical representation entity relationship typically used computing regard organization within information system
+An entity piece concept data stored
+A relationship data shared entity
+There three type relationship entity One instance entity A associated one instance another entity B
+For example database employee employee name A associated one social security number B
+One instance entity A associated zero one many instance another entity B one instance entity B one instance entity A
+For example company employee working one building building name A associated many different employee B employee share singular association entity A
+One instance entity A associated one zero many instance another entity B one instance entity B associated one zero many instance entity A
+For example company employee work multiple project instance employee A associated many instance project B time instance project B multiple employee A associated
+In ER diagram symbol commonly used represent type information
+Most diagram use following Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Relational database allow data separated connected across several table
+Tables connected primary foreign key increase efficiency
+The main characteristic When working relational database user need try keep
+Each entity primary key provide unique reference entity mean entity referenced another table without call detail entity
+You need JavaScript enabled play audio clip
+Matt Clark explains BBC Sport us relational database store access information appears website Entities relate three different way You represent relationship using entity relationship diagram ERD
+For example person address
+For example cinema customer
+For example subject taken student
+Sign choose GCSE subject see content tailored
+
+Standard Article Published Online SEP DOI Copyright John Wiley Sons Book Title Additional Information Ling Lee
+Model
+Wiley Encyclopedia Computer Science Engineering
+
+National University Singapore National University Singapore Data modeling important phase development database system
+The ER model introduced Peter Chen
+This model widely used conceptual data modeling become tool communication database designer end user analysis phase database development
+This article present main construct ER model namely entity relationship associated attribute well extension
+We also discus conceptual database design carried using ER model normal form ER diagram translation ER diagram relational model
+
+Draw Entity Relationship Data Model describes content construction information held Petcare
+Stipulate cardinality ratio engagement restraint relationship type
+To plan database system Petcare need pull Entity Relationship Diagram demo entity relationship enteritis
+The ERD theoretical account inactive relationship amongst information preserved maintained database
+The ERD show point information relate statically
+First measure need specify entity database
+Harmonizing demand Petcare entity involved database system enter Petcare information Information pet included type strain sex age proprietor Information pet proprietor included name reference place telephone figure nomadic telephone figure Information included pet assignment proprietor pet peculiar subdivision Petcare go toing veterinary Veterinarian day month clip assignment
+Information veterinary Veterinarian included name reference place telephone figure nomadic telephone figure branch report specialize
+The result assignment included prescription charge made
+Following measure specify relationship entity
+The relationship included Participation Constraint Cardinality Ratio
+There two type engagement restraint named Total Partial engagement
+A Total engagement compulsory engagement restraint specifies every member entity must take part member another linked entity generalisation
+A Partial engagement optional engagement restraint specifies member entity non belong member another linked entity generalisation
+Three type cardinality described Relation two entity linked primary key merely
+M N Relation two entity linked without primary key
+It besides opportunity make redundancy mistake
+Therefore better interrupt two dealings
+Meter Relation two entity linked primary key foreign key
+The relationship Pet The pet raised proprietor pet merely hold proprietor proprietor maintain pet
+The proprietor besides maintain difference sort pet
+There forward relationship Pet Owner Entire one many
+Relationship Owner The pet proprietor would assignment Veterinarian
+In existent instance proprietor would assignment besides Veterinarian besides non manage instance merely
+A relational database non allowed status
+To work issue another entity Appointment added Owner Veterinarian
+The Owner may assignment visit veterinary besides besides without assignment
+In order simple database design see besides new assignment
+Therefore relationship Owner Appointment Entire one many
+Relationship Appointment assignment created pet proprietor handled Veterinarian
+However Veterinarian may react particular instance would non manage assignment
+Therefore relationship Appointment Veterinarian Partial many one relationship
+Relationship Veterinarian On already mentioned Veterinarian would go one assignment
+Besides Veterinarian would publish diagnosing
+Diagnosis result assignment issued veterinary
+The relationship Veterinarian Diagnosis Entire one many
+Harmonizing entity relationship design got first ERD The ERD showed logical database design Petcare
+The ERD identifies list information element must included database
+Fig
+
+The ERD Petcare
+Produce ensuing normalized tabular array clearly bespeaking primary foreign key
+After complete logical design database pull ERD get physical design database
+The first thing make tabular array specify demand hive away database
+A good database design content tabular array merely related entity
+In order run demand standardization procedure implemented
+The standardization procedure demand measure measure transform database measure specify name called Form UNF First Normal Form Second Normal Form Third Normal Form Normal Form BCNF The stairs carried standardization
+Roll Transform signifier tabular array first normal signifier Transform first normal signifier tabular array back normal signifier Transform normal signifier tabular array third normal signifier Harmonizing ERD design demand Petcare Tables database created besides property added indentify
+PetID attribute besides Primary tabular array
+Fig
+
+The Form tabular array The tabular array included requested information information requested Petcare
+However property difference tabular array
+The tabular array signifier tabular array
+We need content tabular array merely related entity
+Therefore standardization procedure implemented
+The first measure transforming signifier tabular array first normal signifier
+The definition first normal signifier property relation merely functionally dependent upon primary key
+Harmonizing definition first normal signifier avulse property non associate primary key make another tabular array property
+For illustration tabular array Veterinarian Branch Specialise non related Primary key need avulse property make another tabular array Branch A Specialise
+Another tabular array Diagnosis besides issue
+Fig
+
+Normalized tabular array Fig
+Normalized tabular array After procedure first normalized got First Normal Form tabular array Fig
+
+First Normal Form tabular array The measure transfer first normal signifier normal signifier
+The definition normal signifier dealings merely first normal signifier every property full functionally dependent primary key
+After standardization got tabular array Fig
+
+Second Normalized tabular array The definition normal signifier dealings merely normal signifier every property dependant primary key
+Because normalized tabular array already meet equipment
+Therefore normal signifier
+The following measure plan physical database specifying Primary Key Foreign key
+This measure besides specifying relationship tabular array
+The Primary Key used place record tabular array
+The Foreign Key cardinal property associate tabular array
+The concluding normalized tabular array inside information relationship Primary key Foreign key showed diagram
+Fig
+
+Final tabular array design The last measure design database define belonging property
+The belonging property design cryptography property
+A good cryptography design really import good cryptography design allow utilize easy understand take le error input information besides determined serviceability extensibility database
+A good cryptography design run demand Uniqueness merely one value codification may applied entity
+Expandability must hold sufficient infinite entry new point
+Conciseness utilize minimal figure character specify point
+Uniform size A format prefix postfix
+Simplicity simple use understand
+Versatility easy modify alteration condition
+Sortability may non codification every bit long correlated sortable codification
+Stability non necessitate regular updating
+Meaningful fortune utile codification reflect feature coded entity
+Operability codification sufficient run current future demand information designation besides minimise clerical system resource required run
+Other cryptography design sequence table create besides really import tabular array may relation tabular array
+We foremost make tabular array non relate tabular array make table relate tabular array
+The sequence table create list sequence Data lexicon
+Harmonizing demand tabular array property created inside information listed Data Dictionary OwnerID char PK The ID proprietor char Not NULL Name proprietor varchar Nothing Address proprietor char Nothing Phone figure proprietor char Nothing Mobile figure proprietor TypeID char PK The ID pet type char Not NULL name pet type BreedID char PK The ID strain type char Not NULL Name Breed type TypeID char FK relate PetType PetID char PK The ID Pet OwnerID char FK relate Owner PetName char Not NULL Name pet Sexual activity char Not NULL sex pet Age numeral Not NULL age pet Breedid char FK relate Engender BranchID char PK The ID subdivision char Not NULL Name subdivision char Not NULL Address subdivision char Not NULL Phone figure subdivision SpeID char PK The ID specialize Specialise char Not NULL Name specialisation VetID char PK The ID veterinaria char Not NULL Name veterinaria varchar Not NULL Address veterinaria char Not NULL Phone figure veterinaria char Not NULL Mobile figure veterinaria SpecID char FK relate Specialisation BranchID char Not NULL The subdivision veterinaria working AppID char PK The ID assignment VetID char FK relate Veterinarian OwnerID char FK relate proprietor BranchID char FK relate Ramify PetID char FK relate Pet Date day month Not NULL day month assignment Time clip Not NULL clip assignment char PK The ID Drug Type char Not NULL Name drug type DrugID char PK The ID drug char FK relate DrugType DrugName char Not NULL Name drug Class char Not NULL How utilize drug Time period char Not NULL Number hour utilize drug PrescID char PK The ID Prescription char FK relate Drug char FK relate Drug char FK relate Drug DiagID char PK The ID diagnosing VelID char FK relate Velerinarian PrescID char FK relate Prescription Monetary value Numeral Not NULL The monetary value diagnosing Using Database Management System DBMS normalized tabular array dwell trial After wholly designed database get make
+Refering popularity easy utilize determined utilize Microsoft Access Database Management System DBMS Petcare database
+We utilize SQL bid make tabular array property relationship tabular array
+The SQL bid create tabular array list CREATE TABLE Owner OwnerID CHAR PRIMARY KEY CHAR VARCHAR CHAR CHAR CREATE TABLE PetType TypeID CHAR PRIMARY KEY CHAR CREATE TABLE Breed BreedID CHAR PRIMARY KEY CHAR TypeID CHAR REFERENCES PetType TypeID ON DELETE CASCADE ON UPDATE CASCADE CREATE TABLE Pet PetID CHAR PRIMARY KEY OwnerID CHAR Mention Owner OwnerID ON DELETE CASCADE ON UPDATE CASCADE PetName CHAR Sexual activity CHAR Age NUMERIC BreedID CHAR REFERENCES Breed BreedID ON DELETE CASCADE ON UPDATE CASCADE All tabular array besides used similar SQL bid make would non reiterate place
+After tabular array property relationship created
+The whole tabular array diagram showed figure
+Fig
+
+Tables MS Access After table creative activity finished
+We input trial information database prove database functioned expended
+We would input least record tabular array
+The screen showed trial information tabular array Fig
+
+Table Owner Pet PetType Breed Fig
+
+Table Veterinarian Specialization Appointment Branch Fig
+
+Table Prescription Diagnosis Drug DrugType test undermentioned question utilizing Structured Query Language SQL
+In order prove database design information input correct need question information form database
+The instance prove database run Petcare demand
+Display name reference subdivision Petcare name veterinary physician working subdivision
+Any specialism veterinary physician besides shown
+This really general question database end demand need articulation Branch Veterinarian Specialization tabular array choose requested information
+The question statement consequence listed Fig
+
+Consequence Query
+Display assignment whole Petcare organisation
+This ordered day month
+The consequence expose subdivision assignment name veterinary physician assignment day month clip assignment name animate assignment type animate strain animate
+Case two trouble need fall Appointment Branch Veterinary Pet PetType Breed total tabular array
+The question really complex easy error
+The question statement question consequence showed Fig
+
+Consequence question Explain premise made analysing planing implementing Each assignment ID one pet merely
+Same proprietor conveying pet Petcare whould see new assignment
+One prescription maximal list drug
+Normally drug plenty instance
+If pet issue need drug veterinarian open multi prescription difference type drug
+
+demand skin medicine A Painkiller
+besides see new assignment
+In assignment database system PatCare non included user interface
+The database system used shop information DBMS used director database see span Database User interface
+DBMS non designed user chiefly use bid line director database question information
+Even new DBMS system MS Access SQL GUI besides hard normal user utilize database question information
+In order allow user easy utilize database User Interface must
+The user interface allow user easy input information update record look record
+And besides signifier study user print
+The user interface non necessitate really gorgeous complex
+A good user interface simple convenient easy understand easy utilize
+We plan web base interface web base interface simple easy pull
+The import web base interface non necessitate install extra plan hence non extra budget bargain application
+Previous Next Required field marked Comment moderation enabled
+Your comment may take time appear
+
+An describes thing interest specific domain knowledge
+An ER model composed entity type classify thing interest specifies relationship exist instance entity type
+In ER model commonly formed represent thing business need remember order perform business process
+Consequently ER model becomes abstract defines data information structure implemented typically
+modeling developed database design published paper
+However variant idea existed previously
+Some ER modeler show super subtype entity connected relationship ER model used also specification
+An model usually result systematic analysis define describe important process area business
+It define business process present business data schema graphical form
+It usually drawn graphical form box connected line express association dependency entity
+An ER model also expressed verbal form example Entities may characterized relationship also additional property include identifier called primary key
+Diagrams created represent attribute well entity relationship may called diagram rather model
+An ER model typically implemented
+In simple relational database implementation row table represents one instance entity type field table represents attribute type
+In relationship entity implemented storing primary key one entity pointer foreign key table another entity There tradition model built two three level abstraction
+Note hierarchy used kind specification different
+The first stage design us model describe information need type stored
+The technique used describe
+overview classification used term relationship certain
+In case design information system based database later stage usually called logical design mapped turn mapped physical model physical design
+Note sometimes phase referred physical design
+An may defined thing capable independent existence uniquely identified
+An entity abstraction complexity domain
+When speak entity normally speak aspect real world distinguished aspect real world
+An entity thing exists either physically logically
+An entity may physical object house car exist physically event house sale car service concept customer transaction order exist concept
+Although term entity one commonly used following Chen really distinguish entity
+An category
+An entity strictly speaking instance given
+There usually many instance
+Because term somewhat cumbersome people tend use term entity synonym term
+Entities thought
+Examples computer employee song mathematical theorem
+A relationship capture entity related one another
+Relationships thought linking two noun
+Examples relationship company computer relationship employee department relationship artist song relationship mathematician conjecture
+The model linguistic aspect described utilized database ERROL mimic construct
+ERROL implementation based RRA relational algebra adapted model capture linguistic aspect
+Entities relationship attribute
+Examples entity might SSN attribute relationship may attribute
+Every entity unless must minimal set uniquely identifying attribute called entity
+diagram show single entity single instance relation
+Rather show entity set entity entity type relationship set relationship relationship type
+Example particular entity
+The collection song database entity set
+The relationship child lunch single relationship
+The set relationship database relationship set
+In word relationship set corresponds relationship corresponds member relation
+Certain relationship set may indicated well
+Chen proposed following rule thumb mapping natural language description ER diagram Peter Chen
+Physical view show data actually stored
+In Chen original paper give example relationship role
+He describes relationship marriage two role husband wife
+A person play role husband marriage relationship another person play role wife marriage
+These word noun
+That surprise naming thing requires noun
+Chen terminology also applied earlier idea
+The line arrow diagram owes earlier Chen relationship diagram
+Another common extension Chen model name relationship role verb phrase
+It also become prevalent name role phrase
+Correct noun case
+Thus rather etc
+The use noun direct benefit generating physical implementation semantic model
+When two relationship possible generate name immediately meaningful
+Modifications original specification beneficial
+Chen described
+As aside notation used Oracle Designer us minimum cardinality analogous optionality role maximum cardinality crow foot
+In Elmasri Navathe others preference role minimum maximum cardinality
+Recent researcher Feinerer Dullea et al
+shown coherent applied relationship order greater
+In Dullea et al
+one read A across notation used UML effectively represent semantics participation constraint imposed relationship degree higher binary
+In Feinerer say Problems arise operate semantics used UML association
+Hartmann investigates situation show different transformation fail
+also As see next page interpretation introduces several difficulty prevent extension simple mechanism binary association
+Chen notation modeling us rectangle represent entity set diamond represent relationship appropriate attribute relationship
+If entity set participates relationship set connected line
+Attributes drawn oval connected line exactly one entity relationship set
+Cardinality constraint expressed follows Attributes often omitted clutter diagram diagram technique often list entity attribute within rectangle drawn entity set
+Related diagramming convention technique Crow foot notation beginning date back article Gordon Everest used SSADM
+Crow foot diagram represent entity box relationship line box
+Different shape end line represent cardinality relationship
+Crow foot notation used consultancy practice
+Many consultant CACI including Richard Barker subsequently moved UK developed early version Oracle tool introducing notation wider audience
+With notation relationship attribute
+Where necessary relationship promoted entity right example necessary capture artist performed song new entity performance introduced attribute reflecting time place relationship artist song becomes indirect relationship via performance
+In using modeled database user encounter two well known issue returned result mean something result assumed query author
+The first trap
+It occurs master table linking multiple table relationship
+The issue derives name way model look draw diagram linked table master table
+This type model look similar type model used
+When trying calculate sum aggregate using standard SQL master table get unexpected incorrect result explanation missing
+The solution either adjust model SQL
+This issue occurs mostly database decision support system software query system sometimes includes specific method handling issue
+The second issue trap
+A chasm trap occurs model suggests existence relationship entity type pathway exist certain entity occurrence
+For example Building Rooms hold Computers
+You would expect able query model see Computers Building
+However Computers currently assigned Room repair somewhere else shown list
+You need another relation Building Computers capture computer building
+This last modelling issue result failure capture relationship exist real world model
+See detail
+A semantic model model concept sometimes called platform independent model
+It intensional model
+At latest since well known An extensional model one map element particular methodology technology thus platform specific model
+The UML specification explicitly state association class model extensional fact considering extensive array additional adornment provided specification provided prior candidate semantic modelling language
+Peter Chen father ER modeling said seminal paper In original article Chen explicitly contrast diagram record modelling technique Several author also support Chen program Chen accord philosophic theoretical tradition time Ancient Greek philosopher Socrates Plato Aristotle BC modern
+associate knowledge apprehension unchanging Forms The form according Socrates roughly speaking archetype abstract representation many type thing property relationship one another
+

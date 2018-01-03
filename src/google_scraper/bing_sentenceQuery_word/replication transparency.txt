@@ -1,0 +1,164 @@
+Overview A distributed system often employ data replication ensure fast response database enable system resilient hardware error
+Replication transparency term used describe fact user unaware data replicated
+PRINTED FROM OXFORD REFERENCE
+c Copyright Oxford University Press
+All Rights Reserved
+Under term licence agreement individual user may print PDF single entry reference work OR personal use
+date January Character limit Character limit
+
+involves sharing information ensure consistency redundant resource component improve reliability accessibility
+One speaks A computational task typically
+executed separate device could executed repeatedly single device
+Replication space time often linked scheduling algorithm The access replicated entity typically uniform access single entity
+The replication external user
+Also failure scenario replica hidden much possible
+The latter refers data replication respect aspect
+Computer scientist talk active passive replication system replicate data service If time one master replica designated process request talking scheme scheme predominant
+On side replica process request distributes new state scheme called database field
+In scheme form must used
+differs task replication since distributes load different computation across machine allows single computation dropped case failure
+Load balancing however sometimes us data replication especially replication internally distribute data among machine
+differs replication save copy data unchanged long period time
+Replicas hand undergo frequent update quickly lose historical state
+Replication one oldest important topic overall area
+Whether one replicates data computation objective group process handle incoming event
+If replicate data process passive operate maintain stored data reply read request apply update
+When replicate computation usual goal provide
+For example replicated service might used control telephone switch objective ensuring even primary controller fails backup take function
+But underlying need case ensuring replica see event equivalent order stay consistent state hence replica respond query
+A number widely cited model exist data replication property performance replication used many usually relationship original copy
+The master log update ripple slave
+The slave output message stating received update successfully thus allowing sending potentially successfully applied subsequent update
+update submitted database node ripple server often desired introduces substantially increased cost complexity may make impractical situation
+The common challenge exists replication transactional conflict prevention resolution
+Most synchronous eager replication solution conflict prevention asynchronous solution conflict resolution
+For instance record changed two node simultaneously eager replication system would detect conflict confirming commit abort one transaction
+A system would allow transaction commit run conflict resolution resynchronization
+The resolution conflict may based timestamp transaction hierarchy origin node much complex logic decides consistently node
+Database replication becomes difficult scale
+Usually scale go two dimension horizontal vertical horizontal data replica vertical data replica located away distance
+Problems raised horizontal alleviated access protocol
+Vertical cause fewer problem internet reliability performance improving
+When data replicated database server information remains consistent throughout database system user tell even know server DBMS using system said exhibit replication transparency
+Active storage replication usually implemented distributing update several physical
+This way supported replicated without modification file system code work level block device driver layer
+It implemented either hardware software
+The basic method typical locally connected disk
+The storage industry narrow definition local operation
+A extendable across disk located physically distant location database replication model usually applied
+The purpose replication prevent damage failure may occur one location case event occur improve ability recover
+For replication latency key factor determines either far apart site type replication employed
+The main characteristic replication write operation handled To address limit imposed latency technique applied link
+Many use replication ensure fault tolerance avoid single point failure
+See list
+replication replicating file logical level rather replicating storage block level
+There many different way performing
+Unlike replication solution almost exclusively rely software
+With use specifically intercept call filesystem function activity captured immediately occurs
+This utilises type technology real time active virus checker employ
+At level logical file operation captured like file open write delete etc
+The kernel driver transmits command another process generally network different machine mimic operation source machine
+Like storage replication replication allows synchronous asynchronous mode
+In synchronous mode write operation source machine held allowed occur destination machine acknowledged successful replication
+Synchronous mode le common file replication product although solution exist
+File level replication solution yield benefit
+Firstly data captured file level make informed decision whether replicate based location file type file
+Hence unlike storage replication whole volume need replicated file replication product ability exclude temporary file part filesystem hold business value
+This substantially reduce amount data sent source machine well decrease storage burden destination machine
+A benefit decreasing bandwidth data transmitted granular replication
+If application writes byte byte transmitted complete disk block generally byte
+On negative side software solution requires implementation maintenance operating system level us machine processing power CPU
+Similarly database many ability activity
+The journal sent another machine either periodically real time streaming
+On replica side journal used play back file system modification
+One notable implementation DPM performs periodical update offer replication
+This process comparing source destination filesystems ensuring destination match source
+The key benefit solution generally free inexpensive
+The downside process synchronizing quite consequently process generally run infrequently
+One notable implementation
+Another example using replication appears system may happen many node system share page memory usually mean node separate copy replica page
+Many classical approach replication based model one device process unilateral control one process device
+For example primary might perform computation streaming log update backup standby process take primary fails
+This approach common one replicating database despite risk portion log lost failure backup might state identical one primary transaction could lost
+A weakness scheme setting process could active one actually performing operation
+We gaining spending twice much money get property
+For reason starting period around distributed system research community began explore alternative method replicating data
+An outgrowth work emergence scheme group replica could cooperate process backup others handling share workload
+towering figure within database community analyzed replication scheme transactional model ultimately published widely cited paper skeptical approach
+In nutshell argued unless data split natural way database treated disjoint concurrency control conflict result seriously degraded performance group replica probably slow function
+Indeed suggests common approach likely result degradation scale
+His solution partition data viable situation data actually natural partitioning key
+The situation always bleak
+For example period model proposed emerged widely adopted standard used Isis Toolkit Horus Transis Ensemble Totem Phoenix Quicksilver system basis CORBA computing standard model also used IBM Websphere replicate business logic Microsoft Windows Server technology
+Virtual synchrony permit approach group process cooperate parallelize aspect request processing
+The scheme used form data feasible provides linear speedup size group
+A number modern product support similar scheme
+For example support virtual synchrony model used implement replication scheme would also possible use Quicksilver manner
+permit active replication every node network exact copy hence every node network active one time scheme optimized use
+
+hold Computer Science MCSE MCDBA CCNA CCNP SCJP certification
+Dinesh author hugely popular blog
+Where writes guide around Computer fundamental computer software Computer programming web apps
+For type query something think missing please feel free
+Search Content Popular Article Basic Courses Advance Courses
+
+What replication transparency
+What data fragmentation
+What purpose data fragmentation serve
+What fragmentation transparency
+Why local control data advantage distributed database
+answer far Answer Replication transparency Hide section want rate later Was final answer question wrong
+Were solution step detailed enough
+Was language grammar issue
+Does question reference wrong number
+Stay Solved Review Discuss meant following term degree homogeneity DDBMS degree local autonomy DDBMS federated DBMS distribution transparency fragmentation transparency Give brief answer following question Define term fragmentation replication term data stored
+What difference synchronous
+What fragment relation
+What main type fragment
+Why fragmentation useful concept distributed database design
+
+Why data replication useful
+Discuss meant following term degree homogeneity DDBMS degree local autonomy DDBMS federated DBMS distribution transparency fragmentation transparency
+Explain following differ fragmentation transparency replication transparency location transparency
+By creating account agree We post anything without permission Attach Files
+
+obj stream Á Íç ª ºÒ
+IÿP
+Ùúÿ òðÃøqÓUÒÿo I b Í Ïé Ý Óç
+jY Ïô màe ô ÈJ Ý B v
+
+
+Any change system new feature new component system change adheres previous much possible changing internal behaviour
+The purpose shield change system human user end interface
+Confusingly term refers overall component refer
+The term widely used computing marketing substitution term since term bad usually seen something user ca see control term good connotation usually associated hiding anything
+The vast majority time term used misleading way refer actual invisibility computing process
+Because misleading definition modern computer literature tends prefer use agnostic transparent
+The term used particularly often regard invisible either upper lower neighbouring layer
+Also temporarily used later around IBM Honeywell programming manual term referred certain technique
+An application code transparent clear detail management contained logic solving main problem
+It achieved putting code module internal detail making invisible main application
+For example transparent introduces access file stored remotely network way uniform previous local access user might even notice using folder hierarchy
+The early FTP considerably le transparent requires user learn access file client
+Similarly file system allow transparent decompression data enabling user store file medium without special knowledge file system encrypt file transparently
+This approach require running compression encryption utility manually
+In also considered good practice develop use abstraction layer access application work different database abstraction layer allows part program access database transparently see example
+In transparency facilitated use hide actual implementation done different underlying
+Transparency mean form hide distributed nature user appearing functioning normal centralized system
+There many type transparency Formal definition concept found Open Distributed Processing Reference Model ISO
+The degree property achieved may vary widely
+Not every system hide everything user
+For instance due existence fixed finite always latency accessing resource distant user
+If one expects interaction distributed system may noticeable
+
+obj stream çÅ Rºá endstream endobj obj endobj obj stream í M v
+Ú ÛåsÊÌu ùóÐ ÏÍas endobj obj endobj obj stream ÚHkü üöB n f Ô Åô R yWùÛ Júot Å Ê ß â qF r h ãßh Fendstream endobj obj endobj obj stream mjíµ
+Ç
+dyBvX Sá Ã ZªÀU fâ È h
+Jp
+ÙÎg Û ÑÜ öñÈg ÒFYÐ òf úf
+w ÇöÍ u E éðo ðo tÃOaendstream endobj obj endobj obj stream Ü µ ì
+ã F Öý Úe
+Ñ ê Ë PÃ AÉQ ð
+CÍ Á ÊHPý
+

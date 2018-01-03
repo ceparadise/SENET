@@ -1,0 +1,360 @@
+The noun sens computer science single execution set instruction repeated computer science executing set instruction given number time specified result obtained saying repeated performance computer science single execution set instruction repeated Nouns denoting natural process iteration solution took hundred iteration sustained phenomenon one marked gradual change series state branch engineering science study aid computer computable process structure computer science executing set instruction given number time specified result obtained Nouns denoting natural process iteration solution obtained iteration sustained phenomenon one marked gradual change series state branch engineering science study aid computer computable process structure Doing saying repeated performance Nouns denoting act action act performing ITEMIZE ITERATE ITERATIVE ITERATIVE ASPECT ITHACA ITHAKI ITHUNN ITINERANT ITINERARY
+
+When designing algorithm may step need repeating
+This known iteration displayed pseudocode flowchart
+An plan set instruction solve problem
+There three basic building block construct use designing algorithm These building block help describe solution form ready
+You need JavaScript enabled view video clip
+An explanation iteration used algorithm programming Iteration programming mean repeating step
+This often called loop
+Algorithms consist instruction carried performed one another
+Sometimes algorithm need repeat certain step told stop particular met
+For example simple algorithm eating breakfast cereal might consist step This make designing algorithm quicker simpler need include lot unnecessary step
+
+Add comment Add comment Add comment Add comment Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see Chat rant adult content spam insulting member Harm minor violence threat harassment privacy invasion impersonation misrepresentation fraud phishing If believe intellectual property infringed would like file complaint please see
+
+method solution problem depends solution smaller instance problem opposed
+The approach applied many type problem one central idea computer science
+The power recursion evidently lie possibility defining infinite set object finite statement
+In manner infinite number computation described finite recursive program even program contains explicit repetition
+Most computer programming language support recursion allowing call within program text
+Some define looping construct rely solely recursion repeatedly call code
+prof language computationally powerful Turing complete imperative language meaning solve kind problem imperative language even without iterative control structure
+A common tactic divide problem type original solve combine result
+This often referred combined store result solving avoid solving repeatedly incurring extra computation time referred
+A recursive function definition one meaning input function produce result without recurring one meaning input program recurs call
+For example function defined recursively equation
+Neither equation constitutes complete definition first base case second recursive case
+Because base case break chain recursion sometimes also called terminating case
+The job recursive case seen breaking complex input simpler one
+In properly designed recursive function recursive call input problem must simplified way eventually base case must reached
+Functions intended terminate normal example exception
+Neglecting write base case testing incorrectly cause
+For function one computes obvious base case implied input data one may add number term added series example provide criterion establishes base case
+Such example naturally treated successive term output partial sum converted recursion using indexing parameter say compute th term th partial sum
+Many must process generate arbitrarily large quantity
+Recursion one technique representing data whose exact size know programmer specify data definition
+There two type definition inductive definition
+An inductively defined recursive data definition one specifies construct instance data
+For example defined inductively using syntax The code specifies list string either empty structure contains string list string
+The definition permit construction list finite number string
+Another example inductive positive Similarly recursive often used model structure programming language
+Language designer often express grammar syntax grammar simple language arithmetic expression multiplication addition This say expression either number product two expression sum two expression
+By recursively referring expression second third line grammar permit arbitrarily complex arithmetic expression one product sum operation single expression
+A coinductive data definition one specifies operation may performed piece data typically coinductive definition used data structure infinite size
+A coinductive definition infinite string given informally might look like This similar inductive definition list string difference definition specifies access content data via function content may whereas inductive definition specifies create structure may created
+related coinduction used compute particular instance possibly infinite object
+As programming technique used often context programming language preferable recursion desired size precision program output unknown
+In case program requires definition infinitely large infinitely precise result mechanism taking finite portion result
+The problem computing first n one solved corecursive program
+
+Recursion contains single known recursion contains multiple known
+Standard example single recursion include list traversal linear search computing factorial function standard example multiple recursion include search
+Single recursion often much efficient multiple recursion generally replaced iterative computation running linear time requiring constant space
+Multiple recursion contrast may require exponential time space fundamentally recursive able replaced iteration without explicit stack
+Multiple recursion sometimes converted single recursion desired thence iteration
+For example computing Fibonacci sequence naively multiple iteration value requires two previous value computed single recursion passing two successive value parameter
+This naturally framed corecursion building initial value tracking step two successive value see
+A sophisticated example using allows iterative tree traversal rather multiple recursion
+Most basic example recursion example presented demonstrate function call
+recursion occurs function called another function called either directly indirectly
+For example call direct recursion call call indirect recursion Chains three function possible example function call function function call function function call function
+Indirect recursion also called symmetric term though simply difference emphasis different notion
+That call call turn call point view alone indirectly recursing point view alone indirectly recursing point view mutually recursing
+Similarly set three function call called set mutually recursive function
+Recursion usually done explicitly calling function name
+However recursion also done via implicitly calling function based current context particularly useful known
+Some author classify recursion either structural generative
+The distinction related recursive procedure get data work process data Functions consume structured data typically decompose argument immediate structural component process component
+If one immediate component belongs class data input function recursive
+For reason refer function STRUCTURALLY RECURSIVE FUNCTIONS
+Thus defining characteristic structurally recursive function argument recursive call content field original input
+Structural recursion includes nearly tree traversal including XML processing binary tree creation search etc
+By considering algebraic structure natural number natural number either zero successor natural number function factorial may also regarded structural recursion
+alternative Many recursive algorithm generate entirely new piece data given data recur
+refers kind generative recursion
+Examples generative recursion include
+This distinction important function
+A classic example recursive procedure function used calculate The function also written This evaluation recurrence relation demonstrates computation would performed evaluating pseudocode This factorial function also described without using recursion making use typical looping construct found imperative programming language The imperative code equivalent mathematical definition using accumulator variable The definition translates straightforwardly example iteration implemented recursively
+The computes two integer written recursively
+Function definition greatest common divisor express The recursive program equivalent iterative algorithm computation shown show step evaluation would performed language eliminates tail call
+Below version algorithm using explicit iteration suitable language eliminate tail call
+By maintaining state entirely variable using looping construct program avoids making recursive call growing call stack
+The iterative algorithm requires temporary variable even given knowledge Euclidean algorithm difficult understand process simple inspection although two algorithm similar step
+The Towers Hanoi mathematical puzzle whose solution illustrates recursion
+There three peg hold stack disk different diameter
+A larger disk may never stacked top smaller
+Starting disk one peg must moved another peg one time
+What smallest number step move stack
+Example implementation Although recursive function explicit solution Tower Hanoi sequence reduced explicit formula
+The algorithm method searching single element cutting array half recursive pas
+The trick pick midpoint near center array compare data point data searched responding one three possible condition data found midpoint data midpoint greater data searched data midpoint le data searched
+Recursion used algorithm pas new array created cutting old one half
+The binary search procedure called recursively time new smaller array
+Typically array size adjusted manipulating beginning ending index
+The algorithm exhibit logarithmic order growth essentially divide problem domain half pas
+Example implementation binary search C An important application recursion computer science defining dynamic data structure
+Recursive data structure dynamically grow theoretically infinite size response runtime requirement contrast size static array must set compile time
+Recursive algorithm particularly appropriate underlying problem data treated defined recursive term
+The example section illustrate known structural recursion
+This term refers fact recursive procedure acting data defined recursively
+As long programmer derives template data definition function employ structural recursion
+That recursion function body consume immediate piece given compound value
+Below C definition linked list node structure
+Notice especially node defined term
+The next element pointer another effectively creating list type
+Because data structure defined recursively procedure operate implemented naturally recursive procedure
+The procedure defined walk list list empty list pointer value NULL
+For node print data element integer
+In C implementation list remains unchanged procedure
+Below simple definition binary tree node
+Like node linked list defined term recursively
+There two pointer left pointing left right pointing right
+Operations tree implemented using recursion
+Note two pointer left right tree operation may require two recursive call At two recursive call made given call defined
+The example illustrates binary tree
+A special case binary tree data element node order
+Since number file may vary practical way traverse thus enumerate content
+Traversing filesystem similar therefore concept behind tree traversal applicable traversing filesystem
+More specifically code would example filesystem
+This code blend line least somewhat recursion
+It essentially recursive implementation best way traverse
+It also example direct indirect recursion
+The method rtraverse purely direct example method traverse indirect call rtraverse
+This example need base case scenario due fact always fixed number file directory given filesystem
+In actual implementation rather pure recursive function single check base case otherwise recursive step number modification may made purpose clarity efficiency
+These include On basis elegance wrapper function generally approved base case frowned upon particularly academia
+Hybrid algorithm often used efficiency reduce overhead recursion small case recursion special case
+A function directly called recurse instead calling separate auxiliary function actually recursion
+Wrapper function used validate parameter recursive function skip perform initialization allocate memory initialize variable particularly auxiliary variable level recursion partial computation handle exception error
+In language support auxiliary function nested inside wrapper function use shared scope
+In absence nested function auxiliary function instead separate function possible private called directly information shared wrapper function using
+base case also known consists checking base case making recursive call checking next call base case instead calling checking base case
+particularly done efficiency reason avoid overhead function call immediately return
+Note since base case already checked immediately recursive step need checked separately one need use wrapper function case overall recursion start base case
+For example factorial function properly base case
+immediately returning
+may miss mitigated wrapper function
+primarily concern many base case encountered Null pointer tree linear number function call hence significant saving algorithm illustrated search
+tree corresponds considering leaf node child base case rather considering empty node base case
+If single base case computing factorial provides saving
+Conceptually considered either base case recursive step checking base case recursion considered different base case one step removed standard base case complex recursive step namely check valid recurse considering leaf node rather Null node base case tree
+Because complicated flow compared clear separation base case recursive step standard recursion often considered poor style particularly academia
+A basic example given DFS binary tree see section standard recursive discussion
+The standard recursive algorithm DFS In instead In term standard step move base case check recursive step
+Alternatively considered different form base case recursive step respectively
+Note requires wrapper function handle case tree empty root node Null
+In case height node Null pointer child leaf cut number function call half worst case
+In C standard recursive algorithm may implemented The algorithm may implemented Note use Boolean AND operator recursive call made node valid
+Note first term AND pointer node second term bool overall expression evaluates bool
+This common idiom recursive
+This addition evaluation Boolean OR operator check right child left child fails
+In fact entire function replaced single Boolean expression return statement legibility suffers benefit efficiency
+Recursive algorithm often inefficient small data due overhead repeated function call return
+For reason efficient implementation recursive algorithm often start recursive algorithm switch different algorithm input becomes small
+An important example often implemented switching data sufficiently small
+Hybrid recursive algorithm often refined derived hybrid merge sort
+Recursion iteration equally expressive recursion replaced iteration explicit stack iteration replaced tail recursion
+Which approach preferable depends problem consideration language used
+In iteration preferred particularly simple recursion avoids overhead function call call stack management recursion generally used multiple recursion
+By contrast recursion preferred tail recursion optimization leading little overhead sometimes explicit iteration available
+Compare template compute x defined x f n x x For imperative language overhead define function functional language overhead define accumulator variable x
+For example factorial function may implemented iteratively C assigning loop index variable accumulator variable rather passing argument returning value recursion Most use today allow direct specification recursive function procedure
+When function called program keep track various instance function often using although method may used
+Every recursive function transformed iterative function replacing recursive call simulating call stack explicitly managed program
+Conversely iterative function procedure evaluated computer see expressed term recursive function iterative control construct routinely rewritten recursive form
+However practice rewriting depends feature language
+notable mainstream language function call including may cause stack allocation would occur use looping construct language working iterative program rewritten recursive form may although tail call elimination may feature covered language specification different implementation language may differ tail call elimination capability
+In language favor iterative looping construct usually significant time space cost associated recursive program due overhead required manage stack relative slowness function call function call particularly typically fast operation difference usually le noticeable
+As concrete example difference performance recursive iterative implementation factorial example depends highly compiler used
+In language looping construct preferred iterative version may much several order magnitude faster recursive one
+In functional language overall time difference two implementation may negligible fact cost multiplying larger number first rather smaller number iterative version given happens may overwhelm time saved choosing iteration
+In programming language maximum size much le space available recursive algorithm tend require stack space iterative algorithm
+Consequently language sometimes place limit depth recursion avoid stack overflow one language
+Note caveat regarding special case
+Multiply recursive problem inherently recursive prior state need track
+One example contrast list traversal linear search list singly recursive thus naturally iterative
+Other example include function
+All algorithm implemented iteratively help explicit programmer effort involved managing stack complexity resulting program arguably outweigh advantage iterative solution
+function function recursive call hence build deferred operation
+For example gcd function shown
+In contrast factorial function also recursive call tail position build deferred multiplication operation must performed final recursive call completes
+With treat call rather function call function gcd execute using constant space
+Thus program essentially iterative equivalent using imperative language control structure like loop
+The significance tail recursion making call tail call caller return position need saved recursive call return branch directly previously saved return position
+Therefore language recognize property tail call tail recursion save space time
+In simple case function calling instruction placed recursive call executed per recursion instruction placed recursive call
+The latter executed repeatedly maximum recursion reached
+Consider example The recursive algorithm expressed
+They usually simplified single term
+If function form Then thus represents number recursive call level recursion represents factor smaller input next level recursion
+number piece divide problem represents work function independent recursion
+partitioning recombining level recursion
+
+When designing program may instruction need repeating
+This known iteration implemented programming using FOR WHILE statement
+An plan set designed solve problem
+There three basic building block construct use designing algorithm Algorithms used help design perform particular task
+You need JavaScript enabled view video clip
+An explanation iteration used algorithm programming Algorithms consist step carried performed one another
+Sometimes algorithm need repeat certain step told stop particular met
+For example simple algorithm eating breakfast cereal might consist step The algorithm repeat step cereal milk eaten
+This make designing algorithm quicker simpler include lot unnecessary step
+Once algorithm designed perfected must translated code computer read
+We create program algorithm
+Algorithms consist step
+Programs consist statement
+A statement single instruction word single step
+Iteration implemented programming using statement
+In programming iteration often referred looping program iterates loop earlier step
+
+Iteration context computer programming process wherein set instruction structure repeated sequence specified number time condition met
+When first set instruction executed called iteration
+When sequence instruction executed repeated manner called loop
+Iteration repetition process computer program usually done help loop
+An example iteration programming language follows Consider database table containing student record
+Each record contains following field If one want copy student record database print best way retrieve record iterate loop record
+It executed using loop statement shown int first name last name table In example iterator starting first student record last student record
+Techopedia Terms Copyright Techopedia
+
+iteration loop computer science single execution set instruction repeated solution took hundred iteration iteration looping computer science executing set instruction given number time specified result obtained solution obtained iteration iteration saying repeated performance Iteration Computers The execution statement series statement loop repeated computer program iteration counter incremented
+L
+iteratio
+iteration Recital performance second time repetition
+iteration use repetition computer program especially form loop iteration single repetition code within repetitive process The code calculates appropriate value iteration
+iteration A variation design
+The architect drafted several iteration floorplan deciding final design
+From iteratio itero
+Iteration recital performance second time repetition L
+iteratio
+Iteration Iteration mean act repeating process aim approaching desired goal target result
+Each repetition process also called iteration result one iteration used starting point next iteration
+Chaldean Numerology The numerical value iteration Chaldean Numerology Pythagorean Numerology The numerical value iteration Pythagorean Numerology Select another language Please enter email address LLC
+Web
+
+
+Thanks vote
+We truly appreciate support
+
+learn share knowledge build career
+I used recursion quite lot many year programming solve simple problem I fully aware sometimes need iteration due problem
+So sometime far past I went try find existed pattern way transforming common recursion approach iteration found nothing
+Or least nothing I remember would help
+Usually I replace recursive algorithm iterative algorithm pushing parameter would normally passed recursive function onto stack
+In fact replacing program stack one
+Note one recursive call inside want preserve order call add reverse order stack replaced Edit The article go detail subject
+Really common way keep stack
+Here recursive quicksort function C Here could make iterative keeping stack Obviously example check stack boundary really could size stack based worst case given left right value
+But get idea
+It seems nobody addressed recursive function call body handle returning specific point recursion
+
+It said appears possible
+I came C example
+Suppose following recursive function act like postorder traversal AbcTreeNode tree pointer b The iterative solution Strive make recursive call recursion last statement recursive call
+Once converting iteration generally pretty easy
+Well general recursion mimicked iteration simply using storage variable
+Note recursion iteraction generally equivalent one almost always converted
+A function easily converted iterative one
+Just make accumulator variable local one iterate instead recurse
+Here example C use default argument Knowing I probably made mistake code idea
+Even using stack convert recursive algorithm iterative
+Normal recursion function based recursion use stack becomes stack based recursion
+But still recursion
+For recursive algorithm space complexity O N time complexity O N
+For iterative algorithm space complexity O time complexity O N
+But use stack thing term complexity remains
+I think tail recursion converted iteration
+The article capture idea externalizing stack frame heap provide way convert
+Below one
+While converting iterative code one must aware recursive call may happen arbitrarily deep code block
+Its parameter also point return logic remains executed state variable participate subsequent conditionals matter
+Below simple way convert iterative code least change
+Consider recursive code Iterative code Notice structure code still remains true recursive logic modification minimal resulting le number bug
+For comparison I marked change
+Most new inserted block except common converted iterative logic Search google Continuation passing style
+There general procedure converting tail recursive style also general procedure turning tail recursive function loop
+Generally technique avoid stack overflow recursive function called trampoline technique widely adopted Java devs
+However C little helper method turn recursive function iterative without requiring change logic make code
+C nice language amazing stuff possible
+It work wrapping part method helper method
+For example following recursive function Turns Just killing time A recursive function converted One pattern look recursion call end function called
+This easily replaced
+For example function foo end call foo
+This replaced eliminates second recursive call
+I upvoted answer suggesting use explicit stack I think right solution general applicability
+I mean use transform recursive function iterative function
+Just check value saved across recursive call one local recursive function replace call cycle push stack
+When stack empty recursive function would terminated
+I ca resist say proof every recursive function equivalent iterative function different data type one dearest memory University time
+That course professor really made understand computer programming
+A closed duplicate one specific data structure The node following structure The recursive deletion function looked like In general always possible avoid stack recursive function invoke one time even
+However particular structure possible
+The idea flatten node single list
+This accomplished putting current node end top row list
+This technique applied data linked structure reduce DAG deterministic topological ordering
+The current node child rearranged last child adopts child
+Then current node deleted traversal iterate remaining child
+Recursion nothing process calling one function process done calling function
+As know one function call function first function save state variable pass control called function
+The called function called using name variable ex call
+When recursive call nothing new happens
+One function call passing type similar name variable obviously value stored variable different name remains
+
+But every call function save state process saving continues
+The SAVING IS DONE ON A STACK
+NOW THE STACK COMES INTO PLAY
+So write iterative program save state stack time pop value stack needed successfully converted recursive program iterative one
+The proof simple analytical
+In recursion computer maintains stack iterative version manually maintain stack
+Think convert depth first search graph recursive program dfs iterative program
+All best
+Thinking thing actually need stack If consider pattern recursion For example classic Tower Hanoi This translated loop working explicit stack restating For Tower Hanoi becomes There considerable flexibility define stack
+You make stack list object sophisticated thing
+Or go opposite direction make list simpler type
+task might element stack rather one element stack
+All mean memory stack heap rather Java execution stack useful control
+A rough description system take recursive function executes using stack This intended show idea without detail
+Consider function would print node graph For example graph B C show A would print B A C Function call mean save local state continuation point come back jump function want call
+For example suppose show A begin run
+The function call line show B mean Add item stack meaning need continue line local variable state Goto line
+To execute code system run instruction
+When function call encountered system push information need come back run function code function completes pop information need go continue
+This provides explanation proposes idea keeping location able get exact place several recursive call However example describe scenario recursive call made amount time
+Things get trickier something like There general way converting recursive traversal iterator using lazy iterator concatenates multiple iterator supplier lambda expression return iterator
+See
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+act repeating process either generate unbounded sequence outcome aim approaching desired goal target result
+Each repetition process also called iteration result one iteration used starting point next iteration
+In context iteration along related technique standard building block
+mathematics may refer process
+applying function repeatedly using output one iteration input next
+Iteration apparently simple function produce complex behaviour difficult problem example see
+Another use iteration mathematics used produce approximate numerical solution certain mathematical problem
+example iterative method
+Manual calculation number square root common use example
+computing technique marking block statement within defined number repetition
+That block statement said computer scientist might also refer block statement iteration
+The pseudocode example iteration line code bracket loop iterate three time It permissible often necessary use value part program outside bracketed block statement perform desired function
+In example line code using value increment
+In school iteration used describe process teaching guiding student repeat experiment assessment project accurate result found student mastered technical skill
+This idea found old adage Practice make perfect
+In particular iterative defined process learning development involves cyclical inquiry enabling multiple opportunity people revisit idea critically reflect implication
+Unlike computing math educational iteration predetermined instead task repeated success according external criterion often test achieved
+In algorithmic situation recursion iteration employed effect
+The primary difference recursion employed solution without prior knowledge many time action repeat successful iteration requires foreknowledge
+Some type programming language known designed set block statement explicit repetition loop
+Instead programming language exclusively use
+Rather call block code repeated number time executing code block instead divide work done number separate piece code block executes individual piece
+Each piece work divided repeatedly amount work small possibly point algorithm work quickly
+The algorithm revers reassembles piece complete whole
+The classic example recursion algorithm
+The Merge Sort recursive algorithm first repeatedly divide list consecutive pair pair ordered consecutive pair pair forth element list desired order
+The code example recursive algorithm programming language output result pseudocode previous heading
+In object ensures iteration executed way range different data structure saving time effort later coding attempt
+An abstraction accepts reject data iteration
+

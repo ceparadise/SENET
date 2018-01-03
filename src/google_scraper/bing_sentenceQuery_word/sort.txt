@@ -1,0 +1,511 @@
+In put element certain
+The order
+Efficient important optimizing use algorithm algorithm require input data sorted list also often useful data producing output
+More formally output must satisfy two condition Further data often taken allows rather list allows though often algorithm applied suitable modification either type data
+From beginning computing sorting problem attracted great deal research perhaps due complexity solving efficiently despite simple familiar statement
+Among author early sorting algorithm around née Snyder worked
+analyzed early
+Comparison sorting algorithm fundamental requirement Ω log comparison input sequence require multiple log comparison algorithm based comparison better performance
+Although many consider sorting solved optimal algorithm known since new algorithm still invented widely used dating first published
+Sorting algorithm prevalent introductory class abundance algorithm problem provides gentle introduction variety core algorithm concept analysis
+Sorting algorithm often classified Stable sort algorithm sort identical element order appear input
+When sorting kind data part data examined determining sort order
+For example card sorting example right card sorted rank suit ignored
+This allows possibility multiple different correctly sorted version original list
+Stable sorting algorithm choose one according following rule two item compare equal like two card relative order preserved one came input also come output
+More formally data sorted represented record tuple value part data used sorting called
+In card example card represented record rank suit key rank
+A sorting algorithm stable whenever two record R S key R appears S original list R always appear S sorted list
+When equal element indistinguishable integer generally data entire element key stability issue
+Stability also issue key different
+Unstable sorting algorithm specially implemented stable
+One way artificially extend key comparison comparison two object otherwise equal key decided using order entry original input list
+Remembering order however may require additional time space
+One application stable sorting algorithm sorting list using primary secondary key
+For example suppose wish sort hand card suit order club diamond heart spade within suit card sorted rank
+This done first sorting card rank using sort stable sort suit Within suit stable sort preserve ordering rank already done
+This idea extended number key leveraged
+The effect achieved unstable sort using lexicographic key comparison compare first suit compare rank suit
+In table number record sorted
+The column Average Worst give case assumption length key constant therefore comparison swap needed operation proceed constant time
+Memory denotes amount auxiliary storage needed beyond used list assumption
+The run time memory requirement listed understood inside hence base logarithm matter notation mean
+These perform better average worst case
+The following table describes algorithm sorting algorithm
+As limited lower bound
+Complexities assume item sorted key size digit size range number sorted
+Many based assumption key size large enough entry unique key value hence mean much le
+In model algorithm running time radix sort still take time proportional limited larger number element sort would require bigger order store memory
+used parallelize sort efficiently distributing data several bucket passing sorting several processor need merge bucket already sorted
+Some algorithm slow compared discussed unbounded run time run time
+These sort usually described educational purpose order demonstrate run time algorithm estimated
+The following table describes sorting algorithm impractical use traditional software context due extremely poor performance specialized hardware requirement
+Theoretical computer scientist detailed sorting algorithm provide better O log time complexity assuming additional constraint including While large number sorting algorithm practical implementation algorithm predominate
+Insertion sort widely used small data set large data set asymptotically efficient sort used primarily heap sort merge sort quicksort
+Efficient implementation generally use combining asymptotically efficient algorithm overall sort insertion sort small list bottom recursion
+Highly tuned implementation use sophisticated variant merge sort insertion sort additional logic used Android Java Python quicksort heap sort used variant form implementation
+For restricted data number fixed interval counting sort radix sort widely used
+Bubble sort variant rarely used practice commonly found teaching theoretical discussion
+When physically sorting object alphabetizing paper test book people intuitively generally use insertion sort small set
+For larger set people often first bucket initial letter multiple bucketing allows practical sorting large set
+Often space relatively cheap spreading object floor large area operation expensive particularly moving object large distance locality reference important
+Merge sort also practical physical object particularly two hand used one list merge algorithm heap sort quick sort poorly suited human use
+Other algorithm variant insertion sort leaf space also practical physical use
+Two simplest sort insertion sort selection sort efficient small data due low overhead efficient large data
+Insertion sort generally faster selection sort practice due fewer comparison good performance data thus preferred practice selection sort us fewer writes thus used write performance limiting factor
+simple sorting algorithm relatively efficient small list mostly sorted list often used part sophisticated algorithm
+It work taking element list one one inserting correct position new sorted list
+In array new list remaining element share array space insertion expensive requiring shifting following element one
+see variant insertion sort efficient larger list
+
+It complexity making inefficient large list generally performs worse similar
+Selection sort noted simplicity also performance advantage complicated algorithm certain situation
+The algorithm find minimum value swap value first position repeat step remainder list
+It swap thus useful swapping expensive
+Practical general sorting algorithm almost always based algorithm average time complexity generally complexity O log common heap sort merge sort quicksort
+Each advantage drawback significant simple implementation merge sort us O additional space simple implementation quicksort O complexity
+These problem solved ameliorated cost complex algorithm
+While algorithm asymptotically efficient random data practical efficiency data various modification used
+First overhead algorithm becomes significant smaller data often hybrid algorithm used commonly switching insertion sort data small enough
+Second algorithm often perform poorly already sorted data almost sorted data common data sorted O time appropriate algorithm
+Finally may also stability often desirable property sort
+Thus sophisticated algorithm often employed based merge sort based quicksort falling back heap sort
+take advantage ease merging already sorted list new sorted list
+It start comparing every two element swapping first come second
+It merges resulting list two list four merges list four last two list merged final sorted list
+Of algorithm described first scale well large list running time O log
+It also easily applied list array requires sequential access random access
+However additional O space complexity involves large number copy simple implementation
+Merge sort seen relatively recent surge popularity practical implementation due use sophisticated algorithm used standard sort routine programming language
+Merge sort standard routine among others used Java least since
+much efficient version
+It also work determining largest smallest element list placing end beginning list continuing rest list accomplishes task efficiently using data structure called special type
+Once data list made heap root node guaranteed largest smallest element
+When removed placed end list heap rearranged largest element remaining move root
+Using heap finding next largest element take O log time instead O linear scan simple selection sort
+This allows Heapsort run O log time also worst case complexity
+relies operation partition array element called selected
+All element smaller pivot moved greater element moved
+This done efficiently linear time
+The lesser greater sublists recursively sorted
+This yield average time complexity O log low overhead thus popular algorithm
+Efficient implementation quicksort partitioning typically unstable sort somewhat complex among fastest sorting algorithm practice
+Together modest O log space usage quicksort one popular sorting algorithm available many standard programming library
+The important caveat quicksort performance O rare naive implementation choosing first last element pivot occurs sorted data common case
+The complex issue quicksort thus choosing good pivot element consistently poor choice pivot result drastically slower O performance good choice pivot yield O log performance asymptotically optimal
+For example step chosen pivot algorithm work O log
+Finding median however O operation unsorted list therefore exacts significant overhead sorting
+In practice choosing random pivot almost certainly yield O log performance
+Bubble sort variant simple highly inefficient sort
+They thus frequently seen introductory text theoretical interest due ease analysis rarely used practice primarily recreational interest
+Some variant Shell sort open question behavior
+simple sorting algorithm
+The algorithm start beginning data set
+It compare first two element first greater second swap
+It continues pair adjacent element end data set
+It start first two element repeating swap occurred last pas
+This algorithm average time performance O rarely used sort large unordered data set
+Bubble sort used sort small number item asymptotic inefficiency high penalty
+Bubble sort also used efficiently list length nearly sorted element significantly place
+For example number element place one position
+bubble sort exchange get order first pas second pas find element order sort take time
+invented
+It improves upon bubble sort insertion sort moving order element one position time
+The concept behind Shellsort algorithm perform O k time k greatest distance two element
+This mean generally perform O data mostly sorted element place perform faster
+So first sorting element far away progressively shrinking gap element sort final sort computes much faster
+One implementation described arranging data sequence array sorting column array using insertion sort
+The time complexity Shell sort largely depends gap sequence used range O O log
+Also unlike efficient sorting algorithm Shellsort require use making useful memory premium
+relatively simple sorting algorithm originally designed Wlodzimierz Dobosiewicz
+It later rediscovered popularized Stephen Lacey Richard Box article published April
+Comb sort improves
+The basic idea eliminate small value near end list since bubble sort slow sorting tremendously
+large value around beginning list pose problem bubble sort refers sorting algorithm data distributed input multiple intermediate structure gathered placed output
+For example distribution based sorting algorithm
+Distribution sorting algorithm used single processor individual subset separately sorted different processor combined
+This allows data large fit single computer memory
+Counting sort applicable input known belong particular set possibility
+The algorithm run O time O memory length input
+It work creating integer array size using th bin count occurrence th member input
+Each input counted incrementing value corresponding bin
+Afterward counting array looped arrange input order
+This sorting algorithm often used need reasonably small algorithm efficient extremely fast demonstrates great asymptotic behavior increase
+It also modified provide stable behavior
+Bucket sort sorting algorithm generalizes partitioning array finite number bucket
+Each bucket sorted individually either using different sorting algorithm recursively applying bucket sorting algorithm
+A bucket sort work best element data set evenly distributed across bucket
+algorithm sort number processing individual digit
+number consisting digit sorted O time
+Radix sort process digit number either starting LSD starting MSD
+The LSD algorithm first sort list least significant digit preserving relative order using stable sort
+Then sort next digit least significant significant ending sorted list
+While LSD radix sort requires use stable sort MSD radix sort algorithm unless stable sorting desired
+MSD radix sort stable
+It common algorithm used internally radix sort
+A sorting approach using small bin improves performance radix sort significantly
+When size array sorted approach exceeds available primary memory much slower disk swap space must employed memory usage pattern sorting algorithm becomes important algorithm might fairly efficient array fit easily RAM may become impractical
+In scenario total number comparison becomes relatively le important number time section memory must copied swapped disk dominate performance characteristic algorithm
+Thus number pass localization comparison important raw number comparison since comparison nearby element one another happen speed caching even speed compared disk speed virtually instantaneous
+For example popular recursive algorithm provides quite reasonable performance adequate RAM due recursive way copy portion array becomes much le practical array fit RAM may cause number slow copy move operation disk
+In scenario another algorithm may preferable even requires total comparison
+One way work around problem work well complex record sorted relatively small key field create index array sort index rather entire array
+A sorted version entire array produced one pas reading index often even unnecessary sorted index adequate
+Because index much smaller entire array may fit easily memory entire array would effectively eliminating problem
+This procedure sometimes called tag sort
+Another technique overcoming problem using example one way combine two algorithm way take advantage strength improve overall performance
+For instance array might subdivided chunk size fit RAM content chunk sorted using efficient algorithm result merged using merge similar used
+This faster performing either mergesort quicksort entire list
+Techniques also combined
+For sorting large set data vastly exceed system memory even index may need sorted using algorithm combination algorithm designed perform reasonably reduce amount swapping required
+Related problem include sorting smallest element list alternatively computing smallest element unordered computing th smallest element
+These solved inefficiently total sort efficient algorithm exist often derived generalizing sorting algorithm
+The notable example related
+Conversely sorting algorithm derived repeated application selection algorithm quicksort quickselect seen pivoting move differing whether one recurses side quicksort one side quickselect
+A kind opposite sorting algorithm
+These fundamentally different require source random number
+Interestingly shuffling also implemented sorting algorithm namely random sort assigning random number element list sorting based random number
+This generally done practice however simple efficient algorithm shuffling
+Sorting algorithm also given parallel computer
+These algorithm run single instruction stream multiple data stream computer
+Habermann parallel glory induction principle sort k element using k processor k step
+This article introduces Optimal Algorithms Paraller Computers rk element sorted using k processor k step
+
+Putting data order difficult time consuming
+Sorting algorithm bubble sort bucket sort help
+It important understand different might best used different situation
+For example sometimes algorithm work particular set instance one algorithm much quicker efficient another
+One main advantage simple algorithm describe computer
+There really one task perform compare two value needed swap
+This make small simple computer
+The biggest problem bubble sort take long time run
+For example value sort pas list take comparison might repeat time
+One main advantage quicker run bubble sort
+Putting data small bucket sorted individually reduces number comparison need carried
+The biggest problem bucket sort algorithm bit complicated bubble sort describe computer
+It might easy decide sort number group list name
+Should bucket letter alphabet perhaps one bucket X Y Z name many
+There lot lot different sorting algorithm
+Many use clever idea make sorting list much quicker although algorithm get complicated time
+Other sorting algorithm include
+
+Contents Almost list come computer sorted sort order many sorted list inside computer user see
+Many clever algorithm devised putting value order efficiently
+In activity student compare different algorithm sort weight order
+We currently updating CS Unplugged content website The new website designed teacher includes unit plan lesson plan teaching video curriculum integration activity programming exercise plug Computer Science concept learnt unplugged
+CS Unplugged project aka Department Fun Stuff
+Looking something high school
+Check
+The CS Unplugged material shared
+
+In computer science represents
+Integral data type may different size may may allowed contain negative value
+Integers commonly represented computer group binary digit bit
+The size grouping varies set integer size available varies different type computer
+Computer hardware including nearly always provide way represent processor memory address integer
+The item integral type mathematical integer corresponds
+Integral type may capable representing integer capable representing negative integer well
+An integer value typically specified program sequence digit optionally prefixed
+Some programming language allow notation hexadecimal base octal base
+Some programming language also permit
+The datum way value stored computer memory
+Unlike mathematical integer typical datum computer minimal maximum possible value
+The common representation positive integer string using
+The order memory storing bit varies see
+The integral type number bit representation
+An integral type bit encode number example unsigned type typically represents value
+Other encoding integer value bit pattern sometimes used example printed character code
+There four binary computing system
+The common allows signed integral type bit represent number
+Two complement arithmetic convenient perfect representation value particular separate need distinguish signed unsigned type
+Other possibility include
+Some computer language define integer size way others varying definition depending underlying processor word size
+Not language implementation define variable integer size defined size may even distinct particular implementation
+An integer one may different size different language different processor
+address Different support different integral data type
+Typically hardware support signed unsigned type small fixed set width
+The table list integral type width supported hardware common processor
+High level programming language provide possibility
+It common width integral type twice many bit biggest type
+Many language also type specified number bit usually constrained le maximum width type represent integer specified range
+Some language support integer also known
+Other language support concept construct may library available represent large number using array smaller variable Java class package
+These use much computer memory necessary store number however computer finite amount storage represent finite subset mathematical integer
+These scheme support large number example one kilobyte memory could used store number decimal digit long
+A type type represent two value usually identified respectively
+This type stored memory using single bit often given full byte convenience addressing speed access
+A quantity known eating smaller pun form word
+One nibble corresponds one digit hold one digit sign code decimal
+The term initially meant smallest addressable unit memory
+In past byte used
+There also computer could address individual bit machine could address quantity machine
+The term usually used connection machine
+The term always refers quantity
+It mostly used field computer different byte width might communicate
+In modern usage almost invariably mean eight bit since size fallen disuse thus come synonymous
+The term used small group bit handled simultaneously processor particular
+The size word thus
+Many different word size used including
+Since architectural size usually set first CPU family rather characteristic later compatible CPU
+The meaning term derived also vary CPU OS
+Practically new desktop processor capable using word though word size still common
+The common early day computer
+One important cause software incorrect assumption computer word size computer used programmer
+For example programmer using C language incorrectly declares variable used store value greater program fail computer integer
+That variable declared least bit computer
+Programmers may also incorrectly assume pointer converted integer without loss information may work computer fail computer pointer integer
+A represent whole number may take le storage smaller range compared standard integer machine
+In denoted
+It required least bit often smaller standard integer required
+A conforming program assume safely store value may assume range larger
+In integer
+In datatype defined signed integer machine
+A represent whole whose greater equal standard integer machine
+In denoted
+It required least bit may may larger standard integer
+A conforming program assume safely store value may assume range larger
+term equivalent In version version type supported double minimum capacity standard
+This type supported compiler require C code compliant previous standard type exist
+For compliant compiler minimum requirement specified range signed unsigned must fulfilled however extending range permitted
+This issue exchanging code data platform direct hardware access
+Thus several set header providing platform independent exact width type
+The C provides introduced
+
+Sorting searching two commonly used operation computer science
+For AP exam required know certain method sorting collection called well certain way searching given item collection called
+There many common algorithm used sorting collection
+Here important one know Selection sort iterative sort algorithm us search swap approach sort collection
+For pas collection algorithm find smallest element sorted swap first unsorted element collection
+The algorithm continues manner finding next smallest element collection swapping next unsorted element
+Finally two unsorted element remain compared necessary swapped sort complete
+The efficiency selection sort algorithm number comparison made depend initial order element collection number comparison made regardless initial order
+For collection element collection sorted pass
+After th pas first element sorted placed final sorted position
+In th pas comparison made
+The total number comparison made sort complete
+The selection sort algorithm efficiency best average worst case
+In word best worst case selection sort every case considered average
+Insertion sort also iterative sort algorithm
+When using algorithm first element sorted respect
+The algorithm take second element compare first inserting front first one necessary
+From point forward algorithm take next unsorted element compare sorted element inserting element correct position needed
+The algorithm continues manner shifting sorted element needed make room next element inserted
+The efficiency insertion sort algorithm number comparison made depend initial order element collection
+For array element array sorted pass
+The efficiency differs best average worst case
+Mergesort recursive algorithm us divide conquer approach sorting collection
+Each time algorithm called algorithm check see one element collection collection broken two half
+If even number element half equal odd number element left half contain one element right half
+At point algorithm us recursion calling first mergesort left half collection mergesort right half
+When algorithm call mergesort one half break half two half call sort half
+This process repeated entire collection broken individual element subcollections length
+When method call sort one initial test see one element subcollection fails since one element subcollection
+This recursion stop algorithm return sorting half comparing two adjacent element sorting recombining sorted subcollection
+This process continues individual element sorted recombined sorted subcollections
+Then subcollections compared sorted recombined
+This process continues subcollections recombined form two sorted half
+Finally left right half compared sorted recombined create final fully sorted collection
+Here pseudocode representation mergesort algorithm The efficiency mergesort affected initial ordering element
+Because mergesort requires use temporary collection large collection sorted used limited memory space available
+This algorithm consists multiple part Remember division collection subcollections merging part algorithm must called
+This make mergesort algorithm efficiency log best average worst case
+In word best worst case every case considered average
+Quicksort average fastest sorting algorithm sorting collection large number element
+Quicksort recursive also us divide conquer approach sorting
+This algorithm start partitioning collection selecting pivot point usually either first element collection element selected random moving element le pivot point value left pivot point element greater equal pivot point value right pivot point
+The algorithm us recursion splitting array two half calling quicksort half
+Finally sort complete every element moved correct location
+Here pseudocode representation quicksort algorithm Involves going element collection appropriate value found
+This often implemented using simple loop begin index count last index collection
+This simplest search method becomes le effective collection large
+Involves going collection comparing middle index value
+This requires sorted collection order work
+For Example You trying find number array integer value equal
+Notice array sorted smallest value left largest right
+You would compare middle value search value
+Since would exclude value since also greater search value
+You would check search value since new middle
+Once value larger search term number excluded
+This process continues finally arrive center value
+
+Still question
+Ask
+
+Sorting critical many task
+I point characteristic kind thing use sorting
+Given set million data record remove merge duplicate
+If data record sorted main uniqueness criterion removing duplicate done easily traversing list finding group consecutive record compare equal using criterion
+Compare two large set item find differ
+try hand
+Here two list number Can tell number list missing list
+Pretty difficult huh
+And number
+Now try
+Here two list sorted order difficult go list parallel pick difference
+The true computer program
+Using notation comparing every element one list every element another list O operation whereas comparing sorted list O n operation
+That mean cost comparing unsorted list grows square number element whereas cost comparing sorted list grows linearly
+Think mean consider list million element
+The formula apply Example
+Using list Example find number appears list
+For unsorted list look every element either find reach end list
+On average list element take comparison find thing searching comparison exist
+However sorted list use binary search look middle element keep looking first half list le keep looking second half list keep dividing list half find nothing left
+Using binary search guaranteed find answer fail comparison comparison max list element
+Next time use paper dictionary consider hard would use word sorted alphabetically
+Of course order get performance benefit pay cost sorting list typically though sorting algorithm faster certain kind data
+However common build list often without change
+In case pay cost sorting occasionally get benefit
+I think I call I never write sorting algorithm
+Sorting problem I need stuff sorted I put std call std
+If object sorted place like I would make vector index small custom comparator function pas std
+BUT I college grad school sorting algorithm drilled well fundamental problem illustrate well difference O O nlogn algorithmic complexity
+It grounding simpler kind problem I ability tackle higher level problem make wise decision reduce algorithmic complexity code necessary optimize huge lesson need understood good coder
+For instance I recently experience I given prototype code colleague
+smarter better scientist better software engineer
+Part instruction use given said run image take minute
+It take long determine share time burned loop going combination image set complicated indexing real calculation could everything needed fingertip run quickly
+In couple hour I able rewrite population index using O logn std instead using O n searching thing std time total run time dropped second
+Still question
+Ask
+
+This page address question What Computer Science discus place collection computer field usually referred The following short definition based used professional society respective field
+A longer discussion provided next section
+Computer science study theory design implementation performance computer software computer system including study computability computation
+Computer engineering concerned design computer hardware device
+To extent CE involves software software interacting tightly hardware embedded system device
+Information system field applying today information technology solve today problem typically area business enterprise In rest page give complete description three area computing represented UMaine campus
+Of three computer science CS oldest broadest
+Indeed information system IS seen derived CS computer engineering CE formed intersection CS electrical engineering
+The fact really three distinct field area study confirmed least three thing
+First three field routinely treated separately university across country generally embodied different department
+Second distinct professional society
+The primary professional society computer science
+For computer engineering primary professional society
+For information system primary society
+Third three field meet different accreditation criterion
+The best place look definition field information provided professional society
+This concisely provided various document created part society joint Computing Curricula project joint project IEEE ACM participation professional society
+Our definition draw overview document project Computing Curricula The Overview Report produced Joint Task Force Computing Curricula joint project Association Computing Machinery Association Information Systems Computer Society IEEE September
+This referred
+Other document series also exist useful understanding difference field Computing Curricula Computer Science The Joint Task Force Computing Curricula IEEE Computer Society Association Computing Machinery December
+Curriculum Guidelines Undergraduate Degree Programs Computer Engineering A Report Computing Curricula Series Joint Task Force Computer Engineering Curricula IEEE Computer Society Association Computing Machinery December
+IS Model Curriculum Guidelines Undergraduate Degree Programs Information Systems Association Computing Machinery Association Information Systems Association Information Technology Professionals part Computing Curricula Project
+Another document also exists software engineering take standard view software engineering considered part computer science certainly case campus major software engineering school
+For ease reference document available
+Computer science within purview study theory design implementation performance computer computer software including study computability computation
+In ACM IEEE say Computer science span wide range theoretical algorithmic foundation development robotics computer vision intelligent system bioinformatics exciting area
+We think work computer scientist falling three category
+They design implement software
+Computer scientist take challenging programming job
+They also supervise programmer keeping aware new approach
+They devise new way use computer
+Progress CS area networking database enabled development World Wide Web
+Now CS researcher working scientist field make robot become practical intelligent aide use database create new knowledge use computer help decipher secret DNA
+They develop effective way solve computing problem
+For example computer scientist develop best possible way store information database send data network display complex image
+Their theoretical background allows determine best performance possible study algorithm help develop new approach provide better performance
+Computer science span range theory programming
+Curricula reflect breadth sometimes criticized failing prepare graduate specific job
+While discipline may produce graduate immediately relevant skill computer science offer comprehensive foundation permit graduate adapt new technology new idea
+A recommended Computer Science Curricula published prepared The Joint Task Force Computing Curricula Association Computing Machinery ACM IEEE Computer Society published
+Computer engineering hand concerned computer hardware design design device system general computing general computing system
+The ACM IEEE say Computer engineering concerned design construction computer system
+It involves study hardware software communication interaction among
+Its curriculum focus theory principle practice traditional electrical engineering mathematics applies problem designing computer device
+Computer engineering student study design digital hardware system including communication system computer device contain computer
+They study software development focusing software digital device interface user device
+CE study may emphasize hardware software may balanced emphasis
+CE strong engineering flavor
+Currently dominant area within computing engineering embedded system development device software hardware embedded
+For example device cell phone digital audio player digital video recorder alarm system machine laser surgical tool require integration hardware embedded software result computer engineering
+As UMaine ECE Department state Web site Computer Engineering graduate equipped career engineer electrical designer electrical engineer design application engineer test engineer power system engineer product engineer
+accessed There often legitimate overlap CS CE
+For example quite common computer architecture taught studied CE CS UMaine
+It also common neural network computer vision robotics involving primarily hardware solution CE department also case UMaine
+VLSI design hand would reasonable find computer science department one would expect find basic computer science discipline CE IS AI graphic visualization computing apart hardware consideration computer network database system apart application software engineering forth
+Information system specialist focus integrating information technology solution business process meet information need business enterprise enabling achieve objective effective efficient way
+This discipline perspective information technology emphasizes information view technology instrument generating processing distributing information
+Professionals discipline primarily concerned information computer system provide aid enterprise defining achieving goal process enterprise implement improve using information technology
+A majority Information Systems IS program located business school
+All IS degree combine business computing coursework
+A variety IS program exist various label often reflect nature program
+For example program Computer Information Systems usually strongest technology focus program Management Information Systems emphasize organizational behavioral aspect IS
+Degree program name always consistent
+A fourth area campus New Media computing discipline rather overlap computing user computer technology The New Media Program University Maine offer interdisciplinary course study system technology history design theory information
+The curriculum enables student investigate creative applied process essential area study
+It prepares student technologically capable articulate thinker creative medium professional
+UMaine New Media Web site There confusion another area computing information technology
+Note information technology IT differs meaning term used UMaine Strategic Plan author essentially mean The ACM IEEE differentiate IS IT follows
+Whereas perspective IS emphasizes information technology viewed instrument generating processing distributing information Information Technology emphasize technology information conveys
+IT new rapidly growing field started grassroots response practical everyday need business organization
+Today organization every kind dependent information technology
+They need appropriate system place
+These system must work properly secure upgraded maintained replaced appropriate
+Employees throughout organization require support IT staff understand computer system software committed solving whatever problem might
+Graduates information technology program address need
+Degree program information technology arose degree program computing discipline producing adequate supply graduate capable handling real need
+IT program exist produce graduate posse right combination knowledge practical expertise take care organization information technology infrastructure people use
+IT specialist assume responsibility selecting hardware software product appropriate organization integrating product organizational need infrastructure installing customizing maintaining application organization computer user
+Examples responsibility include installation network network administration security design web page development multimedia resource installation communication component oversight email system planning management technology lifecycle organization technology maintained upgraded replaced
+Information technology represented UMaine campus
+There fact question suitability major university opposed technical college campus
+There additional confusion term information This original sense refers specific field study property information per se example Shannon work information theory
+The term sometimes used synonymously computing come mean academic study information representation storage use opposed addition computational manipulation information
+The School Computing Information Science home information science UMaine
+In addition computer science School strong emphasis information science research graduate education particular area geographical information science
+
+This post part series produced HuffPost Mentorship Program
+discus issue affecting woman science technology engineering math
+Transitioning sophomore year summer given lot time think reflect upon experience towards majoring Computer Science
+I feel extremely different way commonly portrayed medium even I expected
+So six reality computer science major Personally brother one encouraged take computer science class
+I tried learn code unsuccessful I could even set development environment
+Even though dropped intro CS class told I could field needed woman engineer like
+Through faith I took web development course jumped intro CS track Stanford stuck CS train ever since
+The number one thing attracts CS major fact I build stuff stay around forever said internet written ink bad deal
+b accessible many people c like teaching really stupid baby something
+Mehran Sahami really famous one awesome CS professor told u first day class computer really dumb really good following instruction
+Almost good point everything letter
+If talk computer language make want golden
+My problem solving skill become immensely better becoming computer science major
+In fact everything I think problem
+Running late morning
+I break problem going take time I effectively cut corner avoid wasting time
+My parent often rely fix anything technologically related television phone name
+I approach every issue software problem could wrong
+Look symptom problem see show
+Understand system could causing
+And usually I get solution
+It easy give say oh care someone else code
+Another one awesome CS Professors Eric Roberts showed u first day second introductory class even Stanford graduated student CS major Valley hired still need people fill job
+It surprising software job even working eBay talent one thing company aggressively looking
+You give could
+Maybe could code next app Learning CS involves experimentation
+You mess around code really get
+Sometimes mean break something already working
+But great thing return get learn something new sometimes something even documented fixed
+This definitely happens work everyday
+Sometimes I feel like taking lazy approach going back old way thing trust definitely lot better play around
+Being CS major hard probably many people
+You doubt everyday whether meant want give
+You see kid since two year old think Damn I even bother trying
+You fail programming ponder question personal experience
+The truth one talk hard want think
+Even year later I still doubting decision major CS software engineering
+I doubt day I set foot first second third CS class every exam I took first day internship day I push code Github
+But truth OK doubt long hold back
+You think best
+Of course
+Do afraid wo get anywhere unless try
+So someone contemplating computer science someone afraid stop
+Forget boy tell ca forget hater jealous zeal
+Code
+If broken get segmentation fault Java exception go fix
+Chances assume meant never able feel thrill getting something work even Hello World stopping
+Sometimes one stopping answer let go
+
+If seeing message mean trouble loading external resource website
+If behind web filter please make sure domain unblocked
+To log use feature Khan Academy please enable JavaScript browser
+

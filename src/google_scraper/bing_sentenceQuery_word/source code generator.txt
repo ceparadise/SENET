@@ -1,0 +1,313 @@
+In special used control behaviour
+In fact generator
+A generator similar function return array generator parameter called generates sequence value
+However instead building array containing value returning generator yield value one time requires le memory allows caller get started processing first value immediately
+In short generator function
+Generators implemented term expressive construct
+Generators also known semicoroutines special case weaker coroutines always yield control back caller passing value back rather specifying coroutine jump see
+Generators usually inside loop
+The first time generator invocation reached loop iterator created encapsulates state generator routine beginning argument bound corresponding
+The generator body executed context iterator special action encountered time value provided action used value invocation expression
+The next time generator invocation reached subsequent iteration execution generator body resumed action yet another action encountered
+In addition action execution generator body also terminated action time innermost loop enclosing generator invocation terminated
+In complicated situation generator may used manually outside loop create iterator used various way
+Because generator compute yielded value demand useful representing sequence would expensive impossible compute
+These include
+infinite sequence live data stream
+When eager evaluation desirable primarily sequence finite otherwise evaluation never terminate one either convert use parallel construction creates list instead generator
+For example Python generator evaluated list via F evaluates lazily generator sequence evaluates eagerly list
+In presence generator loop construct language reduced single loop end loop construct usual loop construct comfortably simulated using suitable generator right way
+For example ranged loop like implemented iteration generator Python
+Further implemented sending generator using loop
+Generators first appeared prominent feature string manipulation language available later version ECMAScript language
+In CLU C generator called Ruby
+The final standard natively provide generator yet various library implementation exist documented
+A yield statement used implement iterators data abstraction
+Every expression including loop generator
+The language many generator even implement logic semantics using generator mechanism OR done way
+Printing square achieved using writing However time custom generator implemented suspend keyword function exactly like yield keyword CLU
+As Icon every expression generator
+The infinite generator prime serve example It possible introduce generator using macro
+The resulting code might aspect different native
+generator syntax uncluttered
+A good example found
+The set macro defined source allow generator defined syntax following example This iterated using Moreover allows applied class provides function
+It possible write class defining iterable method iterator method class
+For example possible write following program A basic range implementation would look like Perl natively provide generator support provided module us framework
+Example usage In generator mechanism founded named
+In model everything generator every datum created data constructor generated demand
+For example list constructor operator used parenthesization
+This us standard adaptor function value agreeable predicate stop requesting new value soon one encountered
+The shared storage access used universal mediator Haskell
+List comprehension freely used provides several related facility generator
+First form work kind producer sequence also value Some sequence implemented imperatively private state variable implemented possibly infinite lazy list
+Also new struct definition property specifies used sequence
+But directly Racket come generator library traditional generator specification
+For example Note Racket core implement powerful continuation feature providing general continuation composable also delimited continuation
+Using generator library implemented Racket
+The community PHP implemented generator PHP
+Details found original
+Ruby support generator starting version form Enumerator class
+Java standard interface implementing iterators since early day since Java foreach construction make easy loop object provide interface
+The collection framework typically provide iterators collection
+However generator built language
+This mean creating iterators often much trickier language generator especially generation logic complex
+Because state must saved restored every time item yielded iterator possible store state local variable use looping routine generator available instead must manually simulated using object field hold local state loop counter
+Even simple iterators built way tend significantly bulkier using generator lot
+The original example could written An infinite Fibonacci sequence could also written int Iterator Also infinite Fibonacci sequence could also written using Stream interface Or get Iterator BaseStream Stream interface
+An example C generator available since C version Both example utilise Generics required
+It possible use multiple statement applied sequence iteration In iterators basis loop provides generator via since version
+These define sequence lazily evaluated sequential access via list eagerly evaluated sequential access via array eagerly evaluated indexed access via contain code generates value
+For example form sequence square number filtering number range number
+Generators added version
+An example generator In Python generator thought contains frozen
+Whenever iterator method called Python resume frozen frame executes normally next statement reached
+The generator frame frozen yielded value returned caller
+PEP implemented Python add expression allowing generator delegate part operation another generator
+Python syntax modeled called generator expression aid creation generator
+The following extends example using generator expression compute square countfrom generator function
+Harmony feature generator function
+An infinite Fibonacci sequence written using function generator The iterators package used purpose
+
+A code generator tool resource generates particular sort code computer programming language
+This many specific meaning world IT many related sometimes complex process converting human programming syntax machine language read computing system
+One common conventional us term code generator describe part compiler system process modern computer programming language
+IT professional may call part compiler convert representation source code machine code code They may also refer code generation phase compiler us thing like instruction selection instruction scheduling register allocation parse handle code input output
+Another common use term code generator involves resource tool help turn specific kind code
+For example homemade open source code generator generate class method easier convenient computer programming
+This type resource might also called component generator
+In addition us people might use term code generator talk system generates specific proprietary type encoded message
+One interesting example Geek Code alphanumeric system geek use communicate one another variety identifier
+This code get used various platform various format generated code generation tool convert text geek code
+Techopedia Terms Copyright Techopedia
+
+Source code list instruction programmer word processing developing program
+The source code run turn machine code also called object code computer understand execute
+Object code consists primarily
+Source code object code state computer program compiled
+Programming language compile code include C Delphi Swift Fortran Haskell Pascal many others
+Here example C language source code You computer programmer tell code something printing Hello World
+Of course source code much complex example
+It unusual software program million line code
+Windows operating system reported million line code
+Source code either proprietary open
+Many company closely guard source code
+Users use compiled code see modify
+Microsoft Office example proprietary source code
+Other company post code internet free anyone download
+Apache OpenOffice example open source software code
+Some programming language JavaScript compiled machine code instead
+In case distinction source code object code apply one code
+That single code source code read copied
+In case developer code may intentionally encrypt prevent viewing
+Programming language interpreted include Python Java Ruby Perl PHP Postscript VBScript many others
+There error
+Please try
+Thank signing
+
+In term identifies type mechanism generates allow human write code higher abstraction level
+There little agreement precise definition automatic programming mostly meaning changed time
+tracing history automatic programming published research noted described automation manual process punching
+Later referred translation like
+In fact one earliest program identifiable called
+concluded automatic programming always programming language available programmer
+one type automatic programming procedure created scratch based mathematical requirement
+Mildred Koss early programmer explains Writing machine code involved several tedious process discrete instruction assigning specific memory location command managing buffer
+After following step implement mathematical routine library sorting program task look larger programming process
+We needed understand might reuse tested code machine help programming
+As programmed examined process tried think way abstract step incorporate language
+This led development interpreter assembler compiler designed operate produce program
+style us automated creation improve productivity
+It often related topic
+process generating source code based model template accomplished IDE
+These tool allow generation various mean
+A processor replaces pattern source code according relatively simple rule simple form source code generator
+code generation tool also exist
+Over past decade new class automatic programming emerged targeting sophisticated end user IT department looking rapid development
+These tool allow development application short period time week rather month
+In many case application customizable
+Products sometimes targeted end user dissatisfied turnaround time IT department looking major productivity enhancement
+These tool typically operate higher level representation code generation tool programming language
+Some Java language advanced form source code generation programmer interactively select customize source code
+Program allow programmer design interactively compiler invisibly generates corresponding source code another common form source code generation
+This may contrasted example define user interface
+Besides generation code wizard template IDEs generate manipulate code automate code would require multiple error prone manual step thereby improving developer productivity
+Examples feature IDEs refactoring class browser found Java IDEs like
+A specialized alternative involves generation code quantity defined mathematically within CAS
+Compiler optimization consisting finding common intermediate vector size requires complexity operation whereas design computer algebra system requires operation
+These facility used processing compiler
+This option used handling mathematically large expression
+
+Examples
+
+Source Code Definition The form computer program written programmer
+Source code written formal programming language compiled automatically object code machine code executed interpreter
+Search Source Code UK US Search Source Code rest Computing Students
+
+By end degree confident programming similar language Java
+Some college also teach student code Python PHP JavaScript since conceptual requirement computer science degree demanding college expect student learn programming time
+You need degree find work small freelance programming job gain experience picking job feel qualified complete
+You also download source code software submit revision feel benefit project
+If work quite meet project standard revision reverted project administrator
+While studying computer architecture probably learn assembly programming language designed send system call directly underlying hardware
+Assembly language different language Java Python programming job require high degree proficiency assembly
+However thoroughly understand computer architecture compiler convert code machine code excellent programmer also pretty good grasp assembly programming
+Depending degree track choose find work number different area
+make small portion computer science graduate
+Typically become developer choose software design track
+You find employment data analysis network administration management information system following business track
+To continue education bachelor degree choose science track
+Researchers analyst administrator much programming application developer although write code need proficient different area
+As researcher probably spend time reading writing programming actually programming
+As use knowledge efficient design help business organize equipment productively possible
+While many different type job available computer science graduate popularity computer science degree mean competition job high
+Becoming proficient possible programming computer science help stand job applicant
+You must post comment
+
+Computers generate random number everything cryptography video game gambling
+There two category random number true random number pseudorandom number difference important security encryption system
+This topic become controversial recently many people questioning whether Intel hardware random number generator chip trustworthy
+To understand might trustworthy understand random number genreated first place used
+Random number used many thousand year
+Whether flipping coin rolling dice goal leave end result random chance
+Random number generator computer similar attempt achieve unpredictable random result
+Random number generator useful many different purpose
+Aside obvious application like generating random number purpose gambling creating unpredictable result computer game randomness important cryptography
+You may wondering computer actually generate random number
+Where randomness come
+If piece computer code possible number computer generates could predictable
+We generally group random number computer generate two type depending generated True random number number
+To generate true random number computer measure type physical phenomenon take place outside computer
+For example computer could measure radioactive decay atom
+According quantum theory way know sure radioactive decay occur essentially pure randomness universe
+An attacker able predict radioactive decay would occur know random value
+For example computer could rely atmospheric noise simply use exact time press key keyboard source unpredictable data entropy
+For example computer might notice pressed key exactly second
+Grab enough specific time associated key press source entropy use generate true random number
+You predictable machine attacker guess precise moment press key
+The generates random number block return result gather enough entropy return truly random number
+Pseudorandom number alternative true random number
+A computer could use seed value algorithm generate number appear random fact predictable
+The computer gather random data environment
+This necessarily bad thing every situation
+For example playing video game really matter whether event occur game cased true random number pseudorandom number
+On hand using encryption want use pseudorandom number attacker could guess
+For example let say attacker know algorithm seed value pseudorandom number generator us
+And let say encryption algorithm get pseudorandom number algorithm us generate encryption key without adding additional randomness
+If attacker know enough could work backwards determine pseudorandom number encryption algorithm must chosen case breaking encryption
+To make thing easier developer help generate secure random number Intel chip include random number generator known RdRand
+This chip us entropy source processor provides random number software software request
+The problem random number generator essentially black box know going inside
+If RdRand contained NSA backdoor government would able break encryption key generated data supplied random number generator
+This serious concern
+In December FreeBSD developer removed support using RdRand directly source randomness saying trust
+The output RdRand device would fed another algorithm add additional entropy ensuring backdoor random number generator matter
+Linux already worked way randomizing random data coming RdRand predictable even backdoor
+In recent AMA Ask Me Anything Reddit Intel CEO Brian Krzanich answer question concern
+Of course likely problem Intel chip
+FreeBSD developer called Via chip name
+This controversy show generating random number truly random predictable important
+To generate true random number random number generator gather entropy seemingly random data physical world around
+For random number need random may use algorithm seed value
+Share Comments technology writer computer geek
+He home using Linux terminal digging Windows registry
+Connect
+Michael Fox middle name actually Andrew entered acting already Michael Fox care middle name adopted middle initial J homage actor Michael Pollard
+Join subscriber Enter email address get daily newsletter
+Join Geek Club
+It Free
+
+learn share knowledge build career
+I encountered topic lately could understand needed
+Can explain I use project ease life
+Examples great I learn topic little
+At least framed question correct perspective The usual reason using code generator given productivity consistency assume solution consistent repetitive problem throw code
+I would argue time considering code generation look generating code see solve problem mean
+A classic example data access could generate class table schema effectively creating table gateway solution could build something like domain model use NHibernate ActiveRecord LightSpeed pick orm map rich domain model onto database
+While hand rolled solution ORM effectively code generator primary difference code generated
+With ORM implicit step happens therefore nature
+The hand rolled solution requires explicit step generate code development likelihood generated class need customising point therefore creating problem code
+The explicit step must happen development introduces friction development process often lead code violates DRY although argue generated code never violate DRY
+Another reason touting code generation come MDA MDE world Model Driven Architecture Engineering
+I put much stock rather providing number poorly expressed argument I simply going someone el
+IMHO code generation solution exceedingly narrow set problem whenever considering probably take second look problem trying solve see better solution
+One type code generation really enhance productivity micro use macro template allow developer generate new code directly IDE tab type way placeholder eg namespace classname etc
+This sort code generation feature resharper I use heavily every day
+The reason benefit large scale code generation fails generated code tied back resource must kept sync therefore code generated like code solution
+John Moving creation basic class IDE xml dsl often seen big bang development classic example would developer try reverse engineer database domain model
+Unless code generator well written simply introduces additional burden developer every time need update domain model either update xml dsl extend domain model port change back xml dsl effectively work twice
+There code generator work well space LightSpeed designer one I think atm acting engine design surface often code generator generate terrible code maintained eg winforms webforms design surface design surface therefore rapidly undo productivity benefit gained using code generator first place
+Well either OR So code generator give Excellent example Damien Guard generate one separate file per class database model using best kept Visual Studio secret template thing Codesmith generator countless
+Anytime need produce large amount repetetive boilerplate code code generator guy job
+Last time I used code generator creating custom Data Access Layer project skeleton various CRUD action created based object model
+Instead class I put together code generator using make
+The advandages procedure Using GUI builder generate code common practice
+Thanks need manually create widget
+You drag drop use generated code
+For simple widget really save time I used lot wxWidgets
+Really using almost programming language using code generator except assembly machine code
+I often write little script crank thousand line There also software get help generate certain type code yacc lex example used generate parser create programming language
+The key think code generator input actual source code think stuff spit part build process
+In case writing language fewer actual line code deal
+For example long tedious file I write part work modifying game engine CRX
+It take integer value defined constant two header make cvars variable console
+Here short Bash script generated code Now would rather maintain
+They equivalent term describe one vastly longer annoying deal
+The canonical example data access I another example
+I worked messaging system communicates serial port socket I found I kept write class like Try imagine writing code fewer different type message
+The boring tedious code written
+I managed write I decided would easier write code generator I
+I wo post code lot arcane CodeDom stuff bottom line I able compact entire system single XML file How much easier
+Rhetorical question
+I could finally breathe
+I even added bell whistle able generate proxy I could write code like In end I say saved writing good line code turned task task well plus couple day required write
+A code generator useful The cost writing maintaining code generator le cost writing maintaining repetition replacing
+The consistency gained using code generator reduce error degree make worthwhile
+The extra problem debugging generated code make debugging inefficient enough outweigh benefit
+For apps code generation great way create model data access layer
+It churn entity class second case class minute
+This leaf programmer focus enhancing model relationship business rule deriving view within MVC
+The key thing I say model
+If relying code generation maintain code real work done template
+As stated Max And beware risk complexity maintaining code
+If want data layer automagically created make GUI work day I suggest going geared towards application scenario
+Finally keep mind garbage
+If entire data layer homogeneous abstract database please please ask bothering data layer
+Unless need look productive How example good use code generator
+This us template code generator built visual studio generate compressed cs file Basically let define variable real inheritance even behavior style sheet create normal cs compile time
+Everyone talk simple code generation code generation like MDSD DSM
+This help move beyond simple generator code generation concept problem domain
+It productive project even development introduces additional discipline better understanding employed solution usually better evolution path
+Like OOP provided increase abstraction generating large quantity assembly code based higher level specification development allows u increase abstraction level yet another gain productivity
+MetaCase mature ABSE Isomeris project alpha info two technology forefront code generation
+What needed really change mindset like OOP required
+I actually adding finishing touch code generator I using project I hired
+We huge XML file definition day worth work I able generate C class
+If I want add functionality class say I want add attribute property
+I add hit go bam
+I done
+It really nice really
+There many us code generation
+Writing code familiar language generating code different target language
+Writing code higher level abstraction
+Automating repetitive task
+Ignoring preconceived notion basically translating one representation usually higher level another usually lower level
+Keeping definition mind powerful tool
+The current state programming language mean reached full potential never
+We always abstracting get higher level stand today
+Code generation get u
+We either depend language creator create abstraction u
+Languages today sophisticated enough allow anybody easily
+If code generator also intend snippet try difference typing ctor TAB writing constructor time class
+Or check much time earn using snippet create switch statement related enum many value
+If paid LOC work people understand code generation make lot sense
+This joke way I worked one programmer employ technique exactly purpose
+Nobody get paid LOC formally I know anyway programmer generally expected productive churning large volume code make someone productive
+As slightly tangential point I think also explains tendency coder break single logical unit code many different class possible ever inherit project class
+Here heresy If task stupid automated program writing time
+source code generated script let say XML also done
+representation XML interpreted using
+So essence programmer lazy attempt solve real problem took easy way wrote code generator
+In Java C look reflection look template By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+

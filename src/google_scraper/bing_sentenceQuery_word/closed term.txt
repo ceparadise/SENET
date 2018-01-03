@@ -1,0 +1,532 @@
+Computer science also strong connection discipline
+Many problem science engineering health care business area solved effectively computer finding solution requires computer science expertise knowledge particular application domain
+Thus computer scientist often become proficient subject
+Finally computer science wide range specialty
+These include computer architecture software system graphic artifical intelligence computational science software engineering
+Drawing common core computer science knowledge specialty area focus particular challenge
+Finally importantly computer scientist computer scientist fun
+Not mention lucrative career opportunity
+Computer Science The Profession Computer science discipline involves understanding design computer computational process
+In general form concerned understanding information transfer transformation
+Particular interest placed making process efficient endowing form intelligence
+The discipline range theoretical study algorithm practical problem implementation term computational hardware software
+A central focus process handling manipulating information
+Thus discipline span advancing fundamental understanding algorithm information process general well practical design efficient reliable software hardware meet given specification
+Computer science young discipline evolving rapidly beginning
+As includes theoretical study experimental method engineering design one discipline
+This differs radically physical science separate understanding advancement science application science field engineering design implementation
+In computer science inherent intermingling theoretical concept computability algorithmic efficiency modern practical advancement electronics continue stimulate advance discipline
+It close interaction theoretical design aspect field bind together single discipline
+Because rapid evolution difficult provide complete list computer science area
+Yet clear crucial area theory algorithm data structure programming methodology language computer element architecture
+Other area include software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation
+A professional computer scientist must firm foundation crucial area field likely knowledge one area discipline depending upon person particular area practice
+Thus well educated computer scientist able apply fundamental concept technique computation algorithm computer design specific design problem
+The work includes detailing specification analysis problem provides design function desired satisfactory performance reliable maintainable meet desired cost criterion
+Clearly computer scientist must sufficient training computer science area able accomplish task must also firm understanding area mathematics science well broad education liberal study provide basis understanding societal implication work performed
+Computer Science study principle application technology computing computer
+It involves study data data structure algorithm process structure principle computer hardware software design methodology topic numerical analysis operation research artificial intelligence language design structure translation technique
+Computer Science provides foundation knowledge student career objective wide range computing profession
+The study efficient effective software development technique
+Team work communication skill
+An interest applying technology problem wide variety discipline
+Computer Science concerned information much sense physic concerned energy devoted representation storage manipulation presentation information
+Computer Science concerned study machine communication man machine application machine
+Major area Computer Science include
+Operating Systems concerned development structure complex program facilitate communication
+
+Computational Science analysis numerical method solving mathematical problem computer
+
+Programming Languages study design property language human communicate computer
+
+Architecture study use mathematical logic design electronic circuit
+
+Intelligent Systems concerned mean computer may perform task might characterized intelligent performed human
+
+Automata Theory abstract study computer capability
+
+Information Storage Retrieval study method storing vast amount data computer method searching retrieving data
+
+Software Engineering study tool technique software design development testing maintenance
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I confused get type
+If I assume I get n k k get right type
+But I ca reduce context
+So could anyone tell make
+Thanks lot
+Whenever new type constructor defined come term
+These
+In case sum following mean X Y So I think point missed say type X Y without anything else would completely useless
+We also provide way introducing eliminating term new type
+Now know inl inr definition sum type easy x X
+Y
+inr By way Haskell package help I show demo OSX El Capitan broke cabal
+However formulated sum ultimately two constructor
+function type Y
+Often called
+In Haskell
+If using work right lambda term
+So since X Y two separate way filling first component result tuple
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In also technique implementing language
+closure storing together environment mapping associating function variable used locally defined enclosing scope name bound closure created
+A plain function access closure copy value reference even function invoked outside scope
+The following program fragment defines
+The nested function access lexical scope even though local
+The function return closure containing copy value copy reference function add value value Note return function variable
+Invoking return invoking return
+While refer function associated environment differ invoking closure bind name two distinct variable different value two invocation thus evaluating function different result
+The concept closure developed mechanical evaluation expression first fully implemented language feature programming language support lexically scoped
+defined term used evaluating expression
+credit Landin introducing term refer whose open binding free variable closed bound lexical environment resulting closure
+This usage subsequently adopted defined lexically scoped variant became widespread
+The term often mistakenly used mean
+This probably many programmer learn concept time form small helper function anonymous closure
+An anonymous function function without name closure instance function whose variable bound either value depending language see section
+For example following code rather variable closure case produced returning nested function free variable enclosing function free variable bind parameter enclosing function
+However first case nested function name second case nested function anonymous
+The closure need assigned variable used directly last original name used defining irrelevant
+This usage may deemed anonymous closure
+Note especially nested function definition closure free variable yet bound
+Only enclosing function evaluated value parameter free variable nested function bound creating closure returned enclosing function
+Lastly closure distinct function free variable outside scope variable otherwise defining environment execution environment coincide nothing distinguish static dynamic binding ca distinguished name resolve value
+For example program function free variable bound variable global scope executed environment defined immaterial whether actually closure This often achieved function return since function must defined scope variable case typically scope smaller
+This also achieved reduces scope variable though le common practice le useful shadowing discouraged
+In example seen closure body bound global namespace local The use closure associated language function function returned result passed argument function call function free variable returning one creates closure
+This includes well many modern imperative language Python
+Closures also frequently used particularly used interaction
+Traditional imperative language either support nested function C support calling nested function enclosing function exited GNU C Pascal thus avoiding need use closure
+Closures used implement manner
+Constructs thus implemented closure
+In language closure may occur function defined within another function inner function refers local variable outer function
+At outer function executes closure formed consisting inner function code reference upvalues variable outer function required closure
+Closures typically appear language function word language enable function passed argument returned function call bound variable name like simpler type string integer
+For example consider following function In example appears within function
+When lambda expression evaluated Scheme creates closure consisting code lambda expression reference variable inside lambda expression
+The closure passed function call repeatedly determine book added result list discarded
+Because closure reference use variable time call
+The function might defined completely separate file
+Here example rewritten another popular language support closure The keyword used instead method instead global function otherwise structure effect code
+A function may create closure return following example Because closure case outlives execution function creates variable live function return even though execution left scope longer visible
+In language without closure lifetime automatic local variable coincides execution stack frame variable declared
+In language closure variable must continue exist long existing closure reference
+This commonly implemented using form
+A closure used associate function set private variable persist several invocation function
+The variable encompasses function accessed program code
+In stateful language closure thus used implement paradigm state representation since closure upvalues variable indefinite value established one invocation remains available next
+Closures used way longer thus longer nevertheless commonly used impure functional language
+Closures many us Note Some speaker call data structure bind environment closure term usually refers specifically function
+Closures typically implemented special contains plus representation function lexical environment set available variable time closure created
+The referencing environment name corresponding variable lexical environment time closure created additionally extending lifetime least long lifetime closure
+When closure later time possibly different lexical environment function executed variable referring one captured closure current environment
+A language implementation easily support full closure memory model allocates linear
+In language function automatic local variable deallocated function return
+However closure requires free variable reference survive enclosing function execution
+Therefore variable must allocated persist longer needed typically via rather stack lifetime must managed survive closure referencing longer use
+This explains typically language natively support closure also use
+The alternative manual memory management variable explicitly allocating heap freeing done using stack allocation language accept certain use case lead due freed automatic variable lambda expression nested function GNU The functional argument problem describes difficulty implementing function first class object programming language C
+Similarly version assumed programmer know automatic local variable reference invalid return definition scope automatic local variable stack still permit many useful functional pattern complex case need explicit variable
+D version solved detecting variable must stored heap performs automatic allocation
+Because D us garbage collection version need track usage variable passed
+In strict functional language immutable data easy implement automatic memory management garbage collection possible cycle variable reference
+For example Erlang argument variable allocated heap reference additionally stored stack
+After function return reference still valid
+Heap cleaning done incremental garbage collector
+In ML local variable lexically scoped hence define model since bound value object implementation free copy value closure data structure way invisible programmer
+lexical scope system dynamic variable garbage collection lack stack programming model suffer limitation language
+Closures expressed naturally Scheme
+The lambda form encloses code free variable environment persist within program long possibly accessed used freely Scheme expression
+Closures closely related Actors concurrent computation value function lexical environment called
+An important issue closure language whether variable closure updated update synchronized
+Actors provide one solution
+Closures closely related transformation former latter known see also
+As different language always common definition lexical environment definition closure may vary also
+The commonly held minimalist definition lexical environment defines set scope also closure language capture
+However meaning binding also differs
+In imperative language variable bind relative location memory store value
+Although relative location binding change runtime value bound location
+In language since closure capture binding operation variable whether done closure performed relative memory location
+This often called capturing variable reference
+Here example illustrating concept one language Note function closure referred variable use relative memory location signified local variable
+On hand many functional language bind variable directly value
+In case since way change value variable bound need share state use value
+This often called capturing variable value
+Java local anonymous class also fall require captured local variable also mean need share state
+Some language enable choose capturing value variable location
+For example captured variable either declared mean captured reference mean captured value
+Yet another subset functional language bind variable result future computation rather value
+Consider example Haskell The binding captured closure defined within function computation case result division zero
+However since computation captured value error manifest closure invoked actually attempt use captured binding
+Yet difference manifest behavior lexically scoped construct statement
+Such construct general considered term invoking established enclosing control statement case interpretation requires looping construct considered term recursive function call
+In language ECMAScript refers continuation established closure lexically innermost respect within closure transfer control code called
+However superficially similar operator invokes escape continuation established method invocation ignoring escape continuation intervening nested closure
+The escape continuation particular closure invoked Smalltalk implicitly reaching end closure code
+The following example ECMAScript Smalltalk highlight difference The code snippet behave differently Smalltalk operator JavaScript operator analogous
+In ECMAScript example leave inner closure begin new iteration loop whereas Smalltalk example abort loop return method
+provides construct express either action Lisp behaves Lisp behaves
+Hence Smalltalk make possible captured escape continuation outlive extent successfully invoked
+Consider When closure returned method invoked attempt return value invocation created closure
+Since call already returned Smalltalk method invocation model follow discipline facilitate multiple return operation result error
+Some language enable programmer choose way captured
+An example Ruby Both example way create closure semantics closure thus created different respect statement
+In definition scope control statement explicit arbitrarily named sake example
+The following direct translation Ruby sample
+Features language simulate feature closure
+Language feature include technique example Java C Some library support
+This sometimes implemented providing two value registering callback library function pointer separate pointer arbitrary data user choice
+When library executes callback function pass along data pointer
+This enables callback maintain state refer information captured time registered library
+The idiom similar closure functionality syntax
+The pointer type safe C idiom differs closure C Haskell ML
+With gcc extension used function pointer emulate closure providing containing function exit
+The example invalid enables defined inside
+These called
+When class named known anonymous class
+A local class either named anonymous may refer name lexically enclosing class variable marked lexically enclosing method
+The capturing variable enables capture variable value
+Even variable want capture always copy temporary variable class
+Capturing variable reference emulated using reference mutable container example array
+The local class able change value container reference able change content container
+With advent Java lambda expression closure cause code executed Local class one type inner class declared within body method
+Java also support inner class declared enclosing class
+They normally referred inner class
+These defined body enclosing class full access instance variable enclosing class
+Due binding instance variable inner class may instantiated explicit binding instance enclosing class using special syntax
+Upon execution print integer
+Beware confuse type class nested class declared way accompanied usage static modifier desired effect instead class special binding defined enclosing class
+As Java support function first class object
+Lambda expression form considered type T domain U image type
+The expression called method standard method call
+introduced form closure nonstandard extension
+Apple made implementation available GCC clang compiler
+Pointers block block literal marked
+Normal local variable captured value block created inside block
+Variables captured reference marked
+Blocks need persist outside scope created may need copied
+anonymous method lambda expression support closure In closure implemented delegate function pointer paired context pointer
+class instance stack frame heap case closure
+D version limited closure support
+For example code work correctly variable stack returning test longer valid use probably calling foo via dg return integer
+This solved explicitly allocating variable heap using structs class store needed closed variable construct delegate method implementing code
+Closures passed function long used referenced value still valid example calling another function closure callback parameter useful writing generic data processing code limitation practice often issue
+This limitation fixed D version variable automatically allocated heap used inner function delegate function escape current scope via assignment dg return
+Any local variable argument referenced delegate referenced delegate escape current scope remain stack simpler faster heap allocation
+The true inner class method reference function variable
+enables defining overloading
+These object behave somewhat like function functional programming language
+They may created runtime may contain state implicitly capture local variable closure
+As language also support closure type function object constructed automatically special language construct called
+A closure may capture context either storing copy accessed variable member closure object reference
+In latter case closure object escape scope referenced object invoking cause undefined behavior since closure extend lifetime context
+includes defining closure
+An inline agent object representing routine defined giving code routine
+For example argument agent representing procedure two argument procedure find country corresponding coordinate display
+The whole agent subscribed event type certain button whenever instance event type occurs button user clicked button procedure executed mouse coordinate passed argument
+The main limitation Eiffel agent distinguishes closure language reference local variable enclosing scope
+This design decision help avoiding ambiguity talking local variable value closure latest value variable value captured agent created
+Only reference current object analogous Java feature argument agent accessed within agent body
+The value outer local variable passed providing additional closed operand agent
+
+In
+In environment least one name number
+The closure environment keep bound variable memory us closure
+Peter Landin gave idea name
+The made closure popular
+Many programming language made time closure
+function name sometimes wrongly called closure
+Most language anonymous function also closure
+An anonymous function also closure environment least one bound variable
+An anonymous function environment closure
+A named closure anonymous
+may number type letter made simpler part
+In rule programming language value given function returned function bound variable name
+Functions take return function called
+Most language function value also function closure
+For example take look following Scheme function In example part function
+When function run Scheme must make value lambda
+It making closure code lambda reference variable inside lambda
+A name bound value
+The function run closure book list pick book return
+Because closure reference closure use value time run closure
+The function might written completely separate file
+Here example rewritten JavaScript another popular language support closure ECMAScript us word instead method place function otherwise code thing way
+A function may create closure return
+The following example function return function
+In Scheme In ECMAScript The closure environment keep bound variable function return
+In language without closure value would lost enclosing function return
+In language closure bound variable must kept memory long closure
+A closure need formed using
+The programming language example limited support anonymous function closure
+For example one way ECMAScript example could implemented Python In example function named make closure together variable
+The outer enclosing function named return closure
+In case anonymous function would work also
+Python must often use named function instead lambda expression may contain code return value code effect value
+But language Scheme code return value Scheme everything expression
+Closures many us In Scheme Note Some speaker call data structure bind environment closure term usually refers specifically function
+
+To make learning list important computer science theory concept explained analogy minimally technical term
+It like computer science degree program everyone get understand general concept
+Important note Also check getting started programming
+Say order download film collection online time
+You want test method faster
+The delivery take almost day arrive download completed minute earlier
+Great
+So tight race
+What I order several movie like The Lord Rings Twilight The Dark Knight Trilogy etc
+download movie online time
+This time delivery still take day complete online download take day finish
+For online shopping number purchased item input affect delivery time
+The output constant
+We call
+For online downloading download time directly proportional movie file size input
+We call
+From experiment know online shopping scale better online downloading
+It important understand big O notation help analyze algorithm
+Big O notation represents algorithm
+Let assume O O n scenario example
+Here video explains sorting Someone movie theater asks row sitting
+You lazy count ask person front
+You simply add person answer get current row number
+Brilliant right
+However person front exactly thing
+Finally question reach row answer I row
+From correct message incremented one row pas way person asked
+Aaron Above The Droste chocolate box illustrates recursion
+Here another example known
+A nurse carrying tray box cocoa cup containing smaller image holding thing turn contains even smaller version image
+Here
+If still get recursion Otherwise continue reading
+Let assume leak water pipe garden
+You take bucket sealing material fix problem
+After see leak much bigger need plumber bring bigger tool
+In meanwhile still using bucket drain water
+After notice massive underground stream opened
+You need handle gallon water every second
+Buckets useful anymore
+You need completely new approach solve problem volume velocity water grown
+To prevent town flooding may need government build massive dam requires enormous civil engineering expertise elaborate control system
+Balaji Big data describes data set large complex impossible manage conventional data processing tool
+Every computer scientist programmer least know Go next page learn
+
+A computer science education sure ticket job today tech economy right
+Hardly say one startup CEO lambasts school failing teach practical computer skill suggesting developer skip degree path first place
+In weekend Daniel Gelernter explains hire CS graduate work app company
+Here gist argument emphasis mine The thing I look developer degree computer science
+Computer science department prepare student academic research career spurn job actually pay money
+
+Harvard one make good developer one term
+So college graduate coding skill tech startup need likely learned problem set
+As one developer told The people good school part computer good My experience hiring show exactly
+But
+I one developer degree electrical engineering learn development skill college I ask
+No
+Taking shot computer science hardly new course
+I recall college experience decade ago friend physic math department sneered intellectual confines subject meanwhile others told serious tech occurred electrical engineering department
+I say sure friend right background law liberal art I add Gelernter comment jibe experience tech reporter
+In course talking hundred startup founder developer year I recall meeting many computer science I certainly met successful dropout
+Interestingly Gelernter also skeptical coding school bootcamps sprouting
+He say program typically last around week cost thousand dollar unlikely land student plum job Facebook
+The simple reason argues enroll coding bootcamp unlikely natural chop good developer first place want job
+He prefers people innate passion talent coding first place
+So mean one get CS degree attend boot camp
+Not necessarily
+There plenty good job computer field employer looking credential even position lack cachet Pinterest engineer Silicon Valley app It also worth noting Gelernter proposed path limit renegade coder ideal fine certain cultural young wealthy unattached practical option people
+More seriously Gelernter dismissive view academic approach computer science risk glorifying minor technical talent expense understanding computer relation science humanity
+An Android developer authority computer copy editor Shakespeare Keats
+Instead larger lesson may developer realistic career opportunity school upfront program lead
+As startup CEOs keep mind distinction coding vocational training knowledge
+
+A regularly interacting interdependent group item forming unified whole
+Every system delineated spatial temporal boundary surrounded influenced environment described structure purpose expressed functioning
+The term system come word turn whole concept made several part member system literary composition
+According System mean something look
+You must high visual gradient systematization
+But philosophy prior Descartes system
+Plato system
+Aristotle system
+In century French physicist studied pioneered development concept system
+In studied system called typically body water vapor regard system ability work heat applied
+The working substance could put contact either boiler cold reservoir stream cold water piston working body could work pushing
+In German physicist generalized picture include concept began use term working body referring system
+The biologist became one pioneer
+In introduced pioneered use mathematics study system carried significant development concept
+In others coined term interdisciplinary
+A set element system component larger system
+A subsystem description system object contains information defining characteristic operating environment controlled system
+Evidently many kind system analyzed
+For example analysis urban A
+Steiss defined five intersecting system including physical subsystem behavioral system
+For sociological model influenced system theory defined system term abstract system either
+defined system sociology term model
+cautioned inquiry system understanding kind crucial defined natural designed artificial system
+Artificial system inherently major defect must premised one fundamental assumption upon additional knowledge built
+These fundamental assumption inherently deleterious must definition assumed true actually false system structurally integral assumed
+For example evident postulation extrapolation proof
+It important confuse abstract definition
+Theorists include natural system subatomic system
+Artificial system include physical structure hybrid natural artificial system conceptual knowledge
+The human element organization function emphasized relevant abstract system representation
+A cardinal consideration making distinction among system determine much freedom system select purpose goal method tool etc
+wide freedom select distributed concentrated
+maintained classification complete perfect purpose defined system abstract bounded discrete continuous pulse etc
+The interaction system environment categorized relatively closed
+It seems unlikely absolutely closed system exist could known man
+Important distinction also made system technical nature amenable method operation research quantitative system analysis system involve people organisation commonly associated concept developed SSM involving method emphasis participatory design
+Where hard system might identified scientific distinction often elusive
+A cultural system may defined interaction different element
+While cultural system quite different sometimes together referred sociocultural system
+A major concern social science
+An economic system mechanism deal particular
+The economic system composed relationship resource
+It address problem like allocation scarcity resource
+Systems modeling generally basic principle engineering social science
+The system representation entity concern
+Hence inclusion exclusion system context dependent intention modeler
+No model system include feature real system concern model system must include entity belonging real system concern
+In structure observable behavior
+Again example illustrate There system counting various system filing paper catalogue various library system example
+This still fit definition component connected together case facilitate flow information
+System also refer framework aka software hardware designed allow software program run
+In physical system portion universe studied one major example
+Engineering also concept system referring part interaction part complex project
+branch engineering study type system planned designed implemented built maintained
+Social recognize system human person model human society
+They include human brain function mental process well normative ethic system behavioral pattern
+In OD human organization viewed conceptual system interacting component subsystem system aggregate carrier numerous complex organizational structure
+Organizational development theorist developed notion organization system book
+style problem solving
+It start recognition system property given problem
+It leadership competency
+Some people
+Such people consider potential consequence decision part larger system
+This also basis systemic coaching psychology
+also described working organizational system new metaphoric context
+There also thing logical system
+The obvious example calculus developed simultaneously
+Another example Boolean operator
+Other example related specifically philosophy biology cognitive science
+applies psychology biology using pure logic
+Numerous psychologist including developed system logically organize psychological domain personality motivation intellect desire
+Often domain consist general category following
+Logic applied category
+In military strategist introduced model book contending complex system could broken five concentric ring
+Each Processes Infrastructure Population Action used isolate key element system needed change
+The model used effectively Air Force planner
+In late Warden applied model business strategy
+
+full formatting system displaying text graphic audio retrieved monitor
+Each retrieval unit known Web page page frequently contain link allow related page retrieved
+HTML encoding Web page
+It designed British scientist nuclear physic laboratory Switzerland defined DTD document type definition
+HTML markup tag specify document element heading paragraph table
+They mark document display known Web
+The browser interprets tag displaying heading paragraph table layout adapted screen size font available
+HTML document also contain tag specify link Web page
+An anchor form A http Encyclopædia Britannica quoted string universal resource locator link point Web address text following appears Web browser underlined show link another page
+What displayed single page may also formed multiple URLs containing text others graphic
+The World Wide Web system displaying text graphic audio retrieved Internet computer monitor
+Each retrieval unit known Web page page frequently contain link allow related page retrieved
+reader
+The language HyperText Markup Language allows nonprogrammers design Web page specifying structure content leaf detailed presentation extraction information client Web browser
+hyperlink written HyperText Markup Language assigned online address called Uniform Resource Locator URL
+system architecture revolutionized communication method commerce allowing various computer network around world interconnect
+Sometimes referred network network Internet emerged United States become visible general public device processing storing displaying information
+meant person computation term almost universally refers automated electronic machinery
+We welcome suggested improvement article
+You make easier u review hopefully publish contribution keeping point mind
+Your contribution may edited staff publication subject final approval
+Unfortunately editorial approach may able accommodate contribution
+Our editor review submitted meet criterion add article
+Please note editor may make formatting change correct spelling grammatical error may also contact clarification needed
+There problem submission
+Please try later
+Our editor review submitted determine whether revise article
+
+A system commonly defined group interacting unit element common purpose
+The unit element system cog wire people computer
+Systems generally classified open system closed system take form mechanical biological social system
+Open system refer system interact system outside environment whereas closed system refer system relatively little interaction system outside environment
+For example living organism considered open system take substance environment food air return substance environment
+Humans example inhale oxygen environment exhale carbon dioxide environment
+Similarly organization consume raw material production product emit finished good pollution result
+In contrast watch example closed system relatively unit little interaction exchange environment
+All system boundary fact immediately apparent mechanical system watch much le apparent social system organization
+The boundary open system interact system environment flexible closed system rigid largely impenetrable
+A closed system perspective view organization relatively independent environmental influence
+The closed system approach conceives organization system management technology personnel equipment material tends exclude competitor supplier distributor governmental regulator
+This approach allows manager organizational theorist analyze problem examining internal structure business little consideration external environment
+The perspective basically view organization much thermostat limited environmental input outside change temperature required effective operation
+Once set thermostat require little maintenance ongoing function
+While perspective dominant organization scholarship research subsequently emphasized role environment
+Up manager ignored outside environment organization market government regulation like strategy process gave relatively little consideration impact external force might internal operation organization
+Open system theory originated natural science subsequently spread field diverse computer science ecology engineering management psychotherapy
+In contrast closed system open system perspective view organization entity take input environment transforms release output tandem reciprocal effect organization along environment organization operates
+That organization becomes part parcel environment situated initiate feedback mechanism result achieved output organization environment
+As approach spread among organizational theorist manager began incorporating view practice
+Two early pioneer effort Daniel Katz Robert Kahn began viewing organization open social system specialized interdependent subsystem process communication feedback management linking subsystem
+Katz Kahn argued closed system approach fails take account organization reciprocally dependent external environment
+For example environmental force customer competitor exert considerable influence corporation highlighting essential relationship organization environment well importance maintaining external input achieve stable organization
+Furthermore open system approach serf model business activity business process transforming input output realizing input taken external environment output placed environment
+Companies use input labor fund equipment material produce good provide service design subsystem attain goal
+These subsystem thus analogous cell body organization analogous body external market regulatory condition analogous environmental factor quality housing drinking water air availability nourishment
+The production subsystem example focus converting input marketable output often constitutes primary purpose company
+The boundary subsystem goal obtain input resource employee material equipment forth environment outside company necessary production subsystem
+This subsystem also responsible providing organization information environment
+This adaptive subsystem collect process information company operation goal aiding company adaptation external condition environment
+Another subsystem management supervises coordinate subsystem ensure subsystem function efficiently
+The management subsystem must resolve conflict solve problem allocate resource
+To simplify process evaluating environmental influence organizational theorist use term task environment refer aspect environment immediately relevant management decision related goal setting goal realization
+The task environment includes customer supplier competitor employee regulatory body
+Furthermore contrast perspective assume environment static
+Instead change rule rather exception
+Consequently investigation environmental stability propensity change key task company making activity organization contingent various environmental force
+As open system organization maintains stability feedback refers information output system obtains input task environment
+The feedback positive negative lead change way organization transforms input output
+Collier point feedback data enable open system organization determine impact input environment subsequent action either maintaining positive impact correcting negative impact
+The difference closed system open system lie complexity environmental interaction
+Closed system exhibit minimal interaction environment tightly guarded relatively impenetrable boundary
+Consequently little information exchange take place organization environment closed system situation denies management opportunity receive feedback environment
+Moreover closed system generally static provide room multiple alternative accomplishing result
+Conversely open system human body modern organization intricately dependent environment
+Organizations observe open system management design operational strategy along principle continuous information exchange continuous target market evaluation multiplicity alternative achieving goal
+The point closed system open system represent continuum along organization open le open environment
+The key defining variable governing degree openness complexity environment organization situated
+Managers must take consideration organization position along continuum
+The Linux computer operating system instance Red Hat corporation selling bundled revision multiple input geographically dispersed user represents organization would cease exist open system perspective
+Thus stable environment low complexity consistent relatively closed system mechanistic management style environment consistent flexible decentralized organic management style
+Chesbrough Henry
+Boston Harvard Business School Press
+Collier Paul Samuel
+
+Elsevier Publishers
+Defillippi Robert Michael Arthur Valerie Lindsay
+
+Blackwell Publishing
+Katz Daniel Robert Kahn
+York John Wiley Sons
+Prahalad Coimbatore Venkat Ramaswamy
+
+Boston Harvard Business School Press
+Role Information Technology Managing Organizational Change Organizational Interdependence
+
+Avaialable
+
+
+
+Open Closed Systems
+
+
+January
+Open Closed Systems
+
+
+Retrieved January give ability cite reference entry article according common style Modern Language Association MLA The Chicago Manual Style American Psychological Association APA
+Within Cite article tool pick style see available information look formatted according style
+Then copy paste text bibliography work cited list
+Because style formatting nuance evolve time information available every reference entry article guarantee citation generates
+Therefore best use citation starting point checking style school publication requirement information available site
+

@@ -1,0 +1,175 @@
+A instruction cause computer begin executing different instruction sequence thus deviate default behavior executing instruction order
+may also refer act switching execution different instruction sequence result executing branch instruction
+A branch instruction either always result branching may may cause branching depending condition
+Branch instruction used implement program loop conditionals executing particular sequence instruction certain condition satisfied
+Mechanically branch instruction change PC
+The program counter memory address next instruction
+Therefore branch cause CPU begin fetching instruction different sequence memory cell
+When branch CPU program counter set jump instruction
+So next instruction becomes instruction address
+Therefore flow control change
+When branch CPU program counter unchanged
+Therefore next instruction executed instruction branch instruction
+Therefore flow control unchanged
+The term used referring program high level language well program written
+In branch usually take form various form encapsulate instruction sequence executed condition satisfied
+Unconditional branch instruction used unconditionally jump begin execution different instruction sequence
+Machine level branch instruction sometimes called instruction
+Machine level jump instruction typically form latter may depending condition
+Usually distinct form jump often called subroutine invokations known automatically save originating address return address stack allowing single subroutine invoked multiple location code
+In CPUs earlier instruction set condition flag register
+The earlier instruction may instruction
+It often close branch though necessarily instruction branch
+The stored condition used branch
+This temporary information often stored flag register may also located elsewhere
+A flag register design simple slower simple computer
+In fast computer flag register place bottleneck speed instruction could otherwise operate parallel several need set flag bit particular sequence
+There also machine particular instruction condition may checked jump instruction
+In simple computer design comparison branch execute arithmetic use power flag register branch
+In fast computer design comparison branch run faster flag register branch comparison branch access register parallelism using CPU mechanism calculation
+Some early simple CPU architecture still found microcontrollers may implement conditional jump rather conditional skip next instruction operation
+A conditional jump call thus implemented conditional skip unconditional jump call instruction
+Depending jump instruction typically shortened form word word often along informative letter extra parameter representing condition
+Sometimes detail included well range jump offset size special addressing mode used locate actual effective offset
+This table list machine level branch jump instruction found several architecture VAX others set signal clear signal
+ARM PIC others opposite subtractive operation
+This inverted function carry flag certain instruction marked part table otherwise noted
+However carry additive operation handled way architecture
+To achieve high performance modern processor
+They consist multiple part partially process instruction feed result next stage pipeline start working next instruction program
+This design expects instruction execute particular unchanging sequence
+Conditional branch instruction make impossible know sequence
+So conditional branch cause stall pipeline restarted different part program
+Several technique improve speed reducing stall conditional branch
+Historically branch prediction took statistic used result optimize code
+A programmer would compile test version program run test data
+The test code counted branch actually taken
+The statistic test code used compiler optimize branch released code
+The optimization would arrange fastest branch direction taken would always frequently taken control flow path
+To permit CPUs must designed least predictable branch timing
+Some CPUs even instruction set designed branch hint compiler tell CPU branch taken
+The problem software branch prediction requires complex software development process
+To run software hardware moved statistic electronics
+Branch predictor part processor guess outcome conditional branch
+Then processor logic gamble guess beginning execute expected instruction flow
+An example simple hardware branch prediction scheme assume backward branch
+smaller program counter taken part loop forward branch larger program counter taken leave loop
+Better branch predictor developed validated statistically running simulation variety test program
+Good predictor usually count outcome previous execution branch
+Faster expensive computer run faster investing better branch prediction electronics
+In CPU hardware branch prediction branch hint let compiler presumably superior branch prediction override hardware simplistic branch prediction
+Some logic written without branch fewer branch
+It often possible use instead branch
+Another technique
+In approach one instruction branch always executed
+Therefore computer use instruction useful work whether pipeline stall
+This approach historically popular computer
+In family compatible CPUs complicates multicycle CPUs pipeline faster CPUs pipeline superscalar CPUs execute instruction order
+
+transfer also known conditional branching whereby would able jump different instruction depending value data
+This extremely powerful feature missing many early computer century
+transfer also known conditional branching whereby would able jump different instruction depending value data
+This extremely powerful feature missing many early computer century
+
+The conditional control structure allows program follow alternative path execution
+Iteration looping give computer much power
+They repeat sequence step often necessary appropriate repetition quite simple step solve computer Colossus conditional ability execute different instruction alter order execution instruction based value data
+For instance IF X THEN GO TO LINE
+This gave ENIAC lot flexibility machine conditional ability execute different instruction alter order execution instruction based value data
+For instance IF X THEN GO TO LINE
+This gave ENIAC lot
+
+In feature perform different computation action depending whether evaluates true false
+Apart case always achieved selectively altering based condition
+In language term conditional usually used whereas term conditional conditional construct preferred term distinct meaning
+A conditional sometimes colloquially referred especially perceived simple one specific form irrelevant unknown
+Although usually classified conditional construct another way select alternative
+The construct sometimes called common across many programming language
+Although syntax varies language language basic structure form look like In example code part represented constitutes conditional intrinsic value may substituted either value intrinsic meaning
+In contrast combination expression surrounding consequent follows afterward constitute conditional intrinsic meaning expressing coherent logical rule intrinsic value
+When find expects condition example mean variable x contains number greater zero evaluates condition
+If condition statement following executed
+Otherwise execution continues following branch either usually optional branch
+After either branch executed return point
+In early programming language especially dialect statement could contain statement
+This led style programming known program style called
+As result allows virtually arbitrary statement put statement block inside statement gained popularity became norm even BASIC programming circle
+Such mechanism principle based older advanced family language language influenced modern BASIC variant many year
+While possible using statement statement write program spaghetti code well structured readable program written structured programming language structured programming make easier enforces
+Structured statement like example one key element structured programming present popular programming language
+A subtlety optional else clause found many language mean since conditionals parsed multiple way
+Specifically parsed depending whether associated first second
+This known problem resolved various way depending language
+By using possible combine several condition
+Only statement following first condition found true executed
+All statement skipped
+The statement simply followed
+In Ada difference one needed one us instead followed
+This similar provides keyword avoid large number brace would required multiple statement also us special keyword structure denoted indentation rather brace repeated use would require increased indentation every condition
+Similarly earlier UNIX shell later gathered POSIX shell syntax use elif giving choice delimiting space line break
+However many language directly descended Algol special syntax construct present present many syntactical derivative C PHP
+This work language statement case follow conditional without enclosed block
+This design choice slight cost code branch effectively adding extra nesting level complicating job compiler implementors analyse implement arbitrarily long chain recursively
+If term sequence conditionals testing value single expression alternative also called
+Conversely language switch statement produced sequence statement
+Many language support similar statement return value result
+Thus true expression evaluate value statement change program state perform kind action
+member family allow expression In dialect first inspired great extent ALGOL In part compulsory every expression must value
+Logic would expressed conditionals language usually expressed recursive function
+Because Haskell possible write control structure ordinary expression lazy evaluation mean evaluate condition proper branch strict language would evaluate three
+It written like language special conditional expression function may described template like This mean inlined expression unlike language compared expression similar Ruby Scala among others
+To accomplish using would take one line code typical layout convention Some argue explicit statement easier read may compile efficient code ternary operator others argue concise expression easier read statement spread several line
+First user run program cursor appears waiting reader type number
+If number greater text My variable named
+displayed screen
+If number smaller message My variable named
+printed screen
+In language function called provided used conditional expression
+However behave like true conditional expression true false branch always evaluated result one thrown away result returned IIf function
+Up language Fortran arithmetic statement halfway computed IF case statement based This earliest conditional statement Fortran Where e numeric expression necessarily integer equivalent Because equivalent multiple statement could jump anywhere considered unstructured control statement used structured statement used
+In practice observed arithmetic statement referenced following statement one two label
+This conditional control statement original implementation Fortran computer
+On computer three address three state
+Other computer would flag register positive zero negative even overflow carry associated last arithmetic operation would use instruction accumulator negative accumulator zero similar
+Note expression evaluated case integer arithmetic overflow may occur overflow carry flag would considered also
+In contrast language conditional statement defined class abstract method take two parameter
+two subclass define method executing first closure executing second closure
+In concept conditional expressed using expression ifThenElse passed two function left right conditionals also pas empty tuple result ifThenElse order actually call chosen function otherwise ifThenElse return function object without getting called
+In system number used without definition like Lisp Traditional paper math expressed single closure Here true false ifThenElse bound respective definition passed scope end block
+A working JavaScript analogy using function single variable rigor The code multivariable function look like another version earlier example without system number assumed
+First example show first branch taken second example show second branch taken
+Smalltalk us similar idea true false representation True False singleton object respond message differently
+Haskell used use exact model Boolean type time writing Haskell program use syntactic sugar b else c construct unlike ifThenElse compose unless either wrapped another function shown The Haskell section page
+language multiway branch compare given value specified constant take action according first constant match
+There usually provision default action taken match succeeds
+Switch statement allow compiler optimization
+In dynamic language case may limited constant expression might extend example right implement default case matching string
+may seen sophisticated alternative statement
+It available many programming language functional programming feature many others
+Here simple example written language The power pattern matching ability match action also pattern data
+Here example written illustrates feature This code defines function applies first argument function element second argument list return resulting list
+The two line two definition function two kind argument possible case one list empty return empty list case list empty
+Pattern matching strictly speaking choice construct possible Haskell write one alternative guaranteed always matched situation used choice construct simply way bind name value
+However frequently used choice construct language available
+In programming language comparable data structure idiomatic use implement conditional assignment
+In language allow programmer assign named function variable reference conditional flow implemented using hash
+An alternative conditional branch instruction
+Predication feature enables instruction conditionally executed instead modifying
+This table refers recent language specification language
+For language specification latest officially released implementation referred
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+To login Google please enable popups Email Password Forgot password
+Don account
+To signup Google please enable popups Sign Name Email Password Birthday To sign must older
+Other people see birthday
+By signing I agree StudyBlue Already account
+Sign free study better
+Anytime anywhere
+Get started today
+StudyBlue sponsored endorsed college university instructor
+Apple Apple logo trademark Apple registered country
+App Store service mark Apple StudyBlue All right reserved
+

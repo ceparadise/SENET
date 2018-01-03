@@ -1,0 +1,346 @@
+In act two refers mutually exchanging value variable
+Usually done data
+For example two variable may defined thus In many swap provided allowing std swap large structure O time
+After swap performed contain value contain value exchanged
+Of course operation may generalized type value aggregated utilize swap change position data
+The simplest probably widely used method swap two variable use third While conceptually simple many case convenient way swap two variable us extra memory
+Although problem application size value swapped may huge mean temporary variable may occupy lot memory well swap operation may need performed many time sorting algorithm
+In addition swapping two variable language may involve one call temporary variable three call
+Some class may allocate memory constructor deallocate destructor thus creating expensive call system
+Copy constructor class containing lot data
+may even need copy data manually
+XOR swap us operation swap two numeric variable
+It generally touted faster naive method mentioned however
+XOR swap generally used swap data type like
+However theory capable swapping two value represented
+This method swap two variable adding subtracting value
+This rarely used practical application mainly allocate memory using may swapped single operation swapping pointer alone
+This usually found programming language supporting pointer like
+For example overload swap function exchange container efficiently way
+As pointer variable usually fixed size desktop computer pointer long numeric swapped quickly using
+Some language like support simplifies notation swapping two variable This shorthand operation involving intermediate data structure Python tuple Ruby array
+Other language like javascript support destructuring operator thing Because many application swapping data computer provide ability swap variable directly instruction
+processor example include instruction swap two directly without requiring third temporary register used
+A instruction compare conditionally swap two register even provided processor architecture
+may efficient one may think
+For example processor implicitly lock access operand keep operation may efficient swapping memory
+Such locking important used implement synchronization
+However usually fastest way swap two word residing
+may also used swap register efficiently
+With advent modern computer facilitating two operation performed
+This speed lowly swap algorithm give edge algorithm
+For example requires sequential execution three instruction
+However using two temporary register two processor executing parallel swap two variable two clock cycle This us fewer instruction temporary register may use four instruction needed instead three
+In case practice could implemented separate processor violates Bernstein condition parallel computing
+It would infeasible keep processor sufficiently sync one another swap significant advantage traditional version
+However used optimize swapping single processor multiple unit
+
+Swapping process page segment memory value another location also manipulates data file larger main memory
+It occurs three type To expand address space effectively usable process To expand amount dynamic RAM load process To access data stored hard disk bring RAM used application program Swapping OS method swapping process temporarily backing store whenever need brought back memory temporary execution
+The backing store refers fast disk perform fast transaction able store huge file
+In procedure use priority based scheduling algorithm lower priority process swapped higher priority process loaded executed
+It also defined process removing currently running program memory bringing another program memory
+Processes temporarily kept backing store brought back memory execution
+For example multiprogramming situation us round robin scheduling quantum expires processor swap process finished execution swap new process execution
+The CPU scheduler allocate time slice process quantum expires time processor check process finished execution swap process assign quantum process waiting ready queue
+In swapping term roll roll important whenever higher priority process request execution lower priority process suspended higher priority process start execution process called roll roll
+Also another important term address binding process swapped gain come back memory put back memory space
+A ready queue maintained system process present backing store queued queue execution
+The dispatcher used executing process ready queue
+It check whether requesting process memory present memory check free space free space dispatcher swap current process bring requesting process start execution
+Another important term transfer time transfer time proportional amount memory swapped
+For instance let u consider computer main memory OS memory size easy swap process swapped swapping process take time
+Hence necessary measure transfer time could reduce swap time
+It would useful know time required transfer process
+Swapping also constraint followed
+Only idle process swapped
+If process waiting operation swap process asynchronous process swapped
+Example consider process queued swap process swap process use memory belongs
+There two main solution problem never swap process execute operation operating system buffer
+Swapping process temporarily removing inactive program main memory computer system
+There usually set active program memory one executes CPU others perform
+Whenever active program becomes inactive OS begin swap system falling short main memory space
+This involves writing program data onto secondary storage typically disk
+Swapping increase OS overhead due need perform operation
+The first UNIX system kernel monitored amount free memory constantly
+When became le performed swapping
+This activity consisted copying entire address space process disk
+Conversely scheduling algorithm selected swapped process whole process swapped disk
+This approach abandoned modern UNIX kernel including Linux mainly process switch quite expensive involve swapping process
+To compensate burden swapping activity scheduling algorithm must sophisticated must favour RAM process without completely shutting one
+In Linux swapping currently performed page level rather process address space level
+This finer level granularity reached inclusion hardware paging unit CPU
+Each page table entry includes present flag kernel take advantage flag signal hardware page belonging process address space swapped
+Besides flag Linux also take advantage remaining bit page table entry store location swapped page disk
+When page fault exception occurs corresponding exception handler detect page present RAM involve function swap missing page disk
+Much algorithm complexity thus related swapping
+Swapping done following type page process anonymous region modified page page present IPC memory
+The type page used kernel
+In Linux swapping enabled particular device swapon device system device Solaris
+The available RAM memory computer never enough meet user need always satisfy memory intensive application
+The kernel therefore enables seldom used part memory swapped block device effectively providing main memory
+This mechanism done swapping
+It implemented transparently kernel application process automatically profit
+The process variable called swapping programming
+For example consider pseudo code swap two variable value Data x Data Swap x According code swap function exchange value x hence x value value
+Swap done three way This simplest commonly used way using
+But requires extra memory even though problem many application value large swap performed might come overhead
+An example pseudo code follows The standard method swapping requires use temporary variable
+But XOR swap algorithm another proficient method swapping
+This method us XOR bitwise operation value swap
+But value must data type
+This algorithm C program given
+This algorithm also certain problem X Y present location value location zeroed first instruction
+X X XOR Y Y X XOR Y X X XOR Y First C code check whether memory location used distinct swap integer
+The rationale behind step algorithm work x refer different integer otherwise set x
+In practice swap algorithm temporary register efficient
+Other application include following It used processor allows XOR swap program code encoded smaller byte
+When hardware register available swap mightpermit register allocator avoid spilling register
+Since condition unusual optimizing compiler never produce XOR swap code
+Modern compiler identify optimize temporary variable based swap rather high language statement communicate XOR swap
+Many time situation translated compiler simply two variable swapping memory address
+Often supported architecture compiler use XCHG exchange command perform swap soleprocedure
+The best precaution use XCHG swap register memory
+Again since XOR swap may zero content location must used high level language aliasing possible
+Another method swapping value variable rarely used method several disadvantage This method swap numeric value might burden value huge complex When defined variable fixed size addition subtraction might lead arithmetic overflow Floating point arithmetic non associative therefore method suitable floating point value A Swap area used store page swapped memory swap area must disk file
+Numerous swap area may defined limit specified macro
+Having various swap area allow system administrator extend swap space many disk hardware act simultaneously also swap space acn increased without need reboot system
+There type swap space
+The swap space created enabled logical volume called device swap whereas file system swap portion mounted file system allocated enabled paging purpose
+When file system swap enabled directory called paging created root file system
+Under paging directory file created individual swap chunk used file system file system swap defined enabled dynamically
+It may defined use fixed amount file system area Every swap area page slot byte block used include swapped page
+The information swap area stored first page slot format specified collected two entity info magic
+The magic entity provides string mark space disk swap area consists one field magic contains character magic string
+The info structure includes following field This field information regarding swap area used swapping algorithm
+Swapping algorithm version
+Last page slot effectively usable
+Number defective page slot
+Padding byte
+Up number specifying location defective page slot
+unsigned int flag Swap area flag Device number swap disk partition Swap area descriptor spin lock struct dentry Density file device file Struct vfsmount Mounted filesystem descriptor file device file unsigned short Pointer array counter one swap area page slot unsigned int First page slot scanned searching free one unsigned int Last page slot scanned searching free one unsigned int Next page slot scanned searching free one Number free page slot allocation restarting beginning int prio Swap area priority int page Number usable page slot unsigned long max Size swap area page int next Pointer next swap area descriptor Each active swap area descriptor memory
+The field descriptor shown table
+The flag field includes two overlapping subfields swap area active nonactive
+field set possible write swap area otherwise since least significant bit field coincides bit used implement swap area written active
+The kernel allowed write swap area activated deactivated
+The field point assortment counter individual every swap page slot
+It two value counter value page stored page slot permanent counter value page slot considered defective thus unusable The PRIO field signed integer describes order swap sub system consider swap area The field spin lock protects descriptor concurrent access SMP system The array includes swap area descriptor The variable store index last array element contains used swap area descriptor The spin lock protects list concurrent access multiprocessor system The MAX field swap area descriptor store size swap area page Finally variable contains number available page slot The Swap Cache crucial avoid race condition among process trying access page swapped
+If page owned single process one race condition considered process attempt address page swapped
+The swap cache used collect imitated swap area
+It exist data structure instead page regular page cache considered swap cache certain field set
+The figure illustrates schematically action performed kernel shared page swapped multiple process different time
+The number inside swap area inside P represent page slot usage counter page usage counter respectively
+Notice usage count includes every process using page slot plus swap cache page included
+Four stage shown In P present page table A B In b P swapped A address space In c P swapped address space A B still included swap cache Finally P released buddy system The swap cache implemented page cache data structure procedure page swap cache stored like page page cache
+The final route swapping swapping page strategy general mechanism free memory along constraint
+Swapping us certain function called cascading function
+The function attempt free given page frame either discarding swapping content
+The function return value succeeds releasing page otherwise Swap must take place process attempt address page within address space disk
+The page fault exception handler trigger operation following condition occur The page including address caused exception valid one belongs memory region current process
+The page present memory present flag page table entry cleared The page table entry associated page null mean contains page identifier Swapping two abstract value achieved implementation simply swapping pointer Swapping two item implemented run constant amount time Swapping one efficient regular authentic approach It provides higher degree multiprogramming It provides dynamic relocation It provides great memory utilization It us priority based scheduling Swapping make CPU time utilized greater extent It provide access fast real memory It put burden operating system manage virtual memory Has diminishing benefit point benefit adding swap space little effect performance Attach Files
+
+To replace
+Swapping useful technique enables manipulate data larger
+The much data possible main memory leaf rest
+When operating system need data disk exchange portion data called main memory portion data disk
+perform swapping operating system including
+Swapping often called
+In UNIX refers moving entire process main memory
+When spelled acronym
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Slideshare us cooky improve functionality performance provide relevant advertising
+If continue browsing site agree use cooky website
+See
+Slideshare us cooky improve functionality performance provide relevant advertising
+If continue browsing site agree use cooky website
+See detail
+Swapping process exchanging page segment memory value another location also manipulates data file larger main memory
+Copy link given paste new browser window get information Swapping http LinkedIn Corporation Clipping handy way collect organize important slide presentation
+You keep great find clipboard organized around topic
+Looks like clipped slide already
+
+learn share knowledge build career
+What difference reference
+Also guide tutorial I could get information
+Swapping refers copying entire process address space rate data segment swap device back one go typically disk
+Whereas paging refers copying one page address space
+In particular much finer grain
+For example KB page GB RAM address space
+Swapping used early day
+DEC era Unix ish
+For could want know may I recommend The Lions Document
+Lions Commentary Unix Ed
+Source Code John Lions ISBN
+You surely appreciate Chapter Program Swapping begin Unix like system multiprogramming system us program swapping also called share limited resource main physical memory among several process
+Paging Unix arrived BSD Berkeley Systems Distribution starting around
+Paging also usually associated memory attribute access execute executable various virtual memory management trick like page page forth
+swapping performed without memory management HW whatsoever although early machine employed simple memory mapping scheme
+base bound simple one level fixed size page mapping table
+divide KB data address space page larger physical address space KB MB
+In contrast paging requires virtual memory page table entry typically encode physical address page PTE bit valid read write etc
+The machine also need automatically transparently application program fetch interpret page table entry necessary map virtual address physical address take page fault exception enable OS make page accessible schedule load physical RAM
+Happy hacking
+Although term considered distinct say mainstream academic medium fact author use synonym
+To quote excellent book computer architecture written David Sarah Harris writing physical page back disk reloading different virtual page called disk virtual memory system sometimes called
+So Tyler actually answered question correctly answer downvoted
+paging applicable case active process active process perform paging
+Swapping done inactive proccess None
+It usually referred swapping unix platform paging Windows
+Same concept though
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In scheme computer store retrieves data use
+In scheme operating system retrieves data secondary storage called
+Paging important part implementation modern operating system using secondary storage let program exceed size available physical memory
+For simplicity main memory called RAM acronym secondary storage called disk shorthand concept depend whether term apply literally specific computer system
+introduced paging first mass market memory page concept computer architecture regardless whether page moved RAM disk
+For example instruction bit comprised memory address selected one word
+This zone memory called
+This use term rare
+In swapping early virtual memory technique
+An entire program would RAM disk another one would
+A program would current execution would suspended RAM use another program
+A program might include multiple occupy memory different time
+Overlays method paging RAM disk merely minimizing program use RAM
+Subsequent architecture used individual program segment became unit exchanged disk RAM
+A segment program entire code segment data segment sometimes large data structure
+These segment resident RAM requiring additional computation movement remedy
+The invention let processor operate arbitrary page anywhere RAM seemingly contiguous space
+These page became unit exchanged disk RAM
+When program try reference page currently present RAM processor treat invalid memory reference transfer control program operating system
+The operating system must When page frame use operating system must select page frame reuse page program need
+If evicted page frame program hold data program modified since read RAM word become dirty must written disk freed
+If program later reference evicted page another page fault occurs page must read back RAM
+The method operating system us select page frame reuse important efficiency
+The operating system predicts page frame least likely needed soon often LRU algorithm algorithm based program
+To increase responsiveness paging system may predict page needed soon preemptively loading RAM program reference
+After completing initialization program operate small number code data page compared total memory program requires
+The page frequently accessed called
+When working set small percentage system total number page virtual memory system work efficiently insignificant amount computing spent resolving page fault
+As working set grows resolving page fault remains manageable growth reach critical point
+Then fault go dramatically time spent resolving overwhelms time spent computing program written
+This condition referred
+Thrashing occurs program work huge data structure large working set cause continual page fault drastically slow system
+Satisfying page fault may require freeing page soon disk
+Thrashing also used context virtual memory system example describe issue computing networking
+A worst case imagined comparable mainframe
+An execute instruction crossing page boundary could point move instruction also cross page boundary set move data source cross page boundary target cross page boundary
+This single instruction reference eight page RAM cause page fault
+If operating system could allocate eight page program remedying page fault would discard another page instruction need restart instruction would fault
+To decrease excessive paging resolve thrashing problem user increase number page available per program either running fewer program concurrently increasing amount RAM computer
+In environment many user may execute program written code data separate page
+To minimize use RAM user share single copy program
+Each process set page address code point single shared copy page address data point different physical page process
+The first computer support paging jointly developed
+The machine associative memory one entry word page
+The Supervisor handled interruption managed transfer page core drum order provide store program
+Paging feature since
+Windows creates named use swap file
+It generally found may appear elsewhere typically WINDOWS directory
+Its size depends much swap space system setting selected user Enhanced Virtual Memory
+If user move deletes file appear next time Windows started The permanent swap file corrupt
+The user prompted choose whether delete file whether exists
+use similar file setting located Control Panel System Performance tab Virtual Memory
+Windows automatically set size page file start size physical memory expand physical memory necessary
+If user run application system low physical memory preferable manually set size value higher default
+The file used paging family
+The default location page file root directory partition Windows installed
+Windows configured use free space available drive pagefiles
+It required however boot partition
+drive containing Windows directory pagefile system configured write either kernel full memory dump
+Windows us paging file temporary storage memory dump
+When system rebooted Windows copy memory dump pagefile separate file free space used pagefile
+In default configuration Windows pagefile allowed expand beyond initial allocation necessary
+If happens gradually become heavily potentially cause performance problem
+The common advice given avoid set single locked pagefile size Windows expand
+However pagefile expands filled default configuration total amount physical memory
+Thus total demand virtual memory must exceed computer physical memory pagefile expand
+The fragmentation pagefile occurs expands temporary
+As soon expanded region longer use next reboot sooner additional disk space allocation freed pagefile back original state
+Locking pagefile size problematic Windows application request memory total size physical memory pagefile leading failed request allocate memory may cause application system process fail
+Also pagefile rarely read written sequential order performance advantage completely sequential page file minimal
+However large pagefile generally allows use application penalty beside using disk space
+While fragmented pagefile may issue fragmentation variable size page file time create number fragmented block drive causing file become fragmented
+For reason contiguous pagefile better providing size allocated large enough accommodate need application
+The required disk space may easily allocated system recent specification
+system GB memory GB pagefile GB disk drive system GB memory GB pagefile TB disk space
+In example system using disk space pagefile maximum
+page file also occasionally recommended improve performance Windows system chronically using much memory total physical memory
+This view ignores fact aside temporary result expansion pagefile become fragmented time
+In general performance concern related pagefile access much effectively dealt adding physical memory
+system operating system use term swap describe act moving memory page RAM disk region disk page stored
+In system common dedicate entire partition hard disk swapping
+These partition called
+Many system entire hard drive dedicated swapping separate data drive containing swap partition
+A hard drive dedicated swapping called swap drive scratch drive
+Some system support swapping swap partition others also support swapping file
+The Linux kernel support virtually unlimited number swap backends device file supporting time assignment backend priority
+When kernel need swap page physical memory us backend available free space
+If multiple swap backends assigned priority used fashion somewhat similar storage layout providing improved performance long underlying device efficiently accessed parallel
+From perspective swap file version later Linux kernel virtually fast swap partition limitation swap file contiguously allocated underlying file system
+To increase performance swap file kernel keep map placed underlying device access directly thus bypassing cache avoiding filesystem overhead
+Regardless recommends swap partition used
+When residing HDDs rotational magnetic medium device one benefit using swap partition ability place contiguous HDD area provide higher data throughput faster seek time
+However administrative flexibility swap file outweigh certain advantage swap partition
+For example swap file placed mounted file system set desired size added changed needed
+Swap partition flexible enlarged without using partitioning tool introduce various complexity potential downtime
+When system memory highly insufficient current task large portion memory activity go slow swap system become practically unable execute task even CPU idle
+When every process waiting swap system considered
+Swap death happen due incorrectly configured
+The original description swapping death problem relates memory X swap every keystroke requires Linux read swap processed system practically unresponsive even actually executing task normally
+us multiple swap file
+The default installation place root partition though possible place instead separate partition device
+introduced new system allocating RAM defragmenting physical memory
+It still us flat shared address space defragmented
+It based paging memory allows swapping
+Paging implemented may lock system physical memory used
+Swap memory could activated deactivated moment allowing user choose use physical RAM
+The backing store virtual memory operating system typically many order slower
+Additionally using mechanical storage device introduces several millisecond hard disk
+Therefore desirable reduce eliminate swapping practical
+Some operating system offer setting influence kernel decision
+Many operating system example allow using multiple storage device swap space parallel increase performance
+In older virtual memory operating system space swap backing store reserved program allocate memory runtime data
+Operating system vendor typically issue guideline much swap space allocated
+Paging one way allowing size address used process process virtual address space logical address space different amount main memory actually installed particular computer physical address space
+In system size process virtual address space much larger available main memory
+For example A computer true addressing may addressable unit RAM installed
+An example processor without PAE
+In case processor able address RAM installed
+However even case paging used create virtual memory GB
+For instance many program may running concurrently
+Together may require GB RAM
+A paging system make efficient decision memory relegate secondary storage leading best use installed RAM
+Although processor example address RAM beyond GB operating system may provide service program envision larger memory file grow beyond limit installed RAM
+The operating system let program manipulate data file arbitrarily using paging bring part file RAM necessary
+A computer main memory larger virtual address space process machine system using processor
+This nullifies significant advantage virtual memory since single process use main memory amount virtual address space
+Such system often use paging technique obtain secondary benefit The size cumulative total virtual address space still limited amount secondary storage available
+
+Standard Article Published Online JUN DOI Copyright John Wiley Sons Book Title Additional Information Denning J
+
+Swapping
+Wiley Encyclopedia Computer Science Engineering
+
+Naval Postgraduate School Monterey California Swapping general term exchanging block program code data main secondary memory
+
+Manoj Kumar professional technical trainer technical content writer field computer science
+He love read write science technology motivational social issue
+Your suggestion important improve post quality getting new idea
+So please write suggestion comment
+
+hold Computer Science MCSE MCDBA CCNA CCNP SCJP certification
+Dinesh author hugely popular blog
+Where writes guide around Computer fundamental computer software Computer programming web apps
+For type query something think missing please feel free
+Search Content Popular Article Basic Courses Advance Courses
+

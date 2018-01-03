@@ -1,0 +1,479 @@
+In order individual imperative evaluated
+The emphasis explicit control flow distinguishes language language
+Within imperative statement execution result choice made two path follow
+For functional language function language construct exist achieve result usually termed control flow statement
+A set statement turn generally structured addition grouping also defines
+mechanism alter flow control way similar subroutine usually occur response external stimulus event occur rather execution control flow statement
+At level control flow instruction usually work altering
+For CPUs control flow instruction available conditional unconditional instruction also termed jump
+The kind control flow statement supported different language vary categorized effect A explicit name number assigned fixed position within may referenced control flow statement appearing elsewhere source code
+A label mark position within source code effect
+alternative named label used language placed start line text source code
+Languages use often impose constraint line number must increase value following line may require consecutive
+For example BASIC In language label usually appearing start line immediately followed colon
+For example C The language allowed whole number identifier label linked colon following statement variant allowed whole number
+The statement combination English word pronounced accordingly basic form unconditional transfer control
+Although may either upper lower case depending language usually written The effect goto statement cause next statement executed statement appearing immediately indicated label
+Goto statement many computer scientist notably
+The terminology varies may alternatively known routine procedure function especially return result method especially belong
+In computer memory small current standard subroutine used mainly reduce program size
+A piece code written used many time various place program
+Today subroutine often used help make program structured isolating algorithm hiding data access method
+If many programmer working one program subroutine one kind help divide work
+In structured programming ordered sequencing successive command considered one basic control structure used building block program alongside iteration recursion choice
+In May Böhm Jacopini published article showed program could transformed form involving choice IF THEN ELSE loop WHILE condition DO xxx possibly duplicated code addition Boolean variable flag
+Later author showed choice replaced loop yet Boolean variable
+That minimalism possible mean necessarily desirable computer theoretically need subtract one number another branch result negative practical computer dozen even hundred machine instruction
+What Böhm Jacopini article showed program could
+Other research showed control structure one entry one exit much easier understand form mainly could used anywhere statement without disrupting control flow
+In word
+Later development recently composable continued strategy making component program even freely composable
+Some academic took purist approach result argued even instruction like middle loop bad practice needed proof thus advocated loop single exit point
+This purist approach embodied language designed preferred tool teaching introductory programming academia
+The direct application theorem may result additional local variable introduced structured chart may also result
+The latter issue called context
+Pascal affected problem according empirical study cited student programmer difficulty formulating correct solution Pascal several simple problem including writing function searching element array
+A study Henry Shapiro cited Roberts found using control structure correct solution given subject subject wrote incorrect code problem allowed write return middle loop
+Most programming language control structure initial keyword indicates type control structure involved
+Languages divide whether control structure final keyword
+Conditional expression conditional construct feature perform different computation action depending whether evaluates true false
+Less common variation include compare given value specified constant take action according first constant match
+There usually provision default action else otherwise taken match succeeds
+Switch statement allow compiler optimization
+In case may limited constant expression might extend example right implement default case matching string
+Case logic also implemented functional form statement
+A loop sequence statement specified may carried several time succession
+The code inside loop loop shown obeyed specified number time collection item condition met
+In language loop expressed using rather explicit looping construct
+special case recursion easily transformed iteration
+Most programming language construction repeating loop certain number time
+In case counting go downwards instead upwards step size used
+In example N body loop may execute I value depending programming language
+In many programming language integer reliably used loop
+number represented imprecisely due hardware constraint loop might repeated time depending rounding error hardware compiler version
+Furthermore increment X occurs repeated addition accumulated rounding error may mean value X iteration differ quite significantly expected sequence
+Most programming language construction repeating loop condition change
+Some variation test condition start loop others test end
+If test start body may skipped completely end body always executed least
+A value change detection method used within ordinary loop trigger processing group value
+Values monitored within loop change diverts program flow handling group event associated
+Several programming language later special construct allow implicit looping element array member set collection
+generalise loop also support us
+comprehension together provide similar function Scala
+General iteration construct C statement form used express sort loop others looping number collection parallel
+Where specific looping construct used usually preferred general iteration construct since often make purpose expression clearer
+used assure program segment loop forever exceptional condition arises error
+For instance program loop forever handling event occur stopping process terminated operator
+Infinite loop implemented using control flow construct
+Most commonly unstructured programming jump back goto structured programming indefinite loop loop set never end either omitting condition explicitly setting true
+Some language special construct infinite loop typically omitting condition indefinite loop
+Examples include Ada Fortran Go Ruby
+Often infinite loop unintentionally created programming error loop wherein loop condition us variable never change within loop
+Sometimes within body loop desire skip remainder loop body continue next iteration loop
+Some language provide statement language Perl Ruby
+The effect prematurely terminate innermost loop body resume normal next iteration
+If iteration last one loop effect terminate entire loop early
+Some language like Perl Ruby statement restarts current iteration start
+Ruby statement restarts entire loop initial iteration
+When using loop search table might desirable stop searching soon required item found
+Some programming language provide statement language Perl effect terminate current loop immediately transfer control statement immediately loop
+The following example done support
+Both feature similar comparing code snippet show difference must combined statement construct
+support conditional execution code depending whether loop exited early statement using loop
+For example The clause example linked statement inner statement
+Both Python loop support else clause executed early exit loop occurred
+Some language support breaking nested loop theory circle called break
+One common use example searching table
+This done either via multilevel break break level bash PHP via labeled break break continue given label Java Perl
+Alternatives multilevel break include single break together state variable tested break another level exception caught level broken placing nested loop function using return effect termination entire nested loop using label goto statement
+C include multilevel break usual alternative use goto implement labeled break
+Python multilevel break continue proposed rejected basis added complexity worth rare legitimate use
+The notion break interest give rise today called
+In refined proving possible avoid adding additional variable structured programming long break loop allowed
+Furthermore Kosaraju proved strict hierarchy program exists every integer exists program containing break depth rewritten program break depth le without introducing added variable
+One also subroutine executing looped statement breaking nested loop subroutine
+There multiple break generally implemented exception instead
+In textbook us Tennent notion explain similarity break return statement
+Watt note class sequencer known defined sequencer terminates execution textually enclosing command procedure encompasses break loop including break return statement
+As commonly implemented however return sequencer may also carry return value whereas break sequencer implemented contemporary language usually
+used express correctness loop
+In practical term loop variant integer expression initial value
+The variant value must decrease loop iteration must never become negative correct execution loop
+Loop variant used guarantee loop terminate
+A loop invariant assertion must true first loop iteration remain true iteration
+This implies loop terminates correctly exit condition loop invariant satisfied
+Loop invariant used monitor specific property loop successive iteration
+Some programming language contain native support loop variant invariant
+In case support specification
+Some dialect provide extensive sublanguage describing Loops
+An early example found Conversional Lisp
+provides Loop macro implement sublanguage
+Many programming language especially favoring dynamic style programming offer construct
+These cause flow execution jump given context resume predeclared point
+three common sort control construct exotic one also exist keyword
+standard condition ZERODIVIDE SUBSCRIPTRANGE ENDFILE raised intercepted ON action Programmers also define use named condition
+Like one statement specified many case GOTO needed decide flow control resume
+Unfortunately implementation substantial overhead space time especially SUBSCRIPTRANGE many programmer tried avoid using condition
+Common Syntax example Modern language specialized structured construct exception handling rely use break return
+For example one write Any number variety clause used
+If matching particular control percolate back subroutine call nested block matching found end main program reached point program forcibly stopped suitable error message
+Via influence keyword reserved declaring exception handler language popular today like Java C
+Some language like Ada use keyword introduce exception handler may even employ different keyword Ada pattern matching
+A language like incorporate placeholder exception handler syntax automatically extract several piece information exception occurs
+This approach exemplified construct AppleScript David Watt textbook also analyzes exception handling framework sequencer introduced article section early exit loop
+Watt note abnormal situation generally exemplified arithmetic overflow failure like file found kind error detected program unit handler naturally located program unit
+For example program might contain several call read file action perform file found depends meaning purpose file question program thus handling routine abnormal situation located system code
+Watts note introducing status flag testing caller structured programming even return sequencer would entail result situation application code tends get cluttered test status flag programmer might forgetfully lazily omit test status flag
+In fact abnormal situation represented status flag default ignored
+Watt note contrast status flag testing exception opposite causing program terminate unless programmer explicitly deal exception way possibly adding explicit code ignore
+Based argument Watt concludes jump sequencer escape sequencer suitable dedicated exception sequencer semantics discussed
+In Object Pascal D Java C Python clause added construct
+No matter control leaf code inside clause guaranteed execute
+This useful writing code must relinquish expensive resource opened file database connection finished processing Since pattern fairly common C special syntax Upon leaving compiler guarantee object released effectively variable file stream abstracting side effect initializing releasing file
+Python statement Ruby block argument used similar effect
+All language mentioned define standard exception circumstance thrown
+Users throw exception fact allows user throw catch almost type including basic type like whereas language like Java permissive
+C introduced async keyword supporting direct style
+also known semicoroutines allow control yielded consumer method temporarily typically using keyword
+Like async keyword support programming direct style
+function yield control form without thread
+Coroutines implemented library programming language provides either continuation generator distinction coroutines generator practice technical detail
+In spoof article Lawrence Clark suggested GOTO statement could replaced statement provides entertaining example
+COMEFROM implemented one named
+article Structured Programming go Statements identifies two situation covered control structure listed gave example control structure could handle situation
+Despite utility construct yet found way mainstream programming language
+The following proposed If omitted get loop test top
+If omitted get loop test bottom
+If omitted get infinite loop
+Hence single construction replace several construction programming language
+A possible variant allow one test within loop use see next section appears cover case better
+Languages lacking construct generally emulate using equivalent idiom In loop construct represented using standard infinite loop clause middle confused statement following section
+Naming loop like example optional permit leaving outer loop several nested loop
+This proposed
+A modified version presented
+used specify event may occur within occurrence indicated using name event statement
+When event occur relevant action carried control pass
+This construction provides clear separation determining situation applies action taken situation
+conceptually similar exception similar construct used purpose many language
+The following simple example involves searching table particular item
+One way attack piece software redirect flow execution program
+A variety technique including shadow stack pointer verification used defend attack
+
+Control program also called
+Another term
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+A controller computing context hardware device software program manages directs flow data two entity
+In computing controller may microchip separate hardware device control peripheral device
+In general sense controller thought something someone interface two system manages communication
+Here example controller A integrated circuit computer case provides conversion video RAM video controller data sent computer
+A game controller input device playing game
+A network interface card computer circuit board card installed computer connected network
+A WAN interface card specialized network interface card allows device connect wide area network
+A part communicates host device manages
+An data center network device help manage client connection complex Web enterprise application
+A baseboard management controller specialized service processor monitor physical state computer network server hardware device using sensor communicating system administrator independent connection
+A session border controller device application governs manner call also called session initiated conducted terminated VoIP Voice Internet Protocol network
+Primary PDC backup domain controller BDC role assigned server manage access set network resource application printer forth group user
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+Programming Languages lively area Cornell eight faculty dozen student
+We proud breadth depth core discipline
+Cornell known beginning research programming language
+We made foundational contribution type theory automated theorem proving language semantics
+A recent theme solution important problem computer security networking distributed programming
+Cornell researcher also contributed language implementation program analysis optimization language software engineering
+explores programming language concept utilized service education
+He interested relative difficulty practice problem learning procedural skill
+subtraction estimated analyzing procedural execution trace obtained executing target procedure practice problem
+He currently applying technique math video game programming human language
+He also interested program synthesis help explain student become confused recently showed many misconception math modeled diagnosed research programming language formal method context type theory
+The proof assistant developed Constable group language used describe distributed computing formal specification language computing task theory formalizing topic constructive intuitionistic mathematics classical mathematics usually seen special case
+Constable also interested synthesizing program concurrent process proof developing system shown secure construction exploring deep connection programming logic
+work language design semantics implementation
+In past worked language type system data processing including bidirectional language data provenance
+More recently developing language provides construct specifying behavior network
+Frenetic make possible programmer specify behavior entire network using single program compiler translates code underlying device
+This provides opportunity enforcing security reliability performance guarantee using technique
+interest span variety topic boundary computer science mathematics including design analysis algorithm computational complexity decision problem logic algebra logic semantics programming language
+Kozen obtained number foundational result Kleene algebra test developed application efficient code certification compiler verification
+Recently investigating capsule provide clean algebraic representation state functional imperative language mutable binding coalgebraic technique verification
+focus application programming language technology building secure reliable software system
+A common theme focus language tool help detect prevent common vulnerability software
+Past example include typed assembly language code software fault isolation isolation
+Recently research focus building provably correct secure software including focus cryptographic scheme machine learning compiler
+work language secure programming integrates information flow Java extends Jif building secure distributed system automatically partition web application securely client web server
+The challenge posed Fabric Swift led work method controlling timing channel language support extension evolution large software system extensible Java compiler language
+design abstraction
+His work pair new computer architecture new programming language construct let programmer safely trade small amount accuracy large return efficiency
+Challenges approximate programming range control safety probabilistic program analysis compiler design
+Sampson curious new way safely give programmer control system detail ordinarily hidden view
+leveraged research applying programming logic semantics language design
+Recently working logic belief characterizing authorization policy approach implemented operating system recently developed Cornell
+Other example recent work include characterization kind security policy proof program obfuscation address space effective type checking defending
+work problem related language design formalization including type system optimization extension
+His work draw field category theory constructive type theory develop powerful flexible solution
+His research put practice industry collaboration design language
+
+Computer program make use data control flow program
+There several main primitive data type
+Data value variable constant
+use make decision order thing
+They repeat action start new action based new information
+Computer program use control flow program
+These element allow program make choice change direction repeat action
+Sign choose GCSE subject see content tailored
+
+In event difference supersede information
+Last modified Stuart Building West Street Room Chicago IL Tel Fax
+
+Software In use
+You also need editor development environment writing debugging program
+In using programming environment specially designed Python programming included Python distribution
+These program available installation personal computer see
+A programming language tool use construct sequence instruction tell computer want
+There hundred programming language world
+Over course career I taught programming class using least six different language
+There best language though I could nominate candidate worst
+Different language better worse different kind application
+MATLAB example great language manipulating vector matrix
+C good language writing program control data network
+In course use Python
+Python relatively recent addition universe language still growing popularity
+I want emphasize course Python
+You certainly learn Python good thing
+What much important however learn write program solve problem given set basic primitive way combining complex element abstract primitive
+This skill transferred many language
+You install software personal computer operating system Windows MacOS X
+For Windows need OS X need version Python work version NOT compatible
+Below direct link common Python installers Download install For OS X Yosemite earlier download install
+For OS X El Capitan later download install Python OS Anaconda come numpy matplotlib preinstalled along many python library may ignore installation instruction library Pset
+On Python homepage latest version available download actually
+Do install
+This version backwards compatible code writing course example type print test instead print test
+Instead sure download version listed
+IDLE standard Python development environment
+Its name acronym ntegrated eve opment nvironment
+It work well Unix Windows platform
+It Python shell window give access Python interactive mode
+It also file editor let create edit existing Python source file
+During following discussion IDLE feature instead passively reading along start IDLE try replicate action
+You type Python code directly shell prompt
+Whenever enter complete code fragment executed
+For instance typing pressing Enter cause following displayed IDLE also used calculator Addition subtraction multiplication operator built Python language
+This mean use right away
+If want use square root calculation need module
+Do worry mean right cover later course
+Below example square root calculation Math module allows number useful operation Note need execute import command start IDLE
+For additional practice try using IDLE calculate This one course OCW
+Find material course page linked along left
+free open publication material thousand MIT course covering entire MIT curriculum
+Freely browse use OCW material pace
+There signup start end date
+Use OCW guide learning teach others
+We offer credit certification using OCW
+
+Download file later
+Send friend colleague
+Modify remix reuse remember cite OCW source
+Learn MIT OpenCourseWare make material used teaching almost MIT subject available Web free charge
+With course available OCW delivering promise open sharing knowledge
+Massachusetts Institute Technology Your use MIT OpenCourseWare site material subject
+
+The Bachelor Science program system control engineering provides student basic concept analytical tool engineering method needed analyzing designing complex technological system
+Problems relating modeling simulation control optimization studied
+Some example system problem studied include modeling analysis complex biological system computer control industrial plant developing world model studying environmental policy optimal planning management system
+In case relationship interaction among various component given system must modeled
+This information used determine best way coordinating regulating individual contribution achieve overall goal system
+The mission Systems Control Engineering program provide internationally recognized excellence graduate undergraduate education research system analysis design control
+These theoretical applied area require tool method solution
+
+Graduates apply system methodology project include technical social environmental economic factor
+
+Graduates use system understanding thinking problem solving skill analyze design system process respond technical societal need
+
+Graduates use teamwork leadership communication management skill facilitate multidisciplinary project bring together practitioner various engineering field effective professional ethical manner
+The Systems Control Engineering Program Faculty interested receiving constructive feedback Program Educational Objectives please email comment Department Chair email please indicate point view providing input
+current system control engineering student CWRU employer system control engineering student potential system control engineering student alumnus system control engineering CWRU etc
+The
+degree program Systems Control Engineering accredited Engineering Accreditation Commission ABET
+The department offer way earn major Electrical Engineering Systems Control Engineering
+No Upcoming Events No upcoming seminar
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+Best Online Graduate Computer Information Technology Programs With employment growth area computer science information technology projected percent time advance career master degree graduate certificate Boston world leading research teaching institution
+Choose following online degree program BU Metropolitan College MET computer science IT graduate professional education offered evening online blended format
+Because MET focused knowledge tool skill learn MET today immediately remaining relevant useful valuable career growth year come
+MET degree certificate program computer science IT prepare job typically low unemployment rate
+rank following technology job top ten The meet need offer practical interactive learning
+Complete form receive news invitation upcoming information session
+The MSCIS concentration IT Project Management accredited Project Management Institute Global Accreditation Center Project Management Education Programs GAC
+Computer Science IT degree certified Committee National Security Systems CNSS
+The Health Informatics concentration accredited Commission Accreditation Health Informatics Information Management Education CAHIIM
+As part Boston University Metropolitan College accredited New England Association Schools Colleges NEASC one six nationally recognized accrediting agency
+

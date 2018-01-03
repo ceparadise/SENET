@@ -1,0 +1,316 @@
+A instruction cause computer begin executing different instruction sequence thus deviate default behavior executing instruction order
+may also refer act switching execution different instruction sequence result executing branch instruction
+A branch instruction either always result branching may may cause branching depending condition
+Branch instruction used implement program loop conditionals executing particular sequence instruction certain condition satisfied
+Mechanically branch instruction change PC
+The program counter memory address next instruction
+Therefore branch cause CPU begin fetching instruction different sequence memory cell
+When branch CPU program counter set jump instruction
+So next instruction becomes instruction address
+Therefore flow control change
+When branch CPU program counter unchanged
+Therefore next instruction executed instruction branch instruction
+Therefore flow control unchanged
+The term used referring program high level language well program written
+In branch usually take form various form encapsulate instruction sequence executed condition satisfied
+Unconditional branch instruction used unconditionally jump begin execution different instruction sequence
+Machine level branch instruction sometimes called instruction
+Machine level jump instruction typically form latter may depending condition
+Usually distinct form jump often called subroutine invokations known automatically save originating address return address stack allowing single subroutine invoked multiple location code
+In CPUs earlier instruction set condition flag register
+The earlier instruction may instruction
+It often close branch though necessarily instruction branch
+The stored condition used branch
+This temporary information often stored flag register may also located elsewhere
+A flag register design simple slower simple computer
+In fast computer flag register place bottleneck speed instruction could otherwise operate parallel several need set flag bit particular sequence
+There also machine particular instruction condition may checked jump instruction
+In simple computer design comparison branch execute arithmetic use power flag register branch
+In fast computer design comparison branch run faster flag register branch comparison branch access register parallelism using CPU mechanism calculation
+Some early simple CPU architecture still found microcontrollers may implement conditional jump rather conditional skip next instruction operation
+A conditional jump call thus implemented conditional skip unconditional jump call instruction
+Depending jump instruction typically shortened form word word often along informative letter extra parameter representing condition
+Sometimes detail included well range jump offset size special addressing mode used locate actual effective offset
+This table list machine level branch jump instruction found several architecture VAX others set signal clear signal
+ARM PIC others opposite subtractive operation
+This inverted function carry flag certain instruction marked part table otherwise noted
+However carry additive operation handled way architecture
+To achieve high performance modern processor
+They consist multiple part partially process instruction feed result next stage pipeline start working next instruction program
+This design expects instruction execute particular unchanging sequence
+Conditional branch instruction make impossible know sequence
+So conditional branch cause stall pipeline restarted different part program
+Several technique improve speed reducing stall conditional branch
+Historically branch prediction took statistic used result optimize code
+A programmer would compile test version program run test data
+The test code counted branch actually taken
+The statistic test code used compiler optimize branch released code
+The optimization would arrange fastest branch direction taken would always frequently taken control flow path
+To permit CPUs must designed least predictable branch timing
+Some CPUs even instruction set designed branch hint compiler tell CPU branch taken
+The problem software branch prediction requires complex software development process
+To run software hardware moved statistic electronics
+Branch predictor part processor guess outcome conditional branch
+Then processor logic gamble guess beginning execute expected instruction flow
+An example simple hardware branch prediction scheme assume backward branch
+smaller program counter taken part loop forward branch larger program counter taken leave loop
+Better branch predictor developed validated statistically running simulation variety test program
+Good predictor usually count outcome previous execution branch
+Faster expensive computer run faster investing better branch prediction electronics
+In CPU hardware branch prediction branch hint let compiler presumably superior branch prediction override hardware simplistic branch prediction
+Some logic written without branch fewer branch
+It often possible use instead branch
+Another technique
+In approach one instruction branch always executed
+Therefore computer use instruction useful work whether pipeline stall
+This approach historically popular computer
+In family compatible CPUs complicates multicycle CPUs pipeline faster CPUs pipeline superscalar CPUs execute instruction order
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Studying parallel algorithm CLRS old edition Chapter
+Can one explain simple example pointer jumping exactly work
+I really ca explain better Suppose want traverse tree
+You traverse serial manner walking tree either recursively otherwise traverse parallel starting N leaf node following shortest path root
+In serial case running time O n
+n need visit n node n extra time spend going tree reach sibling node via parent
+In parallel case best running time O n accurate O n n number thread used
+You assigning leaf node thread finding shortest path root
+If leaf node thread assign one leaf node thread
+Because height tree n running time per thread obviously O n
+This efficient closer get root node get visited
+You solve issue first thread arrive parent leave breadcrumb subsequent thread drop
+If elect let duplicate thread drop traverse also solve problem thread synchronization issue altering data tree
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Many computer science program require two three calculus class
+I wondering calculus used computer science
+The CS content degree computer science tends focus algorithm operating system data structure artificial intelligence software engineering etc
+Are time Calculus useful area Computer Science
+We looking long answer provide explanation context
+Do give answer explain answer right ideally citation
+Answers include explanation may removed
+I think course would need Calculus
+I used bold face usually obligatory discipline Computer Science degree italic usually optional one
+There may others top head
+And besides one benefit Calculus course learning reason explain argument technical rigor
+This valuable student usually think
+This somewhat obscure calculus turn algebraic data type
+For given type type context derivative type
+See overview whole subject
+This technical terminology let explain
+You may come across tuples referred cartesian two type
+We going take literally use notation b To represent tuple b type
+Next may come across type either one type another known type kinda Haskell
+We also going take one literally use notation b These named type value type b value type b value
+These type look like normal algebraic expression fact manipulate point
+In functional language common definition list given Haskell This say list either empty tuple value another list
+Transforming algebraic notation get L L Where represents type one value aka unit type
+By repeatedly inserting evaluate get definition L L L L L L L L L L Where meant sense repeated multiplication
+This definition say list either unit tuple one item tuple two item three etc definition list
+Now context context get value product type
+Let give example For simple homogeneous take value get
+But two different context type namely first second value tuple
+So since either could write course
+This differentiation come play
+Let confirm another example Taking value give three different variant Depending put hole
+This give u indeed derivative
+There proof general
+For final example let use list If take original expression list L L We rearrange get L On surface may seem like nonsense take taylor series result get definition derived earlier
+Now differentiate get interesting result L L Thus one list become pair list
+This fact make sense two list produced correspond element hole original list
+Numerical Methods
+There exist cumbersome calculus problem unique specific application need solution faster human practically solve without program
+Someone design algorithm compute solution
+Is thing separate programmer scientist
+Similar robotics automation require quantifying lot human behavior
+Finding solution proof often requires calculus
+Utilizing advanced algorithm requires calculus co sine pi Especially calculating vector collision field meshing
+Determining whether task possible risk involved possible rate success
+Most security performed without calculus however many people want explanation prefer mathematical expression
+The basic AI utilized without calculus however calculating advanced behavior swarm mind complex value based decision making
+Visualizing health data requires calculus EKG reading
+When working nearly scientific discipline requires calculus Aerospace Astrology Biology Chemistry Engineering
+Many people programming go entire career without using calculus however prove invaluable willing work
+For effective automation logistics visualization
+By identifying specific pattern simply ignore pattern imitate pattern develop superior method together
+The fact little chance ever use calculus
+However virtually every scientific discipline DOES use calculus working science degree
+There certain expectation university science degree supposed mean one thing know calculus
+Even never use
+It okay poorly calculus make sure put effort discrete mathematics
+There lot programming problem discrete math come play ignorance principle embarrass front coder
+Many people already provided application CS
+But sometimes find Calculus least expect If know automaton pdf might worth reading
+Some specific example To excellent answer I add point
+In creating test case application I make use calculus predict expected running time memory size choose optimal parameter tuning data structure
+This includes understanding expected rounding error etc
+While statistic mentioned answer I would like specifically mention optimization algorithm based Mathematical principle include calculus
+Specific industry I worked calculus required include Finance creating trading platform Insurance numerical integration insurance policy scenario compute expected policy loss Logistics optimizing consolidation transportation route Signal processing Calculus integral portion used directly CS foundation thinking summation
+If work portion Knuth Concrete Mathematics section summation quickly recognize convention common calculus understanding continuous case give tool consider discrete
+Many us CS study involve programming system monitor change case attempt predict future
+The mathematics around system rooted differential equation linear algebra differential equation calculus
+There teacher like Gibert Strang advocate moving quickly differential equation part still subset calculus
+When change depends change system start unstable stable way well understood
+To understand sensible linear system behaving nonlinear way either need tool calculus need problem space
+And finally CS often requires reading understanding work others calculus first exposure lot shared vocabulary convention history
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+A speculative method traveling FTL
+Related concept
+The key characteristic jump drive term usually used allows instantaneously two point
+A jump drive supposed make spaceship matter go one point space another point may several away single instant
+Like jump drive often taken granted science fiction science fiction work talk mechanic behind jump drive
+There vague indication involvement work
+Jump drive used many universe space vehicle movement initially suggested novel
+In character use Horst Transition travel instantaneously space flat warping associated gravity
+Heinlein novel published us form jump drive kind starship
+Jump drive next appears novel trilogy name Frank Herbert
+The series Jerry Pournelle begun publication feature
+However popularity exploded decade later series
+The role playing game Game Designers Workshop first edition us something called jump drive actually kind ship using traveling jump space game term week regardless distance travelled normal space
+In novel starship use make vehicle omnipresent instant repositioning ship location
+Several jump needed farther triangulation require time calculate therefore journey across galaxy may take century calculate
+In novel various specie described Owlein Plicans fold space allowing form jump drive
+This Folding exceed certain unspecified distance without damaging structure
+In fictional universe total distance per jump limited multiple jump may needed reach final destination
+Jump drive often require significant power many universe require time jump drive jump thereby limiting frequency jump executed
+These factor allow writer build showing character struggling reach jump point recharge drive foe reach
+novel published used name ZTT Zero Temporal Transit Drive
+It worth noting ZTT momentum conserved ship might spend day synchronizing relative velocity destination jumping concept first used series albeit connection FTL drive rather jump drive referred matching intrinsics
+The novel Tim Parise featured kind jump drive operated altering coordinate ship object within framework causing move instantly two point
+This form jump drive unusual science fiction change effected pilot interfacing directly structure universe rather machine computer
+Jump drive also used Battletech series game literature
+In literature drive called Drive drive
+Named physicist developed equation needed drive work
+The jump take second limited max distance lys
+There variable amount time required jump recharge energy jumping
+Recharging done solar sail developed system may recharge station
+In rare case Warships ship may battery store extra power additional jump without normal recharge time
+When solar sail used recharging type star determines long recharge take
+Jump drive used one method FTL travel universe Lost Fleet book series Jack Campbell
+The us jump drive limited key point solar system limited range
+Once portal jump space opened flagship left open rest fleet follow
+The technical detail jump drive never discussed except allows travel another continuum explored allows transmit simple data ship fleet
+Jump drive also dangerous overload jump core catastrophic destroying ship within blast radius
+If used long ship may become lost jump space due constant change physical characteristic
+John Geary main character series mention cheesy zombie motion picture time entire crew become zombie remaining jump space long
+Jump space may also cause side effect human including itchy skin nausea headache
+There two main variant jump drive commonly portrayed computer game
+The first requires ship travel specific jump point
+Once point jump drive used move another jump point
+In example Capsule Drive computer game ship travel jump point
+Others series allow transit one jump point corresponding exit point may may allow travel opposite direction
+The second variant allows ship execute jump anywhere normal space move directly location
+This variant frequently subject limitation distance strong
+us style jump drive
+With appearance computer game many used jump drive including The film television series utilizes two different type jump drive
+Many space craft featured franchise type hyperspace technology stargates employ wormhole technology used almost instantaneous travel one point another across many light year including intergalactic travel
+Similar wormhole technology also explored season finale alternative Atlantis hyperdrive allowing entire city move outer edge Earth matter second
+In series ancient spaceship us previously unknown type simply referred FTL character television series
+The television series describes jump drive way jump hyperspace
+While interstellar travel instantaneous much faster speed light
+The television series utilizes jump drive known FTL Drive
+The technology allows ship instantaneously jump one point space another though mechanic behind drive never explained beyond describing preparing drive spooling
+The film feature eponymous ship using jump drive
+Harnessing power artificial drive designed project focused beam graviton folding space allowing ship pas arrive immediately new location
+The drive malfunctioned opened rift sending ship dimensional gateway hell place pure chaos
+The television series us FTL drive method travel moon By opening going wormhole instantaneously arrive side No limit mentioned
+It first introduced method delivery large amount data deep space
+The television series employ FTL drive evade enemy missile first episode well mean travel universe
+
+The computer science program University California San Diego roll
+It jumped several notch international ranking top university discipline increase occurred prior change way wake largest gift ever history Computer Science Engineering CSE department
+From left Dean Tullsen Victor Vianu
+According computer science Academic Ranking World Universities ARWU released last week UC San Diego reached
+That substantial jump compared ranking
+The ARWU list produced research unit based Shanghai Jiao Tong University
+We proud latest ranking say computer science program especially given age campus compared top school said CSE Chair Rajesh Gupta also hold Qualcomm Endowed Chair Embedded Microsystems
+UC San Diego barely year old standalone computer science engineering department since
+We important juncture set sight becoming Top Ten department across CSE ranking likely increase thanks million gift anonymous alumnus department announced June part million fundraising campaign
+It gift alum UC San Diego allow CSE department improve undergraduate education fund five new endowed chair faculty among objective
+Given scientific publication researcher represent bulk indicator used ARWU ranking new faculty endowed chair likely boost number quality computer science publication targeted growth area big data computer system system
+In another barometer success delivering computer science education today released report top program United States lifetime return investment ROI
+The ranking compare cost undergraduate degree expected income year following graduation
+UC San Diego ranked cost yielding ROI topping million
+Six UC campus made top ROI led UC Berkeley
+The information calculated based college cost data IPEDS primary federal source data university net ROI derived leading provider earnings data
+In final year undergraduate student CSE test multiplayer networked videogames created scratch quarter graduation
+The computer ranking rose rapidly methodology behind rating system
+A total percent university score based whether program boast alumnus current faculty received highest award computer science
+Nevertheless UC San Diego pulled even University Toronto ranking putting overtook Caltech Weizmann Institute Science Israel
+UC San Diego appears benefited relative strength track record computer science paper citation quality publication together account percent data ARWU subject ranking based
+The relative weight category percent university score come HiCi researcher computer science percent number paper computer publication conference since ARWU also look percentage paper published top fifth computer science journal measure quality paper
+The latter category appears account bulk UC San Diego improvement
+Its score category nearly percent school higher five overall school category
+Similarly three better UC San Diego category led Stanford ranked HiCi score well overall ranking
+In Publications category UC San Diego better five program
+The school number paper indexed Science Citation Computer Science China Tsinghua University score even though overall ARWU ranking ranked
+In ranking news fourth consecutive year Washington Monthly today ranked UC San Diego top university nation
+The magazine base College Rankings university act behalf public interest
+The ranking based measure social mobility research civic engagement
+In separate survey published July UC San Diego rated public university nation Center World University Rankings also ranked world overall specifically computer science
+UC San Diego offer radio television connection medium interview faculty
+For information email
+Gilman La Jolla CA Copyright Regents University California
+All right reserved
+
+UT recently launched Robotics Consortium group brings together researcher industry across campus collaborate robotics research
+Speedway Stop Austin TX Phone
+
+Electrical Engineering Computer Science A readout module form silicon vertex detector
+Image courtesy Flickr
+Educator Introductory Video Editor Pick Editor Pick Video Editor Pick Video Graduates MIT electrical engineering computer science department work diverse industry conduct research broad range area
+They improve stability security computer communication network increase efficiency solar panel
+They create unique algorithm analyze financial market design robot capable thinking like human being
+Our community member continually make breakthrough enable people communicate easily manage environment effectively lead comfortable life ever
+MIT awarded electrical engineering degree nearly year educational program cutting edge since inception
+We provide education engineering principle built mathematics computation physical life science encourage student apply learn project internship research
+We succeed mission produce graduate capable taking leadership position field electrical engineering computer science beyond
+More percent MIT undergraduate enrolled Department Electrical Engineering Computer Science graduate program
+Our faculty comprises member National Academy Engineering member National Academy Sciences several National Medal Technology winner well many fellow professional society IEEE ACM APS AAAI others
+Some Description Spring Lecture Notes Student Work This page list OCW course one MIT department
+free open publication material thousand MIT course covering entire MIT curriculum
+Freely browse use OCW material pace
+There signup start end date
+Use OCW guide learning teach others
+We offer credit certification using OCW
+
+Download file later
+Send friend colleague
+Modify remix reuse remember cite OCW source
+Learn Some prior version course listed archived OCW access preservation
+Links archived prior version course may found course Other Versions tab
+Additionally page link every archived course department
+MIT OpenCourseWare make material used teaching almost MIT subject available Web free charge
+With course available OCW delivering promise open sharing knowledge
+Massachusetts Institute Technology Your use MIT OpenCourseWare site material subject
+
+The academic offered UAH expand horizon
+Apply today unlock spirit discovery
+Apply today take part research
+Join Charger Nation experience exciting campus offer
+The Computer Science Department UAH excellent faculty dedicated teaching research student advisement
+All computer science program meet national standard excellence fully accredited
+The department offer degree major computer science MS Cybersecurity MSCBS MS Software Engineering
+In addition department offer graduate certificate program earned conjunction
+degree independently degree
+The Computer Science Department rank nation term external funded research
+The Computer Science Department located Olin B
+King Technology Hall excellent classroom laboratory student facility
+Ready access provided several modern networked PC Sun laboratory within department
+The campus fiber backbone support easy Internet access
+Additional PC laboratory also distributed across campus
+To support Cybersecurity research teaching department Davidson Cybersecurity laboratory Digital Forensics laboratory
+The department also microcomputer laboratory instruction logic design computer architecture
+Olin B King Technology Hall University Alabama Huntsville Huntsville AL phone fax email The University Alabama Huntsville The University Alabama Huntsville
+
+Groundbreaking begun new building
+A striking presence corner Baltimore Avenue Campus Drive Brendan Iribe Center hub technology heart new innovation district among company government agency institutional colleague
+Department Computer Science
+Williams Building University Maryland Paint Branch Drive College Park MD ph
+

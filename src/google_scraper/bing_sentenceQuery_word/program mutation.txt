@@ -1,0 +1,1444 @@
+used design new software test evaluate quality existing software test
+Mutation testing involves modifying program small way
+Each mutated version called test detect reject mutant causing behavior original version differ mutant
+This called mutant
+Test suite measured percentage mutant kill
+New test designed kill additional mutant
+Mutants based either mimic typical programming error using wrong operator variable name force creation valuable test dividing expression zero
+The purpose help tester develop effective test locate weakness test data used program section code seldom never accessed
+Mutation testing form
+Most article program mutation program modified
+A general definition using rule defined syntactic structure make systematic change software artifact
+Mutation analysis applied problem usually applied testing
+So defined using mutation analysis design new software test evaluate existing software test
+Thus mutation analysis testing applied design model specification database test XML type software artifact although program mutation common
+Tests created verify correctness implementation given software system creation test still pose question whether test correct sufficiently cover requirement originated implementation
+This technological problem instance deeper philosophical problem named Who guard guard
+In context mutation testing pioneered locate expose weakness
+The theory mutant introduced without behavior generally program affected indicated either code mutated never executed dead code test suite unable locate fault represented mutant
+For function scale large number mutant usually introduced large program leading compilation execution extremely large number copy program
+This problem expense mutation testing reduced practical use method software testing increased use framework led creation mutation testing tool many programming language way test individual portion application
+Mutation testing originally proposed Richard Lipton student first developed published DeMillo Lipton Sayward
+The first implementation mutation testing tool part work titled
+Recently availability massive computing power resurgence mutation analysis within computer science community work done define method applying mutation testing
+In company called Certess part extended many principle hardware verification domain
+Whereas mutation analysis expects detect difference output produced Certess extends verifying checker testbench actually detect difference
+This extension mean three stage verification namely activation propagation detection evaluated
+They called functional qualification
+considered special case mutation testing
+In fuzzing message data exchanged inside communication interface inside software instance mutated catch failure difference processing data
+evolved concept fully stateful mutation testing platform complete monitor thoroughly exercising protocol implementation
+Mutation testing based two hypothesis
+The first hypothesis
+This hypothesis state software fault introduced experienced programmer due small syntactic error
+The second hypothesis called
+The coupling effect asserts simple fault cascade form emergent fault
+Subtle important fault also revealed mutant support coupling effect
+mutant enabled creating mutant one mutation
+Mutation testing done selecting set mutation operator applying source program one time applicable piece source code
+The result applying one mutation operator program called
+If test suite able detect change
+one test fails mutant said
+For example consider following code fragment The condition mutation operator would replace produce following mutant Now test kill mutant following three condition met These condition collectively called
+requires first second condition satisfied
+requires three condition satisfied
+Strong mutation powerful since ensures test suite really catch problem
+Weak mutation closely related method
+It requires much le computing power ensure test suite satisfies weak mutation testing strong mutation testing
+However case possible find test case could kill mutant
+The resulting program behaviorally equivalent original one
+Such mutant called
+Equivalent mutant detection one biggest obstacle practical usage mutation testing
+The effort needed check mutant equivalent high even small program
+A systematic literature review wide range approach overcome Equivalent Mutant Problem presented identified relevant technique article three category technique detecting DEM suggesting SEM avoiding equivalent mutant generation AEMG
+The experiment indicated Higher Order Mutation general JudyDiffOp strategy particular provide promising approach Equivalent Mutant Problem
+Many mutation operator explored researcher
+Here example mutation operator imperative language These mutation operator also called traditional mutation operator
+There also mutation operator language concurrent construction complex object like container etc
+Operators container called mutation operator
+For example muJava tool offer various mutation operator Access Modifier Change Type Cast Operator Insertion Type Cast Operator Deletion
+Mutation operator also developed perform security vulnerability testing program
+
+Parker Paradigms Penn Plaza Floor New York NY Email help View Our View Our answer common question
+Your email address This preview solution
+Please use purchase button see entire solution Parker Paradigms Penn Plaza Floor New York NY
+
+In inspired process belongs larger class EA
+Genetic algorithm commonly used generate solution relying operator
+In genetic algorithm called individual creature optimization problem evolved toward better solution
+Each candidate solution set property mutated altered traditionally solution represented binary string encoding also possible
+The evolution usually start population randomly generated individual population iteration called
+In generation every individual population evaluated fitness usually value optimization problem solved
+The fit individual selected current population individual genome modified possibly randomly mutated form new generation
+The new generation candidate solution used next iteration
+Commonly algorithm terminates either maximum number generation produced satisfactory fitness level reached population
+A typical genetic algorithm requires A standard representation candidate solution
+Arrays type structure used essentially way
+The main property make genetic representation convenient part easily aligned due fixed size facilitates simple operation
+Variable length representation may also used crossover implementation complex case
+representation explored representation explored mix linear chromosome tree explored
+Once genetic representation fitness function defined GA proceeds initialize population solution improve repetitive application mutation crossover inversion selection operator
+The population size depends nature problem typically contains several hundred thousand possible solution
+Often initial population generated randomly allowing entire range possible solution
+Occasionally solution may seeded area optimal solution likely found
+During successive generation portion existing population breed new generation
+Individual solution selected process solution measured typically likely selected
+Certain selection method rate fitness solution preferentially select best solution
+Other method rate random sample population former process may
+The fitness function defined genetic representation measure represented solution
+The fitness function always problem dependent
+For instance one want maximize total value object put knapsack fixed capacity
+A representation solution might array bit bit represents different object value bit represents whether object knapsack
+Not every representation valid size object may exceed capacity knapsack
+The solution sum value object knapsack representation valid otherwise
+In problem hard even impossible define fitness expression case may used determine fitness function value
+used determine air resistance vehicle whose shape encoded phenotype even used
+The next step generate second generation population solution selected combination also called recombination
+For new solution produced pair parent solution selected breeding pool selected previously
+By producing child solution using method crossover mutation new solution created typically share many characteristic parent
+New parent selected new child process continues new population solution appropriate size generated
+Although reproduction method based use two parent biology inspired research suggests two parent generate higher quality chromosome
+These process ultimately result next generation population chromosome different initial generation
+Generally average fitness increased procedure population since best organism first generation selected breeding along small proportion le fit solution
+These le fit solution ensure genetic diversity within genetic pool parent therefore ensure genetic diversity subsequent generation child
+Opinion divided importance crossover versus mutation
+There many reference support importance search
+Although crossover mutation known main genetic operator possible use operator regrouping migration genetic algorithm
+It worth tuning parameter probability probability population size find reasonable setting problem class worked
+A small mutation rate may lead nature
+A recombination rate high may lead premature convergence genetic algorithm
+A mutation rate high may lead loss good solution unless employed
+In addition main operator heuristic may employed make calculation faster robust
+The heuristic penalizes crossover candidate solution similar encourages population diversity help prevent premature convergence le optimal solution
+This generational process repeated termination condition reached
+Common terminating condition Genetic algorithm simple implement behavior difficult understand
+In particular difficult understand algorithm frequently succeed generating solution high fitness applied practical problem
+The building block hypothesis BBH consists Goldberg describes heuristic follows Despite lack consensus regarding validity hypothesis consistently evaluated used reference throughout year
+Many example proposed attempt provide environment hypothesis would hold
+Although good result reported class problem skepticism concerning generality practicality hypothesis explanation GAs efficiency still remains
+Indeed reasonable amount work attempt understand limitation perspective estimation distribution algorithm
+There limitation use genetic algorithm compared alternative optimization algorithm The simplest algorithm represents chromosome
+Typically numeric parameter represented though possible use representation
+The floating point representation natural
+The notion genetic algorithm offered really misnomer really represent building block theory proposed
+This theory without support though based theoretical experimental result see
+The basic algorithm performs crossover mutation bit level
+Other variant treat chromosome list number index instruction table node imaginable
+Crossover mutation performed respect data element boundary
+For data type specific variation operator designed
+Different chromosomal data type seem work better worse different specific problem domain
+When representation integer used often employed
+In way small change integer readily affected mutation crossover
+This found help prevent premature convergence called many simultaneous mutation crossover event must occur order change chromosome better solution
+Other approach involve using array number instead bit string represent chromosome
+Results theory schema suggest general smaller alphabet better performance initially surprising researcher good result obtained using chromosome
+This explained set real value finite population chromosome forming selection recombination dominant much lower cardinality would expected floating point representation
+An expansion Genetic Algorithm accessible problem domain obtained complex encoding solution pool concatenating several type heterogenously encoded gene one chromosome
+This particular approach allows solving optimization problem require vastly disparate definition domain problem parameter
+For instance problem cascaded controller tuning internal loop controller structure belong conventional regulator three parameter whereas external loop could implement linguistic controller fuzzy system inherently different description
+This particular form encoding requires specialized crossover mechanism recombines chromosome section useful tool modelling simulation complex adaptive system especially evolution process
+A practical variant general process constructing new population allow best organism current generation carry next unaltered
+This strategy known guarantee solution quality obtained GA decrease one generation next
+Parallel implementation genetic algorithm come two flavor
+parallel genetic algorithm assume population computer node migration individual among node
+parallel genetic algorithm assume individual processor node act neighboring individual selection reproduction
+Other variant like genetic algorithm problem introduce noise fitness function
+Genetic algorithm adaptive parameter adaptive genetic algorithm AGAs another significant promising variant genetic algorithm
+The probability crossover pc mutation pm greatly determine degree solution accuracy convergence speed genetic algorithm obtain
+Instead using fixed value AGAs utilize population information generation adaptively adjust order maintain population diversity well sustain convergence capacity
+In AGA adaptive genetic algorithm adjustment depends fitness value solution
+In adaptive genetic algorithm use clustering analysis judge optimization state population adjustment depends optimization state
+It quite effective combine GA optimization method
+GA tends quite good finding generally good global solution quite inefficient finding last mutation find absolute optimum
+Other technique simple hill climbing quite efficient finding absolute optimum limited region
+Alternating GA hill climbing improve efficiency GA overcoming lack robustness hill climbing
+This mean rule genetic variation may different meaning natural case
+For instance provided step stored consecutive order crossing may sum number step maternal DNA adding number step paternal DNA
+This like adding vector probably may follow ridge phenotypic landscape
+Thus efficiency process may increased many order magnitude
+Moreover opportunity place step consecutive order suitable order favour survival efficiency
+See instance example particular use
+A variation population whole evolved rather individual member known gene pool recombination
+A number variation developed attempt improve performance GAs problem high degree fitness epistasis
+fitness solution consists interacting subset variable
+Such algorithm aim learn exploiting beneficial phenotypic interaction
+As aligned Building Block Hypothesis adaptively reducing disruptive recombination
+Prominent example approach include mGA GEMGA LLGA
+Problems appear particularly appropriate solution genetic algorithm include scheduling problem many scheduling software package based GAs
+GAs also applied
+Genetic algorithm often applied approach solve problem
+As general rule thumb genetic algorithm might useful problem domain complex mixing combination designed move population away traditional algorithm might get stuck
+Observe commonly used crossover operator change uniform population
+Mutation alone provide ergodicity overall genetic algorithm process seen
+Examples problem solved genetic algorithm include mirror designed funnel sunlight solar collector antenna designed pick radio signal space walking method computer figure
+In advises genetic algorithm task I quite unnatural model application term genetic operator like mutation crossover bit string
+The pseudobiology add another level complexity problem
+Second genetic algorithm take long time nontrivial problem
+T analogy significant progress require sic million quite appropriate
+In proposed learning machine would parallel principle evolution
+Computer simulation evolution started early work using computer
+His publication widely noticed
+Starting Australian quantitative geneticist published series paper simulation organism multiple locus controlling measurable trait
+From beginning computer simulation evolution biologist became common early method described book Fraser Burnell Crosby
+Fraser simulation included essential element modern genetic algorithm
+In addition published series paper also adopted population solution optimization problem undergoing recombination mutation selection
+Bremermann research also included element modern genetic algorithm
+Other noteworthy early pioneer include Richard Friedberg George Friedman Michael Conrad
+Many early paper reprinted
+Although Barricelli work reported simulated evolution ability play simple game became widely recognized optimization method result work early Rechenberg group able solve complex engineering problem
+Another approach evolutionary programming technique proposed generating artificial intelligence
+originally used finite state machine predicting environment used variation selection optimize predictive logic
+Genetic algorithm particular became popular work early particularly book
+His work originated study conducted student
+Holland introduced formalized framework predicting quality next generation known
+Research GAs remained largely theoretical The First International Conference Genetic Algorithms held
+In late General Electric started selling world first genetic algorithm product toolkit designed industrial process
+In Axcelis released world first commercial GA product desktop computer
+technology writer wrote Evolver remained interactive commercial genetic algorithm
+Evolver sold Palisade translated several language currently version
+Genetic algorithm Evolutionary algorithm
+Swarm intelligence
+Evolutionary computation method
+Metaheuristic method broadly fall within optimisation method
+
+Fewer percent high school offer computer science class
+Most high school United States offer computer science class
+Yet field driving major portion global economy
+Tech company educator finding new way bridge gap
+One solution opening door new opportunity student Manson Washington across country
+TEALS grassroots program supported pair computer science professional classroom educator computer science high school
+Over two year classroom teacher gradually take responsibility teaching course
+I knew teach student computer science I really needed training say Susan Sears Manson Junior Senior High School teacher
+It great able learn alongside Today TEALS serf school across state plus Washington nearly volunteer company across tech industry including local company like Microsoft Amazon Expedia Concur Zillow Google Tableau
+In school year TEALS served student
+Trying connect kid teacher expertise different thing student interested challenging say Manson School District Superintendent Matt Charlton
+So way beat go outside Here Washington half Computer Science AP test taken last year TEALS student
+TEALS also teach remotely school local volunteer available go classroom including class statewide Kitsap Peninsula Eastern Washington
+If computer science professional retiree graduate student encouraged
+If would like join national effort promote computer science classroom please visit The
+
+Unit We start semester discussing difference imperative knowledge definitional knowledge fixed program stored program computer finally definition syntax static semantics semantics
+We cover straight line branching looping program
+Other topic include binary representation number order growth debugging program
+Python concept covered unit include value type int float boolean string str tuples dictionary dict list
+We also learn expression statement especially effectively use print statement program
+Other topic include assignment conditionals loop assert function scope object model mutation mutability
+By end Unit familiar following algorithmic technique guess check linear search bisection search successive approximation Newton method
+You also learn recursive definition problem solving technique structure program using decomposition abstraction including specification parameter
+Unit end quiz covering material lecture recitation problem set
+This one course OCW
+Find material course page linked along left
+free open publication material thousand MIT course covering entire MIT curriculum
+Freely browse use OCW material pace
+There signup start end date
+Use OCW guide learning teach others
+We offer credit certification using OCW
+
+Download file later
+Send friend colleague
+Modify remix reuse remember cite OCW source
+Learn MIT OpenCourseWare make material used teaching almost MIT subject available Web free charge
+With course available OCW delivering promise open sharing knowledge
+Massachusetts Institute Technology Your use MIT OpenCourseWare site material subject
+
+Finding best school The father scientific method Francis Bacon famously observed knowledge Centuries later ancient proverb truer ever
+We inundated great wave information virtually every waking hour technology integrates education business entertainment security even body
+Computer science stand epicenter new age information
+This field stood crossroad mathematics engineering physic blossomed discipline lead cutting edge technology
+Not surprisingly study computer science often access highest paying job wide range growing field
+Governments increasingly require protection dangerous every branch science wish benefit evermore complex computer model people every demographic group afford cheap apps portable video game
+Children school longer study write cursive instead learn type
+Almost local program teach someone basic computer science The Best Schools rank institution based university advancing field
+We want know school run leading research center utilize top facility attract brightest student run professor
+Students lucky enough gain admittance school rubbing elbow run top company world today creating top company tomorrow
+Although obviously measure computer science program based individual merit also pay attention school overall reputation
+No matter great specialized department always better surrounded world class sister program
+Thus chosen rank program primarily based computer science use overall institutional ranking tie breaker
+For ranking looked Center Universities operated Shanghai Jiao Tong University right
+This center specializes ranking university well individual program study
+International scope focused academic performance known Shanghai From Shanghai Rankings therefore identified best program latest
+Taking Shanghai Ranking point departure researched important characteristic top Computer Science program list order reveal university computer science program appears
+Stanford University every possible advantage computer science program could ask
+The school recognized one leading center higher learning decade produced Nobel Prizes MacArthur Fellows National Medal Science award
+The school massive billion endowment give sort fiscal backing research university dream provides computer science program ample connection department related math science field
+Stanford computer science program institution world helped build Silicon Valley computer hub today
+Stanford computer science department year history making one oldest kind
+Its alumnus created world recognizable technology company Google Yahoo Taiwan Semiconductor Electronic Arts
+And exploit garnered respect leader field Bill Gates numerous others donated fund necessary build state art Gates Computer Science Building
+One might think overwhelming success would lead complacency Stanford
+Their computer science department want ensure future successful past result outlined detailed Strategic Plan guide future endeavor next two decade
+Many consider MIT leading science school world
+There many factor contribute success including location Boston area lock arm arm elite kin like Harvard Boston College Boston University Tufts
+But even without prestigious network friend MIT still boast Nobel Prize winner billion endowment
+MIT run several computer research center largest research laboratory Artificial Intelligence Laboratory
+Numerous advancement come lab including first credible chess program much technology underlying internet today
+The school also leader nanotechnology information theory bioinformatics
+Not surprisingly given resource MIT produced many famous alumnus Colin Angel founded IRobot Corporation done considerable work NASA Mars mission William Reddington Hewlett HP Company famous many technology product
+UC Berkeley world respected public school
+It posse one decorated faculty planet includes representative National Academy Sciences representative National Academy Engineering seven Nobel Prize winner
+Berkeley also produce undergraduate student later complete PhDs school America
+Berkeley long history contributing computer science advancement Paul Morton creation vacuum tube using California Digital Computer Doug Engelbart creation mouse Ken Thomson Unix Eric Allman contribution sending email Bob Gaskins Power Point
+Berkeley scientist alumnus heart advancing computer science inception
+That school produced nine winner field prestigious accolade Turning Award
+This rich heritage ideal location California part draw many world elite computer scientist school
+Budding programmer learn best network wide array thinker field anyone find connected one place
+Founded Harvard substantial time develop standard research university measured
+It ranked number one university world long Shanghai Rankings existed currently considered number one social life medical science well
+The school unchallenged depth leaf substantial opportunity interdisciplinary study especially relevant information science
+Students partake Center Research Computation Society Institute Applied Computational Science Berkman Center Internet Society
+These think tank help Harvard direct effort towards variety academic area applied math applied physic bioengineering electrical engineering environmental science public policy
+In effort reach widespread extremely lofty goal Harvard outlined plan November spearheaded former Microsoft CEO Steve Ballmer
+The school increase computer science faculty half also opening new state art facility utilize
+Princeton University one beautiful North American university aesthetic prowess may overshadowed technical aptitude
+Here computer science student enjoy advantage instantaneously recognized world class university strong representation chosen specialization
+At Princeton one research problem Bitcoin Crypto currency bioinformatics computational neuroscience cloud storage number leading subfields information theory
+Not surprisingly given Princeton focus student even undergraduate required least one design project graduation
+Students pursue undergraduate degree either bachelor art bachelor science engineering graduate student choose master science engineering PhD
+Their department broken computational biology computer architecture machine learning programming theory
+Andrew Carnegie wanted apply pragmatic industry catapulted entrepreneurial exploit hard science
+Since founding Carnegie Mellon done rapidly rose rank research university focus innovation creativity
+The Computer Science department leader right development robotic technology software used Mars Rovers
+Other strong point research crash avoidance technology car assistance elderly
+The Computer Science department broken following section computer science interaction Institute Software Research computational biology Language Technologies Institute machine learning Robotics Institute
+Master doctoral level study offered department however computer science computation biology machine learning offered bachelor level
+interaction robotics offered dual major current student
+Carnegie Mellon surprisingly produced many world class alumnus John Nash whose life basis popular movie A Beautiful Mind Professor Scott Falhman created emoticon
+Founded University Texas constantly recognized research university boast seven museum five million collection library million volume
+The computer science program proud history consistently ranked top ten program world
+The department manages network host equipped laboratory state art computing resource
+The faculty also highly experienced recognized worldwide earned national international award
+Students may pursue undergraduate graduate level study
+Undergraduates expected engage research networking complete internship experience
+Graduate student focus research particular focus within following area network security artificial intelligence robotics bioinformatics data mining formal method verification
+A organization established campus focus helping woman network within business world computer science
+From founding Cornell University set apart peer Ivy League school aggressive revolutionary principle
+Located Ithaca New York university cutting edge research within many field including imaging robotic exploration mapping microbe
+The computer science department founded made substantial research contribution field
+Gerard Salton also known father Information Retrieval joined Cornell Computer Science department Harvard brought SMART technology
+This became foundation year research basis Google search engine
+Students undergraduate doctoral level held high standard expectation
+Data structure algorithm operating system programming language theory computation area student required master
+At master level two semester professional degree offered engineering well two year Masters Science computer science department
+For doctoral candidate student accepted year
+They expected demonstrate mastery programming language theory artificial intelligence system
+Though relatively young compared university University California Los Angeles already impressive history
+Founded school already produced Nobel Laureates MacArthur Fellows Olympic Medal winner company
+The formal establishment computer science program came however school making contribution information revolution early
+Currently university offer bachelor degree computer science computer addition graduate level study
+There different research group laboratory available invaluable resource student staff alike
+The research group lab incorporated research center Center Computing Scalable Analytics Institute Center Autonomous Intelligent Networked Systems Center Information Computation Security Wireless Health Institute
+As one world leading private research university billion endowment Southern California vibrant diverse culture since humble founding Los Angeles little frontier town
+There currently total faculty staff member alumnus worldwide
+Five Noble Laureates three MacArthur Fellows staff
+USC Department Computer Science founded made contribution numerous area research including cryptography information theory bioinformatics DNA computing internet technology interaction statistical natural language processing game theory human behavior work computer graphic
+The department offer four undergraduate program Computer Science Computer Engineering Computer Science Focus Gaming Computer Science Business Administration
+The Masters degree Computer Science offer general program student choose eight different concentration Computer Networks Game development Intelligent Robotics Data Science High Performance Computing Simulation Computer Security Software Engineering Multimedia Creative Technologies
+The last three listed concentration may taken online Distance Education Network
+Students may also pursue PhD Computer Science
+science engineering research Caltech collected many impressive accomplishment since founding
+The Jet Propulsion Laboratory NASA Seismological Laboratory major center learning
+Interdisciplinary research strongly encouraged throughout school laboratory
+The faculty equally impressive decorated Nobel Prize winner seven Crafoord Laureates National Medal Science recipient
+Caltech total endowment healthy billion
+But unlike research university Caltech luxury spreading ample resource among small number student
+Potential pupil interested face face connection mentor benefit enormously Computing Mathematical Sciences Department small student teacher ratio
+The Academic Programs broken section applied computational mathematics computer science computing mathematical science control dynamical system
+Undergraduate Graduate level study available section
+Prominent research area include algorithmic economics machine learning vision molecular programming robotics autonomous system scientific computing
+Founded University Toronto become Canada respected research institution three main campus location library connection affiliated teaching hospital
+Points pride school include world first operational broadcasting system require battery first effective use insulin treating diabetes world first single lung transplant among many unique accomplishment
+The Department Computer Science started foundation Computation Center
+Students may choose Bachelors Science Masters Science Doctor Philosophy Computer Science
+The program broken following area Applied Discrete Mathematics Artificial Intelligence Computational Biology Computer Graphics Computer Systems Networks Department Database Systems Health Assistive Technology Human Computer Interaction Numerical Analysis Scientific Computing Programming Languages Methodologies Software Engineering finally Theory Computation
+This wide range concentration cover virtually every aspect field give student seemingly endless opportunity specialization
+The University Illinois Urbana founded
+The highly talented respected faculty includes Pulitzer Prize winner
+The University known invention first graphical web browser well first university provide full access student disability
+The Computer Science Department established currently managed distinguished faculty member including ACM Fellows IEEE Fellows NSF career award winner
+The department offer seven different degree program course student
+The University Illinois also host largest ACM student chapter world
+The innovative Thomas Siebel Center Computer Science laboratory advanced interactive way student study recent emerging computer technology
+Research area include system networking artificial intelligence graphic interaction database system information retrieval
+The University California San Diego founded located along beautiful Pacific coast line distinction holding world largest collection work Theodor Geisel better known Seuss
+Aside iconic child book figure University Nobel Laureates staff ranked top Best Public University Nation
+The Computer Science Engineering department founded home Gordon one fastest super computer world
+Students direct access Gordon multithreaded parallel supercomputer throughout San Diego Supercomputer Center
+With resource available department highly competitive offer strong undergraduate graduate study program including Systems Networking Software Engineering Processor Architecture Compilation Parallel Computation Network Security Cryptography Meaning Computation Graphics Embedded Systems Data Knowledge Base Systems Computer Vision Design Bioinformatics Artificial Intelligence Algorithms Complexity
+Ann Arbor city known fine dining lively art environment listed number one educated city America
+The University Michigan located Ann Arbor founded one first public university nation continues day leader higher education
+The University staff faculty expert respective field included Nobel Laureates Pulitzer Prize winner astronaut Supreme Court Justices
+The Computer Science Engineering program founded Arthur Burks Gordon Peterson
+Other faculty member include ACM Fellows IEEE Fellows one MacArthur Fellow
+Notable alumnus Computer Science program Francs Allen Edgar Codd Stephen Cook Larry Page Google
+There course offering per year encompass four undergraduate degree program two Master program doctoral level work
+Undergraduate student privilege participate design project internship allow experience field
+A global leader research state flagship university University Maryland founded
+The school rich history included four Nobel Laureates two Pulitzer Prize winner staff
+Two alumnus also awarded Nobel Laureates
+Of academic program Computer Science Department officially established though computing research started
+There full time faculty staff NSF career award one Packard Fellow two Sloan Fellows
+Prominent research study area include Artificial Intelligence Big Data Bioinformatics Computational Biology Computer Systems Computer Vision Data Science Databases Graphics Computing Interaction Numerical Analysis Programming Languages Scientific Computing Security Software Engineering Theoretic Computer Science
+The Computer Science Department also spearhead several research initiative Laboratory Computational Cultural Dynamics Active Logic Artificial Intelligence System
+The Swiss Federal Institute leading research center technology natural science Zurich Switzerland
+Since founding Nobel Prizes awarded staff alumnus researcher associated university
+Though school history research field computer software development Computer Science Department officially established
+In example Swiss Federal first university European continent programmable computer
+From undergraduate doctoral study popular research topic include Scientific Computing Computational Sciences Computer Graphics Vision Information Security Algorithms Theory Networks Distributed Systems Information Computer Systems Computational Intelligence Software Engineering Programming Languages
+research partnership exist Microsoft IBM SAP Google Disney
+On April laid first cornerstone
+This milestone Jewish people historically barred technical training prior establishment school
+Now Technion Israel first university pioneer science seen three professor distinguished Nobel Laureates
+Furthermore school also played key role catapulting nation obscurity field leader information science
+Many consider Israel second Silicon Valley hub computer research
+The Department Computer Science comprises faculty member around student undergraduate graduate give distinction largest academic unit school
+Research area include Theory Computer Science Systems Artificial Intelligence Intelligent Systems Scientific Computation
+In Technion established Computer Science Industrial Affiliates Program
+The goal program connect academic department Israel still budding international industry
+Ohio State consistently ranked top one nation best public university
+Founded school grown include college student choose undergraduate degree
+Computer Science Engineering become one many cutting edge program offered Ohio State
+Students expect high standard achievement distinguished professor
+Interdisciplinary work also strongly encouraged specifically Ohio Supercomputer Center Advanced Computing Center Arts Design Center Cognitive Science
+Areas research include Artificial Intelligence cover topic computer vision machine learning Computer Graphics includes animation game visual environment Networking Distributed Computing covering network security social network Software Engineering Programming Language Systems includes data management computer architecture finally Theory Algorithms including computational learning theory cryptography
+Tel Aviv Israel city never A popular tourist destination lively cosmopolitan atmosphere place culture resource
+It come surprise Tel Aviv University Israel number one school comprehensive higher learning research
+The idea school started realized August
+Growth slow constant Engineering Arts facility opened
+Today Tel Aviv consists student nine faculty school department
+The Blavatnik School Computer Science Tel Aviv cutting edge research
+Areas study broken three main category
+First Foundations Computer Science includes topic Algorithms Cryptography Logic Formal Methods Quantum Computation
+Computer Systems includes Communication Networks Computer Security Asynchronous Computation Programming Environments Flash Memory
+Finally Computer Applications includes study Historical Document Analysis Robotics Computer Vision Pattern Recognition Calendrical Calculations
+Though land available ground breaking Purdue University first campus building come
+The school made rapid stride nation first airport
+The Computer Science Department founded exponential increase student enrollment school ran space Rapid expansion department occurred continues day
+A growth Computer Science department projected upcoming academic year
+Departmental research area include Bioinformatics Computational Biology Computational Science Engineering Databases Data Mining Distributed Systems Graphics Visualization Information Security Assurance Machine Learning Information Retrieval Networking Operating Systems Programming Languages Compilers Software Engineering Theory Computing Algorithms
+The school also run numerous research initiative National Science Foundation supported Center Science Information CERIAS Annual Information Security Symposium
+Located sunny Atlanta Georgia Georgia Tech founded October providing education student
+Today Georgia Tech serf student ranked top best public university
+Georgia Tech College Computing developed late early
+In first class nation history required personal computer
+Today College Computing includes three school degree program academic faculty research faculty student graduate undergraduate
+Computer science Georgia Tech broken three school The School Computer Science School Interactive Computing School Computational Science Engineering
+These three school combine offer different area specialization ranging information security science machine learning
+As one oldest university year history Cambridge University older United Kingdom
+Its age matched formidable reputation unparalleled academic achievement
+With research worker alone Computer Science Department equally impressive history record excellence
+The Diploma Computer Science world first degree area offered Cambridge
+Undergraduate study computer science introduced early
+The computer laboratory campus originally founded mathematical laboratory
+Digital computing started direction Maurice Wilkes
+Current research topic include Bioinformatics Computer Architecture Computer Vision Distributed Systems Graphics Interaction Logic Semantics Machine Learning Natural Language Processing Networking Wireless Communication Operating Systems Virtualization Programming Security Sustainable Computing
+Founded Japanese colonial administration National Taiwan University lead university Taiwan responsible research training professional
+To end university college covering department graduate institute plan expand meet current educational demand
+There four main research center Population Gender Studies Center Biotechnology Center Condensed Matter Sciences Center Center
+Over student taken advantage resource school year
+The College Electrical Engineering Computer Science formally established
+The program broken two department five graduate institute
+The two department cover Electrical Engineering Computer Engineering
+The graduate institute include Networking Multimedia Photonics Optoelectronics Communication Engineering Electronics Engineering Biomedical
+Multiple famous alumnus come Taiwan University Andrew Yao famous using minimax theorem prove principle named Rick Tsai president CEO industry leader Taiwan Semiconductor Manufacturing Company
+Located third largest capital city world Beijing China Tsinghua University founded
+The school grown school department faculty member student
+Tsinghua alumnus include Xi Jinping General Secretary Chinese Communist Party nation current paramount leader Hu Jintao former paramount leader
+In Tsinghua established one first computer major China department Automatic Control
+This renamed Department Computer Engineering Science
+Tsinghua made significant contribution computer revolution
+The first analog computer model built first digital computer first digital computer
+More recently Tsinghua leading role development CNGI largest pure network world
+Other major area research university include Computer Systems Computer Networks Information Processing Computer Computing Data Engineering Pervasive Computing Electronic Design Automation
+The Imperial College Science Technology Medicine established joining Royal College Science Royal School Mines City Guilds College
+The four main discipline school science engineering medicine business
+The school hold strong emphasis advancing woman within area study awarded Silver Athena Swan award
+The distinguished faculty includes Nobel Laureates two Field Medalists
+With one largest Computer Science department United Kingdom Imperial College become leader research technology
+The department well known achievement Distributed Computing Logic Artificial Intelligence Computing Visual Information Processing Computing Theory Computational Aspects Management Science
+The Higher Education funding Council England awarded Computer Science department highest ranking Research Assessment Exercises Teaching Quality Exercises
+Many traditional leading center higher education based western culture King Abdulaziz University retains distinctly Middle Eastern culture competing far older school around world
+Founded Jeddah Saudi Arabia King Abdulaziz University follows Islamic regulation closely established separate campus sport team research center men woman
+An external program online class also established help meet growing demand higher education service
+As faculty member student Abdulaziz University
+The Department Computer Science formally established school year originally part Mathematics department
+Academic accreditation program computer science American Accreditation Board Engineering Technology obtained
+To aid obtaining research objective scientific cooperation institution Global Research Scientific Partnerships department established
+This department work conjunction specialized research group campus
+Located Munich Germany TUM consistently ranked one Europe top university
+Founded TUM currently operates faculty three integrative research center six corporate research center making TUM one largest university Germany
+There staff member including Nobel Prize winner Leibniz prize winner IEEE Fellows minister student
+The Department Electrical Computer Engineering offer Bachelor doctoral level study
+For undergraduate student electromobility intelligent grid computer chip energy supply current area study
+The Master program offer three area discipline Master Science Elektrotechnik und Informationstechnik Master Science Communications Engineering Master Science Power Engineering
+Doctoral candidate focus research number center competence including Electronics Life Sciences Interaction
+The idyllic southern California location commitment rigorous academic research pushed University California Irvine ranked among university Times Higher Education
+Among faculty three Nobel prize since school founding
+UCI offer undergraduate degree program master program program
+The Department Computer Science School Information pride interdisciplinary culture cutting edge research
+There faculty member graduate student undergraduate student
+The University run different research lab center including California Institute Telecommunications Center Emergency Response Technologies Secure Computing Networking Center
+Additional research area include Artificial Intelligence Machine Learning Computer Graphics Visualization Medical Informatics Scientific Numerical Computing Cryptography
+Founded University California Davis opened door first student
+Today student may choose undergraduate program graduate program
+The million endowment led establishment four college six professional school
+There two undergraduate tract offered Department Computer Science Computer Science College Letters Science Computer Science Engineering College Engineering
+There student participating two major
+At graduate level student focus one number research topic including Computational Biology Bioinformatics Research Group Computer Architecture Computer Security Institute Data Analysis Visualization Networks Laboratory Parallel Distributed Computing Programming Languages Software Engineering Software Engineering Social Analytics Theory Laboratory Visualization Interface Design Innovation
+Originally founded King College Columbia University oldest institution higher learning New York fifth oldest United States
+It one nine Colonial Colleges established American Revolution
+Columbia administers Pulitzer Prize annually Nobel Prize Laureates student faculty staff
+Former notable alumnus include five founding father United States nine Supreme Court Justices three United States Presidents
+The Department Computer Science major research area Computational Biology Computer Engineering Interfaces Machine Learning Networking NLP Speech Software Systems Theory
+There different laboratory research group available resource
+The undergraduate student seven degree program choose Master student available track
+Doctoral candidate pursue directed research strongly encouraged dedicate year community service department
+Arizona State University founded consists four campus faculty member undergraduate graduate student
+The faculty seen two Nobel Laureates four Pulitzer Prize winner one MacArthur Fellow
+rank ASU making innovative change academic faculty student life also best Law School nation
+The Computer Science department alone record freshman enroll making total enrollment student
+There seven different degree track including Master Doctoral level study taught tenured professor
+Six research center offer updated information resource material
+Numerous research area covered including artificial intelligence visualization cloud computing distributed computing social computing healthcare operation informatics simulation
+From Food Technology NTU Satellite program easy see university made rapid stride
+In fact NTU rated one top fastest rising university Asia world
+It also rated one top beautiful campus world
+Founded Singapore NTU faculty staff research intensive focus
+Attending NTU undergraduate graduate student
+Of special note NTU one seven founding member Global Alliance Technological Universities
+This coalition academic brilliance established address global issue updated science technology
+The College Engineering six subdivision Chemical Biomedical Engineering Civil Environmental Engineering Computer Engineering Electrical Electronic Engineering Materials Science Engineering Mechanical Aerospace Engineering
+Research accomplished throughout school supported research institute research center additional research center
+Oxford unique distinction oldest English speaking university world
+Being oldest extensive list achievement accolade
+Oxford ranked top university world academic research Times Higher Education world ranking known largest library system UK
+It also run largest widely recognized academic publishing house world
+Alumni include Nobel Prize winner Olympic medalist UK Prime Ministers world leader
+Established Oxford Computing Laboratory one Computer Science Departments country
+Research topic include Algorithms Automated Verification Computational Biology Structures Information Systems Programming Languages Security Software Engineering
+There three track study offered undergraduate four offered master student
+A PhD Computer Science also offered
+Northwestern University ranked top medicine law education business
+Founded college campus Evanston Illinois billion endowment
+In Dearborn Observatory housed world largest refracting telescope time
+In Vogelback Computing Center opened saw school first CDC computer
+The McCormick School Engineering founded incorporated Department Computer Science
+The department broken eight program including Electrical Engineering Computer Science
+Five major center open student research Segal Design Institute Farley Center Entrepreneurship Innovation
+There faculty member undergraduate student master student PhD student within department
+The Swiss Federal Institute claim three target mission school teaching research technology
+One two Swiss Federal Institutes Lausanne located Switzerland shore Lake Geneva largest lake Europe
+Formally established Lausanne school came young engineering school
+The group campus led Swiss Federal become innovative productive scientific institution
+program available bachelor master degree student addition seeking doctorate degree
+The School Computer Communication Sciences divided two division
+Students encouraged participate internship experience
+Additional research area include Algorithms Artificial Intelligence Computer Architecture Data Management Interaction
+This historic institution produced great innovator Daniel Borel Logitech Nicoud inventor mouse
+Among thriving atmosphere New York City one find largest private university America
+New York University founded adapted along city
+Over student attend New York University across school college
+There course offered overseen faculty member
+The faculty included four Nobel Crafoord Prize winner five Pulitzer Prize winner MacArthur Fellows
+Under Courant Institute Mathematical Sciences Computer Science Department
+The undergraduate department offer BA dual degree
+The Master level offer three track Computer Science Information Systems Science Scientific Computing
+Students may also pursue doctorate Computer Science
+Popular research area include Algorithms Theory Cryptography Computational Biology Computer Graphics Formal Methods Verification Machine Learning Natural Language Speech Processing Systems Scientific Computing
+Firmly rooted Chinese culture University Hong Kong founded
+The main campus look Tolo Harbor making one largest beautiful campus city
+There total undergraduate degree offered three four year curriculum graduate degree track
+High standard research achievement accomplished five state key laboratory
+Though computer course offered since Department Computer Science formally established
+The school first ICL computer installed establishing Joint Universities Computer Centre two local university
+The British Computer Society accredited Computer Science Department program
+This first accreditation granted outside United Kingdom
+Currently department offer BSc BEng MSc MPhil PhD degree
+There faculty member total student degree program
+Chartered Hill claim title nation first public university
+Today university offer bachelor degree master degree doctorate program seven professional degree program school College Arts Sciences
+Overseeing academic excellence staff full time faculty member
+Founded Hill computer science department also hold title nation first independent department field
+The university offer student
+degree computer science
+There tenured faculty member addition staff member four postdoctoral research associate
+Undergraduate student number graduate student number approximately
+Research area include Bioinformatics Computational Biology Computer Graphics Collaborative Work Computer Vision Geometric Computing Medical Image Analysis Robotics
+Ranked number one three consecutive year QS Asian University ranking HKUST well known international research university
+One highlighted example came HKUST research team developed world smallest carbon nanotube
+Founded undergraduate student postgraduate student full time faculty
+October saw opening Electrical Electronic Engineering department student
+The program evolved time incorporate multimedia recent technology
+In name changed Electronic Computer Engineering
+There undergraduate graduate student attendance teaching faculty member
+The program sponsor research grant cover wide range topic including Electronics Photonics Integrated Circuits Systems Biomedical Engineering Control Robotic Systems Signal Information Multimedia Processing Wireless Communications Networking
+The twin city home University Minnesota campus since
+Four additional campus Crookston Duluth Morris Rochester added since
+The faculty member included Nobel Laureates well number Guggenheim MacArthur Fellows
+The student body consists undergraduate student number notable alumnus including former Vice President Walter Mondale Super Bowl championship coach Tony Dungy
+The Computer Science department unique faculty multiple recipient Presidential Early Career Award Scientists Engineers CAREER Award winner
+The department also ranked top five Microsoft Academic Research data mining
+The current full time faculty member provide education undergraduate major graduate student
+Research area include Architectures Compiler Optimization Embedded Systems Data Mining Graphics Visualization Networks Robotics Artificial Intelligence Theoretical Foundations
+Located one China historical cultural city Zhejiang University founded
+As one oldest institution nation university ample opportunity help shape culture mind brightest student area
+There seven facility college graduate student PhD student undergraduate faculty member
+The Computer Science Department full time undergraduate studying one four department Computer Science Engineering Software Engineering Digital Media Network Technology Industrial Design
+Over course material English Chinese order promote international cooperation
+Zhejiang also offer Doctorate Program Program Computer Science Technology
+The graduate department comprised Computer Application Technology Computer Software Engineering Computer System Architecture well doctorate degree Digital Design Art master degree program Design Art
+Research area include Artificial Intelligence Computer Software Theory Computer System Structures Industry Design Computer Aided Design Computer Graphics
+The University Granada founded Cuesta del Hospicio Spain nearly year ago
+The city university expanded together center culture education
+Spread five different campus location nearly total student undergraduate making majority approximately
+There teaching faculty additional staff member
+These impressive number make University Grananda fourth largest Spain
+There two program available student interested Computer Science Department Computer Architecture Technology Department Computer Electronics Technology
+Both program provide various
+Granada also run multiple famous lab research project including Color Image Lab partner industry give student color imaging experience
+In University College London opened door men woman equally unique time
+The university continued progressive outlook leading number historical highlight
+The first operation anesthetic discovery five noble gas recently first treatment Hemophilia B part university academic excellence achievement
+Out university University College London Computer Science Department ranked first place Research Excellence Framework
+For undergraduate department offer three track BSc computer science MEng computer science MEng mathematical computation
+There track offered postgraduate student well number research degree
+With heavy emphasis cutting edge material school developed research group nine research center four interest group
+Located Kowloon Tong Hong Kong established University City University three Colleges four Schools College Business College Liberal Arts Social Sciences College Science Engineering School Creative Media School Energy Environment School Law School Veterinary Medicine
+There total student approximately staff member
+The Department Computer Science founded
+Students exposed subject Computer Architecture Software Engineering Distributed Databases Parallel Programming Internet Mobile Computing Networking
+Research focus include Multimedia Image Computing Computer Networks Distributed Systems Mobile Computing Algorithms Theory Information Security Artificial Intelligence Software Engineering Object Technology
+Consistently ranked among top university world since University British Columbia embraced innovative entrepreneurial perspective
+Appropriately British Columbia established Canada first Fair Trade campus
+With student faculty staff member networking opportunity endless
+Notable alumnus faculty include seven Nobel Laureates two Canadian Prime Ministers Olympic Medalists
+Established May Computer Science department one top three program Canada
+There faculty member program well undergraduate student graduate student fellow
+The department strong emphasis encouraging woman gender minority within computer science field
+Research interest include Imager Laboratory Graphics Visualization HCI Laboratory Computational Intelligence Sensory Motor Systems Laboratory Software Practices Laboratory
+Known independent national Roman Catholic research university Notre Dame founded priest Congregation Holy Cross
+There four undergraduate college research institute program
+The school pride pioneering research numerous success including forefront research wireless communication development formula synthetic rubber treatment leukemia Hodgkin disease technology
+Notre Dame School Engineering broken five department one department Computer Science
+There full time faculty member work closely student often collaborating project research
+Programs study include advanced computer architecture nanotechnology computer vision pattern recognition data mining machine learning operating system computer network computer security scientific computing
+The National University Singapore founded medical school attempt reach need local community
+The success school grew rapidly today encompasses three campus
+The undergraduate school student enrolled four graduate school student attendance
+Part success university attributed faculty teach personal experience field
+The School Computing established
+There total student department
+Research area broken Computer Science Information Systems
+Computer Science includes area Artificial Intelligence Media Security
+Information Systems includes Business Intelligence Electronic Social Commerce Healthcare Information Systems service innovation
+Both faculty student involved developing new software application
+Students encouraged develop prototype may commercial potential
+With world renowned reputation Shanghai University currently institution affiliated hospital
+The student body consists undergraduate postgraduate
+The faculty includes teacher
+Shanghai one first three university China offer study Computer Science
+The department formally established
+There five established research area Computer Science Theory Parallel Distributed Computing Intelligence Human Computer Interaction Cryptography Information Security Computer Applications
+According Assessments Ministry Education Graduate Education Development Center Computer Science Technology department ranked No
+China rose No
+
+The Microsoft Intelligent Computing Intelligent Systems Laboratory established September Shanghai Jiaotong University Microsoft Research Asia
+One oldest institution America Yale founded Connecticut trace root even back
+As war university Yale lengthy impressive academic history consistent billion endowment
+Yale first art museum campus first school fine art first intermural sport first university award PhDs
+The invention Frisbee attributed student Yale tossing Frisbie Pie plate named pastry company
+The University broken three major academic area Yale College Graduate School Arts Science Professional Schools
+The student body consists undergraduate student
+Alan Perlis came Yale early helped established computer science department
+The department offer five track undergraduate BS BA well three program integrated engineering department math department psychology department
+There two graduate level program MS PhD
+Research area include Artificial Intelligence Computer Graphics Computer Music Machine Learning Social Robotics
+The faculty student University Washington turning idea reality since
+From humble beginning UW three campus school college run full time faculty member
+The student body grown student undergraduate graduate testament academic excellence school
+There degree option across program student enroll
+Computer Science Engineering originally established graduate program
+The undergraduate program added program became department
+Continued growth development department led employment faculty member technical staff member including three MacArthur Fellows
+Research topic include Artificial Intelligence Big Data Robotics Security Privacy Ubiquitous Computing Wireless Sensor Systems
+Historically affiliated United Methodist Church Duke University established James Buchanan Duke
+The original school Trinity College founded expanded Duke University due family endowment
+Today undergraduate student member
+Duke Department Computer Science pride many successful collaboration participated interdepartmental industry leading company
+Research group studied algorithm artificial intelligence education
+Research initiative covered geometric computing memory system
+In addition interdisciplinary certificate program minor degree Computer Science Department offer doctorate degree
+Double major Department Electrical Computer Engineering encouraged
+Since University Colorado Boulder incredible view Rocky Mountains
+With top graduation rate Colorado currently student enrolled
+The smaller ratio provides welcoming atmosphere personalized educational experience
+The full time faculty includes nearly researcher contributed UC academic excellence
+The school ranked number world research scholarly impact
+The Computer Science department made great contribution school national research ranking
+From modeling climate change understanding social medium department strives study current research question apply best technological answer available
+Other research area include Artificial Intelligence Computational Biology Computing Systems Networking
+The department offer undergraduate graduate degree program
+The University Copenhagen four central campus area six faculty department research center making largest university Nordic country
+Over student attend class taught full time faculty staff member
+There program student select
+There eight Nobel Laureates associated Copenhagen
+The school pride diversity academic success research department
+The Department Computer Science offer undergraduate graduate doctoral level degree
+The
+computer science taught Danish language
+Since founding department grown staff member student attendance
+There main research group available Image Group Algorithms Programming Languages Human Centered Computing
+Located along coveted coast California University California Santa Barbara founded
+It one institution member prestigious Association American Universities
+The reputation academic excellence based work faculty member six Nobel Laureates
+Discoveries included world first nonpolar laser diode birthplace practical scanning microscope
+Over degree program offered UC Santa Barbara including Computer Science
+Starting relatively young department grown rapidly world technology
+research topic include Computer Science Education Diversity Machine Learning Data Mining Security Cryptography Social Computing Visual Computing Interaction
+The department offer
+program well Master Science Computer Science
+As one largest investment facility UK University Manchester surpassing expectation term research academic excellence
+According Research Excellence Framework school research program ranked world leading internationally excellent
+The hard work dedication student staff contributed Manchester top ranking
+There Nobel Prizes associated University
+With year service Department Computer Science Manchester oldest kind UK
+The foundation Computer Science Department laid Engineering Department development first digital storage device
+More recent research group focusing Informatics Imaging Sciences Machine Learning Optimization Text Mining
+Laboratories include lab Web Ergonomics lab Automation lab
+As eighth oldest college America birthplace college football Rutgers University exciting proud academic history
+Today undergraduate graduate student across school college
+The faculty member highly skilled nationally recognized include MacArthur Fellows Pulitzer Prize winner
+In total approximately faculty staff member
+Established Computer Science department offer Bachelor Doctoral level study
+Students taught experienced faculty member access recent technology numerous laboratory campus
+Interdisciplinary work encouraged dual major available
+The department five main research group Computer Security Computer Systems Artificial Intelligence Theory Computation Mathematical Methods
+Founded business man Houston Texas Rice University take leadership role research education
+Its smaller ratio allowed undergraduate graduate student personalized education experience
+There faculty member teach pursue research within school Architecture Continuing Studies Engineering Humanities Business Music Natural Sciences Social Sciences
+Under George Brown School Engineering student find Department Computer Science
+The department broken three area concentration
+Under Intelligence program student research bioinformatics computer graphic machine learning natural language processing robotics
+The Computer Engineering Systems program research system mobile computing network secure system
+And last Programming Languages Software Engineering specialization focus inexact computing parallel software programming language programming tool software engineering software verification
+KU Leuven founded Belgium Pope Martin V making one oldest largest renowned university Europe
+year rich academic history meet cutting edge research modern technology three major area study Humanities Social Sciences Technology Biomedical Sciences
+A civil engineering degree applied mathematics offered KU Leuven early
+This program gradually expanded Computer Science department
+Today department offer equivalent four Master level degree doctoral study
+The department personnel consists PhD student Master student staff member professor
+There seven major research group Distributed Secure Software Declarative Intelligence Interaction Combinatorial Optimization Decision Support Numerical Equations Software Numerical Approximation Linear Algebra Group Scientific Computing
+Within culture go back Ute Native American tribe University Utah take pride diversity innovation
+Founded University oldest largest state
+It well known creating startup company based student faculty research
+The success University attributed rapid growth development
+The student body grown undergraduate graduate choose degree program
+The School Computing hold excellence research education networking
+Though School Computing recently opened computer engineering research started
+There undergraduate graduate attendance
+Primary research area include Image Analysis Human Computer Interaction Parallel Computing Robotics Scientific Computing Visualization
+Major contribution student faculty include Sketchpad magnetic ink printing technology pioneering work computer animation digital music recording asynchronous circuit graphical user interface
+The first school teach scientific agriculture MSU strives provide modern education unique innovative way
+ranked MSU first nation graduate program elementary secondary education nuclear physic organizational psychology rehabilitation counseling
+MSU grown program undergraduate graduate professional study since founding
+The student body includes undergraduate student taught experienced faculty academic staff
+The Computer Science Department MSU strives improve national global concern modern technology
+To end student encouraged participate interdisciplinary project research
+Resources available include Biometrics Research Group Digital Evolution Laboratory Embodied Intelligence Laboratory Language Interaction Knowledge Discovery Laboratory Media Entertainment Technologies Laboratory
+With student acre land Texas A M University physically one largest school nation
+The A M abbreviation stood Agricultural Mechanical past however today letter kept tradition
+The University remains one six senior military college offer undergraduate degree graduate degree several professional degree
+Founded Computer Science Department enrolled student
+Experienced faculty member provide intellectual leadership include tenured professor research faculty ACM IEEE AAAS SIAM Fellows
+Research group focus Foundations Computing Systems Information Intelligent Systems Robotics Engineering Systems
+Multidisciplinary research area include Brain Networks Digital Humanities Emergency Informatics
+Noted first national comprehensive university Beijing China Peking University founded
+It oldest active base Chinese Communist Party
+There number notable Chinese alumnus including Lu Xun Mao Zedong Chen Duxiu two Nobel Prize winner Lee Yang Chen Ning
+There college broken department
+Acting major research institution China Peking research department center working progressive cutting edge topic
+The largest school Peking School Electronics Engineering Computer Science
+There four subsection Department Computer Science Technology Department Electronics Department Microelectronics Department Machine Intelligence
+There approximately faculty staff member student
+Key laboratory research area run school include Quantum Electronics Physical Electronics Computational Linguistics Digital Media Microelectronics Information Science
+The academic success prolific research Penn State consistent institution billion endowment
+Since founding school grown campus student body undergraduate graduate
+Degree program offered include associate program bachelor program graduate program
+One largest prominent degree program Penn School Electrical Engineering Computer Science
+The department home faculty member undergraduate student graduate student
+Research group focus applying technology challenge presented healthcare energy environment information technology security
+Other area study include electronic optical material device sensor power system remote sensing space system processing computer vision control communication theory security distributed system machine learning data science
+Founded University Delaware made great contribution history including education three signer Declaration Independence
+The university today encompasses seven college research center
+There program offered student
+The distinguished faculty member include Nobel Prize winner Guggenheim Fulbright fellow member National Academy Sciences
+The Department Computer Information Sciences offer three undergraduate track BS computer science BA computer science BS information system
+There four graduate track offered MS computer science MS software engineering MS biology PhD computer science
+The core research area cover Artificial Intelligence Bioinformatics Computer Graphics Computer Networks Computer Vision High Performance Computing Natural Language Processing Information Retrieval Software Engineering Theory Computation
+Xian Jiao oldest institution higher education China
+Originally founded Nanyang College name school formally changed
+As comprehensive research university scientific focus school foster devotion learning respecting truth
+The school especially known strength engineering public health technology
+Xian Jiao Tong one first university China embrace online education
+There branch learning across college school eight school undergraduate affiliated teaching hospital
+The dedicated performance teacher student make Xian Jiao top research university today
+Instruction international degree English
+The Huazhong University Science Technology result merging three institution former Huazhong University Science Technology Tongji Medical University Wuhan Urban Construction Institute
+HUST formally opened door May product joint collaboration
+major discipline taught engineering medicine management science philosophy economics law education literature history agriculture
+The staff includes professor associate professor recipient National Science Fund Distinguished Young Scholars award
+The student body consists undergraduate graduate doctoral candidate
+The School Computer Science Technology number distinguished faculty member key laboratory dedicated research education student
+Pivotal area study include storage technology system parallel distributed computing database theory modern technology digital medium networking system
+The school particularly noted work computer architecture
+Known City Ice due long winter short summer Harbin China home main campus Harbin Institute Technology
+The additional two campus span country north south
+Focused perseverance excellent research since founding Harbin Institute cover discipline including philosophy economics law education literature history science engineering management science art
+HIT well known research science engineering ranked world
+In fact HIT one ten university world designed built launched satellite
+The school Science Technology founded since established research institute
+The highly experienced faculty member driving force behind HIT research initiative
+There full time alone including professor associate professor scientist
+Canada leading comprehensive university founded
+There three distinctive campus charm
+Today student participate numerous course taught faculty staff member
+The academic course run trimester schedule
+The alumnus found networking worldwide
+Simon Fraser University first Canadian member National Collegiate Athletic Association
+The School Computing Science School Engineering Science School Mechatronic Systems Engineering run Faculty Applied Sciences
+There approximately undergraduate student graduate student participating Computer Science program
+The study computer science started though department established
+In department first establish Dual Degree Cohort Program Zhejiang University China
+Hong Kong Polytech started Government Trade School first kind established Hong Kong
+The name school changed WWII
+Today total student faculty staff member
+As skilled research community number honor awarded Hong Kong Polytech
+ranked Polytech engineering research discipline Hong Kong world
+The Department Computer Science found within School Engineering
+The faculty member Engineering department recognized excellent skill knowledge Computer Science National Taiwan University Ranking
+There dozen lab research group participated success department include Biometrics Research Center Game Lab Mobile Cloud Computing Lab Smart Sensing Lab Visual Analytics Lab
+In Netherlands saw founding Eindhoven University Technology
+There Bachelor program Master program design program offered
+The student body consists approximately undergraduate master student design program student doctoral candidate
+The school take pride focus three strategic area research Energy Health Smart Mobility
+Each area focus technology help improve life area
+Energy example research technology improving pollution Smart Mobility focus technology improve safety travel
+A number progressive research group center strive excellence progress
+These group include High Tech Systems Center COBRA Research Institute Research Center Integrated Materials Technology Intelligent Lighting Institute Eindhoven Multiscale Institute
+As one two oldest university China NCTU proud history academic achievement
+It first university China establish electrical engineering program computer engineering program
+NCTU also educated first Ph
+engineering Taiwan established first national research center dubbed Microelectronics Information Systems Research Center
+The College Computer Science equally impressive history research accomplishment
+The college broken six academic area Department Computer Science Institute Computer Science Engineering Institute Network Engineering Institute Multimedia Engineering Undergraduate Honors Program Electronic Engineering Computer Science International Graduate Program Electronic Engineering Computer Science
+In first Autonomous Land Vehicle Computer Vision developed Taiwan
+Other achievement include first Chinese keyboard first automatic Chinese seal identification system first optical fiber network student dorm
+Xidian University also known University Electronic Science Technology Xi located historical Xi capital Shaanxi province China
+The primary focus University education research
+The school particularly well known research achievement Information Technology
+The University organized school including Telecommunications Engineering Computer Science Technology Software Microelectronics
+There different laboratory institute research center including Laboratory Radar Signal Processing Laboratory Antennas Microwave Technology Institute Multimedia Institute Computer Peripherals
+Xidian one university national demonstration School Software one university IC Talents Training Center
+There student including Ph
+student Master student
+The faculty includes academic researcher teaching faculty member
+Established Jaen Spain University Jaen public institution two additional satellite campus
+Nevertheless young school ancient tie century Pontifical school century University Baeza
+The school divided nine different center academic
+There three facility Experimental Science Social Sciences Law Humanities Education
+In addition three academic college two technical college one research center
+The Technical Colleges include Jaen Advanced Technical College Linares Advanced Technical College
+Under Jaen Advanced Technical College student may choose number undergraduate track including Computer Engineering Statistics Computer Engineering Management
+More degree offered nine center including undergraduate graduate doctoral level program
+Located Saudi Arabia KAUST recently celebrated anniversary
+Though young institution KAUST already made great stride research development
+In Visual Computing Center opened saw opening Water Desalination Reuse Center Catalysis Center recently Clean Combustion Research Center inaugurated
+The ideal location campus Red Sea inspired aquatic research opening Red Sea Research Center
+Expedition Red Sea started September
+KAUST focus graduate level education research
+The main area study Biological Environmental Science Engineering Computer Electrical Mathematical Science Engineering Physical Science Engineering
+KAUST home Shaheen II one world powerful supercomputer well CORNEA virtual reality facility
+This program allows researcher turn data interactive structure
+Johns Hopkins philanthropist entrepreneur abolitionist set aside seven million dollar time world largest donation founding hospital training college orphanage university
+Thus Johns Hopkins University opened door goal providing world class education
+The globally focused intellectual diversity school still seen today among student winner Nobel Prize
+Research networking found country
+Among program study Department Computer Science within Whiting School Engineering
+Both graduate undergraduate study offered
+The faculty member multidisciplinary collaborate department Electrical Mechanical Biomedical Engineering
+Areas study research include Computational Biology Medicine Machine Learning Data Intensive Computing Robotics Vision Graphics Theory Programming Languages
+The University Pennsylvania founded Benjamin Franklin
+Though size university grown considerably four undergraduate school school focus school continues intellectual rigor founder
+UPenn unique among Ivy League school united single campus
+The faculty member highly experienced recognized globally distinguished eight MacArthur Fellows four Nobel Prize winner five Pulitzer Prize winner
+Under School Engineering Applied Science student find Department Computer Information Science
+The history department traced back development world first electronic digital computer
+With research development renowned professor department known birth place modern computer
+research continues done area Intelligent Systems Information Systems Hardware Software Systems Networks Theory
+The University Wisconsin founded vision future dedication scholarly achievement
+Highlights institution history include discovery vitamin A vitamin B discovery method iodize salt recently first genetically reprogrammed human skin cell indistinguishable embryonic stem cell
+With increased demand school UW expanded include school college faculty staff
+The student body includes undergraduate graduate
+With year experience research education Department Computer Science University Wisconsin one reputable United States
+As department adapted growth technology industry offer student
+In online enrollment began first Massive Open Online Courses initiative launched
+The department known world leading research computer architecture database system distributed grid computing nonlinear optimization
+As sixth oldest English speaking university world University Edinburgh impressive history accolade academic achievement
+It member Russell Group League European Research Universities
+After Cambridge Oxford Edinburgh third largest endowment United Kingdom
+The academic program organized three college different
+With student member number notable personnel associated school including Nobel Prize winner one Pulitzer Prize winner three Prime Ministers
+The department Computer Science one largest Science Engineering Faculty
+The Department Artificial Intelligence Centre Cognitive Science Department Computer Science combined form School Informatics
+Research area School well known include Artificial Intelligence Computational Linguistics Systems Biology Mathematical Logic Theoretical Computer Science
+Founded McGill University ranked first Canada among university ten consecutive year
+There program study four affiliated teaching hospital
+A tradition academic excellence innovation led creation Plexiglas artificial blood cell progress field epigenetics
+The faculty alumnus included Noble Laureates
+The School Computer Science continues progressive manner school large
+The department faculty member Master student PhD student
+Undergraduate degree student pursue study Computer Science Faculty Science
+There numerous research area covered including Algorithmic Game Theory Breast Cancer Computer Vision Currency Theory Pattern Recognition Probabilistic Systems Quantum Computing
+From University College Bristol educating highly talented student
+Since outstanding teaching research continues name University Bristol
+The superb faculty include six major division Art Biomedical Sciences Engineering Health Sciences Science Social Sciences Law
+These faculty organized study
+Noble Laureates associated school
+The Computer Science Department academic staff research staff support staff known teaching excellence international research
+Interests within department include microprocessor design biological computing wearable computer
+The undergraduate graduate PhD student encouraged confront intellectual challenge creativity
+Leading research area include High Performance Computing Cryptography Artificial Intelligence Software Development Systems Design Animation
+Albert Einstein Martin Buber Chaim Nahman Bialik Chaim Weizmann among founder Hebrew University Jerusalem
+Though officially founded school open
+The academic department organized six campus seven faculty school
+Of student senior faculty member eight Nobel Prize winner associated school
+Striving excellence integrity research University Jerusalem also aim preserve Jewish culture intellectual tradition
+The Rachel Selim Benin School Computer Science Engineering offer eight track undergraduate including combined program Masters Business Administration
+There three track offered Master student Computer Science Computer Science Computational Biology Applied Physics
+Doctoral level study also available
+Research area include Computer Science Engineering Bioengineering Applied Physics
+Founded King William I Orange Ghent University developed leading public research university Belgium
+The school structured faculty eight administrative department faculty department academic course
+The faculty cover discipline Art Philosophy Law Sciences Medicine Health Engineering Architecture Economics Business Veterinary Medicine Psychology Pharmaceuticals Political Social Sciences
+There student enrolled faculty member employee
+The Department Applied Mathematics Computer Science curriculum constructed faculty Sciences faculty Applied Sciences together
+The approach allows broader range research educational study
+Research topic include Communication Technology Application Software Program Development Numerical Formal Informatics
+Brown University coeducational Ivy League institution located historic Providence Rhode Island
+Founded Brown year academic excellence progress
+Today undergraduate graduate student medical school student
+Students may enroll undergraduate concentration doctoral program master program
+Over faculty member dedicated cutting edge research education
+With focus innovation research education since Brown Department Computer Science continuously produced prominent contribution field
+As multidisciplinary program research program restrained traditional boundary
+One example work produced Center Computational Molecular Biology
+Research area include Cloud Computing Computational Geometry Computational Neuroscience Educational Technology Electronic Commerce Verification Reliable Systems Virtual Reality
+Attributed creation popular sport drink Gatorade University Florida state oldest comprehensive university
+Founded academic department organized college research center
+Of prominent faculty member Eminent Scholar chair two Pulitzer Prize winner
+The school enrolls approximately per year
+The Computer Information Science Engineering Department comprised academic faculty member including two Fulbright Scholars NSF Career Awards four IEEE Fellows
+There five undergraduate program Master program doctoral program
+Research done Computer Graphics Modeling Art Computer Systems Database Information Systems Algorithms Intelligent Systems Computer Vision Networks Security
+In Daniel Sieff Research Institute founded became forerunner Weizmann Institute Science
+With dedication scientific advancement Institute seen number world leading achievement amniocentesis diamond cutting affinity chromatography living polymerization
+There five faculty Mathematics Computer Science Physics Chemistry Biochemistry Biology organized department one graduate school interdisciplinary center
+There faculty staff researcher research group contributed success Institution
+The Faculty Mathematics Computer Science established one first kind Israel
+The facility three main research center The Arthur Rochelle Belfer Institute Mathematics Computer Science The Moross Laboratory Vision Research Robotics Research Foundations Computer Science center
+Graduate study offered four area Applied Mathematics Bioinformatics Computer Science Mathematics
+The program undergraduate student organized two area The Ulpana de Shalit program International Science School
+One Australia leading research university University New South Wales founded
+The university established response demand WWII development science technology
+The school started student enrolled educates bright mind
+The academic department divided eight faculty Art Design Arts Social Sciences Built Environment Business School Engineering Law Medicine Science
+Under Faculty Engineering student enroll School Computer Science
+Founded School Computer Science become one largest Australia member National ICT Australia group
+Faculty member field focus numerous area including Artificial Intelligence Databases Embedded Operating Systems Networks Programming Languages Service Oriented Computing Software Engineering Theory
+Located Alberta Canada University Alberta look high academic achievement focused research
+The University teaching research agreement nearly country
+Founded academic department organized program faculty four campus
+The research faculty member accredited numerous achievement including development sonar synthesization sucrose first successful surgery
+The Computer Science Department University Alberta one oldest largest department Canada
+Student enrollment department includes undergraduate graduate fellow
+The faculty includes professor administrative staff
+Research opportunity include Artificial Intelligence Database Systems Computer Games Machine Learning Robotics Interfaces Bioinformatics Communication Networks Computer Graphics Computer Vision
+In Henry Robinson Hartley left entire estate people Southampton thus Hartley Institute founded
+With dedication advancement science education school grew rapidly contains academic unit
+There student including undergraduate postgraduate
+With much forethought field science university one first open Department Electronics first use digital resource led creation distance learning course
+The Electronics Computer Science Department Southampton awarded Athena SWAN Bronze Award effort addressing gender inequality science engineering
+With eight research group researcher department made historic stride including creation world first optical fiber
+The current student body includes undergraduate graduate
+The Technical University Denmark ranked one premier technical university Europe
+It continues tradition cutting edge research started Ørsted
+Known father electromagnetism Ørsted founded University
+Today school offer BEng program BSc program MSc program joint international MSc program PhD program
+Over student enrolled academic year
+Fluent Danish required program
+The school run multiple research center
+These center include Center Biological Sequence Analysis conduct cutting edge research bioinformatics well Center Information Communication Technologies
+Sapienza University one oldest institution world
+rank Sapienza one reputable Europe
+The school founded Pope Boniface VIII influential role history Italy
+The academic course structured department faculty
+The faculty member include professor researcher
+There library Museums three affiliated hospital
+Students may choose Bachelor Master Programs PhD course professional course
+The Department Computer Science founded
+The full range educational degree offered internship computer science encouraged enrolled student
+Research area department cover Artificial Intelligence Combinatorics Computer Networks Security Information Theory
+Hailed one greatest academic achievement history China USTC founded Beijing Chinese Academy Sciences
+With heavy emphasis high quality education research USTC able meet many milestone
+It first university China establish graduate school construct first major science facility Hefei Synchrotron Radiation Facility
+This one two national laboratory operating China
+The second Hefei National Laboratory Physical Sciences Microscale also operated USTC
+The School Computer Science Technology founded year university large
+The elite faculty member responsible education approximately undergraduate student Master student doctoral candidate
+The dedicated research brought university forefront many academic field including quantum manipulation nanotechnology superconductivity speech processing fire science life science
+As acclaimed research institute college University Illinois Chicago largest university area
+The school established Medical Center campus comprehensive Chicago Circle campus joined together
+Dedicated higher education distribution knowledge university offer bachelor program master program doctorate program
+In University Illinois ranked best world among university le year old Times Higher Education
+The Department Computer Science offer full range degree program
+There four main research group Machine Learning Programming Languages Systems Group Theoretical Computer Science
+There additional comprehensive research project operate within department collaboratively institution
+Topics covered include ASCI Flash Diderot FEniCS Globus Manticore Standard ML New Jersey
+Founded officially opened University Hong Kong oldest tertiary education institution city
+The academic department organized faculty Architecture Arts Business Economics Dentistry Education Engineering Law Medicine Science Social Sciences
+In HKU medical researcher became first world identify coronavirus caused Severe Acute Respiratory Syndrome
+The first computer installed late established Department Computer Science
+The department today state art equipment including high performance computing grid system server connected Ethernet switch DDR InfiniBand switch QDR InfiniBand switch
+There eight student computing laboratory open research study
+Research group include Data Software Engineering HCI Graphics Computer Vision Information Security Forensics Systems Networking Algorithms Bioinformatics
+In University Waterloo founded opened student enrolled
+From humble beginning University become world leading research institution
+There undergraduate student graduate student studying six major faculty Applied Health Sciences Arts Engineering Environment Math Science
+All student expect high quality education faculty member
+The David Cheriton School Computer Science originated Department Applied Analysis Computer Science founded
+Today superb faculty staff member dedicated education research
+With graduate undergraduate student department become largest computer science research center Canada
+Research accomplishment department include development WATFOR WATFIV compiler development Maple symbolic computation system digitization Oxford English Dictionary
+The Korea Advanced Institute Science Technology KAIST established
+Founded global research university school structured six college two school
+There also three affiliated school Korea Institute Advanced Study KIAS National NanoFab Center NNFC Korea Science Academy KSA
+The academic system flexible allows undergraduate student switch major time
+There student faculty member researcher KAIST
+The school ranked third best university age Times Higher Education
+The faculty member Computer Science department credited development Dipole Coil Resonant System DCRS result research wireless power transfer
+In center fourth largest city student find oasis world class education research University Houston
+Much diversity creativity found student participate academic program
+For undergraduate major minor graduate student Master program doctoral program choose
+World leading research performed department unique research center laboratory
+Founded Computer Science Department University Houston one first kind established country
+The department highly trained Faculty member teach class Bachelor Science Master Science Doctor Philosophy degree
+In addition teaching class faculty member also participate cutting edge research eight different area Biomedical Informatics Imaging Database Systems Data Mining Machine Learning High Performance Computing Human Computer Interaction Graphics Operating Systems Networking Software Engineering Theory Computer Security
+In northeast China coastal city Dalian student find renowned Dalian University Technology
+DUT founded comprehensive university science technology
+The main concentration engineering though concentration applied science economic management science also popular
+DUT structured different school department including Graduate School School Chemical Engineering School Software School Humanities Social Sciences
+Other discipline taught Chemical Civil Mechanical Environmental Engineering
+Under School Electronic Information Engineering student find Department Computer Science Engineering Department Electronic Engineering Department Automation Institute Microelectronics
+As one oldest comprehensive national university modern China Wuhan University trace history back founding Ziqiang Institute
+The school gradually expanded six college college liberal art law science engineering agriculture medicine
+In year Wuhan announced expansion amalgamation Wuhan University Hydraulic Electric Engineering Wuhan Technical University Surveying Mapping Hubei Medical University
+The current academic program include undergraduate track Master track doctoral track
+The Computer School Wuhan University go back marking one oldest computer science department China
+The school offer seven doctoral program master program
+There highly trained faculty staff member
+The student body consists undergraduate graduate
+Located Newark New Jersey Newark Technical School founded
+The first year saw student enroll
+With hard work dedication school developed significantly humble beginning industrial age
+Newark Technical School renamed New Jersey Institute Technology
+Today graduate undergraduate student tenured tenure track faculty member
+NJIT structured six specialized school offer bachelor master doctoral degree program
+Over enrolled student studying computer science making largest popular degree campus
+Founded College Computing Sciences offer full range degree program Bachelors PhD including new interdisciplinary program
+Research topic include Algorithms Bioinformatics Image Processing Pervasive Mobile Computing Big Data
+Laboratories include Scheduling Combinatorial Optimization lab Cluster lab Computer Vision lab
+sponsored school sponsored school sponsored school Copyright
+
+Find Degrees Subject Learn undergraduate degree program computer science branch engineering deal study computer structure process
+Read academic option four university find informative table list university offer undergraduate computer science program
+An error occurred trying load video
+Try refreshing page contact customer support
+Undergraduate program found many top university including Brown University Georgia Institute Technology Stanford University Yale University
+The four school featured include two Ivy League institution well public private school
+Each four school offer Bachelor Science Bachelor Arts Computer Science closely related major joint degree program certificate found individual school
+All four school ranked among top national university according designated Atlanta seventh best public school country well among national university overall
+Once enrolled student earn Bachelor Science computer science computational medium latter artistic focus offer course Ivan Allen College Liberal Arts
+As Stanford CA ranked fifth list national university
+The Department Computer Science part College Engineering ranked second among undergraduate computer engineering program designated Undergraduate offering include
+Computer Science three interdisciplinary computer science program lead certificate mathematical computational science computer system engineering symbolic system
+Most course computer science undergraduate offered Gates Computer Science Building
+An Ivy League institution New Haven CT placed third among national university according
+Once admitted Department Computer Science student pursue Bachelor Arts Bachelor Science computer science may also enroll combined Bachelor Science program
+Topics instruction include algorithm analysis design system programming discrete mathematics computer architecture data structure
+Additional program feature include collaborative partnership mathematics electrical engineering psychology department
+Another Ivy League institution placed among national university according
+Brown located Providence RI
+Undergraduate student involved teaching research may extend study year complete master degree
+Majors available computer science applied math computer science computational biology computer science economics math computer science
+Other top school include following Options student considering undergraduate program one nation top school include different concentration research opportunity dual major
+Enter zip Students enjoy computer technology computer programming give career boost exploring graduate degree Computer science program pursued associate bachelor master degree level
+These program typically Get info online program computer science
+Read program requirement course topic degree level well Few school Virginia Beach area top ranking computer science program
+Read find
+Source Bureau Labor Statistics The listing may include sponsored content popular choice among user
+An admission advisor school provide info School Info Program Info Programs Get Started The Art Institutes What highest level education
+School Info Program Info Online Programs Get Started Capella University What highest level education completed
+School Info Program Info Online Programs Get Started Utica College School Info Program Info Online Programs Get Started Grand Canyon University What highest level education
+School Info Program Info Online Programs Get Started Strayer University What highest level education completed
+School Info Program Info Online Programs Get Started Herzing University What highest level education
+School Info Program Info Online Programs Get Started Full Sail University What highest level education
+School Info Program Info Online Programs Get Started Keiser University What highest level education
+School Info Program Info Online Programs Get Started City University Seattle What highest level education completed
+School Info Program Info Online Programs Get Started Colorado State University Global What highest level education
+The listing may include sponsored content popular choice among user
+What highest level education
+What highest level education completed
+What highest level education
+What highest level education completed
+What highest level education
+What highest level education
+What highest level education
+What highest level education completed
+What highest level education
+What highest Help u match school offer program related Computer Sciences copyright
+All trademark copyright property respective owner
+All right reserved
+
+Finding best school An online Bachelor Computer Science degree open way many highly rewarding career
+Computers digital technology impact every industry creating demand computer science professional
+Graduates Bachelor degree Computer Science qualify rewarding job computer system analyst network administrator database administrator computer programmer software developer
+Every business sector requires computer science graduate
+Computer science professional work technology company find employment manufacturing finance insurance government educational service healthcare much
+Computer science includes many area competence specialization including data mining data security artificial intelligence mobile system development database system social network nanotechnology computer graphic game design biotechnology animation virtual reality etc
+Many computer science professional enhance marketability acquiring industry certification addition college university degree
+Certification program provide training specific computer skill product programming language
+Tech company Microsoft Cisco provide popular highly marketable certification
+Unlike computer engineering focus interaction computer hardware software computer science focus computational system broadly especially theory design development application
+If computer engineering root electrical engineering look nut bolt make computer work
+Computer science contrast tends look bigger picture identifying computer u
+Students Bachelor Computer Science degree program study programming language operating system analyze algorithm data structure learn build computational tool allow u solve technological problem increasingly confront u
+Computer science degree program typically allow student select area concentration computer networking information system computer security game programming development data knowledge engineering mainframe computing software development
+We selected degree program based quality program type course offered faculty strength well school award ranking reputation
+The motto
+Here The value ranking list school degree program depends methodologically sound assessment school characteristic especially insofar objectively measured
+A college university complex entity numerous factor consider distilling place meaningful comparison made form defensible ranking list becomes part science part art
+To meet thereby provide useful insightful educational ranking six considering online school
+The major metric quality rank expanded detailed consideration weight listed Because student tend review variety information choosing school weight student give one criterion vary
+For instance enough offer carefully constructed ranking great school many expensive difficult get
+To better serve need prospective student therefore increasingly offering help better use ranking find school match specific need
+These supplement ranking criterion include Get best ranking AND get suit personal need
+That advantage
+If question ranking methodology
+For broader account ranking methodology especially relates underlying educational philosophy ranking article look beyond academic excellence factor return investment incidental benefit see article Reputation school degree program least part gauged ranking educational ranking company
+At keep track social peer validation For information college university look especially
+Insofar salary inflation data relevant ranking look
+Finally nothing beat contacting school degree program directly researcher often result entry article considered belonging citation
+The University Florida public research university established offer hundred program leading undergraduate graduate including doctoral professional degree
+A member State University System Florida University Florida among largest university state enrollment student
+The University Florida College Liberal Arts Sciences offer online Bachelor Science Computer Science degree program provides student strong liberal art foundation along computer science knowledge
+The degree program prepares graduate career software engineer researcher computer system analyst programmer
+The online BS Computer Science degree program includes following course Students also must complete senior project
+The University Florida regionally accredited
+Oregon State University public research university founded offer program leading undergraduate graduate including doctoral degree dozen college school
+Among largest university state Oregon State University enrolls student
+Oregon State University offer online Bachelor Computer Science degree School Electrical Engineering Computer Science Ecampus
+Designed already hold bachelor degree another field curriculum focus software engineering programming fundamental computer system user interface
+Depending bachelor degree student already hold program prepares graduate career bioinformatics quantitative analysis user interface design smart energy system design multimedia storytelling
+Students complete program fully online one four year
+The online Bachelor Computer Science degree program includes following course topic Oregon State University regionally accredited
+Florida State University public research university founded enrolls student
+A member State University System Florida Florida State University offer program study leading undergraduate graduate professional degree across college facility lab center institute
+Through College Arts Sciences Florida State University provides online Bachelor Arts Computer Science online Bachelor Science Computer Science degree
+Both degree program allow student develop competency database structure operating system computer organization
+Students also develop proficiency programming several language Assembly Language
+The online Bachelor Computer Science program include following course All student must complete minor however Bachelor Science curriculum includes embedded collateral minor mathematics physical science
+Florida State University regionally accredited
+The Computing Accreditation Commission ABET also provides accreditation university Bachelor Science Computer Science program
+The University Illinois Springfield public university established enrollment student
+A member University Illinois system University Illinois Springfield offer undergraduate graduate degree program well Doctorate Public Administration
+Offered Department Computer Science University Illinois Springfield Bachelor Science Computer Science online degree provides student understanding core theory fundamental skill computer science
+The curriculum also focus practice technique along theoretical foundation
+Students emphasize system security information assurance software engineering
+The online computer science degree program prepares graduate career business government education industry well graduate study computer science
+Students must successfully complete credit hour obtain online Computer Science Bachelor degree
+The degree program feature hour core requirement Students also must complete capstone course
+The University Illinois Springfield regionally accredited
+Old Dominion University public research university founded enrolls student boast alumnus worldwide
+Old Dominion University offer undergraduate graduate degree program
+Old Dominion University offer online Bachelor Science Computer Science degree completion program offered ODU Online College Sciences Department Computer Science
+The program feature theoretical basis strong laboratory component help student understand apply education problem
+The mathematically scientifically intensive program prepares graduate career field web application programming training project management software engineering network administration database development
+Students must successfully complete credit hour obtain online Bachelor Computer Science degree
+The degree program includes following course Old Dominion University regionally accredited
+Regis University private Roman Catholic university founded enrolls student
+A member Association Jesuit Colleges Universities Regis University offer host undergraduate graduate degree four college College Health Professions College Professional Studies Regis College College Computer Information Sciences
+Offered College Computer Information Sciences Regis University Bachelor Science Computer Science online degree program prepares student apply knowledge mathematics computing analyze problem identify computing requirement needed solution design implement evaluate system communicate effectively
+The curriculum feature balance practice theory focus theoretical foundation limitation computation
+Students also learn use multiple programming language platform paradigm designing computational solution
+The online Computer Science Bachelor degree program includes following course Regis University regionally accredited
+The Computing Accreditation Commission ABET also provides accreditation university Bachelor Science Computer Science degree program
+Dakota State University public university founded enrolls student
+Dakota State University offer host undergraduate master degree program well doctoral degree Cyber Security Information Systems
+Dakota State University online Bachelor Science Computer Science degree help student master computer foundation latest application tool
+Students also develop knowledge tool vision build application system
+The computer science degree program prepares graduate career software engineer software developer penetration tester senior system administrator
+The online BS Computer Science degree program includes following course Dakota State University regionally accredited
+Lamar University public university founded enrolls nearly student
+A member Texas State University System Lamar University offer almost undergraduate master eight doctoral degree program seven college
+Lamar University Bachelor Science Computer Science online degree program emphasizes data structure programming language information system
+Students also learn theory programming language application computer architecture computer science
+The degree program prepares graduate career computer system analyst web developer IT manager computer programmer well graduate study
+The online Bachelor degree Computer Science includes following course The university also requires student take Educational Testing Service ETS computer science field exam
+Lamar University regionally accredited
+Lewis University private Lasallian Roman Catholic university founded enrolls student
+Lewis University offer undergraduate graduate accelerated program including education nursing business
+Lewis University accelerated online Bachelor Arts Computer Science degree program focus skill programming language networking securing data
+Designed student least semester hour transferable credit student learn skill implement artificial intelligence application develop simulation mobile apps
+The online BA Computer Science degree prepares graduate career software developer security engineer technical lead data scientist network architect
+Lewis University offer course
+Students must complete total credit hour including major credit Students also must complete Capstone Sequence
+Lewis University regionally accredited
+Regent University private Christian research university founded offer course study leading host undergraduate graduate including doctoral degree eight academic school
+Regent University enrolls student
+Regent University online Bachelor Science Computer Science degree program allows student analyze design develop computing system networking infrastructure understand programming language apply logic mathematics verify solution computer system Christian worldview
+The program also explores social ethical challenge within field
+The Bachelor Computer Science program prepares graduate career video game programming system analysis computer information security software development
+The online BS Computer Science degree program includes credit computer science course Regent University regionally accredited
+Mercy College private liberal art college established enrolls student
+Mercy College offer undergraduate graduate degree program five school Education Business Liberal Arts Social Behavioral Sciences Health Natural Sciences
+Mercy College offer online Bachelor Science Computer Science School Liberal Arts
+The program help student develop programming skill well knowledge software engineering computer networking operating system
+The Computer Science degree program prepares graduate career help desk specialist software engineer network administrator game programmer
+Students complete degree program four year
+The online Bachelor Computer Science feature course All student also must complete capstone project
+Mercy College regionally accredited
+Troy University public university founded enrolls student boast alumnus worldwide
+Troy University offer nearly program leading bachelor master degree well doctorate Sport Management Family Nurse Practitioner Clinical Nurse Specialist
+Troy University offer online Bachelor Science Applied Computer Science Major eTroy College Arts Sciences
+The Computer Science degree program emphasizes programming analysis design development
+The program also allows student analyze design implement complex program
+Students must complete hour major course Troy University regionally accredited
+Colorado Technical University university founded enrolls student
+A subsidiary Career Education Colorado Technical University offer host undergraduate graduate including doctoral degree primarily technology business management
+Colorado Technical University online Bachelor Science Computer Science degree allows student examine computer architecture implement technique software engineering demonstrate use technical communication
+The curriculum also includes component system security project management
+The Bachelor Computer Science degree program prepares graduate career web developer software engineer software developer system engineer
+The online Bachelor Computer Science degree program includes following course Colorado Technical University regionally accredited
+The University Maryland University College public university founded enrolls student worldwide among world largest distance learning institution
+A member University System Maryland University Maryland University College offer program leading host bachelor master doctoral degree certificate
+The University Maryland University College online Bachelor Computer Science degree program allows student analyze compare algorithm operation system programming language well develop secure technical solution networking infrastructure computing system
+Students also explore theory math science behind modern computing
+The online Computer Science degree program prepares graduate career application software designer software architect engineer system analyst system engineer
+The online Bachelor Computer Science degree program includes following major course The University Maryland University College regionally accredited
+Park University private institution higher education established enrolls student
+Park University offer program leading host associate bachelor master degree well undergraduate graduate certificate
+Park University online Bachelor Science Information Computer Science degree program show student identify information technology appropriate specific organizational context
+The program also help student develop effective communication skill
+The Information Computer Science degree program prepares graduate range career field software engineering networking data management well graduate study
+Students choose four specialty area tailor degree specific career goal interest Software Engineering Computer Science Networking Data Management
+To earn Bachelor Information Computer Science degree student must complete credit core course Park University regionally accredited
+Franklin University private university founded enrolls nearly student
+Franklin University offer host associate bachelor master degree program including joint bachelor science master science degree well certificate program
+Franklin University Bachelor Computer Science online degree program allows student investigate design ass create solution
+Through coursework student gain knowledge widely used language build reusable industrial software component
+The Computer Science degree program prepares graduate career software architect computer programmer database administrator enterprise system developer
+The online Computer Science degree includes hour major area Students also must complete computer science practicum
+Franklin University regionally accredited
+National University private institution higher education founded enrolls student
+Among largest higher education institution country National University offer undergraduate graduate degree well doctoral degree nursing certificate program teaching credential six college school
+National University online Bachelor Science Computer Science degree emphasizes strong technical background
+The curriculum feature course mathematics natural science statistic along operating system algorithm computer communication network
+Programming assignment complement program academic foundation prepares student career computer industry advanced study computer science
+The online Bachelor degree Computer Science includes unit major core course National University regionally accredited
+Salem International University private university founded enrolls student
+Salem International University offer host undergraduate graduate degree option including criminal justice education nursing
+Salem International University online Bachelor Science Computer Science Software Development Specialization degree program allows student develop software project plan perform programming
+Students learn implement data structure well develop test maintain software project
+The Software Development Specialization prepares graduate career system management software programming application development quality assurance graduate study computer science
+The accelerated program allows student earn degree month
+The university offer curriculum online student
+The online Bachelor Computer Science program Software Development Specialization includes following course Students also must complete capstone project
+Salem International University regionally accredited
+Rasmussen College private college founded offer host associate bachelor degree program well certificate diploma seven school
+Rasmussen College enrolls student
+Offered School Technology Rasmussen College online Bachelor Computer Science degree provides student foundation analytics well mobile cloud computing
+Designed prepare graduate career software development curriculum focus learning distributed database cloud
+Students specialize Microsoft Universal Windows Apple iOS mobile application development
+Rasmussen College offer program Flex Choice option allows student combine course earn degree little month
+The online Bachelor Computer Science degree program includes following course Students also must complete Computer Science Capstone Course
+Rasmussen College Accredited
+Baker College private career college enrolls student
+Baker College offer program leading undergraduate graduate including doctoral degree certificate host academic area nursing interior design automotive service technology
+Baker College online Bachelor Computer Science degree program feature training experience classwork
+Students develop skill internet communication software development database network administration along foundation computer science
+The Computer Science degree program prepares graduate career computer analyst computer application engineer database administer
+The online Bachelor Computer Science degree program includes following course Baker College regionally accredited
+sponsored school sponsored school sponsored school Copyright
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R R null null null R R R true endobj obj R endobj obj R endobj obj R R R R endobj obj R stream B F wg Ë ÒÌ endstream endobj obj endobj obj R R R R R R R R R R R R R R R R R R R endobj obj Bold R endobj obj Bold R endobj obj endobj obj R endobj obj R endobj obj endobj obj endobj obj R stream V µ þìXµ Åßÿ Á Ò q Xo F wB tÇ hþ On j R rnfl ìÀí zÐøåK Üó ñþÄg ã endstream endobj obj R endobj obj R endobj obj endobj obj R stream Ïèå jæÌ W ÚÛ LÔ p Ó ïVVU ã
+ã oä äuéuPTè är endstream endobj obj BoldItalic R endobj obj BoldItalic R endobj obj endobj obj R stream ßÌp Þ wË ËÆÄ Oª
+ú â Eíýº vÕî O KkÚ endstream endobj obj endobj obj R stream xK ùmAF n S î uØ ë D í ö TOßzÕÔóa ÙýP pEû Aä Fé Ëpë
+ò ï endstream endobj obj endobj obj R stream Ó shÕ Ö Â í NàºØ Aû ñ Ñ wäçBb Ð n ÅyCÑ K à âûð endstream endobj obj endobj obj R stream öÊ õ ëuÊ ÆÊím VË Ñ
+ËÂQçR gÈ ÕÈþ Úæ º ý ýz aqæÐ µö yz endstream endobj obj endobj obj R stream Ò pYüf L öBÇË áÉvI ñ ÚY Ê Gí J Ûâ mÈóTÎóÌ Ú
+
+Best Online Graduate Computer Information Technology Programs With employment growth area computer science information technology projected percent time advance career master degree graduate certificate Boston world leading research teaching institution
+Choose following online degree program BU Metropolitan College MET computer science IT graduate professional education offered evening online blended format
+Because MET focused knowledge tool skill learn MET today immediately remaining relevant useful valuable career growth year come
+MET degree certificate program computer science IT prepare job typically low unemployment rate
+rank following technology job top ten The meet need offer practical interactive learning
+Complete form receive news invitation upcoming information session
+The MSCIS concentration IT Project Management accredited Project Management Institute Global Accreditation Center Project Management Education Programs GAC
+Computer Science IT degree certified Committee National Security Systems CNSS
+The Health Informatics concentration accredited Commission Accreditation Health Informatics Information Management Education CAHIIM
+As part Boston University Metropolitan College accredited New England Association Schools Colleges NEASC one six nationally recognized accrediting agency
+

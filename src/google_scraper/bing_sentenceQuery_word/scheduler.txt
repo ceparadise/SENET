@@ -1,0 +1,712 @@
+In field transaction management system abstract model describe execution transaction running system
+Often operation action ordered time performed set executed together system
+If order time certain operation determined system used
+Examples operation requesting read operation reading writing aborting committing requesting lock locking etc
+Not transaction operation type included schedule typically selected operation type data access operation included needed reason describe certain phenomenon
+Schedules schedule property fundamental concept database theory
+The following example schedule In example horizontal axis represents different transaction schedule The vertical axis represents time order operation
+Schedule D consists three transaction
+The schedule describes action transaction seen
+First Reads Writes object X Commits
+Then Reads Writes object Y Commits finally Reads Writes object Z Commits
+This example schedule sequential overlap time action three transaction sequential transaction interleaved time
+Representing schedule D table rather list convenience identifying transaction operation glance
+This notation used throughout article
+A common way technical literature representing schedule list Usually purpose reasoning concurrency control database operation modeled occurring point time without duration
+When satisfactory start end possibly point event specified rarely
+Real executed operation always duration specified respective time occurrence event within exact time beginning completion concurrency control reasoning usually precedence time whole operation without looking quite complex detail operation matter operation another operation
+Furthermore many case relationship two specific operation matter specified specified pair operation
+In general operation transaction schedule interleave transaction executed concurrently time order operation transaction remain unchanged implied transaction program
+Since always time order operation transaction matter need specified schedule general operation rather order pair determined list operation
+Also general case transaction may consist several process properly represented partial order operation rather total order
+Thus general schedule partial order operation containing partial order transaction
+two operation represented operation existence pair mean always schedule general case ordered pair
+Such set schedule represented DAG operation node cycle allowed since cycle mean first operation cycle another second operation cycle contradicts perception
+In many case graphical representation graph used demonstrate schedule
+Since list operation table notation used article always represents total order operation schedule total order represented list always represented DAG
+The transaction executed see example serial schedule one transaction start running transaction ended
+A schedule equivalent outcome serial schedule property
+In schedule E order action transaction executed D end E give result Two action said conflict conflicting pair The following set action conflicting While following set action The schedule said following two condition satisfied A schedule said schedule one serial schedule
+Another definition schedule graph committed transaction considered acyclic graph defined include also uncommitted transaction cycle involving uncommitted transaction may occur without conflict serializability violation
+Which serial schedule
+A schedule said obeys CO also schedule property
+This mean order time transaction commitment event compatible precedence partial order respective transaction induced schedule acyclic precedence graph serializability graph conflict graph
+This implies also
+The CO property especially effective achieving distributed system
+discovered obviously mentioned
+Its correct definition appears however description related technique theory partial inaccurate misleading
+For extensive coverage commitment ordering source see
+Two schedule said following condition satisfied A schedule said serial schedule
+Note definition schedule
+Notice example example discussion time
+There however schedule schedule transaction performing The example since serial schedule
+Since determining whether schedule little practical interest
+Transactions commit transaction whose change read commit
+These schedule recoverable
+F recoverable commits make value read correct
+Then commit
+In aborted abort value A read incorrect
+In case database left consistent state
+If transaction abort transaction commits relied unrecoverable schedule
+In example G unrecoverable read value A written committed
+later aborted therefore value read wrong since committed schedule unrecoverable
+Also named cascadeless
+Avoids single transaction abort lead series transaction rollback
+A strategy prevent cascading abort disallow transaction reading uncommitted change another transaction schedule
+The following example one discussion recoverable In example although recoverable avoid cascading abort
+It seen abort aborted order maintain correctness schedule already read uncommitted value written
+The following recoverable schedule avoids cascading abort
+Note however update A always lost since aborted
+Note Schedule would serializable would committed
+Cascading abort avoidance sufficient necessary schedule recoverable
+A schedule strict strictness property two transaction write operation precedes operation either read write commit abort event also precedes conflicting operation
+Any strict schedule cascadeless converse
+Strictness allows efficient recovery database failure
+The following expression illustrate hierarachical containment relationship class The illustrates clause graphically
+In practice general purpose database system employ recoverable primarily strict schedule
+
+In method work specified mean assigned resource complete work
+The work may virtual computation element data turn scheduled onto hardware resource
+A scheduler carry scheduling activity
+Schedulers often implemented keep computer resource busy allow multiple user share system resource effectively achieve target
+Scheduling fundamental computation intrinsic part computer system concept scheduling make possible single CPU
+A scheduler may aim one many goal example maximizing total amount work completed per time unit minimizing time work becoming enabled first point begin execution resource minimizing time work becoming enabled finished case batch activity system responds hand first output user case interactive activity maximizing equal CPU time process generally appropriate time according priority workload process
+In practice goal often conflict
+throughput versus latency thus scheduler implement suitable compromise
+Preference measured one concern mentioned depending upon user need objective
+In environment industry example scheduler also must ensure process meet crucial keeping system stable
+Scheduled task also distributed remote device across network administrative back end
+The scheduler operating system module selects next job admitted system next process run
+Operating system may feature three distinct scheduler type also known admission scheduler scheduler
+The name suggest relative frequency function performed
+The process scheduler part operating system decides process run certain point time
+It usually ability pause running process move back running queue start new process scheduler known otherwise
+The decides job process admitted ready queue main memory attempt made execute program admission set currently executing process either authorized delayed scheduler
+Thus scheduler dictate process run system degree concurrency supported one time whether many process executed concurrently split process handled
+The scheduler responsible controlling degree multiprogramming
+In general process described either
+An process one spends time spends computation
+A process contrast generates request infrequently using time computation
+It important scheduler selects good process mix process
+If process ready queue almost always empty scheduler little
+On hand process waiting queue almost always empty device go unused system unbalanced
+The system best performance thus combination process
+In modern operating system used make sure process get enough CPU time finish task
+scheduling also important system system
+For example interacting process often required prevent blocking due waiting
+In case software typically used assist function addition underlying admission scheduling support operating system
+The temporarily remove process main memory place secondary memory vice versa commonly referred swapping swapping also incorrectly paging
+The scheduler may decide swap process active time process low priority process frequently process taking large amount memory order free main memory process swapping process back later memory available process unblocked longer waiting resource
+Stallings Stallings In many system today support mapping virtual address space secondary storage swap file scheduler may actually perform role scheduler treating binary swapped process upon execution
+In way segment binary required swapped demand lazy loaded
+Stallings The also known decides ready process executed allocated CPU clock interrupt operating another form
+Thus scheduler make scheduling decision much frequently scheduler scheduling decision minimum made every time slice short
+This scheduler implying capable forcibly removing process CPU decides allocate CPU another process also known voluntary case scheduler unable force process CPU
+A preemptive scheduler relies upon invokes run implement scheduling function
+Another component involved function dispatcher module give control CPU process selected scheduler
+It receives control kernel mode result interrupt system call
+The function dispatcher involve following The dispatcher fast possible since invoked every process switch
+During context switch processor virtually idle fraction time thus unnecessary context switch avoided
+The time take dispatcher stop one process start another known
+Scheduling discipline algorithm used distributing resource among party simultaneously asynchronously request
+Scheduling discipline used handle packet traffic well share among disk drive printer embedded system etc
+The main purpose scheduling algorithm minimize ensure fairness amongst party utilizing resource
+Scheduling deal problem deciding outstanding request allocated resource
+There many different scheduling algorithm
+In section introduce several
+In notion used alternative queuing data packet
+The simplest scheduling algorithm scheduling algorithm scheduling
+If differentiated guaranteed offered opposed communication may utilized
+In advanced packet radio wireless network Downlink Packet Access cellular system may used take advantage
+If channel condition favourable may increased
+In even advanced system scheduling combined assigning component user best utilize
+also known FCFS simplest scheduling algorithm
+FIFO simply queue process order arrive ready queue
+This commonly used example illustrated section
+Earliest deadline first EDF dynamic scheduling algorithm used operating system place process priority queue
+Whenever scheduling event occurs task finish new task released etc
+queue searched process closest deadline next scheduled execution
+Similar SJF
+With strategy scheduler arranges process least estimated processing time remaining next queue
+This requires advanced knowledge estimation time required process complete
+The operating system assigns fixed priority rank every process scheduler arranges process ready queue order priority
+process get interrupted incoming process
+The scheduler assigns fixed time unit per process cycle
+If process completes within get terminated otherwise rescheduled giving chance process
+This used situation process easily divided different group
+For example common division made foreground interactive process background batch process
+These two type process different requirement may different scheduling need
+It useful shared memory problem
+A scheduler always try keep scheduled resource busy submitted job ready scheduled
+In contrast conserving scheduler scheduler case may leave scheduled resource idle despite presence job ready scheduled
+There several scheduling problem goal decide job go station time total minimized A common method embedded system schedule job manually
+This example done fashion
+Sometimes kernel divided three part Manual scheduling preemptive interrupt level
+Exact method scheduling job often proprietary
+When designing operating system programmer must consider scheduling algorithm perform best use system going see
+There universal best scheduling algorithm many operating system use extended combination scheduling algorithm
+For example us combination preemptive scheduling first first algorithm
+In system thread dynamically increase decrease priority depending serviced already waiting extensively
+Every priority level represented queue among thread among one
+In sense response time short thread short critical system thread get completed quickly
+Since thread use one time unit queue starvation problem longer thread
+The algorithm used may simple process given equal time instance m usually m m cycling list
+So process A executes m process B process C back process A
+More advanced algorithm take account process priority importance process
+This allows process use time process
+The kernel always us whatever resource need ensure proper functioning system said infinite priority
+In symmetric multiprocessing system considered increase overall system performance even may cause process run slowly
+This generally improves performance reducing
+IBM available three different scheduler
+The difference variant often considered three different operating system Later virtual storage version MVS added feature scheduler schedule processor resource according elaborate scheme defined installation
+Very early Microsoft Windows system feature scheduler
+used scheduler meaning interrupt program
+It relied program end tell OS need processor could move another process
+This usually called cooperative multitasking
+Windows introduced rudimentary preemptive scheduler however legacy support opted let bit application run without preemption
+operating system use multilevel feedback queue
+priority level defined priority normal priority priority soft priority requiring privilege assign
+reserved Operating System
+Users select priority assign running application Task Manager application thread management APIs
+The kernel may change priority level thread depending CPU usage whether interactive
+accepts responds input human raising priority interactive bounded process lowering CPU bound process increase responsiveness interactive application
+The scheduler modified use modern processor keep track exactly many CPU cycle thread executed rather using interrupt routine
+Vista also us priority scheduler queue disk defragmenters program interfere foreground operation
+Mac OS us cooperative scheduling thread one process control multiple cooperative thread also provides preemptive scheduling multiprocessing task
+The kernel schedule multiprocessing task using preemptive scheduling algorithm
+All Process Manager process run within special multiprocessing task called blue task
+Those process scheduled cooperatively using algorithm process yield control processor another process explicitly calling
+Each process copy schedule process thread cooperatively thread yield control processor another thread calling
+macOS us multilevel feedback queue four priority band thread normal system high priority kernel mode
+Threads scheduled preemptively macOS also support cooperatively scheduled thread implementation Thread Manager
+In AIX Version three possible value thread scheduling policy Threads primarily interest application currently consist several asynchronous process
+These application might impose lighter load system converted multithreaded structure
+AIX implement following scheduling policy FIFO round robin fair round robin
+The FIFO policy three different implementation FIFO
+The round robin policy named AIX fair round robin called
+In priority level ranging used reserved task considered task level
+For task time quantum switching process approximately m nice task approximately m
+The scheduler ran ready process letting highest priority process go first run time slice placed expired queue
+When active queue empty expired queue become active queue vice versa
+However enterprise replaced scheduler backport maintained Linux Kernel series Linux kernel used distribution
+In version kernel used developed many kernel developer Linux development
+For many kernel time frame developed patch set improved interactivity scheduler even replaced scheduler
+Con Kolivas work significantly implementation named Rotating Staircase Deadline inspired Ingo Molnár develop replacement earlier crediting Kolivas announcement
+CFS first implementation fair queuing widely used operating system
+The CFS us classic scheduling algorithm called originally invented
+Fair queuing previously applied CPU scheduling name
+The fair queuing CFS scheduler scheduling complexity O N N number task
+Choosing task done constant time reinserting task run requires O log N operation implemented
+The BFS also created Con Kolivas alternative CFS
+us multilevel feedback queue priority ranging
+reserved interrupt top half kernel user thread user thread idle user thread
+Also like Linux us active queue setup also idle queue
+us multilevel feedback queue priority ranging
+reserved thread default policy user thread entered kernel thread user thread policy
+us multilevel feedback queue priority ranging
+Priorities reserved thread system thread thread low priority interrupt
+Unlike Linux process done using time quantum given new priority put back queue
+Solaris introduced two new scheduling class namely fixed priority class fair share class
+The thread fixed priority priority range class priority dynamically adjusted
+The fair scheduling class us CPU prioritize thread scheduling decision
+CPU share indicate entitlement CPU resource
+They allocated set process collectively known project
+
+This action might possible undo
+Are sure want continue
+available
+
+The following subsection explain several common scheduling strategy looking single CPU burst small number process
+Obviously real system deal lot simultaneous process executing burst cycle
+estimate alpha burst alpha estimate Figure Figure Figure Figure Figure N Lambda W Figure omitted
+
+In scheduler program coordinate use shared
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+learn share knowledge build career
+In multitasking operating system context sometimes hear term scheduling
+What refer
+What kind scheduling
+If host party guest scheduling would mean spend minute fixed amount per guest
+You go guest minute would spent minute guest
+More
+There many type scheduling
+important people first
+person leaving earliest first etc
+You start googling scheduling algorithm check Timeslicing inherent scheduling system practice AFAIK
+I disagree InSciTek Jeff implication following scheduling That task priority rotation allowed run reach resource blocking condition yeilding next task rotation
+I see could considered
+This actually preemptive scheduling
+However possible scheduling algorithm element preemptive scheduling VxWorks scheduling preemption enabled disabled default
+The way enable scheduling provide value
+I agree statement Therefore timeslicing based scheduling implies scheduling scheduling require equal time based timeslicing
+You right require equal time
+Preemption muck
+And actually VxWorks task preempted scheduling task get control execute rest time allocated
+Edit directed InSciTek Jeff I comment privilege Yes I referring task disabling although I obviously express well
+You preempted ha
+second comment
+I hope debate salient point believe scheduling exist without time slicing
+Or mean equal time based time slicing
+I disagree former agree latter
+I eager learn
+Thanks
+directed Jeff exist without timeslicing
+That exactly happens VxWorks kernelTimeSlice disabled zero
+I disagree statement
+See section heading Scheduling
+scheduling us time slicing achieve fair allocation CPU task priority
+Each task group task priority executes defined interval time slice
+scheduling enabled calling kernelTimeSlice take parameter time slice interval
+If scheduling enabled preemption enabled executing task system tick handler increment task count
+Timeslicing inherent scheduling
+Otherwise relying task give CPU control scheduling intended solve
+The answer even Wikipedia article describe scheduling inherently include periodic timeslicing
+While common I believe scheduling timeslicing exactly thing
+Certainly timeslicing make sense schedling implied rotating task however scheduling without timeslicing
+That task priority rotation allowed run reach resource block condition next task rotation run
+In word equal priority task exist reschedling point time
+The idea actually realized specifically case Wind River VxWorks kernel
+Within priority scheme task priority run round robin timeslice without specifically enabling feature kernel
+The reason flexibility avoid overhead timeslicing task already known run block within well bounded time
+Therefore timeslicing based scheduling implies scheduling scheduling require equal time based timeslicing
+An opinion
+It seems intertwining two mechanism one
+Assuming OP original assertion In multitasking operating system context A round robin scheduler always schedule next item circular queue
+How scheduler regains control perform scheduling separate unrelated
+I disagree prevalent method yield waiting resource noted others
+If I mistaken first Mac utilize used voluntary yield yield waiting resource year old brain cell wrong sometimes
+Round robin simple scheduling algorithm time divided evenly among job without priority
+For example process running process allowed run unit time another process allowed run
+Round robin typically easy implement OS
+Actaully getting confused Preemptive scheduling Round robin
+Infact RR part Preemptive scheduling
+Round Robin scheduling based time sharing also known quantum max time given CPU process one go
+There multiple process require different time complete aka burst time queue CPU process keep switching process give every process equal time based quantum value
+This type scheduling known Round Robin scheduling
+Checkout simple video understand round robin scheduling easily By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Paul Krzyzanowski February If look process notice spends time executing instruction computing make request example read write data file get input user
+After executes instruction wait
+The period computation request called
+Interactive process spend time waiting generally experience short CPU burst
+A text editor example interactive process short CPU burst
+process conversely spend time running instruction le time
+They exhibit long CPU burst
+A video transcoder example process long CPU burst
+Even though read writes data spends time processing data
+Most interactive process fact spend vast bulk existence nothing waiting data
+As I write Mac I process running user account
+This includes browser window word processor spreadsheet several shell window Photoshop iTunes various monitor utility
+Most time process collectively using le CPU
+This surprising since program waiting user input network message sleeping waking periodically check state
+Consider GHz processor
+It executes approximately million instruction per second even count hyperthreaded processor
+It run billion instruction ten second might take skim web page click link billion instruction half second might take hit next key typing
+The big idea increasing overall system throughput realization could keep several program memory switch processor run another process process wait operation
+This
+The next big idea realizing could process let another process run quickly enough give illusion many process running time
+This
+Most system large number process short CPU burst interspersed request small number process long CPU burst
+To provide good performance may preempt running process let another one run
+The also known operating system keep list process ready run blocked another blocking system request semaphore
+The entry list pointer process control block store information state process
+When request process complete process move state state get placed run queue
+The component operating system responsible deciding whether currently running process continue running process run next
+There four event may occur scheduler need step make decision The current process go state issue request operating system request satisfied immediately
+The current process terminates
+A timer interrupt cause scheduler run decide process run allotted interval time time move state
+An operation complete process requested process move state
+The scheduler may decide preempt process move process state
+A scheduler scheduler ability get invoked interrupt move process state let another process run
+The last two event list may cause happen
+If scheduler take CPU away process scheduler
+Old operating system Microsoft Windows Apple MacOS prior OS X example cooperative scheduler
+Older batch processing system scheduler process ran termination process would allowed run
+The decision scheduler make concerning sequence length time process may run called
+These decision easy one scheduler limited amount information process ready run
+A good scheduling algorithm It clear goal contradictory
+For example minimizing overhead mean job run longer thus hurting interactive performance
+Enforcing priority mean process always favored one causing indefinite postponement
+These factor make scheduling task perfect algorithm
+To make matter even complex scheduler know much behavior process certainly idea process future
+As saw earlier process perform lot operation use little CPU time example web browser shell editor
+They spend much time blocked state little burst computation
+The overall performance constrained speed device
+spend time computing example program circuit simulator
+Their execution time largely determined speed CPU amount CPU time get
+To help scheduler monitor process amount CPU time use programmable interval timer interrupt processor periodically typically time per second
+This timer programmed operating system initializes
+At interrupt operating system scheduler get run decide whether currently running process allowed continue running whether suspended another ready process allowed run
+This mechanism enables preemptive
+Preemptive scheduling allows scheduler control response time taking CPU away process decided running long order let another process run
+It incurs overhead nonpreemptive scheduling since deal overhead context switching process instead allowing process run completion run next operation system call
+However allows higher degree concurrency better interactive performance
+The scheduling algorithm task figuring whether process switched another process process get run next
+The component scheduler handle mechanism actually getting process run processor
+This requires loading saved context selected process stored process control block comprises set register stack pointer flag status word pointer memory mapping typically pointer page table
+Once context loaded dispatcher switch user mode via operation cause process execute location saved stack time program stopped running either via interrupt system call
+In following section explore scheduling algorithm
+Let first introduce term
+Also known start time time task scheduled run actually get start running CPU
+If look process series CPU burst start time applies CPU burst
+It time CPU burst start run
+Possibly straightforward approach scheduling process maintain FIFO run queue
+New process go end queue
+When scheduler need run process pick process head queue
+This scheduler
+If process block enters state scheduler pick process head queue
+When complete waiting blocked process ready run get put end queue
+With scheduling process long CPU burst hold process increasing turnaround time
+Moreover hurt overall throughput since process state may complete CPU bound process still running
+Now device used effectively
+To increase throughput would great scheduler instead could briefly run bound process could run briefly request wait complete
+Because CPU bound process get preempted hurt interactive performance interactive process get scheduled CPU bound one completed
+FIFO scheduling simple implement
+It also intuitively fair first one line get run first
+The greatest drawback scheduling preemptive
+Because suitable interactive job
+Another drawback process delay job behind
+Round robin scheduling preemptive version scheduling
+Processes dispatched sequence process allowed run limited amount time
+This time interval known
+If process complete get blocked operation within time slice time slice expires process preempted
+This preempted process placed back run queue must wait process already queue cycle CPU
+If process get blocked due operation time slice expires course enters blocked operation
+Once operation completes placed end run queue wait turn
+A big advantage round robin scheduling scheduler dramatically improves average response time
+By limiting task certain amount time operating system ensure cycle ready task giving one chance run
+With round robin scheduling interactive performance depends length quantum number process run queue
+A long quantum make algorithm behave much like first come first served scheduling since likely process block complete time slice
+A small quantum let system cycle process quickly
+This wonderful interactive process
+Unfortunately overhead context switching frequently increase percentage system time used context switching rather real work
+Advantage Round robin scheduling fair every process get equal share CPU
+It easy implement know number process run queue know response time process
+Disadvantage Giving every process equal share CPU always good idea
+For instance highly interactive process get scheduled frequently process
+A short quantum good allows many process circulate processor quickly getting brief chance run
+This way highly interactive job usually use quantum wait long get CPU hence improving interactive performance
+On hand short quantum bad operating system must perform context switch whenever process get preempted
+This overhead anything CPU executing user code essentially overhead
+A short quantum implies many context switch per unit time taking CPU away performing useful work work behalf process
+The overhead associated context switch expressed length context switch time
+An increase increase efficiency reduces average response time
+As example suppose ten process ready run m m
+Process head run queue list process state get run immediately
+Process run Process quantum expires m context switch take place m start run m
+Likewise process run another We compute amount time process delayed compare delay small quantum m long quantum We see quantum m ten process process end queue wait almost second get chance run
+This much slow interactive task
+When quantum reduced m last process wait le second get CPU
+The downside quantum small context switch overhead
+This mean wasting third CPU switching process
+With quantum m context switch overhead
+The scheduling algorithm preemptive version older algorithm known scheduling
+Shortest job first scheduling run process completion running next one
+The queue job sorted estimated job length short program get run first held long one
+This minimizes average response time
+Here extreme example
+It three user submit job deck punched card operator
+Two job estimated run minute third job third user estimate take hour run program
+With shortest job first approach operator run job first let computer spend time job
+With shortest remaining time first algorithm take account fact process run series CPU burst process may leave state need wait quantum expired
+The algorithm sort run queue process anticipated CPU burst time picking shortest burst time
+Doing optimize average response time process
+Let consider example five process run queue
+If process FIFO manner see CPU burst add pick favorite time unit example
+The mean run time process however mean run time run time
+In example mean run time
+If reorder process queue estimated CPU burst time still overall total process take amount time run mean run time change
+It
+We reduced average run time process
+The biggest problem sorting process way trying optimize schedule using data even
+We know CPU burst time process next run
+It might immediately request might continue running minute expiration time slice
+The best guess try predict next CPU burst time assuming related past CPU burst process
+All interactive process follow following sequence operation compute compute compute Suppose CPU burst compute period measured T
+The next compute period measured T
+The common approach estimate length next CPU burst using previous CPU burst process
+We examine one function although variation theme
+Let measured time burst predicted size CPU burst weighing factor
+Define default system average burst time
+The estimate next CPU burst period The weighing factor adjusted much weigh past history versus considering last observation
+If last observation CPU burst period count
+If last observation much weight historical weight
+As get smaller historical weight count recent weight
+Here example
+The blue bar represent actual CPU burst time
+The red bar represent estimated value
+With weighting value see red bar strongly influenced previous actual value factor older value
+Now let see happens set
+This ignores history look previous CPU burst
+We see red bar current estimate exactly value previous blue bar latest actual CPU burst
+For final example let set
+Here last measured value count estimated CPU burst dictated history
+We see immediate change CPU burst le impact estimate compared graph
+Note estimate still remain relatively high despite rapid plunge actual CPU burst value
+This scheduling optimal always produce lowest mean response time
+Processes short CPU burst given priority hence run quickly scheduled frequently
+process hurt long mean waiting time
+In fact process always available run one may never get scheduled
+The situation process never get scheduled run called
+Another problem algorithm effectiveness meeting scheduling criterion relies ability estimate length next CPU burst
+Round robin scheduling assumes process equally important
+This generally case
+We would sometimes like see long process get lower priority interactive process
+These process turn get lower priority job critical operating system
+In addition different user may different status
+A system administrator process may rank student
+These goal led introduction
+The idea process assigned priority number
+Of process ready run one highest priority get run next general agreement across operating system whether high number represents high low priority system tend use smaller number high priority Microsoft system tend use higher number high priority
+With priority scheduler scheduler simply pick highest priority process run
+If system us preemptive scheduling process preempted whenever higher priority process available run queue
+Priorities may
+determined system using factor time limit process memory requirement anticipated CPU ratio factor
+assigned administrator
+Priorities may also
+A process keep priority entire life process
+A process priority changed scheduler course execution
+The scheduler would achieve scheduling goal
+For example scheduler may decide decrease process priority give chance job run
+If process bound spending time waiting scheduler may give higher priority get run queue quickly schedule another operation
+Static dynamic priority coexist
+A scheduler would know process static priority priority adjusted throughout course execution
+Ignoring dynamic priority priority scheduling algorithm straightforward process priority number assigned scheduler simply pick process highest priority
+priority scheduling provides good mechanism relative importance process may precisely defined
+If high priority process use lot CPU time lower priority process may starve postponed indefinitely leading
+Another problem priority scheduling deciding process get priority level assigned
+One approach problem indefinite postponement use dynamic priority
+At expiration quantum scheduler decrease priority current running process thereby penalizing taking much CPU time
+Eventually priority fall next highest process process allowed run
+Another approach scheduler keep track low priority process get chance run increase priority eventually priority high enough process get scheduled run
+Once run quantum priority brought back previous low level
+This periodic boosting process priority ensure get chance run called
+A simple way implement aging simply increase process priority get readjusted execute
+What happens several process get assigned priority
+This realistic possibility since picking unique priority level possibly hundred thousand process system may feasible
+We group process assign separate run queue class
+This allows u categorize separate system process interactive process interactive process background process
+The scheduler pick queue class least one process
+In sense behaves like priority scheduler
+Each queue may use different scheduling algorithm desired
+scheduling per priority level common
+As long process ready high priority queue scheduler let run time slice
+Only process available run priority level scheduler look lower level
+Alternatively high priority level might implement scheduling approach ensure critical task get processing need
+The scheduler may also choose different quantum priority level
+For example common give process longer quantum
+They get run often since low priority queue scheduler let run longer
+Linux hand opposite
+It give longer quantum process assumption important likely interactive usually block long using time slice
+One problem multilevel queue process need assigned suitable priority queue
+If process assigned queue optimal either process overall throughput
+queue generally used scheduling discipline separate broad class process kernel thread interactive background process
+Specific scheduler within class determine process get run within class
+Most operating system including Windows Linux OS X support form multilevel queue scheduling class
+A variation multilevel queue allow scheduler adjust priority use process execution order move one queue another based recent behavior process
+The goal automatically place process priority level based CPU burst behavior
+process end higher priority queue process end low priority queue
+A multilevel feedback queue us two basic rule A new process get placed highest priority queue
+If process finish quantum block stay priority level round robin otherwise move next lower priority level With approach process long CPU burst use entire time slice get preempted get placed queue
+A highly interactive process use quantum remain high priority level
+Although strictly necessary algorithm successive queue may given longer quantum
+This allows process remain queue corresponds longest CPU burst
+One problem multilevel feedback queue
+If lot interactive process new process frequently created always task available queue process queue never get scheduled
+A related problem interactive process may end low priority level
+If process ever period becomes trickle low priority level forever doomed remain
+An example game need spend considerable CPU time initializing becomes interactive spending time waiting user input
+Both problem solved
+As saw earlier periodically increase priority process ensure scheduled run
+A simple approach periodically bring process highest priority queue
+An advantage multilevel feedback queue algorithm designed adjust priority process whenever run process quickly trickle back low priority level interactive process remain high level
+If programmer know scheduler work want write software ensure process remains high priority level write code force system block operation sleep millisecond quantum expires
+That way process rewarded using quantum even repeatedly us large chunk
+A solution approach modify way scheduler decides demote priority process
+Instead simply checking whether process us time slice keep track total time process spent running larger time interval several time slice
+Each priority queue maximum CPU time allotment associated
+If process us allotment interval process punished moved lower priority level
+feedback queue good separating process category based need CPU
+They favor bound process letting run often
+Versions scheduling policy increase quantum lower priority level also favor CPU bound process giving larger chunk CPU time allowed run
+The priority scheme one controlled system rather administrator user
+A process deemed important necessarily important happens lot
+This scheduler also drawback process become CPU bound process become get scheduled well
+Moreover process danger starving system many interactive process
+Both problem dealt applying process aging
+Another drawback ability programmer keep priority process high performing bogus operation periodically
+Again solution measuring CPU use larger time interval punishing process use CPU
+With also known goal allow process granted proportional share CPU specific percentage
+Conceptually lottery scheduling work allocating specific number ticket process
+The ticket process higher chance scheduled
+For example suppose ticket total three process run
+We would like schedule process twice frequently process
+To assign twice many ticket
+With ticket numbered range might assign The scheduler pick random number range
+That number becomes winning ticket process holding ticket get run
+When time slice block sheduler pick another ticket process get run
+Over time process run random distribution one weighted ticket allocation
+The benefit algorithm process given proportional share CPU
+The difficulty determining ticket distribution particularly environment process come go get blocked
+This useful algorithm scheduling useful environment process may need allocated share CPUs running multiple virtual machine server
+Our discussion thus far assumed environment single process get run time
+Other ready process wait scheduler switch context give chance run
+With multiple CPUs multiple core one CPU hyperthreaded processor thread execution scheduled time
+The scheduling algorithm apply scheduler simply allows one process running state one time
+The environment consider common symmetric multiprocessing SMP one processor access memory device
+Each processor running process may time invoke system call terminate interrupted timer interrupt
+The scheduler executes processor decides process context switched run
+It common operating system maintain one run queue per processor
+This allows one processor manipulate queue context switching without worry delay queue locked another processor
+Processors designed cache memory hold region memory process accessed
+This avoids time delay going external memory bus access memory provides huge boost performance
+As see forthcoming discussion memory management processor also contain translation lookaside buffer TLB store recent virtual physical address translation
+This also speed memory access dramatically
+When scheduler reschedules process onto processor chance cached memory TLB line still present
+This allows process run faster since make le reference main memory
+If scheduler reschedules process onto different processor part process present processor cache program start slowly populates cache
+aspect scheduling multiprocessor system scheduler keep track processor process ran previously attempt reschedule process onto processor
+There two form processor affinity
+ensures process always get scheduled onto processor
+approach
+A scheduler attempt schedule process onto CPU case may move process onto different processor
+The reason even though may initial performance penalty start process another CPU probably better CPU sit idle process run
+The scheduler try CPUs make sure sufficient number task run queue
+There two approach load balancing among processor operating system check load number process run queue processor periodically
+If imbalance process moved one processor onto another
+scheduler find process run queue processor
+In case raid another processor run queue transfer process onto queue something run
+It common combine push pull migration Linux example
+The real world simple deciding whether run task processor
+Many system multiple processor preferable others rescheduling ready task
+The category process include What realization task migrated another processor migrating processor preferable others
+For example scheduling task different core chip preferable scheduling onto core different chip
+Linux introduces concept handle
+Scheduling domain allow system organize processor hierarchy processor grouped desirable migration group lowest layer hyperthreaded CPUs core least desirable migration group highest layer hierarchy migrating across processor different circuit board NUMA system
+A scheduling domain constains one CPU group
+Each CPU group treated one entity domain
+A domain treat domain group
+For example two hyperthreaded CPUs sharing core placed one group two subgroup one CPU
+All group make domain represents entire processor
+Each CPU runqueue structure associated
+In addition structure needed keep track ready process balanced tree set queue structure keep track scheduling data including statistic CPU load
+Each scheduling domain balancing policy associated defines balancing rule specific level hierarchy
+This policy answer question How often attempt made balance load across group domain
+How far load domain get unbalanced balancing across group needed
+How long group domain sit idle
+Linux performs active load balancing periodically
+The scheduler move scheduling domain hierarchy check group along way
+If group deemed balance based policy rule task moved one CPU run queue another rebalance domain
+Linux support modular scheduling system accommodate different scheduler
+A defines common set function define behavior scheduler add task remove task choose next task tor run
+Multiple scheduler run concurrently
+Each task system belongs one scheduling class
+A task belong one two scheduling class implement CFS completely fair share scheduler general purpose multilevel queue scheduler dynamically adjusts priority level based much virtual runtime task used period time
+Tasks spend time running using CPU given lower priority spend spend le time running
+implement simple multilevel scheduler task
+To pick task run scheduler iterates list scheduling class find class highest priority runnable task
+This document updated original version September
+Paul Krzyzanowski
+All right reserved
+For question comment site contact Paul Krzyzanowski The entire content site protected copyright national international law
+No part site may copied reproduced stored retrieval system transmitted form mean whether electronic mechanical otherwise without prior written consent copyright holder
+If something page want use please let know
+Any opinion expressed page necessarily reflect opinion employer may even reflect mine
+Last updated February
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+For following job The would using FCFS algorithm What would
+You need determine time job completed
+With scheduler simple calculate job start soon processor becomes free take exactly burst time complete
+You already calculated start end time calculate wait time use obtain turnaround time
+For example A arrives time
+The processor free start time end time
+Then processor run B wait unit finish time turnaround time
+The answer book seems totaling completion time without regard arrival time
+This something I recognize
+turnaround time Completion time give average As already said Tournaround time TAT time submission completion
+If look task A arrives time submission time take timeunits finish
+mean TAT A let look task B arrives time wait A finish
+A finish B start working finish
+Now subtract arrival time minus finishing time TAT
+Now C arrival time working time burst finishing Tat Now D arrival time working time burst finishing Tat Now E arrival time working time burst finishing Tat result tada
+EXECUTION AROUND TIME AND THEN THE EXECUTION ADDS TO THE NEXT EXECUTION TO THE ALREADY EXISTING TIME TO SUBTRACT THE ARRIVAL TIME
+THEN ADD ALL THE TURNAROUND TIME AND THE DIVIDE THERE SUM TOTAL BY THERE TOTAL NUMBER By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+If process ready state CPU OS must choose one run next
+The part OS make choice scheduler
+It us scheduling algorithm choose
+If OS support kernel level thread thread process scheduled
+Here going talk process scheduling mostly
+As CPUs got powerful scheduling become le importance
+However scheduling algorithm got complex
+First let talk scheduling needed When CPU becomes free like process terminates
+It also needed new process becomes ready
+Process execution usually burst execution IO waiting
+If CPU burst really long process might wait wait wait yougetthepoint
+This need dealt
+Example time
+We got process call A B
+A CPU burst time arbitrary time unit
+B CPU burst time
+Let try letting A go first Note mean process ready mean running
+Now B go first Now work average turnaround time
+When A went first average turnaround time When B went first When A first When B first So lower B went first
+This simplest scheduling algorithm
+The first process enter ready state get CPU first blocked finished hold CPU
+FCFS requires single queue ready process
+So process becomes ready go back queue
+When CPU becomes free execute process front queue
+You remember need stop process long CPU burst hogging CPU long
+With scheduling process get keep CPU end switch blocked state
+With preemptive scheduling process maximum time run
+If end time still running get interrupted scheduler chooses another process run
+These fixed amount time called either
+They normally last millisecond
+Let example earlier preemptive scheduling added
+The time slice
+First A B Now B A This actually diagram B A without preemptive scheduling
+Therefore average turnaround time still average wait time still
+A B A B Basically lot process ready state CPU given process turn
+This called
+This simplest algorithm time sharing It pretty much FCFS time slice added
+It important fair
+We also need consider following criterion Every time process switched CPU time taken switching aka context switching
+If use small time slice cost context switch higher
+For example use time slice context switch CPU time context switching real work
+However make time slice big seem though using FCFS
+In example shorter process first gave better result
+When process become available simultaneously better shortest job first
+This preemptive version SJF
+Every time new process ready state arrives look CPU burst time
+If le time needed complete current process move current process ready state schedule new one instead
+The problem process long CPU time always wait newer shorter process keep arriving
+Also impossible predict long process take know keep getting moved CPU
+Using round robin assumes process equal importance
+But might higher others
+What gave higher time slice higher priority process ran first
+There lot option priority scheduling important avoid starvation low priority process left waiting CPU forever Static priority priority externally defined
+Dynamic one internally defined system order achieve certain goal
+For example system may boost priority IO bound process
+Both type may used
+What instead queue process ready state multiple queue one different priority
+It could done way There lot algorithm
+system may need use different type algorithm example earliest deadline first Stuff I may glossed available I super cool I computer science unrelated coolness Fill detail click icon log You commenting using account
+You commenting using Twitter account
+You commenting using Facebook account
+You commenting using account
+Connecting
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+

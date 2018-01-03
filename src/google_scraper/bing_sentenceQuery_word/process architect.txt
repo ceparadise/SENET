@@ -1,0 +1,751 @@
+In set rule method describe functionality organization implementation computer system
+Some definition architecture define describing capability programming model computer particular implementation
+In definition computer architecture involves design design
+The first documented computer architecture correspondence describing
+When building computer described two patent application future project machine instruction could stored storage used data
+concept
+Two early important example The term architecture computer literature traced work Lyle Johnson Mohammad Usman Khan member Machine Organization department IBM main research center
+Johnson opportunity write proprietary research communication time known Los Alamos Scientific Laboratory
+To describe level detail discussing luxuriously embellished computer noted description format instruction type hardware parameter speed enhancement level system architecture term seemed useful machine Subsequently Brooks Stretch designer started Chapter book Planning Computer System Project Stretch ed
+Buchholz writing Computer architecture like architecture art determining need user structure designing meet need effectively possible within economic technological constraint
+Brooks went help develop called line computer architecture became noun defining user need know
+Later computer user came use term many way
+The earliest computer architecture designed paper directly built final hardware form
+Later computer architecture prototype physically built form TTL prototype tweaked committing final hardware form
+As new computer architecture typically built tested computer architecture inside FPGA committing final hardware form
+The discipline computer architecture three main subcategories There type computer architecture
+The following type used bigger company like Intel count computer architecture The purpose design computer maximizes performance keeping power consumption check cost low relative amount expected performance also reliable
+For many aspect considered includes instruction set design functional organization logic design implementation
+The implementation involves integrated circuit design packaging power cooling
+Optimization design requires familiarity compiler operating system logic design packaging
+An instruction set architecture ISA interface computer software hardware also viewed programmer view machine
+Computers understand Java programming language used
+A processor understands instruction encoded numerical fashion usually
+Software tool translate high level language instruction processor understand
+Besides instruction ISA defines item computer available
+memory
+Instructions locate available item register index name memory addressing mode
+The ISA computer usually described small instruction manual describes instruction encoded
+Also may define short vaguely mnemonic name instruction
+The name recognized software development tool called
+An assembler computer program translates form ISA form
+also widely available usually software program isolate correct malfunction binary computer program
+ISAs vary quality completeness
+A good ISA compromise programmer convenience easy code understand size code much code required specific action cost computer interpret instruction complexity mean space needed disassemble instruction speed computer larger disassemblers come longer disassemble time
+For example ISAs like ISA subtracts one value value zero value return higher value inexpensive fast however ISAs like convenient helpful looking size ISA
+Memory organization defines instruction interact memory memory interacts
+During design software emulator run program written proposed instruction set
+Modern emulator measure size cost speed determine particular ISA meeting goal
+Computer organization help optimize product
+For example software engineer need know processing power processor
+They may need optimize software order gain performance lowest price
+This require quite detailed analysis computer organization
+For example SD card designer might need arrange card data processed fastest possible way
+Computer organization also help plan selection processor particular project
+Multimedia project may need rapid data access virtual machine may need fast interrupt
+Sometimes certain task need additional component well
+For example computer capable running virtual machine need hardware memory different virtual computer kept separated
+Computer organization feature also affect power consumption processor cost
+Once instruction set designed practical machine must developed
+This design process called
+Implementation usually considered architectural design rather hardware
+Implementation broken several step For entire implementation process organized differently often referred
+The exact form computer system depends constraint goal
+Computer architecture usually trade standard power versus performance cost memory capacity latency amount time take information one node travel source throughput
+Sometimes consideration feature size weight reliability expandability also factor
+The common scheme depth power analysis figure keep power consumption low maintaining adequate performance
+Modern computer performance often described IPC instruction per
+This measure efficiency architecture clock frequency
+Since faster rate make faster computer useful measurement
+Older computer IPC count low
+Simple modern processor easily reach near processor may reach three five IPC executing several instruction per clock cycle
+Counting machine language instruction would misleading varying amount work different ISAs
+The instruction standard measurement count ISA actual machine language instruction unit measurement usually based speed computer architecture
+Many people used measure computer speed clock rate usually MHz GHz
+This refers cycle per second main clock CPU
+However metric somewhat misleading machine higher clock rate may necessarily greater performance
+As result manufacturer moved away clock speed measure performance
+Other factor influence speed mix speed available memory type order instruction program
+There two main type speed latency throughput
+Latency time start process completion
+Throughput amount work done per unit time
+guaranteed maximum response time system electronic event like disk drive finish moving data
+Performance affected wide range design choice example processor usually make latency worse make throughput better
+Computers control machinery usually need low interrupt latency
+These computer operate environment fail operation completed specified amount time
+For example brake must begin braking within predictable short time brake pedal sensed else failure brake occur
+take factor account measuring time computer take run series test program
+Although benchmarking show strength choose computer
+Often measured machine split different measure
+For example one system might handle scientific application quickly another might render video game smoothly
+Furthermore designer may target add special feature product hardware software permit specific benchmark execute quickly offer similar advantage general task
+Power efficiency another important measurement modern computer
+A higher power efficiency often traded lower speed higher cost
+The typical measurement referring power consumption computer architecture million instruction per second per watt
+Modern circuit le power required per transistor number transistor per chip grows
+This transistor put new chip requires power supply requires new pathway built power
+However number transistor per chip starting increase slower rate
+Therefore power efficiency starting become important important fitting transistor single chip
+Recent processor design shown emphasis put focus power efficiency rather cramming many transistor single chip possible
+In world embedded computer power efficiency long important goal next throughput latency
+Increases publicly released refresh rate grown slowly past year respect vast leap power consumption reduction miniaturization demand
+This led new demand longer battery life reduction size due mobile technology produced greater rate
+This change focus greater refresh rate power consumption miniaturization shown significant reduction power consumption much reported Intel release dropped power consumption benchmark watt watt
+Comparing processing speed increase GHz GHz seen focus research development shifting away refresh rate moving towards consuming le power taking le space
+
+This handled process manager OS see First little
+So process program execution
+The first three letter program process probably clue something
+Think process An abstraction sequence instruction executed processor processor may need service hardware device process time sharing executing device driver instruction process
+make hardly sense understand process bit reading
+A process contains A really important thing remember process program disk would file
+Imagine recipe cake
+Now cake recipe instruction making cake like program disk
+The actual activity making cake process
+The thing take away section OS collection process
+The OS make computer productive switching CPU process
+The thing normally cause process created The system call creates process known fork execve Unix Windows CreateProcess
+These process called one process create another
+This known parent process creating child process
+There several reason process may terminated Things could become issue The OS table one entry per process
+Each entry known PCB
+Each entry The basic thing learn PCB info needed process stopped restarted
+Note This diagram taken source material post available slide
+All right reserved
+The diagram fairly simple
+You see actual switching process happening neither process executing CPU perform processing middle switching
+The actual switching time vary around microsecond second millisecond The concept processing used far assumed single address space used every process single thread control
+But multiple thread within one process
+It possible think way You multiple process sharing one computer multiple thread sharing process
+This would useful web browser example one thread receiving data network another display text
+With web browser could one thread getting input user another thread autosaving
+Imagine word processor single threaded You able type anything autosaving
+Note On version powerpoint I type anything autosaving
+It annoying
+You might hear something called
+This another way saying thread
+So thread multiple flow control sharing one address space
+Each one need program counter register value stack
+Remember thread process share code section global variable network connection open file
+You may heard
+This multiple thread share process
+Programs become responsive resource shared better
+If part program blocked keep running
+As IO CPU use shared thread process performance usually better
+It economical There lot cost associated making process
+Memory resource need allocated
+Creating thread faster
+There concern though I mentioned two thread share data
+Therefore one thread might read location another writing need take care stop problem like
+Implementing threading fast done user space
+However OS aware meaning user level thread get blocked whole process blocked
+This useful support multiprocessor dual core available
+This OS schedule individual thread
+However slow requires system call
+That
+Slightly detailed note available I super cool I computer science unrelated coolness Fill detail click icon log You commenting using account
+You commenting using Twitter account
+You commenting using Facebook account
+You commenting using account
+Connecting
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+Hi everyone Looking help anyone opinion following matter I accepted architecture program computer science program university two different university actually
+Initially I applying architecture profession I saw going applied comp science back
+I got I second thought
+The computer science program turn cheaper shorter least year shorter I wo move halfway across country school literally ten minute away home
+I still fine according budget thousand dollar debt I take architecture route
+On hand I feel like I would enjoy architecture computer science
+Another aspect prospect graduation look job website ca help notice many job compared architecture
+As matter fact I barely saw architecture job posting mostly senior architect graduate architect year experience
+How people find job right University mystery yet every graduate program accepted found le related job architecture firm design bureau
+I talked couple professional side seems computer professional better balance architect enjoy bit also likely work year road
+I know profession entail would mind either feel like I would enjoy architecture would know sure I fully involved process
+It three week since I started thinking weighting two together I thought every argument possible exhausted death I need fresh perspective people already industry academia
+What would place
+I know ultimately going decision nobody decide better I asking point maybe something I thought aspect architecture computer science familiar field
+Now clarify second degree going last one I getting unless I decide research either field
+So computer science I planning build existing BSc finish two year six term including summer architecture program year long
+Please thank
+Aside stress bad press lack job graduation etc studying architecture best decision I made life life changing experience
+I ca think anything else would enriched changed degree I today
+I originally Computer Science program dropped go get BArch instead
+I tell I wish I stuck Computer Science
+Not I enjoy architecture introduction computer programming architectural modeling parametric modeling I believe CS degree would extremely beneficial
+So I would say go CS able add MArch get benefit world
+It sound like last degree though I sure suggest
+It want life mate
+You need think well later may deeply regret choice
+Do think much cost happiness price
+I putting computer science though magentasky right computer inevitable part architecture
+Are sure want block user hide related comment throughout site
+
+Computer science also strong connection discipline
+Many problem science engineering health care business area solved effectively computer finding solution requires computer science expertise knowledge particular application domain
+Thus computer scientist often become proficient subject
+Finally computer science wide range specialty
+These include computer architecture software system graphic artifical intelligence computational science software engineering
+Drawing common core computer science knowledge specialty area focus particular challenge
+Finally importantly computer scientist computer scientist fun
+Not mention lucrative career opportunity
+Computer Science The Profession Computer science discipline involves understanding design computer computational process
+In general form concerned understanding information transfer transformation
+Particular interest placed making process efficient endowing form intelligence
+The discipline range theoretical study algorithm practical problem implementation term computational hardware software
+A central focus process handling manipulating information
+Thus discipline span advancing fundamental understanding algorithm information process general well practical design efficient reliable software hardware meet given specification
+Computer science young discipline evolving rapidly beginning
+As includes theoretical study experimental method engineering design one discipline
+This differs radically physical science separate understanding advancement science application science field engineering design implementation
+In computer science inherent intermingling theoretical concept computability algorithmic efficiency modern practical advancement electronics continue stimulate advance discipline
+It close interaction theoretical design aspect field bind together single discipline
+Because rapid evolution difficult provide complete list computer science area
+Yet clear crucial area theory algorithm data structure programming methodology language computer element architecture
+Other area include software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation
+A professional computer scientist must firm foundation crucial area field likely knowledge one area discipline depending upon person particular area practice
+Thus well educated computer scientist able apply fundamental concept technique computation algorithm computer design specific design problem
+The work includes detailing specification analysis problem provides design function desired satisfactory performance reliable maintainable meet desired cost criterion
+Clearly computer scientist must sufficient training computer science area able accomplish task must also firm understanding area mathematics science well broad education liberal study provide basis understanding societal implication work performed
+Computer Science study principle application technology computing computer
+It involves study data data structure algorithm process structure principle computer hardware software design methodology topic numerical analysis operation research artificial intelligence language design structure translation technique
+Computer Science provides foundation knowledge student career objective wide range computing profession
+The study efficient effective software development technique
+Team work communication skill
+An interest applying technology problem wide variety discipline
+Computer Science concerned information much sense physic concerned energy devoted representation storage manipulation presentation information
+Computer Science concerned study machine communication man machine application machine
+Major area Computer Science include
+Operating Systems concerned development structure complex program facilitate communication
+
+Computational Science analysis numerical method solving mathematical problem computer
+
+Programming Languages study design property language human communicate computer
+
+Architecture study use mathematical logic design electronic circuit
+
+Intelligent Systems concerned mean computer may perform task might characterized intelligent performed human
+
+Automata Theory abstract study computer capability
+
+Information Storage Retrieval study method storing vast amount data computer method searching retrieving data
+
+Software Engineering study tool technique software design development testing maintenance
+
+A question I gotten lot lately difference similarity Computer Science Computer Engineering
+At risk difference I written guide explain Computer Science Computer Engineering alike differ
+Computer Engineering marriage Computer Science Electrical Engineering
+It focus computing form microprocessor embedded computing device laptop desktop system supercomputer
+As concern electrical engineering consideration microprocessor function designed optimized data communicated among electronic component integrated system electronic component designed operate process instruction expressed software software written compiled optimized specific hardware platform
+Therefore computer engineer electrical engineer specialize software design hardware design system design integrates
+Computer Science study data instruction processed stored communicated computing device
+A modern descendant Applied Mathematics Electrical Engineering Computer Science deal algorithm processing data symbolic representation data instruction design instruction language processing data technique writing software process data variety computing platform protocol communicating data reliably securely across network organization data database various type scale emulation human intelligence learning computer algorithm statistical modeling data large database support inference trend technique protecting content authenticity data
+Therefore computer scientist scientist mathematician develop way process interpret store communicate secure data
+Because Computer Engineers Computer Scientists ultimately work data attempt ultimately harness meaning significant overlap coursework student two field take well career pursue
+This minimize distinctive nature two discipline
+It simply acknowledges fact type computer professional find context purpose similar kind project different aspect kind project
+Both Computer Engineers Computer Scientists advance computing technology solve problem using computing technology
+If consider computing technology term scale Computer Engineers operate often microscopic macroscopic end spectrum whereas Computer Scientists work middle part spectrum
+More specifically Computer Engineers deal physic semiconductor electronics may design hardware integrated circuit level small well integration hardware software optimized run realize complete computing system large
+Computer Scientists write software design database devise algorithm format communication secure data processed hardware make integrated system function
+Consider iPhone
+Apple employ Computer Scientists Computer Engineers design new version iPhone
+Computer Engineers Electrical Engineers designed chip house integrated circuit make iPhone various component cell radio screen control memory microprocessor function figured get various component work
+That involves looking device microscopic level integrated system level
+Computer Scientists wrote operating system manages memory concurrently running application apps app store run top operating system packing unpacking data packet network communication encrypting data prying eye see
+The computer scientist provide glue piece bring turn computer engineer beginning product component design computer engineer end product device people text browse web play Angry Birds
+From example easy imagine much dependence function realizing finished product significant overlap coursework Computer Engineers Computer Scientists take career opportunity pursue
+I found website provides particularly helpful description Computer Engineering identifies kind job Computer Engineers work company hire salary earn
+That page begin helpful list specialization area Computer Engineering
+I copied list specialization I marked asterisk Computer Scientists also specialize
+In case overlap Computer Scientists focus software development aspect specialization Computer Engineers study hardware design integration hardware software needed implement specialization
+That website present number interesting data Computer Engineering
+For example table express relationship among Electrical Engineering Computer Engineering Computer Science term class major take percentage class fall category hardware software
+You see computer science software computer engineering hardware theme play table
+That easiest way distinguish two field
+And yet enough overlap ensure kind student find plenty opportunity wide range career computer field
+Professor chair Mathematics Computer Science Director Master Science Information Security Lewis University
+You find
+Please also I would like ask difference Sc
+Computer Science Sc
+Mathematics Computer Science
+I computer science social science natural science
+That good question
+There consensus kind science Computer Science
+A good book subject The Science Computing Shaping Discipline Matti Tedre
+Personally I see Computer Science engineering discipline
+Like Electrical Engineering applies law Physics Math solve problem
+Computer Engineering Computer Science mean different thing different people
+I think article may explaining American view
+In Spain degree time I called Computer Science Engineering literally translated lasted year
+Actually amount work year degree number Credits standardized EU
+They teach math quite bit database software hardware
+I think equivalent Degree Master US
+Now education Spain changed programme I date I know issued kind lightweight degree year
+Later go buy master without knowing nearly much knew degree fundamental
+What business built top education
+I find bit shame actually
+But give older engineer competitive advantage opinion
+Greetings everyone I Computer Engineering Computer Science
+The simplest way I think explain difference BSCE BSCS considering two degree following A BSCE degree include coursework also required BSEE electrical engineering degree
+This prepare graduate work company develop product consisting software directly control hardware
+Some example Motorola Nokia texas instrument
+A BSCE degree include little hardware electrical engineering course required BSCE degree
+Instead computer science coursework operating system design compiler theory advanced algorithm design taken instead
+This best degree working company google amazon Citrix
+Which best depends interest want work
+In experience many company need kind
+While engineer Citrix never need interface hardware develop window kernel mode device driver
+good luck
+Required field marked Kathrynne Skonicki Director Media Relations Office Marketing Communications
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I decided read Silberschatz Galvin Gagne edition summer
+I gotten topic confusing interrupt role relates operating system
+The text say operating system begin first process init wait event occur event usually signaled interrupt
+The text also say interrupt come either hardware software
+How work little detail
+Is operating system driven interrupt
+I looking big picture understanding
+This question came site professional enthusiast programmer
+When OS run process init would sent signal manager etc like memory device etc
+The interrupt way telling processor OS ready new input etc
+So sometime init OS waiting ready interrupt would indicate exactly
+So event relates
+In regard hardware software interrupt hardware interrupt come hardware
+Eg
+device like keyboard etc
+A hardware interrupt cause processor save state begin execution interrupt handler
+On hand software interrupt instruction instruction set cause processor change privilege level also known
+These detail covered later text book
+Interrupts allow operating system take notice external event mouse click
+Software interrupt better known exception allow OS handle unusual event like error coming code execution
+The sequence event usually like The important interrupt operating system timer tick interrupt
+The timer tic interrupt allows OS periodically regain control currently running user process
+The OS decide schedule another process return back process housekeeping etc
+The timer tick interrupt provides foundation concept preemptive multitasking
+An interrupt unusual event happens need processed regardless whatever else going
+I say unusual quote necessarily unexpected bad unusual point view CPU happen busy executing code may unrelated
+The CPU mechanism listening interrupt way configuring interrupt various kind occur
+This allows operating system arrange notified hardware device thing including hardware clock simply generates interrupt regular interval
+Through CPU interrupt handling configuration designated code OS gain control whenever interrupt happen
+The computer unpleasant state application programmer interrupt handler start running machine busy something else could OS notified something happened
+It gather information needed actually handle interrupt wherever machine lying around whatever processing required without disturbing could anything running CPU
+If OS want switch application process currently running save enough context able restore later without disturbing context load context let CPU resume normal execution context
+As mentioned interrupt used getting notification hardware device alternative would periodically check keeping track time getting guaranteed opportunity regain control application process order switch application running recovering application process executing invalid instruction also enable application make request OS
+These last known system call
+To prevent application messing machine normally run machine user mode prevents application basically anything reading writing virtual memory already allocated
+This mean else file asking memory accessing device etc application make system call basically leaving information want somewhere know OS look executing CPU instruction cause interrupt right kind
+The OS see application trying determine whether carry request
+This guarantee OS involved process attempt anything affect anything outside process way access policy enforced
+So essentially yes OS driven interrupt
+An abstract OS bootstrap machine normal operation state point hand control normal process
+Under normal circumstance OS regain control handling interrupt since pretty much nothing interesting happens without interrupt OS basically control everything time
+The operating system driven interrupt
+This mean If process execute device service user respond operating system sit quietly waiting something happen
+Events almost always signaled occurrence interrupt trap trap hardware interrupt generated invalid instruction given return control OS
+An example invalid instruction program trying access another program memory space without permission
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+µµµµ obj endobj obj endobj obj R R R R R R R R endobj obj stream ì OÀxÃy bÃB A I ÝwÖ Oæp ud S ü endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream T KQ ø Áa é B ü ûúWæÉæÀ Tì ð hÈC Å êÈj endstream endobj obj stream pÛ Z ùÉÓO ã TL ÖÔ deI Z ZêµgÏM À Â õ Ð aE æþÜ wêµlöbÕáþÔ öí atðØää
+u ê ÖÔ cÔwG Ô
+HØ V Ô öVËÍZí ß jý ARô
+
+Finding best school Every serious computer science student quickly realizes selecting master doctoral program ranking
+Although name recognition ranking important several factor must considered choosing graduate program computer science
+These factor include program specialization faculty research location financial support
+With computer science encompassing wide range want select program specializes area interested researching
+Interested theory
+Then MIT Cornell would better choice Yale Caltech
+Is machine learning area like specialize
+Then beat Carnegie Mellon home world first machine learning department core affiliated faculty area research
+Take time find top program also strong area want study
+Choosing school based area specialization provide research opportunity better fit academically
+Additionally want choose school faculty working research project interest
+Getting accepted top program guarantee find project become passionate additionally need find adviser whose particular research interest coincide
+Graduate school opportunity learn conduct research brightest mind field make sure school choose good number faculty working project find personally interesting
+Moreover want take practical matter location financial support account
+If surfer Orange County California move Illinois may option
+Location lower list priority still relevant making decision
+PhD program computer science last anywhere four seven year sure visit campus seriously considering make final selection
+More important location financial support rank chief among concern selecting program
+Graduate life difficult financial anxiety compound academic stress face
+Avoid school offer minimal financial support avoid piling debt course graduate education
+There point accumulating debt many good program provide full financial support teaching assistantships research fellowship
+Find program willing provide financial support student academic background ask duration continuation guarantee assessing offer
+Taking factor consideration help choose program right provides best opportunity succeed graduate student
+After narrowing choice based research interest factor still faced decision many school actually apply
+Although process different student general guideline useful
+An optimal number program apply five eight
+Admissions process notoriously arbitrary
+With many student applying position getting admitted top program even superlative student crapshoot
+So risk academic career single school may may accept
+Although applying school may sound like good way initially improve odds cost application quickly dissuade strategy
+Even afford strategy poor one since either ideal applicant
+If burden turning school accept mention cash waste process
+You accept one offer end
+If type student graduate program competing would apply school like MIT Stanford Berkeley almost certain reject
+The application process call dose realism even midst optimism
+Your wallet thank later
+To sure apply top school would die get
+But also apply school would happy attend one two safety school
+A good balanced strategy would apply
+Two reach school Carnegie Mellon MIT Berkeley Stanford top student UCLA Texas competitive student
+If get one need apply
+However applying one may improve chance admitted
+
+Two solid choice reasonable chance admitted good student Georgia Tech Ohio State
+These reputable school program would proud participate
+The exact choice school depend caliber student choose two likelihood admitted based academic profile
+
+One two safety school
+These school almost sure get serve case accepted preferred school
+If choose school wisely need rely however always good idea Plan B ready case Plan A pan
+Many smaller state private school serve school
+Throughout application process talk others professor mentor regarding school good fit interest academic profile
+Although one like one dream shot applying MIT GPA publication GRE score simply waste money
+Choose school wisely since application process expensive
+You also begin process early maintain spreadsheet tracking application submitting due date form needed
+As make progress application mark form sent still need submitted
+This spreadsheet serve command center application process help avoid missed deadline incomplete application
+As final note discouraged turned one possibly several school
+The process contains large element luck
+We know student accepted Carnegie Mellon yet rejected UC San Diego Penn
+Different school looking student different strength interest school may consider good fit faculty
+Try enjoy application process keep discouraged
+If applied school wisely get least one program happy
+As marriage choosing graduate program computer science need want one
+list following graduate computer science program best United States Toronto Canada Oxford England handful school Israel Switzerland rank school
+
+Interested robotics
+Stanford received plenty recognition research effort revolutionary area robotics artificial intelligence scientific computing
+Founded Stanford Computer Science CS Department program offer Master Science Doctor Philosophy degree
+The department continues lead world computer science research education
+The department often performs interdisciplinary research work area physic engineering medicine
+notable Computer Science alumnus Stanford professor emeritus author mammoth series called recognized industry ultimate guide
+Knuth historical contribution study algorithm computer programming design
+From revolutionary medical electronic device harvesting energy child LeapPad Learning System Electrical Engineering Computer Science Department EECS MIT solid reputation making global technological impact world
+The Computer Science department offer master doctoral program course area algorithm information theory multicore programming robotics
+The MIT Computer Science Artificial Intelligence Laboratory CSAIL largest research laboratory MIT also one world vital center information technology research
+The EECS faculty member expert researcher field
+Graduates become leader area academia material science biomedical technology nanotechnology name
+Once program student follow footstep notable alumnus like William Hewlett Robert Metcalf well current faculty member Anant Agarwal Professor Electrical Engineering Computer Science several company including Tilera Corporation created Tile multicore processor Virtual Machine Works
+The Electrical Engineering Computer Sciences EECS division UC Berkeley turned biggest name technology Steve Wosniak Apple Computers William Joy Sun Microsystems
+Among many notable current EECS faculty member Pieter Abbeel several award including Sloan Research Fellowship
+Popular medium outlet BBC Discovery Channel featured Abbeel advanced work robotics aerobatics
+The EECS program offer Master Science degree area computer architecture operating system robotics database management system scientific computing
+Master degree student receive preparation research theoretical area experience laying groundwork Are interested designing latest software technology help suffering speech impairment brought stroke head trauma
+Or researching chromosomal abnormality role cancer
+The Princeton Computer Science CS Department offer Master Science Engineering
+degree research project internship important area well project theory computational market network system computer architecture programming language name
+Some area study include algorithm data structure computational linguistics computer music cryptography programming language
+Alan Turing Alonzo Church theoretical father computer science artificial intelligence many notable Princeton CS alumnus made indelible mark field
+Working computer science alumnus faculty William Red led Tartan Racing team victory DARPA Grand Challenge currently leading graduate team competing Google Lunar X Prize space competition land robot moon one many advantage attending Carnegie Mellon University School Computer Science SCS
+Carnegie Mellon received recognition world first machine learning department
+SCS offer Master Science degree program ranked highly specialty interdisciplinary area machine learning artificial intelligence system theory
+SCS offer program interdisciplinary track across several department
+Some track offered program include applied logic computational biology language informational technology robotics
+The cartoon series The Jetsons gave Americans glimpse world household robot
+Today student learn alongside Cornell faculty Ashutosh Saxena conduct research robot learning
+His work featured BBC World News highlight breakthrough research robotics manipulation personal robot truly useful common household office space
+The Cornell Department Computer Science Master Science program offer course research topic area database system security graphic robotics computer architecture name
+The
+program includes core course thesis research requirement
+The CS program includes different field graduate school requirement including teaching breadth requirement research project completing residency taking exam
+Did ever see movie Avatar
+Paul Debevec research associate professor Computer Science department University Southern California USC Viterbi School Engineering received Scientific Engineering Academy Award design engineering used film
+Did ever computer virus
+Thanks USC alumnus Fred Cohen inventor computer virus defense technique virus contained eliminated
+The USC Department Computer Science research faculty member contributing field computing nationally internationally since
+Both Master Science student work interdisciplinary research project including DNA computing neuroscience Internet technology software architecture computer graphic
+Research specialized area include game design artificial intelligence computer network intelligent robotics software engineering name
+Dell Computers founder Michael Dell may dropped University Texas Austin contribution technology financial contribution University Texas Computer Science UTCS department forever live
+Just one many notable alumnus UTCS faculty member collectively garnered national international award including two Turing award
+Recently NPR radio segment one UTCS professor Peter Stone work creating robot play soccer
+The Master Science program includes major minor coursework area computer architecture multimedia system artificial intelligence
+Students may opt finish program without thesis
+The program offer foundational requirement well breadth however program area formal method engineering bioinformatics graphic visualization name
+Bill Gates Microsoft unquestionably one technologically famous individual attend Harvard University graduate
+The Bill Melinda Gates Foundation underwrote one main research facility Harvard house student School Engineering Applied Sciences SEAS groundbreaking activity
+The SEAS Computer Science department offer Master program continues lead world advance area imaging security artificial intelligence linguistics computational theory
+The Master program requires two component graduate general requirement SEAS additional work specific Computer Science degree
+Doctoral student required take minimum course along plan study includes research
+All graduate student required choose path one five area Applied Mathematics Applied Physics Computational Science Engineering Computer Science Engineering Sciences
+Caltech Computing Mathematical Sciences department home innovative research world
+For example faculty member Professor Erik Winfrees breakthrough research molecular programming aim put technology hand user biology chemistry physic
+Facebook social medium giant hired Caltech graduate research position improve web performance user latency optimization
+Graduate study Computer Science program aim towards include course area information theory robotics operating system
+The core coursework thesis necessary
+degree lead terminal degree required part program
+The doctoral program consists research breadth requirement thesis final examination
+Many alumnus University Illinois Computer Science department CS Illinois true pioneer leader technology industry
+Alumnus Ray Ozzie Microsoft chief software architect develops company software service platform
+Alumnus Max Levchin CEO Slide largest social entertainment company world
+Alumnus Jawed Karim website YouTube
+CS Illinois graduate student continue conduct research area computer science technology
+The Computer Science program offer Master Science degree
+Master student need coursework thesis research breadth requirement complete program
+The doctoral program includes thesis research coursework teaching assistantship exam dissertation defense
+Have ever heard little company called Google
+Sergey Brin President Technology Google one many famous alumnus University Maryland College Park UMCP Department Computer Science
+At UMCP student also work alongside distinguished faculty solving complex issue data security problem online fraud form abuse
+Professor Elaine Shi significant research achievement cryptography oblivious computation may shape monitoring protection aspect online security
+The UMCP Department Computer Science offer
+degree
+The department performs research area computer vision bioinformatics artificial intelligence graphic name
+The department offer
+degree without thesis option along relevant coursework
+The doctoral program includes coursework oral exam dissertation research
+Micheal Taylor University California San Diego UCSD Computer Science Engineering CSE Department developing prototype processor called GreenDroid designed dramatically reduce energy consumption smart phone
+UCSD participates type research project
+The CSE department offer Master PhD program area spanning theory computation software hardware
+It house graduate student faculty member
+For
+program student take core course decide one technical concentration area choose several option complete program
+These option include thesis comprehensive exam project else interdisciplinary plan
+The doctoral program includes research breadth depth requirement exam teaching assistant requirement dissertation
+Do download music
+Well thanks University Michigan UM alumnus Tony Fadell creation iPod music lover access hundred thousand song album anywhere anytime
+Tony Fadell former Senior Vice President Apple IPod division one many distinguished alumnus University Michigan Electrical Engineering Computer Science program EECS
+The Master program includes core course specific topic study research robotics computer vision programming language coding theory
+The doctoral program includes advanced course area computer theory architecture interactive system well research dissertation
+The film several Oscars also something common Purdue University Computer Science Department alumnus Kevin Grazier
+Grazier science adviser movie filming well several science TV series show
+His contribution extend science planning engineer year Jet Propulsion Laboratory wrote mission planning analysis software
+Graduate student reach star obtaining Master degree computer science university
+The graduate program prepares student research teaching offer research project area data mining computational biology software engineering distributed system name
+The
+program allows distance learning
+The program encompasses breadth requirement oral written exam thesis
+With Alumni Saul Amarel pioneer Artificial Intelligence Stephen Perlman OnLive founder developer Mova Contour motion capture technology wonder graduate student look Columbia University Department Computer Science educational research excellence
+The department fall Fu Foundation School Engineering Applied Science offer master doctoral degree
+The Master Science program includes core course thesis well specialty track area natural language processing software system computer security name
+The program includes directed advanced research faculty like Dana Pe er breakthrough cancer research using computational biology
+The doctoral requirement also include community service breadth depth requirement exam coursework teaching dissertation
+The University Washington UW Computer Science Engineering CSE Department offer several program graduate student well multidisciplinary student covering computer science fundamental research innovation
+University Washington CSE program offer Professional Master Program PMP regular Master Program well degree program
+The PMP program designed fully employed professional plan continuing working attaining skill move position project greater depth
+The program offer educational course area Human Computer Interaction Applied Algorithms Parallel Computation allows distance learning
+The regular Master program offer coursework similar PMP program well capstone project thesis component
+The program offer strong computer science research program well multidisciplinary project field Computer Graphics Vision Animation Game Science
+For example Zoran Popovic collaboration UW biochemist David Baker created online visual game called Foldit eventually led discovery structure protein baffled scientist decade
+The program encompasses breadth requirement seminar research dissertation
+Georgia Tech School Computer Science resource like faculty member Tom Conte groundbreaking research computer architecture compiler code generation allow graduate student work alongside biggest pioneer computer science today
+Graduate student also follow footstep alumnus Krishna Barhat Google research scientist creator Google News Jim Allchin former executive Microsoft
+The School Computer Science offer Master program provides online
+degree program Information Security
+The Master program offer degree bioengineering computer science information security
+The school provides doctoral program algorithm optimization bioengineering bioinformatics computer science UCLA Computer Science alumnus Vint Cerf wear suit industry known casual attire received recognition Internet pioneer dubbed one father His contribution garnered National Medal Technology Turing Award Presidential Medal Freedom
+This description paint portrait one many distinguished highly honored alumnus faculty UCLA Computer Science department
+The department offer Master Science Doctor Philosophy degree
+The master program entail either thesis plan study examination plan study
+Each plan includes core coursework student usually complete year half
+The doctoral program includes breath requirement course exam dissertation
+With notable alumnus Grace Hopper computer language pioneer wonder student seek enter field computer science Yale University
+The Yale Computer Science department offer two graduate program Doctor Philosophy degree terminal Master Science
+degree
+It typically take year get master four six year obtain doctorate
+The Master degree requires taking eight course
+The program focus research
+The first three term doctoral program breadth requirement third term main focus research guided adviser supervisory committee
+Some area research include computer music robotics computer graphic scientific computing applied math machine learning artificial intelligence
+Students expect work alongside notable faculty Brian Scassellati whose research project robotics lab build robot aid understanding human development specifically social development child
+Scassellati belief robotics offer new kind interdisciplinary tool investigating human behavior
+sponsored school sponsored school sponsored school Copyright
+
+An architect licensed professional organizes space
+The differently scientific world architecture profession always combination art science
+Architects design house office building landscape ship even entire city
+The service offered licensed architect depend type project developed
+Complicated commercial project accomplished team architect
+Sole proprietor architect starting specialize experiment smaller residential project
+For example Shigeru Ban coveted Pritzker Architecture Prize spent
+Architectural fee based complexity project custom home may range total construction cost
+Architects organize different type space
+For example architect known sculpted landscape also designed house
+Likewise Japanese architect Sou Fujimoto designed house addition London
+Large space like city entire neighborhood within city also designed architect
+In early century created several urban plan including Chicago
+In early century architect created called master plan redeveloping World Trade Center area
+Like professional architect also take duty special project
+Many architect teach college university
+Architects organize run professional organization like American Institute Architects AIA Royal Institute British Architects RIBA
+Architects also taken lead stopping moving toward goal new building development major renovation year
+Both AIA work Edward Mazria founder work toward goal
+Architects design plan space structure city consideration look aesthetic safety accessibility functionality client cost specifying spec construction material process destroy environment
+They manage building project large project design architect project manager architect importantly communicate idea
+The architect role turn idea mental activity reality built environment
+Examining sketch history behind structure often indicates difficulty communicating design idea
+A complex building like
+The Statue Liberty sat piece local park realized
+Communicating architectural idea important part architect Vietnam Memorial wall mystery judge able communicate vision judge
+A licensed architect designer rightfully called architect
+As professional architect ethically bound code conduct trusted abide rule regulation associated building project
+Throughout career architect participate continuing education professional development similar medical doctor licensed attorney
+Only licensed architect call Any educated person could take role
+Today architect completed university program lengthy internship
+Like doctor lawyer architect must pas series rigorous exam order licensed
+In North America initial RA designate registered licensed architect
+When hire designer know Architects trained specialize many area historic preservation structural engineering computer programming environmental biology
+This training lead wide variety career
+Many major architecture
+An person plan flow information Web page
+This use word related known although design printing may specialty within field architecture
+Architects often design building Building Designer usually licensed architect
+Historically architect chief carpenter
+The word architect come Greek word meaning chief carpenter builder
+We often use word architect describe artist engineer designed historic building iconic tower dome
+However twentieth century architect required pas test licensed
+Today word architect refers licensed professional
+Landscape architect often work closely building architect
+Landscape architect analyze plan design manage nurture built natural environment according professional organization The American Society Landscape Architects
+Landscape architect different educational tract licensing requirement registered architect built environment
+There error
+Please try
+Thank signing
+

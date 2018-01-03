@@ -1,0 +1,506 @@
+In field transaction management system abstract model describe execution transaction running system
+Often operation action ordered time performed set executed together system
+If order time certain operation determined system used
+Examples operation requesting read operation reading writing aborting committing requesting lock locking etc
+Not transaction operation type included schedule typically selected operation type data access operation included needed reason describe certain phenomenon
+Schedules schedule property fundamental concept database theory
+The following example schedule In example horizontal axis represents different transaction schedule The vertical axis represents time order operation
+Schedule D consists three transaction
+The schedule describes action transaction seen
+First Reads Writes object X Commits
+Then Reads Writes object Y Commits finally Reads Writes object Z Commits
+This example schedule sequential overlap time action three transaction sequential transaction interleaved time
+Representing schedule D table rather list convenience identifying transaction operation glance
+This notation used throughout article
+A common way technical literature representing schedule list Usually purpose reasoning concurrency control database operation modeled occurring point time without duration
+When satisfactory start end possibly point event specified rarely
+Real executed operation always duration specified respective time occurrence event within exact time beginning completion concurrency control reasoning usually precedence time whole operation without looking quite complex detail operation matter operation another operation
+Furthermore many case relationship two specific operation matter specified specified pair operation
+In general operation transaction schedule interleave transaction executed concurrently time order operation transaction remain unchanged implied transaction program
+Since always time order operation transaction matter need specified schedule general operation rather order pair determined list operation
+Also general case transaction may consist several process properly represented partial order operation rather total order
+Thus general schedule partial order operation containing partial order transaction
+two operation represented operation existence pair mean always schedule general case ordered pair
+Such set schedule represented DAG operation node cycle allowed since cycle mean first operation cycle another second operation cycle contradicts perception
+In many case graphical representation graph used demonstrate schedule
+Since list operation table notation used article always represents total order operation schedule total order represented list always represented DAG
+The transaction executed see example serial schedule one transaction start running transaction ended
+A schedule equivalent outcome serial schedule property
+In schedule E order action transaction executed D end E give result Two action said conflict conflicting pair The following set action conflicting While following set action The schedule said following two condition satisfied A schedule said schedule one serial schedule
+Another definition schedule graph committed transaction considered acyclic graph defined include also uncommitted transaction cycle involving uncommitted transaction may occur without conflict serializability violation
+Which serial schedule
+A schedule said obeys CO also schedule property
+This mean order time transaction commitment event compatible precedence partial order respective transaction induced schedule acyclic precedence graph serializability graph conflict graph
+This implies also
+The CO property especially effective achieving distributed system
+discovered obviously mentioned
+Its correct definition appears however description related technique theory partial inaccurate misleading
+For extensive coverage commitment ordering source see
+Two schedule said following condition satisfied A schedule said serial schedule
+Note definition schedule
+Notice example example discussion time
+There however schedule schedule transaction performing The example since serial schedule
+Since determining whether schedule little practical interest
+Transactions commit transaction whose change read commit
+These schedule recoverable
+F recoverable commits make value read correct
+Then commit
+In aborted abort value A read incorrect
+In case database left consistent state
+If transaction abort transaction commits relied unrecoverable schedule
+In example G unrecoverable read value A written committed
+later aborted therefore value read wrong since committed schedule unrecoverable
+Also named cascadeless
+Avoids single transaction abort lead series transaction rollback
+A strategy prevent cascading abort disallow transaction reading uncommitted change another transaction schedule
+The following example one discussion recoverable In example although recoverable avoid cascading abort
+It seen abort aborted order maintain correctness schedule already read uncommitted value written
+The following recoverable schedule avoids cascading abort
+Note however update A always lost since aborted
+Note Schedule would serializable would committed
+Cascading abort avoidance sufficient necessary schedule recoverable
+A schedule strict strictness property two transaction write operation precedes operation either read write commit abort event also precedes conflicting operation
+Any strict schedule cascadeless converse
+Strictness allows efficient recovery database failure
+The following expression illustrate hierarachical containment relationship class The illustrates clause graphically
+In practice general purpose database system employ recoverable primarily strict schedule
+
+Titan supercomputer Oak Ridge National Laboratory near Knoxville shown
+It perform trillion calculation per second
+That ability help run computer model complex dynamic system Earth changing climate
+Computers use math data computer instruction create representation event
+They also predict happening could happen complex situation climate system spread rumor throughout town
+And computer spit result without people wait year take big risk
+The scientist build computer model start important feature whatever event hope represent
+Those feature may weight football someone kick
+Or might degree cloud cover typical region seasonal climate
+Features change vary known
+Next computer modeler identify rule control feature relationship
+The researcher express rule math
+The math built model rather simple mostly addition subtraction multiplication logarithm note Jon Lizaso
+He work Technical University Madrid Spain
+Logarithms express number power number help simplify calculation working big number
+Even still much work one person
+We talking probably thousand equation explains
+mathematical expression use number relate two thing equal
+But usually look complicated x z Solving even equation might take whole day rate one equation every second
+And single mistake might throw answer way
+More difficult math might bump time needed solve equation average minute
+At rate solving equation could take nearly three week took time eat sleep
+And one mistake might throw everything
+In contrast common laptop computer perform billion operation per second
+And one second Titan supercomputer Oak Ridge National Laboratory Tennessee trillion calculation
+How much trillion
+That many second would come million year
+A computer model also need algorithm data
+set instruction
+They tell computer make decision calculation
+Data fact statistic something
+With calculation computer model make prediction specific situation
+For instance might show simulate result particular football player kick
+Computer model also deal dynamic situation changing variable
+For example likely rain Friday
+A weather model would run calculation changing factor one one various combination
+After would compare finding run
+After adjusting likely factor would issue prediction
+The model would also rerun calculation Friday got closer
+To measure model reliability scientist might computer run calculation thousand even million time
+Researchers also could compare model prediction answer already know
+If prediction closely match answer good sign
+If researcher must work find missed
+It could include enough variable relied much wrong one
+Computer modeling deal
+Scientists always learning experiment event real world
+Researchers use knowledge improve computer model
+The better computer model useful become
+A group rule procedure solving problem series step
+Algorithms used mathematics computer program figuring solution
+The weather condition prevailing area general long period
+An electronic device process information based rule stored device
+A program run computer creates model simulation feature phenomenon event
+A set instruction computer us perform analysis computation
+The writing instruction known Facts statistic collected together analysis necessarily organized way give meaning
+For digital information type stored computer data typically number stored binary code portrayed string zero one
+In mathematics statement two quantity equal
+In geometry equation often used determine shape curve surface
+The power exponent one base number must multiplied produce another number
+For instance base system must multiplied produce
+So logarithm base system
+In base logarithm would would
+computing To try imitate condition function appearance something
+Computer program referred
+mathematics A letter used mathematical expression may take one different value
+experiment A factor changed especially one allowed change scientific experiment
+For instance measuring much insecticide might take kill fly researcher might change dose age insect exposed
+Both dose age would variable experiment
+Being almost like something
+An object concept virtually real would almost true real quite
+The term often used refer something modeled accomplished computer using number using part
+So virtual motor would one could seen computer screen tested computer programming device made metal
+Kowalski
+
+October
+Perkins
+
+March
+Mackenzie
+
+Ornes
+
+Mackenzie
+
+What reading year
+Read find
+Nancy In flour sickened dozen people United States
+Most eaten raw dough batter baking
+
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer Qè ØÞãBx å Ðl ãSã ÞXO ÆýÃ ÌOc N ìDB Í
+ð lb T Ãxy OeÅ FÄ â ÜÜuÕ µ
+ó
+ù À µîà Ì ý
+endstream endobj obj stream Q
+g ÀðòFv ä bvNü Å LE k ëÌµá Ù
+Ñö Ã ø nQ û J Mq u uõ ënt h e h ùÄT
+eÂ uQ yPÏ ÿ õ Etöf endstream endobj obj stream æ ÅnÅæU
+ÂE Gõ û ÌEÄçÐ æø
+
+The following checkpoint give model student schedule joint program
+Here assume student commits major beginning sophomore year spent freshman year exploring Computer Science course one number possible major
+We also assume student opts satisfy MCS requirement entirely graduate computer science class rather two technical course approved advisor student hold GA position fifth year resulting reduced load semester hour last two term
+course bolded
+All All All One All One All One All All One All One Student may hold All Student may hold All MacLean Hall Iowa City IA The University Iowa
+
+Students must complete sequence either Literature History
+Because discipline specific requirement Humanities course recommended History sequence completed Social Sciences course
+Courses COMP Elective Math Elective Core Science Sequence Science Elective Concentration credit must chosen accordance CSSE department policy approved course listing
+Students must consult CSSE Academic Advisor selecting course
+The Humanities Social Science Elective must chosen set course designated Humanities Social Sciences Auburn University Core Curriculum
+The AU Bulletin list University Core Curriculum requirement student College Engineering
+The course used calculate GPA
+
+Computer information research scientist invent design new approach computing technology find innovative us existing technology
+They study solve complex problem computing business medicine science field
+Most computer information research scientist work full time
+About worked hour per week
+Most job computer information research scientist require master degree computer science related field
+In federal government bachelor degree may sufficient job
+The median annual wage computer information research scientist May
+Employment computer information research scientist projected grow percent much faster average occupation
+Computer scientist likely enjoy excellent job prospect many company report difficulty finding highly skilled worker
+Explore resource employment wage state area computer information research scientist
+Compare job duty education job growth pay computer information research scientist similar occupation
+Learn computer information research scientist visiting additional resource including source key characteristic worker occupation
+Computer information research scientist invent design new approach computing technology find innovative us existing technology
+They study solve complex problem computing business science medicine field
+Computer information research scientist typically following Computer information research scientist create improve computer software hardware
+Creating improving software involves working algorithm set instruction tell computer
+Some computing task difficult require complex algorithm
+Computer information research scientist try simplify algorithm make computer system efficient possible
+The algorithm allow advancement many type technology machine learning system cloud computing
+Computer information research scientist design new computer architecture improves performance efficiency computer hardware
+Their work often lead technological advancement efficiency better networking technology faster computing speed improved information security
+In general computer information research scientist work theoretical level computer professional
+Some computer scientist work specialist multidisciplinary project
+The following example type specialty computer information research scientist Computer information research scientist write algorithm used detect analyze pattern large datasets
+They improve way sort manage display data
+Computer scientist build algorithm software package make data easier analyst use
+For example may create algorithm analyze large set medical data order find new way treat disease
+They may also look pattern traffic data help clear accident faster
+Some computer information research scientist study improve robot
+Robotics explores machine interact physical world
+Computer information research scientist create program control robot
+They work closely engineer focus hardware design robot
+Together worker test well robot task created assemble car collect data planet
+Computer information research scientist design new programming language used write software
+The new language make software writing efficient improving existing language Java making specific aspect programming image processing easier
+Computer information research scientist held job
+The largest employer computer information research scientist follows Some computer scientist may work team specialist multidisciplinary project
+Most computer information research scientist work full time
+About worked hour per week
+Most job computer information research scientist require master degree computer science related field
+In federal government bachelor degree may sufficient job
+Most computer information research scientist need master degree computer science related field computer engineering
+A master degree usually requires year study earning bachelor degree field computer science information system
+Computer scientist work specialized field may need knowledge field
+For example working biomedical application may need taken biology class
+Some computer scientist may become
+Computer information research scientist must organized thinking analyze result research formulate conclusion
+Computer information research scientist must communicate well manager able clearly explain conclusion people technical background
+They often present research conference
+Computer information research scientist work many complex problem
+Computer information research scientist must pay close attention work small programming error cause entire project fail
+Computer information research scientist must continually come innovative way solve problem particularly idea initially work intended
+Computer algorithm rely logic
+Computer information research scientist must talent reasoning
+Computer information research scientist must knowledge advanced math technical topic critical computing
+Median annual wage May Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Occupational Employment Statistics The median annual wage computer information research scientist May
+The median wage wage half worker occupation earned amount half earned le
+The lowest percent earned le highest percent earned
+In May median annual wage computer information research scientist top industry worked follows Most computer information research scientist work full time
+About worked hour per week
+Percent change employment projected Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Employment Projections program Employment computer information research scientist projected grow percent much faster average occupation
+However small occupation fast growth result new job period
+The research development work computer information research scientist turn idea technology
+As demand new better technology grows demand computer scientist grow well
+Rapid growth data collection business lead increased need service
+Computer scientist needed write algorithm help business make sense large amount data
+With information business understand consumer better making work computer information research scientist increasingly vital
+A growing emphasis cybersecurity also lead new job computer scientist needed find innovative way prevent cyberattacks
+In addition increase demand software may increase need computer scientist create new programming language make software writing efficient
+Computer information research scientist likely excellent job prospect
+For applicant seeking employment specialized field finance biology knowledge field along computer science degree may helpful getting job
+SOURCE Bureau Labor Statistics Employment Projections program The OES program produce employment wage estimate annually occupation
+These estimate available nation whole individual state metropolitan nonmetropolitan area
+The link go OES data map employment wage state area
+Occupational employment projection developed state Labor Market Information LMI individual state Employment Projections office
+All state projection data available
+Information site allows projected employment growth occupation compared among state compared within one state
+In addition state may produce projection area link state website data may retrieved
+CareerOneStop includes hundred data available state metro area
+There link side menu compare occupational employment state occupational wage local area metro area
+There also search wage zip code
+This table show list occupation job duty similar computer information research scientist
+Computer information system manager often called information technology IT manager IT project manager plan coordinate direct activity organization
+They help determine information technology goal organization responsible implementing computer system meet goal
+Computer hardware engineer research design develop test computer system component processor circuit board memory device network router
+Computer programmer write test code allows computer application software program function properly
+They turn program design created software developer engineer instruction computer follow
+Database administrator DBAs use specialized software store organize data financial information customer shipping record
+They make sure data available user secure unauthorized access
+Software developer creative mind behind computer program
+Some develop application allow people specific task computer another device
+Others develop underlying system run device control network
+Computer network architect design build data communication network including local area network LANs wide area network WANs Intranets
+These network range small connection two office networking capability cloud infrastructure serf multiple customer
+Computer system analyst sometimes called study organization current computer system procedure design solution help organization operate efficiently effectively
+They bring business information technology IT together understanding need limitation
+Information security analyst plan carry security measure protect organization computer network system
+Their responsibility continually expanding number cyberattacks increase
+Computer network critical part almost every organization
+Network computer system administrator responsible operation network
+Web developer design create website
+They responsible look site
+They also responsible site technical aspect performance capacity measure website speed much traffic site handle
+In addition web developer may create content site
+Top executive devise strategy policy ensure organization meet goal
+They plan direct coordinate operational activity company organization
+For information computer information research scientist visit For information opportunity woman pursuing information technology career visit To find job opening computer information research scientist federal government visit Bureau Labor Statistics Department Labor Computer Information Research Scientists Internet visited
+Tuesday October The tab describes typical duty responsibility worker occupation including tool equipment use closely supervised
+This tab also cover different type occupational specialty
+The tab includes number job held occupation describes workplace level physical activity expected typical hour worked
+It may also discus major industry employed occupation
+This tab may also describe opportunity work amount type travel required safety equipment used risk injury worker may face
+The tab describes prepare job occupation
+This tab include information education training work experience licensing certification important quality required helpful entering working occupation
+The tab describes typical earnings worker occupation salary hourly wage commission tip bonus
+Within every occupation earnings vary experience responsibility performance tenure geographic area
+For profile tab table wage major industry employing occupation
+It include pay worker agriculture worker worker private household data collected Occupational Employment Statistics OES survey source BLS wage data OOH
+The tab provides link state area occupational data Occupational Employment Statistics OES program state projection data Projections Central occupational information Department Labor CareerOneStop
+The tab describes factor affect employment growth decline occupation instance describes relationship number job seeker number job opening
+The tab describes occupation share similar duty skill interest education training occupation covered profile
+The tab provides Internet address association government agency union organization provide additional information occupation
+This tab also includes link relevant occupational information Occupational Information Network
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+Additional training needed postemployment attain competency skill needed occupation
+Typical level education worker need enter occupation
+Work experience commonly considered necessary employer commonly accepted substitute formal type training education
+The employment size occupation base year employment projection
+The projected percent change employment
+The average growth rate occupation percent
+The projected numeric change employment
+Typical level education worker need enter occupation
+Additional training needed postemployment attain competency skill needed occupation
+The projected numeric change employment
+The percent change employment occupation
+The projected numeric change employment
+The projected percent change employment
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+
+
+Here provide overview new Computer Science BS curriculum
+The full description program requirement obtained Computer Science Engineering Department
+To see schedule class might look like pursued degree visit page
+On page find Flowchart explaining prerequisite Computer Science course Click enlarge Note MA Linear Algebra Differential Equations another linear algebra course recommended required
+Some CS elective knowledge linear algebra prerequisite
+Students planning take elective plan accordingly
+You may choose science course least credit course offered credit engineering natural science major You required take credit humanity social science
+Of credit include The following list elective offered Computer Science Engineering department
+They consist undergraduate course well graduate course open undergraduate
+Please note order enroll graduate course junior senior must GPA better adviser approval
+NYU Tandon
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+partnered Project GUTS Growing Up Thinking Scientifically deliver middle school science program consisting four instructional module professional development introduction computer science concept science classroom within context modeling simulation
+The goal program situate computer science practice concept within context life physical earth science prepare student pursue formal course computer science high school
+CS Science based crosswalk identifying area overlap NGSS Computer Science Teachers Association Computer Science Standards
+Download description
+The Middle School Science Curriculum includes four module consists five six lesson augment educational outcome traditional science instruction include computational thinking within engaging activity modeling simulation
+The Introductory module present basic concept modeling complex system activity participatory simulation
+A series activity guide student developing first computer model StarLogo Nova modeling simulation environment developed Massachusetts Institute Technology
+In Earth Science module student investigate importance ground water impact water usage aquifer level well explore model important part water cycle including evaporation infiltration water different type soil recharge aquifer
+The Life Science module begin exploration simple model consider eats happens one population grows faster another
+After learning ecosystem dynamic producer consumer interdependent relationship within ecosystem student develop model local ecosystem
+The Chemical Reactions module explores condition chemical reaction occur evidence chemical reaction limiting reactant versus reactant excess condition chemical reaction stop
+The chemical reaction simulated silver nitrate copper
+Crosswalks Achieve illustrate commonality serve basis set learning outcome addressed Computer Science Science module
+Irene educational designer developer researcher
+She Principal Investigator Program Director Santa Fe Institute Project GUTS GUTS Girls New Mexico Computer Science All
+Previously designed developed educational video game Electronic Arts Theatrix Interactive worked informal education science specialist
+Gabrielle come molecular ecology research background bringing science curriculum professional development middle school computational science program
+Based Santa Fe New Mexico passionate aspect science education outreach
+Lina science educator background chemistry business
+Her passion advocacy woman girl issue promoting STEM education career
+

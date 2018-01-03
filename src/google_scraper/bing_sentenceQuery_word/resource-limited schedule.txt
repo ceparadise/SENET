@@ -1,0 +1,456 @@
+In field transaction management system abstract model describe execution transaction running system
+Often operation action ordered time performed set executed together system
+If order time certain operation determined system used
+Examples operation requesting read operation reading writing aborting committing requesting lock locking etc
+Not transaction operation type included schedule typically selected operation type data access operation included needed reason describe certain phenomenon
+Schedules schedule property fundamental concept database theory
+The following example schedule In example horizontal axis represents different transaction schedule The vertical axis represents time order operation
+Schedule D consists three transaction
+The schedule describes action transaction seen
+First Reads Writes object X Commits
+Then Reads Writes object Y Commits finally Reads Writes object Z Commits
+This example schedule sequential overlap time action three transaction sequential transaction interleaved time
+Representing schedule D table rather list convenience identifying transaction operation glance
+This notation used throughout article
+A common way technical literature representing schedule list Usually purpose reasoning concurrency control database operation modeled occurring point time without duration
+When satisfactory start end possibly point event specified rarely
+Real executed operation always duration specified respective time occurrence event within exact time beginning completion concurrency control reasoning usually precedence time whole operation without looking quite complex detail operation matter operation another operation
+Furthermore many case relationship two specific operation matter specified specified pair operation
+In general operation transaction schedule interleave transaction executed concurrently time order operation transaction remain unchanged implied transaction program
+Since always time order operation transaction matter need specified schedule general operation rather order pair determined list operation
+Also general case transaction may consist several process properly represented partial order operation rather total order
+Thus general schedule partial order operation containing partial order transaction
+two operation represented operation existence pair mean always schedule general case ordered pair
+Such set schedule represented DAG operation node cycle allowed since cycle mean first operation cycle another second operation cycle contradicts perception
+In many case graphical representation graph used demonstrate schedule
+Since list operation table notation used article always represents total order operation schedule total order represented list always represented DAG
+The transaction executed see example serial schedule one transaction start running transaction ended
+A schedule equivalent outcome serial schedule property
+In schedule E order action transaction executed D end E give result Two action said conflict conflicting pair The following set action conflicting While following set action The schedule said following two condition satisfied A schedule said schedule one serial schedule
+Another definition schedule graph committed transaction considered acyclic graph defined include also uncommitted transaction cycle involving uncommitted transaction may occur without conflict serializability violation
+Which serial schedule
+A schedule said obeys CO also schedule property
+This mean order time transaction commitment event compatible precedence partial order respective transaction induced schedule acyclic precedence graph serializability graph conflict graph
+This implies also
+The CO property especially effective achieving distributed system
+discovered obviously mentioned
+Its correct definition appears however description related technique theory partial inaccurate misleading
+For extensive coverage commitment ordering source see
+Two schedule said following condition satisfied A schedule said serial schedule
+Note definition schedule
+Notice example example discussion time
+There however schedule schedule transaction performing The example since serial schedule
+Since determining whether schedule little practical interest
+Transactions commit transaction whose change read commit
+These schedule recoverable
+F recoverable commits make value read correct
+Then commit
+In aborted abort value A read incorrect
+In case database left consistent state
+If transaction abort transaction commits relied unrecoverable schedule
+In example G unrecoverable read value A written committed
+later aborted therefore value read wrong since committed schedule unrecoverable
+Also named cascadeless
+Avoids single transaction abort lead series transaction rollback
+A strategy prevent cascading abort disallow transaction reading uncommitted change another transaction schedule
+The following example one discussion recoverable In example although recoverable avoid cascading abort
+It seen abort aborted order maintain correctness schedule already read uncommitted value written
+The following recoverable schedule avoids cascading abort
+Note however update A always lost since aborted
+Note Schedule would serializable would committed
+Cascading abort avoidance sufficient necessary schedule recoverable
+A schedule strict strictness property two transaction write operation precedes operation either read write commit abort event also precedes conflicting operation
+Any strict schedule cascadeless converse
+Strictness allows efficient recovery database failure
+The following expression illustrate hierarachical containment relationship class The illustrates clause graphically
+In practice general purpose database system employ recoverable primarily strict schedule
+
+credit credit credit credit course GA suffix credit course GH suffix credit course GS suffix credit course GHA suffix Computer Science student must receive grade C better course
+Students may apply rule
+credit credit course level credit course level chosen consultation advisor program approval
+Computer Science student must receive grade C better following course
+
+Computer information research scientist invent design new approach computing technology find innovative us existing technology
+They study solve complex problem computing business medicine science field
+Most computer information research scientist work full time
+About worked hour per week
+Most job computer information research scientist require master degree computer science related field
+In federal government bachelor degree may sufficient job
+The median annual wage computer information research scientist May
+Employment computer information research scientist projected grow percent much faster average occupation
+Computer scientist likely enjoy excellent job prospect many company report difficulty finding highly skilled worker
+Explore resource employment wage state area computer information research scientist
+Compare job duty education job growth pay computer information research scientist similar occupation
+Learn computer information research scientist visiting additional resource including source key characteristic worker occupation
+Computer information research scientist invent design new approach computing technology find innovative us existing technology
+They study solve complex problem computing business science medicine field
+Computer information research scientist typically following Computer information research scientist create improve computer software hardware
+Creating improving software involves working algorithm set instruction tell computer
+Some computing task difficult require complex algorithm
+Computer information research scientist try simplify algorithm make computer system efficient possible
+The algorithm allow advancement many type technology machine learning system cloud computing
+Computer information research scientist design new computer architecture improves performance efficiency computer hardware
+Their work often lead technological advancement efficiency better networking technology faster computing speed improved information security
+In general computer information research scientist work theoretical level computer professional
+Some computer scientist work specialist multidisciplinary project
+The following example type specialty computer information research scientist Computer information research scientist write algorithm used detect analyze pattern large datasets
+They improve way sort manage display data
+Computer scientist build algorithm software package make data easier analyst use
+For example may create algorithm analyze large set medical data order find new way treat disease
+They may also look pattern traffic data help clear accident faster
+Some computer information research scientist study improve robot
+Robotics explores machine interact physical world
+Computer information research scientist create program control robot
+They work closely engineer focus hardware design robot
+Together worker test well robot task created assemble car collect data planet
+Computer information research scientist design new programming language used write software
+The new language make software writing efficient improving existing language Java making specific aspect programming image processing easier
+Computer information research scientist held job
+The largest employer computer information research scientist follows Some computer scientist may work team specialist multidisciplinary project
+Most computer information research scientist work full time
+About worked hour per week
+Most job computer information research scientist require master degree computer science related field
+In federal government bachelor degree may sufficient job
+Most computer information research scientist need master degree computer science related field computer engineering
+A master degree usually requires year study earning bachelor degree field computer science information system
+Computer scientist work specialized field may need knowledge field
+For example working biomedical application may need taken biology class
+Some computer scientist may become
+Computer information research scientist must organized thinking analyze result research formulate conclusion
+Computer information research scientist must communicate well manager able clearly explain conclusion people technical background
+They often present research conference
+Computer information research scientist work many complex problem
+Computer information research scientist must pay close attention work small programming error cause entire project fail
+Computer information research scientist must continually come innovative way solve problem particularly idea initially work intended
+Computer algorithm rely logic
+Computer information research scientist must talent reasoning
+Computer information research scientist must knowledge advanced math technical topic critical computing
+Median annual wage May Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Occupational Employment Statistics The median annual wage computer information research scientist May
+The median wage wage half worker occupation earned amount half earned le
+The lowest percent earned le highest percent earned
+In May median annual wage computer information research scientist top industry worked follows Most computer information research scientist work full time
+About worked hour per week
+Percent change employment projected Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Employment Projections program Employment computer information research scientist projected grow percent much faster average occupation
+However small occupation fast growth result new job period
+The research development work computer information research scientist turn idea technology
+As demand new better technology grows demand computer scientist grow well
+Rapid growth data collection business lead increased need service
+Computer scientist needed write algorithm help business make sense large amount data
+With information business understand consumer better making work computer information research scientist increasingly vital
+A growing emphasis cybersecurity also lead new job computer scientist needed find innovative way prevent cyberattacks
+In addition increase demand software may increase need computer scientist create new programming language make software writing efficient
+Computer information research scientist likely excellent job prospect
+For applicant seeking employment specialized field finance biology knowledge field along computer science degree may helpful getting job
+SOURCE Bureau Labor Statistics Employment Projections program The OES program produce employment wage estimate annually occupation
+These estimate available nation whole individual state metropolitan nonmetropolitan area
+The link go OES data map employment wage state area
+Occupational employment projection developed state Labor Market Information LMI individual state Employment Projections office
+All state projection data available
+Information site allows projected employment growth occupation compared among state compared within one state
+In addition state may produce projection area link state website data may retrieved
+CareerOneStop includes hundred data available state metro area
+There link side menu compare occupational employment state occupational wage local area metro area
+There also search wage zip code
+This table show list occupation job duty similar computer information research scientist
+Computer information system manager often called information technology IT manager IT project manager plan coordinate direct activity organization
+They help determine information technology goal organization responsible implementing computer system meet goal
+Computer hardware engineer research design develop test computer system component processor circuit board memory device network router
+Computer programmer write test code allows computer application software program function properly
+They turn program design created software developer engineer instruction computer follow
+Database administrator DBAs use specialized software store organize data financial information customer shipping record
+They make sure data available user secure unauthorized access
+Software developer creative mind behind computer program
+Some develop application allow people specific task computer another device
+Others develop underlying system run device control network
+Computer network architect design build data communication network including local area network LANs wide area network WANs Intranets
+These network range small connection two office networking capability cloud infrastructure serf multiple customer
+Computer system analyst sometimes called study organization current computer system procedure design solution help organization operate efficiently effectively
+They bring business information technology IT together understanding need limitation
+Information security analyst plan carry security measure protect organization computer network system
+Their responsibility continually expanding number cyberattacks increase
+Computer network critical part almost every organization
+Network computer system administrator responsible operation network
+Web developer design create website
+They responsible look site
+They also responsible site technical aspect performance capacity measure website speed much traffic site handle
+In addition web developer may create content site
+Top executive devise strategy policy ensure organization meet goal
+They plan direct coordinate operational activity company organization
+For information computer information research scientist visit For information opportunity woman pursuing information technology career visit To find job opening computer information research scientist federal government visit Bureau Labor Statistics Department Labor Computer Information Research Scientists Internet visited
+Tuesday October The tab describes typical duty responsibility worker occupation including tool equipment use closely supervised
+This tab also cover different type occupational specialty
+The tab includes number job held occupation describes workplace level physical activity expected typical hour worked
+It may also discus major industry employed occupation
+This tab may also describe opportunity work amount type travel required safety equipment used risk injury worker may face
+The tab describes prepare job occupation
+This tab include information education training work experience licensing certification important quality required helpful entering working occupation
+The tab describes typical earnings worker occupation salary hourly wage commission tip bonus
+Within every occupation earnings vary experience responsibility performance tenure geographic area
+For profile tab table wage major industry employing occupation
+It include pay worker agriculture worker worker private household data collected Occupational Employment Statistics OES survey source BLS wage data OOH
+The tab provides link state area occupational data Occupational Employment Statistics OES program state projection data Projections Central occupational information Department Labor CareerOneStop
+The tab describes factor affect employment growth decline occupation instance describes relationship number job seeker number job opening
+The tab describes occupation share similar duty skill interest education training occupation covered profile
+The tab provides Internet address association government agency union organization provide additional information occupation
+This tab also includes link relevant occupational information Occupational Information Network
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+Additional training needed postemployment attain competency skill needed occupation
+Typical level education worker need enter occupation
+Work experience commonly considered necessary employer commonly accepted substitute formal type training education
+The employment size occupation base year employment projection
+The projected percent change employment
+The average growth rate occupation percent
+The projected numeric change employment
+Typical level education worker need enter occupation
+Additional training needed postemployment attain competency skill needed occupation
+The projected numeric change employment
+The percent change employment occupation
+The projected numeric change employment
+The projected percent change employment
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+
+
+In method work specified mean assigned resource complete work
+The work may virtual computation element data turn scheduled onto hardware resource
+A scheduler carry scheduling activity
+Schedulers often implemented keep computer resource busy allow multiple user share system resource effectively achieve target
+Scheduling fundamental computation intrinsic part computer system concept scheduling make possible single CPU
+A scheduler may aim one many goal example maximizing total amount work completed per time unit minimizing time work becoming enabled first point begin execution resource minimizing time work becoming enabled finished case batch activity system responds hand first output user case interactive activity maximizing equal CPU time process generally appropriate time according priority workload process
+In practice goal often conflict
+throughput versus latency thus scheduler implement suitable compromise
+Preference measured one concern mentioned depending upon user need objective
+In environment industry example scheduler also must ensure process meet crucial keeping system stable
+Scheduled task also distributed remote device across network administrative back end
+The scheduler operating system module selects next job admitted system next process run
+Operating system may feature three distinct scheduler type also known admission scheduler scheduler
+The name suggest relative frequency function performed
+The process scheduler part operating system decides process run certain point time
+It usually ability pause running process move back running queue start new process scheduler known otherwise
+The decides job process admitted ready queue main memory attempt made execute program admission set currently executing process either authorized delayed scheduler
+Thus scheduler dictate process run system degree concurrency supported one time whether many process executed concurrently split process handled
+The scheduler responsible controlling degree multiprogramming
+In general process described either
+An process one spends time spends computation
+A process contrast generates request infrequently using time computation
+It important scheduler selects good process mix process
+If process ready queue almost always empty scheduler little
+On hand process waiting queue almost always empty device go unused system unbalanced
+The system best performance thus combination process
+In modern operating system used make sure process get enough CPU time finish task
+scheduling also important system system
+For example interacting process often required prevent blocking due waiting
+In case software typically used assist function addition underlying admission scheduling support operating system
+The temporarily remove process main memory place secondary memory vice versa commonly referred swapping swapping also incorrectly paging
+The scheduler may decide swap process active time process low priority process frequently process taking large amount memory order free main memory process swapping process back later memory available process unblocked longer waiting resource
+Stallings Stallings In many system today support mapping virtual address space secondary storage swap file scheduler may actually perform role scheduler treating binary swapped process upon execution
+In way segment binary required swapped demand lazy loaded
+Stallings The also known decides ready process executed allocated CPU clock interrupt operating another form
+Thus scheduler make scheduling decision much frequently scheduler scheduling decision minimum made every time slice short
+This scheduler implying capable forcibly removing process CPU decides allocate CPU another process also known voluntary case scheduler unable force process CPU
+A preemptive scheduler relies upon invokes run implement scheduling function
+Another component involved function dispatcher module give control CPU process selected scheduler
+It receives control kernel mode result interrupt system call
+The function dispatcher involve following The dispatcher fast possible since invoked every process switch
+During context switch processor virtually idle fraction time thus unnecessary context switch avoided
+The time take dispatcher stop one process start another known
+Scheduling discipline algorithm used distributing resource among party simultaneously asynchronously request
+Scheduling discipline used handle packet traffic well share among disk drive printer embedded system etc
+The main purpose scheduling algorithm minimize ensure fairness amongst party utilizing resource
+Scheduling deal problem deciding outstanding request allocated resource
+There many different scheduling algorithm
+In section introduce several
+In notion used alternative queuing data packet
+The simplest scheduling algorithm scheduling algorithm scheduling
+If differentiated guaranteed offered opposed communication may utilized
+In advanced packet radio wireless network Downlink Packet Access cellular system may used take advantage
+If channel condition favourable may increased
+In even advanced system scheduling combined assigning component user best utilize
+also known FCFS simplest scheduling algorithm
+FIFO simply queue process order arrive ready queue
+This commonly used example illustrated section
+Earliest deadline first EDF dynamic scheduling algorithm used operating system place process priority queue
+Whenever scheduling event occurs task finish new task released etc
+queue searched process closest deadline next scheduled execution
+Similar SJF
+With strategy scheduler arranges process least estimated processing time remaining next queue
+This requires advanced knowledge estimation time required process complete
+The operating system assigns fixed priority rank every process scheduler arranges process ready queue order priority
+process get interrupted incoming process
+The scheduler assigns fixed time unit per process cycle
+If process completes within get terminated otherwise rescheduled giving chance process
+This used situation process easily divided different group
+For example common division made foreground interactive process background batch process
+These two type process different requirement may different scheduling need
+It useful shared memory problem
+A scheduler always try keep scheduled resource busy submitted job ready scheduled
+In contrast conserving scheduler scheduler case may leave scheduled resource idle despite presence job ready scheduled
+There several scheduling problem goal decide job go station time total minimized A common method embedded system schedule job manually
+This example done fashion
+Sometimes kernel divided three part Manual scheduling preemptive interrupt level
+Exact method scheduling job often proprietary
+When designing operating system programmer must consider scheduling algorithm perform best use system going see
+There universal best scheduling algorithm many operating system use extended combination scheduling algorithm
+For example us combination preemptive scheduling first first algorithm
+In system thread dynamically increase decrease priority depending serviced already waiting extensively
+Every priority level represented queue among thread among one
+In sense response time short thread short critical system thread get completed quickly
+Since thread use one time unit queue starvation problem longer thread
+The algorithm used may simple process given equal time instance m usually m m cycling list
+So process A executes m process B process C back process A
+More advanced algorithm take account process priority importance process
+This allows process use time process
+The kernel always us whatever resource need ensure proper functioning system said infinite priority
+In symmetric multiprocessing system considered increase overall system performance even may cause process run slowly
+This generally improves performance reducing
+IBM available three different scheduler
+The difference variant often considered three different operating system Later virtual storage version MVS added feature scheduler schedule processor resource according elaborate scheme defined installation
+Very early Microsoft Windows system feature scheduler
+used scheduler meaning interrupt program
+It relied program end tell OS need processor could move another process
+This usually called cooperative multitasking
+Windows introduced rudimentary preemptive scheduler however legacy support opted let bit application run without preemption
+operating system use multilevel feedback queue
+priority level defined priority normal priority priority soft priority requiring privilege assign
+reserved Operating System
+Users select priority assign running application Task Manager application thread management APIs
+The kernel may change priority level thread depending CPU usage whether interactive
+accepts responds input human raising priority interactive bounded process lowering CPU bound process increase responsiveness interactive application
+The scheduler modified use modern processor keep track exactly many CPU cycle thread executed rather using interrupt routine
+Vista also us priority scheduler queue disk defragmenters program interfere foreground operation
+Mac OS us cooperative scheduling thread one process control multiple cooperative thread also provides preemptive scheduling multiprocessing task
+The kernel schedule multiprocessing task using preemptive scheduling algorithm
+All Process Manager process run within special multiprocessing task called blue task
+Those process scheduled cooperatively using algorithm process yield control processor another process explicitly calling
+Each process copy schedule process thread cooperatively thread yield control processor another thread calling
+macOS us multilevel feedback queue four priority band thread normal system high priority kernel mode
+Threads scheduled preemptively macOS also support cooperatively scheduled thread implementation Thread Manager
+In AIX Version three possible value thread scheduling policy Threads primarily interest application currently consist several asynchronous process
+These application might impose lighter load system converted multithreaded structure
+AIX implement following scheduling policy FIFO round robin fair round robin
+The FIFO policy three different implementation FIFO
+The round robin policy named AIX fair round robin called
+In priority level ranging used reserved task considered task level
+For task time quantum switching process approximately m nice task approximately m
+The scheduler ran ready process letting highest priority process go first run time slice placed expired queue
+When active queue empty expired queue become active queue vice versa
+However enterprise replaced scheduler backport maintained Linux Kernel series Linux kernel used distribution
+In version kernel used developed many kernel developer Linux development
+For many kernel time frame developed patch set improved interactivity scheduler even replaced scheduler
+Con Kolivas work significantly implementation named Rotating Staircase Deadline inspired Ingo Molnár develop replacement earlier crediting Kolivas announcement
+CFS first implementation fair queuing widely used operating system
+The CFS us classic scheduling algorithm called originally invented
+Fair queuing previously applied CPU scheduling name
+The fair queuing CFS scheduler scheduling complexity O N N number task
+Choosing task done constant time reinserting task run requires O log N operation implemented
+The BFS also created Con Kolivas alternative CFS
+us multilevel feedback queue priority ranging
+reserved interrupt top half kernel user thread user thread idle user thread
+Also like Linux us active queue setup also idle queue
+us multilevel feedback queue priority ranging
+reserved thread default policy user thread entered kernel thread user thread policy
+us multilevel feedback queue priority ranging
+Priorities reserved thread system thread thread low priority interrupt
+Unlike Linux process done using time quantum given new priority put back queue
+Solaris introduced two new scheduling class namely fixed priority class fair share class
+The thread fixed priority priority range class priority dynamically adjusted
+The fair scheduling class us CPU prioritize thread scheduling decision
+CPU share indicate entitlement CPU resource
+They allocated set process collectively known project
+
+Computer information technology CIT use study computer network computer language database within organization solve real problem
+The major prepares student application programming networking system administration internet development
+Technologies studied information system include programming networking server administration information security database design development system analysis designing web development
+CIT career allow person assemble component create something never seen
+There high demand CIT graduate country segment economy
+Careers CIT pay higher average salary
+CIT interactive career work
+It also provides lot work variety
+In major student learn theory organization process information collection transmission utilization computer
+Students learn analyze user need plan design develop implement manage network
+Through coursework student develop skill technique mathematics computer system
+They take series basic course mathematics computer science
+CIT student usually enthusiastic new technology
+They curious creative patient responsible
+They enjoy assisting application creation new technology ability work independently group setting
+Students CIT usually interested computer problem solving game music
+They good oral written communication skill good working organizing numerical data
+College Business Communication Academic Discovery Center Location Smith Phone Email CONTACT Chapman value suggestion idea improve university
+Use Feedback Form let u know think
+
+Find Info For Quick Links Department Computer Science University Street West Lafayette IN Phone Fax Trouble page
+
+Please contact
+
+A project schedule useful planning communication tool monitoring reporting progress project
+During project life different schedule may needed different purpose stakeholder
+Read get better acquainted various type project schedule
+A strategic important tool project manager portfolio guiding project successfully target completion date
+For simple project project schedule basically timeline calendar list task activity expected start finish date
+For complex project project schedule layered different detail enable project manager direct manage resource smoothly communicate frequently effectively stakeholder identify monitor dependency constraint task avert preventable delay
+The project schedule expressed several display form depending upon purpose schedule stage development project primary user schedule
+The three common type project schedule master project schedule milestone schedule detailed schedule
+Developed initial phase project planning master project schedule summary level schedule highlight principal activity task estimated duration
+This schedule strength lie ability aggregate individual activity schedule display one convenient document
+The schedule serve early communication tool building project upper level management external stakeholder
+The schedule also useful facilitating team brainstorming initial phrase project work logistics
+For information master project schedule continue reading
+As advanced schedule milestone schedule often referred throughout
+The milestone schedule summary level schedule allows project team leader review identify significant major project related milestone may surface course project
+A milestone significant event project usually marked completion major deliverable
+Because format milestone schedule recommended reporting status report top level management external stakeholder
+The milestone schedule also useful team assessment particularly team give opportunity take pride accomplishment reflect upon setback importantly bond team
+Detailed schedule operational schedule intended help front line manager directing hourly daily weekly project work
+The detailed schedule considered execution playbook project
+Analogous football playbook broken activity pass run two side game offense defense detailed project schedule playbook broken chapter show detailed schedule activity phase project unfolds
+To compare different display option project schedule click image see illustration five task project includes critical path information milestone marker slack time
+You also download print modify chart diagram Excel document located Media Gallery
+
+CS E faculty member provide leadership expertise undergraduate major nearly graduate student
+Our faculty member highly productive educator researcher
+They international leader respective field author widely used software textbook
+The distinction faculty locally worldwide confirmed long list award honor research teaching
+We also aiming fill one position support initiative MnDRIVE robotics sensor advanced manufacturing topic interest include sensing networking machine learning computer robot design manipulation mobility interaction planning algorithmic foundation embedded system
+The Department Computer Science Engineering fully committed diverse faculty excellence emerges individual different background experience engage
+We therefore welcome application individual expand diversity woman underrepresented group especially encouraged apply
+Candidates Computer Science closely related discipline time appointment
+Submit material described
+Consideration complete application begin December continue position filled
+The University Minnesota equal opportunity employer educator
+alum Gang Fang led research team recently published report detailing new method identifying individual microbial specie strain community
+Their innovative technique potential application clinical care important implication Professors Maria Gini Tian He George Karypis named IEEE Fellows year
+Their achievement recognized part broader mission IEEE
+Gini recognized contribution programming robotics He development Assistant Professor Lana Yarosh TEDxMinneapolis presentation available
+She joined nine expert luminary Cowles Center Dance Performing Arts explore theme Why
+
+Office Distance Learning Stephen Leach Learn web site
+Distance student earn bachelor degree student following curriculum
+The curriculum specifically designed student preparing fulfilling lifetime career computer professional
+This major provides background sufficient entry career computing
+It provides system view computing emphasizing interdependence design object orientation distributed system network basic software system design
+This major develops core competency programming database structure computer organization operating system
+It allows opportunity study range aspect computer information science information security data network computer network system administration theoretical computer science software engineering
+Every student expect become proficient programming C Assembly Language
+Additionally student exposed language Java C Ada Lisp Scheme Prolog Perl HTML
+Students apply Fall Spring semester may limited option building schedule unless taken course equivalent prior admission FSU
+Regionally accredited Southern Association Colleges Schools
+Because reduced requirement mathematics theoretical computer science Bachelor Arts degree accredited Accreditation Board Engineering Technology
+Internet Assuming student completed equivalent AA degree required prerequisite degree completed year student year student These course may offered every semester
+coursework includes Precalculus Algebra Calculus I
+Students complete prerequisite coursework grade higher considered entrance major program study
+Students must meet including language requirement proficiency beyond required University admission
+The BA program requires hour beyond Liberal Studies also required minor
+Although student program free choose minor suggested minor Communication since course also satisfy humanity requirement
+Furthermore Communication course offered online FSU
+At least credit hour need level
+At least half course major taken FSU last hour taken FSU either online
+The cost program equal tuition fee Academic Year stated plus per credit hour distance learning fee
+student may contact determine qualify discounted tuition rate
+For question regarding tuition fee please contact
+
+

@@ -1,0 +1,491 @@
+In used describe fashion
+First proposed computer scientist generalization arrow provide way expressing relationship step computation
+Unlike monad arrow limit step one one input
+As result found use among application
+While arrow use recognized distinct class Hughes would publish first definition
+Until monad proven sufficient problem requiring combination program logic pure code
+However useful library certain efficient parser defied rewriting monadic form
+The formal concept arrow developed explain exception monadic code process monad turned arrow
+Since arrow active area research
+Their underlying law operation refined several time recent formulation arrow calculus requiring five law
+In form proper subset Hughes arrow
+While believed arrow time since proven arrow even general
+In fact arrow merely equivalent directly equal Freyd category
+Like type class arrow thought set quality applied
+In arrow allow represented Haskell symbol combine form
+However actual term arrow may also come fact arrow correspond also known arrow category theory different Kleisli category
+As relatively new concept single standard definition formulation logically equivalent feature required method strictly obey certain mathematical law
+The description currently used Haskell two basic operation Although two procedure strictly necessary define arrow method derived make arrow easier work practice theory
+As arrow third operation class category One helpful method derived combination previous three In addition procedure arrow must obey certain rule type may applied The remaining law restrict piping method behaves order composition reversed also allowing simplifying Arrows may extended fit specific situation defining additional operation restriction
+Commonly used version include arrow choice allow computation make decision arrow allow step take output input
+Another set arrow known arrow application rarely used practice actually equivalent monad
+Arrows several benefit mostly stemming ability make program logic explicit yet concise
+Besides avoiding creates opportunity
+This turn theoretically lead better easier feature like
+Although program strictly requires arrow generalize away much dense pure declarative code would otherwise require
+They also encourage giving common linkage program step class definition
+The ability apply type generically also contributes reusability keep simple
+Arrows disadvantage including initial effort defining arrow satisfies arrow law
+Because monad usually easier implement extra feature arrow may unnecessary often preferable use monad
+Another issue applies many construct efficiently code arrow style used computer
+
+promptMessage promptMessage This intentionally section
+view full version
+No bookmarked document
+hardware jfm Batch Students Minerals A catalyst ECE FLOWCHARTS TERRENCE cpu Flowchart Wikipedia free encyclopedia dc FLAT snackBarMessage Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I learning software design pattern reading Wikipedia page
+A lot pattern bridge pattern diagram box different kind arrow Do diagram stem standard
+Why arrow different ending marking
+Also dotted
+ConcreteImplementer inherits Implementer Same RefinedAbstraction Abstraction The arrow class composes without belonging
+See also
+The box note comment
+The arrow mean distinct thing
+This UML unified modeling language diagram
+Rules reading writing diagram pretty able look reference
+In diagram hollow arrow mean generalization inheritance hollow diamond mean aggregation kind association
+The dotted line connects contains information I believe double check one
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In object whose value refers another value stored elsewhere using
+A pointer location memory obtaining value stored location known pointer
+As analogy page number book index could considered pointer corresponding page dereferencing pointer would done flipping page given page number reading text found indexed page
+Pointers data significantly improve performance repetitive operation traversing structure
+In particular often much cheaper time space copy dereference pointer copy access data pointer point
+Pointers also used hold address entry point subroutine
+In used often using called
+A pointer simple concrete implementation abstract
+Several language support type pointer although restriction use others
+While pointer used refer reference general properly applies whose explicitly allows pointer manipulated arithmetically via memory address opposed possible
+Because pointer allow protected unprotected access memory address risk associated using particularly latter case
+Primitive pointer often stored format similar however attempting dereference look pointer whose value never valid memory address would cause program crash
+To alleviate potential problem matter pointer considered separate type parameterized type data point even underlying representation integer
+Other measure may also taken validation bound checking verify content pointer variable contain value valid memory address within numerical range processor capable addressing
+credited invention pointer
+In Lawson presented Computer Pioneer Award f inventing pointer variable introducing concept thus providing first time capability flexibly treat linked list high level language
+According first appeared print technical memorandum
+In pointer kind
+A datum read written using one memory access instance primitive
+A group primitive contiguous memory viewed collectively one datum instance aggregate could logically contiguous byte value represent coordinate point space
+When aggregate entirely composed type primitive aggregate may called sense primitive array byte program use word way
+In context definition smallest primitive specifies different byte
+The memory address initial byte datum considered memory address entire datum
+A primitive value intended used memory address said
+It also said pointer value datum memory address
+More generally pointer kind said obtain datum
+The feature separate pointer kind reference pointer value meant interpreted memory address rather concept
+References serve level indirection A pointer value determines memory address datum used calculation
+Because indirection fundamental aspect algorithm pointer often expressed fundamental typed programming language pointer determines type datum pointer point
+When setting like tree necessary pointer help manage structure implemented controlled
+Typical example pointer start pointer end pointer pointer
+These pointer either actual absolute start address base typically us fewer bit full address usually require one additional arithmetic operation resolve
+Relative address form manual share many advantage disadvantage
+A offset containing unsigned integer used provide relative addressing kilobyte data structure
+This easily extended address pointed forced word boundary requiring additional shift left order adjust offset factor addition base address
+Generally though scheme lot trouble convenience programmer absolute address underlying preferred
+A one byte offset hexadecimal value character
+used point alternative integer value index array
+
+In way character efficiently translated usable sequential absolute address without
+used control usually make extensive use pointer
+The pointer usually embedded table entry may instance used hold entry point executed based certain condition defined table entry
+The pointer however simply index separate associated table comprising array actual address address depending upon programming language construct available
+They also used point earlier table entry loop processing forward skip table entry early exit loop
+For latter purpose pointer may simply table entry number transformed actual address simple arithmetic
+Pointers thin top addressing capability provided modern
+In simplest scheme numeric assigned unit memory system unit typically either depending whether architecture effectively transforming memory large
+The system would also provide operation retrieve value stored memory unit given address usually utilizing machine
+In usual case pointer large enough hold address unit memory system
+This introduces possibility program may attempt access address corresponds unit memory either enough memory installed
+beyond range available memory architecture support address
+The first case may certain platform architecture called segfault
+The second case possible current implementation pointer bit long address extend bit
+Pointers must conform certain rule canonical address pointer dereferenced processor raise
+On hand system unit memory address
+In case complex scheme employed use different part memory different time
+The last incarnation architecture support bit physical memory address mapped linear address space paging mechanism
+Thus possible total memory may accessed time
+Another example computer family processor though supporting MB physical memory could access GB virtual memory combination address segment register made accessing KB one data structure cumbersome
+In order provide consistent interface architecture provide allows address refer unit memory others refer device computer
+There analogous concept file offset array index remote object reference serve purpose address type object
+Pointers directly supported without restriction language implicitly
+They primarily used constructing turn fundamental constructing nearly well passing data different part program
+In functional programming language rely heavily list pointer reference managed abstractly language using internal construct like
+When dealing array critical operation typically involves stage called involves constructing pointer desired data element array
+In data structure pointer used reference explicitly tie one piece structure another
+Pointers used pas parameter reference
+This useful programmer want function modification parameter visible function caller
+This also useful returning multiple value function
+Pointers also used deallocate dynamic variable array memory
+Since variable often become redundant served purpose waste memory keep therefore good practice deallocate using original pointer reference longer needed
+Failure may result available free memory gradually severe case rapidly diminishes accumulation numerous redundant memory block
+The basic define pointer This declares identifier object following type This usually stated succinctly pointer
+Because C language specify implicit initialization object automatic storage duration care often taken ensure address point valid sometimes suggested pointer explicitly initialized value traditionally specified C standardized macro Dereferencing null pointer C produce could catastrophic
+However implementation simply halt execution program question usually
+However initializing pointer unnecessarily could hinder program analysis thereby hiding bug
+In case pointer declared next logical step point something This assigns value address
+For example stored memory location value assignment
+To dereference pointer asterisk used This mean take content locate address memory set value
+If later accessed new value
+This example may clearer memory examined directly
+Assume located address memory also assume machine int wide
+The following would memory following code snippet executed The NULL pointer shown
+By assigning address yield following memory value Then dereferencing coding computer take content address assign location yielding following memory Clearly accessing yield value previous instruction modified content way pointer
+In C array indexing formally defined term pointer arithmetic language specification requires equivalent
+Thus C array thought pointer consecutive area memory gap syntax accessing array identical used dereference pointer
+For example array declared used following manner This allocates block five integer name block act pointer block
+Another common use pointer point dynamically allocated memory return consecutive block memory le requested size used array
+While operator array pointer equivalent result operator differs
+In example evaluate size array evaluate size pointer
+Default value array declared like If located memory starting address machine memory contain following value like address Represented five integer
+These five integer occupy bit byte byte stored first stored consecutively starting address
+The syntax C pointer The last example access content
+Breaking Below example definition This definition essentially definition empty list cell type another link also type
+The definition reference however use potentially confusing signal value
+For reason data structure C usually dealt via carefully checked correctness
+Pointers used pas variable address allowing value changed
+For example consider following code In program required memory depends may enter
+In case programmer need allocate memory dynamically
+This done allocating memory rather variable usually stored
+Variables also stored CPU register another matter Dynamic memory allocation made pointer name like common variable ca given
+Pointers used store manage address block memory
+Such block used store data object array object
+Most structured language provide area memory called object dynamically allocated
+The example C code illustrates structure object dynamically allocated referenced
+The provides function allocating memory block heap
+It take size object allocate parameter return pointer newly allocated block memory suitable storing object return null pointer allocation failed
+The code illustrates memory object dynamically deallocated returned heap free store
+The standard C library provides function deallocating previously allocated memory block returning back heap
+On computing architecture pointer used directly manipulate memory device
+Assigning address pointer invaluable tool programming
+Below simple example declaring pointer type int initialising address example constant In mid using access video capability PCs slow
+Applications typically used access video memory directly casting constant pointer array unsigned int value
+Each value consisted code low byte colour high byte
+Thus put letter row column bright white blue one would write code like following In many language pointer additional restriction object point specific
+For example pointer may declared point language attempt prevent programmer pointing object integer eliminating error
+For example C would integer pointer would char pointer
+The following would yield compiler warning assignment incompatible pointer type declared different type
+To suppress compiler warning must made explicit indeed wish make assignment say cast integer pointer char pointer assign
+A draft C standard requires casting pointer derived one type one another type maintain alignment correctness type Pointers par
+In language allow pointer arithmetic arithmetic pointer take account size type
+For example adding integer number pointer produce another pointer point address higher number time size type
+This allows u easily compute address element array given type shown C array example
+When pointer one type cast another type different size programmer expect pointer arithmetic calculated differently
+In C example array start byte whereas byte point would point
+Other risk casting include loss data wide data written narrow location
+unexpected result value comparison problem especially signed v unsigned value
+Although impossible general determine cast safe language store used confirm dangerous cast valid runtime
+Other language merely accept conservative approximation safe cast none
+As pointer allows program attempt access object may defined pointer origin variety
+However usefulness pointer great difficult perform programming task without
+Consequently many language created construct designed provide useful feature pointer without also sometimes referred
+In context pointer directly address memory used article referred contrast smart pointer variant
+One major problem pointer long directly manipulated number made point unused address data used purpose
+Many language including recent like replace pointer opaque type reference typically referred simply used refer object manipulated number preventing type error
+Array indexing handled special case
+A pointer address assigned called
+Any attempt use uninitialized pointer cause unexpected behavior either initial value valid address using may damage part program
+The result often used function pointer branch address
+In system explicit memory allocation possible create deallocating memory region point
+This type pointer dangerous subtle deallocated memory region may contain data deallocated may reallocated overwritten unrelated code unknown earlier code
+Languages prevent type error deallocation performed automatically reference scope
+Some language like support use simple form help track allocation dynamic memory addition acting reference
+In absence reference cycle object refers indirectly sequence smart pointer eliminate possibility dangling pointer memory leak
+string support reference counting natively
+The introduces optimisation based around eliminate pointer bug without resorting
+A value reserved indicating pointer refer valid object
+Null pointer routinely used represent condition end unknown length failure perform action use null pointer compared value
+An pointer whose value interpreted offset address pointer thus data structure autorelative pointer member point portion data structure data structure may relocated memory without update value auto relative pointer
+The cited patent also us term mean thing
+However meaning term used way A pointer whose value offset value another pointer
+This used store load block data assigning address beginning block base pointer
+In language pointer reference another pointer requiring multiple dereference operation get original value
+While level indirection may add performance cost sometimes necessary order provide correct behavior complex
+For example C typical define term element contains pointer next element list This implementation us pointer first element list surrogate entire list
+If new value added beginning list changed point new element
+Since C argument always passed value using double indirection allows insertion implemented correctly desirable eliminating special case code deal insertion front list In case value le caller properly updated address new item
+A basic example argument given prototype variable pointer array string array array pointer string convention name program character string
+In language pointer reference executable code point function method procedure
+A store address function invoked
+While facility used call function dynamically often favorite technique virus malicious software writer
+A pointer point valid object consequently may make program crash behave oddly
+In pointer specifically initialized may point unpredictable address memory
+The following example code show dangling pointer Here may point anywhere memory performing assignment corrupt unknown area memory trigger
+In doubly back pointer held element back item referring current element
+These useful navigation manipulation expense greater memory use
+These pointer declaration cover variant pointer declaration
+Of course possible triple pointer main principle behind triple pointer already exist double pointer
+The higher priority
+Where pointer used address entry point program start also either uninitialized corrupted call nevertheless made address said occurred
+The consequence usually unpredictable error may present several different way depending upon whether pointer valid address whether coincidentally valid instruction opcode address
+The detection wild branch present one difficult frustrating debugging exercise since much evidence may already destroyed beforehand execution one inappropriate instruction branch location
+If available usually detect wild branch take effect also provide complete partial trace history
+It possible simulate pointer behavior using index normally array
+Primarily language support pointer explicitly support array thought processed entire memory range within scope particular array index thought equivalent assembly language point individual byte whose actual value relative start array absolute address memory
+Assuming array say contiguous character individual byte contiguous byte within array directly addressed manipulated using name array bit unsigned simulated pointer quite similar example shown
+Pointer arithmetic simulated adding subtracting index minimal additional overhead compared genuine pointer arithmetic
+It even theoretically possible using technique together suitable simulate intermediate another language support pointer example
+To achieve code initially loaded contiguous byte array simulator read interpret action entirely within memory contained array
+If necessary completely avoid problem usually actioned compiler hand coded simulator
+strongly typed language pointer typed safe type conversion permitted
+All pointer default initialized attempt access data pointer cause raised
+Pointers Ada called
+Ada permit arithmetic access type although many compiler vendor provided feature Ada support safe arithmetic access type via package
+Several old version Windows platform support STRPTR return address string VARPTR return address variable
+Visual Basic also support OBJPTR return address object interface ADDRESSOF operator return address function
+The type integer value equivalent held pointer type
+Newer dialect exhaustive pointer implementation however
+In FreeBASIC arithmetic pointer equivalent C treated though pointer byte width
+pointer dereferenced Also casting type pointer generate warning
+In pointer variable store address
+Each pointer type point one freely cast pointer type function pointer object pointer
+A special pointer type called void pointer allows pointing object limited fact dereferenced directly shall cast
+The address often directly manipulated casting pointer integral type sufficient size though result may indeed cause undefined behavior earlier C standard integral type guaranteed large enough specifies defined implementation need provide
+fully support C pointer C typecasting
+It also support new group typecasting operator help catch unintended dangerous cast
+Since also provides used situation safer alternative primitive C pointer
+also support another form reference quite different pointer called simply
+ability modify pointer target address arithmetic operation well magnitude comparison restricted language standard remain within bound single array object otherwise invoke
+Adding subtracting pointer move multiple size
+For example adding pointer integer value increment pointer
+This effect incrementing pointer point next element contiguous array often intended result
+Pointer arithmetic performed pointer size thus pointed address added although compiler perform byte arithmetic extension treating
+Pointer arithmetic provides programmer single way dealing different type adding subtracting number element required instead actual offset byte
+Pointer arithmetic pointer us byte offset definition
+In particular C definition explicitly declares syntax element array equivalent content element pointed
+This implies equivalent one write equally well access fourth element array
+While powerful pointer arithmetic source
+It tends confuse novice forcing different context expression ordinary arithmetic one pointer arithmetic one sometimes easy mistake one
+In response many modern computer language example permit direct access memory using address
+Also safe C dialect address many issue pointer
+See discussion
+The supported ANSI C generic pointer type
+A pointer store address object function C implicitly converted object pointer type assignment must explicitly cast dereferenced
+C used pointer purpose ANSI C
+allow implicit conversion pointer type even assignment
+This design decision avoid careless even unintended cast though compiler output warning error encountering cast
+In reference void complement pointer void reference behave like alias variable point never variable whose type
+In pointer supported certain condition block code including pointer must marked keyword
+Such block usually require higher security permission allowed run
+The syntax essentially address pointed either memory
+However pointer managed memory pointer managed object must declared using keyword prevents moving pointed object part memory management pointer scope thus keeping pointer address valid
+An exception using structure safe managed equivalent require unsafe code
+This type often returned using method example The framework includes many class method namespaces class convert type example many type pointer example allow communication
+Most method security permission requirement unmanaged code since affect arbitrary place memory
+The programming language support pointer variable
+Primitive group record data object declared within program inherently memory allocated within program space address data item typically single memory word
+In program source code data item used like variable content implicitly accessed indirectly pointer
+Memory space data object typically using external statement via embedded extended language construct statement
+Extended version COBOL also provide pointer variable declared clause
+The value pointer variable established modified using statement
+Some extended version COBOL also provide variable capable storing
+The language provides full support pointer data type including pointer structure string handling extensive
+quite leap forward compared programming language time
+The derivative C fully support C pointer C typecasting
+The employ value reference semantics without pointer arithmetic
+Nevertheless pointer class provided
+They offer pointer arithmetic typecasting explicit memory management interfacing software feature
+introduced strongly typed pointer capability
+Fortran pointer contain simple memory address
+They also encapsulate lower upper bound array dimension stride example support arbitrary array section metadata
+An used associate variable attribute
+The statement may also used associate pointer block memory
+For example following code might used define create linked list structure add support procedure pointer
+Also part feature support intrinsic function converting pointer Fortran pointer back
+pointer
+Its declaration syntax equivalent C written way around ending type
+Unlike C Go garbage collection disallows pointer arithmetic
+Reference type like exist
+Some type like map channel boxed
+internally pointer mutable structure initialized using function
+In approach unified syntax pointer arrow operator dropped dot operator pointer refers field method dereferenced object
+This however work level indirection
+Unlike explicit representation pointer
+Instead complex data structure like implemented using
+The language provide explicit pointer manipulation operator
+It still possible code attempt dereference null reference null pointer however result thrown
+The space occupied unreferenced memory object recovered automatically
+Pointers implemented much Pascal parameter procedure call
+even strongly typed Pascal fewer way escape type system
+Some variant include garbage collection
+Much pointer available
+There still fewer way evade type system variant still safer respect pointer variant
+As garbage collection part language specification
+Unlike many language feature pointer standard allows pointer reference dynamically created variable anonymous allow reference standard static local variable
+It pointer arithmetic
+Pointers also must associated type pointer one type compatible pointer another type
+pointer char compatible pointer integer
+This help eliminate type security issue inherent pointer implementation particularly used
+It also remove risk caused ability dynamically let go referenced space using standard procedure effect library function found mean risk dangling pointer entirely eliminated
+However commercial open source Pascal derivative compiler implementation pointer allowed reference standard static local variable cast one pointer type another
+Moreover pointer arithmetic unrestricted adding subtracting pointer move number byte either direction using standard procedure move pointer size point
+An untyped pointer also provided name compatible pointer type
+The support pointer although rarely used form pack unpack function
+These intended simple interaction compiled OS library
+In case Perl us typed allow form pointer arithmetic
+They used construct complex data structure
+
+Flowcharts ideal diagram visually representing business process
+For example need show flow process various department within organization use flowchart
+This paper provides visual representation basic flowchart symbol proposed use communicating structure web site well correlation developing instructional project
+A typical flowchart older Computer Science textbook may following kind symbol Flowcharts may contain symbol connector usually represented circle represent converging path flow chart
+Circles one arrow coming one going
+Some flow chart may arrow point another arrow instead
+These useful represent iterative process Computer Science called loop
+A loop may example consist connector control first enters processing step conditional one arrow exiting loop one going back connector
+connector often used signify connection part process held another sheet screen
+A flowchart described page divided different lane describing control different organizational chart unit
+A symbol appearing particular lane within control organizational unit
+This technique allows analyst locate responsibility performing action making decision correctly allowing relationship different organizational unit responsibility single process
+Flowcharts great business process improvement tool
+Thats classic flowchart software offen used business process automation software developing workflow automate business process
+Flowcharts use special shape represent different type action step process
+Lines arrow show sequence step relationship
+Standard Flowchart Symbols See also alternative flowchart symbol Workflow relationship work done different department fixed sequence
+This mean one department need finish job work continue another department
+The development maintenance work flow relationship important manager dependant preceding area work responsible manager worker different stage chain
+Workflow relationship development reflected various regular workflow diagram document critical traing department work done
+Workflow diagram also used passing standard sertifications prepare workflow description job dependency work chain
+Workflow Symbols The following shape similar basic flowchart symbol specially used audit flowchart
+Audit Flowchart Symbols Accounting Flowcharts set symbol found solution give accountant tool need describe purchase order payment procurement process
+Accounting Flowchart Symbols Sales Flowcharts cover interaction customer business internal sale process needed performed worker
+Management people often use flowchart symbol making professional workflow diagram instead use special workflow diagram symbol described
+Sales Flowchart Symbols Use HR flowchart symbol map process every aspect human resource management including recruitment hiring process payroll system human resource development
+These symbol typically used creating colorful professional workflow diagram describes internal workflow process hr department
+HR Flowchart Symbols Process map symbol help evaluate manage quality work process chain placing emphasis corporate performance optimization
+A depicts component relationship system
+Process Map Symbols The aim BPMN assist creating diagram immediately understandable business stakeholder graphic element adapted represent form function decision work flow data flow
+Business process diagram symbol Business Process Model Notation BPMN extension standard flowchart notation allows user present complex process semantics precise information given step
+Business process diagram symbol occasionally may used making professional workflow diagram standard describing business workflow form non classic workflow diagram
+Business Process Diagram Flowchart Symbols The Diagrams visualize functional system model using Integration Definition Function Modeling IDEF methodology
+The Diagrams used analysis development integration information software system business process modelling
+Diagrams ConceptDraw contains necessary connecting arrow callouts
+Diagram Symbols The Education flowchart plane solid geometric figure mathematical symbol trigonometrical function help create mathematical diagram mathematical flowchart tape diagram mathematic illustration scientific educational purpose
+Education Flowcharts Symbols Your flowchart look le subject error much easier understand use fixed set structure Typically two possible situation
+As example may used decide pizza order company
+This type flowchart based multiple repeat step action
+As example needed quantity symbol password
+Program accept user wo enter minimum symbol
+Known chain used flowchart process according decision
+A common software development
+As example decision structure flowchart could Voice Machine phone
+If pick phone buzzer voice machine turn
+Commonly used guide make flowchart look like chain action used one another
+How make cooky may example
+This recipe describes process sequence
+represents step process
+indicate set step combine create defined elsewhere often another page drawing
+indicates point outcome decision dictate next step
+There multiple outcome often two yes
+indicates starting ending point process
+Indicates information coming process outside leaving process
+Represents waiting period activity done
+In Process Mapping delay often important may result adding cost product simply delaying production
+Use shape step result information stored
+represents single step within process usually contains name specific action
+refer individual web page may may contain multiple element
+represent data element exist independently navigational property outside page audio sound movie clip portable document file PDF
+A indicates sequence process end user chooses option response branch different part flowchart
+diagram logical progression course subject choice made decision action point within process
+The represents user response directs course flow point onwards online test questionnaire form
+Represents choice made user mutually exclusive option student choosing among different lesson plan
+similar conditional branch except user option choose number path fulfill requested condition result search engine request
+Pages share one common aspect functionally identical may simplified rounded corner rectangle test feedback form
+provide helpful comment explanation
+denoting location undeveloped new fit navigational flow structure note specific team member development
+symbol reusable sequence logging specific user id password enter course initiate quiz
+The flow reference symbol act placeholder flow area sequence chart every situation repeated
+Flow area used flow area document section share similar step within flow requires use following two symbol entry exit point
+concludes subroutine proper user id password verified document user master flowchart
+document place within master flowchart process deviate subroutine
+used connecting point flowchart necessitates using one page refers complicated subroutine would impossible contain main flowchart page
+Indicates next previous step somewhere else flowchart
+It particularly useful large flowchart
+Use set hyperlink two page flowchart shape separate flowchart page show step
+The designer click set following shape Data Document Decision Process
+Any text type onto shape information add Shape Data remains shape
+Represents step result document
+Flowcharts visualize process algorithm program block various shape connected arrowed line showing process flow direction
+They often used visualize business technical process well software algorithm
+You also benefit set sample example template included available ConceptDraw STORE
+Flowchart Website Launch The Flowcharts produced vector graphic document available reviewing modifying converting variety format image HTML PDF file MS PowerPoint Presentation Adobe Flash MS Visio
+You also use intended professional designing documenting business process preparing business report plan project manage project manage organizational change prepare operational instruction supervising specific department organization workout customer service process prepare training customer service personal carry variety duty organize business workflow
+CS Odessa CS Odessa Corp
+
+PC PC Magazine PC among federally registered trademark Ziff Davis LLC may used third party without explicit permission
+We updated encourage read clicking
+
+Outside contributor opinion analysis important issue politics science culture
+I lecturer computer science Stanford
+I taught least four different programming language including assembly
+I employee number startup
+Yes I woman tech
+I known worked taught countless men could written Google manifesto level persuaded
+Given fact I like treat degree charity try explain generated much outrage
+At outset must conceded despite commentary implied manifesto unhinged rant
+Its tone big part make beguiling also dangerous
+Many defender seem genuinely baffled document work hard appear dispassionate reasonable could provoke emotional response
+Of course see apparent disconnect baffling reason contempt woman eye confirming charge emotional le quantitative thinking
+The memo instance begin listing bias people left compassion weak right respect
+And indeed concern manifesto articulates imbalance political leaning Google easy enough nod along
+Alienating conservative generally bad Much science cite least grounding research even author conclusion justified finding failing adequately account sociological factor
+The author James Damore even precedes list biologically driven personality difference caveat Y ou say anything individual given population level But continues Women generally stronger interest people rather thing relative men may part explain woman relatively prefer job social artistic He suggests female extraversion tends expressed gregariousness rather assertiveness help explain woman harder time asking raise speaking Why woman report higher level anxiety Google according manifesto
+Because gender higher level The stress minority demographic environment acknowledged contributor
+Note average difference manifesto reiterates soothingly overlap men Here studious dispassion showy air reasonableness create cover memo defender
+They vociferously arguing online woman Google average offended manifesto litany citation study average woman deficiency
+So outrage
+A reason It important appreciate background endless skepticism every woman tech face resulting exhaustion feel legitimacy presence constantly questioned
+I could fill memoir example life manifesto led instance
+After one man Twitter repeated irrational one woman take offense discussion woman characteristic average I responded I teach probability statistic Stanford
+I understood part average
+That tweet capture lifetime woman tech
+A subsequent tweeter said CV notwithstanding jury still whether I qualified
+To woman tech know thrill participating one transformative revolution humankind known experience crystalline satisfaction finding elegant solution algorithmic challenge want throw monitor window frustration bug later happy dance chair finally fixing
+To woman tech also always forever faced skepticism I feel thing authentically enough truly belong
+There always jury always still
+When men tech listen experience woman tech come understand manifesto throwing match dry brush fire season
+The manifesto delineation woman average actual living breathing woman work alongside guy failed reassure many woman failed reassure
+That manifesto author overestimated extent woman willing turned gender
+Speaking matter soothingly man coo I like coo accompanied misogyny
+I woman
+I stop one part day I practicing craft
+There realistic chance individual comfort environment others demographic category really protected demographic category subjected skepticism condescension
+I called manifesto citation finding average woman sleight hand specific reason While dutifully includes limiting language making citation policy go advance memo mathematically rigorous connection average
+He deploying dispassionate fact argue ending Google attempt creating fair broadly welcoming working environment
+I judge author motif might adopting rhetorical strategy It could cynical strategic I suspect author may simply naïve
+The author simply listing various item scientific news random reader information
+He building case ending specific real program affect real people
+If proposal adopted abstract concept average get scholarship would actual individual woman
+It would actual female Googler get attend Grace Hopper Conference provides many woman first experience tech conference space
+If manifesto defender claim population average anything say individual Googlers exceptional
+What average hiring practice company famously hire fewer one percent applicant
+In name rational empiricism quantitative rigor manifesto hold dear insist cite study specifically speak tail distribution actual pool woman Google draw
+For example could look percentage woman majoring computer science highly selective college university
+Women currently make percent computer science major Stanford University one key source Google elite workforce
+Harvey Mudd College another elite program seen number grow steadily many year currently percent woman computer science department
+Yet Google workforce percent female
+So even imagine moment manifesto correct biological ceiling percentage woman suited work Google le percent workforce case Google tech generally almost certainly yet hitting ceiling
+In word clear still operating environment much likely woman biologically able work tech chased away tech sociological factor biologically unsuited woman somehow brought overzealous diversity program
+It striking manifesto author repeatedly list race alongside gender listing program preference think done away unlike gender never purport scientific backing
+The omission telling
+Would defender memo still comfortable author casually summarized race IQ study argue purported biological difference discrimination unequal access education explained Google shortage programmer
+Many defender manifesto eagerly far I tell earnestly pointed manifesto writer frequent claim support diversity abstract supposed reassuring
+I value diversity inclusion denying sexism exists
+They reassuring
+The object memo end program Google designed input great many people educated focused issue improve diversity
+If program killed absent commensurate effort create replacement program plausible ability least effective result harm diversity Google
+He make recommendation range impotent Make tech leadership le stressful hopelessly vague Allow exhibiting cooperative behavior thrive outright hostile empathy
+In end focusing conversation minutia scientific claim manifesto red herring
+Regardless whether biological difference exist shortage glaring evidence individual story scientific study woman tech experience bias general lack welcoming environment underrepresented minority
+Until problem resolved focus remedying injustice
+After work complete reassess whether small effect size biological component anything lingering imbalance
+For today given woman tech deal past week try pouring cup coffee female coder office asking interesting bug seen lately
+Vox home smart discussion important issue idea politics science culture typically outside contributor
+If idea piece pitch u
+Awesome share The news shorter delivered straight inbox
+

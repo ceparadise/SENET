@@ -1,0 +1,761 @@
+A relational database RDB collective set multiple data set organized table record column
+RDBs establish relationship database table
+Tables communicate share information facilitates data searchability organization reporting
+RDBs use Structured Query Language SQL standard user application provides easy programming interface database interaction
+RDB derived mathematical function concept mapping data set developed Edgar Codd
+RDBs organize data different way
+Each table known relation contains one data category column
+Each table record row contains unique data instance defined corresponding column category
+One data record characteristic relate one many record form functional dependency
+These classified follows RDB performs select project join database operation select used data retrieval project identifies data attribute join combine relation
+RDBs many advantage including Techopedia Terms Copyright Techopedia
+
+Relational database allow data separated connected across several table
+Tables connected primary foreign key increase efficiency
+A single table useful recording limited amount data
+But large database inefficient take space relational database
+It also requires new data added every time enter new record whereas relational database
+Finally data partially duplicated across record occur table easily avoided relational database
+Therefore large set data many different efficient create separate table connect relationship
+You need JavaScript enabled play audio clip
+Simon Lumb explains difference relational flat file database Relational allow data stored clear organised manner across multiple table
+Links known formed allow data shared across table
+For instance retail company might different table following information could complicated eg company sold book may several category within book including author name title genre physical size many detail
+Storing information one table would create large table
+You need JavaScript enabled play audio clip
+Jackson Gabbard explains Facebook us relational database Normalisation process analysing make database efficient using separate table reduce
+When database normalised data broken smaller table relationship used link
+Sign choose GCSE subject see content tailored
+
+Get grade money back bullet bullet Delivered time Get grade money back bullet bullet Delivered time Trusted Students Since This essay submitted student
+This example work written professional essay writer
+Any opinion finding conclusion recommendation expressed material author necessarily reflect view UK Essays
+In following report I talking main reason use database benefit using brief history old database design current database design today
+I explain terminology relational database current attribute within
+I relate Microsoft SQL Management Studio visual screenshots syntax quote formatted accordingly
+For criterion I expand Primary Keys comment benefit referential integrity relevant information keep consistency flow system
+For criterion I expand Cascading update provide evidence applying practise implemented database
+Finally I provide conclusion summing main point giving personal opinion I feel necessary
+In world storing retrieving data organisational purpose system called File Database implemented
+Herman Hollerith man intentionally came idea data could stored represented system flat file system implemented
+Flat file system built IBMs operating system Microsoft NT time
+Flat file system large group data stored within file usually simple layout usually consisting customer data separated line
+For example Michael Monaghan Manchester Road Manchester Anthony Monaghan Fellow Close Manchester The format flat file system user friendly regarding formatting although fulfil correct function storing customer detail
+Taking consideration Data Protection Act would accessed administrative personnel would encrypted use
+If database administrator needed search flat file system specific record would usually use third party program query information
+As technology developed new practises put place quickly discovered flat file system efficient way store manipulate data
+There needed robust advanced system available would change formatting database able retrieve record ease speed
+Relational database created
+The first relational design model first proposed implemented Codd
+He came idea inserting data centralised point querying data based quality feature data
+This later developed relational database design structure see today
+The term relational mean form relationship relate one another
+In specific term relational database two table connection field value
+These database contain variety information regarding company requires store online shopping
+These linked customer purchase item stock table decrease quantity item etc
+Alongside relational database concept application used query database SQL Management Studio
+SQL Structured Query Language language manipulate query specific vague need
+SQL used create database form relationship constraint modify table change individual record needed
+In table contain many different field column example CustomerID CompanyName ContactName ContactTitle etc
+These used organise data category
+Each column assigned data type keep referential integrity database running flexibility
+Data type used minimise much space possible without allocating space needed
+The screenshot displaying table created using SQL syntax management studio
+In table field defined first CustomerID alongside data type used VARCHAR
+Within relational database record unique free duplicated data
+This save error potential problem referring data future
+For example employee might need notifying required hand week resignation notice
+In result user queried database two name name thus resignation letter might go wrong person
+In scenario key field made used
+Key field made uniquely identify record number character value replicated throughout database
+So event record surname administrator refer unique ID called Primary Key
+A Primary Key table constraint affect entirety table working
+It allows record unique correspond unique number
+Repeated data provide good standing point referential integrity information queried
+As primary key table constraint affect complete table
+Referential Integrity complete consistency relationship table
+Primary key foreign key constraint provide referential integrity throughout database
+If key removed integrity relationship would removed destroyed table
+Tables need Referential Integrity stop repeated data entered database conflicting foreign key constraint
+Referential Integrity need rule keep data consistent robust
+A primary key constraint must present within table ensure validity data foreign key constraint link relational table suitable relationship
+It also help stop N N Many Many Relationships conflicted destroying referential integrity
+Many many relationship cause repeated data inserted within table example online library database many book cover many subject many subject listed many book
+Another example would Student Tutor table Student may one tutor tutor would many different student
+To solve table must inserted table called intermediate table
+An intermediate table contains primary key separate table would used match ID together find indivuaul
+For example
+Class We understand thus Mr Michael Monaghan teaching Anthony Monaghan
+This put Many Many relationship reference relating table
+Student Tutor table
+Candidate key used key field could negotiated used primary key table
+The administrator need take consideration numerical value would best suited character value primary key
+A Composite key table two unique attribute make one primary key
+This would used match two attribute within table
+An example would ISBN Number
+These natural naming key also known Surrogate key
+Surrogate key natural naming key provide unique attribute table
+Foreign key used link two together form relational database
+One column might updated record updated table constraint
+Foreign key also known table constraint
+Once foreign key executed within table table relationship
+A relationship could set Customer order displayed updated customer purchase another table etc
+Table constraint change table affect running entire table
+A Primary key would affect table entering detail making unique
+A column constraint similar concept affect column null statement defines nothing left blank column
+Cascading update process relational database offer enforce Referential Integrity
+It allows user update field within table information set override existing column
+Cascading deletes also allows user delete drop record integrity data also removed saving time space
+Cascading update also help keep data consistent enforce referential integrity throughout database
+It allows record updated update along changing value relationship
+It ensures referential integrity database relational link
+ON DELETE NO ACTION CASCADE SET NULL SET DEFAULT ON UPDATE NO ACTION CASCADE SET NULL SET DEFAULT The syntax cascading follows updating deletion field data following action occur throughout table
+For example NO ACTION mean perform action update delete default
+CASCADE performs action update delete tie data related modification table
+SET NULL set value NULL value necessary mark updated deleted
+SET DEFAULT place target table default state previously set constraint
+For example CREATE TABLE Students int NOT NULL PRIMARY KEY Name varchar int default CONSTRAINT coursestuFK FOREIGN KEY REFERENCES Courses ON DELETE SET DEFAULT If specific course name removed course table Students related foreign key value set
+To enable Cascading update within database enabled alongside constraint another table
+For example database I declaring foreign key constraint Student table referencing course table
+The cascading statement executed
+Secondly I insert value Students table
+This student used test show Cascading working effectively
+The data entered correctly Monaghan record completed relating English course Courses table
+I use DELETE FROM statement allows remove field within table based unique value
+There one course called English I wish remove I remove English
+When querying Courses table English field removed
+I use statement SELECT FROM Students cascading delete option Anthony Monaghan field removed English removed
+Transaction log used within SQL roll back running statement encountered error
+If two statement executed time error occurred none statement would executed
+Here example using transaction BEGIN TRANSACTION END TRANSACTION The SQL statement would contained within BEGIN END TRANS
+In conclusion following report I outlined many different aspect feature make relational database cascading update key constraint
+primary composite candidate foreign key
+I explained definition given relevant syntax reference needed
+I also used image support statement giving point data type querying relational database
+I felt considerable amount research development I experienced working SQL assignment It broaden knowledge large small company organise database different design approach
+To sum main point assignment relational database exceptional advantage flat file system management capability much detailed regard formatting easier query information needed
+Take look essay writing service Our Dissertation Writing service help everything full dissertation individual chapter
+Our Marking Service help pick area work need improvement
+Fully referenced delivered time
+Get extra support require
+If original writer essay longer wish essay published UK Essays website please click link request removal Copyright UK Essays trading name All Answers Ltd company registered England Wales
+Company Registration No
+VAT Registration No
+Registered Data Controller No
+Registered office Venture House Cross Street Arnold Nottingham Nottinghamshire
+
+A relational database model store data
+The vast majority database used modern application relational term database relational database often used synonymously
+Likewise database management system relational database management system RDBMSes
+Other database model include hierarchical database though rarely used
+Each table relational database contains record field
+In terminology row sometimes called tuples column may referred attribute table may called relation
+A table visualized row column intersection row column contains specific value
+It relational since record share field
+Database table often include provides unique identifier row within table
+The key may assigned column requires unique value row may comprised multiple column together form unique combination value
+Either way primary key provides efficient way data used share value table within database
+For example value primary key one table assigned field row another table
+Values imported table called foreign key
+The standard way access data relational database Structured Query Language query
+SQL query used create modify delete table well select insert delete data existing table
+Updated July Cite definition This page contains technical definiton Relational Database
+It explains computing terminology Relational Database mean one many software term TechTerms dictionary
+All definition TechTerms website written technically accurate also easy understand
+If find Relational Database definition helpful reference using citation link
+If think term updated added TechTerms dictionary please
+Tech Factor Related Terms
+
+This action might possible undo
+Are sure want continue
+Computer science mcqs available
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+Download complete GCSE Computer Science bundle including teacher resource student revision
+To download bundle click button signup take minute brought right back page start download
+Candidates able In data held several problem associated
+Consider following scenario The limitation trying represent information single file quickly become apparent
+The first row represents Pulse reading patient Kit Kline
+The second row represents different test requires u information forename surname age patient
+This continues test result
+This make size database unnecessarily large process data entry cumbersome repetitive
+The process unnecessarily duplicating data called Note data entry error highlighted table
+Such data inconsistency occurs large amount duplicate data entered database
+By duplicating data across record flat file introduce risk The problem database system lead The key difference relational database database relational database data grouped stored
+An entity real world thing data held database
+Examples entity include Attributes fact aspect property detail entity
+Examples attribute include In general entity attribute attribute smaller part
+An attribute belongs single entity
+The key field sometimes called primary key used store attribute make particular entity entry database unique
+For example NHS number passport number vehicle registration booking reference flight number etc
+Consider library database
+Entities would separate linked table
+The book table would detail book detail author would stored separate table
+A table would hold detail library member could borrow book
+Another table would also needed store detail actual lending data return date
+This loan table would need store detail book author borrower link data table
+The simplified diagram show key field table used link entity
+The component relational database In relational database
+Database table made
+Each record relational database table corresponds instance
+In example table Students record top row containing field name record
+Each record corresponds instance Student entity
+row represents individual student
+Note although two student called Philip Barker date birth different Student IDs therefore considered different student
+An piece information characteristic entity
+Attributes entity represented database table column
+A field store one item data
+In table student represented relational database record student stored following For example student Student ID called born
+Fields following characteristic In relational database must entity
+Sometimes existing attribute used unique time sort numeric ID created
+This called
+In Student database table Key Field needed unique item data student
+Sometimes one field combined make primary key example cinema reservation could uniquely defined particular seat number particular screening
+To link table one table must appear field table
+This best explained example case simplified relational database doctor surgery
+There two Patient Test Results two table created
+As neither patient treatment unique attribute entity given numeric ID
+All data associated patient held one table data associated test result held another
+In order create two table created adding Patient Table field Test Result Table
+This mean new test result added test result table data patient need added Patient ID
+The example show two table might look real data
+As seen Patient ID make link two table apart field duplication data
+If detail patient tested needed easily accessed relationship two table data
+Problems also avoided
+There three different type relationship entity Each relationship shown diagram one The diagram show diagram drawn represent entity relational database planned store detail student resource borrowed school library book video music etc
+The Student entity one end relationship Library Loan entity many end end link look like crow foot
+The relationship instance Student entity instance Library Loan entity stated When converted database table entity need table containing field attribute
+All student attribute name date birth etc held Students table Library Loans table hold data associated student library loan
+See table The Students table field called Student ID Library Loans table field called Loan ID
+Because key field field record table Student ID value used uniquely identify student
+Similarly Library Loan record uniquely identified Loan ID field Library Loans table
+Note database table often designed new record created key field entry generated incremental number
+Microsoft Access assign data type AutoNumber field
+Sometimes however natural choice unique data used instead
+Car Registration Number National Insurance Number Product Serial Number
+In order create relationship two table key one table must added field table becomes key
+In case library database shared field would Student ID field
+primary key Students table
+It selected general rule relationship entity entity end relationship used entity end relationship see diagram
+After Student ID field added Library Loans table table would look like one
+By appearing table Student ID field created relationship two table
+It act key field Students table key field Library Loans table
+Unlike Loan ID field Student ID field occur one record Library Loans table student may borrowed one resource library
+The diagram show example data Students Library Loans table
+Notice value primary key Students table match value foreign key Library Loans table
+This creates link two table permit question What loan student borrowed answered
+Notice every library loan record associated student however every student library loan
+When user input detail new library loan entry rejected also associate loan existing student
+valid Student ID
+This known ensuring referential integrity one method validating data entry
+A form used data rather use database table directly
+When edited
+user interface In GCSE Computing exam might well asked
+Make sure take note following The interrogation database called database question used interrogate data called
+There many reason user may wish query data including The list show query mean producing
+This information used decision maker organisation plan strategy tactic
+Databases usually allow user create reuse query
+A query design specifies record user searching field display record
+There two type query The example simple query us Microsoft Access database table query find name student form
+This involves following step A query also written using query language tructured uery anguage
+The example would written For GCSE Computing examination could simplified Further example query data could A report used data
+It either displayed screen typically
+A printed report therefore snapshot data database particular point time
+Reports offer number advantage displaying printing database table query result Most relational database include facility report generated data held database
+Reports include make information easy assimilate
+As form report customised include logo colour font style organisation
+In GCSE Computing exam might well asked
+Make sure take note following When database designed field set accept particular data type
+This help check wrong type data entered
+For example database allow store text field data type integer
+Data type also help make sure data
+For example field data type integer requires le storage space hold value compared field data type real
+Data type also help ensure data sorted correctly
+For example integer value stored number field easily sorted correctly
+However value stored field text would sort alphabetical order
+In way date field allow data sorted year month day
+A field data type text accept number text
+Numeric field used store number
+This There two type numeric field need know
+A field type store day month year record year month finally day easily validated using
+Date field display date information different format full name August numerical version
+Modules package code database developer use add extra functionality relational database
+Each module collection procedure stored together unit database
+Modules associated specific form report case procedure tend specific form report attached
+Modules used present company business rule user friendly interface
+An example business rule might state credit check performed existing customer processing loan application
+In large organisation module contain general procedure reused different section company
+This save different user write version query database help ensure company standard practice followed
+Well written module tend optimised run faster efficiently query written end user
+Modules presented user application tailored user need
+For example user interface form use dental receptionist
+She use query appointment database order find book slot patient
+By mean module save end user understand table field relationship database
+In Microsoft Access module produced using language called Visual Basic Applications
+Other database vendor similarly language producing module
+Some vendor specialised producing professional module common business function
+For example purchase individual system Oracle composed database module A complex query look data two field us
+The following example us complex query find pupil Form born
+This query us logical operator written The following operator used refine search A query design MS Access shown
+Note two entry search criterion row query given meaningful name Select Query Pupils born
+Below complex query us logical operator OR find pupil Form OR Form This time query definition two criterion row
+The query result shown Wildcard character used database query
+For example may want list pupil born November pupil whose surname start C
+Wildcard search allow specify part data know leave data handling software fill blank
+Note wildcard character vary different relational database
+For example wildcard character would use Microsoft Access database differ wildcard character used internationally recognised standard called
+used several popular relational database ORACLE MYSQL
+The following table show wildcards use compose query criterion using Microsoft Access
+A built database check data entered It mean data actually correct requires
+Field data type provide basic method validation
+Field data type assigned field creation database table data type Numeric Boolean Image restrict entered
+These used numerical data limit range number user enter
+Examples The day part date must range
+This type check used number
+An extra check digit calculated number entered added end
+The number checked stage check digit number seeing match one entered
+One example check digit used digit ISBN number uniquely identifies book
+The last number ISBN actually check digit number example ISBN
+
+number would check digit shown
+Checksum check digit These simply check particular field user continue
+null value empty field permitted
+Usually every field record need filled however likely must value presence check mean system allow record saved entry made
+All alphanumeric data length
+A single character length string text Hello World length space counted text string
+A length check ensures data either exact length exceed specified number character
+A lookup check take value entered compare list value separate table
+It return confirmation value entered second list based value
+One use lookup restricts user input using
+A user forced use list box select predetermined list valid value
+For example may select Male Female exam grade range A G U
+etc
+An example frequently encountered entering postcode online form
+The database look postcode return list possible address user select
+A database system manages airline seat booking could use check limit entry available list box selection
+Rather checking data entered travel agent could presented list box show seat still available
+This would eliminate example complicated lookup validation
+special form lookup
+It used relational database enforce valid input involves checking entry certain field value table
+For example Orders table new record entered database could check field new order existing data already Customers table prevent entry order customer exist
+Certain field database may require entry particular format
+mixture number letter
+Simple example date structure text specific length
+More complex example include data item postcode National Insurance Numbers driving licence number product code
+Most database allow format defined database field input mask defines valid character permitted field
+For example item code factory may look like The first two character letter next three character number last character letter
+This would allow format check applied field example letter number
+This make sure letter entered first two last character number entered middle three
+Typing data computer data capture form called transcribing
+If error made called
+Verification used
+Data verified therefore totally
+There two main method verification Double entry data entered twice sometimes two different people
+The computer compare two version accept entry difference
+A familiar example type verification encountered setting new password user usually asked key password second time ensure make mistake first time
+As password displayed screen check useful ensuring right password set
+Sign get instant access OCR GCSE Computer Science teaching resource
+
+What relational database
+What contain
+What purpose database
+Relational database collection table contain information relationship among entity
+You need database store model real world informaiton banking inventory mailing list etc
+Each table What relational database
+What contain
+What purpose primary key database
+
+Data Analytics A total credit required
+Five credit Discusses basic method designing analyzing efficient algorithm emphasizing method used practice
+Topics include sorting searching dynamic programming greedy algorithm advanced data structure graph algorithm shortest path spanning tree tree traversal matrix operation string matching NP completeness
+cr
+Overview operating system characteristic design objective structure
+Topics include concurrent process coordination asynchronous event file system resource sharing memory management security scheduling deadlock problem
+cr
+Theory finite automaton regular expression property regular set
+free grammar language pushdown automaton
+Turing machine undecidability problem Chomsky hierarchy
+Introduction computational complexity theory study problem
+Prerequisite MET CS instructor consent
+cr
+Techniques construction reliable efficient software
+Requirement analysis software design programming methodology testing procedure software development tool management issue
+Students plan design implement test system group project
+Laboratory course
+Prereq MET CS least one computer computer science course instructor consent
+cr
+And one following This course provides robust understanding networking
+It teach fundamental networking system architecture function operation fundamental reflected current network technology
+Students learn principle underlie network application principle current network protocol system
+The course explains layer different scope combined create network
+There basic introduction Physical Media function make protocol error detection delimiting lost duplicate detection synchronization required feedback mechanism flow retransmission control etc
+Students introduced function used current protocol Ethernet WiFi VLANs wireless communication routing congestion management QoS network management security common network application well past application unique design solution
+Prereq MET CS MET CS MET CS MET CS
+Or instructor consent
+Restrictions This course may taken conjunction MET CS MET CS undergraduate
+Only one course counted towards degree requirement
+cr
+This course provides theoretical yet modern presentation database topic ranging Data Object Modeling relational algebra normalization advanced topic develop database application
+Other topic covered relational data model SQL manipulating relational data application programming relational database physical characteristic database achieving performance reliability database system database system
+Prereq MET CS MET CS instructor consent
+cr
+In addition MS Computer Science core curriculum credit student pursuing concentration Data Analytics must also satisfy following requirement Four credit The goal course provide student mathematical practical background required field data analytics
+Starting introduction probability statistic R tool introduced statistical computing graphic
+Different type data investigated along data summarization technique plotting
+Data population using discrete continuous multivariate distribution explored
+Errors measurement computation analyzed course
+Confidence interval hypothesis testing topic also examined
+The concept covered course demonstrated using Laboratory Course
+Prereq MET MET MET equivalent knowledge instructor consent
+cr
+This course provides overview statistical tool commonly used process analyze visualize data
+Topics include simple linear regression multiple regression logistic regression analysis variance survival analysis
+These topic explored using statistical package R focus understanding use interpret output software well visualize result
+In topic area methodology including underlying assumption mechanic work along appropriate interpretation result discussed
+Concepts presented context real world example
+Recommended Prerequisite MET CS equivalent knowledge instructor consent
+cr
+The Web Analytics Mining course cover area web analytics text mining web mining practical application domain
+The web analytics part course study metric web site content user behavior reporting
+Google analytics tool used collection web site data analysis
+The text mining module cover analysis text including content extraction string matching clustering classification recommendation system
+The web mining module study web crawler process index content web site search work result ranked
+Application area mining social web game metric extensively investigated
+Laboratory Course
+Prerequisites MET CS MET CS equivalent knowledge instructor consent
+cr
+The goal course study basic concept technique data mining
+The topic include data preparation classification performance evaluation association rule mining clustering
+We discus basic data mining algorithm class student practice data mining technique using data mining software
+Students use Weka SQL Server Oracle
+Prereq MS CS Prerequisites MET CS instructor consent
+MS CIS Prerequisites MET CS MET CS instructor consent
+cr
+One credit Choose one additional course following general elective exploration C programming language Visual Studio development debugging deployment application
+Programming C encompassing following topic Device handling Framework application development class window form splitter view control dialog resource menu tool bar bitmap status bar
+Custom control visual inheritance SDI MDI extending Visual Studio interface
+File reading storing binary textual information
+Data service manipulating using
+Graphics Services graphic imaging text rendering including new feature gradient double buffering technique zooming image processing rendering
+Communication service TCP UDP socket broadcast unicast multicast socket
+Utilizing idle time processing timer threading building responsive GUI application
+Laboratory course
+Prereq MET CS MET CS instructor consent
+cr
+This course primarily study design graphic algorithm
+At end course expect able write program model transform display dimensional object display
+The course start brief survey graphic device graphic software
+primitive line curve space studied number algorithm draw rectangular surface introduced followed study polygon scan conversion fill method
+Attributes primitive studied well filtering aliasing
+Geometric transformation dimension introduced homogeneous coordinate followed viewing pipeline includes clipping line polygon text
+Hierarchical graphic modeling briefly studied
+The graphic user interface introduced various input function interaction mode examined
+graphic introduced object representation polygonal method spline technique octrees
+This followed transformation viewing pipeline
+The course end study algorithm detect visible surface object object space image space
+Laboratory Course
+Prereq MET CS MET CS MET CS
+Or instructor consent
+cr
+The goal course provide Computer Information Systems student mathematical fundamental required successful quantitative analysis problem field business computing
+The first part course introduces mathematical prerequisite understanding probability statistic
+Topics include combinatorial mathematics function fundamental differentiation integration
+The second part course concentrate study elementary probability theory discrete continuous distribution
+Prereq Academic background includes material covered standard course college algebra instructor consent
+cr
+Organization programming language especially behavior program
+Discussion imperative Pascal C Smalltalk Java functional Lisp logic Prolog concurrent programming
+Laboratory course
+cr
+This course present financial algorithm used application computer science financial decision analysis risk management data mining market analysis modern business process
+The course cover theoretical background probabilistic method used financial decision making application number field financial modeling venture capital decision making operational risk measurement investment science
+Number financial application algorithm presented portfolio risk analysis modeling real option venture capital decision making etc
+The course concludes algorithm financial risk assessment present security concept challenge financial information system
+cr
+This course designed IT professional training IT professional preparing career IT Health Informatics
+This course provides introduction basic concept biomedicine familiarizes student structure organization American healthcare system role played IT system
+The course introduces medical terminology human anatomy physiology disease process diagnostic modality treatment associated common disease process
+IT case study demonstrate key role health informatics IT tool resource help medical professional integrate multiple source information make diagnostic therapeutic decision
+cr
+This course present technological fundamental integrated clinical application modern Biomedical IT
+The first part course cover technological fundamental scientific concept behind modern medical technology digital radiography CT nuclear medicine ultrasound imaging etc
+It also present various medical data patient record focus various technique processing medical image
+This part also cover medical computer network system data security protection
+The second part course focus actual medical application used health care biomedical research
+cr
+Electronic Health Records EHRs application system automate activity healthcare clinician including physician nurse physician assistant healthcare administrative staff
+Use EHRs increasing rapidly due system benefit federal government program deploy EHRs
+This increased use EHRs many challenge including complex data high security requirement integration multiple application system distributed user base broad impact user work
+cr
+In course study fundamental design application various biometric system based fingerprint voice face hand geometry palm print iris retina modality
+Multimodal biometric system use two characteristic discussed
+Biometric system performance issue related security privacy aspect system also addressed
+cr
+This course focus building core competency web design development
+It begin complete immersion HTML essentially XHTML Dynamic HTML DHTML
+Students exposed Cascading Style Sheets CSS well Dynamic CSS
+The fundamental JavaScript language including JavaScript covered comprehensively
+AJAX XML JSON covered primary mean transfer data client server
+Prereq For CIS Students MET CS Fundamentals Information Technology instructor consent
+For CS TC Students MET CS MET CS instructor consent
+cr
+Comprehensive coverage programming cooperating class
+Implementation polymorphism inheritance interface Java library container
+Programming exception stream graphical AWT Swing component
+Threads socket datagrams database connectivity also covered course
+Prerequisite MET CS equivalent knowledge Java
+Or MET CS MET CS
+Or instructor consent
+For graduate
+cr
+This course provides student comprehensive overview principle process practice software project management
+Students learn technique planning organizing scheduling controlling software project
+There substantial focus software cost estimation software risk management
+Students obtain practical project management skill competency related definition software project establishment project communication managing project change managing distributed software team project
+cr
+Theory practice security quality assurance testing step software development cycle
+Verification validation
+Test case design technique test coverage criterion security development verification practice tool static dynamic analysis
+Standards
+development
+QA maintenance legacy application
+From project management knowledge perspective course cover method tool technique associated following process Plan Quality Perform Quality Assurance Perform Quality Control
+Prereq MET CS
+Or instructor consent
+cr
+This course provides comprehensive introduction building Web site Web application Web service device Microsoft technology emphasis technology Windows OS X Linux methodology interplay today script
+technology covered include C programming language system developing web site web apps web service LINQ data access Model View Controller MVC MVVM architecture framework like Windows Communication Framework WCF
+This class requires programming experience either Java C
+Programming based Microsoft Visual Studio Microsoft Code available BU MSDNAA
+A copy software provided student
+Prereq MET CS instructor consent
+cr
+Study idea technique enable computer behave intelligently
+Search constraint propagation reasoning
+Knowledge representation natural language learning question answering inference visual perception problem solving
+Laboratory course
+Prereq MET CS MET CS MET CS instructor consent
+cr
+Software design principle paradigm unified modeling language creational structural behavioral design pattern OO analysis design implementation semester project
+Laboratory course
+Prereq MET CS MET CS MET CS MET CS
+Or instructor consent
+cr
+The Java Enterprise Edition Java EE architecture explored starting presentation layer includes servlets Java Server Pages JSP
+Java Server Faces JSF briefly covered
+The business layer examined using enterprise java bean EJB
+The persistence layer studied Java Persistence API JPA Hibernate framework
+Java based web service explored using WS SOAP based REST based APIs
+The Spring framework compared alternative architecture
+Prereq MET CS instructor consent
+cr
+Teaches student develop complex application based standard
+Topics include UNIX standardization implementation shell programming system call library function process control relationship signal file terminal interprocess communication
+Laboratory course
+Prereq MET CS instructor consent
+cr
+The course provides strong foundation database security auditing
+This course utilizes Oracle scenario example
+The following topic covered security profile password policy privilege role Virtual Private Databases auditing
+The course also cover advanced topic SQL injection database management security issue securing DBMS enforcing access control related issue
+Prereq MET CS MET CS instructor consent
+cr
+This course divided two part
+The first part two third course cover principle problem associated mobile device application using example Google Android iPhone platform Nokia
+The last third depth coverage open source Android development platform
+Issues covered include Mobile Hardware Cell Networks Architectures Operating Systems Languages Development Environments Simulators User Interfaces Services Storing Retrieving Data
+Students accomplish following
+Learn unique set problem challenge developing mobile application compared desktop application Learn platform tool technology process developing mobile application using Google Android Apple iPhone platform main example Write application platform covered simulate test mobile hardware possible Work collaboratively fellow student project
+Prereq MET CS OR MET CS MET CS
+Or instructor consent
+cr
+This course enables IT professional leader identify emerging security risk implement highly secure network support organizational goal
+Discussion methodology identifying quantifying mitigating controlling risk
+Students implement comprehensive IT risk management plan RMP identify alternate site processing application technique recover infrastructure system network data user access
+The course also discus related topic disaster recovery handling information security protection property personnel facility protection sensitive classified information privacy issue criminal terrorist hostile activity
+cr
+This course survey art technology DW Big Data
+It describes logical physical semantic foundation modern DW infrastructure
+Students create cube using OLAP implement decision support benchmark v Vertica database
+Upon successful completion student familiar tradeoff DW design architecture
+Prereq MET CS MET CS either MET CS MET CS
+Or instructor consent
+cr
+Provides comprehensive understanding digital forensics investigation tool technique
+Learn computer forensics investigation profession gain understanding overall investigative process
+Operating system architecture disk structure discussed
+Studies set investigator office laboratory well computer forensic hardware software tool available
+Other topic covered include importance digital evidence control process crime incident scene detail data acquisition computer forensic analysis investigation image file recovery investigative report writing expert witness requirement
+Provides range laboratory assignment either solo team
+With rapid growth computer system digital data area grown importance
+Prereq Working knowledge window computer including installing removing software
+Access PC meeting minimum system requirement defined course syllabus
+cr
+The Rich Internet Application RIA Development course concentrate primarily building rich client web application browser desktop mobile device
+The course divided various module covering depth following technology AngularJS Ionic framework
+Along fundamental underlying technology several application showcased case study
+Students work technology starting simple application examining real world complex application
+At end course student would mastered latest widely used RIA methodology
+Course Prerequisites Information Structures Web Application Development instructor consent
+cr
+This course provides comprehensive understanding network forensic analysis principle
+Within context forensics security network infrastructure topology protocol introduced
+Students understand relationship network forensic analysis network security technology
+Students learn identify network security incident potential source digital evidence demonstrate ability perform basic network data acquisition analysis using computer based application utility
+Students also identify potential application integration network forensic technology demonstrate ability accurately document network forensic process analysis
+Prereq MET CS MET CS instructor consent
+cr
+This course provides introduction advanced digital forensic topic relating malicious software malware represents increasing information security threat computer system network
+Students review software engineering design fundamental reverse engineering technique utilized conduct static dynamic forensic analysis computer system network
+Students learn importance forensic principle legal consideration digital evidence control documentation forensic procedure
+This course incorporate demonstration laboratory exercise reinforce practical application course instruction require independent research paper related course topic
+Prereq MET CS MET CS instructor consent
+cr
+This second class Certificate Multimedia Video Game Engineering
+It assumes understanding computer graphic
+The course update MET CS existing course offered least five year
+The first half course applies basic computer graphic covered CS
+It extends exploring lighting texture rendering algorithm
+The second half explores geometrical technique representation application intersection collision
+cr
+Cloud computing leverage World Wide Web fulfill computing need
+It package application computing power storage metered service similar utility
+This model designed supplant traditional mechanism desktop computing many case
+This course cover origin theory enabling technology lab key concept cloud computing
+Students Learn unique set problem challenge developing cloud computing application Learn platform tool technology process developing cloud computing application using Hadoop main example Propose develop run application platform covered
+Prereq MET CS MET CS instructor consent
+cr
+Theories method automating representing knowledge emphasis learning data
+The course cover wide variety approach including Supervised Learning Neural Nets Deep Learning Reinforcement Learning Expert Systems Bayesian Learning Fuzzy Rules Genetic Algorithms Swarm Intelligence
+Each student focus two approach creates term project
+Laboratory course
+Prereq MET CS instructor consent
+It also recommended student enroll class taking core course MS Computer Science
+cr
+Theory practice quality assurance testing step software development cycle
+Verification validation
+Test case design technique test coverage criterion tool static dynamic analysis
+Standards
+development
+QA maintenance legacy application
+Experimental approach
+Prereq MET CS instructor consent
+cr
+This course cover advanced aspect database management system including advanced normalization denormalization query optimization oriented database data warehousing data mining distributed database XML XSL database web application
+There extensive coverage SQL database instance tuning
+Students learn advanced relational feature DBMS Oracle including navigational query BLOBs abstract data type method
+Students learn unstructured big data database gain experience MongoDB Spark integrated course web site
+Prereq MET CS MET CS instructor consent
+cr
+This course build upon strong technical foundation MSCIS MSCS curriculum providing student management perspective skill enterprise architect context technology implement architecture
+Our Ross Weil Robertson text provides much management content course online classroom content provide management technical skill
+Students learn enterprise architecture best developed incrementally system development project aligned strategic goal enterprise architecture
+The online content therefore includes many real enterprise system development case study showing enterprise system contributed helped define overall enterprise architecture
+The course also includes number realistic enterprise architecture assignment incremental term project component spanning course provide student hand enterprise architecture experience
+The course provides student understanding skill needed define implement successful enterprise architecture provide real value organization substantially reducing IT cost improving performance agility alignment information technology business goal
+Prereq MET CS
+Or strategic IT experience
+Or instructor consent
+credit
+cr
+The course cover main concept principle cryptography main emphasis put public key cryptography
+It begin review integer thorough coverage fundamental finite group theory followed RSA ElGamal cipher
+Primitive root cyclic group discrete log problem discussed
+Index Calculus probabilistic algorithm compute discrete log cyclic group presented
+Naor Reingold Blum Blum Shub Random Number Generators well Fermat Euler primality test thoroughly covered
+Pollard Rho Pollard Quadratic Sieve factorization algorithm presented
+The course end coverage oblivious transfer protocol proof
+There numerous programming assignment course
+Prereq MET CS instructor consent
+cr
+This course build material covered CS Cryptography
+It begin coverage commutative ring finite field ring polynomial finding greatest common divisor ring polynomial
+Irreducible polynomial discussed
+Field extension field Fᴩ x thoroughly covered
+The main emphasis put elliptic curve Fᴩ ElGamal cipher elliptic curve presented
+Block cipher DES double triple DES introduced
+AES WHIRLPOOL block cipher mode operation covered
+The course continues introduction message integrity message authentication
+In last part course cryptographic hash function WHIRLPOOL well various digital signature introduced
+Finally entity authentication key management issue discussed
+Prereq MET CS instructor consent
+cr
+Electives listed must approved advisor often include Builds previous design programming course introduces student technological social pragmatic aspect developing open source software direct involvement open source project
+Students learn use tool technique strategy open source developer
+They become familiar open source movement philosophy history licensing issue
+This laboratory course
+Students directly involved integrated open source project
+They expected active participant project contribute project various way
+cr
+Contemporary software engineering take several distinct rapidly changing form
+First Agile method based need flexibility application built
+Agile method constitute radical departure method They rely newly developed technology development XUnit refactoring
+A second form emergence development
+This course teach architectural operational implication open source development explores relationship agile method
+The course also discus programming decomposition application onshore offshore component design security formal method
+Laboratory course
+cr
+View
+Learn program Classes begin January online January campus
+Learn start application Find finance undergraduate graduate degree MET
+Talk enrollment advisor learn offer
+Or find MET department administrative program office
+Choi Metropolitan College resident cybercrime expert faculty coordinator Cybercrime Investigation Cybersecurity master graduate As founder chairman CEO CyberArk leading information security firm Udi Mokady MET seen growth Metropolitan College take pride connecting motivated learner developing opportunity professional realm
+This never better evidenced View recent
+
+also called collection data specially organized rapid search retrieval
+Databases structured storage retrieval modification deletion data conjunction various operation
+A DBMS extract information database response query
+A brief treatment database follows
+For full treatment
+A database stored set file magnetic disk tape optical disk secondary storage device
+The information file may broken consists one field
+Fields basic unit data storage field typically contains information pertaining one aspect attribute entity described database
+Records also organized table include information relationship various field
+Although applied loosely collection information computer file database strict sense provides capability
+Using keywords various sorting command user rapidly search rearrange group select field many record retrieve create report particular data
+Database record file must organized allow retrieval information
+main way user retrieve database information
+The power DBMS come ability define new relationship basic one given table use get response query
+Typically user provides string character computer search database corresponding sequence provides source material character appear user request example record content field person word
+The many user large database must able manipulate information within quickly given time
+Moreover large business organization tend build many independent file containing related even overlapping data activity often require linking data several file
+Several different type DBMS developed support requirement flat hierarchical network relational
+Early system arranged sequentially alphabetically numerically chronologically development storage device made possible random access data via index
+In flat database record organized according simple list entity many simple database personal computer flat structure
+The record organized treelike structure level record branching set smaller category
+Unlike hierarchical database provide single link set record different level create multiple linkage set placing link pointer one set record another speed versatility network database led wide use within business
+used association file record expressed link simple flat list becomes one row table relation multiple relation mathematically associated yield desired information
+Various Structured Query Language widely employed DBMS relational database
+database store manipulate complex data structure called object organized hierarchical class may inherit property class higher chain database structure flexible adaptable
+The information many database consists text document database primarily contain information statistic table financial data raw scientific technical data
+Small database maintained system may used individual home
+These larger database become increasingly important business life part commonly designed office software including program
+Typical commercial database application include airline reservation function medical record hospital legal record insurance company
+The largest database usually maintained governmental agency business organization university
+These database may contain text material abstract report legal statute wire service newspaper journal encyclopaedia catalog various kind
+Reference database contain bibliography index serve guide location information book periodical published literature
+Thousands publicly accessible database exist covering topic ranging law medicine engineering news current event game classified advertisement instructional course
+Increasingly formerly separate database combined electronically larger collection known
+Businesses government agency employ software analyze multiple aspect data various pattern
+For example government agency might flag human investigation company individual purchased suspicious quantity certain equipment material even though purchase spread around country various subsidiary
+early adopter computer database technology
+In United States National Crime Information Center NCIC established police record subsequently computerized made available police agency throughout country
+The NCIC database enables local police department apprehend offender might otherwise evade advent database marketing individual customer characteristic purchase history retained company information system
+Even company particularly large retailer catalog house compile comprehensive data individual customer able customize offering communication
+task
+A distributed database system example consists database see section Information system database residing different network site
+Data may deliberately replicated several different computer enhanced availability reliability linkage computer database already reside may library network consortium
+The emergence digital technology century affected humankind inventory recorded information dramatically
+During early computer used digitize text first time purpose reduce cost time required publish We welcome suggested improvement article
+You make easier u review hopefully publish contribution keeping point mind
+Your contribution may edited staff publication subject final approval
+Unfortunately editorial approach may able accommodate contribution
+Our editor review submitted meet criterion add article
+Please note editor may make formatting change correct spelling grammatical error may also contact clarification needed
+There problem submission
+Please try later
+Our editor review submitted determine whether revise article
+

@@ -1,6 +1,7 @@
 from nltk.stem.porter import PorterStemmer
 import nltk, string
 from sklearn.feature_extraction.text import TfidfVectorizer
+import common
 
 
 class FeatureExtractor:
@@ -11,7 +12,15 @@ class FeatureExtractor:
                          self.token_num_same,
                          self.include_each_other,
                          # self.pos_compare, #Very time consuming
-                         #self.doc_similarity
+                         self.doc_similarity,
+                         # self.iterative_levenshtein
+                         # self.doc_contain_tokens_w1,
+                         # self.doc_contain_tokens_w2,
+                         # self.wordnet_related_tokens_intersection,
+                         # self.wordnet_related_tokens_highest_similarity,
+                         # self.wordnet_related_tokens_lowest_similarity
+                         self.wordnet_last_token_h_similarity,
+                         self.one_side_single_token
                          ]
 
     def __stem_Tokens(self, words):
@@ -58,7 +67,7 @@ class FeatureExtractor:
 
     def include_each_other(self, w1, d1, w2, d2):
         # Count how many time each word appear on each other's definition
-        return d1.count(w2) + d2.count(w1)
+        return d1.lower().count(w2) + d2.lower().count(w1)
 
     def __find_index_for_phrase(self, tags_list, phrase_tokens):
         res = []
@@ -138,4 +147,124 @@ class FeatureExtractor:
             tfidf = vectorizer.fit_transform([text1, text2])
             return ((tfidf * tfidf.T).A)[0, 1]
 
+        if len(d1) == 0 or len(d2) == 0:
+            return -1
         return cosine_sim(d1, d2)
+
+    def iterative_levenshtein(self, w1, d1, w2, d2):
+        """
+            iterative_levenshtein(s, t) -> ldist
+            ldist is the Levenshtein distance between the strings
+            s and t.
+            For all i and j, dist[i,j] will contain the Levenshtein
+            distance between the first i characters of s and the
+            first j characters of t
+        """
+        rows = len(w1) + 1
+        cols = len(w2) + 1
+        dist = [[0 for x in range(cols)] for x in range(rows)]
+        # source prefixes can be transformed into empty strings
+        # by deletions:
+        for i in range(1, rows):
+            dist[i][0] = i
+        # target prefixes can be created from an empty source string
+        # by inserting the characters
+        for i in range(1, cols):
+            dist[0][i] = i
+
+        for col in range(1, cols):
+            for row in range(1, rows):
+                if w1[row - 1] == w2[col - 1]:
+                    cost = 0
+                else:
+                    cost = 1
+                dist[row][col] = min(dist[row - 1][col] + 1,  # deletion
+                                     dist[row][col - 1] + 1,  # insertion
+                                     dist[row - 1][col - 1] + cost)  # substitution
+        return dist[row][col]
+
+    def doc_contain_tokens_w1(self, w1, d1, w2, d2):
+        w1_tk = set(self.__stem_Tokens(w1))
+        w1_cnt = 0
+        for tk in w1_tk:
+            if tk in d2.lower():
+                w1_cnt += 1
+        return w1_cnt / len(w1_tk)
+
+    def doc_contain_tokens_w2(self, w1, d1, w2, d2):
+        w2_tk = set(self.__stem_Tokens(w2))
+        w2_cnt = 0
+        for tk in w2_tk:
+            if tk in d1.lower():
+                w2_cnt += 1
+        return w2_cnt / len(w2_tk)
+
+    def wordnet_related_tokens_intersection(self, w1, d1, w2, d2):
+        w1_tk = nltk.word_tokenize(w1)
+        w2_tk = nltk.word_tokenize(w2)
+
+        w1_related_set = common.get_related_set(w1_tk)
+        w2_related_set = common.get_related_set(w2_tk)
+
+        return len(w1_related_set.intersection(w2_related_set))
+
+    def wordnet_related_tokens_highest_similarity(self, w1, d1, w2, d2):
+        w1_tk = nltk.word_tokenize(w1)
+        w2_tk = nltk.word_tokenize(w2)
+        score = 0
+
+        w1_syn = common.get_synsets(w1_tk)
+        w2_syn = common.get_synsets(w2_tk)
+
+        for w1_s in w1_syn:
+            for w2_s in w2_syn:
+                cur_score = w1_s.wup_similarity(w2_s)
+                if cur_score != None:
+                    score = max(score, cur_score)
+        return score
+
+    def wordnet_related_tokens_lowest_similarity(self, w1, d1, w2, d2):
+        w1_tk = nltk.word_tokenize(w1)
+        w2_tk = nltk.word_tokenize(w2)
+        score = 1
+
+        w1_syn = common.get_synsets(w1_tk)
+        w2_syn = common.get_synsets(w2_tk)
+
+        for w1_s in w1_syn:
+            for w2_s in w2_syn:
+                cur_score = w1_s.wup_similarity(w2_s)
+                if cur_score != None:
+                    score = min(score, cur_score)
+        return score
+
+    def wordnet_last_token_h_similarity(self, w1, d1, w2, d2):
+        w1_tk = nltk.word_tokenize(w1)[-1:]
+        w2_tk = nltk.word_tokenize(w2)[-1:]
+        score = 0
+
+        w1_syn = common.get_synsets(w1_tk)
+        w2_syn = common.get_synsets(w2_tk)
+
+        for w1_s in w1_syn:
+            for w2_s in w2_syn:
+                cur_score = w1_s.wup_similarity(w2_s)
+                if cur_score != None:
+                    score = max(score, cur_score)
+        return score
+
+    def first_phrase_token_num(self, w1, d1, w2, d2):
+        return len(nltk.word_tokenize(w1))
+
+    def second_phrase_token_num(self, w1, d1, w2, d2):
+        return len(nltk.word_tokenize(w2))
+
+    def one_side_single_token(self, w1, d1, w2, d2):
+        l_tk1 = len(nltk.word_tokenize(w1))
+        l_tk2 = len(nltk.word_tokenize(w2))
+        cnt = 0
+        if (l_tk1 == 1):
+            cnt += 1
+        if (l_tk2 == 1):
+            cnt += 1
+        return cnt

@@ -1,0 +1,494 @@
+In sequence program instruction perform specific task packaged unit
+This unit used program wherever particular performed
+Subprograms may defined within program separately used multiple program
+In different programming language subroutine may called
+The generic term sometimes used
+The name suggests subroutine behaves much way computer program used one step larger program another subprogram
+A subroutine often coded started called several time several place one execution program including subroutine branch back next instruction subroutine task done
+credited invention concept termed contrasted
+Subroutines powerful tool many includes support writing using
+Judicious use subroutine example approach often substantially reduce cost developing maintaining large program increasing quality reliability
+Subroutines often collected important mechanism sharing trading software
+The discipline based subroutine attached object object
+In method called executable program basically sequence subroutine call
+The content subroutine body piece program code executed subroutine called invoked
+A subroutine may written expects obtain one data value calling program replace formal parameter
+The calling program provides actual value parameter called
+Different programming language may use different convention passing argument The subroutine may return computed value caller provide various result value output parameter
+Indeed common use subroutine implement purpose subroutine purely compute one result whose value entirely determined argument passed subroutine
+Examples might include computing number
+A subroutine call may also modifying reading writing creating halting program machine even delaying program execution specified time
+A subprogram side effect may return different result time called even called argument
+An example available many language return different number time called
+The widespread use subroutine side effect characteristic language
+A subroutine coded may one place perform task
+This method allows direct implementation function defined recursive
+A subroutine whose purpose compute one answer question sometimes called predicate
+In language often subroutine called predicate since primarily determine success failure
+For example type function subroutine main
+usually include specific construct Some many distinguish function function subprogram provide explicit return value calling program subroutine procedure
+In language function call normally embedded function may called
+Procedure call either behave syntactically procedure may called explicitly invoked statement
+
+Other language distinguish function subroutine
+In strictly language subprogram mean various internal state program change
+Functions always return result repeatedly called argument
+Such language typically support function since subroutine return value use unless cause side effect
+In subroutine may also simply called function confused different concept
+A language usually translate procedure call return machine instruction according subroutine compiled separately program call
+The instruction sequence corresponding call return statement called procedure
+The advantage breaking program subroutine include Invoking subroutine versus using code imposes call mechanism
+A subroutine typically requires standard code entry exit function usually saving return address minimum
+The idea subroutine worked computing machine already existed time
+The arithmetic conditional jump instruction planned ahead time changed relatively little special instruction used procedure call changed greatly year
+The earliest computer microprocessor single subroutine call instruction
+Subroutines could implemented required programmer use call series
+Some early computer microprocessor subroutine call us dedicated hardware stack store return hardware support level subroutine nesting support recursive subroutine
+Machines mid use saved instruction counter first memory location called subroutine
+This allows arbitrarily deep level subroutine nesting support recursive subroutine
+The one first computer subroutine call instruction feature support arbitrarily deep subroutine nesting also support recursive subroutine
+In early assembler subroutine support limited
+Subroutines explicitly separated main program indeed source code subroutine could interspersed subprogram
+Some assembler would offer predefined generate call return sequence
+By assembler usually much sophisticated support inline separately assembled subroutine could linked together
+Even cumbersome approach subroutine proved useful
+For one thing allowed use code many different program
+Moreover memory scarce resource early computer subroutine allowed significant saving size program
+Many early computer loaded program instruction memory
+Each subroutine could provided separate piece tape loaded spliced main program mainline subroutine tape could used many different program
+A similar approach applied computer used main input
+The name originally meant library literal sense kept indexed collection tape collective use
+To remove need computer designer eventually provided instruction whose operand instead location variable containing return address
+On computer instead modifying subroutine return jump calling program would store return address variable subroutine completed would execute indirect jump would direct execution location given predefined variable
+Another advance instruction combined saving return address calling jump thereby minimizing significantly
+In IBM example branch instruction BAL BALR designed procedure calling would save return address processor register specified instruction
+To return subroutine execute indirect branch instruction BR register
+If subroutine needed register purpose calling another subroutine would save register content private memory location register
+In system JSB instruction would perform similar task except return address stored memory location target branch
+Execution procedure would actually begin next memory location
+In HP assembly language one would write example call subroutine called MYSUB main program
+The subroutine would coded The JSB instruction placed address NEXT instruction namely BB location specified operand namely MYSUB branched NEXT location namely AA MYSUB
+The subroutine could return main program executing indirect jump JMP MYSUB I branched location stored location MYSUB
+Compilers Fortran language could easily make use instruction available
+This approach supported multiple level call however since return address parameter return value subroutine assigned fixed memory location allow recursive call
+Incidentally similar method used early discover recalculation dependency spreadsheet
+Namely location reserved cell store address
+Since allowed natural recalculation order allows tree walk without reserving space stack memory limited small computer
+Most modern implementation use special case implement subroutine call return
+Each procedure call creates new entry called top stack procedure return stack frame deleted stack space may used procedure call
+Each stack frame contains corresponding call typically includes procedure parameter internal variable return address
+The call sequence implemented sequence ordinary instruction approach still used RISC VLIW architecture many traditional machine designed since late included special instruction purpose
+The call stack usually implemented contiguous area memory
+It arbitrary design choice whether bottom stack lowest highest address within area stack may grow forward backwards memory however many architecture chose latter
+Some design notably implementation used two separate stack one mainly control information like return address loop counter data
+The former worked like call stack indirectly accessible programmer language construct latter directly accessible
+When procedure call first introduced important motivation save precious memory
+With scheme compiler reserve separate space memory private data parameter return address local variable procedure
+At moment stack contains private data call currently namely called returned yet
+Because way program usually assembled library still uncommon find program include thousand subroutine handful active given moment
+For program call stack mechanism could save significant amount memory
+Indeed call stack mechanism viewed earliest simplest method
+However another advantage call stack method allows since nested call procedure get separate instance private data
+One disadvantage call stack mechanism increased cost procedure call matching return
+The extra cost includes incrementing decrementing stack pointer architecture checking accessing local variable parameter address instead absolute address
+The cost may realized increased execution time increased processor complexity
+This overhead obvious objectionable return without making procedure call
+To reduce overhead many modern compiler try delay use call stack really needed
+For example call procedure may store return address parameter called procedure certain processor register transfer control procedure body simple jump
+If procedure return without making call call stack used
+If need call another procedure use call stack save content register return address needed return
+In programming language subprogram termed classified associated
+These language use special keyword indicate function take parameter especially C return value
+Note function including modifying variable whose address passed parameter
+Examples The function return value called function This function return result number call part expression This function convert number initial letter corresponding day week namely
+The result calling might assigned variable
+This function return value modifies variable whose address passed parameter would called
+In example call subroutine define actual subroutine keyword must used subroutine name following
+After content followed must typed
+In language subprogram termed associated class
+Visual Basic us various term called define passed parameter
+By default unspecified variable registered passed default
+Also function sub declared given public private friend designation determines whether accessed outside module project declared
+The function return value called function This function return result number call part expression This function convert number initial letter corresponding day week namely
+The result calling might assigned variable
+This function return value modifies variable whose address passed parameter would called
+In called procedure may passed providing information argument string length array bound
+This allows procedure general eliminates need programmer pas information
+By default pass argument reference
+A trivial subroutine change sign element array might look like This could called various array follows A subprogram may find useful make use certain amount space used execution subprogram hold intermediate result
+Variables stored scratch space termed scratch space termed
+An activation record typically tell pas control back subprogram finish
+A subprogram may number nature call site
+If recursion supported subprogram may even call causing execution suspend another execution subprogram occurs
+useful mean simplify complex algorithm break complex problem
+Recursive language generally provide new copy local variable call
+If programmer desire value local variable stay call declared language global value common area used
+Here example recursive subroutine find number Early language like initially support recursion variable statically allocated well location return address
+Most computer late support hardware stack register
+Modern language almost invariably use stack usually supported modern computer instruction set provide fresh activation record every execution subprogram
+That way nested execution free modify local variable without concern effect suspended execution progress
+As nested call accumulate structure formed consisting one activation record suspended subprogram
+In fact stack structure virtually ubiquitous activation record commonly termed
+Some language also support subroutine callable within outer parent subroutine
+Inner subroutine access local variable outer subroutine called
+This accomplished storing extra context information within activation record also termed
+If subprogram executed properly even another execution subprogram already progress subprogram said
+A recursive subprogram must reentrant
+Reentrant subprogram also useful situation since multiple thread call subprogram without fear interfering
+In slightly le restrictive similar requirement application program shared many thread
+In environment generally one stack
+An environment fully support may use data structure stack store activation record
+In sometimes desirable number function name operating different type data different parameter profile
+For example square root function might defined operate real complex value matrix
+The algorithm used case different return result may different
+By writing three separate function name programmer convenience remember different name type data
+Further subtype defined real separate positive negative real two function written real one return real parameter positive another return complex value parameter negative
+In series function name accept different parameter profile parameter different type function said
+Here example subroutine overloading In code two function name different parameter
+As another example subroutine might construct accept direction trace path point screen
+There plethora parameter could passed constructor colour trace starting x trace speed
+If programmer wanted constructor able accept color parameter could call another constructor accepts color turn call constructor parameter passing set parameter X Y would generally centered screen placed origin speed would set another value coder choosing
+A subprogram together value variable captured environment created
+Closures notable feature Lisp programming language introduced
+Depending implementation closure serve mechanism
+A wide number convention coding subroutine developed
+Pertaining naming many developer adopted approach name subroutine certain task make inquiry used substitute variable
+Some programmer suggest subroutine perform one task subroutine perform one task split subroutine
+They argue subroutine key component role program must remain distinct
+Proponents modularizing code advocate subroutine minimal dependency piece code
+For example use generally deemed unwise advocate perspective add tight coupling subroutine global variable
+If coupling necessary advice subroutine accept passed instead
+However increasing number parameter passed subroutine affect code readability
+Besides effect subroutine may need inform calling program condition may occurred execution
+In language programming standard often done integer value placed subroutine standard location encodes normal exceptional condition
+In return code expected subroutine return value often designed multiple could used direct index branch table often located immediately call instruction avoid extra conditional test improving efficiency
+In one would write example There significant runtime calling subroutine including passing argument branching subprogram branching back caller
+The overhead often includes saving restoring certain processor register allocating reclaiming call frame storage
+In language subroutine call also implies automatic testing subroutine return code handling may raise
+In language significant source overhead intensively used method call
+There seemingly obvious optimization procedure call applied procedure may side effect
+For example expression function must called twice two call may return different result
+Moreover value must fetched second call since first call may changed
+Determining whether subprogram may side effect difficult indeed
+So optimization safe purely functional programming language compiler typical imperative programming usually assume worst
+A method used eliminate overhead subprogram body versus branching subroutine back
+Not avoid call overhead also allows procedure effectively taking account context argument call
+The inserted body optimized compiler
+Inlining however usually increase code size unless program contains one call subroutine subroutine body le code call overhead
+
+This service advanced JavaScript available learn In computer programming computer subroutine stored one storage area b connected computer routine linkage calling sequence one location c usually stored separately main computer routine us jump instruction transfer computer program control subroutine beginning e execution end us another jump instruction transfer computer program control back proper point main routine
+The instruction entering closed subroutine returning subroutine main routine called A computer subroutine simply called use various place computer program b inserted toto program place
+
+There affiliation available Over million scientific document fingertip Springer International Publishing AG
+Part
+
+In sequence program instruction perform specific task packaged unit
+This unit used program wherever particular task performed
+Subprograms may defined within program separately library used multiple program
+In different programming language subroutine may called method
+The generic term sometimes used
+The name suggests subroutine behaves much way computer program used one step larger program another subprogram
+A subroutine often coded started called several time several place one execution program including subroutine branch back next instruction subroutine task done
+Maurice Wilkes David Wheeler Stanley Gill credited invention concept termed contrasted macro
+Subroutines powerful tool syntax many includes support writing using
+Judicious use subroutine example structured programming approach often substantially reduce cost developing maintaining large program increasing quality reliability
+Subroutines often collected library important mechanism sharing trading software
+The discipline based object method subroutine attached object object class
+In method called threaded code executable program basically sequence subroutine call
+set sequence step part larger computer program syn context computer science English A section code called main body program implement task
+The image screen flickered slightly new engaged
+Last time though another went death one great mystery primal source existential angst
+He rarely worked programming system used controller recognized timer series call keyed timer reading
+If red light flash converting speech written transcript missed word word repetition may necessary
+The make actual switch tenth second
+His finger danced key called memory
+PROBE toyed idea loading female observe effect quickly quelled thought
+I came awareness copyright protection merci show downloadable
+After two men traded place Theory bring event evening discovered Quench gotten house
+Quench giddy extract Theory
+Shepardsville following homing probe pinpointed culprit
+When I converse affinity I actually talking operating neural stratum le directly foot
+The amount stratum given running dependent purely complexity task performing
+If I ask exceptionally difficult question would expand utilize cell reached size appropriate fulfil request
+Somehow murderer used affinity suspend responsible monitoring order given particular chimp
+
+
+learn share knowledge build career
+What difference
+Is code subroutine method program block
+I understand term meaning similar
+So I strict pedantic one would
+I prefer calling subroutine STRICTLY correct
+Programming language JAVA EDIT Thanks I understand would safest way call
+Block
+I use multiple programming language would term block suffice
+Can I call function block
+So I refer everything block
+It easier right
+I wo call block function subroutine I call function method whatever block
+Would fine calling block
+So mean somewhat ACCURATE
+A local variable accessed outside program block yes circumstance true
+None return value
+It correct constructor class named write file named
+And even violates Sun Java coding standard
+Subroutine term language like FORTRAN COBOL
+Those language keep data method separate method operating data given
+Objects encapsulate data method instance
+Most programmer would prefer method
+Your preference subroutine mark quaint step
+I hear subroutine much anymore
+I get used method I
+In first place constructor method proper method returning void nothing would one like according C Java syntax Now regarding initially asked Well basically none
+But want go deeper go assembly programming IMO
+Subroutines assembly fact different method two thing And probably asking Then I process anything subroutine work
+In assembly register role instead passing parameter subroutine like method every high level programming language save value parameter going process calling subroutine making sure value wo get affected reach subroutine
+In fashion keep resulting value another register using later
+There way assembly commonly used using stack pushing popping value I think I made point clear enough
+If serf anything I post piece code assembly using simple subroutine add two number By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In also technique implementing language
+closure storing together environment mapping associating function variable used locally defined enclosing scope name bound closure created
+A plain function access closure copy value reference even function invoked outside scope
+The following program fragment defines
+The nested function access lexical scope even though local
+The function return closure containing copy value copy reference function add value value Note return function variable
+Invoking return invoking return
+While refer function associated environment differ invoking closure bind name two distinct variable different value two invocation thus evaluating function different result
+The concept closure developed mechanical evaluation expression first fully implemented language feature programming language support lexically scoped
+defined term used evaluating expression
+credit Landin introducing term refer whose open binding free variable closed bound lexical environment resulting closure
+This usage subsequently adopted defined lexically scoped variant became widespread
+The term often mistakenly used mean
+This probably many programmer learn concept time form small helper function anonymous closure
+An anonymous function function without name closure instance function whose variable bound either value depending language see section
+For example following code rather variable closure case produced returning nested function free variable enclosing function free variable bind parameter enclosing function
+However first case nested function name second case nested function anonymous
+The closure need assigned variable used directly last original name used defining irrelevant
+This usage may deemed anonymous closure
+Note especially nested function definition closure free variable yet bound
+Only enclosing function evaluated value parameter free variable nested function bound creating closure returned enclosing function
+Lastly closure distinct function free variable outside scope variable otherwise defining environment execution environment coincide nothing distinguish static dynamic binding ca distinguished name resolve value
+For example program function free variable bound variable global scope executed environment defined immaterial whether actually closure This often achieved function return since function must defined scope variable case typically scope smaller
+This also achieved reduces scope variable though le common practice le useful shadowing discouraged
+In example seen closure body bound global namespace local The use closure associated language function function returned result passed argument function call function free variable returning one creates closure
+This includes well many modern imperative language Python
+Closures also frequently used particularly used interaction
+Traditional imperative language either support nested function C support calling nested function enclosing function exited GNU C Pascal thus avoiding need use closure
+Closures used implement manner
+Constructs thus implemented closure
+In language closure may occur function defined within another function inner function refers local variable outer function
+At outer function executes closure formed consisting inner function code reference upvalues variable outer function required closure
+Closures typically appear language function word language enable function passed argument returned function call bound variable name like simpler type string integer
+For example consider following function In example appears within function
+When lambda expression evaluated Scheme creates closure consisting code lambda expression reference variable inside lambda expression
+The closure passed function call repeatedly determine book added result list discarded
+Because closure reference use variable time call
+The function might defined completely separate file
+Here example rewritten another popular language support closure The keyword used instead method instead global function otherwise structure effect code
+A function may create closure return following example Because closure case outlives execution function creates variable live function return even though execution left scope longer visible
+In language without closure lifetime automatic local variable coincides execution stack frame variable declared
+In language closure variable must continue exist long existing closure reference
+This commonly implemented using form
+A closure used associate function set private variable persist several invocation function
+The variable encompasses function accessed program code
+In stateful language closure thus used implement paradigm state representation since closure upvalues variable indefinite value established one invocation remains available next
+Closures used way longer thus longer nevertheless commonly used impure functional language
+Closures many us Note Some speaker call data structure bind environment closure term usually refers specifically function
+Closures typically implemented special contains plus representation function lexical environment set available variable time closure created
+The referencing environment name corresponding variable lexical environment time closure created additionally extending lifetime least long lifetime closure
+When closure later time possibly different lexical environment function executed variable referring one captured closure current environment
+A language implementation easily support full closure memory model allocates linear
+In language function automatic local variable deallocated function return
+However closure requires free variable reference survive enclosing function execution
+Therefore variable must allocated persist longer needed typically via rather stack lifetime must managed survive closure referencing longer use
+This explains typically language natively support closure also use
+The alternative manual memory management variable explicitly allocating heap freeing done using stack allocation language accept certain use case lead due freed automatic variable lambda expression nested function GNU The functional argument problem describes difficulty implementing function first class object programming language C
+Similarly version assumed programmer know automatic local variable reference invalid return definition scope automatic local variable stack still permit many useful functional pattern complex case need explicit variable
+D version solved detecting variable must stored heap performs automatic allocation
+Because D us garbage collection version need track usage variable passed
+In strict functional language immutable data easy implement automatic memory management garbage collection possible cycle variable reference
+For example Erlang argument variable allocated heap reference additionally stored stack
+After function return reference still valid
+Heap cleaning done incremental garbage collector
+In ML local variable lexically scoped hence define model since bound value object implementation free copy value closure data structure way invisible programmer
+lexical scope system dynamic variable garbage collection lack stack programming model suffer limitation language
+Closures expressed naturally Scheme
+The lambda form encloses code free variable environment persist within program long possibly accessed used freely Scheme expression
+Closures closely related Actors concurrent computation value function lexical environment called
+An important issue closure language whether variable closure updated update synchronized
+Actors provide one solution
+Closures closely related transformation former latter known see also
+As different language always common definition lexical environment definition closure may vary also
+The commonly held minimalist definition lexical environment defines set scope also closure language capture
+However meaning binding also differs
+In imperative language variable bind relative location memory store value
+Although relative location binding change runtime value bound location
+In language since closure capture binding operation variable whether done closure performed relative memory location
+This often called capturing variable reference
+Here example illustrating concept one language Note function closure referred variable use relative memory location signified local variable
+On hand many functional language bind variable directly value
+In case since way change value variable bound need share state use value
+This often called capturing variable value
+Java local anonymous class also fall require captured local variable also mean need share state
+Some language enable choose capturing value variable location
+For example captured variable either declared mean captured reference mean captured value
+Yet another subset functional language bind variable result future computation rather value
+Consider example Haskell The binding captured closure defined within function computation case result division zero
+However since computation captured value error manifest closure invoked actually attempt use captured binding
+Yet difference manifest behavior lexically scoped construct statement
+Such construct general considered term invoking established enclosing control statement case interpretation requires looping construct considered term recursive function call
+In language ECMAScript refers continuation established closure lexically innermost respect within closure transfer control code called
+However superficially similar operator invokes escape continuation established method invocation ignoring escape continuation intervening nested closure
+The escape continuation particular closure invoked Smalltalk implicitly reaching end closure code
+The following example ECMAScript Smalltalk highlight difference The code snippet behave differently Smalltalk operator JavaScript operator analogous
+In ECMAScript example leave inner closure begin new iteration loop whereas Smalltalk example abort loop return method
+provides construct express either action Lisp behaves Lisp behaves
+Hence Smalltalk make possible captured escape continuation outlive extent successfully invoked
+Consider When closure returned method invoked attempt return value invocation created closure
+Since call already returned Smalltalk method invocation model follow discipline facilitate multiple return operation result error
+Some language enable programmer choose way captured
+An example Ruby Both example way create closure semantics closure thus created different respect statement
+In definition scope control statement explicit arbitrarily named sake example
+The following direct translation Ruby sample
+Features language simulate feature closure
+Language feature include technique example Java C Some library support
+This sometimes implemented providing two value registering callback library function pointer separate pointer arbitrary data user choice
+When library executes callback function pass along data pointer
+This enables callback maintain state refer information captured time registered library
+The idiom similar closure functionality syntax
+The pointer type safe C idiom differs closure C Haskell ML
+With gcc extension used function pointer emulate closure providing containing function exit
+The example invalid enables defined inside
+These called
+When class named known anonymous class
+A local class either named anonymous may refer name lexically enclosing class variable marked lexically enclosing method
+The capturing variable enables capture variable value
+Even variable want capture always copy temporary variable class
+Capturing variable reference emulated using reference mutable container example array
+The local class able change value container reference able change content container
+With advent Java lambda expression closure cause code executed Local class one type inner class declared within body method
+Java also support inner class declared enclosing class
+They normally referred inner class
+These defined body enclosing class full access instance variable enclosing class
+Due binding instance variable inner class may instantiated explicit binding instance enclosing class using special syntax
+Upon execution print integer
+Beware confuse type class nested class declared way accompanied usage static modifier desired effect instead class special binding defined enclosing class
+As Java support function first class object
+Lambda expression form considered type T domain U image type
+The expression called method standard method call
+introduced form closure nonstandard extension
+Apple made implementation available GCC clang compiler
+Pointers block block literal marked
+Normal local variable captured value block created inside block
+Variables captured reference marked
+Blocks need persist outside scope created may need copied
+anonymous method lambda expression support closure In closure implemented delegate function pointer paired context pointer
+class instance stack frame heap case closure
+D version limited closure support
+For example code work correctly variable stack returning test longer valid use probably calling foo via dg return integer
+This solved explicitly allocating variable heap using structs class store needed closed variable construct delegate method implementing code
+Closures passed function long used referenced value still valid example calling another function closure callback parameter useful writing generic data processing code limitation practice often issue
+This limitation fixed D version variable automatically allocated heap used inner function delegate function escape current scope via assignment dg return
+Any local variable argument referenced delegate referenced delegate escape current scope remain stack simpler faster heap allocation
+The true inner class method reference function variable
+enables defining overloading
+These object behave somewhat like function functional programming language
+They may created runtime may contain state implicitly capture local variable closure
+As language also support closure type function object constructed automatically special language construct called
+A closure may capture context either storing copy accessed variable member closure object reference
+In latter case closure object escape scope referenced object invoking cause undefined behavior since closure extend lifetime context
+includes defining closure
+An inline agent object representing routine defined giving code routine
+For example argument agent representing procedure two argument procedure find country corresponding coordinate display
+The whole agent subscribed event type certain button whenever instance event type occurs button user clicked button procedure executed mouse coordinate passed argument
+The main limitation Eiffel agent distinguishes closure language reference local variable enclosing scope
+This design decision help avoiding ambiguity talking local variable value closure latest value variable value captured agent created
+Only reference current object analogous Java feature argument agent accessed within agent body
+The value outer local variable passed providing additional closed operand agent
+
+part computer program used solve problem
+A subroutine usually describes separate step computation process used one several different program
+Typical subroutine used compute elementary function sin In solve system equation remove result computation various form
+If becomes necessary use subroutine running basic program subroutine called appropriate place program run control transferred back main program
+A subroutine call another
+A subroutine following characteristic subject standardized access rule make possible call subroutine main program mean one instruction able work broad range initial data example independent variable function relocatable possible place run various part computer memory
+Subroutines often arranged subroutine library
+standard subroutine satisfying rigid condition used automatic programming
+The use subroutine one way save time effort writing computer program
+Subroutines form basis modular programming
+G All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+What would like
+Would like merge question
+Would like make primary merge question
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+
+part computer program used solve problem
+A subroutine usually describes separate step computation process used one several different program
+Typical subroutine used compute elementary function sin In solve system equation remove result computation various form
+If becomes necessary use subroutine running basic program subroutine called appropriate place program run control transferred back main program
+A subroutine call another
+A subroutine following characteristic subject standardized access rule make possible call subroutine main program mean one instruction able work broad range initial data example independent variable function relocatable possible place run various part computer memory
+Subroutines often arranged subroutine library
+standard subroutine satisfying rigid condition used automatic programming
+The use subroutine one way save time effort writing computer program
+Subroutines form basis modular programming
+G All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+What SUBROUTINE
+What SUBROUTINE mean
+SUBROUTINE meaning SUBROUTINE pronunciation SUBROUTINE definition SUBROUTINE explanation How pronounce SUBROUTINE
+Source article adapted license
+In computer programming subroutine sequence program instruction perform specific task packaged unit
+This unit used program wherever particular task performed
+Subprograms may defined within program separately library used multiple program
+In different programming language subroutine may called procedure function routine method subprogram
+The generic term callable unit sometimes used
+As name subprogram suggests subroutine behaves much way computer program used one step larger program another subprogram
+A subroutine often coded started called several time several place one execution program including subroutine branch back return next instruction call subroutine task done
+Maurice Wilkes David Wheeler Stanley Gill credited invention concept termed closed subroutine contrasted open subroutine macro
+Subroutines powerful programming tool syntax many programming language includes support writing using
+Judicious use subroutine example structured programming approach often substantially reduce cost developing maintaining large program increasing quality reliability
+Subroutines often collected library important mechanism sharing trading software
+The discipline programming based object method subroutine attached object object class
+In compiling method called threaded code executable program basically sequence subroutine call
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+In information technology term pronounced number meaning
+It taken Latin functio perform
+In general use function given
+In language programming function named procedure performs distinct service
+The language statement request function called
+Programming language usually come set canned function programmer specify writing language statement
+These provided function sometimes referred
+Some function return result requesting program without help
+Other function need make request order perform work
+In mathematics function relationship two variable called independent variable dependent variable
+The dependent variable one value specific value independent variable
+A function usually symbolized lowercase italicized letter alphabet followed independent variable parenthesis
+For example expression read equal mean dependent variable function independent variable
+Functions often graphed usually appear line curve coordinate plane
+In hardware device function one complete physical movement discernible consequence relative device purpose
+In printer example might carriage return line feed
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+

@@ -1,0 +1,675 @@
+In lesson learn new kind variable declared outside procedure definition
+In computer science jargon accessibility variable content accessed changed called variable
+Think simple calculator work
+You going creating virtual one later lesson
+You need variable hold entered one digit time one mouse click time
+Since procedure executed multiple time per digit clicked variable need declared independent procedure
+If confused hard imagine play bit appears later lesson
+While think need done number entered math key clicked
+Here list attribute variable
+Global variable For program best put variable declaration
+This way see one place name variable referenced across procedure boundary
+Since declaration creates empty container need use command put initial value
+Since program procedure best place put instruction
+Let look example use global variable
+In lesson first thing I showed write procedure nothing number
+This form abstraction I give name mean something number used inside computer represent color
+In program written since lesson I defined procedure like etc simply color number
+Then using procedure input command made reading code easier understand
+As example Global variable used achieve result
+Here program simulates progress bar show use global variable symbolic constant
+I left body save space available back handy
+So going
+Well soon instruction interpreted empty variable created
+The name variable available anywhere program following declaration
+This reason first thing program declare
+The command Here TG applet
+Play around bit
+Declare global variable try accessing use command give initial value use set initial value access
+Write procedure input
+notice type word terminates definition longer reference input
+Type example I gave see make sure understand
+The use name place number program always good thing
+I use name coordinate object I draw TurtleSpace time like button user interface part program
+This allows change one spot instead searching object drawn I test see within bound etc
+Many computer language explicit support global variable assigned value changed
+Here Java applet mimic program going write
+Play around bit see click component
+Try adding two number subtracting one number another etc
+Figure show calculator going build
+It space key display
+There ten digit key used enter number five operation key determine calculator
+As mouse clicked number key current value accumulated displayed multiplied key value added
+As example program start current value zero number key clicked current value becomes value key
+say key clicked current value becomes
+If mouse clicked another number key say new current value becomes
+If mouse clicked current value becomes
+Figure show calculator user clicked key key key key key key
+Next action key
+The action key X two thing
+Continuing example Figure show calculator user clicked subtraction key key key key key key key
+And finally Figure show calculator user clicked key
+Let think calculator machine bunch little people
+Take moment think many think would needed would
+Do continue reading
+There single correct answer
+If think good team organization I think go write version program
+You always come back check design done compare solution
+Or point get stuck come back read get idea
+I going hire train organize four little people
+Well way I imagine putting together machine little people working together provide functionality simple calculator
+To reduce time take write calculator program I going provide version program detail structure
+I I want concentrate learning used program design calculator
+Since still learning basic programming I want offer one way structuring program I know work
+How program covered later
+Figure show call graph procedure make initial design calculator program
+The arrow indicate invocation procedure
+Like always program started invoking procedure
+After execution driven invocation
+So question Can identify group procedure part pair tree Figure little people
+Which procedure implement Diva Diego Mary Omar
+Take little time write thought
+Looking Figure see calculator program consists many procedure already familiar
+You seen written procedure
+derivative written past tuned program
+Since key sized square need width height input
+I going give code calculator spend time procedure
+I including stub empty procedure procedure
+Copy paste code following link get TG application
+
+The first thing probably
+In software development modifying existing program new hire often get start
+Scanning existing code important least two reason Once copied source code TG use interactive environment provides help understand got
+One way understand source code look
+What I mean connection
+Well first half source code I given bunch symbolic constant
+Checkout used
+You Editor search command
+Click mouse TG Editor position cursor top program
+Type Ctrl get Search string prompt
+Type
+This get definition symbolic constant line
+You need
+Now type Ctrl Ctrl typing Ctrl twice close succession get next occurance
+It used input procedure
+This left edge draw key
+Type Ctrl Ctrl
+The next occurance procedure
+It used input leftmost edge rectangle calc key checked mouse click within bound
+
+And give feeling use provided
+Figure show layout keypad part calculator point labeled name symbolic constant provided code given
+Use search capability TG Editor find occurances symbolic constant discover used
+Now let play around bit
+Use Interpret Editor Contents menu item execute program
+The calculator drawn although number display area
+Why
+invokes draw outline calculator invokes draw key
+This behavior match see program structure
+But invoke probably nothing display
+You could invoke CommandCenter
+Do
+Nothing happens
+Reading source code find empty need fill
+Above definition source code procedure definition interesting name etc
+Try invoking CommandCenter
+You must provide two input
+The first X coordinate draw digit
+This one symbolic constant etc
+These symbolic constant X coordinate digit location display one column ten column hundred column etc
+Figure show layout display part calculator point labeled name symbolic constant provided code I given
+Use CommandCenter display different number
+Type invocation display number say power two four digit
+Okay let get going
+The first thing get calculator display
+Now need
+The concept real need one
+value change user click digit key equal key
+In source code I gave I included declaration variable needed program
+I named variable
+The following line near top source code
+But remember declaring global variable give value
+We need add instruction program procedure initialize variable
+When power calculator common start number zero
+Let add following instruction program
+Now every time change value need display new value
+Look back structure program
+It show invokes
+Let replace comment line invocation
+Here new
+Now look back definition
+OH right discovered bit ago anything yet
+I guess time fill body
+What need
+It embodiment
+Her purpose keep display calculator machine date
+Invoking procedure program like telling Diva get content current number container draw display area
+Think invoking
+As programming task many different way draw digit representing value variable
+Your job explore idea
+I going coach way I approached problem
+You continue reading really need
+OK
+Where start
+Well look back structure program see invokes three procedure
+Think display value
+It hard see use two three
+Before draw anything display need erase anything already
+And value le zero invoke
+Now left use
+Obviously need invoked digit need draw isolate
+I always like approach programming problem thinking asking How I get piece problem solved worry remains I accomplished
+So let concentrate getting rightmost column displayed
+Let invoke one column regardless content
+So isolate rightmost digit
+What mathematical operation get u one column matter big number
+What get u contains number ending one
+What left divided ten
+Divide one ten get zero remainder one
+Divide ten get two remainder one
+I think I need give example And yes Logo REMAINDER operator
+Here new procedure
+Try
+Put different value command
+Then invoke see happens
+Well I found bug
+Did try putting negative number
+I Figure show I saw
+Oh well look like need use drawing digit
+Does Logo operator provides absolute value input
+Check one like remainder operation
+And
+Yes Logo operator output absolute value input
+But ca change need stay negative
+We need modify procedure use local variable copy feel free change
+Here new improved version
+Other use change reflect addition local variable learned previous lesson
+In local variable hold absolute value
+This eliminate problem prefixing minus sign digit want draw
+Finally left add code handle drawing digit digit ten column digit hundred column etc Again couple different way isolate digit
+Try complete reading
+Take one column time answer question How I isolate display digit
+Play around bit CommandCenter
+Try isolate ten digit
+Hopefully discovered combining operator operator almost got wanted
+The glitch division produce number fraction output
+If use first input second input get isolated
+Time use HELP We need numeric operator remove fractional part
+Example Display isolated digit number Use CommandCenter TG program using go back type example
+Play around bit going Add code procedure draw additional column
+Then try
+Put different number invoke
+Well almost done
+But look like bug fix first
+We need eliminate display leading zero
+Figure show I pretty sure see put
+Before draw digit must first determine whether need drawn
+As example unless greater nine need draw rightmost digit digit
+But greater nine know need draw digit
+If greater need draw digit hundred column
+Etc How control whether code get performed
+With command course
+Here example instruction may help
+You complete instruction given exchanging piece code OK
+I given enough hint
+It complete procedure
+When complete test
+Ok display working
+Let move entering full number embodiment
+In code I given look procedure
+Here snipet
+The procedure invoked procedure user click digit key
+The number value digit key clicked provided input
+So need
+It must I said Diego Digit would
+
+The procedure one input number key clicked
+This number get appended becomes new least significant digit number container
+You simply multiply current number add new digit
+Oh one thing need
+I let figure
+The description Diego Digit contains clue
+And take look program structure need another clue
+Once body filled test
+You able invoke CommandCenter click digit watch number change calculator display
+Ok rest key calculator need
+They must I said Omar Operations would
+
+The operation key signal thing
+So lot need done root lesson global variable
+Information gathered current number operation key clicked must saved future use
+Since future perspective program data must go global variable
+At point I writing version calculator I added two global variable
+I created variable I wanted hold variable hold chosen mathematical operation
+Again since global variable declaration include way initialize put initial value variable I needed add command
+I gave declaration code add
+My first pas operation key write procedure key
+I procedure
+When I done I noticed procedure except thing
+As example procedure set value current number
+Then put zero
+Finally put
+The math operation key except value word stored different
+So I renamed one math operation procedure gave input would operation code opcode get put
+Then I deleted three remaining math operation procedure
+What equal key
+Remember I said exception
+Well
+The first instruction procedure command check input contains
+If procedure invoked leaf
+Enough coaching Time fill code procedure
+Until easy tell whether code writing working
+Everything resulted change display
+But code added way program want
+OR One way see program use like I recommended debugging
+Similar way procedure execution global variable Figure show result tracing
+After entering two trace directive trace curNum trace mathOp CommandCenter I clicked As see Figure global variable identifier printed followed value put current procedure
+Sometimes using generates much output CommandCenter
+Another common way see program think add command
+In case write body add single command print content global variable
+Here example
+First I added command empty
+Next I chose Editor Contents menu item clicked The result printed CommandCenter
+And show u global variable contain exactly expected
+We ready move writing body
+But
+A mouse click equal key signal two thing
+mention shuffle thing around make decision might Well decided equal key clicked invoked
+If ever time compute something
+But program
+Read program see find
+See find
+The way request made invoking procedure
+But name procedure need invoke get math operation performed
+There one thing must
+After math performed important note
+Where keeping track outstanding math operation
+Answer global variable
+So Mary completed math operation better put word container
+So finished
+Ok complete procedure moving lesson
+This last code need write get calculator working
+
+The description good able write body
+No need coaching To reduce complexity first version calculator support fractional part
+So need know get rid attempt display number
+Even though user enter number fractional part one generated division divide
+The operator take one input output closest integer
+The first thing need sure integer
+You may noticed writing body right code I provided empty procedure named
+Why think I write special procedure handle division
+Checkout see invokes
+Sure enough get invoked
+But WHY
+Notice invokes
+There another clue
+Think special check need make performing division
+When fill body invoke
+Now basic calculator working extend bit
+Here idea explore
+But sky limit come addition
+container created command accessed anywhere program
+One command introduces variable called must interpreted identifier entered instruction
+But nice habit get put declaration top program
+If guaranteed declaration always preceed use variable
+Most introductory programming introduce global variable much sooner I
+I worked lot lot code day programmer I seen many inappropriate us global variable
+Their usage I guess I say misuse common source bug
+Global variable important powerful concept programming
+But use responsibly
+To read trouble get global variable Google global variable considered harmful check page come
+William Wulf Mary Shaw wrote paper long time ago still today
+
+Computer program use data type organise different type data program
+Data also constant variable within program function
+In order change stored use operation called
+This cause value copied overwriting
+Different value may variable different time program
+Each assignment overwrites current value new one
+The scope variable local global
+Declaring name variable saying stored memory
+Information used program given form
+These section program code define name used refer variable kind data hold
+Sign choose GCSE subject see content tailored
+
+MakeReadWriteGlobal name F mark global variable named string name
+A warning given name already
+gap xx function Entering break loop quit outer loop making writable continue brk quit gap IsReadOnlyGlobal xx A group function also supplied accessing altering value assigned global variable
+Use function differs use assignment Unbind IsBound statement two way
+First function always affect global This action might possible undo
+Are sure want continue
+Global Variables available
+
+In storage location identified paired associated contains known unknown quantity information referred
+The variable name usual way stored value addition referring variable depending context
+This separation name content allows name used independently exact information represents
+The identifier computer value variable may thus change course
+Variables programming may directly correspond concept
+The latter reference physical object storage location
+The value computing variable necessarily part mathematics
+Variables computer programming frequently given long name make relatively descriptive use whereas variable mathematics often terse name brevity transcription manipulation
+A variable storage location may referred several different identifier situation known
+Assigning value variable using one identifier change value accessed identifier
+replace variable symbolic name actual location data
+While variable name type location often remain fixed data stored location may changed program execution
+In value generally time
+In variable expression keep single value entire due requirement
+In imperative language behavior exhibited named symbolic constant typically contrasted normal variable
+Depending programming language variable may able store specified
+
+Alternatively datatype may associated current value allowing single variable store anything supported programming language
+An identifier referencing variable used access variable order read value alter value edit variable access permission etc
+For instance variable might referenced identifier variable contain number
+If variable referenced identifier well using identifier value variable altered reading value using identifier yield result
+If variable referenced single identifier simply called
+Otherwise speak
+For instance previous example name variable question another name variable
+The variable describes program text variable may used describes program execution variable meaningful value
+The scope variable actually property name variable extent property variable
+These confused also called property program varies point source code execution see
+Further may coincide variable lifetime many case tied variable lifetime
+A variable name affect
+important part variable
+Most language define specific variable well named entity may differ within given program
+The scope variable portion program code variable name meaning variable said visible
+Entrance scope typically begin variable lifetime come context exit scope typically end lifetime go context
+For instance variable meaningful within certain finely within block accordingly static resolution performable
+Alternatively variable resolved based global binding stack depends specific control flow
+Variables accessible within certain function termed
+A one indefinite scope may referred anywhere program
+hand runtime aspect variable
+Each variable value runtime
+The extent binding portion program execution time variable continues refer value memory location
+A running program may enter leave given extent many time case
+Unless programming language feature variable whose extent permanently outlasts scope result whereby memory allocated variable never freed since variable would used reference deallocation purpose longer accessible
+However permissible variable binding extend beyond scope occurs Lisp C execution pass back variable scope variable may used
+A variable whose scope begin extent said often undefined arbitrary value accessed see since yet explicitly given particular value
+A variable whose extent end scope may become deemed uninitialized since value destroyed
+Variables described previous two case may said
+In many language error try use value variable extent
+In language may yield
+Such variable may however assigned new value give new extent
+For space efficiency memory space needed variable may allocated variable first used freed longer needed
+A variable needed scope thus beginning variable lifetime enters scope may give space unused variable
+To avoid wasting space compiler often warn programmer variable declared used
+It considered good programming practice make scope variable narrow feasible different part program accidentally interact modifying variable
+Doing also prevents
+Common technique different section program use different make individual variable private either
+Many programming language employ reserved value often named indicate invalid uninitialized variable
+In language variable also meaning certain kind value stored
+For example variable type prohibited storing text value
+In language value variable carry type
+In situation exist simultaneously A variable given type undeclared assumed universal exists compile time
+Values also type checked queried runtime
+Typing variable also allows resolved compile time
+However different polymorphism used function call referred resolve call based value type opposed supertypes variable allowed
+Variables often store simple data like integer literal string programming language allow variable store value well
+Such language may also enable function
+These function operate like variable represent data multiple type
+For example function named may determine length list
+Such function may parametric polymorphic including type variable since amount element list independent element type
+The function also referred variable
+For instance code segment variable named given value function called
+The integer give value
+In language function parameter local scope
+This specific variable named referred within function though course function also variable called
+The specific variable allocation representation value vary widely among programming language among implementation given language
+Many language implementation allocate space whose extent last single function call whose memory automatically reclaimed function return
+More generally name variable bound address particular block contiguous sequence byte memory operation variable manipulate block
+common variable whose value large unknown size code compiled
+Such variable reference location value instead storing value allocated pool memory called
+Bound variable value
+A value however abstraction idea implementation value represented stored somewhere computer memory
+The program must set aside memory data object since memory finite ensure memory yielded reuse object longer needed represent variable value
+Objects allocated heap must object longer needed
+In language runtime environment automatically reclaims object extant variable longer refer
+In language program programmer must explicitly memory later free reclaim memory
+Failure lead heap depleted program run risk eventual failure exhausting available memory
+When variable refers created dynamically component may indirectly accessed variable
+In circumstance garbage collector analogous program feature language lack garbage collector must deal case portion memory reachable variable need reclaimed
+Unlike mathematical counterpart programming variable constant commonly take name
+
+name commonly used auxiliary variable instance variable
+Some naming convention enforced language level part language syntax involve format valid identifier
+In almost language variable name start digit contain whitespace character
+Whether punctuation mark permitted variable name varies language language many language permit variable name forbid punctuation
+In programming language specific often punctuation character known prefixed appended variable identifier indicate variable type
+variable name also varies language language require use certain case naming certain entity Most modern language older language
+Some language reserve certain form variable name internal use many language name beginning two underscore often fall category
+However beyond basic restriction imposed language naming variable largely matter style
+At level variable name used exact name chosen matter computer
+Thus name variable identify rest tool programmer make program easier write understand
+Using poorly chosen variable name make code difficult review name name clear often encouraged
+Programmers often create adhere code style guideline offer guidance naming variable impose precise naming scheme
+Shorter name faster type le descriptive longer name often make program easier read purpose variable easier understand
+However extreme verbosity variable name also lead le comprehensible code
+
+Functions procedure summarise set programming instruction
+Modules used group function procedure specific purpose
+Scope refers used
+They local global
+A declared way make available every part program whereas declared way make available within specific function
+A available single file
+For example program asks name print name three time
+Note Sign choose GCSE subject see content tailored
+
+learn share knowledge build career
+What global variable C language
+And different global variable another one
+Its global variable Why
+This question appears
+The user voted close gave specific reason A global variable variable accessed throughout program change made global variable persist local variable used within block declared
+eg There two aspect lifetime lexical scope
+A global variable lifetime program
+In contrast local variable lifetime function call explicitly allocated memory location arbitrary lifetime determined programmer
+A global variable almost universal lexical scope following two caveat
+First local variable declared function name within function local variable mask global variable prevent accessed normally
+Second global variable declared accessible source file even though lifetime still program
+When qualified distinct variable global variable name defined source file program
+In contrast local auto variable lexical scope within block defined
+In particular accessed even function called defining function even though variable alive kicking time
+Global variable accessed anywhere application
+They deemed bad practice variable modified another function without realizing may give unexpected result
+If want local variable declare inside method
+SubtractNumbers Local variable store function STACK visible inside function
+Global variable store memory visible line program declaration
+hide detail stack programmer
+Also global variable usually life program running
+Local variable free memory function end
+That enough
+The opposed stored stack frame function
+Basically C variable said attached scope function
+The problem variable stop existing outside scope function declared
+So sometimes need variable existing outside scope function order communicate information ALL function program
+The best example I come would consider verbose flag program
+It may impact point program need shared every function might produce text output
+More practically declare global variable need declare outside scope function
+Something like The global variable specific location memory outside stack
+So accessed function
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+
+In software programming language variable work like container hold number phrase important stuff used several place code
+Here work several common language
+In software programming variable name used hold one value
+Instead repeating value multiple place code variable hold result calculation database call result database query value
+Instead multiple calculation load multiple database call retrieve data variable stored computer memory used wherever needed code
+For example imagine calculation assigned variable called math math Now imagine need calculation different place code
+You could copy paste spot code like answer Or could use variable math like answer math When update calculation example changing update part right math variable math One change definition variable much easier searching replacing How variable used similar across programming language
+Typically variable left followed equal sign followed item item assigned
+Assignment value variable happens either top script example variable used widely close used possible
+This help readability maintenance code
+Variable identifier different across language
+Here example variable handled several different programming language
+int width With C programming language specify data type variable case integer int
+Lines code C also end
+width With Lua programming language variable name assignment brutally simple
+There mark end line code
+width Note dollar sign variable name width well end line
+If important useful specify data type variable typically short prefix added variable name example intWidth integer arrHouseData variable contains array library data
+width As Lua Python use prefix like PHP explicit line ending like C PHP
+width The Rails language number way express variable based location use within code
+The use double symbol example indicates class variable whose value disappears unavailable outside class contains variable
+The scope class variable differs variable used language
+If know programming class block code
+Classes contain number different item called referenced part application rather like variable
+With variable also important note As learn language learn nuance language handle variable assigned scope possible detail
+All language however use variable efficient way store reuse data software application
+If wondering photo rock article word foo carved foo variable phrase see lot software programming example many language
+local variable global variable reserved word Tim writer technologist enjoys teaching tech people
+He many year experience web site application business technical creative role
+He wife two kid teenager mad video game
+Binary number based reflect practical essence computer hardware electricity either
+Learn write binary number secret code transform English language letter binary number back
+Simon recently wrote short ebook A child guide Python programming teach kid age computer programming Named Monty Python language designed simple yet powerful easy code lot feature
+In software programming language variable work like container hold number phrase important stuff used several place code
+Here work several common language
+Some number simply positive attitude
+They fun play
+Girls Who Code CoderDojo local group great place learn program meet people help others learn
+Building computer great way save money get processing power also learn le obvious part software programming
+Interesting story computer science software programming technology month August
+There plenty place online learn one software programming language
+Here short list guideline evaluate option
+Links bottom September article collected one place print share bookmark
+His work tie together two topic issue magazine binary number circuit design
+Without Shannon computer computer science could different
+A magazine published time year magazine explores computer science software programming
+It kid parent teacher adult want learn fun technology
+Online access website content
+A print subscription available US includes full online access value
+Subscribers support independent research writing computer science programming
+Subscribe price includes online access price includes online access price includes online access You past print issue magazine based availability
+Community school library
+Or
+Arrives every two month new issue published
+Owl Hill Media LLC ISSN online ISSN print
+
+A connection name value
+That sound simple enough complexity arise practice
+To avoid confusion later spend time looking idea variable detail
+The name come algebra
+Many people introduced variable high school algebra class emphasis solving equation
+If value
+In problem like although call variable really In particular problem value
+In problem first know value understand particular value value going change middle problem
+In functional programming mean variable like named constant mathematics
+Since variable connection name value formal parameter procedure definition variable name
+But invoke procedure particular argument name associated value variable created
+If invoke procedure variable created perhaps different value
+There two possible source confusion
+One may programmed programming language like BASIC Pascal variable often get new value even already previous value assigned
+Programs language tend full thing like
+Back Chapter told book something called functional programming yet explained exactly mean
+Of course introduced lot function important part
+Part mean functional programming variable exists going value variable
+The possible source confusion Scheme unlike situation algebra may one variable name time
+That may invoke one procedure body procedure may invoke another procedure might use formal parameter name
+There might one variable named value another variable named value time
+The pitfall avoid thinking changed value
+As analogy imagine party along Mick Jagger Mick Wilson Mick Avory Mick Dolenz
+If conversation one name Mick mean particular person
+If notice someone else talking different Mick would think Mick become different person
+Instead think several people name Mick
+You understand variable term model
+A variable model association little person mind formal parameter name actual argument value given
+When want know hire Srini tell argument
+Srini therefore substitute body
+Later want know square hire Samantha tell argument
+Srini Samantha two different variable named
+Srini Samantha work separately one
+But complicated example could even one value called time Consider situation hired Hortense evaluate expression
+Hortense associate name value also name value going pay attention
+She compute two She hire Solomon compute
+Solomon associate name value
+This happens Hortense value still separate variable could different see Hortense hire Sheba compute
+Now simultaneously Hortense think Sheba think
+Remember said variable connection name value
+So variable
+The association name value variable
+The reason fussy terminology help clarify case several variable name
+But practice people generally sloppy fine point usually get away saying variable mean variable whose name
+Another important point way little people variable ca read others mind
+In particular know value local variable belong little people hired
+For example following attempt compute value wo work We hire Franz compute
+He associate evaluates hiring Gloria
+Gloria associate value trouble
+The solution Franz tell Gloria Until using two different kind naming
+We name procedure created permanently usable throughout program name procedure argument associated value temporarily call procedure usable inside procedure
+These two kind naming seem different every way
+One procedure one data one procedure make permanent global name one data make temporary local name
+That picture reflect way procedure data used see really one kind naming
+The boundary crossed Procedures argument procedure kind data permanent global name
+Right look last point global variable
+Just using associate name procedure globally also use kind data Once defined global variable used anywhere defined procedure used anywhere
+In fact defining procedure creates variable whose value procedure
+Just name variable whose value name variable whose value primitive procedure
+We come back point Chapter
+When name global variable appears expression corresponding value must substituted actual argument value substituted formal parameter
+When little person hired carry compound procedure first step substitute actual argument value formal parameter body
+The little person substitute value global variable name also
+What global variable whose name happens used formal parameter procedure
+Scheme rule formal parameter take precedence even though Scheme know conflict like make program harder read
+How little person know value substitute global variable name
+What make variable global model little person know value
+You imagine big chalkboard global definition written little people see
+If prefer could imagine whenever global variable defined specialist climb huge ladder pick megaphone yell something like Now hear
+
+The association formal parameter name actual argument value called It awkward say Harry associate value name time
+Most time say value paying attention whether association particular little person head everybody know
+We said earlier footnote Scheme actually copying substituting talking
+What actually happens like model global variable chalkboard somewhere associate name instead making new copy every expression value substituted name Scheme work original expression look value name moment value needed
+To make local variable work several chalkboard global one one little person
+The fully detailed model variable using several chalkboard many people find hardest learning Scheme
+That chosen use simpler substitution model
+We going write procedure solves quadratic equation
+We know prototypical boring programming problem illustrates clearly point make
+We use quadratic formula learned high school algebra class Since two possible solution return sentence containing two number
+This procedure work fine disadvantage repeating lot work
+It computes square root part formula twice
+We like avoid inefficiency
+One thing compute square root use actual argument helper procedure rest job This version evaluates square root
+The resulting value used argument named
+We solved problem posed initially avoiding redundant computation discriminant part formula
+The cost though define auxiliary procedure make much sense
+That never invoke sake us
+Scheme provides notation express computation kind conveniently
+It called Our new program abbreviation previous version In effect creates temporary procedure like without name invokes specified argument value
+But notation rearranges thing say right order let variable value using variable compute body
+special form take two argument
+The first sequence pair enclosed parenthesis
+In example one pair
+The second argument expression evaluate
+Now notation use one connection eliminate even redundant computation In example first argument includes three pair
+It defined invoked procedure like following Like us parenthesis usual meaning invoking procedure group belong together
+This grouping happens two way
+Parentheses used group name expression provides value
+Also additional pair parenthesis surround entire collection pair
+If programmed language may accustomed style programming value variable assigning new value
+You may tempted write Although version Scheme allow redefinition correct error procedure strictly legal
+A definition meant functional programming
+Scheme include mechanism programming studying book allow reassignment need complex model evaluation process
+When create one temporary variable using expression provide value computed variable created
+Therefore ca one expression depend another Do think get value therefore get value
+That expression equivalent defining helper procedure invoking The argument expression always evaluated function invoked
+The expression evaluated using value one
+If error result
+If want use computing must say notation tricky like us parenthesis mean procedure invocation
+Do teach magic formula like two open parenthesis variable three close parenthesis end value
+Instead think overall structure take exactly two argument
+The first argument one grouping parenthesis Each single word expression usually procedure invocation
+If procedure invocation parenthesis used usual meaning
+The second argument expression evaluated using variable
+Now put piece together The following procedure redundant computation
+Use avoid redundant work
+Put missing parenthesis The following program work
+Why
+Fix
+It supposed work like What procedure
+Explain manages work
+The reason example work substitution model book us functional programming sense never change value variable
+If started style programming would need complicated chalkboard model
+That work equation real root version Scheme complex number
+Also limited precision computer represent irrational number make particular algorithm give wrong answer practice even though correct theory
+chapter thread
+

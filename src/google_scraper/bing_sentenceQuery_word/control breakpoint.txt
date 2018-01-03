@@ -1,0 +1,512 @@
+In order individual imperative evaluated
+The emphasis explicit control flow distinguishes language language
+Within imperative statement execution result choice made two path follow
+For functional language function language construct exist achieve result usually termed control flow statement
+A set statement turn generally structured addition grouping also defines
+mechanism alter flow control way similar subroutine usually occur response external stimulus event occur rather execution control flow statement
+At level control flow instruction usually work altering
+For CPUs control flow instruction available conditional unconditional instruction also termed jump
+The kind control flow statement supported different language vary categorized effect A explicit name number assigned fixed position within may referenced control flow statement appearing elsewhere source code
+A label mark position within source code effect
+alternative named label used language placed start line text source code
+Languages use often impose constraint line number must increase value following line may require consecutive
+For example BASIC In language label usually appearing start line immediately followed colon
+For example C The language allowed whole number identifier label linked colon following statement variant allowed whole number
+The statement combination English word pronounced accordingly basic form unconditional transfer control
+Although may either upper lower case depending language usually written The effect goto statement cause next statement executed statement appearing immediately indicated label
+Goto statement many computer scientist notably
+The terminology varies may alternatively known routine procedure function especially return result method especially belong
+In computer memory small current standard subroutine used mainly reduce program size
+A piece code written used many time various place program
+Today subroutine often used help make program structured isolating algorithm hiding data access method
+If many programmer working one program subroutine one kind help divide work
+In structured programming ordered sequencing successive command considered one basic control structure used building block program alongside iteration recursion choice
+In May Böhm Jacopini published article showed program could transformed form involving choice IF THEN ELSE loop WHILE condition DO xxx possibly duplicated code addition Boolean variable flag
+Later author showed choice replaced loop yet Boolean variable
+That minimalism possible mean necessarily desirable computer theoretically need subtract one number another branch result negative practical computer dozen even hundred machine instruction
+What Böhm Jacopini article showed program could
+Other research showed control structure one entry one exit much easier understand form mainly could used anywhere statement without disrupting control flow
+In word
+Later development recently composable continued strategy making component program even freely composable
+Some academic took purist approach result argued even instruction like middle loop bad practice needed proof thus advocated loop single exit point
+This purist approach embodied language designed preferred tool teaching introductory programming academia
+The direct application theorem may result additional local variable introduced structured chart may also result
+The latter issue called context
+Pascal affected problem according empirical study cited student programmer difficulty formulating correct solution Pascal several simple problem including writing function searching element array
+A study Henry Shapiro cited Roberts found using control structure correct solution given subject subject wrote incorrect code problem allowed write return middle loop
+Most programming language control structure initial keyword indicates type control structure involved
+Languages divide whether control structure final keyword
+Conditional expression conditional construct feature perform different computation action depending whether evaluates true false
+Less common variation include compare given value specified constant take action according first constant match
+There usually provision default action else otherwise taken match succeeds
+Switch statement allow compiler optimization
+In case may limited constant expression might extend example right implement default case matching string
+Case logic also implemented functional form statement
+A loop sequence statement specified may carried several time succession
+The code inside loop loop shown obeyed specified number time collection item condition met
+In language loop expressed using rather explicit looping construct
+special case recursion easily transformed iteration
+Most programming language construction repeating loop certain number time
+In case counting go downwards instead upwards step size used
+In example N body loop may execute I value depending programming language
+In many programming language integer reliably used loop
+number represented imprecisely due hardware constraint loop might repeated time depending rounding error hardware compiler version
+Furthermore increment X occurs repeated addition accumulated rounding error may mean value X iteration differ quite significantly expected sequence
+Most programming language construction repeating loop condition change
+Some variation test condition start loop others test end
+If test start body may skipped completely end body always executed least
+A value change detection method used within ordinary loop trigger processing group value
+Values monitored within loop change diverts program flow handling group event associated
+Several programming language later special construct allow implicit looping element array member set collection
+generalise loop also support us
+comprehension together provide similar function Scala
+General iteration construct C statement form used express sort loop others looping number collection parallel
+Where specific looping construct used usually preferred general iteration construct since often make purpose expression clearer
+used assure program segment loop forever exceptional condition arises error
+For instance program loop forever handling event occur stopping process terminated operator
+Infinite loop implemented using control flow construct
+Most commonly unstructured programming jump back goto structured programming indefinite loop loop set never end either omitting condition explicitly setting true
+Some language special construct infinite loop typically omitting condition indefinite loop
+Examples include Ada Fortran Go Ruby
+Often infinite loop unintentionally created programming error loop wherein loop condition us variable never change within loop
+Sometimes within body loop desire skip remainder loop body continue next iteration loop
+Some language provide statement language Perl Ruby
+The effect prematurely terminate innermost loop body resume normal next iteration
+If iteration last one loop effect terminate entire loop early
+Some language like Perl Ruby statement restarts current iteration start
+Ruby statement restarts entire loop initial iteration
+When using loop search table might desirable stop searching soon required item found
+Some programming language provide statement language Perl effect terminate current loop immediately transfer control statement immediately loop
+The following example done support
+Both feature similar comparing code snippet show difference must combined statement construct
+support conditional execution code depending whether loop exited early statement using loop
+For example The clause example linked statement inner statement
+Both Python loop support else clause executed early exit loop occurred
+Some language support breaking nested loop theory circle called break
+One common use example searching table
+This done either via multilevel break break level bash PHP via labeled break break continue given label Java Perl
+Alternatives multilevel break include single break together state variable tested break another level exception caught level broken placing nested loop function using return effect termination entire nested loop using label goto statement
+C include multilevel break usual alternative use goto implement labeled break
+Python multilevel break continue proposed rejected basis added complexity worth rare legitimate use
+The notion break interest give rise today called
+In refined proving possible avoid adding additional variable structured programming long break loop allowed
+Furthermore Kosaraju proved strict hierarchy program exists every integer exists program containing break depth rewritten program break depth le without introducing added variable
+One also subroutine executing looped statement breaking nested loop subroutine
+There multiple break generally implemented exception instead
+In textbook us Tennent notion explain similarity break return statement
+Watt note class sequencer known defined sequencer terminates execution textually enclosing command procedure encompasses break loop including break return statement
+As commonly implemented however return sequencer may also carry return value whereas break sequencer implemented contemporary language usually
+used express correctness loop
+In practical term loop variant integer expression initial value
+The variant value must decrease loop iteration must never become negative correct execution loop
+Loop variant used guarantee loop terminate
+A loop invariant assertion must true first loop iteration remain true iteration
+This implies loop terminates correctly exit condition loop invariant satisfied
+Loop invariant used monitor specific property loop successive iteration
+Some programming language contain native support loop variant invariant
+In case support specification
+Some dialect provide extensive sublanguage describing Loops
+An early example found Conversional Lisp
+provides Loop macro implement sublanguage
+Many programming language especially favoring dynamic style programming offer construct
+These cause flow execution jump given context resume predeclared point
+three common sort control construct exotic one also exist keyword
+standard condition ZERODIVIDE SUBSCRIPTRANGE ENDFILE raised intercepted ON action Programmers also define use named condition
+Like one statement specified many case GOTO needed decide flow control resume
+Unfortunately implementation substantial overhead space time especially SUBSCRIPTRANGE many programmer tried avoid using condition
+Common Syntax example Modern language specialized structured construct exception handling rely use break return
+For example one write Any number variety clause used
+If matching particular control percolate back subroutine call nested block matching found end main program reached point program forcibly stopped suitable error message
+Via influence keyword reserved declaring exception handler language popular today like Java C
+Some language like Ada use keyword introduce exception handler may even employ different keyword Ada pattern matching
+A language like incorporate placeholder exception handler syntax automatically extract several piece information exception occurs
+This approach exemplified construct AppleScript David Watt textbook also analyzes exception handling framework sequencer introduced article section early exit loop
+Watt note abnormal situation generally exemplified arithmetic overflow failure like file found kind error detected program unit handler naturally located program unit
+For example program might contain several call read file action perform file found depends meaning purpose file question program thus handling routine abnormal situation located system code
+Watts note introducing status flag testing caller structured programming even return sequencer would entail result situation application code tends get cluttered test status flag programmer might forgetfully lazily omit test status flag
+In fact abnormal situation represented status flag default ignored
+Watt note contrast status flag testing exception opposite causing program terminate unless programmer explicitly deal exception way possibly adding explicit code ignore
+Based argument Watt concludes jump sequencer escape sequencer suitable dedicated exception sequencer semantics discussed
+In Object Pascal D Java C Python clause added construct
+No matter control leaf code inside clause guaranteed execute
+This useful writing code must relinquish expensive resource opened file database connection finished processing Since pattern fairly common C special syntax Upon leaving compiler guarantee object released effectively variable file stream abstracting side effect initializing releasing file
+Python statement Ruby block argument used similar effect
+All language mentioned define standard exception circumstance thrown
+Users throw exception fact allows user throw catch almost type including basic type like whereas language like Java permissive
+C introduced async keyword supporting direct style
+also known semicoroutines allow control yielded consumer method temporarily typically using keyword
+Like async keyword support programming direct style
+function yield control form without thread
+Coroutines implemented library programming language provides either continuation generator distinction coroutines generator practice technical detail
+In spoof article Lawrence Clark suggested GOTO statement could replaced statement provides entertaining example
+COMEFROM implemented one named
+article Structured Programming go Statements identifies two situation covered control structure listed gave example control structure could handle situation
+Despite utility construct yet found way mainstream programming language
+The following proposed If omitted get loop test top
+If omitted get loop test bottom
+If omitted get infinite loop
+Hence single construction replace several construction programming language
+A possible variant allow one test within loop use see next section appears cover case better
+Languages lacking construct generally emulate using equivalent idiom In loop construct represented using standard infinite loop clause middle confused statement following section
+Naming loop like example optional permit leaving outer loop several nested loop
+This proposed
+A modified version presented
+used specify event may occur within occurrence indicated using name event statement
+When event occur relevant action carried control pass
+This construction provides clear separation determining situation applies action taken situation
+conceptually similar exception similar construct used purpose many language
+The following simple example involves searching table particular item
+One way attack piece software redirect flow execution program
+A variety technique including shadow stack pointer verification used defend attack
+
+There many programming language
+To execute compiled interpreted
+An IDE integrated development environment used write code test error translate program
+process working program systematic way eliminate flaw glitch
+A program usually included within
+If section code give different result would expect try make section code work isolation
+You may give value make work
+If something find section code responsible make sure running expect
+If something happening find section code make particular thing happen
+When computer program expect likely designed flawed
+Go back algorithm separate part see relates program created
+Being able see happening inside program useful debugging
+You use print statement see value held variable remove later use specifically designed debugging tool
+Python includes logging module allows print value analyse error
+You need JavaScript enabled play audio clip
+Bill Sellars explains programmer use debugger step code fix error Stepping method debugging code one line time check error
+A debugger also use point code program stopped see happening check error
+A breakpoint created programmer halt program certain number line code
+While certain word describe error came record showing Thomas Edison inventor light bulb Grace Hopper computer programmer made use term
+When moth found inside computer Grace working recorded colleague debugging computer
+Sign choose GCSE subject see content tailored
+
+Breakpoint Definition A point program reached trigger event
+Breakpoints usually used either pause program execution dump value program variable
+Breakpoints may part program may set programmer
+Search Breakpoint UK US Search Breakpoint rest Computing Students
+
+In syntactic unit express action carried
+A program written language formed sequence one statement
+A statement may internal component
+Many imperative language
+make distinction statement definition statement containing executable code definition instantiating expression evaluates value
+A distinction also made simple compound statement latter may contain statement component
+The following major generic kind statement pseudocoded
+These pseudocoded statement immediate corresponding syntax typical imperative language like Pascal C Fortran etc
+The appearance statement shape look program
+Programming language characterized type statement use
+family
+Many statement introduced like
+Often statement reserved used name
+Imperative language typically use special syntax statement look quite different function call
+Common method describe syntax statement
+Semantically many statement differ call handling
+Usually actual subroutine parameter evaluated subroutine called
+This contrast many statement parameter evaluated several time
+condition
+loop body loop
+Technically statement parameter parameter
+parameter evaluated needed see also
+When parameter available statement like behaviour implemented subroutine see
+For language without parameter semantic description usually beyond capability language
+Therefore standard document often refer semantic description natural language
+In language statement contrast statement return result executed solely expression always return result often side effect
+Among imperative programming language one statement return result
+In language mix imperative style family distinction expression statement made even expression executed sequential context solely side effect whose return value used considered
+In statement everything expression
+This distinction frequently observed wording statement expression
+This found function found language Python found applied statement applied expression
+Most language fixed set statement defined language experiment allow programmer define new statement
+
+learn share knowledge build career
+Breakpoints one coolest feature supported popular Debuggers like GDB
+But breakpoint work
+What code modification compiler achieve breakpoint
+Are special hardware feature used support breakpoints
+Compiler need modify binary way support breakpoints
+However important The rest work performed debugger
+To put break point first add special information binary use flag compiling c source file include Software debugger actually use info put break best example hardware break point support VxWorks I experienced
+Basically break point processor internally step give exception processor used put software break Hardware break point work matching address stored Hardware register cause Hardware break point powerful heavily architecture dependent
+A good explanation A good intro Processor related information given By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+COSC equivalent Structured programming principle technique implemented ANSI COBOL language program design using technique program project documentation introduction sequential random file algorithm integrated file system
+Upon successful completion course student able
+Introduction Structured Programming
+hour An insight process designing writing computer program four phase program development use pseudocode flowcharting program development use structure chart program design modularization convention
+A brief look COBOL historical perspective programming language tenacity COBOL language
+
+The COBOL Language Overview hour COBOL format terminology
+A look Divisions COBOL language study content first two Divisions
+An exhaustive study COBOL metalanguage
+
+COBOL Data Types hour The basic component COBOL DATA Division COBOL data description Descriptions input output record
+versus record
+COBOL data storage type internal data representation
+A discussion significant difference ASCII EBCDIC collating sequence
+
+The Procedure Division Common Data Manipulation Verbs hour Development full COBOL program processing loop COBOL
+An explanation use priming read COBOL
+A look COBOL verb OPEN READ MOVE WRITE CLOSE
+Simple conditional operation using IF statement
+A look simple arithmetic operation COBOL
+
+Data Storage Editing Standards hour A exhaustive look category PICTURE clause
+A study complete set COBOL editing character
+Distinguishing numeric field
+Explain difference implied actual decimal point
+Learn rule signed number editing character
+Predict effect data movement field
+
+Conditional Operations Data Validation hour Study various type condition test relation class sign
+A look various validity test COBOL numeric test alphabetic test consistency check sequence check completeness check date check subscript check
+Examination compound condition COBOL description advantage scope terminator
+
+COBOL String Processing Reference Modification hour Differentiation DO WHILE DO UNTIL structure COBOL
+A look COBOL string processing statement like INITIALIZE INSPECT STRING UNSTRING ACCEPT DISPLAY statement
+A study basic reference modification principle
+
+Table Processing hour Table definition description table use COBOL programming
+Distinguishing fixed variable length record
+Differentiating subscript index
+Distinguishing sequential table lookup binary table lookup direct access table entry
+
+Multilevel Table Processing hour A conceptual view multidimensional table
+Implementation multidimensional table
+Searching multidimensional table
+
+File Sorting Merging hour Distinguishing internal sort utility sort COBOL SORT statement
+Differentiating ascending descending sort major intermediate minor key
+Defining collating sequence
+Explanation use INPUT PROCEDURE OUTPUT PROCEDURE routine SORT statement
+Distinguishing sort merge
+
+Report Concepts Control Break Programming hour An examination general common area good report design
+A look general guideline report design
+Defining control break distinguishing single control break multilevel control break program
+Distinguishing running rolling total
+Study control break algorithm
+Generalization etc
+algorithm
+
+COBOL Subprograms hour Definition implementation subprogram COBOL
+Distinguishing called program calling program
+Description purpose
+The use BY CONTENT BY REFERENCE clause relate subprogram
+Explanation meaning unresolved external reference
+Compilation linkage running COBOL subprogram
+
+Sequential File Maintenance hour Description file maintenance operation distinguishing old master transaction new master file
+Explanation three transaction type associated file maintenance
+Explaining used sequential update process
+The basic sequential update algorithm
+
+Indexed File Processing hour Explanation indexed file enables sequential retrieval individual record
+Introduction indexed virtual sequential file implementation
+Distinguishing indexed virtual sequential file organization
+Study Indexed file syntax ENVIRONMENT DATA Divisions
+Indexed file verb PROCEDURE Division
+Programming specification interactive file maintenance
+
+Interactive Program Design COBOL hour Discussion concept interactive screen versus batch approach
+Description SCREEN Section discussion use may preferable individual ACCEPT DISPLAY statement
+Application ergonomics interactive program design
+Explanation beneficial feature data validation using interactive programming opposed programming Homework assignment class work quiz
+These based material discussed class
+Examinations
+Two exam count percent total examination point final exam count percent total examination point
+The examination consist short answer explanation analysis question
+Programming Projects
+About six seven project varying complexity based topic discussed far semester
+The standard grading scale used
+A B C D F Project duration One week Project comprises simple program furnished professor preferably introduced error
+Students informed error employ Language Sensitive Editor eliminate error
+Students compile link execute program submission
+Project stress use AT END scheme detecting end file program execution
+Project duration One week A simple COBOL program
+Project comprises simple data manipulation preferably moving input field output field
+Professor may introduce simple arithmetic project
+Students code IDENTIFICATION ENVIRONMENT DATA DIVISIONS PROCEDURE DIVISION furnished professor
+Project duration Two week A simple COBOL report program calculation
+Project comprises COBOL program arithmetic preferable decision structure involved
+Professor supply input file program specification
+The specification include requirement formatted output
+Students code entire program
+Project duration Two week A table processing COBOL program
+Project require student write COBOL program table processing preferably table processing using PERFORM VARYING several dimension
+Professor supply program specification student code program
+Project duration Two week A COBOL control break program
+Project would require student code control break program preferable control break
+The input file supplied student need sorted project specification demand student sort input file use program preferable coding INPUT PROCEDURE program
+Project duration Two week A Sequential File Update program
+Project would require student update master file transaction either file provided interactive update
+Preferably specification would require student program able handle multiple transaction belonging particular record
+Project may involve merging file constitute transaction perhaps sorting transaction file master transaction file
+Project duration Two week A Nonsequential File Update program
+Project would require student develop interactive program would randomly update master file transaction
+Grauer Robert Villar COBOL From Micro Mainframe
+Fourth Edition Englewood Cliffs New Jersey April
+Keogh Keogh COBOL Programmer Notebook
+Englewood Cliffs New Jersey
+Indiana University Pennsylvania South Drive Indiana
+
+Debugging routine process locating removing computer program bug error abnormality methodically handled software programmer via debugging tool
+Debugging check detects corrects error bug allow proper program operation according set specification
+Debugging also known debug
+Developing software program undergo heavy testing updating troubleshooting maintenance
+Normally software contains error bug routinely removed
+In debugging process complete software program regularly compiled executed identify rectify issue
+Large software program contain million source code line divided small component
+For efficiency component debugged separately first followed program whole
+Techopedia Terms Copyright Techopedia
+
+Students often wonder difference computer science information system
+Both deal computer focus different technological aspect
+Before choosing degree follow important understand road degree set
+Here break degree specialize
+Computer Science focus technical theoretical program
+A degree computer science provides student knowledge computer operating system coding computer networking computer architecture database design
+Computer science root math physic electrical engineering
+Some people feel overwhelmed amount math degree requires student comfortable mathematics previous experience problem
+The nice thing Computer Science Degree pair well wide degree like woman study religion chemistry biology much
+With Computer Information Systems Degree student focus apply technology business
+Computer information system take technology place commercial setting
+In addition learning technology work student learn use technology benefit company
+The review degree mixed
+Some people enjoy others become frustrated lack focus one particular subject
+A computer information system course includes business course managerial communication well coding tech skill
+This degree go well business related major degree art graphic design communication
+Luckily degree wide verity job available
+These job listed separately often crossover
+Jobs available Computer Science Degree Jobs available Computer Information Systems Degree All degree come pro con
+Students enjoy programming learning almost aspect technology may enjoy Computer Science Degree find amount math coding required whelming
+Students enjoy marketing learning business likely enjoy Computer Information Systems Degree
+It cover broad range topic people enjoy others become frustrated
+The nice thing degree combined wide verity degree guarantee high amount job available graduation
+It important consider personal strength weakness like dislike kind job desired graduation choosing degree either way good future evident
+For information degree check
+You must post comment
+
+use following search parameter narrow result
+Sharing information knowledge experience related principle practice type engineering civil structural mechanical electrical aerospace chemical computer environmental etc
+Questions current engineering project working interpret code standard industry practice encouraged
+Engineers help make world safer better place
+Images related engineering accepted
+Completed project destructive test result unique machinery hardware acceptable encouraged
+comment encouraged provide context reader
+Questions related school university allowed try
+Asking help homework level result instant ban
+Questions something work allowed try
+Questions major selection career salary resume office politics posted GENERAL thread posted daily
+Job ad placed weekly thread
+Do post topic outside thread
+No kind
+No meme image macro
+No post
+This includes joke pun etc
+Keep discussion civil
+Overly insulting crass comment removed multiple violation lead ban
+No sensationalised title
+Posts blacklisted
+You allowed post provided relevant engineering active comment answer question
+Your post MUST submitted
+Pick engineer list volunteer send PM indicating would like conduct interview Anything look like violates rule
+Parts swap Q A various field front page internet
+subscribe one thousand community
+This archived post
+You wo able vote comment
+submitted I reading talk talk engineering breakpoints powerful idea
+What breakpoint mean
+I Googled mostly came software reference
+That stopping code running particular break point see working
+More generally breakpoint particular point pause ass
+Thanks
+edit Added Charlie Munger Wikipedia link fixed typo Post comment
+The concept consists engineering something minor fail order prevent something major failing kind like crumple point car frame valve burst cap electrical fuse etc
+cap fuse blow pipe explode house catch fire
+Your system broken yes least broken
+Also grooved shaft component predesigned shear point protects driving system accessory seizes
+Also grooved shaft component I idea
+That wicked smart
+Wicked smaht ftfy Also dogbone connection steel structure get plastic failure instead brittle failure protecting occupant earthquake
+pin snowblower Keys also thing
+This make sense
+I hard time imagining would look like though applied world management investing What kind small business failure engineer avoid big business failure
+A simple one could project failure
+If keep cutting staff certain department order save money look project fails
+That know cut
+You need rehire writing staff passed breakpoint
+I took course material speaker came talk line work consisting analyzing failure
+He spoke manufacturing plant certain flammable gas pilot light around plant gas leak get large enough one pilot light ignite gas cloud explode
+The pilot light IF gas leak happens WHEN
+The fail safe pilot light without gas cloud would get dense large would catastrophic otherwise
+As someone done ATEX design make cringe
+Distribution project structure system check balance serve purpose
+For instance imagine company linear hierarchy grows quickly year period let say doubling revenue time
+If staff grows similarly hierarchy stay possible blind spot develop due ti basic human oversight business structure may fail adapt demand company new revenue level
+If combine poor business model blind spot essentially setting titanic collision course iceberg
+You may recognize problem impending doom much momentum stop
+This happens quite frequently big reason dramatic swing within industry
+On hand company operate organizational hierarchy linear rather matrix executive level oversight coming given project multiple vantage
+While prove tedious serve corporate time goal recognize singular failing project revenue loss early enough isolate issue becomes systemic undermines entire organization finance
+You engineer system break micro scale warning macro instead allowing whole system operate risk implosion time inevitability without proper precaution
+Rewards reporting waste abuse one example come mind
+
+Na controlling way something fails reduce damage mission
+So would fuze breakpoint
+This also part whole design
+Think small slit easily open whith small lever
+I ca tell context
+I speculating I think mean designed failure point weak point cause failure
+Sort like valve rupture disc
+Sounds like possibly abstract sense something purely mechanical nature
+And course engineering idea backup system powerful idea
+The engineering idea powerful model
+The notion critical come powerful model
+That quote OP link
+I read whole link following text line get recognize point failure engineering system building engineering process
+He continues man working tool know limitation man working cognitive apparatus know limitation
+And knowledge way used control motivate people
+Sounds like author talking knowing limitation people go psychology use knowledge effectively management perspective
+You build team people effectively cover others weakness recognize potential failure put focus making sure happen
+Context important
+In many engine insert breakpoint life code
+The code well run point pause allows examine intermediate variable troubleshoot difficult section code
+Breakpoints also refer populated point table point designed fail point behavior change
+I answer question thanks link
+What great read
+Charlie Munger mention one favourite businessmen Carl F Braun
+You dig deeper Summary one book
+A breakpoint something becomes viable profitable usually referred even point
+But sound like referring something else
+Example It cost equipment mile transport cargo using method A
+There proposed method B cost equipment mile
+The breakpoint Method B viable mile
+In manufacturing process breakpoint also refer point time something change design correcting failure issue
+Might make lot sense I use example try help
+Your company make product say piece sheet metal circular hole punched stamping press
+Thousands day made maybe first last part inspected shift
+You later find customer part working correctly hole small
+After root cause analysis determined hole small stamping press tool worn
+Your inspection process catch drawing call
+Say time part pressed week pas customer go use part
+It took week root cause correct part print
+Reworking tool took week
+So part lot bad part lot follow press reworked begin stamping suspect
+This could week worth part
+Breakpoint refers point time part beyond time longer suspect
+I think also refer point bad part identified
+Kind long winded something like happened company
+Shorter answer breakpoint refer error also refer point feature product changed
+Maybe mating part changed half hole need increase diameter accommodate
+Breakpoint time future part made half hole larger diameter
+Is Charlie Munger Berkshire Hathaway
+Yes
+I heard used alternate way saying ultimate tensile strength It pretty good keanu Reeves movie Use site constitutes acceptance
+reddit All right reserved
+REDDIT ALIEN Logo registered trademark reddit inc
+

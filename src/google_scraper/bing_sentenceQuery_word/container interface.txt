@@ -1,0 +1,382 @@
+In ADT whose instance collection object
+In word store object organized way follows specific access rule
+The size container depends number object element contains
+Underlying inherited implementation various container type may vary size complexity provide flexibility choosing right implementation given scenario
+Containers characterized following three property Container class expected implement method following Containers sometimes implemented conjunction
+Containers may classified either
+container store object independently
+Objects may accessed directly
+An associative container us map dictionary composed pair key appears container
+The key used find value object stored container
+used programming language class template
+also use container special group widget
+Apart graphical property type behavior container class keep list child allow adding removing retrieving among child
+
+Point clarification Docker based container fact around Linux Containers sometimes called LXC
+Linux container virtualization higher level operating system
+In short operating system virtualized mean allowing u optimize overall usage computing resource
+Dedicated hardware case sat largely idle every day occasional usage spike peaked use
+As result run many virtualized operating system one physical host
+Now year line still dealing need pull existing infrastructure spend
+Containers virtualize application process way eliminates lot associated full OS stack file kernel dependency driver etc
+needed support single application process
+Containers JUST install needed support application process pas rest underlying host
+Docker put wrapper around whole thing make much easier user friendly manage I oversimplifying certainly largely correct
+In order get knowledge container look back history firstly I would suggest go Containers step ahead Virtualization
+The process running multiple isolated component sharing host machine kernel utilizing UFS Cgroups Namespaces called kind virtualization software level OS virtualization mostly done hardware level resulting virtual machine OS Kernel
+Docker company provides Docker resposible creating container host machine
+Still question
+Ask
+
+learn share knowledge build career
+I little confused difference container collection
+I read Wikipedia I
+Collections Stores variable number object
+Ex
+list set
+Containers DataStructures
+Ex
+dequeue
+But I thought collection like list tree etc data structure container
+Also Data structure implement container include array list map queue set stack table tree vector
+Java really use term container except context AWT GUI component represents GUI component contain component
+used Java data structure contain object describe
+Computer science general tends treat le
+take read article good understand Container Collection concept
+The ISO standard really establish clear distinction
+It provide formal definition container Containers object store object
+yet provides formal definition us term bit generally
+It describes tuple example object even though definition also
+Collections Stores variable number object
+Ex
+list set
+Containers DataStructures
+Ex
+dequeue
+But I thought collection like list tree etc data structure container
+Also As far I see standard specify anything contrary collection container
+They also happen data structure structure general computer science term kind aggregate organizes data way
+With find useful distinction concept original STL conceived Stephanov defined
+A Sequence Container whose element arranged strict linear order
+It support insertion removal element
+The describes container like
+A Sorted Associative Container type Associative Container
+Sorted Associative Containers use ordering relation key two key considered equivalent neither one le
+If ordering relation string comparison example key abcde aBcDe equivalent
+The describes container like
+A Pair Associative Container Associative Container associate key object
+The value type Pair Associative Container pair
+The describes container like
+As reading subject respect slight semantic difference The difference taste substance feeling I listening two terminology This clearly subjective considering container implemented value semantics Java colloection behave polymorphism object Java variable technically autodereferenced pointer probably due semantics
+A container polymorphic value homomorphic pointer polymorphic value choose container want concretize strict java correspondence
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In container area enclosed beginning ending tag
+For example encloses entire document may enclose single word paragraph element
+In HTML code container must start stop tag close container
+Without stop tag start tag apply entire document
+In development terminology word container used describe component component inside
+Examples container include
+In video terminology container often used specifically describe
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+learn share knowledge build career
+I currently studying Abstract Data Types ADT I get concept
+Can someone please explain actually
+Also collection bag List ADT
+simple term
+Abstract Data Type ADT data type behavior defined implementation
+Opposite ADT Concrete Data Type CDT contains implementation ADT
+ADTs
+Each ADTs many implementation
+CDT
+Container ADT ADTs
+Book Abstract Telephone Book implementation The Wikipedia article lot say
+In computer science abstract data type ADT mathematical model certain class data structure similar behavior certain data type one programming language similar semantics
+An abstract data type defined indirectly operation may performed mathematical constraint effect possibly cost operation
+In slightly concrete term take Java interface example
+The interface explicitly define behavior concrete class
+The interface defines set method class
+must implement order considered
+A another abstract data type
+In case Java interface even abstract since The interface place additional stipulation beyond specified interface contract method
+A also known
+In mathematics notion multiset bag generalization notion set member allowed appear
+For example unique set contains element b others many multisets property multiset contains two copy one b multiset contains three copy b
+In Java Bag would collection implement simple interface
+You need able add item bag check size iterate item contains
+See example implementation Sedgewick Wayne
+A truly abstract data type describes property instance without commitment representation particular operation
+For example abstract mathematical type Integer discrete unlimited linearly ordered set instance
+A concrete type give specific representation instance implement specific set operation
+ADT set data value associated operation precisely independent paticular implementaition
+The strength ADT implementaion hidden interface declared mean ADT various way Simply Abstract Data Type nothing set operation set data used storing data efficiently machine
+There need perticular type declaration
+It require implementation ADT
+Abstract Data type mathematical module includes data various operation
+Implementation detail hidden called abstract
+Abstraction allowed organise complexity task focusing logical property data action
+In programming language type data associated operation
+An ADT user defined data aggregate operation data characterized data operation represented list declared single syntactic unit relevant operation visible user ADT ADT way normal data type programming language
+It abstraction internal representation data implementation operation concern ADT user
+An abstract data type could defined mathematical model collection operation defined
+A simple example set integer together operation union intersection defined set
+The generalization primitive data type integer char etc encapsulate data type sense definition type operation type localized one section program
+They treated primitive data type outside section operation defined
+An implementation translation statement programming language declaration defines variable plus procedure language operation
+The implementation ADT chooses data structure represent
+A useful tool specifying logical property data type abstract data type
+Fundamentally data type collection value set operation value
+That collection operation form mathematical construct may implemented using particular hardware software data structure
+The term refers basic mathematical concept defines data type
+In defining abstract data type mathamatical concept concerned space time efficinecy
+Those implementation issue
+Infact defination concerned implementaion detail
+It may even possible implement particular particular piece hardware using particular software system
+For example already seen integer universally implementable
+To illustrate concept specification method consider corresponds mathematical concept rational number
+A rational number number expressed quotient two integer
+The operation rational number define creation rational number two integer addition multiplication testing equality
+The following initial specification
+An consists two part The value definition defines collection value ADT consists two part For example value definition RATIONAL state RATIONAL value consists two integer second equal
+The keyword abstract typedef introduces value definition keyword condition used specify condition newly defined data type
+In definition condition specifies denominator may
+The definition clause required condition may necessary every
+Each operator defined abstract junction three part
+For example operator definition ADT RATIONAL includes operation creation makerational addition add multiplication mult well test equality equal
+Let u consider specification multiplication first since simplest
+It contains header
+The header definition first two line like C function header
+The keyword abstract indicates C function ADT operator definition
+The specifies operation
+In name function case mult used denote result operation
+Thus mult represents numerator result mult represents denominator result
+That specifies condition become true operation executed
+In example specifies neumerator result rational multiplication equal integer product numerator two input denominator equal th einteger product two denominator
+InÂ computer science aÂ listÂ orÂ sequenceÂ anÂ abstract data typeÂ represents countable number orderedÂ value value may occur
+An instance list computer representation theÂ mathematicalÂ concept finiteÂ sequence potentially infinite analog list aÂ Lists basic example ofÂ container contain value
+If value occurs multiple time occurrence considered distinct item The name list also used several concrete data structure used implement abstract list especially linked list
+Image List A bag collection object keep adding object bag remove added bag
+So bag data structure collect object iterate
+You bag normally program Java
+Image Bag A collection Java sense refers class implement Collection interface
+A collection generic sense group object
+Image collection Before defining let u considers different view data type
+We know default primitive data type int float etc
+support basic operation addition subtraction
+The system provides implementation primitive data type
+For data type also need define operation
+The implementation operation done want actually use
+That mean general data type defined along operation
+To simplify process solving problem combine data structure operation call
+ADT
+Commonly used include Linked List Stacks Queues Binary Tree Dictionaries Disjoint Sets Union find Hash Tables many others
+consist two type To solve problem combine data structure operation
+An ADT consists two part Commonly used ADT Linked Lists Stacks Queues Priority Queues Trees etc
+While defining ADTs need worry implementation detals
+They come picture want use
+like user defined data type perform function without knowing inside datatype operation performed
+As information exposed abstracted
+eg
+List Array Stack Queue
+On Stack perform function like Push Pop sure implemented behind curtain
+ADT set object operation definition mention set operation implemented
+Programmers use collection need know instantiate access data manner without concern detail collection implementation
+In word perspective collection abstraction reason computer science collection referred abstract data type ADTs
+The user concern learning interface set operation performs By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+There history CS run one operating system top another
+VirtualBox VMware emulated
+That allows control application environment playing virtual OS provisioned make application immune change parent OS
+running Windows Windows get old application run
+Since running entire OS get environment right single application pretty inefficient slow set use instead
+The application provides controlled environment application look like OS application really API layer OS running container
+A container part memory virtually separated rest system miniature version parent operating system operating system system support
+similar file system pretty much everything give feel like entire new tiny system within system
+Inside container whatever program install modification wo affect outer system
+Also form image simply take system use inside system
+So save effort going entire process development
+So kind equivalent virtualization except actually virtualizing reserving part memory similar functionality
+A data structure store data item simple like integer complex like phone book entry even complex like full medical record person way care much data item stored
+The data item also called element constraint representation
+Examples vector queue list map hash map
+There others
+Still question
+Ask
+
+In enables programmer traverse particularly
+Various type iterators often provided via container
+Though interface semantics given iterator fixed iterators often implemented term structure underlying container implementation often tightly coupled container enable operational semantics iterator
+Note iterator performs traversal also give access data element container perform without significant liberty taken concept trivial use terminology
+An iterator behaviorally similar
+Iterators date programming language
+Internal iterators often taking implementing traversal across container applying given function every element turn
+An external iterator may thought type two primary operation referencing one particular element object collection called modifying point next element called
+There must also way create iterator point first element well way determine iterator exhausted element container
+Depending language intended use iterators may also provide additional operation exhibit different behavior
+The primary purpose iterator allow user process every element container isolating user internal structure container
+This allows container store element manner wish allowing user treat simple sequence list
+An iterator class usually designed tight coordination corresponding container class
+Usually container provides method creating iterators
+Note sometimes also referred loop iterator
+A however provides traversal functionality element access functionality
+One way implementing iterators use restricted form known
+By contrast generator coroutine value caller multiple time instead returning
+Most iterators naturally expressible generator generator preserve local state invocation particularly complicated stateful iterators
+There subtle difference distinction use term generator iterator vary author language
+In generator iterator function return iterator
+An example Python generator returning iterator using Python statement follows Some language later version later version later version provide way iterating element container object without introduction explicit iterator object
+An actual iterator object may exist reality exposed within source code language
+Implicit iterators often manifested statement equivalent following Python example In Python iterable object converted iterator iterated loop done implicitly
+Or time may created collection object Ruby example This iteration style sometimes called internal iteration code fully executes within context iterable object control aspect iteration programmer provides operation execute step using
+Languages support similar construct may also make use implicit iterators construction result list Python Sometimes implicit hidden nature partial
+The language function template implicit iteration
+These function still require explicit iterator object initial input subsequent iteration expose iterator object user
+Iterators useful abstraction provide potentially infinite iterable necessarily indexable object
+Several language Perl Python implement stream iterators
+Alternative implementation stream include language
+In procedural language common use subscript operator loop element sequence array
+Although indexing may also used container use iterators may advantage The ability container modified iterating element become necessary modern programming interrelationship object effect operation may obvious
+By using iterator one isolated sort consequence
+This assertion must however taken grain salt often efficiency reason iterator implementation tightly bound container preclude modification underlying container without invalidating
+For container may move around data memory way invalidate iterator container somehow keep track currently alive iterators update fly
+Since number iterators given time may arbitrarily large comparison size tied container updating drastically impair complexity guarantee container operation
+An alternative way keep number update bound relatively container size would use kind handle mechanism collection indirect pointer container element must updated container let iterators point handle instead directly data element
+But approach negatively impact iterator performance since must effectuate double pointer following access actual data element
+This usually desirable many algorithm using iterators invoke iterators data access operation often advance method
+It therefore especially important iterators efficient data access
+All always security iterators remain always valid efficiency
+Most time added security worth efficiency price pay
+Using alternative container example singly linked list instead vector would better choice globally efficient stability iterators needed
+Iterators categorised according functionality
+Here list iterator category Different language library used language define iterator type
+Some Iterators called enumerator represented interface
+provides method advance next element indicates whether end collection reached property obtain value element currently pointed optional method rewind enumerator back initial position
+The enumerator initially point special value first element call required begin iterating
+Enumerators typically obtained calling method object implementing interface
+Container class typically implement interface
+However statement operate object providing method even implement
+Both interface expanded version
+The following show simple use iterators C C also support method declared returning us statement produce sequence element instead returning object instance transformed compiler new class implementing appropriate interface
+The language make wide use iterators provides several different kind iterators including
+All standard container template type provide rich consistent set iterator type
+The syntax standard iterators designed resemble ordinary operator used reference element iterator point pointer arithmetic operator like used advance iterator next element
+Iterators usually used pair one used actual iteration second serf mark end collection
+The iterators created corresponding container class using standard method
+The iterator returned point first element iterator returned special value reference element
+When iterator advanced beyond last element definition equal special end iterator value
+The following example show typical use iterator
+There many variety iterators slightly different behavior including forward reverse bidirectional iterators iterators input output iterators const iterators protect container element modification
+However every type container support every type iterator
+It possible user create iterator type deriving subclass standard class template
+Iterator safety defined separately different type standard container case iterator permissive allowing container change iterating
+Implicit iteration also partially supported use standard function template
+When used must initialized existing iterators usually define range iteration occurs
+But explicit iterator object subsequently exposed iteration proceeds
+This example show use
+The achieved using A limitation technique allow body loop declared inline requiring declared elsewhere passed argument
+This partially compensated using library using lambda implicitly generate function object familiar infix operator syntax
+However Boost implemented library level rather intrinsically language certain operation done via workarounds
+The current standard natively support syntax allowing function template body declared inline
+Here example iteration using lambda function Introduced JDK release interface allows iteration container class
+Each provides method may optionally support method
+Iterators created corresponding container class typically method named
+The method advance iterator return value pointed iterator
+The first element obtained upon first call
+To determine element container visited test method used
+The following example show simple use iterators To show called repeatedly use insert comma element last element
+Note approach properly separate advance operation actual data access
+If data element must used advance need stored temporary variable
+When advance needed without data access
+skip given data element access nonetheless performed though returned value ignored case
+For collection type support method iterator remove recently visited element container keeping iterator usable
+Adding removing element calling method container also make iterator unusable
+An attempt get next element throw exception
+An exception also thrown element remaining previously returned false
+Additionally similar API allows forward backward iteration provides current index list allows setting list element position
+The release Java introduced interface support enhanced loop iterating collection array
+defines method return
+Using enhanced loop preceding example rewritten Some container also use older since class
+It provides method method modify container
+In iterators rich set method similar collection used directly loop
+Indeed iterators collection inherit common base trait
+However rich set method available Scala collection library map collect filter often necessary deal iterators directly programming Scala
+Java iterators collection automatically converted Scala iterators collection respectively simply adding single line file
+The JavaConversions object provides implicit conversion
+Implicit conversion feature Scala method visible current scope automatically insert call relevant expression appropriate place make typecheck otherwise would
+support external internal implicit iteration using either native array array
+In case external iteration onus user advance traversal request next element one define set element within array storage structure traverse element using construct
+For example traverse array integer using keyword
+In case internal iteration user supply operation iterator perform every element collection many operator MATLAB function overloaded execute every element array return corresponding output array implicitly
+Furthermore function leveraged performing custom user defined operation native array array respectively
+For example defines primary function implicitly applies custom subfunction element array using function
+Alternatively may desirable abstract mechanism array storage container user defining custom MATLAB implementation Iterator Pattern
+Such implementation supporting external iteration demonstrated MATLAB Central File Exchange item
+This written new syntax introduced MATLAB software version feature array realization ADT mechanism storing heterogeneous data type set element
+It provides functionality explicit forward traversal method use
+introduced version made compatible object value Beta
+However support iterators added PHP introduction internal interface
+The two main interface implementation PHP script enable object iterated via foreach loop
+The latter require implementing class declare required method instead implement method return instance
+The provides several class work special iterators
+PHP also support since
+The simplest implementation wrapping array useful
+All method example class used execution complete foreach loop
+The iterator method executed following order The next example illustrates PHP class implement interface could wrapped class act upon data returned foreach loop
+The usage together constant allows PHP script iterate result set billion row little memory usage
+These feature exclusive PHP MySQL class implementation
+class implement interface well
+Iterators fundamental part language many case go unseen implicitly used statement
+All Python standard type support iteration well many class part standard library
+The following example show typical implicit iteration sequence Python dictionary form also directly iterated dictionary key returned method dictionary iterated yield corresponding key value pair tuple Iterators however used defined explicitly
+For iterable sequence type class function used create iterator object
+The iterator object iterated function us method internally return next element container
+The previous statement applies Python
+In Python method equivalent
+A exception raised element left
+The following example show equivalent iteration sequence using explicit iterators Any class support standard iteration either implicit explicit defining method return iterator object
+The iterator object need define method return next element
+Python implement iteration
+Ruby implement iterators quite differently iteration done mean passing callback closure container method way Ruby implement basic iteration also several pattern iteration like function mapping filter reducing
+Ruby also support alternative syntax basic iterating method following three example equivalent even shorter Ruby also iterate fixed list using Enumerators either calling next method
+
+This website us cooky
+By using website agreeing cooky policy consent use cooky accordance term policy
+Series Editors Ramesh Stefan ISSN The development analysis solution delivery Operations Science model changed dramatically due phenomenal improvement computer technology
+At time discipline computer science benefitted advance achieved operation researcher
+The devoted advance interface Operations Research Computer Science
+Published volume may study topic interface computer science operation research perspective
+The series feature three type book Operations Science interface written recognized authority
+specific topic
+prepared expert specific area serving guest editor
+These volume collection paper selected rigorous refereein Because depth breadth operation research computer science topic publishes volume wide range topic
+Please browse title appreciate breadth coverage
+You invited submit proposal developing book project series
+You marked item
+You logged
+Please log edit catalog
+
+In book Branden Hookway considers interface technology form relationship technology
+The interface Hookway proposes ubiquitous hidden view
+It bottleneck relationship technology must pas productive encounter embedded within use technology
+It site human machine material social political defines elides difference
+A virtuoso multiple discipline Hookway offer theory interface draw cultural theory political theory philosophy art architecture new medium history science technology
+He argues theoretical mechanism interface offer powerful approach question human relationship technology
+Hookway find origin term fluid dynamic trace migration thermodynamics information theory cybernetics
+He discus issue subject formation agency power control within context include technology politics social role game
+He considers technological augmentation human system discussing notion embodied intelligence
+Hookway view figure subject receiver active producer process subjectification
+The interface argues stand relation alien intimate vertiginous orienting cross threshold
+Branden Hookway teach Department Architecture Department Design Environmental Analysis Cornell University
+He author
+One Rogers Street Cambridge MA Suite Duchess Street London UK
+

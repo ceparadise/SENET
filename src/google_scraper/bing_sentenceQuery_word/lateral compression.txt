@@ -1,0 +1,732 @@
+Images either vector bitmap
+Bitmap image made small part called pixel
+Vector image made using coordinate geometry
+Images compressed reduce file size
+used reduce file size change various attribute image file
+These attribute include You need JavaScript enabled view video clip
+An explanation lossy lossless compression Compression
+Lossless compression mean file size compressed picture quality remains get worse
+Also file decompressed original quality
+Lossy compression permanently remove data
+There number type compressed image file
+These include following
+compression type
+It often used graphic might changed another person image contains layer graphic need kept separate
+It
+often used digital camera image fairly small file size quality display
+JPEG format offer higher compression rate PNG quality
+compress image maximum making
+GIF often used transparency needed graphic
+GIF also used store simple animated image
+Sign choose GCSE subject see content tailored
+
+Data compression reduces amount space needed store file
+If halve size file store twice many file cost download file twice fast half cost paying download
+Even though disk getting bigger high bandwidth becoming common nice get even value working smaller compressed file
+For large data warehouse like kept Google Facebook halving amount space taken represent massive reduction space computing required consequently big saving power consumption cooling huge reduction impact environment
+Common form compression currently use include JPEG used photo used audio MPEG used video including DVDs ZIP many kind data
+For example JPEG method reduces photo tenth smaller original size mean camera store time many photo image web downloaded time faster
+So catch
+Well issue quality data example highly compressed JPEG image look sharp image compressed
+Also take processing time compress decompress data
+In case tradeoff worth always
+Kb JPEG Kb JPEG Use interactive online In chapter look compression might done benefit cost associated using compressed data need considered deciding whether compress data
+We start simple example Run Length Encoding give insight benefit issue around compression
+Watch video online Run length encoding RLE technique widely used day great way get feel issue around using compression
+Imagine following simple black white image
+One simple way computer store image binary using format mean white mean black bit map mapped pixel onto value bit
+Using method image would represented following way There image format us simple representation described
+The format called portable bitmap format PBM
+PBM file saved file extension contain simple header followed image data
+The data file viewed opening text editor much like opening file image viewed opening drawing image viewing program support PBM file format well supported number image viewing editing program display
+A pbm file diamond image used earlier would follows The first two line header
+The first line specifies format file mean file contains ASCII zero one
+The second line specifies width height image pixel
+This allows computer know size dimension image even newline character separating row file missing
+The rest data image like
+If wanted could copy paste representation including header text file save file extension
+If program computer able open PBM file could view image
+You could even write program output file display image
+Because digit represented using ASCII format efficient useful want read inside file
+There variation format pack pixel bit instead character variation used grey scale colour image
+More
+The key question compression whether represent image using fewer bit still able reconstruct original image
+It turn
+There many way going section focussing method called
+Imagine read bit someone copying might say thing like five zero instead zero zero zero zero zero
+Is basic idea behind run length encoding RLE used save space storing digital image
+In run length encoding replace row number say many consecutive pixel colour
+For example first row image contains one white two black four white one black four white two black one white pixel
+This could represented follows
+For second row need say number white pixel say number black need explicitly say zero start row
+You might ask need say number white pixel first case zero
+The reason clear rule start computer would way knowing colour display image represented form
+The third row contains five white five black five white
+This coded That mean get following representation first three row
+You work row would following system
+The remaining row In video Computer Science Unplugged show Run length encoded image decoded using large pixel printer spray
+Watch video online Just ensure reverse compression process go finding original representation zero one compressed image
+What image
+How many pixel original image
+How many number used represent pixel
+This image solution available activity cup saucer
+The following interactive allows experiment Run Length Encoding
+Use interactive online How much space saved using alternate representation measure
+One simple way consider imagine typing representation could think original bit stored one character RLE code using character digit comma bit crude starting point
+In original representation digit one zero required represent image
+Count number comma digit space newlines ignore new representation
+This number character required represent image new representation ensure right track first row given contain character
+Assuming got new image representation correct counted correctly found character new image double check number differs
+This mean new representation requires around many character represent calculated using
+This significant reduction amount space required store image half size
+The new representation form old one
+In practice method extra trick used compress image original size
+In real system original image us one bit every pixel store black white value one character used calculation
+However run length number also stored much efficiently using bit pattern take little space represent number
+The bit pattern used usually based technique called Huffman coding beyond want get
+The main place black white scanned image used fax machine use approach compression
+One reason work well scanned page number consecutive white pixel huge
+In fact entire scanned line nothing white pixel
+A typical fax page pixel across replacing bit one number big saving
+The number take bit represent place scanned page consecutive pixel replaced number overall saving significant
+In fact fax machine would take time longer send page use compression
+Now know run length encoding work come compress black white image well uncompress image somebody else given
+Start making picture one zero
+Make sure rectangular row length
+You either draw paper prepare computer using fixed width font otherwise become really frustrating confusing
+In order make easier could start working want image grid paper math exercise book shading square represent black one leaving blank represent white one
+Once done could write zero one image
+Work compressed representation image using run length coding
+run length separated comma form explained
+Now give copy run length code original uncompressed representation friend classmate along explanation compressed
+Ask try draw image grid paper
+Once done check conversion original
+Imagining friend computer shown image using system representation compressed one computer decompressed another long standard agreed
+every line begin white pixel
+It important compression algorithm follow standard file compressed one computer decompressed another example song often follow standard downloaded played variety device
+As compressed representation image converted back original representation original representation compressed representation would give image read computer compression algorithm called
+none data lost compressing image result compression could undone exactly
+Not compression algorithm lossless though
+In type file particular photo sound video willing sacrifice little bit quality
+lose little data representing image allows u make file size lot smaller
+For downloading large file movie essential ensure file size big infeasible download
+These compression method called
+If data lost impossible convert file back exactly original form lossy compression used person viewing movie listening music may mind lower quality file smaller
+Later chapter investigate effect lossy compression algorithm image sound
+Interestingly turn compression algorithm case compressed version file larger uncompressed version
+Computer scientist even proven case meaning impossible anybody ever come lossless compression algorithm make possible file smaller
+In case issue though good lossless compression algorithm tend give best compression common pattern data worst compression one highly unlikely occur
+What image best compression
+image size small percentage original come
+This best case performance compression algorithm
+What worst compression
+Can find image actually compressed representation
+Don forget comma version used
+This worst case performance compression algorithm
+The best case image entirely white one number used per line
+The worst case every pixel alternating black white one number every pixel
+In fact case size compressed file likely little larger original one number likely take one bit store
+Real system represent data exactly discussed issue
+In worst case alternating black white pixel run length encoding method result file larger original
+As noted lossless compression method make least one file smaller must also file make larger mathematically possible method always make file smaller unless method lossy
+As trivial example suppose someone claim compression method convert file file
+How many different file
+There
+How many different file
+There
+Can see problem
+We got possible file might want compress way represent
+So identical representation ca decoded exactly
+Over year several fraud based claim lossless compression method compress every file given
+This true method lossy loses information lossless method must expand file
+It would nice file could compressed without loss could compress huge file apply compression compressed file make smaller repeating one byte one bit
+Unfortunately possible
+Images take lot space time picture stored computer compressed avoid wasting much space
+With lot image especially photograph need store image exactly originally contains way detail anyone see
+This lead considerable saving space especially detail missing kind people trouble perceiving
+This kind compression called lossy compression
+There situation image need stored exactly original medical scan high quality photograph processing case lossless method used image compressed
+using RAW format camera
+In data representation section looked size image file reduced using fewer bit describe colour pixel
+However image compression method JPEG take advantage pattern image reduce space needed represent without impacting image unnecessarily
+The following three image show difference reducing bit depth using specialised image compression system
+The left hand image original bit per pixel
+The middle image compressed one third original size using JPEG lossy version original difference unlikely perceptible
+The right hand one number colour reduced bit per pixel instead mean also stored third original size
+Even though lost many bit information removed much impact look
+This advantage JPEG remove information image much impact perceived quality
+Furthermore JPEG choose tradeoff quality file size
+Reducing number bit colour depth sufficiently crude really regard compression method low quality representation
+Image compression method like JPEG GIF PNG designed take advantage pattern image get good reduction file size without losing quality necessary
+For example following image show zoomed view pixel part detail around eye high quality image
+Notice colour adjacent pixel often similar even part picture lot detail
+For example pixel shown red box change gradually dark light
+encoding would work situation
+You could use variation specifies pixel colour say many following pixel colour although adjacent pixel nearly chance identical low would almost run identical colour
+But way take advantage gradually changing colour
+For pixel red box could generate approximate version colour specifying first last one getting computer calculate one assuming colour change gradually
+Instead storing pixel value needed yet someone viewing probably might notice difference
+This would ca reproduce original exactly would good enough lot purpose save lot space
+The process guessing colour pixel two known example
+A interpolation assumes value increase constant rate two given value example five pixel suppose first pixel blue colour value last one blue value linear interpolation would guess blue value one would save storing
+In practice complex approach used guess pixel linear interpolation give idea going
+The JPEG system widely used photo us sophisticated version idea
+Instead taking run pixel work block pixel
+And instead estimating value linear function us combination cosine wave
+A cosine wave form trig function often used calculating side triangle
+If plot cosine value degree get smooth curve going
+Variations plot used approximate value pixel going one colour another
+If add higher frequency cosine wave produce interesting shape
+In theory pattern pixel created adding together different cosine wave
+The following graph show value ranging degree
+JPEGs based idea add together lot sine cosine wave create waveform want
+Converting waveform block pixel sample music sum simple wave done using technique called widely used idea signal processing
+You experiment adding sine wave together generate shape using
+In spreadsheet yellow region first sheet allows choose sine wave add
+Try setting sine wave frequency time fundamental frequency respectively fundamental lowest frequency
+Now set amplitude equivalent volume level four respectively half previous one
+This produce following four sine wave When four wave added together interfere produce shape sharper transition In fact continue pattern four sine wave shape would become square wave one suddenly go maximum value suddenly minimum
+The one shown bumpy used sine wave describe
+This exactly going JPEG compress black white image
+The colour pixel go across image either black full intensity white JPEG approximate small number cosine wave basically property sine wave
+This give overshoot see image JPEG image come bright dark patch surrounding sudden change colour like You experiment different combination sine wave get different shape
+You may need four get good approximation shape want exactly tradeoff JPEG making
+There suggestion parameter second sheet spreadsheet
+Each block pixel JPEG image created adding together different amount pattern based cosine wave
+The wave represented visually pattern white black pixel shown image
+These particular wave known basis function block pixel created combining
+The basis function top left average colour block
+By adding increasing coefficient multiplied resultant block become darker
+The basis function become complex towards bottom right therefore used le commonly
+How often would image every pixel different color bottom right basis function
+To investigate basis function combined form pattern block pixel try puzzle
+Use interactive online So pixel block represented coefficient tell u much basis function use
+But help u save space compress image
+At moment still storing exactly amount data different way
+The name JPEG short Joint Photographic Experts Group committee formed create standard digital photograph could captured displayed different brand device
+Because file extension limited three character often seen extension
+The cosine wave used JPEG image based Discrete Cosine Transform
+The Discrete mean waveform digital opposite continuous value occur
+In JPEG wave x value block coded value limited range number binary integer rather value
+The advantage using DCT representation allows u separate low frequency change top left one high frequency change bottom right JPEG compression us advantage
+The human eye usually notice high frequency change image often discarded without affecting visual quality image
+The low frequency le varied basis function far important image
+JPEG compression us process called quantisation set insignificant basis function coefficient zero
+But decide insignificant
+Quantisation requires quantisation table number
+Each coefficient value divided corresponding value quantisation table rounded nearest integer
+This mean many coefficient become zero multiplied back quantisation table remain zero
+There optimal quantisation table every image many camera image processing company worked develop good quantisation table
+As result many kept secret
+Some company also developed software analyse image select appropriate quantisation table particular image
+For example image text high frequency detail important quantisation table lower value bottom right detail kept
+Of course also result image size remaining relatively large
+Lossy compression compromise
+The figure show image quantisation applied
+Before Quantisation After Quantisation Notice image look similar even though second one many zero coefficient
+The difference see barely visible image viewed original size
+Try Use interactive online We still number even many zero save space storing zero
+You notice zero bunched towards bottom right
+This mean list coefficient starting top left corner end many zero row
+Instead writing zero store fact zero using method encoding similar one discussed earlier chapter
+And finally number left converted bit using Huffman coding common value take le space vice versa
+All thing happen every time take photo save JPEG file happens every block pixel
+When display image software need reverse process adding basis function together block hundereds thousand block image
+An important issue arises JPEG represents image smoothly varying colour happens colour change suddenly
+In case lot value need stored lot cosine wave added together make sudden change colour else edge image become fuzzy
+You think cosine wave overshooting sudden change producing artifact like one following image edge messy
+The original sharp edge zoomed view JPEG version show edge gradual darker pixel occur white space looking bit like shadow echo
+For reason JPEG used photo natural image technique GIF PNG look another section work better artificial image like one
+General purpose compression method need lossless ca assume user wo mind data changed
+The widely used general purpose compression algorithm ZIP gzip rar based method called coding invented Jacob Ziv Abraham Lempel
+We look text file example
+The main idea coding sequence character often repeated file example sequence character image appears often chapter instead storing repeated occurrence replace reference last occurred
+As long reference smaller phrase replaced save space
+Typically system based approach used reduce text file little quarter original size almost good method known compressing text
+The following interactive allows explore idea
+The empty box replaced reference text occurring earlier
+You click box see reference type referenced character decode text
+What happens reference pointing another reference
+As long decode first last information available need
+View link online You also enter text clicking Text tab
+You could paste text see many character replaced reference
+The reference actually two number first say many character count back previous phrase start second say long referenced phrase
+Each reference typically take space one two character system make saving long two character replaced
+The option interactive allow require replaced length least two avoid replacing single character reference
+Of course character count letter alphabet system also refer back white space word
+In fact common sequence thing like full stop followed space
+This approach also work well black white image since sequence like white pixel likely occurred
+Here bit example earlier chapter paste interactive see many pointer needed represent
+In fact essentially happens GIF PNG image pixel value compressed using algorithm work well lot consecutive pixel colour
+But work poorly photograph pixel pattern unlikely repeated
+The method described named compression Jacob Ziv Abraham Lempel two computer scientist invented
+Unfortunately someone mixed order name wrote article called LZ compression instead ZL compression
+So many people copied mistake Ziv Lempel method usually called LZ compression
+One widely used method compressing music actually video compression standard called MPEG Moving Picture Experts Group
+The name self explanatory mp stand moving picture version file used music
+The full name standard come MPEG missing EG stand expert group consortium company researcher got together agree standard people could easily play video different brand equipment example could play DVD brand DVD player
+The first version standard called three method storing sound track layer
+One method layer became popular compressing music abbreviated
+The standard used much video example DVDs TV mainly use remains important audio coding
+The next MPEG version redundant became standard
+offer higher quality video commonly used digital video file streaming medium disc broadcast TV
+The AAC audio compression method used Apple among others also standard
+On computer Part commonly used video often abbreviated
+So stand layer stand part
+Most audio compression method use similar approach method although offer better quality amount storage le storage quality
+We wo go exactly work general idea break sound band different frequency represent band adding together value simple formula sum cosine wave precise
+There also
+Other audio compression system might come across include AAC ALAC Ogg Vorbis WMA
+Each various advantage others compatible open others
+The main question compressed audio small file made good quality human ear
+There also question long take encode file might affect useful system
+The tradeoff quality size audio file depend situation jogging listening music quality may matter much good reduce space available store
+On hand someone listening recording home good sound system might mind large device store music long quality high
+To evaluate audio compression choose variety recording high quality original typically CD using uncompressed WAV AIFF file
+Choose different style music kind audio speech perhaps even create recording totally silent
+Now convert recording different audio format
+One system free download Apple iTunes used rip CDs variety format give choice setting quality size
+A lot audio system able convert file plugins conversion
+Compress recording using variety method making sure compressed file created high quality original
+Make table showing long took process recording size compressed file evaluation quality sound compared original
+Discuss tradeoff involved need much bigger file store good quality sound
+Is limit small make file still sounding ok
+Do method work better speech others
+Does minute recording silence take space minute recording silence
+Does minute recording music use space minute silence
+The detail compression system work glossed chapter concerned file size speed method work
+Most compression system variation idea covered although one fundamental method mentioned Huffman coding turn useful final stage method often one first topic mentioned textbook discussing compression brief
+A closely related system Arithmetic coding
+Also video compression omitted even though compressing video save space kind compression
+Most video compression based MPEG standard Moving Pictures Experts Group
+There information work
+The method shown variation method
+Many popular lossless compression method based although many variation one called LZW also used lot
+Another compression method bzip based clever method called Transform
+Questions like compression achieved addressed field
+There
+Based theory seems English text ca compressed le original size best
+Images sound video get much better compression use lossy compression reproduce original data exactly
+Because textbook online easy u update
+Please use form form feedback tiny obvious suggestion broad observation
+We love getting positive feedback help u get support work
+You directly
+Funding guide generously provided sponsor Produced New Zealand
+The Computer Science Field Guide us
+
+Data compression reduction number needed represent data
+Compressing data save storage capacity speed file transfer decrease cost storage hardware network
+Access article Data Deduplication Essential Guide downloading comprehensive PDF version access expert content one resource
+You forgot provide Email Address
+This email address appear valid
+This email address already registered
+Please
+You exceeded maximum character limit
+Please provide Corporate Address
+By submitting Email address I confirm I read accepted Terms Use By submitting personal information agree TechTarget may contact regarding relevant content product special offer
+You also agree personal information may transferred processed United States read agree
+Compression performed program us formula determine shrink size data
+For instance algorithm may represent string bit smaller string using dictionary conversion formula may insert reference pointer string program already seen
+Text compression simple removing unneeded inserting single repeat character indicate string repeated character substituting smaller bit string frequently occurring bit string
+Data compression reduce text file significantly higher percentage original size
+For data transmission compression performed data content entire transmission unit including data
+When information sent received via internet larger file either singly others part file may transmitted ZIP compressed format
+Data compression dramatically decrease amount storage file take
+For example compression ratio megabyte file take MB space
+As result compression administrator spend le money le time storage
+Compression optimizes backup storage performance recently shown
+Compression important method data reduction data continues grow exponentially
+Virtually type file compressed important follow best practice choosing one compress
+For example file may already come compressed compressing file would significant impact
+Compressing data process
+Lossless compression enables file original state without loss single bit data file uncompressed
+Lossless compression typical approach executables well text spreadsheet file loss word number would change information
+Lossy compression permanently eliminates bit data redundant unimportant imperceptible
+Lossy compression useful graphic audio video image removal data bit little discernible effect representation content
+Graphics lossy lossless
+Graphic image file format typically designed compress information since file tend large
+JPEG image file format support lossy image compression
+Formats GIF PNG use lossless compression
+Compression often compared two technique operate differently
+Deduplication type compression look redundant chunk data across storage replaces duplicate chunk pointer original
+Data compression algorithm reduce size bit string data stream far smaller scope generally remembers last megabyte le data
+Taneja Group analyst Mike Matchett discussed benefit compression deduplication two differ
+deduplication eliminates redundant file replaces pointing original file
+deduplication identifies duplicate data subfile level
+The system save unique instance block us algorithm process generates unique identifier store index
+Deduplication typically look larger chunk duplicate data compression system deduplicate using fixed chunk
+Deduplication effective environment high degree redundant data storage backup system
+Data compression tends effective deduplication reducing size unique information image audio video database executable file
+Many storage system support compression deduplication
+Compression often used data accessed much process intensive slow system
+Administrators though seamlessly integrate compression backup system
+Backup redundant type workload process capture file frequently
+An organization performs full backup often close data backup backup
+There major benefit compressing data prior backup The main advantage compression reduction storage hardware data transmission time communication bandwidth resulting cost saving
+A compressed file requires le storage capacity uncompressed file use compression lead significant decrease expense disk
+A compressed file also requires le time transfer consumes le network bandwidth uncompressed file
+The main disadvantage data compression performance impact resulting use resource compress data perform decompression
+Many vendor designed system try minimize impact calculation associated compression
+If compression run data written disk system may offload compression preserve system resource
+For instance IBM us separate card handle compression enterprise storage system
+If data compressed written disk compression may run background reduce performance impact
+Although compression reduce response time still consumes memory processor cycle affect overall number storage system handle
+Also data initially must written disk uncompressed form physical storage saving great inline compression
+File system compression take fairly straightforward approach reducing storage footprint data transparently compressing file written
+Many popular Linux file system including ZFS btrfs Microsoft NTFS compression option
+The server compress chunk data file writes smaller fragment storage
+involves relatively small latency expand fragment writing add substantial load server compression usually recommended data volatile
+File system compression weaken performance deployed selectively file accessed frequently
+Historically expensive hard drive early computer data compression software DiskDoubler SuperStor Pro popular helped establish mainstream file system compression
+Storage administrator also apply technique using compression deduplication improved data reduction
+Compression built wide range technology including storage system database operating system software application used business enterprise organization
+Compressing data also common consumer device laptop PCs mobile phone
+Many system device perform compression transparently give user option turn compression
+It performed file piece data subsequent compression result little additional compression may even increase size file slight degree depending data compression algorithm
+popular Windows program compress file package archive
+Archive file format support compression include ZIP
+The GZIP format see widespread use compressing individual file
+Other vendor offer compression include Dell EMC XtremIO array Kaminario array RainStor data compression software
+Data differencing general term comparing content two data object
+In context compression involves repetitively searching target file find similar block replacing reference library object
+This process repeat find additional duplicate object
+Data differencing result many compressed file one element library representing duplicated object
+In virtual desktop technique feature compression ratio much
+The process often closely aligned deduplication look identical file object rather within content object
+Data differencing sometimes referred deduplication
+Find content member offer asks By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+The debate still rage whether array make hybrid array obsolete cost matter SAS SATA battle enterprise data storage show hard drive SAS interface trending cheaper MLC SSDs outnumber SLC Latest TechTarget cloud survey find cloud backup cloud file sync share disaster recovery archiving popular
+Cloud storage implementation user range backup DR tiering
+We reveal cloud storage application Assistant Editor Rachel Kossman tweet link content well analysis industry expert
+Interact let u Ransomware recovery complex task
+Make sure right thing protecting unstructured data testing
+The top disaster recovery tip tackle wide range important area including ransomware protection To thrive disaster recovery provider must keep time
+Converging backup DR fighting ransomware properly WannaCry Amazon bucket put greater focus data protection security
+Converged appliance Veeam CEO shift We compiled top five piece data protection backup advice given copy data management product Veeam add physical cloud capability Availability Suite update
+The backup recovery vendor also accelerating All Rights Reserved
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+Uncompressing decompressing act expanding compression file back original form
+Software download Internet often come compressed package uncompress click
+You also uncompress file using popular tool PKZIP DOS operating system WinZip Windows MacZip Macintosh
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+Image compression minimizing size byte graphic file without degrading quality image unacceptable level
+The reduction file size allows image stored given amount disk memory space
+It also reduces time required image sent Internet downloaded Web page
+There several different way image file compressed
+For Internet use two common compressed graphic image format format format
+The JPEG method often used photograph GIF method commonly used line art image geometric shape relatively simple
+Other technique image compression include use These method gained widespread acceptance use Internet writing
+However method offer promise offer higher compression ratio JPEG GIF method type image
+Another new method may time replace GIF format format
+A text file program compressed without introduction error certain extent
+This called lossless
+Beyond point error introduced
+In text program file crucial compression lossless single error seriously damage meaning text file cause program run
+In image compression small loss quality usually noticeable
+There critical point compression work perfectly beyond becomes impossible
+When tolerance loss compression factor greater loss tolerance
+For reason graphic image compressed text file program
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n trailer startxref EOF obj stream xÚb
+Í ÅÀøU L endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream Ã ÎÅi avrÞ EÇ aÆä ú Ù SUSÐEe
+
+approach solving
+Lateral thinking made popular
+This thinking technique applied generate creative idea solve problem
+Similarly applying technique problem become much easier arrive computationally inexpensive easy implement efficient innovative unconventional solution
+The traditional conventional approach solving computing problem either build mathematical model structure
+For example used many approach computationally expensive sometimes may arrive poor solution
+It problem like lateral computing useful form better solution
+A simple problem truck backup used illustrating
+This one difficult task traditional computing technique efficiently solved use lateral computing technique
+sometimes arrives novel solution particular computing problem using model living being human ant honeybee solve problem pure crystal formed annealing evolution living being quantum mechanic etc
+position analysis used illustrate logical thinking
+The following board position describes chess problem solved two move
+The white several option make move black
+The move immediately provide material advantage white
+There similar move capture piece provide immediate material advantage white
+But knight move provide material advantage provides solution checkmate black two move
+This example illustrates use logical thinking
+The logical thinking chess progress evaluating immediate material gain move
+This result solution require number move failure checkmate
+However obvious move knight result powerful checkmate
+Even though move look logical solution checkmate problem
+A might miss good opportunity search find move
+Several attempt made build powerful chess computer history
+But chess computer defeated
+The attempt use prolog represent knowledge build artificial intelligent system provided anticipated thrust solving interesting problem
+The lack generalization learning capability system exponential growth rule made approach unpopular
+An example illustrate failure system following flawed proof This would imply wrong result
+While taking step considering sign missed
+This resulted absurd outcome
+A system even missed simple rule database may yield unacceptable output
+Another interesting mathematical proof gone wrong follows If get absurd result technique creative thinking solving problem
+The brain center thinking information system
+It tends create pattern traditional thinking process us solve problem
+The lateral thinking technique proposes escape patterning arrive better solution new idea
+Provocative use information processing basic underlying principle lateral thinking The PO something characterizes lateral thinking
+Its function generate new idea provocation providing escape route old idea
+It creates provisional arrangement information
+contrast traditional
+Water logic boundary depends circumstance condition rock logic hard boundary
+Water logic someways resembles
+Lateral computing provocative use similar
+This explained use evolutionary computing useful technique
+The evolution proceeds change selection
+While provides change selection
+The random mutation work provocative information processing provides new avenue generating better solution computing problem
+Lateral computing take analogy example Differentiating factor lateral computing It hard draw clear boundary conventional lateral computing
+Over period time unconventional computing technique become integral part mainstream computing
+So always overlap conventional lateral computing
+It tough task classifying computing technique conventional lateral computing technique shown figure
+The boundary fuzzy one may approach fuzzy set
+Lateral computing computing technique use unconventional computing approach
+Hence Lateral computing includes technique use hybrid computing
+The degree membership lateral computing technique greater fuzzy set unconventional computing technique
+The following brings important differentiator lateral computing
+focus improving performance use several computing element processing element
+The computing speed improved using several computing element
+Parallel computing extension conventional
+However lateral computing problem solved using unconventional information processing whether using sequential parallel computing
+There several computing technique fit Lateral computing paradigm
+Here brief description Lateral Computing technique SI property system whereby collective behavior unsophisticated agent interacting locally environment cause coherent functional global pattern emerge
+SI provides basis possible explore collective distributed problem solving without centralized control provision global model
+One interesting swarm intelligent technique Agents encapsulated computer system situated environment capable flexible autonomous action environment order meet design objective
+Agents considered independent reactive responding event initiating action volition social communicative
+Agents vary ability static mobile may may intelligent
+Each agent may task role
+Agents system used model complex distributed process
+Such agent invariably need interact one another order manage
+These interaction involve agent cooperating negotiating coordinating one another
+system computer program try simulate various complex phenomenon via virtual agent represent component business system
+The behavior agent programmed rule realistically depict business conducted
+As widely varied individual agent interact model show collective behavior govern performance entire system instance emergence successful product optimal schedule
+These simulation powerful strategic tool scenario analysis manager change agent characteristic rule impact change easily seen model output By computational grid infrastructure provides dependable consistent pervasive inexpensive access computational capability
+The application The governs heart rate body temperature thus freeing conscious brain burden dealing many yet vital function
+The essence intent free system administrator detail system operation maintenance
+Four aspect autonomic computing This grand challenge promoted
+use photon rather conventional electron computing
+There quite instance optical computer successful use
+The conventional logic gate use use electron transporting signal
+In case optical computer photon light beam used computation
+There numerous advantage using optical device computing immunity interference large bandwidth etc
+us strand DNA encode instance problem manipulate using technique commonly available molecular biology laboratory order simulate operation select solution problem exists
+Since DNA molecule also code instead made sequence four base pair predictable manner many scientist thought possibility creating molecular computer
+These computer rely much faster reaction DNA nucleotide binding complement method hold enormous potential creating new generation computer would billion time faster today fastest PC
+DNA computing heralded first example true even start new era forge unprecedented link computer science life science
+Example application DNA computing solution known NP complete one
+The number required lab operation using DNA grows linearly number vertex graph
+Molecular algorithm reported solves cryptographic problem number step
+As known factoring large number relevant problem many cryptographic application
+In fundamental unit information called quantum bit binary rather nature
+This qubit property arises direct consequence adherence law quantum mechanic differ radically law classical physic
+A qubit exist state corresponding logical state classical bit also state corresponding blend classical state
+In word qubit exist zero one simultaneously numerical coefficient representing probability state
+A quantum computer manipulates qubits executing series unitary transformation acting single qubit pair qubits
+In applying gate succession quantum computer perform complicated unitary transformation set qubits initial state
+FPGA making possible build truly
+The computer architecture transformed fly reconfiguration FPGA circuitry
+The optimal matching architecture algorithm improves performance reconfigurable computer
+The key feature hardware performance software flexibility
+For several application fingerprint matching DNA sequence comparison reconfigurable computer shown perform several order magnitude better conventional computer
+The algorithm designed looking pure crystal form heated system cooled slowly
+The computing problem redesigned simulated annealing exercise solution arrived
+The working principle simulated annealing borrowed metallurgy piece metal heated atom given thermal agitation metal left cool slowly
+The slow regular cooling metal allows atom slide progressively stable minimal energy position
+Rapid cooling would frozen whatever position happened time
+The resulting structure metal stronger stable
+By simulating process annealing inside computer program possible find answer difficult complex problem
+Instead minimizing energy block metal maximizing strength program minimizes maximizes objective relevant problem hand
+One main component approach problem human information processing model
+The Soft Computing technique comprises Fuzzy logic machine learning computing
+Instead solving problem creating equation model biological neural network analogy used solving problem
+The neural network trained like human brain solve given problem
+This approach become highly successful solving problem
+The GA resembles natural evolution provide universal optimization
+Genetic algorithm start population chromosome represent various solution
+The solution evaluated using selection process determines solution used competition process
+These algorithm highly successful solving search optimization problem
+The new solution created using evolutionary principle mutation crossover
+based fuzzy set concept proposed
+The degree membership concept central fuzzy set
+The fuzzy set differ crisp set since allow element belong set degree degree membership
+This approach find good application control problem
+The Fuzzy logic found enormous application already found big market presence consumer electronics washing machine microwave mobile phone Televisions Camcoders etc
+Probabilistic computing engine
+use probabilistic graphical model
+Such computational technique referred randomization yielding probabilistic algorithm
+When interpreted physical phenomenon classical statistical thermodynamics technique lead energy saving proportional probability p primitive computational step guaranteed correct equivalently probability error
+Chaotic Computing based chaos theory
+object displaying different scale
+Fractals generation involves small iterative algorithm
+The fractal dimension greater topological dimension
+The length fractal infinite size measured
+It described iterative algorithm unlike Euclidean shape given simple formula
+There several type fractal popular
+Fractals found application image processing image compression music generation computer game etc
+Mandelbrot set fractal named creator
+Unlike fractal even though Mandelbrot set magnified scale small scale detail identical whole
+Mandelbrot set infinitely complex
+But process generating based extremely simple equation
+The Mandelbrot set collection complex number
+The number belong computed iteratively testing Mandelbrot equation
+constant
+If equation converges chosen belongs
+Mandelbrot equation A make arbitrary choice execution
+This allows saving execution time beginning program
+The disadvantage method possibility incorrect solution occur
+A randomized algorithm high probability returning correct answer
+The two category randomized algorithm Consider algorithm find element array
+A deterministic approach would choose pivot element near median list partition list around element
+The randomized approach problem would choose pivot random thus saving time beginning process
+Like approximation algorithm used quickly solve tough problem
+An advantage approximation algorithm however randomized algorithm eventually yield exact answer executed enough time Human learn new skill
+Similarly algorithm provide capability generalize training data
+There two class Machine Learning ML One well known machine learning technique Back Propagation Algorithm
+This mimic human learn example
+The training patter repeatedly presented network
+The error back propagated network weight adjusted using gradient descent
+The network converges several hundred iterative computation
+This another class highly successful machine learning technique successfully applied task text classification speaker recognition image recognition etc
+There several successful application technique
+Here small set application illustrates lateral computing Above review technique
+based approach applies unconventional technique solve computing problem
+While problem solved conventional technique problem require
+provides advantage computational efficiency low cost implementation better solution compared conventional computing several problem
+The successfully tackle class problem exploiting tolerance imprecision uncertainty partial truth achieve tractability robustness low solution cost
+technique use human like information processing model classified Soft Computing literature
+valuable solving numerous computing problem whose mathematical model unavailable
+They provide way developing innovative solution resulting smart system Very High Machine IQ VHMIQ
+This article traced transition
+Then several technique described followed application
+building new generation artificial intelligence based unconventional processing
+
+Get grade money back bullet bullet Delivered time Get grade money back bullet bullet Delivered time Trusted Students Since This essay submitted student
+This example work written professional essay writer
+Any opinion finding conclusion recommendation expressed material author necessarily reflect view UK Essays
+Data compression come age last year
+Both quantity quality body literature field provide ample proof
+There many known method data compression
+They based different idea suitable different type data produce different result based principle namely compress data removing redundancy original data source file
+This report discus different type data compression advantage data compression procedure data compression
+Data compression important age amount data transferred within certain network
+It make transfer data relatively easy
+This section explains compare lossy lossless compression technique
+Lossless data compression make use data compression algorithm allows exact original data reconstructed compressed data
+This contrasted lossy data compression allow exact original data reconstructed compressed data
+Lossless data compression used many application
+Lossless compression used vital original decompressed data identical assumption made whether certain deviation uncritical
+Most lossless compression program implement two kind algorithm one generates statistical model input data another map input data bit string using model way probable
+frequently encountered data produce shorter output improbable data
+Often former algorithm named second implied common use standardization etc
+unspecified
+A lossy data compression technique one compressing data decompression retrieves data may different original close enough useful way
+There two basic lossy compression scheme First lossy transform codecs sample picture sound taken chopped small segment transformed new basis space quantized
+The resulting quantized value entropy coded
+Second lossy predictive codecs previous subsequent decoded data used predict current sound sample image frame
+In system two method used transform codecs used compress error signal generated predictive stage
+The advantage lossy method lossless method case lossy method produce much smaller compressed file known lossless method still meeting requirement application
+Lossless compression scheme reversible original data reconstructed lossy scheme accept loss data order achieve higher compression
+In practice lossy data compression also come point compressing work although extremely lossy algorithm example always remove last byte file always compress file point empty
+Lossless lossy data compression two method use compressed data
+Each technique individual used
+A compression two technique summarised follow Lossless technique keep source compression change original source expected lossy technique close origin
+Lossless technique reversible process mean original data reconstructed
+However lossy technique irreversible due lost data extraction
+Lossless technique produce larger compressed file compared lossy technique
+Lossy technique mostly used image sound
+Data compression known storing data way requires fewer space typical
+Generally saving space reduction data size
+This section explains Huffman coding LZW compression technique
+Huffman coding entropy encoding method used lossless data compression
+The term mean use code table encoding source symbol character file code table derived particular way based estimated probability occurrence possible value source symbol
+It developed David Huffman student MIT published paper A Method Construction Codes
+Huffman coding implement special method choosing representation symbol resulting prefix code sometimes called code bit string representing particular symbol never prefix bit string representing symbol express common source symbol using shorter string bit used le common source symbol
+The technique work creating binary tree node
+These stored regular array size depends number symbol A node either leaf node internal node
+Initially node leaf node contain symbol weight frequency appearance symbol optionally link parent node make easy read code reverse starting leaf node
+Internal node contain symbol weight link two child node optional link parent node
+The process practically start leaf node containing probability symbol represent new node whose child node smallest probability created new node probability equal sum child probability
+With node combined one node thus considering anymore new node considered procedure repeated one node remains Huffman tree
+The simplest construction algorithm one priority queue node lowest probability given highest priority
+Create leaf node symbol add priority queue
+
+While one node queue Remove two node highest priority lowest probability queue
+Create new internal node two node child probability equal sum two node probability
+Add new node queue
+
+The remaining node root node tree complete
+Figure
+LZW data compression algorithm created Abraham Lempel Jacob Ziv Terry Welch
+It published Welch development algorithm published Lempel Ziv
+The algorithm designed fast implement usually optimal performs limited analysis data
+LZW also called substitutional encoding algorithm
+The algorithm normally build data dictionary also called translation table string table data occurring uncompressed data stream
+Patterns data substring identified data stream matched entry dictionary
+If substring present dictionary code phrase created based data content substring stored dictionary
+The phrase written compressed output stream
+When reoccurrence substring found data phrase substring already stored dictionary written output
+Because phrase value physical size smaller substring represents data compression achieved
+Decoding LZW data reverse encoding
+The decompressor read code stream add code data dictionary already
+The code translated string represents written uncompressed output stream
+LZW go beyond compressor necessary keep dictionary decode LZW data stream
+This save quite bit space storing data
+TIFF among file format applies method graphic file
+In TIFF pixel data packed byte presented LZW LZW source byte might pixel value part pixel value several pixel value depending image bit depth number colour channel
+GIF requires LZW input symbol pixel value
+Because GIF allows deep image LZW input symbol GIF LZW dictionary initialized accordingly
+It important pixel might packed storage LZW deal sequence symbol
+The TIFF approach work well pixel packing pixel byte creates byte sequence match original pixel sequence pattern pixel obscured
+If pixel boundary byte boundary agree two pixel per byte one pixel every two byte TIFF method work well
+The GIF approach work better bit depth difficult extend eight bit per pixel LZW dictionary must become large achieve useful compression large input alphabet
+If code implemented encoder decoder must careful change width point encoded data disagree boundary individual code fall stream
+In conclusion fact one ca hope compress everything compression algorithm must assume bias input message input likely others
+always unbalanced probability distribution possible message
+Most compression algorithm base bias structure message assumption repeated character likely random character large white patch occur typical image
+Compression therefore probability
+Take look essay writing service Our Dissertation Writing service help everything full dissertation individual chapter
+Our Marking Service help pick area work need improvement
+Fully referenced delivered time
+Get extra support require
+If original writer essay longer wish essay published UK Essays website please click link request removal Copyright UK Essays trading name All Answers Ltd company registered England Wales
+Company Registration No
+VAT Registration No
+Registered Data Controller No
+Registered office Venture House Cross Street Arnold Nottingham Nottinghamshire
+
+What would like
+Would like merge question
+Would like make primary merge question
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+Supervisor CONTRIBUTIONS What would like
+What would like
+

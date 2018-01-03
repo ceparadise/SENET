@@ -1,0 +1,455 @@
+In ADT whose instance collection object
+In word store object organized way follows specific access rule
+The size container depends number object element contains
+Underlying inherited implementation various container type may vary size complexity provide flexibility choosing right implementation given scenario
+Containers characterized following three property Container class expected implement method following Containers sometimes implemented conjunction
+Containers may classified either
+container store object independently
+Objects may accessed directly
+An associative container us map dictionary composed pair key appears container
+The key used find value object stored container
+used programming language class template
+also use container special group widget
+Apart graphical property type behavior container class keep list child allow adding removing retrieving among child
+
+In extensible creating providing initial value state implementation behavior member function
+In many language class name used name class template name default class creates object object generated class distinct concept easily conflated
+When object created constructor class resulting object called class member variable specific object called contrast shared across class
+In language class feature new class declared runtime language class generally object typically type similar
+In language class creates class called
+In casual use people often refer class object narrowly speaking object interface namely type member variable signature method property satisfy
+At time class implementation specifically implementation method create object given type given implementation
+In term type theory class collection type
+Different concrete class produce object abstract type depending type system example type might implemented two class fast small stack scale poorly scale well high overhead small stack
+Similarly given class may several different constructor
+Types generally represent noun person place thing something class represents implementation
+For example type might represent property functionality banana general class would represent way producing banana say banana supplier data structure function represent draw banana video game
+The class could produce particular banana instance class would object type
+Often single implementation type given case class name often identical type name
+Classes composed structural behavioral constituent
+Programming language include class programming construct offer support various feature syntax required use feature varies greatly one programming language another
+A class contains field description
+These usually field type name associated state variable program run time state variable either belong class specific instance class
+In language structure defined class determines layout memory used instance
+Other implementation possible example object use associative container
+Some programming language support specification part definition class enforce type system
+state necessary able enforce invariant class
+The behavior class instance defined using
+Methods ability operate object class
+These operation may alter state object simply provide way accessing
+Many kind method exist support varies across language
+Some type method created called programmer code special constructor destructors conversion created called code
+A language may also allow programmer define call special method
+Every class interface providing behavior
+Structure consists data state behavior consists code specifies method implemented
+There distinction definition interface implementation interface however line blurred many programming language class declaration define implement interface
+Some language however provide feature separate interface implementation
+For example define interface without providing implementation
+Languages support class inheritance also allow class inherit interface class derived
+In language support interface class considered set public member class including method attribute via implicit private member internal data structure intended depended external code thus part interface
+programming methodology dictate operation interface class independent
+It result layered design client interface use method declared interface
+An interface place requirement client invoke operation one interface particular order
+This approach benefit client code assume operation interface available use whenever client access object
+The button front television set interface electrical wiring side plastic casing
+You press power button toggle television
+In example particular television instance method represented button button together comprise interface
+Other television set model would interface
+In common form interface specification group related method without associated implementation method
+A television set also myriad size whether support color together comprise structure
+A class represents full description television including attribute structure button interface
+Getting total number television manufactured could television class
+This method clearly associated class yet outside domain individual instance class
+Another example would static method find particular instance set television object
+The following common set Although many language support access specifier semantics may differ
+design us access specifier conjunction careful design public method implementation enforce class state object
+A common usage access specifier separate internal data class interface internal structure made private public used inspect alter private data
+Access specifier necessarily control even private member may visible client external code
+In language inaccessible visible member may referred example pointer returned member function attempt use referring name member client code prevented type checker
+The various programming language enforce member accessibility visibility various degree depending language compilation policy enforced either
+For example language allow client code access private data class compile
+In language private method visible accessible interface however may made invisible explicitly declaring fully abstract class represent interface class
+Some language feature accessibility scheme In addition design standalone class programming language may support advanced class design based upon relationship class
+The relationship design capability commonly provided
+Classes composed class thereby establishing compositional relationship enclosing class embedded class
+Compositional relationship class also commonly known relationship
+For example class Car could composed contain class Engine
+Therefore Car Engine
+One aspect composition containment enclosure component instance instance
+If enclosing object contains component instance value component enclosing object similar
+If component contained reference may similar lifetime
+For example This class instance object array object
+Classes one existing class thereby establishing hierarchical relationship class derived class
+The relationship derived class class commonly known relationship
+For example class could derived class
+Therefore Button Control
+Structural behavioral member parent class child class
+Derived class define additional structural member data field behavioral member method addition therefore superclass
+Also derived class inherited method language allows
+Not language support multiple inheritance
+For example Java allows class implement multiple interface inherit one class
+If multiple inheritance allowed hierarchy DAG short otherwise
+The hierarchy class node inheritance relationship link
+Classes level likely class different level
+The level hierarchy called
+Example Simplified code iPhone SDK In example UITableView UIScrollView UIView UIResponder NSObject
+Conceptually superclass subclass
+For example common class hierarchy would involve superclass would subclass
+These set theory well square rectangle rectangle square
+A common conceptual error mistake relation subclass
+For example car truck kind vehicle would appropriate model subclass vehicle class
+However would error model component part car subclass relation
+For example car composed engine body would appropriate model engine body subclass car
+In modeling kind relation typically modeled object property
+In example Car class would property called
+would typed hold collection object instance
+Object modeling language UML include capability model various aspect part kind relation
+Data cardinality object constraint input output value etc
+This information utilized developer tool generate additional code beside basic data definition object
+Things error checking get set method
+One important question modeling implementing system object class whether class one superclass
+In real world actual set would rare find set intersect one set
+However system Flavors CLOS provide capability one parent run time introduces complexity many community consider antithetical goal using object class first place
+Understanding class responsible handling message get complex dealing one superclass
+If used carelessly feature introduce system complexity ambiguity class designed avoid
+Most modern language Smalltalk Java require single inheritance run time
+For language multiple inheritance may useful modeling implementation
+However application object multiple superclass
+The volatility Internet requires level flexibility technology standard designed support
+A similar issue whether class hierarchy modified run time
+Languages Flavors CLOS Smalltalk support feature part
+Since class object possible dynamically alter structure sending appropriate message
+Other language focus strong typing Java allow class hierarchy modified run time
+Semantic web object capability run time change class
+The rational similar justification allowing multiple superclass Internet dynamic flexible dynamic change hierarchy required manage volatility
+Although language commonly assumed support inheritance inheritance intrinsic aspect concept class
+Some language often referred support class yet support inheritance
+Examples language include earlier version
+In two class represents collaboration class corresponding instance
+Associations direction example association two class indicates class aware relationship
+Associations may labeled according name purpose
+An association role given end association describes role corresponding class
+For example subscriber role describes way instance class Person participate association class Magazine
+Also Magazine subscribed magazine role association
+Association role multiplicity describes many instance correspond instance class association
+Common multiplicity specifies number instance
+There many category class overlap
+In language support inheritance ABC class instantiated either labeled abstract simply specifies
+An abstract class may provide implementation method may also specify virtual method via implemented direct indirect descendant abstract class
+Before class derived abstract class instantiated abstract method parent class must implemented class derivation chain
+Most programming language allow programmer specify class considered abstract allow instantiated
+For example keyword used
+In abstract class class least one abstract method given appropriate syntax language pure virtual function parlance
+A class consisting virtual method called Pure Abstract Base Class also known user language
+Other language notably Java C support variant abstract class called via keyword language
+In language allowed class implement multiple interface
+Such class contain abstract publicly accessible method
+A class opposed abstract class
+In language class declared global scope
+There various type class
+An class defined within another class
+The relationship inner class containing class also treated another type class association
+An inner class typically neither associated instance enclosing class instantiated along enclosing class
+Depending language may may possible refer class outside enclosing class
+A related concept also known generalization concept inner class
+example language support inner class inner type via declaration
+Another type class defined within procedure function
+This limit reference class name within scope class declared
+Depending semantic rule language may additional restriction local class compared one
+One common restriction disallow local class method access local variable enclosing function
+For example local class may refer static variable declared within enclosing function may access function automatic variable
+class whose instance class
+A metaclass describes common structure collection class implement describe particular kind class
+Metaclasses often used describe
+In language class also object thus class instance unique metaclass built language
+The CLOS provides MOPs implement class metaclasses
+class allow programmer design class hierarchy class level hierarchy derivation prohibited
+A class may also designated preventing formation hierarchy
+Contrast class imply encourage require derivation order used
+A class implicitly
+A class created declaring class C Java PHP
+For example Java class designated
+class may allow compiler compiled language perform optimization available subclassable class
+Some language special support though language multiple inheritance mixin simply class represent relationship
+Mixins typically used add method multiple class example class might provide method called included class share common parent
+In language supporting feature class whose definition may split multiple piece within single file across multiple file
+The piece merged making compiler output class
+The primary motivation introduction partial class facilitate implementation
+It otherwise challenge compromise develop code generator manage generated code interleaved within code
+Using partial class code generator process separate file partial class within file thus alleviated intricately interjecting generated code via extensive parsing increasing compiler efficiency eliminating potential risk corrupting developer code
+In simple implementation partial class compiler perform phase unifies part partial class
+Then compilation proceed usual
+Other benefit effect partial class feature include Partial class existed name considerable time
+With arrival introduced partial class supported
+also support partial class
+This simple example written show part class defined two different file
+When compiled result two file written one like In partial class also known may even spread multiple library executables like example In Foundation header file In library separate binary Foundation framework header file And app yet another separate binary file source code file The dispatcher find method called NSData instance invoke correctly
+allow programmer group together field method accessible runtime without instance class
+Indeed instantiation prohibited kind class
+For example C class marked static instantiated static member field method may
+An class bound name identifier upon definition
+This analogous named versus
+The benefit organizing software object class fall three category Object class facilitate rapid development lessen semantic gap code user
+System analyst talk developer user using essentially vocabulary talking account customer bill etc
+Object class often facilitate rapid development environment come powerful debugging testing tool
+Instances class inspected run time verify system performing expected
+Also rather get dump core memory environment interpreted debugging capability developer analyze exactly program error occurred see method called argument argument
+Object class facilitate ease maintenance via encapsulation
+When developer need change behavior object localize change object component part
+This reduces potential unwanted side effect maintenance enhancement
+Software also major benefit using Object class
+Classes facilitate via inheritance interface
+When new behavior required often achieved creating new class class inherit default behavior data superclass tailor aspect behavior data accordingly
+via interface also known method occurs another object want invoke rather create new kind object class
+This method remove many common error make way software one program code another
+These benefit come cost course
+One serious obstacle using object class performance
+Interpreted environment support language Smalltalk CLOS provided rapid development resulting code nearly fast could achieved procedural language This partly addressed development language interpreted Java
+Also due processing power computer increased point efficient code critical system past
+Still matter well designed language always inevitable bit required extra overhead create class rather use procedural code circumstance especially performance memory required optimal using object class may best approach
+Also getting benefit object class requires used appropriately requires training
+Without proper training developer may simply code procedural program environment end worst world
+As data type class usually considered construct
+A language may also support represent information class even represent metadata provides access facility ability manipulate data structure format
+Many language distinguish kind class class basis information needed
+Some dynamic language make strict distinction construct therefore may distinguish metaobjects class
+For example Human representing class Person instance class Person created using facility Human
+
+In grouping variable number data item possibly zero shared significance problem solved need operated upon together controlled fashion
+Generally data item type language supporting inheritance derived common ancestor type
+A collection concept applicable prescribe specific implementation concrete though often conventional choice see discussion
+Examples collection include
+array table usually considered collection hold fixed number data item although commonly play role implementation collection
+array generally considered collection
+Many collection define particular linear ordering access one end
+The actual data structure implementing collection need example priority queue often implemented kind tree
+Important linear collection include In list order data item significant
+Duplicate data item permitted
+Examples operation list searching data item list determining location present removing data item list adding data item list specific location etc
+If principal operation list addition data item one end removal data item generally called
+If principal operation addition removal data item one end called
+In case data item maintained within collection order unless removed somewhere else special case list collection
+Other specialized operation list include sorting order data item great importance
+A stack LIFO data structure two principal operation add element top collection remove top element
+In priority queue track minimum maximum data item collection kept according ordering criterion order data item matter
+One may think priority queue list always keep minimum maximum head remaining element kept bag
+Other collection instead interpreted sort function given input collection yield output
+Important associative collection include A set interpreted specialized multiset turn specialized associative array case limiting possible set represented
+In set order data item matter undefined duplicate data item permitted
+Examples operation set addition removal data item searching data item set
+Some language support set directly
+In others set implemented dummy value key used representing set
+In multiset bag like set order data item matter case duplicate data item permitted
+Examples operation multisets addition removal data item determining many duplicate particular data item present multiset
+Multisets transformed list action sorting
+In associative array map dictionary lookup table like dictionary lookup like word provides like definition
+The value might reference compound data structure
+A usually efficient implementation thus data type often known hash
+In graph data item association one data item collection somewhat like tree without concept data item peer
+Examples operation graph traversal search explore association data item looking specific property
+Graphs frequently used model situation solve related problem
+An example creates graph mesh representation data network figure association switching node need broken turn tree thus prevent data going around loop
+In tree special kind graph data item associated number data item turn associated number data item frequently viewed
+Every data item root single parent root parent number child possibly zero
+Examples operation tree addition data item maintain specific property tree perform sorting etc
+traversal visit data item specific sequence
+Tree collection used naturally store hierarchical data presented manner menu system file directory data storage system
+Specialized tree used various algorithm
+For example us kind tree called
+As described collection various kind collection abstract concept
+There exists literature considerable confusion abstract concept computer science specific implementation various language kind language
+Assertions collection list set tree etc
+data structure abstract data type class must read mind
+Collections first foremost abstraction useful formulating solution computing problem
+Viewed light retain important link underlying mathematical concept lost focus implementation
+For example priority queue often implemented heap associative array often implemented hash table abstract type often referred preferred implementation heap hash though strictly correct
+Some collection may language list complex collection implemented library sometimes
+Examples include
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+In referenced
+In paradigm object refers particular object combination variable function data structure
+In management object table column association data database entity relating person age specific person
+An important distinction programming language difference language language
+A language usually considered includes basic capability object identity property attribute
+A language considered also capability inheritance
+Polymorphism refers ability overload name function multiple behavior based object passed
+Conventional message passing discriminates first object considers sending message object
+However OOP language CLOS enable discriminating first parameter function
+Inheritance ability subclass object class create new class subclass existing one inherits data constraint behavior parent also add new change one
+programming approach designing modular reusable software system
+The approach evolution good design practice go back beginning computer programming
+simply logical extension older technique
+An object abstract data type addition
+Rather structure program code data system integrates two using concept object
+An object state data behavior code
+Objects correspond thing found real world
+So example graphic program object
+An online shopping system object
+The shopping system support behavior
+The object designed class hierarchy
+So example shopping system might high level class
+There may refinement example etc
+These class subclass correspond set subset mathematical logic
+An important concept object
+A design pattern provides reusable template address common problem
+The following object description example common design pattern object
+The approach programming model
+It used equally well distributed system
+The object distributed computing model tend larger grained longer lasting programming object
+A standard method package distributed object via Interface Definition Language IDL
+An IDL shield client detail distributed server object
+Details computer object resides us platform specific issue
+The IDL also usually part distributed environment provides service transaction persistence object uniform manner
+Two popular standard distributed object standard DCOM
+In addition distributed object number extension basic concept object proposed enable distributed computing Some extension term special type ordinary object used certain context
+Others abandon usual case object resides single location time apply concept group entity replica might span across multiple location might weakly consistent state whose membership might dynamically change
+The essentially distributed object framework
+Two key technology Semantic Web OWL RDF
+RDF provides capability define basic property attribute accessible via Internet
+OWL add richer object model based set theory provides additional modeling capability multiple inheritance
+OWL object like standard large grained accessed via Interface Definition Language
+Such approach would appropriate Internet Internet constantly evolving standardization one set interface difficult achieve
+OWL object tend similar kind object used define application domain model programming language Java
+However important distinction OWL object traditional programming object
+Where traditional object get compiled static hierarchy usually single inheritance OWL object dynamic
+An OWL object change structure run time become instance new different class
+Another critical difference way model treat information currently system
+Programming object database system use
+If fact known system fact assumed false
+Semantic Web object use statement considered false actual relevant information false otherwise assumed unknown neither true false
+OWL object actually like object artificial intelligence Loom
+The following table contrast traditional object programming language Java Semantic Web Objects
+
+In relation relation
+Member function implemented outside declaration using scope resolution operator class name Louden
+relationship one object belongs another object Wikipedia
+Example template int currentIndex size IndexOfSmallest currentIndex relationship one class A subclass another class B B superclass A Wikipedia
+Example pg class A
+
+
+class B public A
+
+
+class C public A
+
+
+class D public B public C
+
+
+Shows multiple inheritance
+The Smalltalk system come large hierarchy preexisting class new class must subclass existing class Louden
+With Smalltalk see inheritance polymorphism support code reuse
+Smalltalk provides standard language including large set collection type
+They organized maximum code reuse collection class hierarchy Louden
+Map limited list collection Louden
+The Smalltalk version general polymorphic collection Louden
+The real benefit Java version compared Smalltalk lie static type checking
+As always type error use noncollection object nonstrategy object caught early compile time error always caught
+This make use map virtually foolproof bit cumbersome Java Louden
+With Smalltalk easier implement know inheritance class Java would define method
+But long run would seem would work better Java
+Using keyword virtual allows dynamic binding
+Once function declared virtual remains derived class Louden
+The meaning virtual used pure virtual declaration
+Pure virtual function must declared virtual since must dynamically bound execution overridden derived class Louden
+Pure virtual declaration function declared keyword virtual make abstract
+The code print Class B extends A print Class A call method p Class B call method q form Class A print Class C method r call method q class method p Class B
+The code print Fill detail click icon log You commenting using account
+You commenting using Twitter account
+You commenting using Facebook account
+You commenting using account
+Connecting Enter email address follow blog receive notification new post email
+Join follower
+
+Computer Science computer literacy underlies innovation today biotechnology cinematography national security
+Yet majority school require student use computer
+Seldom school prepare student innovate create new technology drive local national economy
+This ability innovate technology also important student future success ability make difference global society
+The Department Labor predicts computer job among fastest growing highest paying next decade
+Job prospect remained strong despite economically challenging time
+Computer scientist also enjoy wide range career option since industry sector today involve computing art film finance health care journalism manufacturing music security
+Computer science teach student design logical reasoning problem solving valuable well beyond computer science classroom
+The ability create adapt new technology distinguishes computer science computer literacy focus using existing technology word processing spreadsheet
+ACM provides variety material working educator policymakers
+The CSTA Leadership Cohort consists trained teacher leader state advocate computer science education
+More information Leadership Cohort including contact state found
+While national data quite useful often even persuasive local data back argument
+
+You create similar data set local employment data State Department Labor website education data available National Center Education Statistics website email u
+CSTA provides ACM Model Curriculum Computer Science available CSTA provides three level Objectives Outcomes document Level Level Level support computer science learning available
+CSTA also endorses Exploring Computer Science Curriculum implementing rigorous course junior senior
+The curriculum available
+
+learn share knowledge build career
+I little confused difference container collection
+I read Wikipedia I
+Collections Stores variable number object
+Ex
+list set
+Containers DataStructures
+Ex
+dequeue
+But I thought collection like list tree etc data structure container
+Also Data structure implement container include array list map queue set stack table tree vector
+Java really use term container except context AWT GUI component represents GUI component contain component
+used Java data structure contain object describe
+Computer science general tends treat le
+take read article good understand Container Collection concept
+The ISO standard really establish clear distinction
+It provide formal definition container Containers object store object
+yet provides formal definition us term bit generally
+It describes tuple example object even though definition also
+Collections Stores variable number object
+Ex
+list set
+Containers DataStructures
+Ex
+dequeue
+But I thought collection like list tree etc data structure container
+Also As far I see standard specify anything contrary collection container
+They also happen data structure structure general computer science term kind aggregate organizes data way
+With find useful distinction concept original STL conceived Stephanov defined
+A Sequence Container whose element arranged strict linear order
+It support insertion removal element
+The describes container like
+A Sorted Associative Container type Associative Container
+Sorted Associative Containers use ordering relation key two key considered equivalent neither one le
+If ordering relation string comparison example key abcde aBcDe equivalent
+The describes container like
+A Pair Associative Container Associative Container associate key object
+The value type Pair Associative Container pair
+The describes container like
+As reading subject respect slight semantic difference The difference taste substance feeling I listening two terminology This clearly subjective considering container implemented value semantics Java colloection behave polymorphism object Java variable technically autodereferenced pointer probably due semantics
+A container polymorphic value homomorphic pointer polymorphic value choose container want concretize strict java correspondence
+By posting answer agree
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+With alumnus decade experience online education history one excellence leadership
+Trident University International first fully online institution regionally accredited WSCUC
+Trident University International committed success offer comprehensive support service help guide every step online learning journey
+The Trident learning model paired diverse student body help bring real world classroom enriches learning process military civilian student
+With alumnus decade experience online education history one excellence leadership
+Trident University International first fully online institution accredited WASC
+Trident University International committed success offer comprehensive support service help guide every step Trident online learning journey
+Diversity Trident University International help brings real world classroom enriches learning process military civilian student
+I enjoy colleague
+They wonderful people totally invested mission achieving excellence education also providing support Mary Lind Faculty Lead College Information Systems Trident University first online university accredited WSCUC
+Regional accreditation widely considered expert gold standard Trident share distinction top school including Harvard Berkeley Stanford USC Notre Dame San Diego State UCLA others
+
+Best Online Graduate Computer Information Technology Programs With employment growth area computer science information technology projected percent time advance career master degree graduate certificate Boston world leading research teaching institution
+Choose following online degree program BU Metropolitan College MET computer science IT graduate professional education offered evening online blended format
+Because MET focused knowledge tool skill learn MET today immediately remaining relevant useful valuable career growth year come
+MET degree certificate program computer science IT prepare job typically low unemployment rate
+rank following technology job top ten The meet need offer practical interactive learning
+Complete form receive news invitation upcoming information session
+The MSCIS concentration IT Project Management accredited Project Management Institute Global Accreditation Center Project Management Education Programs GAC
+Computer Science IT degree certified Committee National Security Systems CNSS
+The Health Informatics concentration accredited Commission Accreditation Health Informatics Information Management Education CAHIIM
+As part Boston University Metropolitan College accredited New England Association Schools Colleges NEASC one six nationally recognized accrediting agency
+
+The Fillmore Silver Spring The Birchmere The Birchmere
+

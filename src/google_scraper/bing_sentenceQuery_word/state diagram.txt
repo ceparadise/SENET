@@ -1,0 +1,274 @@
+A type used related field describe behavior system
+State diagram require system described composed finite number sometimes indeed case time reasonable
+Many form state diagram exist differ slightly different
+State diagram used give abstract description
+This behavior analyzed represented series event occur one possible state
+Hereby diagram usually represents object single class track different state object system
+State diagram used graphically represent
+This introduced book The Mathematical Theory Communication
+Another source book Sequential Machines Automata Theory
+Another possible representation
+A classic form state diagram FA following element Q Σ Z δ q F The output function ω represents mapping ordered pair input symbol state onto output symbol denoted mathematically
+For DFA NFA GNFA input denoted edge
+For input output signified edge separated slash denotes state change upon encountering symbol causing symbol output
+For state output usually written inside state circle also separated state designator slash
+There also variant combine two notation
+For example state number output
+motor caution light diagram reflect
+designates state output
+This designator written inside state circle
+state
+Each edge labeled input
+This example show acceptor string contain even number zero
+state
+Each edge labeled input output
+gaining widespread usage since variant become part UML
+The diagram type allows modeling activity part state
+Classic state diagram require creation distinct node every valid combination parameter define state
+This lead large number node transition node simplest system
+This complexity reduces readability state diagram
+With Harel statecharts possible model multiple state diagram within statechart
+Each state machine transition internally without affecting state machine statechart
+The current state state machine statechart defines state system
+The Harel statechart equivalent state diagram improves readability resulting diagram
+There set semantics available represent state diagram
+For example tool modeling designing logic embedded controller
+These diagram like Harel original state machine support hierarchically nested state orthogonal region state action transition action
+Newcomers state machine formalism often confuse
+The figure show comparison flowchart
+A state machine panel performs action response explicit event
+In contrast flowchart panel b need explicit event rather transition node node graph automatically upon completion activity
+Nodes flowchart edge induced graph state
+The reason node flowchart represents program command
+A program command action executed
+So state applied program state result transition another state
+In detail source code listing represents program graph
+Executing program graph parsing interpreting result state graph
+So program graph induces state graph
+Conversion program graph associated state graph called unfolding program graph
+The program graph sequence command
+If variable exist state consists program counter keep track program execution next command applied
+In case executing command program counter position state command executed
+Executing command move program counter next command
+Since program counter whole state follows executing command changed state
+So command corresponds transition two state
+Now consider full case variable exist affected program command executed
+Then different program counter location program counter change variable might also change value due command executed
+Consequently even revisit program command
+loop imply program state
+In previous case program would state whole state program counter program counter point position next command suffices specify state
+However state includes variable change value program location different variable value meaning different state program state space
+The term unfolding originates multiplication location producing state graph program graph
+A representative example loop incrementing counter overflow becomes
+Although loop executes increment command iteratively program graph executes cycle state space cycle line
+This result state program location cycling combined counter value strictly increasing overflow different state visited sequence overflow
+After overflow counter becomes initial state revisited state space closing cycle state space assuming counter initialized
+The figure attempt show reversal role aligning arc state diagram processing stage flowchart
+You compare flowchart assembly line manufacturing flowchart describes progression task beginning end transforming source code input object code output compiler
+A state machine generally notion progression
+The door state machine shown top article example advanced stage closed state compared opened state simply reacts differently event
+A state state machine efficient way specifying particular behavior rather stage processing
+An interesting extension allow arc flow number state number state
+This make sense system allowed multiple state implies individual state describes condition partial aspect overall global state
+The resulting formalism known
+Another extension allows integration flowchart within Harel statecharts
+This extension support development software event driven workflow driven
+
+A state diagram diagram used computer science describe behavior system considering possible state object event occurs
+This behavior represented analyzed series event occur one possible state
+Each diagram represents object track various state object throughout system
+There exist different type state diagram different semantics slightly different
+State diagram graphically represent finite state machine
+They used understand object behavior throughout whole system
+The element constitute state diagram rounded box representing state arrow showing transition next state
+The activity section depicts activity object performs state
+Every state diagram start initial state state object created
+Right initial state object change state next state determined condition based activity
+In case state diagram represent super state condition created many transition lead particular state
+The super state depicts state inside diagram transition redundant state making diagram complex
+A transition state diagram progression one state another triggered event internal external entity modeled
+An action operation invoked entity modeled
+A traditional form state diagram finite machine directed graph
+Techopedia Terms Copyright Techopedia
+
+In program described designed remember preceding event user interaction remembered information called system
+The set state system occupy known
+In state space often system internal behaviour interaction environment consists separately occurring individual action event accepting input producing output may may cause system change state
+Examples system circuit component
+The output digital circuit computer program time completely determined current input state
+circuit divided two type whose output dependent present input signal whose output function current input past history input
+In sequential logic information past input stored electronic memory element
+The stored content memory element given point time collectively referred circuit contains information past circuit access
+Since two possible state finite number memory element digital circuit certain finite number possible state
+If number binary memory element circuit maximum number state circuit
+Similarly computer program store data represent storage location computer
+The content memory location given point program execution called program
+way designing describes computation term program state statement change program state
+In language program describes desired result specify change state directly
+A specialized definition state used computer program operate sequentially stream data program
+Serial program operate incoming data character packet sequentially one time
+In program information previous data character packet received stored variable used affect processing current character packet
+This called data carried previous processing cycle called state
+In others program information previous data stream start fresh data input called
+The output sequential circuit computer program time completely determined current input current state
+Since memory element two possible state total number different state circuit assume finite fixed number memory element
+If binary memory element digital circuit distinct state
+The concept state formalized abstract mathematical called used design sequential digital circuit computer program
+An example everyday device state
+To change channel TV user usually press channel channel button remote control sends coded message set
+In order calculate new channel user desire digital tuner television must stored number
+It add one subtracts one number get number new channel adjusts TV receive channel
+This new number stored
+Similarly television also store number control level produced speaker
+Pressing volume volume button increment decrement number setting new level volume
+Both number part TV state
+They stored preserve information TV turned turned TV return previous station volume level
+As another example state content memory element
+When computer laptop go save energy shutting processor state processor stored computer restored computer come hibernation processor take operation left
+Following state distinguished
+
+State transition diagram used right beginning modeling
+The basic idea define machine number state hence term finite state machine
+The machine receives event outside world event cause machine transition one state another
+For example take look figure
+Here machine bottle bottling plant
+It begin empty state
+In state receive squirt event
+If squirt event cause bottle become full transition full state otherwise stay empty state indicated transition back state
+When full state cap event cause transition sealed state
+The diagram indicates full bottle receive squirt event empty bottle receive cap event
+Thus get good sense event occur effect object
+State transition diagram around long object modeling
+They give explicit even formal definition behavior
+A big disadvantage mean define possible state system
+Whilst right small system soon break larger system exponential growth number state
+This state explosion problem lead state transition diagram becoming far complex much practical use
+To combat state explosion problem method define separate diagram class
+This pretty much eliminates explosion problem since class simple enough comprehensible state transition diagram
+It however raise problem difficult visualize behavior whole system number diagram individual class lead people interaction activity modeling
+The popular variety diagram object method Harel Statechart Figure
+This introduced Rumbaugh taken Booch adopted UML
+It one powerful flexible form state transition diagram
+A particularly valuable feature approach ability generalize state allows factor common transition thus I show break event applies full empty state creating
+It also flexible approach handling processing
+Processes instantaneous
+interrupted bound transition entry exit state called action
+Processes long interrupted bound state called activity
+Transitions also condition attached mean transition occurs condition true
+There also capability concurrent state diagram allowing object one diagram describe behavior
+Not method use Harel Statecharts
+One notable dissenter use simpler Moore model state diagram
+This form allows process occur state hence extra state Figure superstates
+This good example question expressiveness technique
+The Harel Statechart clearly expressive technique since expressive learn using
+In addition difficult implement
+take view since state diagram get complex drawn single object extra expressiveness worthwhile
+State model ideal describing behavior single object
+They also formal tool built execute
+Their biggest limitation good describing behavior involved several object case use activity diagram
+People often find drawing state diagram several object natural way describing process
+In case try either drawing single state diagram process using
+This defines basic behavior need refactor split across number object
+UML us Harel statecharts also become popular style state diagram object method
+For initial tutorial I would suggest either Booch Rumbaugh
+For treatment take look Cook Daniels give lot good detail formalism integration design contract discussion use state diagram subclassing
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n trailer R R startxref EOF obj R endobj obj R stream r À Í endstream endobj obj endobj obj R R R endobj obj R R R R endobj obj R endobj obj endobj obj endobj obj stream v
+Iû Øë CF È ô VÏpAÝàØ Ò
+endstream endobj obj endobj obj R endobj obj false endobj obj R R R endobj obj R R R R endobj obj stream øó ce Õ éí è
+
+exciting theoretical branch computer science
+It established root Century mathematician began developing theoretically literally machine imitated certain feature man completing calculation quickly reliably
+The word closely related word automation denotes automatic process carrying production specific process
+Simply stated automaton theory deal logic computation respect simple machine referred
+Through automaton computer scientist able understand machine compute function solve problem importantly mean function defined question described
+abstract model machine perform computation input moving series state configuration
+At state computation transition function determines next configuration basis finite portion present configuration
+As result computation reach accepting configuration accepts input
+The general powerful automaton
+The automaton theory develop method computer scientist describe analyze dynamic behavior discrete system signal sampled periodically
+The behavior discrete system determined way system constructed storage combinational element
+Characteristics machine include There The family automaton interpreted hierarchal form machine simplest automaton Turing machine complex
+The focus project machine Turing machine
+A Turing machine machine yet inverse true
+The exciting history finite automaton became branch computer science illustrates wide range application
+The first people consider concept machine included team biologist psychologist mathematician engineer first computer scientist
+They shared common interest model human thought process whether brain computer
+Warren McCulloch Walter Pitts two neurophysiologists first present description finite automaton
+Their paper entitled A Logical Calculus Immanent Nervous Activity made significant contribution study neural network theory theory automaton theory computation cybernetics
+Later two computer scientist
+Mealy Moore generalized theory much powerful machine separate paper published
+The machine Mealy machine Moore machine named recognition work
+While Mealy machine determines output current state input Moore machine output based upon current state alone
+An automaton state set Q contains number element called FSMs abstract machine consisting set state set Q set input event set I set output event set Z state transition function
+The state transition function take current state input event return new set output event next state
+Therefore seen function map ordered sequence input event corresponding sequence set output event
+State transition function I Z machine ideal computation model small amount memory maintain memory
+This mathematical model machine reach finite number state transition state
+Its main application mathematical problem analysis
+also used purpose aside general computation recognize regular language
+An elevator mechanism remember previous request service current floor direction motion collection satisfied request service
+Therefore given moment time elevator operated would defined following mathematical term A formally defined Q I Z W From mathematical interpretation said machine contains finite number state
+Each state accepts finite number input state rule describe action machine ever input represented state transition mapping function
+At time input may cause machine change state
+For every input symbol exactly one transition state
+In addition set accepted nondeterministic finite automaton also accepted deterministic finite automaton
+Having finite constant amount memory internal state FSM carry structure
+They easily represented using state diagram seen The state diagram illustrates operation automaton
+States represented graph transition arrow corresponding input output denoted symbol
+The arrow entering left q show q initial state machine
+Moves involve change state indicated arrow along side individual node
+These arrow known
+There exist divided three main category Applications machine found variety subject
+They operate language finite number word standard case infinite number word Rabin automaton Bïrche automaton various type tree hardware circuit input state output bit vector fixed size
+The simplest automaton used computation finite automaton
+It compute primitive function therefore adequate computation model
+In addition machine inability generalize computation hinders power
+The following example illustrate difference machine Turing machine Imagine Modern CPU
+Every bit machine two state
+Therefore finite number possible state
+In addition considering part computer CPU interacts finite number possible input computer mouse keyboard hard disk different slot card etc
+As result one conclude CPU modeled machine
+Now consider computer
+Although every bit machine two different state infinite number interaction within computer whole
+It becomes exceeding difficult model working computer within constraint machine
+However infinite powerful automaton would capable carrying task
+computer scientist Alan Turing conceived first infinite unbounded model computation Turing machine solve
+The Turing machine thought finite automaton control unit equipped infinite storage memory
+Its memory consists infinite number array cell
+Turing machine essentially abstract model computer execution storage developed order provide precise mathematical definition algorithm mechanical procedure
+While automaton called model consists finite number state function finite string input output infinite automaton accessory either stack tape moved right left meet demand made machine
+A formally defined set Q Σ Γ δ q B F Therefore major difference Turing machine finite automaton FSM lie fact Turing machine capable changing symbol tape simulating computer execution storage
+For reason said Turing Machine power model computation calculated today modern computer
+
+A symbolic according technique
+Diagrams used since ancient time became prevalent
+Sometimes technique us visualization onto surface
+The word sometimes used diagram
+The term diagram commonly used sense general specific meaning In science term used way
+For example Anderson stated generally diagram pictorial yet abstract representation information example diagram whereas photograph video
+On hand Lowe defined diagram specifically abstract graphic portrayal subject matter represent
+In specific sense diagram chart contrast technical illustration map showing abstract rather representation information
+The essence diagram seen Or Hall word diagram simplified figure caricature way intended convey essential meaning
+These simplified figure often based set rule
+The basic shape according White characterized term elegance clarity ease pattern simplicity validity
+Elegance basically determined whether diagram simplest fitting solution problem
+There least following type diagram type diagram Many type diagram commonly generated using diagramming software
+Thousands diagram technique exist
+Some example follow
+Diagrams may also classified according use purpose example explanatory diagram
+Garcia M Ed The Diagrams Architecture
+Wiley
+Chichester
+
+ÐÄÆ obj R stream xí ÛnÇ Kreû Z kcë ÊÊÔCåµ Üo ë kN ÿàÂ F VÑ w Ja ä åª r é
+
+Try Still question
+Ask
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R ÄÞ endstream endobj obj endobj obj R R R R R R R R R R endobj obj R R R R R R R endobj obj endobj obj stream B È ÿ endstream endobj obj endobj obj R R endobj obj R R R endobj obj endobj obj stream L L ÅCa ä øGzFþ Àæâáò ÿó É c þ qOír äÛY
+Uòp Åf º Õg ò BLR òoê ú KËNOà ðñ ACÎô öVBg BSÊÑ Óµ òÒLúoä W Ä Æÿ I n
+endstream endobj obj stream ÔVíd endstream endobj obj R endobj obj stream pÏÁ endstream endobj obj R endobj obj R R endobj obj endobj obj R stream yg rv Z k ÿtû YícÔ ûÃ KJ Òâåð þ U
+àW Ôô z bÒh ñEµa
+kW f vw b Ð Û Øj H Õ yþpÀ ÜJ ýÇû Ñë H fPy Dëi döÔWn ÌQ àäk µ Ð õÓpxQ ØuÇg ÙM
+

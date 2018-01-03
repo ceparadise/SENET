@@ -8,7 +8,8 @@ import sqlite3
 keys = set()
 with open(VOCAB_DIR + os.sep + "vocabulary.txt", 'r', encoding='utf8') as fin:
     for word in fin:
-        keys.add(word.strip("\n\t\r") + " site:stackoverflow.com definition")
+        query = "what is {} in computer science".format(word.strip("\n\t\r"))
+        keys.add(query)
 while True:
     try:
         conn = sqlite3.connect('google_scraper.db')

@@ -1,0 +1,388 @@
+In programming unchangeable object whose state modified created
+This contrast changeable object modified created
+In case object considered immutable even internally used attribute change object state appears unchanging external point view
+For example object us cache result expensive computation could still considered immutable object
+Strings concrete object typically expressed immutable object improve readability runtime efficiency
+Immutable object also useful inherently
+Other benefit simpler understand reason offer higher security mutable object
+In value held whose content never change known differentiate variable could altered execution
+Examples include conversion factor meter foot value several decimal place
+field may calculated program run unlike constant known beforehand never change initialized
+Sometimes one talk certain object immutable
+This mean way change part object state even though part object may changeable
+If field immutable object immutable
+If whole object extended another class object called
+This might example help explicitly enforce certain invariant certain data object staying lifetime object
+In language done keyword
+designates field immutable
+In language reversed field object record default immutable need explicitly marked
+In object referred using
+Some example language many
+In case matter whether state object vary object shared via reference
+If object known immutable copied simply making copy instead copying entire object
+Because reference typically size usually much smaller object result memory saving potential boost execution speed
+The reference copying technique much difficult use mutable object user reference mutable object change user reference see change
+If intended effect difficult notify user respond correctly
+In situation entire object rather reference usually easy costly solution
+The alternative technique handling change mutable object
+A technique blend advantage object supported directly almost modern hardware COW
+Using technique user asks system copy object instead merely create new reference still point object
+As soon user attempt modify object particular reference system make real copy applies modification set reference refer new copy
+The user unaffected still refer original object
+Therefore COW user appear mutable version object although case user modify object speed advantage immutable object preserved
+popular system allows save memory space still correctly handling anything application program might
+The practice always using reference place copy equal object known
+If interning used two object considered equal reference typically represented integer equal
+Some language automatically example automatically
+If algorithm implement interning guaranteed every case possible comparing object equality reduced comparing pointer substantial gain speed application
+Even algorithm guaranteed comprehensive still exists possibility case improvement object equal use reference
+Interning generally useful immutable object
+Immutable object useful application
+Multiple thread act data represented immutable object without concern data changed thread
+Immutable object therefore considered mutable object
+Immutability imply object stored computer unwriteable
+Rather immutability construct indicates programmer normal interface object necessarily absolutely instance circumventing type system violating
+In string immutable object
+Both Java Framework mutable version string
+In Java mutable version Java mutable version
+mutable string byte variant named
+Additionally Java immutable
+Similar pattern
+In pure language possible create mutable object without extending language
+via mutable reference library object immutable
+In object declared either
+mutable typically implicit default
+immutable via keyword
+Subprogram parameter immutable mode mutable mode
+In enforce immutability field class statement
+By enforcing field immutable obtain immutable type
+In implementation would allow user declare new instance class either immutable mutable desired providing two different version method
+Notice necessary fact impossible provide specialized constructor instance
+Note field pointer reference another object might still possible mutate object pointed pointer reference within const method without violating
+It argued case object really immutable
+also provides abstract opposed bitwise immutability via keyword allows member variable changed within method
+A classic example immutable object instance Java class The method change data ABC contains
+Instead new String object instantiated given data abc construction
+A reference String object returned method
+To make String contain data abc different approach needed
+Now String reference new String object contains abc
+There nothing syntax class String enforces immutable rather none String class method ever affect data String object contains thus making immutable
+The keyword used implementing immutable primitive type object reference make immutable
+See example Primitive type variable etc
+reassigned defined
+This prevented using
+Reference type made immutable using keyword
+prevents reassignment
+Primitive wrapper also immutable
+Immutable class implemented following simple guideline
+In one create immutable class Moo library simply declaring attribute read Creating immutable class used require two step first creating accessors either automatically manually prevent modification object attribute secondly preventing direct modification instance data instance class usually stored hash reference could locked Hash function Or manually written accessor In type number booleans string tuples frozensets immutable custom class generally mutable
+To simulate immutability class one override attribute setting deletion raise exception The standard library helper creates simple immutable class roughly equivalent plus feature
+In type number string immutable custom object generally mutable
+To simulate immutability object one may define property writable false
+However approach still allow new property added
+Alternatively one may use make existing object immutable
+The use immutable state become rising trend JavaScript since introduction favour state management pattern
+substantially diverges implementation making core pair type con cell immutable
+Instead provides parallel mutable pair type via etc
+In addition many immutable type supported example immutable string vector used extensively
+New structs immutable default unless field specifically declared mutable whole struct The language also support immutable hash table implemented functionally immutable dictionary
+In entity narrowly binding defined mutable immutable declaration one use value immutable entity variable mutable one
+Note even though immutable binding reassigned may still refer mutable object still possible call mutating method object immutable underlying may mutable
+For example following code snippet defines immutable entity integer type inferred mutable entity named
+By default collection class immutable return new instance rather mutating existing one
+While may sound inefficient implementation class guarantee immutability mean new instance existing node especially case creating copy efficient
+
+learn share knowledge build career
+The standard class mutable
+It depends strongly language
+Some even allow mutable object
+Many mainstream language default highly mutable depending member expose class public interface
+In least couple mainstream language particularly dynamic language really hard make immutable object
+See definition information In functional programming immutable object object whose state modified created
+This contrast A mutable class one change internal state created
+Generally speaking class mutable unless special effort made make immutable
+A mutable class class changeable state
+example class representing number mutable something like change internal state
+In functional programming object whose state modified created
+This contrast modified created
+An object either entirely immutable attribute object may declared immutable example using const member data attribute programming language
+Usually usual language mutable
+Classes typically mutable though language deviate
+The object create class hand often mutable include state take special care prevent anyone changing state object creation
+Please refer explains mutable immutable ojects java
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+What difference mutable immutable string C
+Mutable immutable English word meaning change change respectively
+The meaning word IT context
+The meaning word C programming language environment though obviously name type may differ may detail
+For record To effect change string represented C actually create new object
+The original changed unchangeable
+In case better use easier reason
+need consider possibility thread might change string
+However need construct modify string using sequence operation may efficient use
+immutable
+string altered
+When alter string adding example actually creating new string
+But immutable rather mutable alter string many time multiple concatenation use
+An object mutable created state changed calling various operation otherwise immutable
+In C string represented class
+The keyword alias class
+The
+So operation perform string like Substring Remove Replace concatenation using operator etc create new string return
+See following program demonstration This print respectively
+For string immutable check
+If want string want modify often use class
+
+For advice refer
+All object immutable C
+Objects class created never represent value one constructed
+All operation seem change string instead produce new one
+This inefficient memory extremely useful regard able trust string wo change form long change reference string referred never change
+A mutable object contrast data field altered
+One method change content object Property written change value object
+If mutable similar one String make copy want absolutely sure wo change
+This mutable object dangerous use key form object could change data structure would way knowing leading corrupt data would eventually crash program
+However change much much memory efficient making complete copy wanted change single character something similar
+Generally right thing use mutable object creating something immutable object done
+This applies object immutable form course collection
+It often useful provide form collection though equivalent immutable sending internal state collection otherwise something could take return value something corrupt data
+Immutable When operation object creates new object hence state modifiable case string
+Mutable When perform operation object object modified new obect created case StringBuilder In aka string immutable object
+That mean create object change value afterwards
+You recreate immutable object
+mutable equivalent chane value For Example Generates following MSIL If investigate code
+You see whenever chane object actually creating new one
+But whenever change value text dont recreate object
+Strings mutable use string pool behind scene
+It mean Both name referring memory location string pool
+Now suppose want change It look string pool string My Loving Country found get reference wise new string My Loving Country created string pool get reference
+But whole process changed variable like still using
+And reason string
+work different manner use string pool
+When create instance StringBuilder It allocate memory chunk size byte instance operation modify memory location memory shared object
+And reason
+None actually
+The String class mutable
+This kind logic done time String StringBuilder class actually
+They allocate new string time call Concat Substring etc
+use pointer arithmetic copy new string
+Strings mutate hence considered immutable
+By way attempt string literal badly mess program This string literal interned desktop Framework word point exact string mutating one mutate
+This fine dandy though using unmanaged platform like WinRT lack string interning
+To clarify thing mutable string C general
+Other langues support mutable string string change framework
+So correct answer question ALL string immutable C
+string specific meaning
+string lowercase keyword merely shortcut object instantiated class
+All object created string class ALWAYS immutable
+If want mutable representation text need use another class like StringBuilder
+StringBuilder allows iteratively build collection convert string immutable
+implementation detail
+muttable
+calling private method imuttable
+StringBuilder Char array chunking
+The data value may changed
+Note The variable value may changed original immutable data value discarded new data value created memory
+Strings immutable mean allocating new memory everytime instead working existing string
+Strings created pool
+If string already exists simply create
+StringBuilder mutable type mean using memory location keep stuff one instance
+It create instance hence decrease performance application
+From Short Answer String immutable whereas StringBuilder mutable
+What mean
+Wiki say In immutable object object whose state modified created
+This contrast mutable object modified created
+From StringBuilder Class documentation The String object immutable
+Every time use one method class create new string object memory requires new allocation space new object
+In situation need perform repeated modification string overhead associated creating new String object costly
+The class used want modify string without creating new object
+For example using StringBuilder class boost performance concatenating many string together loop
+Here example Immutable string Mutable string builder String C immutable
+If concatenate string actually making new string new string object
+But StringBuilder creates mutable string
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+This newbie question I could find enough answer Google
+What people mean say programming general OO programming specifically
+Also mutable immutable state generally programming also specifically OOP
+You state associate value number string complex data structure identity point time
+For example number represent state number always natural number
+As another example string HELLO sequence five character completely described character contains sequence appear
+In five million year string HELLO still string HELLO pure value
+In order state consider world pure value associated kind entity posse
+Identity primitive idea mean distinguish two thing regardless property may
+For example two car model colour two different car
+Given thing identity attach property described pure value
+car property blue
+You describe fact associating pair car
+The pair colour blue pure value describing particular car
+State associated particular entity also particular point time
+So say today car state Tomorrow I repainted black new state Note state entity change identity definition
+Well long entity exists course car may created destroyed keep identity throughout lifetime
+It make sense speak identity something exist yet
+If value property attached given entity change time say state entity
+Otherwise say state
+The common implementation store state entity kind variable global variable object member variable
+store state
+Mutable state implemented using assignment assignment operation replaces previous snapshot new one
+This solution normally us memory location store current snapshot
+Overwriting memory location destructive operation replaces snapshot new one
+find interesting talk approach
+An alternative view subsequent state history entity stream possibly infinite sequence value see
+
+In case snapshot stored different memory location program examine different snapshot time
+Unused snapshot longer needed
+State simply information something held memory
+As simple exercise object orientation think class cookie cutter cooky object
+You create cookie instantiate object using cookie cutter class
+Let say one property cookie color changed using food coloring
+The color cookie part state property
+Mutable state state changed make object cookie
+Immutable state state changed
+Immutable object state changed become important dealing ability one processor computer operate object time
+Immutability guarantee rely state stable valid object lifetime
+In general state object held private member variable accessed property method
+I think term state opposed concrete type state member variable useful comparing stateful API stateless one
+Trying define state without mentioning APIs bit like trying define variable function without mentioning programming language correct answer make sense people already know word mean
+For example OpenGL probably stateful API I know
+If I may ludicrously oversimplify moment might say look something like Almost every function used pas state OpenGL need remember end call one anticlimactically simple function drawing
+A stateless version oversimplified OpenGL would probably look like You often hear people say APIs le state easier reason
+If keep argument count control I generally agree
+As far I know distinction meaningful specify
+For example using constructor It would hard implement window class remember size decide whether user able change window size creating
+In OOP true state mean member variable lot
+For instance method static variable lambda become closure capturing variable
+In case variable persist across multiple call function thus probably qualify state
+Local variable regular function may also considered state depending used one I main often count
+The state
+A condition mode regard circumstance
+The state something set value attribute given moment
+In OOP state object snapshot attribute value given moment
+The state color blue price size small
+If later You change one attribute also changed state whole since object longer
+Sometimes class designed property value changed created
+All value property either passed constructor read source like database file way change value moment since setter method way changing value inside object
+That called state changed mutated
+All destroy object create new one assing reference variable
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+String immutable class Java
+An immutable class simply class whose instance modified
+Why Java programming language choose make object class String immutable
+This issue strongly connected notion mean instance class
+In strict term class associated invariant predicate always hold true exit public method class
+Such notion central ensuring inheritance example part
+One pernicious issue Java difficult prevent client code breaking class invariant
+For example consider following class If String immutable would possible user ZipCode call change character subsequent time thereby breaking invariant destroying conceptual integrity offered encapsulation ZipCode concept
+Since kind integrity essential ensuring large system valid answer question really begs wider one Things like string date naturally value
+In term expect copy constructor assignment operator equality operator never expect take address
+Hence expect individually allocated heap
+Virtual method make sense
+Domain object naturally reference
+one copy constructor assignment operator equality operator equal identical
+We take address expect heap allocated
+Methods generally virtual
+Java value class reference one
+Values faked immutable object
+This true string unfortunately date
+The mutability Java date caused frequent problem deprecated
+Mutable value ca used basis hash example
+Java designed allow execution subsection program code security constrained environment
+The way requirement implemented setting SecurityManager thread given access parameter certain critical operation eg opening file asked whether operation allowed go ahead
+If Java Strings mutable program could circumvent restriction creating two thread one performed open file operation would allowed modified string stored filename one would allowed
+There possibility security manager would read original string accept operation would passed file opening code would precede open second permitted file
+There two possible way preventing scenario The latter possibility would make operation run slowly would likely implementation contain bug using immutable string sensible decision
+More generally immutable object useful allow sharing without needing make defensive copy may necessary even code prevent bug source data change even without requirement decision would still reasonable one
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Thank opportunity help question
+Immutable class Java class whose object modified created
+Any modification Immutable object result new object
+For example String immutable Java
+Mostly Immutable also final Java order prevent sub class overriding method Java compromise Immutability
+You achieve functionality making member non final private modifying except constructor
+Secure Information Content erased question completed
+Enter email address associated account email link reset password
+
+auto register static extern storage class specifier typedef also considered storage class specifier also support storage class specifier
+In addition add one important storage class specifier whose name mutable
+Sometimes requirement modify one data member class struct const function even though want function update member class struct
+This task easily performed using mutable keyword
+Consider example use mutable useful
+Suppose go hotel give order waiter bring food dish
+After giving order suddenly decide change order food
+Assume hotel provides facility change ordered food take order new food within minute giving order
+After minute order cancelled old order replaced new order
+See following code detail
+Output Closely observe output program
+The value data member changed const function declared mutable
+The keyword mutable mainly used allow particular data member const object modified
+
+Adding mutable variable allows const pointer change member
+mutable particularly useful member constant need updateable
+Data member declared mutable modified even though part object declared const
+You use mutable specifier name declared static const reference
+As predict output following two program
+This article contributed
+Please write comment find anything incorrect want share information topic discussed Writing code comment
+Please use generate link share link
+Tags
+
+A object changed created object ca
+In Java everything except string mutable default There way make existing object immutable
+Even object declared field still changed That said defining class make object immutable making field
+Strings mutable immutable depending language
+Strings immutable Java
+When modify string actually creating separate copy leaving first intact But language like string mutable If want mutable string Java use object Or convert string character mutable
+Mutable object nice make change without allocating new object
+But make change object reference object reflect change
+I teach right breaking tricky algorithmic coding interview question never seen
+No prior computer science training get speed quickly skipping overly academic stuff
+No spam
+unsubscribe hate
+You
+Head email inbox right read day one
+If ready start applying concept problem check
+They mimic real interview offering hint stuck missing optimization
+Want coding interview help
+Check advice guide practice question
+
+What role mutable storage class specifier
+A constant class object member variable altered
+The mutable storage class specifier used class data member make TutorSense Course Hero homework study help need succeed
+We got note study guide practice test along expert tutor customizable anywhere anytime
+Find best study resource around tagged specific course
+Share gain free Course Hero access earn money Marketplace
+Get homework help expert online
+Ask question browse existing Q A thread
+Satisfaction guaranteed
+Browse existing set create using digital flashcard system
+A simple yet effective studying tool help earn grade want
+Or get help Computer Science expert
+Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+With alumnus decade experience online education history one excellence leadership
+Trident University International first fully online institution regionally accredited WSCUC
+Trident University International committed success offer comprehensive support service help guide every step online learning journey
+The Trident learning model paired diverse student body help bring real world classroom enriches learning process military civilian student
+With alumnus decade experience online education history one excellence leadership
+Trident University International first fully online institution accredited WASC
+Trident University International committed success offer comprehensive support service help guide every step Trident online learning journey
+Diversity Trident University International help brings real world classroom enriches learning process military civilian student
+I enjoy colleague
+They wonderful people totally invested mission achieving excellence education also providing support Mary Lind Faculty Lead College Information Systems Trident University first online university accredited WSCUC
+Regional accreditation widely considered expert gold standard Trident share distinction top school including Harvard Berkeley Stanford USC Notre Dame San Diego State UCLA others
+

@@ -1,0 +1,164 @@
+Abstraction Java Object oriented programming way segregate implementation interface one five fundamental along Encapsulation Inheritance Polymorphism Class Object
+Abstraction Java achieved using interface abstract class Java
+An interface abstract class something concrete something incomplete
+In order use interface abstract class need extend implement abstract method concrete behavior
+One example Abstraction creating interface denote common behavior without specifying detail behavior work
+You create interface called Server start stop method
+This called abstraction Server every server way start stop detail may differ
+As I said earlier Abstraction Java implemented using abstract class interface discussed next section
+In fact What abstraction Java Difference Abstraction Encapsulation also popular core Java interview strong OOPS skill one primary requirement Java developer
+A Car Engine wheel many part
+When write property Car Engine wheel single class would look way public class Car int price String name String color int engineCapacity int engineHorsePower String wheelName int wheelPrice void move forward void rotate method void internalCombustion Method In example attribute wheel engine added Car type
+As per programming create kind issue
+But come maintenance application becomes complex
+Abstraction three advantage By using abstraction separate thing grouped another type
+Frequently changing property method grouped separate type main type need go change
+This add strength OOAD principle Code open Extension closed Modification
+Simplifies representation domain model
+Applying abstraction composition example modified given public class Car Engine engine new Engine Wheel wheel new Wheel int price String name String color void move forward public class Engine int engineCapacity int engineHorsePower void internalCombustion Method public class Wheel String wheelName int wheelPrice void rotate method You see attribute method related Engine Wheel moved respective class
+Engine Wheel referred Car type
+When ever instance Car created Engine Wheel available Car change Types Engine Wheel change confined class affect Car class
+Modular programming approach application code subdivided separate subprogram running specific function subroutine
+These chunk code split worked multiple programmer team individual time chunk code dedicated specific task
+These task also become recyclable tweaked fit program
+This keep programmer write similar task future module already exists another location handle task hand
+The programmer simply pull existing module tweak insert new program working saving time energy work
+If creating program track attendance multiple class school master program would achieve task student class throughout year
+If application broken module one module might track attendance specific student course year
+Another module might group student attendance record class Geology Science class even sophomore class junior class class
+The modularization program allows applied various scenario student year school anywhere attendance need tracked simply tweaking existing code making fit new scenario
+Comments closed
+
+technique emphasizes separating functionality independent interchangeable contains everything necessary execute one aspect desired functionality
+A module interface express element provided required module
+The element defined interface detectable module
+The contains working code corresponds element declared interface
+Modular programming closely related goal facilitating construction large software program system decomposition smaller piece originating around
+While historically usage term inconsistent today modular programming refers decomposition code entire program piece structured programming code use structured programming use kind
+In programming use interface architectural pattern construct module known
+The term like sometimes used instead
+In implementation distinct concept package collection module upcoming introduction collection package enhanced access control planned
+Furthermore term package us software example
+A similar concept typically refers higher level component piece whole module piece individual program
+The scale term module varies significantly language Python file module planned module collection package turn collection file
+Other term module include used dialect
+Languages formally support module concept include CL Morpho several derivative
+Conspicuous example language lack support module Pascal original form
+As module proposed module added Pascal superseded Modula Oberon included module start various derivative included module
+native module since
+Modular programming performed even programming language lack explicit syntactic feature support named module
+For example also us module programming ILE
+With modular programming module perform logically discrete function interacting interface
+Often module form DAG case cyclic dependency module seen indicating single module
+In case module form DAG arranged hierarchy module independent depending module module depend one
+A particular program library module hierarchy turn seen module program library system
+When creating modular system instead creating monolithic application smallest component whole several smaller module written separately composed together construct executable application program
+Typically also separately via linked
+A may perform construction
+This make modular designed system built correctly far reusable traditional monolithic design since many module may reused without change project
+This also facilitates breaking project several smaller project
+Theoretically modularized software project easily assembled large team since team member creating whole system even need know system whole
+They focus assigned smaller task claimed counter key assumption actually possible add developer late software making later still
+Modular programming form subsystem particularly software library date early software system used
+Modular programming per se goal modularity developed late analog concept
+The term modular programming date least National Symposium Modular Programming organized Information Systems Institute July key concept SoC
+Modules included original specification included extension early implementation later formalized
+One first language designed start modular programming
+Another early modular language Wirth drew Mesa well original Modula successor influenced later language particularly successor
+Modula use like refer object module coincides notation access field record similarly attribute method object widespread seen C Dart Go Java Python among others
+Modular programming became widespread original language include module later version notably included form unit
+The Extended Pascal ISO standard kept closer modular support
+one complete module system including parameterized module map module
+In modular programming overshadowed often conflated particularly due popularity Java
+For example C family language support object class originally supporting module year later
+Java support module form package though primary unit code organization class
+However Python prominently used module object start using module primary unit code organization package unit includes support module object vast array module available
+Modular programming widespread found virtually major language developed since
+The relative importance module varies language language still overlap confusion class unit organization encapsulation distinct concept
+
+Modular programming process subdividing computer program separate
+A module separate software component
+It often used variety application function component system
+Similar function grouped unit programming code separate function developed separate unit code code reused application
+programming OOP compatible modular programming concept large extent
+Modular programming enables multiple programmer divide work debug piece program independently
+Modules modular programming enforce logical boundary component improve maintainability
+They incorporated interface
+They designed way minimize dependency different module
+Teams develop module separately require knowledge module system
+Each every modular application version number associated
+This provides developer flexibility module maintenance
+If change applied module affected subroutine changed
+This make program easier read understand
+Modular programming main module many auxiliary module
+The main module compiled executable EXE call auxiliary module function
+Auxiliary module exist separate executable file load main EXE run
+Each module unique name assigned PROGRAM statement
+Function name across module unique easy access function used main module must exported
+Languages support module concept IBM Assembler COBOL RPG FORTRAN Morpho Zonnon Erlang among others
+The benefit using modular programming include Techopedia Terms Copyright Techopedia
+
+promptMessage promptMessage This intentionally section
+view full version
+This intentionally section
+view full version
+This intentionally section
+view full version
+This intentionally section
+view full version
+No bookmarked document
+Assignment Assignment Assignment Assignment Assignment course note CS Course Note snackBarMessage Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+Contact information general information Get computing support CSRs
+A complete list course offered CS department
+Requirements earn computer science degree
+Research group CS department
+Research lab CS department
+Career Employment service
+CS department corporate relation
+BYU club homepage
+Family History Technology homepage
+CS department colloquium Programmers want write modular program increase maintainability create abstraction modularity hamper optimization especially module compiled separately written different language
+In language syntactic extension capability module program written separate language module system must ensure module interoperate correctly
+In Racket module system ensures separating module code phase runtime allowing phased import export inside module
+We present algorithm called demodularization combine executable code phased modular program single module optimized whole program
+The demodularized program behavior modular counterpart easier optimize
+We show program maintain meaning operational semantics demodularization process verify performance increase comparing modular Racket program equivalent modularized optimized program
+We use existing Racket optimizer optimize demodularized program decompiling intermediate form optimizer us
+We also demonstrate dead code elimination optimization dramatically reduces file size demodularized Racket program
+
+In Storytelling student use computer science tell fun interactive story
+Storytelling emphasizes creativity encouraging club member tell unique story day
+In Friends student encouraged sign friend make new friend club
+Friends emphasizes teamwork allowing club member tell story friendship started imagine company together
+In Fashion Design student learn computer science technology used fashion industry building program like fashion walk stylist tool pattern maker
+In Art student create animation interactive artwork photograph filter exciting artistic project
+In Social Media student create fun social medium style application game learning computer science concept enable program work
+In Sports student use computer science simulate extreme sport make fitness gadget commercial create commentary big sporting event
+In Music Sound student use computer play musical note create music video build interactive music display learning programming used create music
+In Game Design student learn basic video game coding concept making different type game including racing platform launching
+Students create fun complex animated project
+This advanced curriculum mean teach new concept recommended student already participated least two CS First theme
+In sample activity student animate ocean wave create setting tell story take place high sea
+In sample activity student tell story using character Cartoon Network The Amazing World Gumball
+Be designer programmer bring Google logo life using code
+CS First one many Google initiative focused computer science education
+Visit learn program may interest
+Except otherwise content site licensed
+Scratch project Lifelong Kindergarten group MIT Media Lab
+It available free
+Share Follow u
+
+In software engineering modularity refers extent application may divided smaller module
+Software modularity indicates number application module capable serving specified business domain
+Modularity successful developer use prewritten code save resource
+Overall modularity provides greater software development manageability
+Modern business issue grow continuous basis term size complexity demand
+Enhanced software capability requirement force developer enhance developed system new functionality
+Software engineering modularity allows typical application divided module well integration similar module help developer use prewritten code
+Modules divided based functionality programmer involved functionality module
+Thus new functionality may easily programmed separate module
+Techopedia Terms Copyright Techopedia
+

@@ -1,0 +1,325 @@
+learn share knowledge build career
+In book Exercise show piece code compute value polynomial The exercise assumes clock cycle needed addition multiplication respectively
+The reader asked explain According exercise answer iteration need update variable operation need addition multiplication latter dominates latency causing ultimate CPE
+But I think data flow something like So longest path previous value new value going execution unit
+Therefore longest time cycle
+I want ask Any explanation CPU architecture execution unit pipeline unit appreciated
+I know I bit late party book absolutely right
+As verify timing code CPE indeed second answer wrong
+But first one also wrong
+It say MULs must performed time possible Nehalem architecture I suspect modern processor
+Remember one FP MUL unit different FP ADD unit shown book ed
+later What happens instead LOADs assumed always present cycle cache First feed MUL
+Immediately feed remember pipeline
+cycle get new value cycle result
+At point new computation stage MUL
+So cycle rest ops want restricted
+Of course easy need cycle FP ADD get new
+So becomes obvious limiting factor computation
+Which mean looking critical path whatever look specifically path old value new
+In case path consists one FP ADD
+threw first The critical path indeed cycle question asks CPE like time output one cycle loop
+Other first last cycle processor addition previous iteration loop current multiplication time operand dependent
+The first iteration loop take full cycle iteration loop take cycle run making actual CPE cycle
+
+I agree book way presenting critical path confusing
+Their definition critical path simply path take longest path path also operation operand depends previous operation order
+This definition make finding critical path rather intuitive
+The critical path longest path graph case eight clock
+This say critical path Prioritized Topological Orders Without resource constraint shortest schedule given critical path longest path graph
+A metric useful priority function height node length longest path graph originating node
+I think found error book
+You consider contacting author correct future printing
+The critical path longest one data flow graph according book must straight line effect single register rather add whose result intermediate operand next operation
+About question get done continuing read rest
+Especially comparing data flow graph one helpful
+If understood clear answer book reasonable
+By posting answer agree
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+TOC CHAPT
+INTRODUCTION TO FMECA Purpose Scope References Define FMECA History FMECA benefit Team effort FMECA characteristic CHAPT
+PRELIMINARY ITEMS REQUIRED Requirements Goals CHAPT
+FMEA METHODOLOGY STEPS Methodology foundation Define system analyzed approach Ground rule assumption Block diagram Failure mode identification Failure effect analysis Failure detection method Compensating provision Severity ranking Results FMEA CHAPT
+FMECA METHODOLOGY Methodology moving Criticality Analysis Criticality Analysis Transfer select data FMEA sheet Quantitative criticality analysis Effects redundancy quantitative Qualitative criticality analysis Effects redundancy qualitative CHAPT
+CRITICALITY RANKING QUANTITATIVE AND QUALITATIVE Criticality ranking Criticality matrix CHAPT
+RESULTS OF FMECA Overview Recommendations criticality matrix example CHAPT
+CONCLUSIONS Incentives Results
+
+Follow update I also took lot physic math doubt help degree philosophy I feel study various logical abstraction helped widen perspective
+Not mention trained diagram set also quite useful
+My diagram consistent grammer I sure I trained create legend map directly real concept
+arrow mean something used truly identical relationship
+Of course arrow might mean different thing different diagram within given diagram consistency
+I sure Philosophy program rigerous logic one thing thing philosopher agreement
+Except undergraduate philosophy little problem solving
+From I seen analyzing argument finding solution
+Logical dissection useful skill especially testing debugging
+The problem wit From Philosophy lot logical people would assume first glance
+You presupposing teleological explanation preview button
+I look existential perspective preview button simply u find meaning
+I could read post massive wall text hurt eye I guessing mention English class taking
+Holy shit
+You went entire little diatribe without using single p
+That kind record Longest post somebody stupid break post paragraph
+For fuck sake man
+If want people read write learn use paragraph
+I currently undergraduate Muhlenberg College notably unhappy program
+What appeared friendly small liberal art college I applied year half ago far rather disappointing
+As matter background I note w But lot interesting hang
+I think basic study philosophy would probably widen people perspective life generally worthwhile experience
+Also study different type logic numerical system useful professionally could considered branch philosophy though probably commonly found mathematics curriculum experience anyway
+However interesting may right I never found Hegelian dialectic basic epistemology really helped build distributed data model network traffic prediction algorithm
+On hand I working say AI research I see working knowledge epistemology might useful YMMV
+I sure I agree say right economics useful thing study
+I majored CS got minor econ math I use econ stuff much CS stuff
+I know minoring entirely worthwhile going intermediate microeconomics intermediate macroeconomics possibly smartest thing I college
+Some philosophy teacher surely turn course
+I imagine GT EVERYTHING subjugated engineering need could one first already
+You could make one required elective
+Of course real philosophy person rain parade telling u already class offering different name change name pandering
+Now hell people
+Abandon hope ye enter Please God make stop
+We also one zero know make perform calculation u
+Calculating seems start true intelligence making connection thinking Aha
+I figured
+Look intelligent I
+It necessarily follow complex calculator going Take look kind discourse design pattern pattern language
+Pure philosophy
+Also I say computer science people totally different take Descarte problem
+As problem
+And I think bunch thing CS change outlook
+After class might encounter considerably interesting philosophy interesting controversial
+The big one philosophy Freedom advocated folk RMS The tragedy nearly half century computer science much involving relational system RDBMS one real Considering average student get nearly half question wrong impressive feat
+Let know get right I admit equal
+grin You leave politics alone wo leave alone
+That necessary
+Because Turing machine hard program
+Or fast big memory hard build
+I ca really understand answer want
+And I agree may person I sure kook
+The problem post like take long sort kook making invalid point people reasonable person making detailed valid point something I time care moment people
+I guess upshot This century ago physic commonly called natural philosophy
+In English If say say clearly
+If ca say shut
+APL natural extension assembler language programming best educational purpose
+Perlis
+
+Condition nuclear chain sustain due sufficient mass fissionable material
+Powered
+
+cover overlap field
+The topic essentially divided three main area Logic play fundamental role computer science
+Some key area logic particularly significant formerly called recursion theory
+The based concept defined logician mathematician
+Church first showed existence algorithmically unsolvable problem using notion
+Turing gave first compelling analysis called mechanical procedure asserted found Turing analysis perfect
+In addition major area theoretical overlap logic computer science One first application use term Logic Theorist system developed Shaw
+One thing logician take set statement logic deduce conclusion additional statement must true law logic
+For example If given logical system state All human mortal Socrates human valid conclusion Socrates mortal
+Of course trivial example
+In actual logical system statement numerous complex
+It realized early kind analysis could significantly aided use computer
+The Logic Theorist validated theoretical work influential work mathematical logic called
+In addition subsequent system utilized logician validate discover new logical theorem proof
+There always strong influence mathematical logic field
+From beginning field realized technology automate logical inference could great potential solve problem draw conclusion fact
+Ron Brachman described FOL metric AI knowledge representation formalism evaluated
+There general powerful known method describing analyzing information FOL
+The reason FOL simply used computer language actually expressive sense FOL easily express statement computer matter powerful could ever solve
+For reason every form knowledge representation sense trade expressivity computability
+The expressive language closer FOL likely slower prone infinite loop
+For example IF THEN rule used limited subset FOL
+Rather arbitrary formula full range logical operator starting point simply logician refer
+As result computability quite good especially take advantage optimization algorithm compilation
+Another major area research logical theory software engineering
+Research project Programmer Apprentice program applied logical theory validate correctness software specification
+They also used transform specification efficient code diverse platform prove equivalence implementation specification
+This formal transformation driven approach often far effort traditional software development
+However specific domain appropriate formalism reusable template approach proven viable commercial product
+The appropriate domain usually weapon system security system real time financial system failure system excessively high human financial cost
+An example domain process designing chip used CPU critical component digital device
+An error chip catastrophic
+Unlike software chip ca patched updated
+As result commercial justification using formal method prove implementation corresponds specification
+Another important application logic computer technology area automatic classifier
+rigid semantics
+Definitions directly mapped set theory predicate calculus
+This allows specialized theorem provers called classifier analyze various declaration set subset relation given model
+In way model validated inconsistent definition flagged
+The classifier also infer new information example define new set based existing information change definition existing set based new data
+The level flexibility ideal handling ever changing world Internet
+Classifier technology built top language allow logical semantic level existing Internet
+This layer called
+used reasoning
+
+December December December December Thomas Jones PhD Candidate Our office hour Monday Friday excluding official UNM holiday
+Main Office Room University New Mexico Department Computer Science University New Mexico Albuquerque NM Give UNM Computer Science The University New Mexico Albuquerque NM New Mexico Flagship University
+
+This focus important community issue innovative solution societal challenge people group making impact technology
+The chart tell quite story
+That blue line one look like hockey stick show interest computer science freshman University Washington Seattle skyrocketed since compared engineering field
+The UW alone
+Countless university Harvard Stanford University Michigan seeing similar demand computer science degree
+On surface encouraging trend tech industry get enough new engineer
+But beneath surface problem College student want become computer scientist many case enough room faculty meet demand
+Young adult today realizing computer science knowledge help succeed software developer nearly job
+Heck even journalist like u take Javascript HTML course
+Kids waking said Bill Melinda Gates Chair Computer Science Engineering UW
+Every field becoming information field program level beyond intro course huge value It also becoming popular thing learn
+Yep geek cool today world
+Students feel computing socially relevant even hip said computer science department chair Harvey Mudd College
+But may encouraging see many young mind yearning build technology change world solution insane demand
+In search potential fix growing problem GeekWire spoke computer science professor nation top university expert like Hadi Partovi Washington STEM Chief Policy Officer leading new coding trade school
+What found short university appear prepared demand much planned future
+There hope
+The nascent online education industry could provide help program like proving beneficial want crash course coding outside typical university system
+But much need done satisfy unprecedented demand computer science education
+This first time explosion computer science interest
+Back mid surge advent personal computer
+Some argue university tried apply fix keep demand strategy ultimately led substantial fall year later
+Then big boom late
+Students saw entrepreneur creating website made millionaire wanted
+There small number case actually happening alumnus helped fuel frenzy said Harvey Mudd computer science chair
+It something like every college basketball player thinking going play But bubble burst leading another steep reduction computer science degree
+Now seeing third surge though one differs greatly previous spike
+What happened financially driven interest today appears coming new technology particularly seeing power smartphones
+This time around I see student choosing major computer science genuinely excited said
+Good job almost certainly factor decision many case I see fewer dollar sign student eye enthusiasm contribute something meaningful society cool former Stanford computer science department associate chair also cited employer graduate computer science background
+He said latest surge It idea uncertain time people looking best stable education ensure least job Roberts explained
+It le Wow I could become billionaire like saw Lazowska Roberts gave last month nuance particular wave computer science major
+They found huge spike demand major introductory course enrollment computer science course realize need computer science skill particular field
+This vastly outstrips previous enrollment peak late Lazowska said
+The graph show Lazowska talking
+Here increasing demand introductory course pas popular intro class Harvard example And increasing demand major Finally increasing demand So begs question What university crazy level interest
+There simple answer question Increase classroom size hire faculty
+However easier said done
+At private institution adding space faculty doable stronger funding
+At Stanford percent student take computer science course school place cap program
+If say people want study certain subject Stanford historically expected figure way accommodate
+university difficult time
+The UW example expand computer science program two year ago constrained funding state government
+We turning away many student love Lazowska said
+That Lazowska offered bevy potential crappy solution increasing demand That last idea online education something many agree continue grow used every level education including university
+Partovi technology veteran help expose computer science million kid big believer learning code online
+The good news absolute best university course computer science also available study online via platform EdX Coursera Partovi said
+Although online course completion rate course motivated student access university program due rising tuition cost shortage spot program still available But online class may provide cheaper accessible solution Lazowska warned computer science education without interaction simply good enough
+He said lesson UW student learn working small team class invaluable another reason increasing class size could detrimental implication quality learning
+We send student Amazon Facebook Microsoft Google team design experience said
+You may get knowledge data structure Coursera much le obvious learn work collaborate small trade school also pointed inefficiency online education
+Learning code frustrating lonely said
+Graduation rate full online course single digit Having company like Code Fellows another potential alternative solution computer science degree
+The program one growing number organization teach intensive coding bootcamps take traditional route learning computer science university level
+It growing rapidly ever since launching two year ago attractive guarantee job graduation
+Smith explained group like Code Fellows also flexibility university respond customer demand hearing feedback hiring partner perspective student understand technology relevant workplace
+I think trade school like Code Fellows going huge part solution bridging gap demand supply software engineer ability learn quickly efficiently higher quality team expert guiding said
+But advisor previously worked Microsoft startup said something like Code Fellows place tech ecosystem really replacement quality education someone receive university level
+No matter smart way get breadth depth education university would something like bootcamp said Verespej earned Masters Computer Science UC San Diego
+It If case perhaps university get creative way teach computer science
+Chief Policy Officer said one solution could collaboration business higher education
+She pointed University Maryland Lockheed Martin one example
+These partnership leverage industry faculty teach course design curriculum provide internship research project benefit enabling student get experience industry exposure earning degree key factor looking full time work King said
+Or colleague John Cook suggested year ago maybe time Seattle bankrolled technology investor
+Lazowska however said raising money program would extremely difficult
+He also expressed serious doubt would succeed
+People always talk creating MIT creating Stanford creating Georgia Tech Lazowska said
+Those university
+There never instance one created becoming truly excellent le Roberts former Stanford computer science department head still teach class Palo Alto said like idea special institution teaching essential part field describes Hogwarts School Software He noted industry may persuaded fund something like much like Lockheed Martin partnering University Maryland
+But hopeful optimistic solution university level
+In fact expects academic institution able produce enough worker may lead downturn economy
+Roberts compared dilemma global warming
+We know problem something requires individual sacrifice even though downstream benefit shared said
+It classic tragedy common problem
+The entire economics structure go finding good way keep teacher employed reasonable Roberts cautioned problem fixed obvious solution
+He said simply existing faculty teach student dilutes quality education student end receiving eventually diminish quality computer science graduate going workforce dire need
+Roberts noted something similar happened surge
+Every fix try impose end making environment le interesting positive people need said
+If remember happened I quite sure repeat When asked workplace demand computer programmer coming college Partovi shared image
+The number bit staggering Bureau Labor Statistics predicts million job student six year
+This critical issue university many company
+veteran recruiter Director Talent Madrona Venture Group said certainly computer science graduate five year ago enough
+It still meet demand today employer said
+Partovi note Washington state time open job graduate
+King executive Washington STEM stressed importance computer science education meeting demand future job
+Computer science job growing pay well
+Students know code access best paying fastest growing job nation Washington said
+It imperative every young person option particularly girl student color student rural area tend left computer science education hence wonder tech company trouble recruiting retaining diverse But unfortunately one really clear answer university adapt fill job particularly looking year road
+With program like Washington STEM pushing forward computer science education expect even high school senior likely support parent wating study programming college
+Harvey Mudd said ultimately people power control much money funneled school
+My advice would folk control university budget Invest resource allow computer science department meet demand qualified student said
+This investment pay dividend satisfaction student ultimately There may hope horizon
+Perhaps government allocate fund allow school hire faculty
+Maybe high individual like donate money help educate tomorrow leader
+It hard know solution I see resource said Roberts former Stanford computer science associate chair
+But keep talking
+I hope wake people
+There hope always This part GeekWire underwritten Singh Family Foundation business leader Steve Singh focusing important community issue innovative solution societal challenge people group making impact technology
+Do idea future installment
+Contact Lisa Stiffler
+Subscribe GeekWire free newsletter catch every headline Have scoop like GeekWire cover
+Let u know
+Catch every headline inbox
+
+MIT NSE Nuclear Information Hub The word criticality used extensively medium coverage
+Criticality nuclear term refers balance neutron system
+Subcritical refers system loss rate neutron greater production rate neutron therefore neutron population number The word criticality used extensively medium coverage
+Criticality nuclear term refers balance neutron system
+Subcritical refers system loss rate neutron greater production rate neutron therefore neutron population number neutron decrease time go
+Supercritical refers system production rate neutron greater loss rate neutron therefore neutron population increase
+When neutron population remains constant mean perfect balance production rate loss rate nuclear system said The criticality system calculated comparing rate neutron produced fission source rate lost absorption leakage reactor core
+A nuclear reactor system control criticality balance neutron
+The power reactor directly proportional neutron population
+If neutron system fission take place producing energy
+When reactor starting neutron population increased slowly controlled manner neutron produced lost nuclear reactor becomes supercritical
+This allows neutron population increase power produced
+When desired power level achieved nuclear reactor placed critical configuration keep neutron population power constant
+Finally shutdown reactor placed subcritical configuration neutron population power decrease
+Therefore reactor said gone critical actually mean stable configuration producing constant power
+A reactor maintained critical normal power operation
+In system spent fuel pool mechanism place prevent criticality
+If system still achieves criticality called
+Boron material absorb neutron place make sure occur
+The added neutron absorber substantially increase rate loss neutron ensure subcritical system
+Most type light water reactor like BWRs Japan use water cool reactor also slow neutron
+In system slower neutron cause majority fission reaction
+Therefore water boil neutron slow much probability fission reaction power decrease thus putting nuclear system subcritical state
+If water heat vaporizes BWR reactor spent fuel pool without cooling temperature increase water eventual vaporization water tend place system subcritical condition
+There also large amount boron system control rod reactor various kind boron spent fuel pool
+Additionally steel structure supporting spent fuel pool sometimes made borated steel also contains large amount boron
+Even fuel melt new geometric configuration likely favorable slowing neutron unlikely even water reintroduced system
+Like Required field marked
+
+In property
+Their macroscopic behaviour thus display spatial temporal characteristic without need tune control parameter precise value system effectively tune evolves towards criticality
+The concept put forward BTW paper published considered one mechanism arises nature
+Its concept enthusiastically applied across field diverse others
+SOC typically observed slowly driven system extended high level
+Many individual example identified since BTW original paper date known set general characteristic system display SOC
+criticality one number important discovery made related field latter half century discovery relate particularly study nature
+For example study early discovery extensive work made clear complexity could generated feature extended system simple local interaction
+Over similar period time large body work showed much complexity nature could described certain ubiquitous mathematical law extensive study carried showed phenomenon emerged phase
+However term Criticality firstly introduced paper clearly linked together factor simple shown produce several characteristic feature observed natural complexity geometry way could linked
+Crucially however paper emphasized complexity observed emerged robust manner depend finely tuned detail system variable parameter model could changed widely without affecting emergence critical behaviour hence criticality
+Thus key result BTW paper discovery mechanism emergence complexity simple local interaction could therefore plausible source natural something possible lab lab computer possible tune control parameter precise value
+The publication research sparked considerable interest theoretician experimentalists important paper subject among cited paper scientific literature
+Due BTW metaphorical visualization model new sand grain slowly sprinkled cause avalanche much initial experimental work tended focus examining real avalanche famous extensive study probably Oslo ricepile experiment
+Other experiment include carried pattern vortex
+Early theoretical work included development variety alternative dynamic distinct BTW model attempt prove model property analytically including calculating examination necessary condition SOC emerge
+One important issue latter investigation whether required local dynamical exchange model answer general minor reservation exchange dynamic BTW require local conservation least average
+In long term key theoretical issue yet resolved include calculation possible SOC behaviour question whether possible derive general rule determining arbitrary display SOC
+Alongside largely approach many investigation centered around natural social system known suspected display behavior
+Although approach always welcomed least initially specialist subject examined SOC nevertheless become established strong candidate explaining number natural phenomenon including long SOC discovered known source behavior describing statistical distribution earthquake size describing frequency aftershock model displayed SOC proposed analyzed prior BTW paper fluctuation economic system reference SOC common neuronal avalanche cortex noise amplitude envelope electrophysiological signal SOC invoked example dynamical mechanism behind theory put forward
+These applied investigation SOC included attempt modelling either developing new model adapting existing one specific given natural system extensive data analysis determine existence characteristic natural scaling law
+The recent excitement generated raised interesting new question research number different SOC model shown generate network emergent phenomenon opposed simpler model proposed network researcher network tends assumed exist independently physical space dynamic
+While many single phenomenon shown exhibit scale free property narrow range far extensive data concern surface area globular protein plotted modular segment centered specific amino acid length L L
+Because fractal linearity hold amino acid range exists independently model
+It regarded basic mechanism life
+These study quantify differential geometry protein resolve many evolutionary puzzle regarding biological emergence complexity
+Despite considerable interest research output generated SOC hypothesis remains general agreement regard mathematical mechanism
+Bak Tang Wiesenfeld based hypothesis behavior sandpile model
+However model subsequently shown actually generate noise rather noise
+Other simulation model proposed later could produce true noise experimental sandpile model observed yield noise
+In addition nonconservative theoretical model mentioned theoretical model SOC based upon
+In chronological order development
+

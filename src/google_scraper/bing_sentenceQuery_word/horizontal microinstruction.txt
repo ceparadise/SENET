@@ -1,0 +1,348 @@
+technique imposes interpreter hardware architectural level computer
+As microcode layer instruction implement instruction internal sequencing many element
+Microcode used well specialized processor hardware
+Microcode typically resides special memory translates machine instruction data input sequence detailed operation
+It separate machine instruction underlying instruction designed altered freely
+It also facilitates building complex instruction reducing complexity computer circuit
+Writing microcode often called microcode particular processor implementation sometimes called
+More extensive microcoding allows small simple powerful architecture wider relatively simple way achieve software compatibility different product processor family
+Some hardware vendor especially use term synonym
+In way code within device termed regardless microcode example said microcode updated though typically contain microcode firmware
+When compared normal application program element composing microprogram exist lower conceptual level
+To avoid confusion element differentiated prefix microinstruction microassembler microprogrammer etc
+Engineers normally write microcode design phase processor storing ROM PLA structure combination
+However machine also exist microcode stored
+This traditionally denoted context computer either
+In latter case CPU initialization process load microcode control store another storage medium possibility altering microcode correct bug instruction set implement new machine instruction
+Complex digital processor may also employ one possibly order delegate must performed essentially asynchronously parallel
+A programmer even programmer normally see change microcode
+Unlike machine code often retains among different processor family microcode run exact designed constitutes inherent part particular processor design
+Microprograms consist series microinstructions control CPU fundamental level hardware circuitry
+For example single typical microinstruction might specify following operation To simultaneously control processor feature one cycle microinstruction often wider bit bit emulator feature
+Microprograms carefully designed optimized fastest possible execution slow microprogram would result slow machine instruction degraded performance related application program use instruction
+Microcode originally developed simpler method developing control logic computer
+Initially CPU
+Each step needed fetch decode execute machine instruction including operand address calculation read writes controlled directly rather minimal state machine circuitry
+While efficient need powerful instruction set addressing complex operation made processor difficult design debug highly encoded instruction contribute well especially irregular encoding used
+Microcode simplified job allowing much processor behaviour programming model defined via microprogram routine rather dedicated circuitry
+Even late design process microcode could easily changed whereas CPU design cumbersome change
+Thus greatly facilitated CPU design
+From late large portion programming done instruction mean greater programmer productivity important advantage microcode relative ease powerful machine instruction defined
+The ultimate extension Directly Executable High Level Language design statement language entirely directly executed microcode without compilation
+The Fountainhead Processor example
+During CPU speed grew quickly memory speed numerous technique used alleviate
+machine instruction made possible microcode helped fewer complex machine instruction require le memory bandwidth
+For example operation character string done single machine instruction thus avoiding multiple instruction fetch
+Architectures instruction set implemented complex microprograms included
+The approach increasingly complex instruction set later called
+An alternate approach used many use instead combinational logic mainly instruction decoding let simple state machine without much microcode sequencing
+The example microprocessor using PLA instruction decode sequencing
+The PLA visible photomicrograph chip operation seen simulation
+Microprogramming still used modern CPU design
+In case microcode debugged simulation logic function substituted control store
+Logic function often faster le expensive equivalent microprogram memory
+A processor microprograms operate primitive totally different much architecture assembly instruction visible normal programmer
+In coordination hardware microcode implement architecture
+The underlying hardware need fixed relationship visible architecture
+This make easier implement given instruction set architecture wide variety underlying hardware
+The IBM architecture register implementation actually use hardware implemented much simpler underlying microarchitecture example data path arithmetic logic unit ALU main memory implemented register special unit data path ALU data path main memory also implemented register special unit core memory
+The full data path implement register special unit core memory
+The Model Model larger data path implement register faster transistor circuit
+In way microprogramming enabled IBM design many model substantially different hardware spanning wide range cost performance making architecturally compatible
+This dramatically reduces number unique system software program must written model
+A similar approach used Digital Equipment Corporation DEC VAX family computer
+As result different VAX processor use different microarchitectures yet architecture change
+Microprogramming also reduces cost field change correct defect processor bug often fixed replacing portion microprogram rather change made wiring
+In design introduced concept control store way simplify computer design move beyond method
+The control store lattice one dimension accepts control time pulse CPU internal clock connects control signal gate circuit
+A pulse distributor take pulse generated CPU clock break eight separate time pulse activates different row lattice
+When row activated activates control signal connected
+Described another way signal transmitted control store played much like roll
+That controlled sequence wide word constructed played sequentially
+In control store however song short repeated continuously
+In enhanced concept adding concept akin computer software
+His initial implementation consisted pair matrix first one generated signal manner Whirlwind control store second matrix selected row signal microprogram instruction word speak invoke next cycle
+Conditionals implemented providing way single line control store could choose alternative second matrix
+This made control signal conditional detected internal signal
+Wilkes coined term describe feature distinguish simple control store
+Each microinstruction microprogram provides bit control functional element internally compose CPU
+The advantage CPU internal CPU control becomes specialized form computer program
+Microcode thus transforms complex electronic design challenge control CPU le complex programming challenge
+To take advantage CPU divided several part There may also used access main
+Together element form
+Most modern several execution unit
+Even simple computer usually one unit read write memory another execute user code
+These element could often brought together single chip
+This chip come fixed width would form slice execution unit
+These known chip
+The family one best known example bit slice element
+The part execution unit execution unit interconnected bundle wire called
+Programmers develop microprograms using basic software tool
+A allows programmer define table bit symbolically
+Because close relationship underlying architecture microcode several property make difficult generate using compiler
+A program intended execute bit way electronics allows much freedom debug microprogram
+After microprogram finalized extensively tested sometimes used input computer program construct logic produce data
+This program similar used optimize
+No known computer program produce optimal logic even good logic vastly reduce number transistor number required ROM control store
+This reduces cost producing electricity consumed CPU
+Microcode characterized referring primarily whether microinstruction control CPU element little decoding horizontal microcode requires extensive decoding vertical microcode
+Consequently horizontal microinstruction wider contains bit occupies storage space vertical microinstruction
+Horizontal microcode several discrete combined single microinstruction simultaneous operation
+Horizontal microcode typically contained fairly wide control store uncommon word bit
+On tick sequencer clock microcode word read decoded used control functional element make CPU
+In typical implementation horizontal microprogram word comprises fairly tightly defined group bit
+For example one simple arrangement might For type micromachine implement JUMP instruction address following opcode microcode might require two clock tick
+The engineer designing would write microassembler source code looking something like For tick common find portion CPU used remaining group bit microinstruction
+With careful design hardware microcode property exploited parallelise operation use different area CPU example case ALU required first tick could potentially used complete earlier arithmetic instruction
+In vertical microcode microinstruction significantly encoded bit field generally pas intermediate combinatory logic turn generates actual control sequencing signal internal CPU element ALU register etc
+This contrast horizontal microcode bit field either directly produce control sequencing signal minimally encoded
+Consequently vertical microcode requires smaller instruction length le storage requires time decode resulting slower CPU clock
+Some vertical microcode assembly language simple conventional computer emulating complex computer
+Some processor processor CMOS microprocessor later IBM mainframe mainframe term used Alpha processor term used IBM mainframe microprocessor
+This form machine code access special register hardware resource available regular machine code used implement instruction function page table walk Alpha processor
+Another form vertical microcode two field The selects part CPU controlled word control store
+The actually control part CPU
+With type microcode designer explicitly chooses make slower CPU save money reducing unused bit control store however reduced complexity may increase CPU clock frequency lessens effect increased number cycle per instruction
+As transistor became cheaper horizontal microcode came dominate design CPUs using microcode vertical microcode used le often
+When vertical horizontal microcode used horizontal microcode may referred
+A computer built using writable microcode
+In design rather storing microcode ROM logic microcode stored RAM called
+Such computer sometimes called
+Many experimental prototype computer use writable control store also commercial machine use writable microcode early workstation Nautilus family number IBM implementation DEC machine
+Many machine offer writable control store option including DEC series
+The IBM includes facility called invoked console part another processor complex
+Some commercial machine example IBM storage writable control store microcode
+WCS offer several advantage including ease patching microprogram certain hardware generation faster access ROMs provide
+WCS allows user optimize machine specific purpose
+Starting several Intel CPUs writable microcode
+This example allowed bug Intel microcode fixed patching microprograms rather requiring entire chip replaced
+The design trend toward heavily microcoded processor complex instruction began early continued roughly
+At point design philosophy started becoming prominent
+A CPU us microcode generally take several clock cycle execute single instruction one clock cycle step microprogram instruction
+Some processor include instruction take long time execute
+Such variation interfere far important modern system
+When designing new processor RISC following advantage microcoded CISC There counterpoint well Many RISC processor designed execute every instruction long cache single cycle
+This similar way CPUs microcode execute one microinstruction per cycle
+VLIW processor instruction behave similarly wide horizontal microcode although typically without control hardware provided microcode
+RISC instruction sometimes similar narrow vertical microcode
+Microcoding popular processor
+
+What would like
+Would like merge question
+Would like make primary merge question
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+Supervisor CONTRIBUTIONS What would like
+What would like
+
+obj stream úíMâ Ôlô R Z ryH
+cvR e S Ù H TAxìö Jj ª çúéç ÚbÞÁ
+N endobj obj endobj obj stream ñ öý Ú G e endobj obj endobj obj stream P Q ÚnÚd mwWR
+
+Choose Language Posted Related Posts Comments Our Apps Gradeup Apps Exams Which exam preparing
+
+learn share knowledge build career
+I come across many NoSQL database SQL database
+There varying parameter measure strength weakness database scalability one
+What difference horizontally vertically scaling database
+pool resource whereas
+An easy way remember think machine server rack add machine across direction add resource machine direction
+In database world often based partitioning data
+node contains part data data resides single node scaling done
+spreading load CPU RAM resource machine
+With often easier scale dynamically adding machine existing pool often limited capacity single machine scaling beyond capacity often involves downtime come upper limit
+A good example horizontal scaling Cassandra MongoDB good example vertical scaling MySQL Amazon RDS The cloud version MySQL
+It provides easy way scale vertically switching small bigger machine
+This process often involves downtime
+Data Grids often optimized horizontal vertical scaling simply bound disk
+partitioning support
+You read subject earlier post Horizontal scalability ability increase capacity connecting multiple hardware software entity work single logical unit
+When server clustered original server scaled horizontally
+If cluster requires resource improve performance provide high availability HA administrator scale adding server cluster
+An important advantage horizontal scalability provide administrator ability increase capacity fly
+Another advantage theory horizontal scalability limited many entity connected successfully
+The distributed storage system Cassandra example run top hundred commodity node spread across different data center
+Because commodity hardware scaled horizontally Cassandra fault tolerant single point failure SPoF
+Vertical scalability hand increase capacity adding resource memory additional CPU machine
+Scaling vertically also called scaling usually requires downtime new resource added limit defined hardware
+When Amazon RDS customer need scale vertically example switch smaller bigger machine Amazon largest RDS instance GB memory
+Scaling horizontally advantage disadvantage
+For example adding inexpensive commodity computer cluster might seem solution first glance important administrator know whether licensing cost additional server additional operation cost powering cooling large footprint occupy data center truly make scaling horizontally better choice scaling vertically
+Horizontal Scaling also referred basically addition machine setting cluster distributed environment software system
+This usually requires program component standard tier architectural model
+responsible distribute user request load among various cluster
+Each machine run copy software hence capable servicing request
+This one various function load balancer may performing
+Another common responsibility load balancer us protocol exchange heartbeat message server ensure running fine
+distributes load maintaining state machine many request served machine machine idle machine queued request etc
+So load balancing algorithm considers thing redirecting request appropriate server machine
+It also take account network overhead might choose server nearest provided available service request
+The also done different way Load Balancer always act intermediary program every response In case request handed server load balancer response server user go load balancer
+So server machine actually servicing request never directly interface user machine running client application
+The machine hosting load balancer program handling user
+Load Balancer act intermediary response coming server machine In case server received request bypass load balancer communicates response directly client
+Setting cluster interface client application really complete architecture design
+There still lot critical question answered number key design decision made affect overall property system
+We first need identify business goal area would like add value
+These goal give rise various requirement
+We ask various question respect different systemic property
+Will design address performance requirement
+What performance characteristic care
+Is overall system throughput interested serving maximum number request given time
+Or system response time design sending back response client le time possible
+Both many type performance characteristic related
+Will design address availability requirement
+Is system
+If degree
+Is design reliable
+Does impact correctness
+We forget correctness implicit goal system
+Are really meeting scalability goal
+Might achieving immediate one going happen long run
+All kind requirement quantifiable measure associated
+We make important design decision questioning developing prototype refining design
+Firstly using approach distribute load horizontally scale system
+Do various server node communicate
+If yes system address situation one node go permanently temporarily
+If yes system address situation network connecting node node running
+Most importantly differentiate two situation
+How
+All make distributed system interesting challenging design implement
+Vertical Scaling also referred approach attempt increase capacity single machine By adding processing power By adding storage More memory etc Summary What important understand difference scaling approach identify suit requirement see application really fit model choose
+As would understood horizontal scaling come overhead form cluster setup management maintenance cost complexity
+The design get increasingly complex programming model change
+So simply throwing new hardware adding node machine way start
+First see requirement met increasing capacity tuning characteristic single machine
+If go approach combination
+There additional architecture mentioned database service enable horizontal scaling without complexity manual sharding
+These service sharding background enable run traditional SQL database scale like would NoSQL engine like MongoDB CouchDB
+Two service I familiar PostgreSQL MySQL
+I saw Xeround explains SQL database difficult differently treat grain salt vendor post
+Also check Wikipedia nice explanation SQL NoSQL service list vendor scaling option combination
+Yes scaling horizontally mean adding machine also implies machine equal cluster
+MySQL scale horizontally term Reading data use replica reach capacity server begin sharding data across server
+This becomes increasingly complex
+Often keeping data consistent across replica problem replication rate often slow keep data change rate
+Couchbase also fantastic NoSQL Horizontal Scaling database used many commercial high availability application game arguably highest performer category
+It partition data automatically across cluster adding node simple use commodity hardware cheaper vm instance using Large instead High Mem High Disk machine AWS instance
+It built Membase Memcached add persistence
+Also case Couchbase every node read writes equal cluster failover replication full dataset replication across server like mySQL
+see excellent Cisco benchmark Here great blog post Couchbase Architecture Traditional relational database designed database system
+They scaled horizontally process tends complex error prone
+NewSQL database likeNuoDB distributed database system designed scale horizontally maintaining property traditional RDBMS
+For information NuoDB read technical whitepaper
+SQL database like Oracle also support Horizontal scaling Shared disk cluster
+For example Oracle RAC IBM purescale Sybase ASE Cluster edition
+New node added Oracle RAC system purescale system achieve horizontal scaling
+But approach different noSQL database like mongodb CouchDB IBM Cloudant data sharding part Horizontal scaling
+In noSQL database data shraded horizontal scaling
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+What vertical microinstruction
+Ans A vertical microinstruction microinstruction state one sequence operation required carry machine language instruction
+Vertical microinstructions short bit instruction
+They called vertical normally listed vertically page
+These bit microinstructions instruction needed carry one machine language instruction
+In addition vertical microinstructions horizontal diagonal microinstructions well Â
+
+Get grade money back bullet bullet Delivered time Get grade money back bullet bullet Delivered time Trusted Students Since This essay submitted student
+This example work written professional essay writer
+Any opinion finding conclusion recommendation expressed material author necessarily reflect view UK Essays
+Each microinstruction microprogram provides bit control functional element internally compose CPU
+The advantage CPU internal CPU control becomes specialized form computer program
+Microcode thus transforms complex electronic design challenge control CPU programming challenge
+Microcode layer instruction data structure involved implementation higher level machine code instruction many computer processor resides special memory translates machine instruction sequence detailed operation
+It help separate machine instruction underlying electronics instruction designed altered freely
+It also make feasible build complex instruction still reducing complexity electronic circuitry compared method
+Writing microcode often called microprogramming microcode particular processor implementation sometimes called microprogram
+Microcode characterized horizontal vertical
+This refers primarily whether microinstruction directly control CPU element horizontal microcode requires subsequent decoding combinational logic vertical microcode
+Consequently horizontal microinstruction wider contains bit occupies storage space vertical microinstruction
+Modern microcode normally written engineer processor design phase stored ROM PLA structure although machine exist writable microcode SRAM flash memory
+Microcode generally visible changeable normal programmer even assembly programmer
+Some hardware vendor especially IBM use term synonym firmware code device whether microcode machine code termed microcode hard drive instance typically contain
+Microcode originally developed simpler method developing control logic computer
+Initially CPU instruction set hard wired
+Each step needed fetch decode execute machine instruction including operand address calculation read writes controlled directly combinatorial logic rather minimal sequential state machine circuitry
+While efficient need powerful instruction set addressing complex operation see made processor difficult design debug highly encoded instruction contribute well especially irregular encoding used
+Ans
+All advantage disadvantage information technology essential know information technology exactly come play important role daily life
+Today information technology involves computer literacy also take account computer work computer used information processing also communication problem solving task well
+Globalization IT brought world closer together allowed world economy become single interdependent system
+This mean share information quickly efficiently also bring barrier linguistic geographic boundary
+The world developed global village due help information technology allowing country like Chile Japan separated distance also language share idea information
+Communication With help information technology communication also become cheaper quicker efficient
+We communicate anyone around globe simply text messaging sending email almost instantaneous response
+The internet also opened face face direct communication different part world thanks help video conferencing
+Cost effectiveness Information technology helped computerize business process thus streamlining business make extremely cost effective money making machine
+This turn increase productivity ultimately give rise profit mean better pay le strenuous working condition
+Bridging cultural gap Information technology helped bridge cultural gap helping people different culture communicate one another allow exchange view idea thus increasing awareness reducing prejudice
+More time IT made possible business open globe
+This mean business open anytime anywhere making purchase different country easier convenient
+It also mean good delivered right doorstep move single muscle
+Creation new job Probably best advantage information technology creation new interesting job
+Computer programmer Systems analyzer Hardware Software developer Web designer many new employment opportunity created help IT
+Ans
+A large number software standard developed concerned software product process terminology general fraework standard
+While need software standard disputed felt many standard fail take account essential difference occasionally similarity software product process engineering product process
+Ideally standard useful testable represent consensus view
+It appears software standard fall significantly short objective
+Further progress developing useful software standard requires better understanding potential benefit standard offer software industry
+The relevant issue discussed next step taken developing software standard suggested
+Ans
+Addressing mode aspect instruction set architecture central processing unit CPU design
+The various addressing mode defined given instruction set architecture define machine language instruction architecture identify operand operand instruction
+An addressing mode specifies calculate effective memory address operand using information held register constant contained within machine instruction elsewhere
+In computer programming addressing mode primarily interest compiler writer write code directly assembly language address Effective PC address address The effective address absolute instruction address address parameter modification
+load reg address Effective address address given instruction This requires space instruction quite large address
+mul This addressing mode effective address considered addressing mode computer
+In example operand register result placed register
+add constant constant This addressing mode effective address considered addressing mode computer
+The constant might signed unsigned
+clear carry bit The implied addressing mode explicitly specify effective address either source destination sometimes
+Either source destination effective address sometimes implied opcode
+load reg address Effective address address content specified index register This also requires space instruction quite large address
+The address could start array vector index could select particular array element required
+The processor may scale index register allow size array element
+PART B There two main difference array stack
+Firstly array stack strictly
+Secondly array allows direct access element whereas stack element directly accessible access element stack must go order get one want
+Ans
+An Assembler convert Assembly instruction executable machine language
+A Compiler convert higher level programming language instruction Assembly instruction turned executable machine language
+Most Compilers allow generation object code Assembly instruction set generated Compiler
+Some older Compilers allow Assembly instruction fine tuned programmer
+Compiled programming language typically generate many line Assembly instruction program statement
+Some programming language ANSI C close Assembly others Java result many Assembly instruction per program statement
+Most Compilers highly optimized would difficult human programmer improve efficiency output
+Assembly level instruction difficult someone trained Assembly read comprehend
+
+Out Linear Binary Search one preferred
+Ans
+Binary Search Binary Search code take le
+execution save time
+But linear search executes full time whenever search may give result
+A binary search algorithm locating position element sorted list
+It inspects middle element sorted list equal sought value position found otherwise upper half lower half chosen searching based whether sought value greater le middle element
+The method reduces number element needed checked factor two time find sought value exists list determines present logarithmic time
+A binary search dichotomist divide conquer search algorithm
+Take look essay writing service Our Dissertation Writing service help everything full dissertation individual chapter
+Our Marking Service help pick area work need improvement
+Fully referenced delivered time
+Get extra support require
+If original writer essay longer wish essay published UK Essays website please click link request removal Copyright UK Essays trading name All Answers Ltd company registered England Wales
+Company Registration No
+VAT Registration No
+Registered Data Controller No
+Registered office Venture House Cross Street Arnold Nottingham Nottinghamshire
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R R R endobj obj R stream Â ÞZÀ µ Ú á ÀÞÀÏ aÛ ü Á
+h endstream endobj obj endobj obj R R R R R R R R R R endobj obj R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R endobj obj R R endobj obj R R endobj obj R R endobj obj R R endobj obj R R endobj obj R R endobj obj R endobj obj R endobj obj Bold R endobj obj R R endobj obj R endobj obj Bold R endobj obj R R endobj obj R R endobj obj endobj obj R stream Rò âKq AÙÄ J àÓz üÜ ßCm endstream endobj obj R endobj obj endobj obj R stream ÑK ªß ª Âc Ä Û uH G MÇ endstream endobj obj endobj obj R stream E ÎïUh þÓxnÉáÏ ác ÆcQ W Î D DÔ VKBà ÎC ÞÈé ýçrB
+ÙûV endstream endobj obj endobj obj R stream Ay ÐÞ
+ÚÊe Áx
+

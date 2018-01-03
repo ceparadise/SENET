@@ -1,0 +1,477 @@
+learn share knowledge build career
+I trying learn Reading code I came across line like What mean
+How putting word front function make different
+extension
+Typically tell compiler inline function extension ca say certainty unless know compiler
+To inline remove function call place content directly call would made
+This often remove overhead calling function
+It always optimal code bloat code getting big fitting cache compiler ignore inline directive feel best
+We human poor kind stuff usually considered bad practice tell compiler job
+Inlining important optimization especially presence helper function
+Imagine function returned smaller two ints If I used function code would enormous waste time actually make function call
+If I And compiler inlined function code would become Which remove overhead calling function
+From even optimization made compiler get work directly code would normally hidden behind function call
+As see I big function I force compiler inline everywhere code size could grow large fast would actually hinder execution speed
+There standard keyword used indicate compiler function inlined nowadays compiler even acknowledge hint inline function
+There important though useful
+If function marked multiple definition function across multiple translation unit error
+Instead single function definition selected others thrown assumed make sure okay
+This allows define function within header file without risking ODR violation error
+Inline suggestion compiler inline function instead generating block code function instruction wherever used effectively generated code wherever function called
+It typically suggestion increase performance called tight loop typically increase memory usage generally negative performance effect
+The compiler make mind whether inline function might take programmer suggests inlining account compiler simply declaring function inline guarantee
+In construct used tell perform particular function
+In word compiler insert complete body function every place code function used
+If writing header file included ISO program write instead
+See
+The declaration tell compiler wherever function called inline function instead
+Inlineing similar using macro code expanded written right called function
+See information
+basically hint compiler suggestion function used might possible insert code directly
+idea could efficient since avoids overhead function call ultimately compiler us combination code size optimization option specified little bit voodoo decide whether respect hint
+voodoo bit confusing part
+necessarily rely standard inline work optimize algorithm reorganize code instead really care speed
+By posting answer agree
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+In explanation
+They added purpose making source code easier human understand generally ignored
+The various programming language varies considerably
+Comments sometimes processed various way generate documentation external source code used integration system kind external
+The flexibility provided comment allows wide degree variability formal convention use commonly part guide
+Comments generally formatted either also called also called
+Block comment region source code may span multiple line
+This region specified delimiter delimiter
+Some programming language allow block comment recursively nested inside one another others
+Line comment either start comment delimiter continue end line case start specific column character line offset source code continue end line
+Some programming language employ block line comment different comment delimiters
+For example block comment delimited span multiple line line comment delimited
+Other language support one type comment
+For example comment line comment start continue end line
+How best make use comment subject dispute different commentator offered varied sometimes opposing viewpoint
+There many different way writing comment many commentator offer sometimes conflicting advice
+Comments used form outline intention prior writing actual code
+In case explain logic behind code rather code
+If type comment left simplifies review process allowing direct comparison code intended result
+A common logical fallacy code easy understand
+Comments used summarize code explain programmer intent
+According school thought restating code plain English considered superfluous need code may sign complex rewritten naming bad
+Comments may also used explain block code seem fit convention best practice
+This especially true project involving little development time bug fixing
+For example Sometimes source code contains novel noteworthy solution specific problem
+In case comment may contain explanation methodology
+Such explanation may include diagram formal mathematical proof
+This may constitute explanation code rather clarification intent others tasked maintaining code base may find explanation crucial
+This might especially true case highly specialized problem domain rarely used optimization construct
+For example programmer may add comment explain chosen instead former theory slower latter
+This could written follows diagram consisting construction inserted source code formatted comment
+Further notice embedded within source code comment
+Binary data may also encoded comment process known although practice uncommon typically relegated external resource file
+The following code fragment simple ASCII diagram depicting process flow script contained running
+Although section marking code appears comment diagram actually appears section technically considered distinct comment serve similar purpose
+Although identical diagram could easily included comment example illustrates one instance programmer may opt use comment way including resource source code
+Comments computer program often store metadata program file
+In particular many put submission guideline comment help people read source code program send improvement make back maintainer
+Other metadata includes name creator original version program file date first version created name current maintainer program name people edited program file far URL documentation use program name program file etc
+When algorithm section program based description book reference comment used give page number title book reference
+A common developer practice meaning add comment syntax causing block code become comment executed final program
+This may done exclude certain piece code final program commonly used find source error
+By systematically commenting running part program source error determined allowing corrected
+An example commenting code exclusion purpose The code fragment suggests programmer opted disable debugging option reason
+Many allow quick adding removing comment single menu option key combination
+The programmer mark part text want un comment choose appropriate option
+sometimes store documentation comment
+These may include insert position automatic header file inclusion command set file mode file
+These functional control comment also commonly referred
+Keeping documentation within source code comment considered one way simplify documentation process well increase chance documentation kept date change code
+Examples documentation generator include program use Java
+Forms supported
+implement similar feature called XML Comments read compiled assembly
+Occasionally syntax element originally intended comment convey additional information program
+Such hot comment may practical solution maintains widely regarded
+Sometimes comment source code used way relieve stress commenting development tool competitor employer working condition quality code
+The occurrence phenomenon easily seen online resource track source code
+There various normative view opinion regarding proper use comment source code
+Some informal based personal preference others published promulgated formal guideline
+Experts varying viewpoint whether comment appropriate source code
+Some assert source code written comment basis source code
+Others suggest code extensively commented uncommon character source code contained within comment
+In view assertion comment neither beneficial harmful matter correct kept sync source code omitted superfluous excessive difficult maintain otherwise unhelpful
+Comments sometimes used document contract approach programming
+Depending intended audience code consideration level detail description may vary considerably
+For example following Java comment would suitable introductory text designed teach beginning programming This level detail however would appropriate context production code situation involving experienced developer
+Such rudimentary description inconsistent guideline Good comment clarify intent
+Further professional coding environment level detail ordinarily meet specific performance requirement defined business operation
+There many stylistic alternative available considering comment appear source code
+For larger project involving team developer comment style either agreed upon project start evolve matter convention need project grows
+Usually programmer prefer style consistent easy modify difficult break
+The following code fragment C demonstrate tiny example comment vary stylistically still conveying basic information Factors personal preference flexibility programming tool consideration tend influence stylistic variant used source code
+For example Variation Two might disfavored among programmer automate alignment visual appearance text comment
+Software consultant technology commentator Allen Holub one expert advocate aligning left edge comment The use block comment delimiters inherited B programming language immediate predecessor C programming language
+In form text ASCII character end line ignored
+Different style chosen different area code individual line paragraph routine file program
+If syntax support line comment block comment one method use line comment minor comment declaration block edits use block comment describe abstraction function class file module
+Sometimes project try enforce rule like one comment every ten line
+These kind rule counterproductive rigorous may provide useful standard measurement consistency project participant deem necessary
+Inline comment using character part language
+However Dennis Ritchie BCPL B language chose use block comment instead
+This choice continued C language Ritchie successor Inline comment using reappeared successor C influenced adoption
+Programmers may use informal comment assist indexing common issue
+They may able searched common programming tool utility even within
+These sometimes referred codetags token
+Such tag differ widely might include Typographic convention specify comment vary widely
+Further individual programming language sometimes provide unique variant
+For detailed review please consult article
+The programming language us indicate comment end line
+For example This section code show two style comment used language
+This code fragment completely functioning program REM keyword used add comment describe program
+Any text line apostrophe character also treated comment BASICs including descendant
+An example Visual Basic This code fragment demonstrates use prologue comment block comment describe purpose
+The comment explains key term concept includes short signature programmer authored code
+Since also possible use syntax indicating comment
+The may used mark comment Cisco router configuration mode
+Such comment however saved contains displayed show run command
+By contrast following command insert content actually part configuration may saved The description command used add description configuration interface neighbor name parameter may used add remark static route
+Access list may also contain remark
+us comment similar instead two dash us three
+These comment caught ColdFusion engine printed browser
+This code fragment demonstrates comment used language
+A letter C column cause entire line treated comment
+Note column line otherwise treated four field label field cause line taken continuation previous statement declaration statement go
+This code fragment demonstrates comment used language comment describing basic formatting rule
+Line comment Haskell start two hyphen end line multiple line comment start end
+Haskell also provides method commenting known
+In line starting interpreted code everything else considered comment
+One additional requirement always leave blank line code block Literate programming also done Haskell using
+The code environment used instead Richard Bird style In style equivalent example code environment could defined LaTeX preamble
+Here simple definition later This code fragment show block comment used describe method
+The formatting consistent standard
+The comment designed read Javadoc processor
+us precede comment comment
+The programming language us single line comment similar way language
+Lua also block comment start run closing For example A common technique comment piece code enclose code In case possible reactivate code adding single hyphen first line In first example first line start long comment two hyphen last line still inside comment
+In second example sequence start ordinary comment first last line become independent comment
+In case outside comment
+In case last line becomes independent comment start
+Long comment Lua complex read section called Long string
+
+In programming language character indicates comment
+Multi line comment also available via bracket nested
+us nestable comment useful commenting code block
+In Niklaus Wirth family language including comment opened completed
+example In modern dialect Pascal used instead
+Line comment many begin hash symbol
+Instead regular block commenting construct Perl us markup language instance Perl us line comment POD Documentation comment regular see Perl section add configurable block comment type embedded comment
+These start hash character followed backtick opening bracketing character end matching closing bracketing character
+The content span multiple line also embedded inline
+Comments either style inline block use hash
+style adapted Javadoc common standard documenting PHP code
+Comments Comments use hash character two example code Specific block comment exist Python bare represented string could used
+In example triple string act way comment also treated Comments
+Single line commenting line start hash commenting comment go keywords begin end Comments SQL form using two dash The syntax also support alternative format specifying comment
+One format supported syntax identical block comment style used syntax Java
+comment begin two Multiline comment start followed asterisk end asterisk followed Multiline comment Swift nested inside multiline comment
+You write nested comment starting multiline comment block starting second multiline comment within first block
+The second block closed followed first block Comments HTML introduced spread several line terminator For example In comment viewable end user program
+In case section code commented may present security
+
+learn share knowledge build career
+I developer couple question always baffled
+Thanks Yes
+No inline function method exactly characteristic regular one important one type safe
+And yes assembly code generated compiler different regular function call translated several step pushing parameter stack making jump function popping parameter etc whereas call inline function replaced actual code like macro
+
+A macro simple text replacement lead severe error
+Consider following code Using inline function sure parameter evaluated function actually performed
+They also type checked eventually converted match formal parameter type
+Normally program execution faster using inline function bigger binary code
+For information read
+As suggested previous answer use keyword make code faster inlining function call often expense increased executables
+function mean substituting call target function actual code function filling argument accordingly
+However modern compiler good inlining function call automatically set high optimisation
+Actually compiler usually determining call inline speed gain human
+Additionally compiler request suit
+Compilers call function impossible inline
+using nontrivial recursion function pointer also function simply large meaningful performance gain
+However declaring inline function using keyword may actually satisfy One Definition Rule ODR This rule standard state given symbol may declared multiple time may defined
+If link editor linker encounter several identical symbol definition generate error
+One solution problem make sure compilation unit export given symbol giving internal linkage declaring
+However often better mark function instead
+This tell linker merge definition function across compilation unit one definition one address shared variable
+As example consider following program Note file include header file thus function definition
+Although file saved include guard double inclusion result two definition function albeit different compilation unit
+Now try link two compilation unit example using following command get error saying symbol function
+If however uncomment modifier front function definition code compiles link correctly
+special case inline regardless whether declared way
+This mean compiler inline violate ODR
+The true member function defined inside class struct
+Inline code work like macro essence actual real code optimized
+Very small function often good inlining work needed set function call load parameter proper register costly compared small amount actual work method
+With inlining need set function call code directly pasted method us
+Inlining increase code size primary drawback
+If code big fit CPU cache get major slowdown
+You need worry rare case since likely using method many place increased code would cause issue
+In summary inlining ideal speeding small method called many time many place place still fine though need go quite extreme example get significant code bloat
+Edit others pointed inlining suggestion compiler
+It freely ignore think making stupid request like inlining huge method
+Yes inline code involve function call saving register variable stack
+It us program space time
+So overall take le time execute branching processor saving state clearing cache etc
+Macros inline code share similarity
+big difference inline code specifically formatted function compiler future maintainer option
+Specifically easily turned function tell compiler optimize code space future maintainer end expanding using many place code
+What kind tradeoff must done choosing inline code
+It depends compiler Say dumb compiler
+By indicating function must inlined put copy content function occurrence called
+Advantage function call overhead putting parameter pushing current PC jumping function etc
+Can important central part big loop example
+Inconvenience inflates generated binary
+Is macro
+Not really compiler still check type parameter etc
+What smart compiler
+They ignore inline directive feel function big
+And perhaps automatically inline trivial function like simple
+Inline differs macro hint compiler compiler may decide inline code
+macro source code text generation compilation forced inlined
+Marking function inline mean compiler include called compiler chooses contrast macro expanded
+An inlined function appropriate debug symbol set allow symbolic debugger track source came debugging macro confusing
+Inline function need valid function macro well
+Deciding declare function inline largely space tradeoff program larger compiler decides inline particularly also static case least one copy required use external object indeed function large could result drop performance le code fit cache
+The general performance boost however getting rid overhead function call small function called part inner loop tradeoff make sense
+If trust compiler mark small function used inner loop liberally compiler responsible Doing The Right Thing deciding whether inline
+If marking code inline
+also telling compiler code executed inline ie
+code block le inserted called thus removing pushing popping jumping stack
+So yes recommended function suitable kind behavior
+inline like equivalent register
+Do bother compiler better job deciding optimize
+By inlining compiler insert implementation function calling point
+What removing function call overhead
+However guarantee candidate inlining actually inlined compiler
+However smaller function compiler always inline
+So function called many time limited amount code couple line could benefit inlining function call overhead might take longer execution function
+A classic example good candidate inlining getters simple concrete class
+Some compiler
+option aggressive inlining would need specify keyword using option
+I wo reiterate worth noting virtual function inlined function called resolved runtime
+Inlining usually enabled level optimization case GCC
+It significant speed improvement case possible
+Explicit inlining program add speed improvement cost incresed code size
+You see suitable code size speed decide wether include program
+You turn level optimization forget letting compiler job
+The answer inline come speed
+If tight loop calling function super huge function one lot time wasted CALLING function make function inline get lot bang buck
+First inline request compiler inline function upto compiler make inline
+inlining technique increase speed
+But use profiler test situation
+I found MSVC inlining always deliver certainly spectacular way
+Runtimes sometimes decreased percent slightly different circumstance increased percent
+If code running slowly get profiler find troublespots work
+I stopped adding inline function header file increase coupling give little return
+Inline code faster
+There need perform function call every function call cost time
+Disadvantage pas pointer inline function around function really exist function thus pointer
+Also function exported public
+inline function library available within binary linking library
+Another one code section binary grow call function various place time copy function generated instead one copy always jumping Usually manually decide function shall inlined
+
+GCC decide automatically depending optimizing level depending parameter
+It take thing consideration like How big function
+number instruction often called within code much binary get bigger inlining metric
+
+function static thus exported anyway called within code never use pointer function chance good GCC decide inline automatically negative impact binary wo get bigger inlining
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In one qualified serf two purpose
+Firstly serf suggests require substitute body function inline performing
+inserting function code address function call thereby saving overhead function call
+In respect analogous similarly provides optimization hint
+The second purpose change linkage behavior detail complicated
+This necessary due separate compilation linkage model specifically definition body function must duplicated used allow inlining function external cause collision violates uniqueness external symbol
+C dialect GNU C Visual resolve different way
+An function written C like Then statement following may translated compiler decides inlining typically requires optimization enabled When implementing sorting algorithm lot swap increase execution speed
+predecessor support function though different semantics
+In case force inlining compiler free choose inline function case
+Different compiler vary complex function manage inline
+Mainstream compiler like support option let compiler automatically inline suitable function even marked function
+However simply omitting keyword let compiler make inlining decision possible since linker complain duplicate definition different translation unit
+This give compiler hint function inlined also effect whether compiler generate callable copy function see
+part dialect offer support extension
+However semantics differ
+armcc mode also offer extension semantics different
+Microsoft Visual gcc allow programmer force compiler inline function
+Indiscriminate us result larger code bloated executable file minimal performance gain case even loss performance
+The compiler inline function circumstance even inlining forced
+In case gcc Visual generate warning
+Forcing inlining useful For code portability following preprocessor directive used effect C dialect
+It emit locally visible copy function required
+Regardless storage class compiler ignore qualifier generate function call C dialect
+The effect storage class applied applied function differs C dialect
+In function defined never function defined always emit externally visible function
+Unlike way ask externally visible function shared among translation unit emitted required
+If declaration mixed declaration unqualified declaration without qualifier storage class translation unit must contain definition matter whether unqualified externally visible function emitted
+A function defined requires exactly one function name somewhere else program either defined without qualifier
+If one definition provided whole program linker complain duplicate symbol
+If however lacking linker necessarily complain us could inlined needed
+But may complain since compiler always ignore qualifier generate call function instead typically happens code compiled without optimization
+This may desired behavior function supposed inlined everywhere mean error generated
+A convenient way define function header file create one file per function containing declaration including respective header file definition
+It matter whether declaration include
+To prevent added final executable us function inlined advised put object file file single function file typically link library instead individual object file
+That cause object file linked actually needed contrast linking object file directly cause always included executable
+However library file must specified object file linker command line since call object file specified library file function considered linker
+Calls function function resolved linker automatically option ensures
+An alternative solution use link time optimization instead library
+gcc provides flag omit section function unused
+This case object file containing code single unused function
+However also remove unused section object file related unused function
+It may desired link function executable called programmer debugger rather program examining internal state program
+With approach also possible use single file function instead one file per function
+Then file compiled
+However gcc manual page warns saying Only use option significant benefit
+Some recommend entirely different approach define function instead header file
+Then unreachable code generated
+However approach drawback opposite case Duplicate code generated function could inlined one translation unit
+The emitted function code shared among translation unit must different address
+This another drawback taking address function defined header file yield different value different translation unit
+Therefore function used used one translation unit mean go respective file header file
+semantics essentially exact opposite exception permit redefinition function unqualified function
+Thus without redefinition like like word function defined always function defined never emit externally visible function
+The rationale match variable storage never reserved defined always defined without
+The rationale contrast would using would always emit version contrary name suggests
+The remark need provide exactly one externally visible function instance inlined function resulting problem unreachable code apply mutatis mutandis well
+gcc including version used semantics even explicitly specified
+With version gcc switched dialect effectively enabling semantics default
+To use semantics instead enabled explicitly either affect inlining adding attribute declaration
+To ensure semantics either without used
+In function defined required emit function shared among translation unit typically putting common section object file needed
+The function must definition everywhere always qualifier
+In
+The rationale approach convenient way programmer since special precaution elimination unreachable code must taken like ordinary function make difference whether specified
+The qualifier automatically added function defined part class definition
+armcc mode provides semantics Such definition emit function shared among translation unit required
+In mode always emits function like shared among translation unit
+Thus function defined different translation unit
+This match traditional behavior Unix C compiler multiple definition uninitalized global variable
+Taking address function requires code copy function emitted case
+In function must access global variable define local variable
+local variable may may different object different translation unit depending whether function inlined whether call made
+Only definition reference identifier internal linkage without restriction different object translation unit
+In local allowed refer object translation unit
+gcc inline function Based Microsoft Specifications MSDN MS Visual inline even Besides general function language feature may valuable appear number reason
+
+An error occurred trying load video
+Try refreshing page contact customer support
+As member also get unlimited access lesson math English science history
+Plus get practice test quiz personalized coaching help succeed
+Want watch later
+Lonny PhD student teaching positive psychology bachelor degree IT master degree psychology
+Most web page made hypertext markup language
+This standard way decorate plain web text font color graphic doodad hyperlink clickable text magically transport user somewhere else
+But website get really big
+When happens HTML hard way easy thing
+cascading style sheet make decorating web site easy
+Think CSS kind computer dress code
+mainly one thing describes web page look
+Even better CSS easily separated HTML dress code easy find easy modify rapidly change entire look web site
+Like dress code school change CSS look student change
+Style sheet allow rapidly alter entire website please like fashion craze allows people change time yet remain people
+A really neat thing CSS
+Each style define add overall theme yet make recent style override earlier style
+For example CSS start saying want text unit high
+Later say want red
+Still later tell want one phrase bold italic blue rather red
+CSS come three type style sheet separate file full CSS instruction file extension
+When web page includes external stylesheet look feel controlled CSS file unless decide override style using one next two type
+This change whole website
+And perfect want keep latest fashion web page without rewriting every page
+style placed top web page document content listed
+This next best thing external easy find yet allow external style sheet special page want nonconformist
+style placed right need next text graphic wish decorate
+You insert inline style anywhere middle HTML code giving real freedom specify web page element
+On hand make maintaining web page real chore
+Get FREE access day create account
+Before introduce CSS let briefly review HTML
+A simple web page made
+Everything must go opening closing html tag
+The head section contains invisible direction called
+The body section put visible stuff
+Here super simple HTML example Now short simple example CSS using external file call
+We going tell web page white make heading noted simple HTML example Adams appear red unit high In sample file top line comment anything
+The next part called body tell web page background color use section
+Right part say want largest heading color red font size unit high
+Now include external CSS file include link within head section blank web page shown screen We need include external CSS file decorate one web page
+We define style top page head section
+Here quick example making heading blue font size px For special time something page ca conform overall theme well go ahead let show true individuality using inline CSS
+To show let override style shall
+That way show power CSS time
+As see sample head section originally told style blue unit high
+But CSS let u override certain place
+In case included instruction within body section inline snippet CSS told website show heading Hancock red font px high
+Did think easy
+If right quite bit CSS want get power
+CSS offer something called let specify decorate site element wo go today
+Just know lot
+Let review amazing cascading style let u dress web page uniformly without changing content
+Think style sheet kind computer dress code uniform way display web page consistent look feel
+We learned style sheet come three type
+one file apply every web page includes
+one apply whole document put top page header
+let specific spot really stand different cost hard find modify
+CSS also thing called let specify decorate site element
+To unlock lesson must Member
+Already member
+Did We college course prepare earn credit exam accepted college university
+You test first two year college save thousand degree
+Anyone earn regardless age education level
+To learn visit Not sure college want attend yet
+thousand article every imaginable degree area study career path help find school right
+Get unbiased info need find right school
+Browse area study degree level
+Back To Course chapter lesson Next Lesson copyright
+All trademark copyright property respective owner
+All right reserved
+Your Cart Empty
+Please Choose Product
+video lesson helped student
+I learned month chemistry class Ashlee I aced CLEP exam earned Clair video lesson helped engage student
+The video changed way I teach
+The video accomplish would take entire class
+Chris Students condition performed better receiving instruction
+Department Education
+
+Inline code refers line code added body program
+It type code written programming language
+The inline code executes independently usually executed condition primary program
+Inline code primarily used provide functionality external primary program added
+The inline code executed based certain condition needed
+Typically inline code embedded within loop program body rather called separate function
+So whenever primary program executed inline code also function corresponding state condition specified
+Techopedia Terms Copyright Techopedia
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+Programming JavaScript HTML CSS JavaScript code Listings textbook
+You need information complete homework
+In HTML Code You need create CSS code allowing inline block display option
+Here inline block CSS code display inline display block You need create two JavaScript function inline block
+Please open file Hide Data Display Block Display Inline Li Europan lingues e membres del sam familie
+Lor separat existentie e un myth
+Por scientie musica sport etc litot Europa usa li sam vocabular
+Li TutorSense Course Hero homework study help need succeed
+We got note study guide practice test along expert tutor customizable anywhere anytime
+Find best study resource around tagged specific course
+Share gain free Course Hero access earn money Marketplace
+Get homework help expert online
+Ask question browse existing Q A thread
+Satisfaction guaranteed
+Browse existing set create using digital flashcard system
+A simple yet effective studying tool help earn grade want
+Or get help Computer Science expert
+Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+

@@ -1,0 +1,289 @@
+operation refers actively sampling status synchronous activity
+Polling often used term also referred
+Polling process computer controlling device wait check readiness state often hardware
+For example connected via computer wait printer received next character
+These process minute reading
+Τhis sometimes used synonymously polling
+In situation operation required computer nothing check status device ready point device accessed
+In word computer wait device ready
+Polling also refers situation device repeatedly checked readiness computer return different task
+Although wasteful cycle busy waiting generally efficient alternative polling
+In simple system even perfectly appropriate action possible access often traditionally consequence simple hardware
+Polling often intimately involved
+For example polling parallel printer port check whether ready another character involves examining little one
+That bit represents time reading whether single wire printer cable low high voltage
+The instruction read byte directly transfer voltage state eight real world wire eight circuit make one byte CPU register
+Polling disadvantage many device check time required poll exceed time available service device
+Polling described following step add pic A time element monitored
+The optimal polling cycle vary according several factor including desired speed response overhead processor time bandwidth polling
+In polling device process query element list fixed sequence
+Because wait response element timing mechanism necessary prevent caused element
+Roll call polling inefficient overhead polling message high numerous element polled polling cycle element active
+In also referred token polling element poll next element fixed sequence
+This continues first element reached time polling cycle start
+Polling employed various computing context order control execution transmission sequence element involved
+For example multitasking operating system polling used allocate processor time resource various competing process
+In network polling used determine node want access network
+It also used routing protocol retrieve routing information case EGP exterior gateway protocol
+An alternative polling use signal generated device process indicate need attention want communicate etc
+Although polling simple many situation multitasking operating system efficient use interrupt reduce processor usage bandwidth consumption
+A message
+In multidrop line arrangement central different terminal share single communication line computer system us polling arrangement whereby central computer sends message called polling message specific terminal outgoing line
+All terminal listen outgoing line terminal polled reply sending information ready transmission incoming line
+In simplest form consists one central computer act conduit transmit message polling required avoid chaos line often used allow master acquire input orderly fashion
+These poll message differ multidrop line case site address needed terminal receives poll directed
+
+This course introduces student broad range heuristic solving problem range setting
+Emphasis technique aid programmer computer scientist
+Heuristics solving problem small classical math word problem generating potential solution problem encountered profession problem solving team
+Having successfully completed course student able MATH MATH MATH
+Virginia Polytechnic Institute State University
+
+We studied big idea computing allows u perform amazing task information process
+You might gotten impression quantify information design algorithm solve problem using computing
+In chapter study theory limit computing
+There theoretical practical limit computing u
+When talk formal definition algorithm introduced mathematical model computation
+With model study nature computing including possibly
+Alan Turing contributed greatly computability theory model machine
+He proved Turing machine powerful computer ever build
+If find problem Turing machine solve proved solution computable
+problem solvable computing computer
+In Alan Turing proved general algorithm solve possible pair exist
+halting problem unsolvable using computing
+More specifically halting problem undecidable simplest type question answer yes decision question whether program eventually halt stop given input
+Obviously infeasible actually run program input see whether halt may take forever infinite loop program
+The idea analyze program given input determine whether halt
+Alan Turing proved halting problem undecidable proof technique called
+It would helpful review wikipedia
+Another classic example proof number theory asserts infinitely many prime number
+All proof contradiction start assumption proposition trying proof false follow logical sequence valid step arrive conclusion clearly false contradicts also false statement either true false never
+If assume halting problem able design algorithm implement program solve problem u
+The program take program input program input parameter return answer whether program halt input
+Such program may sound strange take program input seen program
+higher order function block Snap
+take block program input date take source code program data run program
+Programs data intrinsic difference tow
+The following proof show program answer halting question exist
+Here YouTube video illustrating proof Halting problem hard solvable algorithmically even principle
+There hard problem solvable principle practice close impossible solve
+As see categorize problem performance best known algorithm
+If problem solved using fast algorithm problem easy use computer solve fast
+On contrary best known algorithm know take long time solve problem hard computer solve fast
+Using put algorithm particular category according algorithm complexity
+If notation category contains polynomial term problem solvable using algorithm category called P problem Polynomial time solution exist
+The P problem easy problem computer
+Among problem without polynomial time solution problem guess solution verified polynomial time
+For example prime decomposition problem known polynomial time solution given answer verify quickly simply multiplying factor comparing result integer
+These type problem called NP Polynomial problem
+Collectively call problem take long solve intractable problem include problem best algorithm exponential time polynomial time solution exponent larger
+
+If problem best algorithmic solution computer operation per second would take year age universe solve problem computer
+Obviously P subset NP NP defined polynomial answer verification time able solve problem polynomial time P certainly qualifies
+Whether P proper subset NP word whether remains one open question computer science
+Nobody know answer
+You win million dollar solve one
+To attack P
+NP problem theoretical computer scientist defined another category called problem
+The relationship among three category illustrated following figure
+All problem category NP problem sharing one special property ALL problem problem polynomial time
+Because nature solve ANY single problem category proved NP problem solvable polynomial time
+
+We take NP problem translate solved problem solve problem polynomial time
+The overall time still polynomial polynomial polynomial polynomial
+Thousands discovered none solved
+problem sense difficult known problem
+Most computer scientist believe implication otherwise
+The creative leap disappear solving problem easy able recognize right answer
+Most encryption algorithm computationally secure breaking known efficient polynomial time solution
+If encryption broken
+There unsolved problem computer science
+You find list problem
+
+In serf element two principal operation The order element come stack give rise alternative name
+Additionally operation may give access top without modifying stack
+The name stack type structure come analogy set physical item stacked top make easy take item top stack getting item deeper stack may require taking multiple item first
+Considered abstractly sequential collection push pop operation occur one end structure referred stack
+This make possible implement stack pointer top element
+A stack may implemented bounded capacity
+If stack full contain enough space accept entity pushed stack considered state
+The pop operation remove item top stack
+Stacks entered computer science literature used term bury unbury mean calling returning subroutine
+Subroutines already implemented proposed idea filed patent March Bauer received invention stack principle
+The concept developed independently Australian first half
+Stacks often described analogy stack plate cafeteria
+Clean plate placed top stack pushing already
+When plate removed stack one pop become new top
+In many implementation stack operation push pop
+An example top stack observes element without removing stack
+Since done pop push data essential
+An underflow condition occur stack top operation stack empty pop
+Also implementation often function return whether stack empty
+A stack easily implemented either
+What identifies data structure stack either case implementation interface user allowed pop push item onto array linked list helper operation
+The following demonstrate implementation using
+An array used implement bounded stack follows
+The first element usually bottom resulting first element pushed onto stack last element popped
+The program must keep track size length stack using variable record number item pushed far therefore pointing place array next element inserted assuming index convention
+Thus stack effectively implemented structure The operation add element increment index checking overflow Similarly decrement index checking underflow return item previously top one Using possible implement stack grow shrink much needed
+The size stack simply size dynamic array efficient implementation stack since adding item removing item end dynamic array requires amortized O time
+Another option implementing stack use
+A stack pointer head list perhaps counter keep track size list Pushing popping item happens head list overflow possible implementation unless memory exhausted Some language make stack operation push pop available standard type
+Some language notably family including designed around stack directly visible manipulated programmer
+The following example manipulating stack Lisp interpreter prompt line starting interpreter response expression Several container type operation LIFO semantics additionally template class adapts existing container provide restricted operation
+PHP class
+Java library contains class specialization
+Following example program language using class
+A common use stack architecture level mean allocating accessing memory
+A typical stack area computer memory fixed origin variable size
+Initially size stack zero
+A usually form hardware register point recently referenced location stack stack size zero stack pointer point origin stack
+The two operation applicable stack There many variation basic principle stack operation
+Every stack fixed location memory begin
+As data item added stack stack pointer displaced indicate current extent stack expands away origin
+Stack pointer may point origin stack limited range address either origin depending direction stack grows however stack pointer cross origin stack
+In word origin stack address stack grows downwards towards address stack pointer must never incremented beyond etc
+If pop operation stack cause stack pointer move past origin stack occurs
+If push operation cause stack pointer increment decrement beyond maximum extent stack occurs
+Some environment rely heavily stack may provide additional operation example Stacks often visualized growing bottom like stack
+They may also visualized growing left right topmost becomes rightmost even growing top bottom
+The important feature bottom stack fixed position
+The illustration section example growth visualization top stack bottom since stack top item pushed popped
+A move first element third position second first third second
+Here two equivalent visualization process A stack usually represented computer block memory cell bottom fixed location stack pointer holding address current top cell stack
+The top bottom terminology used irrespective whether stack actually grows towards lower memory address towards higher memory address
+Pushing item stack adjusts stack pointer size item either decrementing incrementing depending direction stack grows memory pointing next cell copy new top item stack area
+Depending exact implementation end push operation stack pointer may point next unused location stack may point topmost item stack
+If stack point current topmost item stack pointer updated new item pushed onto stack point next available location stack updated new item pushed onto stack
+Popping stack simply inverse pushing
+The topmost item stack removed stack pointer updated opposite order used push operation
+Many design including dedicated register use stack pointer dedicated call return push pop instruction implicitly update dedicated register thus increasing density
+Some CISC processor like also typically stack pointer well
+In contrast CPU design dedicated stack instruction therefore register may used stack pointer needed
+The architecture example set register organised stack direct access individual register relative current top also possible
+As machine general implicit argument allows small footprint good usage also prevents type optimization possible processor permitting two three operand
+A stack structure also make implementation somewhat complex implement although still feasible exemplified modern implementation
+example architecture using within another strategy avoid use slow main memory function argument return value
+There also number small microprocessor implement stack directly hardware stack directly accessible
+Examples line
+Many microprocessor used implement programming language level
+Stacks also used basis number mainframe mini computer
+Such machine called famous
+Calculators employing use stack structure hold value
+Expressions represented prefix postfix infix notation conversion one form another may accomplished using stack
+Many compiler use stack parsing syntax expression program block etc
+translating low level code
+Most programming language allowing parsed stack based machine
+Another important application stack
+Consider simple example finding correct path maze
+There series point starting point destination
+We start one point
+To reach final destination several path
+Suppose choose random path
+After following certain path realise path chosen wrong
+So need find way return beginning path
+This done use stack
+With help stack remember point reached
+This done pushing point stack
+In case end wrong path pop last point stack thus return last point continue quest find right path
+This called backtracking
+The prototypical example backtracking algorithm find vertex graph reached specified starting vertex
+Other application backtracking involve searching space represent potential solution optimization problem
+technique performing backtracking search without exhaustively searching potential solution space
+A number meaning define basic operation adding two number printing character taking argument stack placing return value back stack
+For example return stack operand stack also graphic state stack dictionary stack
+Many also including
+Almost way receive parameter return special stack hold information calling nesting order switch context called function restore caller function calling finish
+The function follow runtime protocol caller callee save argument return value stack
+Stacks important way supporting nested function call
+This type stack used implicitly compiler support CALL RETURN statement equivalent manipulated directly programmer
+Some programming language use stack store data local procedure
+Space local data item allocated stack procedure entered deallocated procedure exit
+The typically implemented way
+Using stack data procedure call important security implication see programmer must aware order avoid introducing serious security bug program
+Several use stack separate usual function call stack programming language principle organize information
+These include Some computing environment use stack way may make vulnerable security breach attack
+Programmers working environment must take special care avoid pitfall implementation
+For example programming language use common stack store data local called procedure linking information allows procedure return caller
+This mean program move data stack contains critical return address procedure call
+If data moved wrong location stack oversized data item moved stack location large enough contain return information procedure call may corrupted causing program fail
+Malicious party may attempt attack take advantage type implementation providing oversized data input program check length input
+Such program may copy data entirety location stack may change return address procedure called
+An attacker experiment find specific type data provided program return address current procedure reset point area within stack within data provided attacker turn contains instruction carry unauthorized operation
+This type attack variation attack extremely frequent source security breach software mainly popular compiler use shared stack data procedure call verify length data item
+Frequently programmer write code verify size data item either oversized undersized data item copied stack security breach may occur
+
+The following list prerequisite admission program applicant without computer science major considered applicant computer science major preferred
+Admission cycle open fall
+application deadline considered Fellowships fall
+Application deadline fall
+The Graduate School online application along detailed instruction regarding application found site
+The following material included Graduate School Application The Graduate School request two statement uploaded
+discus computer science educational research industrial background relate objective
+Include unique experience relevant research done
+Discuss applying University Minnesota
+Please include name faculty member research group University Minnesota whose research interest
+Use area list extenuating circumstance poor grade test score
+domestic diversity student international student need complete mandatory application
+You indicate college graduate school attended
+Unofficial transcript must uploaded directly admission application per
+Official transcript required student admitted program
+Do fax mail hard copy transcript
+GRE INSTITUTION CODE GRE DEPARTMENT CODE TOEFL INSTITUTION CODE TOEFL DEPARTMENT CODE Please question may admission process
+
+Do account yet
+Already account
+Complete form receive email authorization code needed reset password
+Already account
+Enter subscribe newsletter special discount offer homework assignment help
+Follow u facebook twitter Copyright
+
+Additionally computer save business money making employee efficient providing tool without computer would cost much money
+Finally computer make thing possible even year ago
+Businesses use computer communication across number type people employee business customer business supplier
+One major advantage computer communication often asynchronous mean communication happen even one person available telephone
+Additionally computer store huge amount data printed would take room room full file cabinet one way computer help save tree
+It also easy find particular data pull two data set together using computer would consume lot time paper record file cabinet
+Employees use computer get done peer communication easier accomplish finding using information easier
+Another role computer played recent year ability thing easily would difficult past
+For example past company wanted produce video would rent buy large video camera equipment process video
+Digital video software edit video much le expensive
+Finally computer allow business employee analyze huge data set find new information help business decision
+
+Contact Admissions email Are ready push boundary computer science
+Create innovation Lewis University online Master Science Computer Science MSCS
+Through coursework research capstone experience learn advanced computing honing analytical creative ability
+Gain highly valued tech knowledge skill rapidly growing field get ready shape tomorrow technology dramatic way
+When earn MS Computer Science Lewis University receive practical education customizable immediately applicable career
+In fully online computer science degree benefit In MSCS core course learn You tailor learning career goal selecting one following concentration The online Masters Computer Science prepares best job industry
+Many position poised significant job growth addition offering high earning potential
+ranking job found hottest tech job paying computer science
+Systems programmer Software engineer Storage architect Mobile specialist Network architect Applicants MS Computer Science must meet following admission requirement To learn online MS Computer Science call speak Graduate Admissions Counselor request information
+Intelligent system revolutionizing variety industry including transportation logistics security manufacturing
+They help improve Today United States software IT service company considered small medium sized firm Computer science competitive field tremendous job growth
+As technology evolves becomes smarter computer field continues expand
+Opportunities growing incredibly fast professional seeking One University Parkway Romeoville IL
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+In creating Web rollover people call mouseover technique using let change page element usuallly graphic image user roll mouse something page like line text graphic image
+The term recognizes little ball mouse roll surface
+Some common us rollover include By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+Earn industry credential earn degree
+As nonprofit university WGU put student first
+Earn degree half cost online university
+Western Governors University
+All Rights Reserved WGU Indiana accredited online university offering online bachelor master degree program
+
+You still full access site functionality may lost
+For best experience upgrade browser following link
+

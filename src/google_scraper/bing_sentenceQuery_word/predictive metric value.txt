@@ -1,0 +1,501 @@
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+What fundamental difference predictive modeling clustering
+according literature predictive modeling supervised learning aim construct model predict value target attribute
+On hand clustering unsupervised method split data set couple group
+In idea
+finding target attribute actually trying categorize similar clustering
+I know clustering make subgroup available data predictive modeling try find model predict value attribute unseen data based current available data
+Could anyone explain difference two concept clearly
+Thanks sometimes called learning teacher whereas left completely alone
+split data training testing subsample used verifying computed model
+Predictive regression model typically assign weight attribute
+From compute internal evaluation metric necessarily correlate desired human judgment
+Unsupervised learning clustering mostly treat attribute equal without external information one ca say attribute important
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+The paper advance claim nature infeasible path program provides significant statistical evidence support validity
+The characteristic claim permit definition easily derived metric view result statistical analysis presented provide good predictor likely feasibility program path
+Check access login credential institution
+This paper held Special Issue Software Quality Assurance
+
+Predictive Modeling work constructive feedback principle
+You build model
+Get feedback metric make improvement continue achieve desirable accuracy
+Evaluation metric explain performance model
+An important aspect evaluation metric capability discriminate among model result
+Many ingenuous analyst even check model accuracy
+Once finished building model hurriedly map predicted value unseen data
+This incorrect approach
+Simply building predictive model motive
+But creating selecting model give high accuracy sample data
+Hence crucial check accuracy model prior computing predicted value
+In industry consider different kind metric evaluate model
+The choice metric completely depends type model implementation plan model
+After finished building model metric help evaluating model accuracy
+Considering rising popularity cross validation I also mentioned principle article
+When talk predictive model talking either regression model continuous output classification model nominal binary output
+The evaluation metric used model different
+In classification problem use two type algorithm dependent kind output creates In regression problem inconsistency output
+The output always continuous nature requires treatment
+For classification model evaluation metric discussion I used prediction problem BCI challenge Kaggle
+The solution problem irrelevant discussion however final prediction training set used article
+The prediction made problem probability output converted class output assuming threshold
+A confusion matrix N X N matrix N number class predicted
+For problem hand hence get X matrix
+Here definition need remember confusion matrix The accuracy problem hand come
+As see two table Positive predictive Value high negative predictive value quite low
+Same hold Senstivity Specificity
+This primarily driven threshold value chosen
+If decrease threshold value two pair starkly different number come closer
+In general concerned one defined metric
+For instance pharmaceutical company concerned minimal wrong positive diagnosis
+Hence concerned high Specificity
+On hand attrition model concerned matrix generally used class output model
+Gain Lift chart mainly concerned check rank ordering probability
+Here step build chart Step Calculate probability observation Step Rank probability decreasing order
+Step Build decile group almost observation
+Step Calculate response rate decile Good Responders Bad total
+You get following table need plot chart This informative table
+Cumulative Gain chart graph Cumulative Right Cummulative Population
+For case hand graph This graph tell well model segregating responder
+For example first decile however population responder
+This mean lift first decile
+What maximum lift could reached first decile
+From first table article know total number responder
+Also first decile contains observation
+Hence maximum lift first decile could
+Hence quite close perfection model
+Let plot lift curve
+Lift curve plot total lift population
+Note random model always stay flat
+Here plot case hand You also plot decile wise lift decile number What graph tell
+It tell model well till decile
+Post every decile skewed towards
+Any model lift decile till minimum decile maximum decile good model
+Else might consider sampling first
+Lift Gain chart widely used campaign targeting problem
+This tell u till decile target customer specific campaign
+Also tell much response expect new target base
+chart measure performance classification model
+More accurately measure degree separation positive negative distribution
+The score partition population two separate group one group contains positive negative
+On hand If model differentiate positive negative model selects case randomly population
+The would
+In classification model fall higher value better model separating positive negative case
+For case hand following table We also plot Cumulative Good Bad see maximum separation
+Following sample plot The metric covered till mostly used classification problem
+Till learnt confusion matrix lift gain chart chart
+Let proceed learn important metric
+This one popular metric used industry
+The biggest advantage using ROC curve independent change proportion responder
+This statement get clearer following section
+Let first try understand ROC curve
+If look confusion matrix observe probabilistic model get different value metric
+Hence sensitivity get different two vary follows The ROC curve plot sensitivity specificity
+specificity also known false positive rate sensitivity also known True Positive rate
+Following ROC curve case hand
+Let take example threshold refer confusion matrix
+Here confusion matrix As see sensitivity threshold
+This coordinate becomes point ROC curve
+To bring curve single number find area curve AUC
+Note area entire square
+Hence AUC ratio curve total area
+For case hand get AUC ROC
+Following thumb rule We see fall excellent band current model
+But might simply
+In case becomes important validation
+
+For model give class output represented single point ROC plot
+
+Such model compared judgement need taken single metric using multiple metric
+For instance model parameter model parameter coming model hence metric directly compared
+
+In case probabilistic model fortunate enough get single number
+But still need look entire curve make conclusive decision
+It also possible one model performs better region performs better
+Why use ROC metric like lift curve
+Lift dependent total response rate population
+Hence response rate population change model give different lift chart
+A solution concern true lift chart finding ratio lift perfect model lift decile
+But ratio rarely make sense business
+ROC curve hand almost independent response rate
+This two axis coming columnar calculation confusion matrix
+The numerator denominator x axis change similar scale case response rate shift
+Gini coefficient sometimes used classification problem
+Gini coefficient straigh away derived AUC ROC number
+Gini nothing ratio area ROC curve diagnol line area triangle
+Following formula used Gini Gini good model
+For case hand get Gini
+This one important metric classification prediction problem
+To understand let assume student likelihood pas year
+Following prediction A B C Now picture
+fetch pair two three student many pair
+We pair AB BC CA
+Now year end saw A C passed year B failed
+No choose pair find one responder
+How many pair
+We two pair AB BC
+Now pair concordant pair probability responder higher
+Whereas discordant pair hold true
+In case probability equal say tie
+Let see happens case AB Concordant BC Discordant Hence concordant case example
+Concordant ratio considered good model
+This metric generally used deciding many customer target etc
+It primarily used access model predictive power
+For decision like many target taken KS Lift chart
+RMSE popular evaluation metric used regression problem
+It follows assumption error unbiased follow normal distribution
+Here key point consider RMSE RMSE metric given N Total Number Observations
+Beyond metric another method check model performance
+These method statistically prominent data science
+But arrival machine learning blessed robut method model selection
+
+Though cross validation really evaluation metric used openly communicate model accuracy
+But result cross validation provides good enough intuitive result generalize performance model
+Let understand cross validation detail
+Let first understand importance cross validation
+Due busy schedule day I get much time participate data science competition
+Long time back I participated TFI Competition Kaggle
+Without delving competition performance I would like show dissimilarity public private leaderboard score
+For TFI competition following three solution score Lesser better You notice third entry worst Public score turned best model Private ranking
+There model I still chose final entry really worked well
+What caused phenomenon
+The dissimilarity public private leaderboard caused
+nothing model become highly complex start capturing noise also
+This noise add value model inaccuracy
+In following section I discus know solution actually know test result
+Cross Validation one important concept type data modelling
+It simply say try leave sample train model test model sample finalizing model
+Above diagram show validate model sample
+We simply divide population sample build model one sample
+Rest population used validation
+Could negative side approach
+I believe negative side approach loose good amount data training model
+Hence model high bias
+And give best estimate coefficient
+So next best option
+What make split training population train first validate rest
+Then train test first
+This way train model entire population however one go
+This reduces bias sample selection extent give smaller sample train model
+This approach known cross validation
+Let extrapolate last example cross validation
+Now try visualize validation work
+This cross validation
+Here go behind scene divide entire population equal sample
+Now train model sample Green box validate sample grey box
+Then second iteration train model different sample held validation
+In iteration basically built model sample held validation
+This way reduce selection bias reduce variance prediction power
+Once model take average error term find model best
+cross validation widely used check whether model overfit
+If performance metric k time modelling close mean metric highest
+In Kaggle competition might rely cross validation score Kaggle public score
+This way sure Public score chance
+Coding R Python similar
+Here code Python This tricky part
+We trade choose For small k higher selection bias low variance performance
+For large k small selection bias high variance performance
+Think extreme case Generally value k recommended purpose
+Measuring performance training sample point le
+And leaving validation batch aside waste data
+give u way use every singe datapoint reduce selection bias good extent
+Also cross validation used modelling technique
+In addition metric covered article used metric evaluation classification regression problem
+Which metric often use classification regression problem
+Have used cross validation kind analysis
+Did see significant benefit using batch validation
+Do let u know thought guide comment section
+I Tavish Srivastava post graduate IIT Madras Mechanical Engineering
+I two year work experience Analytics
+My experience range hand analytics developing country like India convince banking partner analytical solution matured market like US
+For last two half year I contributed various sale strategy marketing strategy Recruitment strategy Insurance Banking industry
+I think adding multilogloss would useful
+It good matrix identify better model case multi class classification
+Very useful Hi Great post thanks
+Just number one confusion matrix miscalculated negative predicted value
+It
+Same specificity instead
+Since reuse example ROC curve actually better
+But anyways argument still hold
+Nicely presented
+Its good information Very informative useful
+Considering provided confusion matrix negative predicrive value
+Is error confusion matrix example formula
+Yes I agree Tamara negative predictive value
+Can please confirm Tavish Hi Tavish Thanks valuable article
+It would great along informative explanation also provide code preferably Thanks
+Introduction p Predictive Modeling work constructive feedback principle
+You build model
+Get feedback metric make improvement Can list Statistical Models application scenario please novice person like
+Hi explain Lift dependent total response rate population
+Is applicable able correctly predict decile
+Do account
+
+Copyright Analytics Vidhya
+Do account
+Receive awesome tip guide infographics become expert Interact thousand data science professional across globe
+
+We publish awesome content
+We never share information anyone
+
+In also called fraction relevant instance among retrieved instance also known fraction relevant instance retrieved total amount relevant instance
+Both precision recall therefore based understanding measure
+Suppose computer program recognizing dog photograph identifies eight dog picture containing dog cat
+Of eight dog identified five actually dog true positive rest cat false positive
+The program precision recall
+When return page relevant failing return additional relevant page precision recall
+So case precision useful search result recall complete result
+In item hypothesis accepted rejected based number selected compared sample size absence corresponds respectively maximum precision false positive maximum recall false negative
+The pattern recognition example contained type I error type II error
+Precision seen measure exactness whereas recall measure completeness
+In simple term high precision mean algorithm returned substantially relevant result irrelevant one high recall mean algorithm returned relevant result
+In information retrieval scenario instance document task return set relevant document given search term equivalently assign document one two category relevant relevant
+In case relevant document simply belong relevant category
+Recall defined retrieved search precision defined retrieved search search
+In task precision class
+number item correctly labeled belonging positive class
+sum true positive item incorrectly labeled belonging class
+Recall context defined
+sum true positive item labeled belonging positive class
+In information retrieval perfect precision score mean every result retrieved search relevant say nothing whether relevant document retrieved whereas perfect recall score mean relevant document retrieved search say nothing many irrelevant document also retrieved
+In classification task precision score class C mean every item labeled belonging class C indeed belong class C say nothing number item class C labeled correctly whereas recall mean every item class C labeled belonging class C say nothing many item incorrectly also labeled belonging class C
+Often inverse relationship precision recall possible increase one cost reducing
+Brain surgery provides illustrative example tradeoff
+Consider brain surgeon tasked removing cancerous tumor patient brain
+The surgeon need remove tumor cell since remaining cancer cell regenerate tumor
+Conversely surgeon must remove healthy brain cell since would leave patient impaired brain function
+The surgeon may liberal area brain remove ensure extracted cancer cell
+This decision increase recall reduces precision
+On hand surgeon may conservative brain remove ensure extract cancer cell
+This decision increase precision reduces recall
+That say greater recall increase chance removing healthy cell negative outcome increase chance removing cancer cell positive outcome
+Greater precision decrease chance removing healthy cell positive outcome also decrease chance removing cancer cell negative outcome
+Usually precision recall score discussed isolation
+Instead either value one measure compared fixed level measure
+combined single measure
+Examples measure combination precision recall weighted precision recall variant DeltaP DeltaP
+weighted arithmetic mean Precision Inverse Precision weighted Bias well weighted arithmetic mean Recall Inverse Recall weighted Prevalence
+Inverse Precision Inverse Recall simply Precision Recall inverse problem positive negative label exchanged real class prediction label
+Recall Inverse Recall equivalently true positive rate false positive rate frequently plotted curve provide principled mechanism explore operating point tradeoff
+Outside Information Retrieval application Recall Precision argued flawed ignore true negative cell contingency table easily manipulated biasing prediction
+The first problem using second problem discounting chance component renormalizing longer affords opportunity explore tradeoff graphically
+However renormalizations Recall Precision geometric mean thus act like debiased
+In context precision recall defined term set
+list document produced query set
+list document internet relevant certain topic cf
+
+The measure defined
+In field precision fraction retrieved document query For example text search set document precision number correct result divided number returned result
+Precision take retrieved document account also evaluated given rank considering topmost result returned system
+This measure called
+Precision used percent relevant document returned search
+The two measure sometimes used together provide single measurement system
+Note meaning usage precision field information retrieval differs definition within branch science technology
+In information retrieval recall fraction relevant document successfully retrieved
+For example text search set document recall number correct result divided number result returned
+In binary classification recall called
+It viewed probability relevant document retrieved query
+It trivial achieve recall returning document response query
+Therefore recall alone enough one need measure number document also example also computing precision
+For classification task term see definition compare result classifier test trusted external judgment
+The term refer classifier prediction sometimes known term refer whether prediction corresponds external judgment sometimes known
+Let u define experiment positive instance negative instance condition
+The four outcome formulated follows Precision recall defined Recall context also referred true positive rate precision also referred PPV related measure used classification include true negative rate
+True negative rate also called
+Additionally predicted positive condition rate PPCR identifies percentage total population flagged example search engine returning result retrieved document document PPCR
+It possible interpret precision recall ratio probability Note random selection refers uniform distribution appropriate pool document
+mean selecting document set retrieved document random fashion
+The random selection document set equally likely selected
+Note typical classification system probability retrieved document relevant depends document
+The interpretation extends scenario also need explanation
+Another interpretation precision recall follows
+Precision average probability relevant retrieval
+Recall average probability complete retrieval
+Here average multiple retrieval query
+A measure combine precision recall precision recall traditional balanced This measure approximately average two close generally case two number coincides square divided
+There several reason criticized particular circumstance due bias evaluation metric
+This also known measure recall precision evenly weighted
+It special case general measure real value Two commonly used measure measure weight recall higher precision measure put emphasis precision recall
+The derived van Rijsbergen measure effectiveness retrieval respect user attache time much importance recall precision
+It based van Rijsbergen effectiveness measure second term weighted harmonic mean precision recall weight
+Their relationship
+There parameter strategy performance metric information retrieval system area curve AUC
+For retrieval user objective clear precision recall ca optimized
+As summarized Lopresti comfortable powerful paradigm
+
+Everything data science
+A blog Stelios Kampakis
+When testing choosing correct performance measure imperative making sure model work correctly
+In literature common use measure always used past without really judging whether best way measure performance current problem
+The common problematic measure RMSE regression accuracy classification
+The RMSE penalizes larger error smaller error
+However problem response variable right skewed error severely affected data point right end tail
+Example right skewed distribution
+A way handle might use measure predicted true value
+Similarly bad measure class highly imbalanced
+In binary classification problem class B class A trivial achieve accuracy
+That mistake I seen newcomer machine learning
+There different measure handle imbalanced class
+There recently published book regarding performance metric classification called
+I would highly recommend one starting machine learning predictive modelling
+Evaluating learning algorithm A classification perspective In case I going much detail individual measure since covered future post
+However I cover two simple trick
+
+When regression plot histogram response
+If extremely skewed go instead RMSE
+
+When classification check balanced class
+If highly imbalanced use
+Values close indicate better performance
+So next time using RMSE accuracy make sure right thing
+Admin August Predicting Sports Outcomes Using Python Machine Learning June Quick Tips Data analysis cheat sheet May ADANbot A bot teach machine learning October Predictive modelling football injury September Performance measure The Concordance Correlation Coefficient August Which sport predicted
+Part This comment made Stathis Facebook added worth mentioning many algorithm rely stochastic gradient decent basically algorithm running large datasets kappa metric might produce smooth gradient hinder learning
+A practical solution create balanced dataset first train stable metric like cross entropy calibrate probability meta optimization Required field marked Stylianos Stelios Kampakis Stylianos Stelios Kampakis expert data scientist member Royal Statistical Society statistician honorary research fellow UCL Centre Blockchain Technologies startup consultant living working London
+A natural polymath degree Psychology Artificial Intelligence Statistics Economics PhD Computer Science love using broad skillset solve difficult problem
+COPYRIGHT PRThemes
+ALL RIGHTS RESERVED
+
+How Visualize Predictive Analysis Raw Data How Create Supervised Learning Model Logistic Regression Data Journalism Collecting Data Your Story Data Journalism How Develop Tell Present Story Data Journalism Why Story Matters Related Book By A picture worth thousand word especially trying get good handle predictive analysis data
+At step preparing data common practice visualize hand continuing next step
+You start using spreadsheet Microsoft Excel create data matrix consists candidate data also referred
+Several business intelligence software package Tableau give preliminary overview data apply analytics
+Tables simplest basic pictorial representation data
+Tables also known consist row column correspond respectively object attribute mentioned earlier making data
+For instance consider online social network data
+A data object could represent user
+Attributes user data object heading column Gender Zip Code Date Birth
+The cell table represent value
+Visualization table help easily spot missing attribute value data object
+Tables also provide flexibility adding new attribute combination attribute
+For instance social network data add another column called Age easily calculated derived attribute existing Date Birth attribute
+The tabular social network data show new column Age created another existing column Date Birth
+Bar chart used spot spike anomaly data
+You use attribute quickly picture minimum maximum value
+Bar chart also used start discussion normalize data
+adjustment attribute value scale make data usable
+For example easily see error data The Age bar one record negative
+That anomaly easily depicted bar chart table data
+Pie chart used mainly show percentage
+They easily illustrate distribution several item highlight dominant
+Raw data social network represented according Age attribute
+Notice chart show clear distribution male versus female also probable error R value gender type possibly created data collected
+Graph theory provides set powerful algorithm analyze data structured represented graph
+In computer science data structure way organize data represents relation pair data object
+A graph consists two main part Vertices also known Edges connect pair node Edges directed drawn arrow weight
+You decide place edge arrow two node circle case member social network connected member friend The arrow direction indicates friend first initiate interaction time
+Consider list word concept arranged graphic representation word list showing size word proportional metric specify
+For instance spreadsheet word occurrence like identify important word try word cloud
+Word cloud work organization data text common example Twitter use trending term
+Every term representation weight affect size indicator relative importance
+One way define weight could number time word appears data collection
+The frequently word appears heavier weight larger appears cloud
+Natural flocking behavior general system object particular living thing tend behave according environment belong b response existing object
+The flocking behavior natural society bee fly bird fish ant matter people also known
+Birds follow natural rule behave flock
+bird located certain distance bird considered similar
+Each bird move according three main rule organize flocking behavior
+must collide
+move average direction neighbor
+move according average position location
+Modeling three rule enable analytical system simulate flocking behavior
+Using natural behavior flocking bird convert straightforward spreadsheet visualization
+The key define notion similarity part data
+Start couple question What make two data object data similar
+Which attribute best drive similarity two data record
+For instance social network data data record represent individual user attribute describe include Age Zip Code Relationship Status List Friends Number Friends Habits Events
+
+Tosmana tool Qualitative Comparative Analysis QCA
+The software used csQCA Qualitative Comparative Analysis mvQCA QCA calculation
+Qualitative Data Analysis Software Free Data imported directly program simple Revised report mode
+Reports shown webbrowser default text window still available
+Datafiles saved XML file standard Proprietary Free Subscription Available Small employee Medium employee Enterprise employee Tosmana Data imported directly program simple Revised report mode
+Reports shown webbrowser default text window still available
+Datafiles saved XML file standard TOSMANA include standard QCA fsQCA procedure welL Tosmana tool Qualitative Comparative Analysis QCA
+The software used csQCA Qualitative Comparative Analysis mvQCA QCA calculation
+The simple way include data TOSMANA copy data directly spreadsheet program
+To open data set spreadsheet program
+Select cell data data set copy
+Remember include variable name first row
+In TOSMANA select File Import Clipboard menu
+The data loaded software replace existing data
+After successful import user save file format used within TOSMANA
+The software save data XMLFile user edit data outside TOSMANA well
+TOSMANA try identify type data imported
+A variable containing string data marked possible case identifier green flag case CASEID example
+In addition metric data identified marked subdivision symbol
+GNPCAP
+The yellow warning sign indicates condition threshold attached yet
+If software show flag subdivision symbol TOSMANA use data analysis
+Before performing QCA calculation user define threshold condition metric data
+To click column header select Edit Variable opening context menu
+The Edit Variable dialogue open user set number property
+To set threshold specific condition used threshold must set value Conversion box
+You may also like read
+Predictive Analytics Today provides Review Comparison Research Commentary Analysis Enterprise Software
+We provide PAT enabled product review user review comparison help IT decision maker identify technology software strategy
+also get delivered
+We hate SPAM promise keep email address safe
+
+The attempt measure scholar
+The index based set scientist cited paper number citation received publication
+The index also applied productivity impact well group scientist department university country
+The index suggested physicist tool determining relative quality sometimes called
+The definition index scholar index published paper cited paper least time
+Thus reflects number publication number citation per publication
+The index designed improve upon simpler measure total number citation publication
+The index work properly comparing scientist working field citation convention differ widely among different field
+Formally function corresponds number citation publication compute index follows
+First order value largest lowest value
+Then look last position greater equal position call position
+For example researcher publication A B C D E citation respectively index equal publication citation
+In contrast publication index fourth paper citation
+If function ordered decreasing order largest value lowest one compute index follows The index seen type fuzzy integral
+Then common index number citation author seen function
+The Hirsch index equivalent earlier metric used evaluating cyclist
+The serf alternative traditional journal metric evaluation impact work particular researcher
+Because highly cited article contribute determination simpler process
+Hirsch demonstrated high predictive value whether scientist honor like membership
+The grows citation accumulate thus depends academic age researcher
+The manually determined using citation database using automatic tool
+database provide automated calculator
+Harzing program calculates based entry
+From July provided within profile
+In addition specific database database automatically calculate researcher working
+Each database likely produce different scholar different coverage
+A detailed study showed Web Knowledge strong coverage journal publication poor coverage high impact conference
+Scopus better coverage conference poor coverage publication prior Google Scholar best coverage conference journal though like Scopus limited coverage publication
+The exclusion conference proceeding paper particular problem scholar conference proceeding considered important part literature
+Google Scholar criticized producing phantom citation including citation count failing follow rule combining search term
+For example Meho Yang study found Google Scholar identified citation Web Knowledge Scopus combined noted additional citation reported Google Scholar journal conference proceeding significantly alter relative ranking individual
+It suggested order deal sometimes wide variation single academic measured across possible citation database one assume false negative database problematic false positive take maximum measured academic
+Hirsch suggested physicist value might typical advancement tenure associate professor major research university
+A value could mean full professorship could mean fellowship higher could mean membership
+The team found social scientist United Kingdom relatively low average
+The full professor based data ranged law political science sociology geography economics
+On average across discipline professor social science twice lecturer senior lecturer though difference smallest geography
+Among scientific discipline listed Essential Science Indicators Citation Thresholds physic second citation space science
+During period January February physicist receive citation among cited physicist world
+The threshold space science highest citation physic followed clinical medicine molecular biology genetics
+Most discipline fewer scientist fewer paper fewer citation
+Therefore discipline lower citation threshold Essential Science Indicators lowest citation threshold observed social science computer science multidisciplinary science
+Little systematic investigation made academic recognition correlate different institution nation field study
+However Hirsch estimate year successful scientist outstanding scientist truly unique individual
+However point value h vary different field
+For highly cited scientist period Hirsch identified top life science order decreasing
+Among new inductee National Academy Sciences biological biomedical science median
+Hirsch intended address main disadvantage bibliometric indicator total number paper total number citation
+Total number paper account quality scientific publication total number citation disproportionately affected participation single publication major influence instance methodological paper proposing successful new technique method approximation generate large number citation many publication citation
+The intended measure simultaneously quality quantity scientific output
+There number situation may provide misleading information scientist output Most however exclusive
+Various proposal modify order emphasize different feature made
+As variant proliferated comparative study become possible showing proposal highly correlated original although alternative index may important decide comparable CVs often case evaluation process
+
+For individual tested condition disease attribute Each four fundamental number divided row sum column sum
+This give eight basic ratio though come pair sum one
+Each specific test result positive negative specific state condition used define ratio ratio Rather focusing data implies given tested individual measure quality test whole
+That specific distinctiveness criterion specific assumption two group testing individual satisfy null hypothesis ask chance distinctiveness criterion satisfied
+χ χ n n n n n n n n n n n n n n n n Copyright Lee Newberg
+All right reserved
+

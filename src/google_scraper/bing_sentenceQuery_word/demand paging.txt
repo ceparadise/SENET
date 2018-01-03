@@ -1,0 +1,315 @@
+In scheme computer store retrieves data use
+In scheme operating system retrieves data secondary storage called
+Paging important part implementation modern operating system using secondary storage let program exceed size available physical memory
+For simplicity main memory called RAM acronym secondary storage called disk shorthand concept depend whether term apply literally specific computer system
+introduced paging first mass market memory page concept computer architecture regardless whether page moved RAM disk
+For example instruction bit comprised memory address selected one word
+This zone memory called
+This use term rare
+In swapping early virtual memory technique
+An entire program would RAM disk another one would
+A program would current execution would suspended RAM use another program
+A program might include multiple occupy memory different time
+Overlays method paging RAM disk merely minimizing program use RAM
+Subsequent architecture used individual program segment became unit exchanged disk RAM
+A segment program entire code segment data segment sometimes large data structure
+These segment resident RAM requiring additional computation movement remedy
+The invention let processor operate arbitrary page anywhere RAM seemingly contiguous space
+These page became unit exchanged disk RAM
+When program try reference page currently present RAM processor treat invalid memory reference transfer control program operating system
+The operating system must When page frame use operating system must select page frame reuse page program need
+If evicted page frame program hold data program modified since read RAM word become dirty must written disk freed
+If program later reference evicted page another page fault occurs page must read back RAM
+The method operating system us select page frame reuse important efficiency
+The operating system predicts page frame least likely needed soon often LRU algorithm algorithm based program
+To increase responsiveness paging system may predict page needed soon preemptively loading RAM program reference
+After completing initialization program operate small number code data page compared total memory program requires
+The page frequently accessed called
+When working set small percentage system total number page virtual memory system work efficiently insignificant amount computing spent resolving page fault
+As working set grows resolving page fault remains manageable growth reach critical point
+Then fault go dramatically time spent resolving overwhelms time spent computing program written
+This condition referred
+Thrashing occurs program work huge data structure large working set cause continual page fault drastically slow system
+Satisfying page fault may require freeing page soon disk
+Thrashing also used context virtual memory system example describe issue computing networking
+A worst case imagined comparable mainframe
+An execute instruction crossing page boundary could point move instruction also cross page boundary set move data source cross page boundary target cross page boundary
+This single instruction reference eight page RAM cause page fault
+If operating system could allocate eight page program remedying page fault would discard another page instruction need restart instruction would fault
+To decrease excessive paging resolve thrashing problem user increase number page available per program either running fewer program concurrently increasing amount RAM computer
+In environment many user may execute program written code data separate page
+To minimize use RAM user share single copy program
+Each process set page address code point single shared copy page address data point different physical page process
+The first computer support paging jointly developed
+The machine associative memory one entry word page
+The Supervisor handled interruption managed transfer page core drum order provide store program
+Paging feature since
+Windows creates named use swap file
+It generally found may appear elsewhere typically WINDOWS directory
+Its size depends much swap space system setting selected user Enhanced Virtual Memory
+If user move deletes file appear next time Windows started The permanent swap file corrupt
+The user prompted choose whether delete file whether exists
+use similar file setting located Control Panel System Performance tab Virtual Memory
+Windows automatically set size page file start size physical memory expand physical memory necessary
+If user run application system low physical memory preferable manually set size value higher default
+The file used paging family
+The default location page file root directory partition Windows installed
+Windows configured use free space available drive pagefiles
+It required however boot partition
+drive containing Windows directory pagefile system configured write either kernel full memory dump
+Windows us paging file temporary storage memory dump
+When system rebooted Windows copy memory dump pagefile separate file free space used pagefile
+In default configuration Windows pagefile allowed expand beyond initial allocation necessary
+If happens gradually become heavily potentially cause performance problem
+The common advice given avoid set single locked pagefile size Windows expand
+However pagefile expands filled default configuration total amount physical memory
+Thus total demand virtual memory must exceed computer physical memory pagefile expand
+The fragmentation pagefile occurs expands temporary
+As soon expanded region longer use next reboot sooner additional disk space allocation freed pagefile back original state
+Locking pagefile size problematic Windows application request memory total size physical memory pagefile leading failed request allocate memory may cause application system process fail
+Also pagefile rarely read written sequential order performance advantage completely sequential page file minimal
+However large pagefile generally allows use application penalty beside using disk space
+While fragmented pagefile may issue fragmentation variable size page file time create number fragmented block drive causing file become fragmented
+For reason contiguous pagefile better providing size allocated large enough accommodate need application
+The required disk space may easily allocated system recent specification
+system GB memory GB pagefile GB disk drive system GB memory GB pagefile TB disk space
+In example system using disk space pagefile maximum
+page file also occasionally recommended improve performance Windows system chronically using much memory total physical memory
+This view ignores fact aside temporary result expansion pagefile become fragmented time
+In general performance concern related pagefile access much effectively dealt adding physical memory
+system operating system use term swap describe act moving memory page RAM disk region disk page stored
+In system common dedicate entire partition hard disk swapping
+These partition called
+Many system entire hard drive dedicated swapping separate data drive containing swap partition
+A hard drive dedicated swapping called swap drive scratch drive
+Some system support swapping swap partition others also support swapping file
+The Linux kernel support virtually unlimited number swap backends device file supporting time assignment backend priority
+When kernel need swap page physical memory us backend available free space
+If multiple swap backends assigned priority used fashion somewhat similar storage layout providing improved performance long underlying device efficiently accessed parallel
+From perspective swap file version later Linux kernel virtually fast swap partition limitation swap file contiguously allocated underlying file system
+To increase performance swap file kernel keep map placed underlying device access directly thus bypassing cache avoiding filesystem overhead
+Regardless recommends swap partition used
+When residing HDDs rotational magnetic medium device one benefit using swap partition ability place contiguous HDD area provide higher data throughput faster seek time
+However administrative flexibility swap file outweigh certain advantage swap partition
+For example swap file placed mounted file system set desired size added changed needed
+Swap partition flexible enlarged without using partitioning tool introduce various complexity potential downtime
+When system memory highly insufficient current task large portion memory activity go slow swap system become practically unable execute task even CPU idle
+When every process waiting swap system considered
+Swap death happen due incorrectly configured
+The original description swapping death problem relates memory X swap every keystroke requires Linux read swap processed system practically unresponsive even actually executing task normally
+us multiple swap file
+The default installation place root partition though possible place instead separate partition device
+introduced new system allocating RAM defragmenting physical memory
+It still us flat shared address space defragmented
+It based paging memory allows swapping
+Paging implemented may lock system physical memory used
+Swap memory could activated deactivated moment allowing user choose use physical RAM
+The backing store virtual memory operating system typically many order slower
+Additionally using mechanical storage device introduces several millisecond hard disk
+Therefore desirable reduce eliminate swapping practical
+Some operating system offer setting influence kernel decision
+Many operating system example allow using multiple storage device swap space parallel increase performance
+In older virtual memory operating system space swap backing store reserved program allocate memory runtime data
+Operating system vendor typically issue guideline much swap space allocated
+Paging one way allowing size address used process process virtual address space logical address space different amount main memory actually installed particular computer physical address space
+In system size process virtual address space much larger available main memory
+For example A computer true addressing may addressable unit RAM installed
+An example processor without PAE
+In case processor able address RAM installed
+However even case paging used create virtual memory GB
+For instance many program may running concurrently
+Together may require GB RAM
+A paging system make efficient decision memory relegate secondary storage leading best use installed RAM
+Although processor example address RAM beyond GB operating system may provide service program envision larger memory file grow beyond limit installed RAM
+The operating system let program manipulate data file arbitrarily using paging bring part file RAM necessary
+A computer main memory larger virtual address space process machine system using processor
+This nullifies significant advantage virtual memory since single process use main memory amount virtual address space
+Such system often use paging technique obtain secondary benefit The size cumulative total virtual address space still limited amount secondary storage available
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+Paging method writing reading use also known main memory
+Paging play role memory management computer operating system
+In memory management system take advantage paging OS read data secondary storage block called identical size
+The physical region memory containing single page called frame
+When paging used frame comprise single physically contiguous region secondary storage
+This approach offer advantage earlier memory management method facilitates efficient faster use storage
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+hold Computer Science MCSE MCDBA CCNA CCNP SCJP certification
+Dinesh author hugely popular blog
+Where writes guide around Computer fundamental computer software Computer programming web apps
+For type query something think missing please feel free
+Search Content Popular Article Basic Courses Advance Courses
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I reading Operating system book Operating System Concepts Peter Baer Galvin edition
+Let p probability page fault p
+We would expect p close would expect page fault
+The effective access time
+To compute effective access time must know much time needed service page fault
+If take average service time millisecond time nanosecond effective access time nanosecond effective access time p x p millisecond p x p x x My doubt page table hit multiply p need one memory access access page table memory one memory access access actual page memory
+In opinion formula
+Where memory access time Please let I wrong
+CPUs keep special purpose cache recently addressed page table entry
+Entries usually named TLB Translation Lookaside Buffer We case The page TLBs access allowed write area user access supervisor page etc
+The delay access TLBs usually hidden pipelining
+The access time depends whether data cache
+Can le current high performance CPUs
+The page TLBs
+The CPU must find way update TLBs
+Some simple hardware mechanism others use exception let software work
+In case one memory access page table needed
+far much operation huge impact CPU performance
+This really page fault The page may TLBs real page fault example memory accessed swapped disk yet initialized application bug
+The operating system need complex thing correct loading memory updating page table killing application seems reasonable delay operation
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Q This question come exercise book Operating System concept
+This approach
+The associative memory page physical address
+one access would found
+Else search page table
+If found would take two access one page table accessing page memory
+If found need access disk
+So Is approach correct
+This question posted various forum answer written matching
+Hence I posted check exactly correct way calculate effective access time
+I also follow question
+Here associative memory used TLB Translation Lookaside Buffer
+Because I assuming TLB would still need access page memory finding address TLB
+Please correct I wrong
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+I Googled long time I still understand work explanation technical illustration make clearer
+My primary confusion virtual memory
+I hope question good explanation people ask question find Google
+I admit two concept seem quite complicated similar beginning
+Sometimes also taught confusingly
+A good reference opinion found For sake completion I try explain I guarantee correctness I developed OS month
+Segmentation older concept opinion confusing
+Segmentation work name say
+A segment continuous block memory specific size
+To access memory within segment need
+This make total two address component fact stored two register
+One idea segmentation enlarge memory register
+The sort protection elaborate one paging
+Because use two register access memory split memory chunk said called segment
+Consider memory
+This split bit register segment byte
+Of course also bit register offset
+Addressing byte bit quite useless decided segment overlap I think also performance programming reason back
+The following formula used access memory segmentation This mean segment time offset
+This also mean address accessed many way
+also
+This segmentation old day
+If look assembler program try something see even called register assembler CS DS code segment data segment
+Later called GDT introduced
+This global table specific position RAM segment number memory address several option segment given
+This brings u nearer concept paging still
+So programmer decide segment start
+A new concept also GDT one could decide long segment
+So segment long bit register limit could defined programmer
+You could overlapping segment also purely separated segment
+When accessing A B still two register used accessing memory A entry GDT
+So look entry GDT see memory location segment start large
+We check B offset within allowed memory area
+Now paging different newer segmentation approach paging page fixed size
+So limit longer programmable page currently
+Furthermore unlike segmentation logical address space continuous without physical address continuous
+Paging also us table look stuff still split logical address part
+The first part number entry page table second part offset
+However offset fixed length bit access
+You also two part multiple page table used
+Two level page table quite common system I think even three level page table common
+I hope I able explain least bit I think exaplanation also confusing
+Best thing dive kernel programming try implement basic stuff booting OS
+Then find everything due backwards compability everything still modern PCs
+I direct Segmentation starting die
+I suspect paging well future
+Edit Let add clarification Segmentation paging two difference mean memory management typically two thing
+At risk oversimplification Segmentation allows process access memory natural pointer size would allow
+Paging allows process access memory system physically support
+Segments The bit system
+That allows addressing memory
+Late system much memory
+A process could map different segment physical memory
+A process could access memory could change memory could access within
+The successor brought segmenting high art
+Using even complex system base register process could access larger area memory
+Paging Is system process see continuous relatively range memory address divided page
+For example VAX processor bit address allowing access memory theoretically computer typically memory
+A process could access much memory system physically plus multiple process
+These system presented continuous range memory process virtual memory divided page around byte defined set table mapped disk storage
+If process accessed page memory triggered hardware exception
+The operating system would intercept exception allocate new page physical memory load memory disk restart instruction
+If operating system needed memory handle request would page memory already loaded
+If data read usually would loaded executable image would paged
+The page could marked invalid
+If memory page would written page file storage needed
+The Intel chip introduced bizarre system combined segment paging
+Segments used data protection
+The processor mode away
+By posting answer agree
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+Consider system Consider system paging disk average access transfer time translated page table inmainmemory access time per memory access
+Thus eachmemory reference page table take two access
+To improve time added associativememory reduces access time one memory reference entry associative memory
+Assume percent access associative memory remaining percent percent total cause page effective memory access time
+Expected delivery within Hoursrs Questions Asked Experts Questions Answered Start Excelling course Ask Expert get answer homework assignment
+
+All right reserved
+
+This preview shown page This preview shown page This preview shown page This preview shown page Demand Paging Arvind Krishnamurthy Spring Demand Paging n So far job virtual address space must physical memory n Programs use memory time n rule program spend time code n Use main memory cache disk n Bigger virtual address space illusion infinite memory n Allow program fit memory running time Demand paging mechanism n Page table present valid bit n present pointer page frame memory n present go disk n Hardware trap OS reference invalid page n OS software n choose old page replace n old page modified write content back disk n change page table entry TLB entry n load new page memory disk n update page table entry n continue thread Main Issues n resume process fault
+n need save state resume
+n process might middle instruction
+n fetch
+n needed page
+n eject
+n cache always small page replace
+n may need write evicted page back disk n many page process
+Problem resuming process fault n Fault might happened middle inst
+n Key constraint want user process aware page fault happened like context switching n Can skip faulting instruction
+No
+n Can restart instruction beginning
+n Not effect
+n Can inspect instruction figure
+add move sp fault alloc page read disk set mapping OS resume Faulting Instructions n RISC machine pretty simple n instruction tend memory ref side effect
+n thus need faulting address faulting PC
+n might wait previous load complete n Example MIPS Fault epc badva fault handler jump add ld sp CISC Instructions harder roll back n multiple memory reference side effect n block transfer
+n What happens page fault accessing location
+n Can restart instruction beginning need special handling situation Source Dest Page Replacement Policies n Random n FIFO n Throw oldest page n Pros implementation n Cons May replace heavily used page n Optimal MIN n Replace page used longest time n Minimal page fault offline algorithm n Least Recently Used n Replace page used longest time Some Interesting Facts n More page frame fault
+n Consider following reference string page frame n FIFO replacement n n page fault n Consider reference string page frame n FIFO replacement n n n This called Belady anomaly Announcements n Exam Friday n From n exam n Sample exam posted website tomorrow n Next Monday n Submit review Multics paper Implementing LRU n What hardware mechanism required implement LRU
+n Faithful Implementation n Use timestamp reference n Keep list page ordered time reference n Impractical Mostly recently used Least recently used Clock Algorithm n Approximate LRU n Replace old page oldest unreferenced page n Arrange physical page circle clock hand n Hardware keep use bit per physical page frame n Hardware set use bit reference n If use bit set mean referenced long time n On page fault n Advance clock hand n Check use bit n If clear go n If replace page Clock Simple FIFO Chance n Will always find page loop infinitely
+n Even use bit set eventually loop around clearing use bit è FIFO n What hand moving slowly
+n Not many page fault find page quickly n What hand moving quickly
+n Lots page fault lot use bit set n One way view clock algorithm crude partitioning page two category young old n Why partition group
+n Could consider modified bit avoid n Can give chance Nth Chance n Don throw hand swept n time n OS keep counter per page number sweep n On page fault OS check use bit n è clear use also clear counter n è increment counter counter equal N replace page Else go n How pick N
+n If pick larger N better approx LRU n If pick small N efficient otherwise might look long way find free page n It voodoo constant Hardware support virtual memory n One extreme n Hardware check TLB every reference n If TLB entry exist hardware check page table memory n If page exists memory hardware load TLB appropriate page table entry n The page table could also contain use bit modified bit n Only page exist memory OS invoked n Less hardware support n Hardware check TLB every reference n If translation exist immediately trap OS n Hardware aware page table state associated page use bit modified bit n OS manages everything simulates bit State per page table entry Many OS maintain four bit per page table entry n aka ok program reference page n ok program read page modify catching modification code page n aka set page referenced cleared clock algorithm n aka set page modified cleared page written disk Emulating modified bit software n BSD Unix started practice emulating bit software n Keep two set page Pages user program access without taking fault Pages memory n superset n Initially mark page n TLB bit n Traps OS write page n OS set modified bit software controlled data structure mark TLB entry resume program n When page come back disk mark Emulating use bit n Exactly approach n Mark page invalid even memory n In word lose corresponding TLB entry page want clear page use bit n On read page trap OS n OS set use bit data structure load TLB entry valid resume program n When clock hand passed want reset use bit n Mark page invalid invalidating TLB entry n Remember clock approximation LRU n Can better approximation since trapping OS page fault collect use information System paper n Historical context written n VMS designed n Released n Motivation VMS virtual memory design n Very large physical virtual memory n Very slow physical device drum n Hardware issue n Single virtual address space shared OS current user process n All user space accessible n OS collection protected procedure call n Page table organization n User page system address space allows page table paged n Page size small byte n No use bit whether page referenced n Divided address space four segment n Probably enough segment VMS OS Software n replacement n quota replace within process n One rogue process bring system n Scanning use bit costly n Use FIFO replacement twist n Use free list buffer recently replaced page Mapped Pages Free List Second Chance List n On page reference n If mapped access full speed n Otherwise page fault n If second chance list mark move first page FIFO list onto end second chance list n If second chance list bring memory move first page FIFO list onto end second chance list replace first page second chance list n page second chance list FIFO n If zero page FIFO list LRU page fault every page reference Mapped Pages Free List comment posted one write first
+This preview shown page Share Embed document website
+

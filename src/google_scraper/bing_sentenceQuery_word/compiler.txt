@@ -1,0 +1,612 @@
+A transforms computer code written one source language another programming language target language
+Compilers type support digital device primarily computer
+The name primarily used program translate create program
+However many different type compiler
+If compiled program run computer whose different one compiler run compiler
+A written language compiled
+A program translates higher level one
+A program translates language usually called transpiler
+A language usually program translates form expression without change language
+The term refers tool used create parser perform syntax analysis
+A compiler likely perform many following operation conversion input program
+Compilers implement operation phase promote efficient design correct transformation source input target output
+Program fault caused incorrect compiler behavior difficult track work around therefore compiler implementers invest significant effort ensure
+Compilers translator used transform source program
+An computer software transforms executes indicated operation
+The translation process influence design computer language lead preference compilation interpretation
+In practice interpreter implemented compiled language compiler implemented interpreted language
+Theoretical computing concept developed scientist mathematician engineer formed basis digital computing development World War II
+Primitive binary language evolved digital device understand one zero circuit pattern underlying machine architecture
+In late forty assembly language created offer workable abstraction computer architecture
+Limited capacity early computer led substantial technical challenge first compiler designed
+Therefore compilation process needed divided several small program
+The front end program produce analysis product used back end program generate target code
+As computer technology provided resource compiler design could align better compilation process
+The human mind design better solution language move machine higher level
+So development language follows naturally capability offered digital computer
+language strictly defined syntax semantics form language architecture
+Elements formal language include The sentence language may defined set rule called grammar
+BNF describes syntax sentence language used syntax Algol
+The idea derive concept linguist
+BNF extension become standard tool describing syntax programming notation many case part compiler generated automatically BNF description
+In designed algorithmic programming language called Plan Calculus
+While actual implementation occurred presented concept later seen designed Ken Iverson late
+APL language mathematical computation
+language design formative year digital computing provided useful programming tool variety application Compiler technology evolved need strictly defined transformation source program target target program digital computer
+The compiler could viewed front end deal analysis source code back end synthesize analysis target code
+Optimization front end back end could produce efficient target code
+Some early milestone development compiler technology Early operating system system software written assembly language
+In early language system programming still controversial due resource limitation
+Still several research industry effort began shift toward system programming language example
+Basic Combined Programming Language designed University Cambridge originally developed compiler writing tool
+Several compiler implemented Richards book provides insight language compiler
+BCPL influential system programming language still used research also provided basis design B C language
+Basic Language Implementation System Software developed Digital Equipment Corporation DEC computer
+Wulf Carnegie Mellon University CMU research team
+The CMU team went develop compiler one year later
+Multiplexed Information Computing Service operating system project involved later led MIT
+Multics written language developed IBM IBM User Group
+IBM goal satisfy business scientific system programming requirement
+There language could considered offered complete solution even though implemented
+For first year Mulitics project subset language could compiled assembly language Early EPL compiler Doug McIlory Bob Morris Bell Labs
+EPL supported project compiler full could developed
+Bell Labs left Multics project Over time hope replaced frustration group effort initially failed produce economically useful system
+Continued participation would drive project support cost
+So researcher turned development effort
+A system programming language based BCPL concept written
+Ritchie created compiler B wrote Uniplexed Information Computing Service operating system Unics eventually became spelled Unix
+Bell Labs started development expansion based B BCPL
+The BCPL compiler transported Multics Bell Labs BCPL preferred language Bell Labs
+Initially program Bell Labs B compiler used C compiler developed
+In new provided resource define extension B rewrite compiler
+By design C language essentially complete Unix kernel rewritten Steve Johnson started development Portable C Compiler PCC support retargeting C compiler new machine
+OOP offered interesting possibility application development maintenance
+OOP concept go back part language science
+At Bell Labs development became interested OOP
+first used system programming
+The initial design leveraged C language system programming capability Simula concept
+facility added
+The Cfront program implemented language compiler
+In subsequent year several compiler developed popularity grew
+In many application domain idea using language quickly caught
+Because expanding functionality supported newer increasing complexity computer architecture compiler became complex
+Defense Advanced Research Projects Agency sponsored compiler project Wulf CMU research team
+The Production Quality design would produce Production Quality Compiler PQC formal definition source language target
+PQCC tried extend term beyond traditional meaning parser generator without much success
+PQCC might properly referred compiler generator
+PQCC research code generation process sought build truly automatic system
+The effort discovered designed phase structure PQC
+The compiler provided initial structure
+The phase included analysis front end intermediate translation virtual machine middle end translation target back end
+TCOL developed PQCC research handle language specific construct intermediate representation
+Variations TCOL supported various language
+The PQCC project investigated technique automated compiler construction
+The design concept proved useful optimizing compiler compiler programming language
+The Ada Stoneman Document formalized program support environment APSE along kernel KAPSE minimal MAPSE
+An Ada interpreter supported development standardization effort American National Standards Institute ANSI International Standards Organization ISO
+Initial Ada compiler development Military Services included compiler complete integrated design environment along line Stoneman Document
+Army Navy worked Ada Language System ALS project targeted architecture Air Force started Ada Integrated Environment AIE targeted IBM series
+While project provide desired result contribute overal effort Ada development
+Other Ada compiler effort got way Britain University York Germany University Karlsruhe
+In Verdix later acquired Rational delivered Verdix Ada Development System VADS Army
+VADS provided set development tool including compiler
+could hosted variety Unix platform DEC Ultrix Sun Solaris targeted Motorola Army CECOM evaluation
+There soon many Ada compiler available passed Ada Validation test
+The Freesoftware Foundation GNU project developed GCC provides core capability support multiple language target
+The Ada version one widely used Ada compiler
+GNAT free also commercial support example AdaCore founded provide commercial software solution Ada
+GNAT Pro includes GNU GCC based GNAT tool suite provide
+language continued drive compiler research development
+Focus area included optimization automatic code generation
+Trends programming language development environment influenced compiler technology
+More compiler became included language distribution PERL Java Development Kit component IDE VADS Eclipse Ada Pro
+The interrelationship interdependence technology grew
+The advent web service promoted growth web language scripting language
+Scripts trace back early day Command Line Interfaces CLI user could enter command executed system
+User Shell concept developed language write shell program
+Early Windows design offered simple batch programming capability
+The conventional transformation language used interpreter
+While widely used Bash Batch compiler written
+More recently sophisticated interpreted language became part developer tool kit
+Modern scripting language include PHP Python Ruby Lua
+Lua widely used game development
+All interpreter compiler support
+When field compiling began late focus limited translation language program machine code
+The compiler field increasingly intertwined discipline including computer architecture programming language formal method software engineering computer security
+The Compiler Research The Next Years article noted importance language Java
+Security parallel computing cited among future research target
+A compiler implement formal transformation source program target program
+Compiler design define end end solution tackle defined subset interface compilation tool
+preprocessors assembler linkers
+Design requirement include rigorously defined interface internally compiler component externally supporting toolsets
+In early day approach taken compiler design directly affected complexity computer language processed experience person designing resource available
+Resource limitation led need pas source code
+A compiler relatively simple language written one person might single monolithic piece software
+However source language grows complexity design may split number interdependent phase
+Separate phase provide design improvement focus development function compilation process
+Classifying compiler number pass background hardware resource limitation computer
+Compiling involves performing lot work early computer enough memory contain one program work
+So compiler split smaller program made pas source representation performing required analysis translation
+The ability compile classically seen benefit simplifies job writing compiler compiler generally perform compilation faster
+Thus partly driven resource limitation early system many early language specifically designed could compiled single pas
+In case design language feature may require compiler perform one pas source
+For instance consider declaration appearing line source affect translation statement appearing line
+In case first pas need gather information declaration appearing statement affect actual translation happening subsequent pas
+The disadvantage compiling single pas possible perform many sophisticated needed generate high quality code
+It difficult count exactly many pass optimizing compiler make
+For instance different phase optimization may analyse one expression many time analyse another expression
+Splitting compiler small program technique used researcher interested producing provably correct compiler
+Proving correctness set small program often requires le effort proving correctness larger single equivalent program
+Regardless exact number phase compiler design phase assigned one three stage
+The stage include front end middle end back end
+This approach make possible combine front end different language back end different sharing optimization middle end
+Practical example approach multiple shared optimization multiple
+The front end analyzes source code build internal representation program called IR
+It also manages data structure mapping symbol source code associated information location type scope
+While frontend single monolithic function program commonly implemented analyzed several phase may execute sequentially concurrently
+This method favored due modularity
+Most commonly today frontend broken three phase also known lexing also known scanning parsing
+Lexing parsing comprise syntactic analysis word syntax phrase syntax respectively simple case module lexer parser automatically generated grammar language though complex case require manual modification
+The lexical grammar phrase grammar usually simplifies analysis significantly handled semantic analysis phase
+The semantic analysis phase generally complex written hand partially fully automated using
+These phase broken lexing scanning evaluating parsing building CST parse tree transforming AST syntax tree
+In case additional phase used notably rare
+The main phase front end include following The middle end performs optimization intermediate representation order improve performance quality produced machine code
+The middle end contains optimization independent CPU architecture targeted
+The main phase middle end include following Compiler analysis prerequisite compiler optimization tightly work together
+For example crucial
+The scope compiler analysis optimization vary greatly small level even whole program
+Obviously compiler potentially better job using broader view
+But broad view free large scope analysis optimization costly term compilation time memory space especially true interprocedural analysis optimization
+Interprocedural analysis optimization common modern commercial compiler
+The open source criticized long time lacking powerful interprocedural optimization changing respect
+Another open source compiler full analysis optimization infrastructure used many organization research commercial purpose
+Due extra time space needed compiler analysis optimization compiler skip default
+Users use compilation option explicitly tell compiler optimization enabled
+The back end responsible CPU architecture specific optimization The main phase back end include following branch software engineering deal trying show compiler behaves according
+Techniques include developing compiler using using rigorous testing often called compiler validation existing compiler
+programming language usually appear type mind either designed
+However practice rarely anything language exclusively compiled exclusively interpreted although possible design language rely run time
+The categorization usually reflects popular widespread implementation language instance sometimes called interpreted language C compiled one despite existence BASIC compiler C interpreter
+Interpretation replace compilation completely
+It hide user make gradual
+Even though interpreter interpreted directly executed program needed somewhere bottom stack see
+Further compiler contain interpreter optimization reason
+For example expression executed compilation result inserted output program prevents recalculated time program run greatly speed final program
+Modern trend toward time blur traditional categorization compiler interpreter even
+Some language specification spell implementation include compilation facility example
+However nothing inherent definition Common Lisp stop interpreted
+Other language feature easy implement interpreter make writing compiler much harder example many scripting language allow program construct arbitrary source code runtime regular string operation execute code passing special
+To implement feature compiled language program must usually shipped includes version compiler
+One classification compiler generated code executes
+This known A compiler one output intended directly run type computer operating system compiler run
+The output designed run different platform
+Cross compiler often used developing software intended support software development environment
+The output compiler produce code VM may may executed platform compiler produced
+For reason compiler usually classified native cross compiler
+The lower level language target compiler may
+C often viewed sort portable assembler also target language compiler
+
+original compiler used C target language
+The C created compiler usually intended read maintained human
+So pretty C intermediate code irrelevant
+Some feature C turn good target language
+
+C code directive generated support original source
+While common compiler type output machine code many type Compiler construction taught university school part curriculum
+Such course usually supplemented implementation compiler
+A example compiler Wirth used teach compiler construction
+In spite simplicity compiler introduced several influential concept field including us programming language mature time lead need Standardization
+The American National Standards Institute ANSI International Organization Standardization ISO manage standard various programming language FORTRAN COBOL C
+Universities conjunction industry government provide active research development programming language associated language tool compiler integrated development environment formal validation suite
+Professional organization representation across research education industry government
+These include Institute Electrical Electronic Engineers IEEE Association Computing Machinery ACM
+A number conference field present advance compiler construction one main topic
+support number conference including The European Joint Conferences Theory Practice Software sponsor International Conference Compiler Construction paper academic industrial sector
+Asian Symposium Programming Languages Systems APLAS organized Asian Association Foundation Software AAFS
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+A compiler special program process statement written particular programming language turn machine language code computer us
+Typically programmer writes language statement language one line time using
+The file created contains called
+The programmer run appropriate language compiler specifying name file contains source statement
+When executing running compiler first par analyzes language statement syntactically one one successive stage pass build output code making sure statement refer statement referred correctly final code
+Traditionally output compilation called sometimes
+Note term object related
+The object code processor execute one instruction time
+The programming language language used introduced possibility compiling output called run computer system platform Java bytecode interpreter provided convert bytecode instruction executed actual hardware processor
+Using virtual machine bytecode optionally recompiled execution platform
+See also Traditionally operating system additional step required compilation resolving relative location instruction data one object module run time instruction sequence data
+This process sometimes called output known
+A compiler work sometimes called language
+An work program written using processor assembler language
+See introductory tutorial compiler By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+There many programming language
+To execute compiled interpreted
+An IDE integrated development environment used write code test error translate program
+Translators usually included within programming convert
+Translators
+assembler translates assembly language machine code
+language written mnemonic closely reflects operation
+An interpreter CPU instruction interpreter move translate next instruction
+Interpreted code show error soon hit problem easier code
+An interpreter create independent final set source code created time run
+Interpreted code slower execute compiled code
+Interpreted language include JavaScript PHP Python Ruby
+Interpreted language also called language
+These ideal using within web application
+They used coding small program executed within
+A compiler
+It difficult test individual line compiled code compared interpreted language reported program compiled
+The saved stored separately code
+Compilation slow machine code executed quickly
+Java compiled programming language
+Java programming language compiled produce interpreted
+Bytecode code compiled interpreted
+You need JavaScript enabled play audio clip
+Jackson Gabbard explains Facebook us compiler Sign choose GCSE subject see content tailored
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I following quotation compiler course context graph coloring Because slow graph coloring tends used batch compiler linear scan tends used JIT compiler
+I could find clear definition online
+So make compiler batch compiler
+A JIT compiler compiles code
+program running
+Therefore cost compilation part execution time program minimized
+The opposite AOT compiler basically synonymous batch compiler
+This convert source code machine code machine code distributed
+Therefore compiler slow impact execution time resulting program
+Nowadays people say compiler typically mean AOT compiler
+Indeed term AOT compiler really started becoming popular relatively recently people started making AOT compiler JIT compiled language particularly JavaScript
+Many language
+C compile intermediate language VM JIT compiled machine code
+The term AOT compiler connotation source code compiled directly machine code form JIT compilation required
+Batch compiler bit archaic term point
+The real contrast batch compiler term popular
+Incremental compilation often associated language like Lisp REPL could interactively request language implementation compile specific function
+If function executed whose compilation requested would typically interpreted
+A batch compiler contrast compiled function
+batch
+The meaning implied within quote give
+It stem computing term used task performed scheduled later execution operating system load often activity le
+A batch compiler one compiling user waiting result compilation
+It one would say using modern terminology done background
+This converse JIT done live exact time needed without luxury spending extra time processing thoroughly
+The slower speed batch compiling illustrated Or even By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Compiler translates
+The compiler derives name way work looking entire piece source code collecting reorganizing
+Thus compiler differs analyzes line source code succession without looking entire program
+The advantage interpreter execute program immediately
+Compilers require time executable program emerges
+However program produced compiler much faster program executed interpreter
+Every except strictly interpretive language come compiler
+In effect compiler defines instruction acceptable
+Because compiler translate source code object code unique type many compiler available language
+For example compiler PCs another
+In addition compiler industry quite competitive actually many compiler language type computer
+More dozen company develop sell C compiler PC
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Programming Languages lively area Cornell eight faculty dozen student
+We proud breadth depth core discipline
+Cornell known beginning research programming language
+We made foundational contribution type theory automated theorem proving language semantics
+A recent theme solution important problem computer security networking distributed programming
+Cornell researcher also contributed language implementation program analysis optimization language software engineering
+explores programming language concept utilized service education
+He interested relative difficulty practice problem learning procedural skill
+subtraction estimated analyzing procedural execution trace obtained executing target procedure practice problem
+He currently applying technique math video game programming human language
+He also interested program synthesis help explain student become confused recently showed many misconception math modeled diagnosed research programming language formal method context type theory
+The proof assistant developed Constable group language used describe distributed computing formal specification language computing task theory formalizing topic constructive intuitionistic mathematics classical mathematics usually seen special case
+Constable also interested synthesizing program concurrent process proof developing system shown secure construction exploring deep connection programming logic
+work language design semantics implementation
+In past worked language type system data processing including bidirectional language data provenance
+More recently developing language provides construct specifying behavior network
+Frenetic make possible programmer specify behavior entire network using single program compiler translates code underlying device
+This provides opportunity enforcing security reliability performance guarantee using technique
+interest span variety topic boundary computer science mathematics including design analysis algorithm computational complexity decision problem logic algebra logic semantics programming language
+Kozen obtained number foundational result Kleene algebra test developed application efficient code certification compiler verification
+Recently investigating capsule provide clean algebraic representation state functional imperative language mutable binding coalgebraic technique verification
+focus application programming language technology building secure reliable software system
+A common theme focus language tool help detect prevent common vulnerability software
+Past example include typed assembly language code software fault isolation isolation
+Recently research focus building provably correct secure software including focus cryptographic scheme machine learning compiler
+work language secure programming integrates information flow Java extends Jif building secure distributed system automatically partition web application securely client web server
+The challenge posed Fabric Swift led work method controlling timing channel language support extension evolution large software system extensible Java compiler language
+design abstraction
+His work pair new computer architecture new programming language construct let programmer safely trade small amount accuracy large return efficiency
+Challenges approximate programming range control safety probabilistic program analysis compiler design
+Sampson curious new way safely give programmer control system detail ordinarily hidden view
+leveraged research applying programming logic semantics language design
+Recently working logic belief characterizing authorization policy approach implemented operating system recently developed Cornell
+Other example recent work include characterization kind security policy proof program obfuscation address space effective type checking defending
+work problem related language design formalization including type system optimization extension
+His work draw field category theory constructive type theory develop powerful flexible solution
+His research put practice industry collaboration design language
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I new computer science programming I wondering difference computer science programming
+get choose study one university
+We looking long answer provide explanation context
+Do give answer explain answer right ideally citation
+Answers include explanation may removed
+Computer science study computer programming practice making computer thing
+Take look offered university interested find whether course CS course programming course something else example Software Engineering even combination
+Many course advertised computer science offer significant programming component may put theoretical part course practice may sake learn skill making program
+A caveat Science become muddied field modern time least United States university degree programming
+This mean people interested programming must sign Computer Science degree reaction Computer Science program emphasize programming
+That said Computer Science mathematical science Computational Mathematics might better term
+It involves study graph theory algorithmic complexity formal logic automaton general logical structure describe transformation response input algorithm
+A Computer Scientist classic sense could reason rule govern computing system including modern computer without necessarily knowing detail implementation current architecture
+A strong background Computer Science give ability develop recall efficient scalable algorithm anticipate logical reduction reason soundly tractable
+Programming contrast person use transform something machine
+That make obvious intimate connection Computer Science much confusion come
+A programmer relative environment language able take virtually set algorithm transform form writing code
+A strong background programming CS degree provide enables write better code code easily understood others successful expressing algorithm implementing
+There large amount crosstalk course high level experience one correspond strongly developing experience noted CS major almost always competent programmer seasoned programmer picked many principle CS
+Think Physics Engineering
+A good way remembering difference requires computer see work programming pencil paper Computer Science
+Computer science deal theoretical foundation information computation practical technique implementation application
+Computer science computer astronomy telescope
+Edsger Dijkstra Programming craft creating computer program
+Computer Science point view supposed Hard Science like Physics
+It involves study compiler compiler generator hardware architecture concept various form number system algorithm algorithmic efficiency performance theory behind arithmetic operation processor
+When I CS university spent lot time mucking around assembler learning difference compiling linking interpreting etcetera
+A lot done programming act writing code compiled run via interpreter intention generating result solve problem
+That Programming act solving problem described knowledge Computer Science
+It kind Pure Maths Applied Maths split
+You need Computer Science degree programmer programmer CS background likely deeper understanding behaviour computer program
+I would reword question What difference Computer Science Software Engineering
+After involve programming
+Computer Science theortical study computation possible
+It look thing like Godels Theorem Halting problem
+Software engineering write program designed maintanable
+theory programming
+Programming implementation
+scientific practical approach computation application
+A computer scientist specializes theory computation design computational system
+Its subfields divided variety theoretical practical discipline
+Some field computational complexity theory explores fundamental property computational problem highly abstract field computer graphic emphasize visual application
+Still field focus challenge implementing computation
+For example programming language theory considers various approach description computation whilst study computer programming investigates various aspect use programming language complex system
+interaction considers challenge making computer computation useful usable universally accessible human
+If programming carpentry computer science
+More info carpentry interested thing like order build thing frame subfloor interior wall drywall etc
+How build take le time construct modified later
+In case architecture part like CS anyway concerned thing like capability material big beam need support span
+Similarly CS theoretical capability computer programming practical application knowledge
+Computer science programming physic mechanical engineering
+Computer science theoretical take scientific mathematical approach information computation
+Computer programming practical process designing writing testing debugging maintaining source code computer program
+They different related field
+Both benefited
+A degree computer science lot broader scope cover theory behind computing
+A hand focused developing coding programming skill student training different programming language
+If confused browse detail program California College San Diego
+That may provide clarity regarding scope degree
+It study problem solving method
+Computer programming It part problem solving process make field computer science
+Computer programming small subset computer science
+Programming people
+People read write maintain code
+Computer science implement describe algorithm
+Programming development making money
+Science discovering new thing
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+How work
+What difference interpreter compiler
+Compilers first sort translator program written
+The idea simple You write program hand compiler translates
+Then run result
+An interpreter also program translates language one moment program run
+You write program using text editor something similar instruct interpreter run program
+It take program one line time translates line running It translates first line run translates second line run etc
+Compiler characteristic Interpreter characteristic An accepts code expressed source language S translates equivalent code expressed another target language An accepts code expressed language S immediately executes code
+It work fetching analysing executing one instruction time
+Great user entering instruction interactively think Python would like get output putting next instruction
+Also useful program executed requires portable
+A compiler translates source code machine code execute source object code
+An interpreter executes source code one instruction time translate source code
+An interpretive compiler good compromise compiler interpreter
+It translates source program virtual machine code interpreted
+An interpretive compiler combine fast translation moderately fast execution provided Example JDK provides interpretive compiler Java
+transforms source code one computer language another one
+executes source code directly usually inside virtual machine
+Generally interpreter performance costly
+What difference interpreter compiler
+The translates entire program run
+The translates one statement machine language executes proceeds next statement
+How work
+The Difference v How Work Most program written language c java
+language contain understandable word phrase
+On hand computer time wrote article understand machine code aka Code
+Therefore need convert code source code Machine
+Hence word converting
+So conclude job Translate code machine code
+But different way code Compiler convert source code kind intermediate form
+For static language compiler usually convert source code assembly usually get stored disk assembler invoked convert assembly binary code usually stored object file suffix usually linker invoked link object file binary executable
+Also common refer whole process compiling assembling linking compiling
+So may call gcc compiler actually invokes compiler compile assembler assemble ld linker link
+Interpreters language intermediate called bytecode form source code first converted byte code process called compiling
+Bytecode run host machine need program actually process viewpoint OS interpret bytecode host machine program called interpreter think java
+Some language like python compiling interpreting work single
+A compiler computer program transforms translates source code programming language source language another computer language target language
+In case compiler used transform source code executable program
+translate code programming language low lower level language mostly assembly machine code
+An interpreter computer program executes instruction written programming language
+It either execute source code directly translates source code first step efficient representation executes code Look book best intro dymanic language realization I found ever c This book center writing interpreter dynamic language Scheme using write interpreter language add tip OOP SmallTalk SOM Simple Object Machine All modern interpreter include compiler inside compile highlevel element portable use JIT compiling machine code RAM
+PS If anybody want write SmallTalk system Python please note
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+

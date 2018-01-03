@@ -1,0 +1,650 @@
+learn share knowledge build career
+I studying lisp language lisp routine general context know routine technical context talk starting learn routine
+So real definition routine
+already googled find anything The term derives common term language like BASIC one actually creates SUBroutines
+BASIC actually difference SUBroutine FUNCTION nevertheless From Wikipedia entry In computer science subroutine As name subprogram suggests subroutine behaves much way computer program used one step larger program another subprogram
+A subroutine often coded started called several time several place single execution program including subroutine branch back return next instruction call subroutine task done
+Different different ecosystem thus different term describe general concept
+I generally use term OOP environment day
+Happy coding
+For fun I Community
+The list hopefully cover term correct widely accepted use given language mean
+Informally used context language omitted unless defacto term used
+Feel free add correct annotate appropriate
+You ca find technical definition technical definition specific lisp
+A outside vaudeville another name function
+While many year since I programmed Lisp one ever used term formal way even used commonly
+We talked
+If someone said routine calculate many apple pie perfectly informal
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+example subprogram also called procedure subroutine function
+A subprogram like sauce recipe given used part many recipe
+take input quantity needed produce result sauce
+Commonly used subprogram generally collection
+
+The noun sense set sequence step part larger computer program A set sequence step part larger computer program Nouns denoting communicative process content subprogram computer science written program procedure rule associated documentation pertaining operation computer system stored memory routine used needed routine provides chronological record execution computer program routine coordinate operation subroutine routine loaded executed repeatedly routine call routine designed yield random number debugged routine maintained program library alternative normal procedure triggered unusual anticipated situation arises set control statement placed library retrieved name computer science sequence instruction computer interpret execute SUBPHYLUM UROCHORDA SUBPHYLUM UROCHORDATA SUBPHYLUM VERTEBRATA SUBPOENA SUBPOENA AD TESTIFICANDUM SUBPOENA DUCES TECUM SUBPOPULATION SUBROGATE SUBROGATION
+
+In sequence program instruction perform specific task packaged unit
+This unit used program wherever particular performed
+Subprograms may defined within program separately used multiple program
+In different programming language subroutine may called
+The generic term sometimes used
+The name suggests subroutine behaves much way computer program used one step larger program another subprogram
+A subroutine often coded started called several time several place one execution program including subroutine branch back next instruction subroutine task done
+credited invention concept termed contrasted
+Subroutines powerful tool many includes support writing using
+Judicious use subroutine example approach often substantially reduce cost developing maintaining large program increasing quality reliability
+Subroutines often collected important mechanism sharing trading software
+The discipline based subroutine attached object object
+In method called executable program basically sequence subroutine call
+The content subroutine body piece program code executed subroutine called invoked
+A subroutine may written expects obtain one data value calling program replace formal parameter
+The calling program provides actual value parameter called
+Different programming language may use different convention passing argument The subroutine may return computed value caller provide various result value output parameter
+Indeed common use subroutine implement purpose subroutine purely compute one result whose value entirely determined argument passed subroutine
+Examples might include computing number
+A subroutine call may also modifying reading writing creating halting program machine even delaying program execution specified time
+A subprogram side effect may return different result time called even called argument
+An example available many language return different number time called
+The widespread use subroutine side effect characteristic language
+A subroutine coded may one place perform task
+This method allows direct implementation function defined recursive
+A subroutine whose purpose compute one answer question sometimes called predicate
+In language often subroutine called predicate since primarily determine success failure
+For example type function subroutine main
+usually include specific construct Some many distinguish function function subprogram provide explicit return value calling program subroutine procedure
+In language function call normally embedded function may called
+Procedure call either behave syntactically procedure may called explicitly invoked statement
+
+Other language distinguish function subroutine
+In strictly language subprogram mean various internal state program change
+Functions always return result repeatedly called argument
+Such language typically support function since subroutine return value use unless cause side effect
+In subroutine may also simply called function confused different concept
+A language usually translate procedure call return machine instruction according subroutine compiled separately program call
+The instruction sequence corresponding call return statement called procedure
+The advantage breaking program subroutine include Invoking subroutine versus using code imposes call mechanism
+A subroutine typically requires standard code entry exit function usually saving return address minimum
+The idea subroutine worked computing machine already existed time
+The arithmetic conditional jump instruction planned ahead time changed relatively little special instruction used procedure call changed greatly year
+The earliest computer microprocessor single subroutine call instruction
+Subroutines could implemented required programmer use call series
+Some early computer microprocessor subroutine call us dedicated hardware stack store return hardware support level subroutine nesting support recursive subroutine
+Machines mid use saved instruction counter first memory location called subroutine
+This allows arbitrarily deep level subroutine nesting support recursive subroutine
+The one first computer subroutine call instruction feature support arbitrarily deep subroutine nesting also support recursive subroutine
+In early assembler subroutine support limited
+Subroutines explicitly separated main program indeed source code subroutine could interspersed subprogram
+Some assembler would offer predefined generate call return sequence
+By assembler usually much sophisticated support inline separately assembled subroutine could linked together
+Even cumbersome approach subroutine proved useful
+For one thing allowed use code many different program
+Moreover memory scarce resource early computer subroutine allowed significant saving size program
+Many early computer loaded program instruction memory
+Each subroutine could provided separate piece tape loaded spliced main program mainline subroutine tape could used many different program
+A similar approach applied computer used main input
+The name originally meant library literal sense kept indexed collection tape collective use
+To remove need computer designer eventually provided instruction whose operand instead location variable containing return address
+On computer instead modifying subroutine return jump calling program would store return address variable subroutine completed would execute indirect jump would direct execution location given predefined variable
+Another advance instruction combined saving return address calling jump thereby minimizing significantly
+In IBM example branch instruction BAL BALR designed procedure calling would save return address processor register specified instruction
+To return subroutine execute indirect branch instruction BR register
+If subroutine needed register purpose calling another subroutine would save register content private memory location register
+In system JSB instruction would perform similar task except return address stored memory location target branch
+Execution procedure would actually begin next memory location
+In HP assembly language one would write example call subroutine called MYSUB main program
+The subroutine would coded The JSB instruction placed address NEXT instruction namely BB location specified operand namely MYSUB branched NEXT location namely AA MYSUB
+The subroutine could return main program executing indirect jump JMP MYSUB I branched location stored location MYSUB
+Compilers Fortran language could easily make use instruction available
+This approach supported multiple level call however since return address parameter return value subroutine assigned fixed memory location allow recursive call
+Incidentally similar method used early discover recalculation dependency spreadsheet
+Namely location reserved cell store address
+Since allowed natural recalculation order allows tree walk without reserving space stack memory limited small computer
+Most modern implementation use special case implement subroutine call return
+Each procedure call creates new entry called top stack procedure return stack frame deleted stack space may used procedure call
+Each stack frame contains corresponding call typically includes procedure parameter internal variable return address
+The call sequence implemented sequence ordinary instruction approach still used RISC VLIW architecture many traditional machine designed since late included special instruction purpose
+The call stack usually implemented contiguous area memory
+It arbitrary design choice whether bottom stack lowest highest address within area stack may grow forward backwards memory however many architecture chose latter
+Some design notably implementation used two separate stack one mainly control information like return address loop counter data
+The former worked like call stack indirectly accessible programmer language construct latter directly accessible
+When procedure call first introduced important motivation save precious memory
+With scheme compiler reserve separate space memory private data parameter return address local variable procedure
+At moment stack contains private data call currently namely called returned yet
+Because way program usually assembled library still uncommon find program include thousand subroutine handful active given moment
+For program call stack mechanism could save significant amount memory
+Indeed call stack mechanism viewed earliest simplest method
+However another advantage call stack method allows since nested call procedure get separate instance private data
+One disadvantage call stack mechanism increased cost procedure call matching return
+The extra cost includes incrementing decrementing stack pointer architecture checking accessing local variable parameter address instead absolute address
+The cost may realized increased execution time increased processor complexity
+This overhead obvious objectionable return without making procedure call
+To reduce overhead many modern compiler try delay use call stack really needed
+For example call procedure may store return address parameter called procedure certain processor register transfer control procedure body simple jump
+If procedure return without making call call stack used
+If need call another procedure use call stack save content register return address needed return
+In programming language subprogram termed classified associated
+These language use special keyword indicate function take parameter especially C return value
+Note function including modifying variable whose address passed parameter
+Examples The function return value called function This function return result number call part expression This function convert number initial letter corresponding day week namely
+The result calling might assigned variable
+This function return value modifies variable whose address passed parameter would called
+In example call subroutine define actual subroutine keyword must used subroutine name following
+After content followed must typed
+In language subprogram termed associated class
+Visual Basic us various term called define passed parameter
+By default unspecified variable registered passed default
+Also function sub declared given public private friend designation determines whether accessed outside module project declared
+The function return value called function This function return result number call part expression This function convert number initial letter corresponding day week namely
+The result calling might assigned variable
+This function return value modifies variable whose address passed parameter would called
+In called procedure may passed providing information argument string length array bound
+This allows procedure general eliminates need programmer pas information
+By default pass argument reference
+A trivial subroutine change sign element array might look like This could called various array follows A subprogram may find useful make use certain amount space used execution subprogram hold intermediate result
+Variables stored scratch space termed scratch space termed
+An activation record typically tell pas control back subprogram finish
+A subprogram may number nature call site
+If recursion supported subprogram may even call causing execution suspend another execution subprogram occurs
+useful mean simplify complex algorithm break complex problem
+Recursive language generally provide new copy local variable call
+If programmer desire value local variable stay call declared language global value common area used
+Here example recursive subroutine find number Early language like initially support recursion variable statically allocated well location return address
+Most computer late support hardware stack register
+Modern language almost invariably use stack usually supported modern computer instruction set provide fresh activation record every execution subprogram
+That way nested execution free modify local variable without concern effect suspended execution progress
+As nested call accumulate structure formed consisting one activation record suspended subprogram
+In fact stack structure virtually ubiquitous activation record commonly termed
+Some language also support subroutine callable within outer parent subroutine
+Inner subroutine access local variable outer subroutine called
+This accomplished storing extra context information within activation record also termed
+If subprogram executed properly even another execution subprogram already progress subprogram said
+A recursive subprogram must reentrant
+Reentrant subprogram also useful situation since multiple thread call subprogram without fear interfering
+In slightly le restrictive similar requirement application program shared many thread
+In environment generally one stack
+An environment fully support may use data structure stack store activation record
+In sometimes desirable number function name operating different type data different parameter profile
+For example square root function might defined operate real complex value matrix
+The algorithm used case different return result may different
+By writing three separate function name programmer convenience remember different name type data
+Further subtype defined real separate positive negative real two function written real one return real parameter positive another return complex value parameter negative
+In series function name accept different parameter profile parameter different type function said
+Here example subroutine overloading In code two function name different parameter
+As another example subroutine might construct accept direction trace path point screen
+There plethora parameter could passed constructor colour trace starting x trace speed
+If programmer wanted constructor able accept color parameter could call another constructor accepts color turn call constructor parameter passing set parameter X Y would generally centered screen placed origin speed would set another value coder choosing
+A subprogram together value variable captured environment created
+Closures notable feature Lisp programming language introduced
+Depending implementation closure serve mechanism
+A wide number convention coding subroutine developed
+Pertaining naming many developer adopted approach name subroutine certain task make inquiry used substitute variable
+Some programmer suggest subroutine perform one task subroutine perform one task split subroutine
+They argue subroutine key component role program must remain distinct
+Proponents modularizing code advocate subroutine minimal dependency piece code
+For example use generally deemed unwise advocate perspective add tight coupling subroutine global variable
+If coupling necessary advice subroutine accept passed instead
+However increasing number parameter passed subroutine affect code readability
+Besides effect subroutine may need inform calling program condition may occurred execution
+In language programming standard often done integer value placed subroutine standard location encodes normal exceptional condition
+In return code expected subroutine return value often designed multiple could used direct index branch table often located immediately call instruction avoid extra conditional test improving efficiency
+In one would write example There significant runtime calling subroutine including passing argument branching subprogram branching back caller
+The overhead often includes saving restoring certain processor register allocating reclaiming call frame storage
+In language subroutine call also implies automatic testing subroutine return code handling may raise
+In language significant source overhead intensively used method call
+There seemingly obvious optimization procedure call applied procedure may side effect
+For example expression function must called twice two call may return different result
+Moreover value must fetched second call since first call may changed
+Determining whether subprogram may side effect difficult indeed
+So optimization safe purely functional programming language compiler typical imperative programming usually assume worst
+A method used eliminate overhead subprogram body versus branching subroutine back
+Not avoid call overhead also allows procedure effectively taking account context argument call
+The inserted body optimized compiler
+Inlining however usually increase code size unless program contains one call subroutine subroutine body le code call overhead
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+Whether student educator lifelong learner put path systematic vocabulary improvement
+Do account yet
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+What open activation record recursive algorithm
+Edit Activation record number time call function finished yet
+Correct
+So find number activation record given specific input array say something general array dimension Or
+Your question poorly stated except title
+There single sentence really correct meaningful semantically
+So I stick title explain wrongt text
+programming language implementation concept
+Programming language used implement algorithm program concept algorithm abstract notion rather concrete realization specific programming language
+An activation record chunk memory containing usually local data necessary execute subprogram call name vary language function procedure method subroutine well memory code control flow
+More dynamic part data used may stored place heap
+Thus activation record number whatever
+But number activation record use general correspond number call returned though necessarily true language see
+In simpler programming language subprogram call well nested first subprogram returned last one called
+Hence activation record stored pushdown stack
+That apply control structure
+Also may data activation record still used program subprogram returned
+This happens example result subprogram another subprogram executed later I skip detail
+So case one may keep memory activation record unfinished call
+And pushdown stack longer work properly without specific technique handle problem
+Last general concept
+I idea input array program
+So I answer
+Many program array activation record
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Finding best school Every serious computer science student quickly realizes selecting master doctoral program ranking
+Although name recognition ranking important several factor must considered choosing graduate program computer science
+These factor include program specialization faculty research location financial support
+With computer science encompassing wide range want select program specializes area interested researching
+Interested theory
+Then MIT Cornell would better choice Yale Caltech
+Is machine learning area like specialize
+Then beat Carnegie Mellon home world first machine learning department core affiliated faculty area research
+Take time find top program also strong area want study
+Choosing school based area specialization provide research opportunity better fit academically
+Additionally want choose school faculty working research project interest
+Getting accepted top program guarantee find project become passionate additionally need find adviser whose particular research interest coincide
+Graduate school opportunity learn conduct research brightest mind field make sure school choose good number faculty working project find personally interesting
+Moreover want take practical matter location financial support account
+If surfer Orange County California move Illinois may option
+Location lower list priority still relevant making decision
+PhD program computer science last anywhere four seven year sure visit campus seriously considering make final selection
+More important location financial support rank chief among concern selecting program
+Graduate life difficult financial anxiety compound academic stress face
+Avoid school offer minimal financial support avoid piling debt course graduate education
+There point accumulating debt many good program provide full financial support teaching assistantships research fellowship
+Find program willing provide financial support student academic background ask duration continuation guarantee assessing offer
+Taking factor consideration help choose program right provides best opportunity succeed graduate student
+After narrowing choice based research interest factor still faced decision many school actually apply
+Although process different student general guideline useful
+An optimal number program apply five eight
+Admissions process notoriously arbitrary
+With many student applying position getting admitted top program even superlative student crapshoot
+So risk academic career single school may may accept
+Although applying school may sound like good way initially improve odds cost application quickly dissuade strategy
+Even afford strategy poor one since either ideal applicant
+If burden turning school accept mention cash waste process
+You accept one offer end
+If type student graduate program competing would apply school like MIT Stanford Berkeley almost certain reject
+The application process call dose realism even midst optimism
+Your wallet thank later
+To sure apply top school would die get
+But also apply school would happy attend one two safety school
+A good balanced strategy would apply
+Two reach school Carnegie Mellon MIT Berkeley Stanford top student UCLA Texas competitive student
+If get one need apply
+However applying one may improve chance admitted
+
+Two solid choice reasonable chance admitted good student Georgia Tech Ohio State
+These reputable school program would proud participate
+The exact choice school depend caliber student choose two likelihood admitted based academic profile
+
+One two safety school
+These school almost sure get serve case accepted preferred school
+If choose school wisely need rely however always good idea Plan B ready case Plan A pan
+Many smaller state private school serve school
+Throughout application process talk others professor mentor regarding school good fit interest academic profile
+Although one like one dream shot applying MIT GPA publication GRE score simply waste money
+Choose school wisely since application process expensive
+You also begin process early maintain spreadsheet tracking application submitting due date form needed
+As make progress application mark form sent still need submitted
+This spreadsheet serve command center application process help avoid missed deadline incomplete application
+As final note discouraged turned one possibly several school
+The process contains large element luck
+We know student accepted Carnegie Mellon yet rejected UC San Diego Penn
+Different school looking student different strength interest school may consider good fit faculty
+Try enjoy application process keep discouraged
+If applied school wisely get least one program happy
+As marriage choosing graduate program computer science need want one
+list following graduate computer science program best United States Toronto Canada Oxford England handful school Israel Switzerland rank school
+
+Interested robotics
+Stanford received plenty recognition research effort revolutionary area robotics artificial intelligence scientific computing
+Founded Stanford Computer Science CS Department program offer Master Science Doctor Philosophy degree
+The department continues lead world computer science research education
+The department often performs interdisciplinary research work area physic engineering medicine
+notable Computer Science alumnus Stanford professor emeritus author mammoth series called recognized industry ultimate guide
+Knuth historical contribution study algorithm computer programming design
+From revolutionary medical electronic device harvesting energy child LeapPad Learning System Electrical Engineering Computer Science Department EECS MIT solid reputation making global technological impact world
+The Computer Science department offer master doctoral program course area algorithm information theory multicore programming robotics
+The MIT Computer Science Artificial Intelligence Laboratory CSAIL largest research laboratory MIT also one world vital center information technology research
+The EECS faculty member expert researcher field
+Graduates become leader area academia material science biomedical technology nanotechnology name
+Once program student follow footstep notable alumnus like William Hewlett Robert Metcalf well current faculty member Anant Agarwal Professor Electrical Engineering Computer Science several company including Tilera Corporation created Tile multicore processor Virtual Machine Works
+The Electrical Engineering Computer Sciences EECS division UC Berkeley turned biggest name technology Steve Wosniak Apple Computers William Joy Sun Microsystems
+Among many notable current EECS faculty member Pieter Abbeel several award including Sloan Research Fellowship
+Popular medium outlet BBC Discovery Channel featured Abbeel advanced work robotics aerobatics
+The EECS program offer Master Science degree area computer architecture operating system robotics database management system scientific computing
+Master degree student receive preparation research theoretical area experience laying groundwork Are interested designing latest software technology help suffering speech impairment brought stroke head trauma
+Or researching chromosomal abnormality role cancer
+The Princeton Computer Science CS Department offer Master Science Engineering
+degree research project internship important area well project theory computational market network system computer architecture programming language name
+Some area study include algorithm data structure computational linguistics computer music cryptography programming language
+Alan Turing Alonzo Church theoretical father computer science artificial intelligence many notable Princeton CS alumnus made indelible mark field
+Working computer science alumnus faculty William Red led Tartan Racing team victory DARPA Grand Challenge currently leading graduate team competing Google Lunar X Prize space competition land robot moon one many advantage attending Carnegie Mellon University School Computer Science SCS
+Carnegie Mellon received recognition world first machine learning department
+SCS offer Master Science degree program ranked highly specialty interdisciplinary area machine learning artificial intelligence system theory
+SCS offer program interdisciplinary track across several department
+Some track offered program include applied logic computational biology language informational technology robotics
+The cartoon series The Jetsons gave Americans glimpse world household robot
+Today student learn alongside Cornell faculty Ashutosh Saxena conduct research robot learning
+His work featured BBC World News highlight breakthrough research robotics manipulation personal robot truly useful common household office space
+The Cornell Department Computer Science Master Science program offer course research topic area database system security graphic robotics computer architecture name
+The
+program includes core course thesis research requirement
+The CS program includes different field graduate school requirement including teaching breadth requirement research project completing residency taking exam
+Did ever see movie Avatar
+Paul Debevec research associate professor Computer Science department University Southern California USC Viterbi School Engineering received Scientific Engineering Academy Award design engineering used film
+Did ever computer virus
+Thanks USC alumnus Fred Cohen inventor computer virus defense technique virus contained eliminated
+The USC Department Computer Science research faculty member contributing field computing nationally internationally since
+Both Master Science student work interdisciplinary research project including DNA computing neuroscience Internet technology software architecture computer graphic
+Research specialized area include game design artificial intelligence computer network intelligent robotics software engineering name
+Dell Computers founder Michael Dell may dropped University Texas Austin contribution technology financial contribution University Texas Computer Science UTCS department forever live
+Just one many notable alumnus UTCS faculty member collectively garnered national international award including two Turing award
+Recently NPR radio segment one UTCS professor Peter Stone work creating robot play soccer
+The Master Science program includes major minor coursework area computer architecture multimedia system artificial intelligence
+Students may opt finish program without thesis
+The program offer foundational requirement well breadth however program area formal method engineering bioinformatics graphic visualization name
+Bill Gates Microsoft unquestionably one technologically famous individual attend Harvard University graduate
+The Bill Melinda Gates Foundation underwrote one main research facility Harvard house student School Engineering Applied Sciences SEAS groundbreaking activity
+The SEAS Computer Science department offer Master program continues lead world advance area imaging security artificial intelligence linguistics computational theory
+The Master program requires two component graduate general requirement SEAS additional work specific Computer Science degree
+Doctoral student required take minimum course along plan study includes research
+All graduate student required choose path one five area Applied Mathematics Applied Physics Computational Science Engineering Computer Science Engineering Sciences
+Caltech Computing Mathematical Sciences department home innovative research world
+For example faculty member Professor Erik Winfrees breakthrough research molecular programming aim put technology hand user biology chemistry physic
+Facebook social medium giant hired Caltech graduate research position improve web performance user latency optimization
+Graduate study Computer Science program aim towards include course area information theory robotics operating system
+The core coursework thesis necessary
+degree lead terminal degree required part program
+The doctoral program consists research breadth requirement thesis final examination
+Many alumnus University Illinois Computer Science department CS Illinois true pioneer leader technology industry
+Alumnus Ray Ozzie Microsoft chief software architect develops company software service platform
+Alumnus Max Levchin CEO Slide largest social entertainment company world
+Alumnus Jawed Karim website YouTube
+CS Illinois graduate student continue conduct research area computer science technology
+The Computer Science program offer Master Science degree
+Master student need coursework thesis research breadth requirement complete program
+The doctoral program includes thesis research coursework teaching assistantship exam dissertation defense
+Have ever heard little company called Google
+Sergey Brin President Technology Google one many famous alumnus University Maryland College Park UMCP Department Computer Science
+At UMCP student also work alongside distinguished faculty solving complex issue data security problem online fraud form abuse
+Professor Elaine Shi significant research achievement cryptography oblivious computation may shape monitoring protection aspect online security
+The UMCP Department Computer Science offer
+degree
+The department performs research area computer vision bioinformatics artificial intelligence graphic name
+The department offer
+degree without thesis option along relevant coursework
+The doctoral program includes coursework oral exam dissertation research
+Micheal Taylor University California San Diego UCSD Computer Science Engineering CSE Department developing prototype processor called GreenDroid designed dramatically reduce energy consumption smart phone
+UCSD participates type research project
+The CSE department offer Master PhD program area spanning theory computation software hardware
+It house graduate student faculty member
+For
+program student take core course decide one technical concentration area choose several option complete program
+These option include thesis comprehensive exam project else interdisciplinary plan
+The doctoral program includes research breadth depth requirement exam teaching assistant requirement dissertation
+Do download music
+Well thanks University Michigan UM alumnus Tony Fadell creation iPod music lover access hundred thousand song album anywhere anytime
+Tony Fadell former Senior Vice President Apple IPod division one many distinguished alumnus University Michigan Electrical Engineering Computer Science program EECS
+The Master program includes core course specific topic study research robotics computer vision programming language coding theory
+The doctoral program includes advanced course area computer theory architecture interactive system well research dissertation
+The film several Oscars also something common Purdue University Computer Science Department alumnus Kevin Grazier
+Grazier science adviser movie filming well several science TV series show
+His contribution extend science planning engineer year Jet Propulsion Laboratory wrote mission planning analysis software
+Graduate student reach star obtaining Master degree computer science university
+The graduate program prepares student research teaching offer research project area data mining computational biology software engineering distributed system name
+The
+program allows distance learning
+The program encompasses breadth requirement oral written exam thesis
+With Alumni Saul Amarel pioneer Artificial Intelligence Stephen Perlman OnLive founder developer Mova Contour motion capture technology wonder graduate student look Columbia University Department Computer Science educational research excellence
+The department fall Fu Foundation School Engineering Applied Science offer master doctoral degree
+The Master Science program includes core course thesis well specialty track area natural language processing software system computer security name
+The program includes directed advanced research faculty like Dana Pe er breakthrough cancer research using computational biology
+The doctoral requirement also include community service breadth depth requirement exam coursework teaching dissertation
+The University Washington UW Computer Science Engineering CSE Department offer several program graduate student well multidisciplinary student covering computer science fundamental research innovation
+University Washington CSE program offer Professional Master Program PMP regular Master Program well degree program
+The PMP program designed fully employed professional plan continuing working attaining skill move position project greater depth
+The program offer educational course area Human Computer Interaction Applied Algorithms Parallel Computation allows distance learning
+The regular Master program offer coursework similar PMP program well capstone project thesis component
+The program offer strong computer science research program well multidisciplinary project field Computer Graphics Vision Animation Game Science
+For example Zoran Popovic collaboration UW biochemist David Baker created online visual game called Foldit eventually led discovery structure protein baffled scientist decade
+The program encompasses breadth requirement seminar research dissertation
+Georgia Tech School Computer Science resource like faculty member Tom Conte groundbreaking research computer architecture compiler code generation allow graduate student work alongside biggest pioneer computer science today
+Graduate student also follow footstep alumnus Krishna Barhat Google research scientist creator Google News Jim Allchin former executive Microsoft
+The School Computer Science offer Master program provides online
+degree program Information Security
+The Master program offer degree bioengineering computer science information security
+The school provides doctoral program algorithm optimization bioengineering bioinformatics computer science UCLA Computer Science alumnus Vint Cerf wear suit industry known casual attire received recognition Internet pioneer dubbed one father His contribution garnered National Medal Technology Turing Award Presidential Medal Freedom
+This description paint portrait one many distinguished highly honored alumnus faculty UCLA Computer Science department
+The department offer Master Science Doctor Philosophy degree
+The master program entail either thesis plan study examination plan study
+Each plan includes core coursework student usually complete year half
+The doctoral program includes breath requirement course exam dissertation
+With notable alumnus Grace Hopper computer language pioneer wonder student seek enter field computer science Yale University
+The Yale Computer Science department offer two graduate program Doctor Philosophy degree terminal Master Science
+degree
+It typically take year get master four six year obtain doctorate
+The Master degree requires taking eight course
+The program focus research
+The first three term doctoral program breadth requirement third term main focus research guided adviser supervisory committee
+Some area research include computer music robotics computer graphic scientific computing applied math machine learning artificial intelligence
+Students expect work alongside notable faculty Brian Scassellati whose research project robotics lab build robot aid understanding human development specifically social development child
+Scassellati belief robotics offer new kind interdisciplinary tool investigating human behavior
+sponsored school sponsored school sponsored school Copyright
+
+This post part series produced HuffPost Mentorship Program
+discus issue affecting woman science technology engineering math
+Transitioning sophomore year summer given lot time think reflect upon experience towards majoring Computer Science
+I feel extremely different way commonly portrayed medium even I expected
+So six reality computer science major Personally brother one encouraged take computer science class
+I tried learn code unsuccessful I could even set development environment
+Even though dropped intro CS class told I could field needed woman engineer like
+Through faith I took web development course jumped intro CS track Stanford stuck CS train ever since
+The number one thing attracts CS major fact I build stuff stay around forever said internet written ink bad deal
+b accessible many people c like teaching really stupid baby something
+Mehran Sahami really famous one awesome CS professor told u first day class computer really dumb really good following instruction
+Almost good point everything letter
+If talk computer language make want golden
+My problem solving skill become immensely better becoming computer science major
+In fact everything I think problem
+Running late morning
+I break problem going take time I effectively cut corner avoid wasting time
+My parent often rely fix anything technologically related television phone name
+I approach every issue software problem could wrong
+Look symptom problem see show
+Understand system could causing
+And usually I get solution
+It easy give say oh care someone else code
+Another one awesome CS Professors Eric Roberts showed u first day second introductory class even Stanford graduated student CS major Valley hired still need people fill job
+It surprising software job even working eBay talent one thing company aggressively looking
+You give could
+Maybe could code next app Learning CS involves experimentation
+You mess around code really get
+Sometimes mean break something already working
+But great thing return get learn something new sometimes something even documented fixed
+This definitely happens work everyday
+Sometimes I feel like taking lazy approach going back old way thing trust definitely lot better play around
+Being CS major hard probably many people
+You doubt everyday whether meant want give
+You see kid since two year old think Damn I even bother trying
+You fail programming ponder question personal experience
+The truth one talk hard want think
+Even year later I still doubting decision major CS software engineering
+I doubt day I set foot first second third CS class every exam I took first day internship day I push code Github
+But truth OK doubt long hold back
+You think best
+Of course
+Do afraid wo get anywhere unless try
+So someone contemplating computer science someone afraid stop
+Forget boy tell ca forget hater jealous zeal
+Code
+If broken get segmentation fault Java exception go fix
+Chances assume meant never able feel thrill getting something work even Hello World stopping
+Sometimes one stopping answer let go
+
+ÐÔÅØ obj stream BC è endstream endobj obj R R R stream å Þæ µ n k èM endstream endobj obj stream B B I ìÄì ßsî S ìËXÊ g ïS í pÎ àcü OÑ
+Õêgê Æ VZR ú Õ M zÎ Ý UÕ AÍª Ù ÂnÄÆà î Âíc Å Åd ÅH V Q Rp XTð þ Åf Ý DÍd M c Oé É IU ãCD Et Ft Ñ K cYÄµTq qe ÎZÐ J ä ûùÃÀÀçÀ Ø ÿgà ð ðIì Û Ýðþx úU ÈÚìÝk â ÐºÔ hvÃþ ÜÜ zÏá zx Hü þ hGu Õ T lTMîÌ åàlà V è I
+ØÜì àFààzà ç øÖõt ñ ëüESôé ëk é pêï
+Á þk Û lW ôD þ gä ÝU Él ÇÌs ÛO N ç õÙmSëî öívó Ãqò â ÃÙö åç SÌyöl M Å ÝA HÝ O ëº ãsv KcMíGK c Ý æÈ v Y ãþ
+úæ kÚ ìr g ùH Gp Z
+
+Earn industry credential earn degree
+As nonprofit university WGU put student first
+Earn degree half cost online university
+Western Governors University
+All Rights Reserved WGU Indiana accredited online university offering online bachelor master degree program
+
+You still full access site functionality may lost
+For best experience upgrade browser following link
+

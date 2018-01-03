@@ -1,0 +1,563 @@
+In set rule defines combination symbol considered correctly structured document fragment language
+This applies document represents document represents data
+The syntax language defines surface form
+computer language based sequence character based spatial layout connection symbol may textual graphical
+Documents syntactically invalid said
+Syntax form contrasted meaning
+In processing computer language semantic processing generally come syntactic processing case semantic processing necessary complete syntactic analysis done together
+In syntactic analysis comprises semantic analysis comprises middle end phase distinguished
+Computer language syntax generally distinguished three level Distinguishing way yield modularity allowing level described processed separately often independently
+First lexer turn linear sequence character linear sequence known lexing
+Second parser turn linear sequence token hierarchical syntax tree known narrowly speaking
+Thirdly contextual analysis resolve name check type
+This modularity sometimes possible many language earlier step depends later step example C tokenization depends context
+Even case syntactical analysis often seen approximating ideal model
+The parsing stage divided two part concrete syntax tree determined grammar generally far detailed practical use AST simplifies usable form
+The AST contextual analysis step considered form semantic analysis adding meaning interpretation syntax alternatively informal manual implementation syntactical rule would difficult awkward describe implement formally
+The level generally correspond level
+Words specified grammar generally given
+Phrases CFL generally DCFL specified grammar generally given BNF
+Phrase grammar often specified much constrained grammar full order make easier parse parse DCFL linear time simple even simpler efficient parse grammar whose production rule constrained
+In principle contextual structure described automatically analyzed mean though general step done manually via rule implemented via store name type scope
+Tools written automatically generate lexer lexical specification written regular expression parser phrase grammar written BNF allows one use rather need procedural functional programming
+A notable example pair
+These automatically produce syntax tree parser writer must manually write code describing converted syntax tree
+Contextual analysis also generally implemented manually
+Despite existence automatic tool parsing often implemented manually various reason perhaps phrase structure alternative implementation improves performance allows grammar changed easily
+Parsers often written functional language Haskell scripting language Python Perl C
+As example syntactically valid Lisp program assuming function exists else name resolution fails adding
+However following invalid Note lexer unable identify first error know producing token remainder program invalid since word rule begin
+The second error detected parsing stage The parser identified list production rule due token match thus give error message general may ambiguous
+Type error undeclared variable error sometimes considered syntax error detected usually case compiling language though common classify kind error error instead
+As example Python code contains type error add string literal integer literal
+Type error kind detected They detected parsing phrase analysis compiler us separate rule allow integerLiteral integerLiteral stringLiteral integerLiteral though likely compiler use parsing rule allows expression form LiteralOrIdentifier LiteralOrIdentifier error detected contextual analysis type checking occurs
+In case validation done compiler error detected runtime
+In dynamically typed language type determined runtime many type error detected runtime
+For example Python code syntactically valid phrase level correctness type b determined runtime variable type Python value
+Whereas disagreement whether type error detected compiler called syntax error rather error type error detected program execution time always regarded semantic rather syntax error
+The syntax textual programming language usually defined using combination structure structure inductively specify nonterminals symbol
+Syntactic category defined rule called specify value belong particular syntactic category
+Terminal symbol concrete character string character example syntactically valid program constructed
+A language different equivalent grammar equivalent regular expression lexical level different phrase rule generate language
+Using broader category grammar LR grammar allow shorter simpler grammar compared restricted category LL grammar may require longer grammar rule
+Different equivalent phrase grammar yield different parse tree though underlying language set valid document
+Below simple grammar defined using notation regular expression
+It describes syntax defines production syntactic category This grammar specifies following Here decimal digit character parenthesis terminal symbol
+The following example token sequence grammar The grammar needed specify programming language classified position
+The phrase grammar programming language specified using grammar though overall syntax due variable declaration nested scope hence
+However exception language phrase grammar
+In language like Perl Lisp specification implementation language allows construct execute parsing phase
+Furthermore language construct allow programmer alter behavior parser
+This combination effectively blur distinction parsing execution make syntax analysis language meaning parsing phase may finish
+For example Perl possible execute code parsing using statement Perl function prototype may alter syntactic interpretation possibly even syntactic validity remaining code
+Colloquially referred Perl parse Perl code must executed parsing modify grammar strongly even Perl parse Perl undecidable
+Similarly Lisp introduced syntax also execute parsing meaning Lisp compiler must entire Lisp system present
+In contrast C macro merely string replacement require code execution
+The syntax language describes form valid program provide information meaning program result executing program
+The meaning given combination symbol handled semantics either
+Not syntactically correct program semantically correct
+Many syntactically correct program nonetheless per language rule may depending language specification soundness implementation result error translation execution
+In case program may exhibit
+Even program within language may still meaning intended person wrote
+Using example may possible assign meaning grammatically correct sentence sentence may false The following C language fragment syntactically correct performs operation semantically defined operation meaning As simpler example syntactically valid semantically defined us
+Even though compiler programming language Java C would detect uninitialized variable error kind regarded error rather syntax error
+To quickly compare syntax various programming language take look list example
+
+A used produce various kind
+Programming language generally consist
+Programming language used create implement specific
+The earliest known programmable machine preceded automatic flute player described century
+From early program used direct behavior machine
+Thousands different programming language created mainly computer field many still created every year
+Many programming language require computation specified form sequence operation perform language use form program specification form
+desired result specified achieve
+The description programming language usually split two component form meaning
+Some language defined specification document example programming language specified Standard language dominant treated
+Some language basic language defined standard extension taken dominant implementation common
+A programming language notation writing specification computation
+Some author restrict term programming language language express possible algorithm
+Traits often considered important constitutes programming language include like define usually considered programming language
+Programming language may however share syntax markup language computational semantics defined
+example XML dialect
+Moreover mostly used structuring document also contains Turing complete subset
+The term sometimes used interchangeably programming language
+However usage term varies among author including exact scope
+One usage describes programming language subset computer language
+In vein language used computing different goal expressing computer program generically designated computer language
+For instance markup language sometimes referred computer language emphasize meant used programming
+Another usage regard programming language theoretical construct programming abstract machine computer language subset thereof run physical computer finite hardware resource
+emphasizes language much programming language language intended execution
+He also argues textual even graphical input format affect behavior computer programming language despite fact commonly remark ignorance programming language concept reason many flaw input format
+The earliest computer often programmed without help programming language writing program absolute
+The program decimal binary form read toggled switch computer
+Absolute machine language later termed
+The next step development still closely tied specific computer
+These served make program much relieved programmer tedious address calculation
+The first written
+An early programming language designed computer developed German
+However implemented
+proposed one first language ever developed
+Unlike Short Code statement represented mathematical expression understandable form
+However program translated every time ran making process much slower running equivalent
+At developed early
+A used automatically convert language machine code
+The first code compiler developed computer University Manchester considered first programming language
+The second autocode developed Mark called Mark Autocode
+Brooker also developed autocode conjunction University Manchester
+The version devised
+Known EDSAC Autocode straight development Mercury Autocode adapted local circumstance noted object code optimisation diagnostics advanced time
+A contemporary separate thread development developed University Manchester machine
+In invented IBM
+It first widely used functional implementation opposed design paper
+It still popular language used program benchmark rank world
+Another early programming language devised US called
+It developed period
+Hopper found business data processing customer uncomfortable mathematical notation early team wrote specification programming language implemented prototype
+The compiler became publicly available early substantially complete
+major influence design since direct descendant actual use time
+The increased use language introduced requirement
+These language varying degree provide facility assembly language language used perform task require direct access hardware facility still provide control structure
+The period late brought development major language paradigm use Each language spawned descendant modern programming language count least one ancestry
+The also saw considerable debate merit whether programming language designed support
+famous letter published argued statement eliminated higher level programming language
+The year relative consolidation
+combined system programming
+The United States government standardized system programming language derived intended use defense contractor
+In Japan elsewhere vast sum spent investigating incorporated logic programming construct
+The functional language community moved standardize Lisp
+Rather inventing new paradigm movement elaborated upon idea invented previous decade
+One important trend language design programming system increased focus use organizational unit code
+Ada ML developed notable module system often wedded construct
+The rapid growth created opportunity new language
+originally Unix scripting tool first released became common dynamic
+came used programming bytecode virtual machine became popular commercial setting promise popular time early
+These development fundamentally novel rather refinement many existing language paradigm although syntax often based C family programming language
+Programming language evolution continues industry research
+Current direction include security reliability verification new kind modularity database integration Microsoft
+computer programming language aim provide higher level abstraction internal computer hardware detail
+programming language based solving problem using constraint given program rather using written programmer
+All programming language building block description data process transformation applied like addition two number selection item collection
+These primitive defined syntactic semantic rule describe structure meaning respectively
+A programming language surface form known
+Most programming language purely textual use sequence text including word number punctuation much like written natural language
+On hand programming language nature using visual relationship symbol specify program
+The syntax language describes possible combination symbol form syntactically correct program
+The meaning given combination symbol handled semantics either
+Since language textual article discus textual syntax
+Programming language syntax usually defined using combination structure structure
+Below simple grammar based This grammar specifies following The following example token sequence grammar
+Not syntactically correct program semantically correct
+Many syntactically correct program nonetheless per language rule may depending language specification soundness implementation result error translation execution
+In case program may exhibit
+Even program within language may still meaning intended person wrote
+Using example may possible assign meaning grammatically correct sentence sentence may false The following fragment syntactically correct performs operation semantically defined operation meaning value complex type defined value If first line omitted program would trigger error compilation variable p would defined
+But program would still syntactically correct since type declaration provide semantic information
+The grammar needed specify programming language classified position
+The syntax programming language specified using grammar
+Some language including Perl Lisp contain construct allow execution parsing phase
+Languages construct allow programmer alter behavior parser make syntax analysis generally blur distinction parsing execution
+In contrast Perl block may contain general computation C macro merely string replacement require code execution
+The term refers meaning language opposed form
+The static semantics defines restriction structure valid text hard impossible express standard syntactic formalism
+For compiled language static semantics essentially include semantic rule checked compile time
+Examples include checking every declared used language require declaration label arm distinct
+Many important restriction type like checking identifier used appropriate context
+adding integer function name call appropriate number type argument enforced defining rule called
+Other form like may also part static semantics
+Newer programming language like form data flow analysis part static semantics
+Once data specified machine must instructed perform operation data
+For example semantics may define expression evaluated value manner conditionally execute
+The also known language defines various construct language produce program behavior
+There many way defining execution semantics
+Natural language often used specify execution semantics language commonly used practice
+A significant amount academic research went allow execution semantics specified formal manner
+Results field research seen limited application programming language design implementation outside academia
+A type system defines programming language classifies value expression manipulate type interact
+The goal type system verify usually enforce certain level correctness program written language detecting certain incorrect operation
+Any type system involves reject many incorrect program also prohibit correct albeit unusual program
+In order bypass downside number language usually unchecked may used programmer explicitly allow normally disallowed operation different type
+In typed language type system used program number language usually functional one relieving programmer need write type annotation
+The formal design study type system known
+A language specification every operation defines type data operation applicable implication applicable type
+For example data represented many programming language dividing number string meaning rejected compiler
+The invalid operation may detected program compiled static type checking rejected compiler compilation error message may detected program run dynamic type checking resulting
+Many language allow function called exception handler written handle exception example always return result
+A special case typed language language
+These often scripting markup language one data commonly character string used symbolic numeric data
+In contrast allows operation performed data generally considered sequence bit various length
+language untyped include variety
+In practice language considered typed point view verifying rejecting operation modern language offer degree typing
+Many production language provide mean bypass subvert type system trading finer control program execution see
+In expression type determined prior program executed typically
+For example integer expression passed function expects string stored variable defined hold date
+Statically typed language either
+In first case programmer must explicitly write type certain textual position example variable
+In second case compiler type expression declaration based context
+Most mainstream statically typed language manifestly typed
+Complete type inference traditionally associated le mainstream language
+However many manifestly typed language support partial type inference example infer type certain limited case
+Additionally programming language allow type automatically converted type example int used program expects float
+also called determines operation run time word type associated rather
+As language dynamically typed language require programmer write explicit type annotation expression
+Among thing may permit single variable refer value different type different point program execution
+However type automatically detected piece code actually executed potentially making difficult
+example dynamically typed language
+allows value one type treated another example treating number
+This occasionally useful also allow kind program fault go undetected even
+prevents
+An attempt perform operation wrong type value raise error
+Strongly typed language often termed
+An alternative definition weakly typed refers language permit large number implicit type conversion
+In JavaScript example expression implicitly convert number conversion succeeds even string letter
+Such implicit conversion often useful mask programming error
+generally considered orthogonal concept usage literature differs
+Some use term mean even confusingly mean simply
+Thus called strongly typed weakly statically typed
+It may seem odd professional programmer C could weakly statically typed
+However notice use generic pointer pointer allow casting pointer pointer without needing explicit cast
+This extremely similar somehow casting array byte kind datatype C without using explicit cast
+Most programming language associated core sometimes known library especially included part published language standard conventionally made available implementation language
+Core library typically include definition commonly used algorithm data structure mechanism input output
+The line language core library differs language language
+In case language designer may treat library separate entity language
+However language core library often treated part language user language specification even require library made available implementation
+Indeed language designed meaning certain syntactic construct even described without referring core library
+For example string literal defined instance class similarly expression block construct instance library class
+Conversely contains multiple coherent subset suffice construct rest language library macro language designer even bother say portion language must implemented language construct must implemented part library
+Programming language share property natural language related purpose vehicle communication syntactic form separate semantics showing related language branching one another
+But artificial construct also differ fundamental way language evolved usage
+A significant difference programming language fully described studied entirety since precise finite definition
+By contrast natural language changing meaning given user different community
+While also artificial language designed ground specific purpose lack precise complete semantic definition programming language
+Many programming language designed scratch altered meet new need combined language
+Many eventually fallen disuse
+Although attempt design one universal programming language serf purpose failed generally accepted filling role
+The need diverse programming language arises diversity context language used One common trend development programming language add ability solve problem using higher level
+The earliest programming language tied closely underlying hardware computer
+As new programming language developed feature added let programmer express idea remote simple translation underlying hardware instruction
+Because programmer le tied complexity computer program computing le effort programmer
+This let write functionality per time unit
+proposed way eliminate need specialized language programming
+However goal remains distant benefit open debate
+took position use formal language essential prevent introduction meaningless construct dismissed foolish
+similarly dismissive idea
+Hybrid approach taken
+A language designer user must construct number artifact govern enable practice programming
+The important artifact language
+The specification programming language artifact language use agree upon whether piece valid language behavior shall
+A programming language specification take several form including following An programming language provides way write program language execute one configuration hardware software
+There broadly two approach programming language implementation
+It generally possible implement language using either technique
+The output may executed hardware program called interpreter
+In implementation make use interpreter approach distinct boundary compiling interpreting
+For instance implementation compile execute source line time
+Programs executed directly hardware usually run several order magnitude faster interpreted software
+One technique improving performance interpreted program
+Here execution translates block going used machine code direct execution hardware
+Although commonly used programming language fully open specification implementation many programming language exist proprietary programming language implementation available single vendor may claim proprietary language intellectual property
+Proprietary programming language commonly internal single product proprietary language used internally within vendor others available external user
+Some programming language exist border proprietary open example asserts proprietary right aspect programming language open implementation part system also CLR closed environment
+Many proprietary language widely used spite proprietary nature example include
+Some language may make transition closed open example originally Ericsson internal programming language
+Thousands different programming language created mainly computing field
+Software commonly built programming language
+Programming language differ form human expression require greater degree precision completeness
+When using natural language communicate people human author speaker ambiguous make small error still expect intent understood
+However figuratively speaking computer exactly told understand code programmer intended write
+The combination language definition program program input must fully specify external behavior occurs program executed within domain control program
+On hand idea algorithm communicated human without precision required execution using interleaf natural language code written programming language
+A programming language provides structured mechanism defining piece data operation transformation may carried automatically data
+A us present language represent concept involved computation
+These concept represented collection simplest element available called
+process programmer combine primitive compose new program adapt existing one new us changing environment
+Programs computer might without human interaction user might type
+In case command simply program whose execution chained together
+When language run command interpreter without compiling called
+It difficult determine programming language widely used usage mean varies context
+One language may occupy greater number programmer hour different one line code third may consume CPU time
+Some language popular particular kind application
+For example still strong corporate data center often large scientific engineering application aerospace transportation military embedded application embedded application operating system
+Other language regularly used write many different kind application
+Various method measuring language popularity subject different bias measured proposed Combining averaging information various internet site claim ten popular programming language descending order overall popularity
+There overarching classification scheme programming language
+A given programming language usually single ancestor language
+Languages commonly arise combining element several predecessor language new idea circulation time
+Ideas originate one language diffuse throughout family related language leap suddenly across familial gap appear entirely different family
+The task complicated fact language classified along multiple ax
+For example Java language encourages organization concurrent language contains construct running multiple parallel
+
+In broad stroke programming language divide classification distinguished
+Traditionally programming language regarded describing computation term imperative sentence
+issuing command
+These generally called language
+A great deal research programming language aimed blurring distinction program set instruction program assertion desired answer main feature
+More refined paradigm include language hybrid paradigm
+An much paradigm direct model underlying machine architecture
+By purpose programming language might considered general purpose scripting language language language combination
+Some general purpose language designed largely educational goal
+A programming language may also classified factor unrelated programming paradigm
+For instance programming language use keywords
+Other language may classified
+
+All entry entered proper alphabetical heading bullet item
+The term word defined The brief definition normal text
+If definition two line needed please create new page using term word defined page title place full description definition page
+Also feel free link web reference
+Refer help page information editing operation
+Please keep entry factual possible
+
+There many programming language
+To execute compiled interpreted
+An IDE integrated development environment used write code test error translate program
+designed solve problem
+Programming language used implement algorithm
+They create program communicate instruction computer
+There many different type programming language
+But ability Languages defined
+instruction encoded language human use understand instruction language computer understand code
+Languages also described
+language assembly language closely reflect mechanical working
+include Java JavaScript Ruby BASIC Python include C assembly language
+A computer CPU understands series binary number programming language converted binary code
+instruction processed speedily language difficult people read write
+For major web powerful game developer need know code language order maximise speed efficiency program
+Modern game typically programmed using variety language
+You need JavaScript enabled play audio clip
+Google Diana Gorea Facebook Jackson Gabbard explain important learn different programming language Sign choose GCSE subject see content tailored
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+Computer science also strong connection discipline
+Many problem science engineering health care business area solved effectively computer finding solution requires computer science expertise knowledge particular application domain
+Thus computer scientist often become proficient subject
+Finally computer science wide range specialty
+These include computer architecture software system graphic artifical intelligence computational science software engineering
+Drawing common core computer science knowledge specialty area focus particular challenge
+Finally importantly computer scientist computer scientist fun
+Not mention lucrative career opportunity
+Computer Science The Profession Computer science discipline involves understanding design computer computational process
+In general form concerned understanding information transfer transformation
+Particular interest placed making process efficient endowing form intelligence
+The discipline range theoretical study algorithm practical problem implementation term computational hardware software
+A central focus process handling manipulating information
+Thus discipline span advancing fundamental understanding algorithm information process general well practical design efficient reliable software hardware meet given specification
+Computer science young discipline evolving rapidly beginning
+As includes theoretical study experimental method engineering design one discipline
+This differs radically physical science separate understanding advancement science application science field engineering design implementation
+In computer science inherent intermingling theoretical concept computability algorithmic efficiency modern practical advancement electronics continue stimulate advance discipline
+It close interaction theoretical design aspect field bind together single discipline
+Because rapid evolution difficult provide complete list computer science area
+Yet clear crucial area theory algorithm data structure programming methodology language computer element architecture
+Other area include software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation
+A professional computer scientist must firm foundation crucial area field likely knowledge one area discipline depending upon person particular area practice
+Thus well educated computer scientist able apply fundamental concept technique computation algorithm computer design specific design problem
+The work includes detailing specification analysis problem provides design function desired satisfactory performance reliable maintainable meet desired cost criterion
+Clearly computer scientist must sufficient training computer science area able accomplish task must also firm understanding area mathematics science well broad education liberal study provide basis understanding societal implication work performed
+Computer Science study principle application technology computing computer
+It involves study data data structure algorithm process structure principle computer hardware software design methodology topic numerical analysis operation research artificial intelligence language design structure translation technique
+Computer Science provides foundation knowledge student career objective wide range computing profession
+The study efficient effective software development technique
+Team work communication skill
+An interest applying technology problem wide variety discipline
+Computer Science concerned information much sense physic concerned energy devoted representation storage manipulation presentation information
+Computer Science concerned study machine communication man machine application machine
+Major area Computer Science include
+Operating Systems concerned development structure complex program facilitate communication
+
+Computational Science analysis numerical method solving mathematical problem computer
+
+Programming Languages study design property language human communicate computer
+
+Architecture study use mathematical logic design electronic circuit
+
+Intelligent Systems concerned mean computer may perform task might characterized intelligent performed human
+
+Automata Theory abstract study computer capability
+
+Information Storage Retrieval study method storing vast amount data computer method searching retrieving data
+
+Software Engineering study tool technique software design development testing maintenance
+
+Programming Languages lively area Cornell eight faculty dozen student
+We proud breadth depth core discipline
+Cornell known beginning research programming language
+We made foundational contribution type theory automated theorem proving language semantics
+A recent theme solution important problem computer security networking distributed programming
+Cornell researcher also contributed language implementation program analysis optimization language software engineering
+explores programming language concept utilized service education
+He interested relative difficulty practice problem learning procedural skill
+subtraction estimated analyzing procedural execution trace obtained executing target procedure practice problem
+He currently applying technique math video game programming human language
+He also interested program synthesis help explain student become confused recently showed many misconception math modeled diagnosed research programming language formal method context type theory
+The proof assistant developed Constable group language used describe distributed computing formal specification language computing task theory formalizing topic constructive intuitionistic mathematics classical mathematics usually seen special case
+Constable also interested synthesizing program concurrent process proof developing system shown secure construction exploring deep connection programming logic
+work language design semantics implementation
+In past worked language type system data processing including bidirectional language data provenance
+More recently developing language provides construct specifying behavior network
+Frenetic make possible programmer specify behavior entire network using single program compiler translates code underlying device
+This provides opportunity enforcing security reliability performance guarantee using technique
+interest span variety topic boundary computer science mathematics including design analysis algorithm computational complexity decision problem logic algebra logic semantics programming language
+Kozen obtained number foundational result Kleene algebra test developed application efficient code certification compiler verification
+Recently investigating capsule provide clean algebraic representation state functional imperative language mutable binding coalgebraic technique verification
+focus application programming language technology building secure reliable software system
+A common theme focus language tool help detect prevent common vulnerability software
+Past example include typed assembly language code software fault isolation isolation
+Recently research focus building provably correct secure software including focus cryptographic scheme machine learning compiler
+work language secure programming integrates information flow Java extends Jif building secure distributed system automatically partition web application securely client web server
+The challenge posed Fabric Swift led work method controlling timing channel language support extension evolution large software system extensible Java compiler language
+design abstraction
+His work pair new computer architecture new programming language construct let programmer safely trade small amount accuracy large return efficiency
+Challenges approximate programming range control safety probabilistic program analysis compiler design
+Sampson curious new way safely give programmer control system detail ordinarily hidden view
+leveraged research applying programming logic semantics language design
+Recently working logic belief characterizing authorization policy approach implemented operating system recently developed Cornell
+Other example recent work include characterization kind security policy proof program obfuscation address space effective type checking defending
+work problem related language design formalization including type system optimization extension
+His work draw field category theory constructive type theory develop powerful flexible solution
+His research put practice industry collaboration design language
+
+A programming language vocabulary set grammatical rule instructing computing device perform specific task
+The term usually refers
+Each programming language unique set keywords word understands special organizing program
+programming language simple compared human language complex language computer actually understands called
+Each different type unique machine language
+Lying machine language language language called
+Assembly language similar machine language much easier program allow substitute number
+Machine language consist number
+Lying language language called usually abbreviated
+far removed machine language represent class computer language closest human language
+Regardless language use eventually need program machine language computer understand
+There two way program
+program
+The question language best one consumes lot time energy among computer professional
+Every language strength weakness
+For example FORTRAN particularly good language processing numerical lend well organizing large program
+Pascal good writing readable program flexible C programming language
+embodies powerful complex difficult learn
+According IEEE Spectrum interactive ranking Python top programming language followed C Java
+Of course choice language use depends type computer program sort program expertise programmer
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+In together set rule specific
+The formal language set symbol letter token string language may formed
+The string formed alphabet called word word belong particular formal language sometimes called
+A formal language often defined mean also called
+The field study primarily purely aspect internal structural pattern
+Formal language theory sprang linguistics way understanding syntactic regularity
+In computer science formal language used among others basis defining grammar formalized version subset natural language word language represent concept associated particular meaning
+In typically defined formal language defined set formal language limited computational power
+In formal language used represent syntax philosophy mathematics reduced syntactic manipulation formal language way
+The first formal language thought one used literally meaning concept writing Frege described formal language pure thought
+early used rewriting string influential
+An context formal language although often make sense use usual sense word generally
+The element alphabet called
+An alphabet may contain number element however definition formal language theory specify alphabet finite number element result apply
+A alphabet finite sequence letter
+The set word alphabet Σ usually denoted Σ using
+The length word number letter composed
+For alphabet one word length often denoted e ε λ even Λ
+By one combine two word form new word whose length sum length original word
+The result concatenating word empty word original word
+In application especially alphabet also known word known break metaphor replaces metaphor
+A alphabet Σ Σ set alphabet
+Sometimes set word grouped expression whereas rule constraint may formulated creation expression
+In computer science mathematics usually deal adjective formal often omitted redundant
+While formal language theory usually concern formal language described syntactical rule actual definition concept formal language possibly infinite set string composed given alphabet le
+In practice many language described rule
+The notion may closer intuitive concept language one described syntactic rule
+By abuse definition particular formal language often thought equipped formal grammar describes
+The following rule describe formal language alphabet Σ Under rule string string
+This formal language express addition addition equality express look like mean
+For instance nowhere rule indication mean number zero mean addition
+For finite language one explicitly enumerate word
+For example describe language b ab cba
+The case construction contains word
+However even finite alphabet Σ b infinite number word potentially expressed abb ababba aaababbbbaab
+Therefore formal language typically infinite describing infinite formal language simple writing b ab cba
+Here example formal language Formal language used tool multiple discipline
+However formal language theory rarely concern particular language except example mainly concerned study various type formalism describe language
+For instance language given Typical question asked formalism include Surprisingly often answer decision problem done extremely expensive characterization expensive
+Therefore formal language theory major application area
+Formal language may classified based expressive power generative grammar well complexity recognizing
+provide good compromise expressivity ease widely used practical application
+Certain operation language common
+This includes standard set operation union intersection complement
+Another class operation application string operation
+Examples suppose language common alphabet
+Such used investigate class language
+A class language closed particular operation operation applied language class always produce language class
+For instance known closed union concatenation intersection closed intersection complement
+The theory study common closure property language family right
+A compiler usually two distinct component
+A generated tool like identifies token programming language grammar
+expressed simpler formal language usually mean
+At basic conceptual level usually generated like attempt decide source program valid belongs programming language compiler built
+Of course compiler parse source code usually translate executable format
+Because parser usually output answer typically
+This used subsequent stage compiler eventually generate containing run directly hardware requires execute
+In set expressed formal language
+A also called consists formal language together also called
+The deductive apparatus may consist set may interpreted valid rule inference set
+A formal system used one expression one expression
+Although formal language identified formula formal system likewise identified theorem
+Two formal system may theorem yet differ significant way formula A may syntactic consequence formula B one another instance
+A finite sequence formula may interpreted axiom follows preceding formula sequence
+The last sentence sequence theorem formal system
+Formal proof useful theorem interpreted true proposition
+Formal language entirely syntactic nature may given give meaning element language
+For instance mathematical set possible formula particular logic formal language assigns meaning
+The study interpretation formal language called
+In mathematical logic often done term
+In model theory term occur formula interpreted object within fixed compositional interpretation rule determine truth value formula derived interpretation term formula interpretation term formula becomes true
+
+learn share knowledge build career
+It occurred today although I adopted infrequently use term semantics referring language element naming convention I sense formal definition
+made eye glaze
+I sense meaning context I encountered common usage respect linguistics I typically use term refer
+This definition though idea
+I major never taken Computer Science course
+Is taught CS
+Is accurate definition boiled statement two rather exhaustive exhausting article
+A definition cribbed
+This pretty much exactly inferred definition
+The sticking point made eye glaze precisely defining model computation
+There many different formal model computation lead different form semantics
+Operational Semantics probably closest way people informally model semantics fragment code run interpreter changing state abstract routine
+This approach break many model concurrency nondeterminism sematics better suited situation
+It language element term formally mean term usually
+This mean express term language effectively assuming underlying kind model depends semantic talking
+As see wikipedia page mainly kind semantics From decription understand semantic something well defined inside context need specified context otherwise could give language formal definition term From perspective theory practice programming language language element semantics
+Naming convention
+And semantics nothing anything except perhaps implementation correct sometimes called faithful semantics
+Beyond hard generalize many different style semantics
+There style semantics called operational semantics given program semantics tell program executed abstract machine another variant semantics say program executed result
+There axiomatic semantics roughly fact prove individiual program
+The axiomatic semantics collection valid proof technique
+It implementation ensure provable claim true
+There also static semantics meant broadly requirement imposed compile time program considered good well formed
+Stuff like variable defined used static semantics
+But mostly people say static semantics mean type checking
+Finally possible speak semantics abstract data type class interface among others
+This usage good deal looser boil specification behavior permissible
+I advise avoid word semantics context use word contract specification instead
+It avoid confusing thing
+Commentary always helpful try boil complex subject one two sentence
+And come programming language
+The Wikipedians mean well often complex confusing plain wrong
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Complete application fee waiver
+With prime location program utilizes small class size close interaction faculty connection tech industry San Francisco nearby Silicon Valley practicum opportunity leading tech company impart skill knowledge necessary graduate succeed career
+The practicum experience immensely useful
+The opportunity build production software gain exposure industry standard useful
+Being strategically located Bay Area gave u chance work firm choice
+

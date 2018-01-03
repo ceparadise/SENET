@@ -1,0 +1,310 @@
+In task automatically construct satisfies given
+In contrast technique specification usually statement appropriate
+Often program synthesis employ technique
+Already Summer Institute Symbolic Logic Cornell University defined problem synthesize circuit mathematical requirement
+Even though work refers circuit program work considered one earliest description program synthesis researcher refer program synthesis Church Problem
+In similar idea build automatic programmer explored researcher artificial intelligence
+Since various research community considered problem program synthesis
+Notable work include approach work discussed
+Even development modern programming language understood form program synthesis
+The last decade seen surge practical interest idea program synthesis community related field
+Armando showed possible encode program synthesis problem Boolean logic use algorithm automatically find program
+In unified framework program synthesis problem proposed since yearly program synthesis competition comparing different algorithm program synthesis competitive event
+Still available algorithm able synthesize small program
+The framework start specification formula
+For formula proof constructed thereby also synthesizing functional program unifying substitution
+Proof rule include logical transformation splitting conjunctive assertion disjunctive goal
+Murray shown rule
+In Manna Waldinger added generalized rule handle also equality later rule turned incomplete nevertheless
+The framework designed enhance human readability intermediate formula contrary classical resolution require allows one reason formula arbitrary structure containing junctors
+Programs obtained approach guaranteed satisfy specification formula started sense
+Only minimalist yet consisting conditional recursion arithmetic operator supported
+As toy example functional program compute maximum two number derived follows
+Starting requirement description formula obtained formal translation
+This formula proved
+By reverse specification line obtained letter denoting variable respectively
+After applying line proof goal disjunction hence split two case viz
+line
+Turning first case resolving line axiom line lead program variable line
+Intuitively last conjunct line prescribes value must take case
+Formally resolution rule shown line applied line yielding simplifies
+In similar way line yield line line resolution
+Also second case line handled similarly
+In last step case
+line joined using resolution rule line make rule applicable preparatory step needed
+Since line come program term conditional expression result program column
+Since goal formula derived proof done program column line contains program
+
+Thursday November Science Refreshments Computer Science Commons Science There natural correspondence mathematical proof computer program
+For instance recursive function correctness relate directly inductive proof mathematics
+However many undergraduate student feel disconnect required mathematics computer science curriculum
+There several proof assistant tool used educational community introduce concept student since tool primarily created educational purpose student often benefit expected extent
+We created educational tool draw benefit existing provers assistant includes novel proof language mimic handwritten proof
+By creating proof assistant targeted towards introductory computer science student intuitive user interface rich mechanism providing constructive feedback hope bridge gap many student find mathematical proof program correctness
+Program synthesizer evolved past several decade method generating program user specification
+One approach synthesis using type theoretic approach proof search Myth synthesis engine us approach
+One major difficulty synthesis model exponential blow search space
+To circumvent issue present Scout synthesis engine designed synthesis expect user able prune search space intelligently fully automatic synthesizer
+Our study reveals limitation advantage possible expansion program synthesis
+
+Program synthesis automatic generation program specification promise fundamentally change way build software
+By using synthesis tool build software correct virtue synthesis process greatly speed development time well make power computing accessible
+Studied since synthesis seen recent resurgence thanks general increase computing power well renewed interest synthesis difficult problem becomes far tractable
+In talk I describe novel synthesis technique context typed functional programming language
+Typed functional language particularly interesting yet previously untapped domain expose much structure problem compared language
+In turn use structure make synthesis much efficient
+To demonstrate effectiveness approach I also present Myth prototype synthesizer synthesizes recursive functional program using example
+Osera Assistant Professor Grinnell College
+He received bachelor degree Computer Science Applied Mathematical Computational Sciences Comparative History Ideas University Washington PhD Computer Information Science University Pennsylvania advised Steve Zdancewic
+For last decade focused improving software developer experience first industry program manager Microsoft working Visual compiler academia applying programming language theory towards practical tool technique pedagogy
+His recent work aim provide foundation program synthesis turn used create powerful tool support programming functional programming language
+MacLean Hall Iowa City IA The University Iowa
+
+CSE Colloquium Lecture Series Nadia Polikarpova Computer Science Artificial Intelligence Lab MIT Monday March Room CSE Building Modern programming language safeguard developer many typical error yet subtle violation security plague software
+Program synthesis potential eliminate error generating executable code concise intuitive specification
+Traditionally program synthesis failed scale specification encode complex behavioral property software property notoriously hard check even given program surprising finding right program within large space candidate considered challenging
+My work tackle challenge design mechanism able check large set candidate program complex specification whereby efficiently pruning search space
+Based principle I developed Synquid program synthesizer accepts specification form expressive us specialized underlying verification mechanism
+Synquid first synthesizer powerful enough automatically discover provably correct implementation complex data structure manipulation insertion Trees AVL Trees transformation propositional formula
+Each program synthesized minute
+Going beyond textbook algorithm I created language called Lifty us synthesis automatically rewrite program violate information flow policy
+In case study Lifty able enforce required policy prototype conference management system
+Nadia Polikarpova postdoctoral researcher MIT Computer Science Artificial Intelligence Lab interested helping programmer build secure reliable software
+She completed PhD ETH Zurich
+For dissertation developed tool technique automated formal verification library created first fully verified container library receiving Best Paper Award International Symposium Formal Methods
+During doctoral study Nadia intern MSR Redmond worked verifying implementation security protocol
+At MIT Nadia applying formal verification automate various critical programming task
+CSE Ranjit Jhala Regents University California
+All Rights Reserved
+
+Rishabh Singh Rishabh Singh PhD candidate Computer Science Artificial Intelligence Laboratory MIT
+His research interest broadly formal method programming language
+His PhD work focus developing program synthesis technique making programming accessible student
+He Microsoft Research PhD fellow winner MIT William Martin Outstanding Master thesis Award
+He obtained BTech Computer Science Engineering IIT Kharagpur awarded Institute Silver Medal Bigyan Sinha Memorial Award
+He also awarded Prime Minister National Guest Republic Day Parade New Delhi
+The Trustees Princeton University
+
+
+Computer Science PhD Student University Washington An introduction field program synthesis idea computer write program automatically tell want
+Professor great adviser one shameful secret PhD
+I working correcting grave misjudgement surrounding
+But time make contribution part series
+Today tackle
+Synthesis one hotter computer science buzzword right like
+But program synthesis
+It little odd way program computer giving explicit instruction
+Of course instruction computer good following extremely quickly necessarily human good writing
+Wouldn efficient u tell computer want program leave detail computer figure
+It ultimate abstraction programmer tell computer want rather completely absolved implementation detail
+This promise program synthesis
+That definition little vague though immediate objective really able tell build game I launch bird solid object high velocity though App Store could certainly Angry Birds clone
+There still likely human expertise involved process point
+The immediate promise program synthesis automate programming minutia time reinvent hack
+help programmer focus big picture
+While last quarter I needed implement program synthesis algorithm
+Let talk work
+We programming language tell computer thing
+But language helpful telling program synthesiser want program
+What want write kind program synthesiser produce program satisfies specification
+The convenient way write specification varies style A complete formal specification lends style program synthesis try deduce implementation based specification set logical axiom
+For example take logical specification axiomatisation instruction set explores every possible way implement specification
+While sound great theory depends complete axiomatisation target language complete formal specification may difficult obtain
+In contrast program synthesis allows le formal specification rather making logical deduction directly specification applies iterative search technique find implementation
+The iterative approach benefit flexibility specification run significant scaling problem
+Since I interested relaxed type specification I focus inductive program synthesis
+The specific flavour inductive synthesis I going focus CEGIS
+The idea two part working loop We start desired program
+A produce candidate program might satisfy specification decides whether candidate really satisfy specification
+If done
+If verifier close loop providing sort synthesiser use guide search new candidate program
+It called feedback traditionally new input candidate program satisfy specification
+But I going abuse schematic little describe technique feedback really counterexample
+There hole must fill define new CEGIS synthesis technique So far said nothing even CEGIS loop ever terminates
+One strength many CEGIS technique empirical tendency require trip around loop even though space program incredibly large
+I going describe three different inductive program synthesis technique fit CEGIS mold
+Jha et al assumes already implementation program want synthesise call program
+This implementation synthesis
+We treat oracle black box execute arbitrary input need inspect oracle implementation
+We also start collection pair
+Because oracle create test case generating random input asking oracle correct answer
+We provide synthesis library synthesiser build candidate program
+The step going arrange component program
+In essence going take component decide plug input output together form program
+This formulation disallows loop program generate always
+For example library three component two add square root possible way connect together The program connection implement SSA form Notice two copy component SSA form simply connects component together want final program use two addition must supply least two component
+Notice also dead code since output unused
+This fine save u decide advance many component final program use
+Instead need provide upper bound synthesiser generate dead code component want use
+The synthesiser us test case constrain component linked together
+It us SMT solver decide component join together program correct test case collection
+If SMT solver fails program us given component satisfy test case component
+Otherwise produce program SSA form satisfies test case agrees oracle test input
+If solution pas candidate program step
+Remember candidate program satisfies test case existing collection
+The verify step going use SMT solver answer question Does exist program different candidate program also satisfies test case existing collection input disagrees
+Let break one bit
+We synthesiser candidate program satisfies test case
+What asking verifier test input program input produce output
+The new program also going satisfy test case
+Essentially asking program one program could satisfied test case
+If know done since program ambiguous
+We asking anything oracle program
+In particular might case produce answer input matter verifier produce answer
+For example work two test case component saw Here test input
+The synthesiser gave u candidate program satisfied test case since agrees oracle
+We asked verifier produce two thing new program new test input
+In case successful
+It produced new program new test input
+On new test input candidate new program disagree sqrt
+In case turn program wrong since oracle output new test case sqrt
+But fact disagree sufficient send u back around loop via feedback step
+The step going exploit new test case generated verifier
+It asks oracle output input add result set test case synthesiser use next trip around loop
+In example next trip around loop last way use two add square root satisfy three test case program
+The question verifier asks therefore unsatisfiable able find second program loop exit
+To completely correct must also kind consult finishing CEGIS loop
+The problem CEGIS loop race find program satisfies test case find test case make component insufficient
+If find unique program break loop straight away
+But might gotten lucky seeing test case proved component insufficient
+The validation oracle verifies synthesised program really satisfy specification test case
+synthesis assumes existing implementation program trying synthesise
+We actually need inspect implementation treat black box provides output supply input
+But even seems little absurd synthesise program already
+The author use two domain illustrate technique useful
+The first traditional suite benchmark
+Many synthesis paper use benchmark example small unintuitive program
+Instead trying come efficient hack programmer write simple inefficient implementation manipulation synthesiser us implementation produce optimal program
+The second domain program taking obfuscated program oracle synthesising new simpler program match behaviour
+It worth noting one take basically approach instead requiring oracle requires logical specification desired behaviour
+Schkufza et al completely different approach program synthesis I attempt beat CEGIS mold
+Again assumes existing implementation compare
+This problem name suggests problem tackling finding optimal instruction sequence given piece code
+Stochastic superoptimisation search space program find new program match original behaviour faster efficient
+It search aspect make form program synthesis
+What simplest way search space program
+Suppose start randomly generated program
+To decide program try next could randomly mutate one instruction program
+Assuming mutation satisfy basic property example optimal program instruction mutation must able generate instruction search eventually find optimal program
+But probably take long time guidance decide right track near answer
+Stochastic superoptimisation us search space program guided way
+Essentially stochastic superoptimisation defines cost function measure good candidate program us MCMC particular sample program highly weighted function
+This bias mean MCMC search likely visit program nearer optimal
+Although still random search large space bias mean empirically stochastic superoptimisation often quickly discovers correct program almost optimal
+The stochastic superoptimisation find next candidate program drawing MCMC sample based previous candidate program
+It proposes randomly applying one mutation The MCMC sampler us cost function measure close target program fast decide whether candidate
+A candidate likely accepted close target fast
+But even program slow distant target probability accepted ensuring explore novel program similar tradeoff
+If candidate accepted move verification step
+If repeat process candidate accepted
+Having accepted candidate program simply pass candidate target program verifier decide equivalent
+The paper trick make verification little forgiving example getting correct result different register
+The important trick executing verifier could slow stochastic superoptimisation first us test case cost function
+If test case fail know candidate possibly correct program need call verifier
+Empirically bad candidate tend fail fast test case trick considerably improves throughput MCMC search
+The stochastic superoptimisation implicit MCMC sampling
+We compare new candidate program previously accepted candidate decide whether program explore
+If better
+higher cost function either faster closer target certain explore
+Otherwise still probability exploring probability depends much worse
+The last synthesis technique I going try fit CEGIS mold enumerative search
+It fairly obvious brute force approach neat trick despite seeming naïveté used great effect example Udupa et al
+For going use finite set test case
+Of course since generate test case given implementation program fine instead assume existing implementation like synthesis stochastic superoptimisation
+We also assume grammar target language
+For purpose use simple grammar two operation two available variable
+The grammar defines expression term example program grammar
+There assignment statement make life easier
+The idea enumerative search brute force search possible program
+We break program depth based deepest path parse tree
+For example program return depth zero program depth depth
+We candidate program starting depth enumerating program depth
+In grammar mean first two candidate two program
+Once done depth increment next depth repeat process
+At depth eight candidate program take form Notice possible expression exactly program depth
+This enumeration depth explore program form expression depth
+This dynamic programming search going exponential depth depth hole filled one expression explore program depth explore program
+We rely feedback step try prune search space
+Because specified program term test case simply going execute test case compare output goal
+If match done
+The test case output also key feedback step
+The trick trying fill hole program depth need consider program depth
+Instead need consider program output
+For example point considering effect
+This insight prune search space
+But decide two program distinct
+That test case come
+Because defined target program behaviour term test case actually matter two program semantically different rather whether differ
+So decide new program distinct seen far simply compare test case output every program
+If match existing program point keeping throw away
+For example every test case equivalent even though clearly untrue general
+We get prune whole bunch program semantically equivalent general equivalent set behaviour actually care
+It turn strategy work remarkably well problem
+When synthesising cache coherence protocol Udupa et al found pruning reduces search space factor nearly depth
+Of course well work problem depend set behaviour care set component include grammar
+We going synthesising entire application scratch time soon really viable goal anyway
+In many case smaller program exactly synthesis ask programmer bolt piece together fill minute detail automatically
+This idea prompted
+It also appeal program spend time small area code synthesis small part still deliver significant efficiency improvement
+The promise program synthesis programmer stop telling computer thing focus instead telling want
+Inductive program synthesis tackle problem fairly vague specification although many algorithm seem intractable practice work remarkably well
+Chalk another victory empiricist
+Sorry Luis
+We mock love
+Some explanation inspired awesome adviser Emina Torlak
+All mistake
+
+Modern programming language safeguard developer many typical error yet subtle violation security plague software
+Program synthesis potential eliminate error generating executable code concise intuitive specification
+Traditionally program synthesis failed scale specification encode complex behavioral property software property notoriously hard check even given program surprising finding right program within large space candidate considered challenging
+My work tackle challenge design program verification mechanism able check large set candidate program complex specification whereby efficiently pruning search space
+Based principle I developed Synquid program synthesizer accepts specification form expressive type us specialized type checker underlying verification mechanism
+Synquid first synthesizer powerful enough automatically discover provably correct implementation complex data structure manipulation insertion Trees AVL Trees transformation propositional formula
+Each program synthesized minute
+Going beyond textbook algorithm I created language called Lifty us synthesis automatically rewrite program violate information flow policy
+In case study Lifty able enforce required policy prototype conference management system
+Department Computer Science
+Williams Building University Maryland Paint Branch Drive College Park MD ph
+
+DATE MONDAY MARCH TIME PLACE Computer Science Conference Room Harold Frank Hall Rm
+For thirty year software synthesis promised automate chore writing program
+But recently power modern computer growing maturity verification technology combined make practical synthesis possible
+One biggest challenge practical synthesis establish synergy synthesizer programmer
+The potential synergy exists synthesizer need human insight discover acceptable implementation universe unacceptable one
+At time programmer actually want control implementation strategy
+Thus practical synthesis must allow programmer guide synthesis process natural way without axiomatize insight domain theory many traditional synthesis tool require
+Sketching answer challenge practical synthesis
+It form synthesis whose key novelty use partial program sketch communicate insight synthesizer
+The talk describe sketching implemented SKETCH language innovation inductive synthesis made sketching possible
+The talk also describe experience using SKETCH synthesize complex implementation cipher scientific code even concurrent
+Armando student Rastislav Bodik UC Berkeley working software synthesis
+His main interest include programming language compiler parallel computing
+Before coming Berkeley completed BS degree Math CS Texas A M University also worked programmer writing massively parallel neutron transport simulation
+His broad agenda exploit growing availability computing power formal method make programming easier
+Copyright The Regents University California All Rights Reserved
+
+
+Modern programming language safeguard developer many typical error yet subtle violation security plague software
+Program synthesis potential eliminate error generating executable code concise intuitive specification
+Traditionally program synthesis failed scale specification encode complex behavioral property software property notoriously hard check even given program surprising finding right program within large space candidate considered challenging
+My work tackle challenge design program verification mechanism able check large set candidate program complex specification whereby efficiently pruning search space
+Based principle I developed Synquid program synthesizer accepts specification form expressive type us specialized type checker underlying verification mechanism
+Synquid first synthesizer powerful enough automatically discover provably correct implementation complex data structure manipulation insertion Trees AVL Trees transformation propositional formula
+Each program synthesized minute
+Going beyond textbook algorithm I created language called Lifty us synthesis automatically rewrite program violate information flow policy
+In case study Lifty able enforce required policy prototype conference management system
+Nadia Polikarpova postdoctoral researcher MIT Computer Science Artificial Intelligence Lab interested helping programmer build secure reliable software
+She completed PhD ETH Zurich
+For dissertation developed tool technique automated formal verification library created first fully verified container library receiving Best Paper Award International Symposium Formal Methods
+During doctoral study Nadia intern MSR Redmond worked verifying implementation security protocol
+At MIT Nadia applying formal verification automate various critical programming task
+
+Earn industry credential earn degree
+As nonprofit university WGU put student first
+Earn degree half cost online university
+Western Governors University
+All Rights Reserved WGU Indiana accredited online university offering online bachelor master degree program
+
+You still full access site functionality may lost
+For best experience upgrade browser following link
+

@@ -1,0 +1,911 @@
+In field transaction management system abstract model describe execution transaction running system
+Often operation action ordered time performed set executed together system
+If order time certain operation determined system used
+Examples operation requesting read operation reading writing aborting committing requesting lock locking etc
+Not transaction operation type included schedule typically selected operation type data access operation included needed reason describe certain phenomenon
+Schedules schedule property fundamental concept database theory
+The following example schedule In example horizontal axis represents different transaction schedule The vertical axis represents time order operation
+Schedule D consists three transaction
+The schedule describes action transaction seen
+First Reads Writes object X Commits
+Then Reads Writes object Y Commits finally Reads Writes object Z Commits
+This example schedule sequential overlap time action three transaction sequential transaction interleaved time
+Representing schedule D table rather list convenience identifying transaction operation glance
+This notation used throughout article
+A common way technical literature representing schedule list Usually purpose reasoning concurrency control database operation modeled occurring point time without duration
+When satisfactory start end possibly point event specified rarely
+Real executed operation always duration specified respective time occurrence event within exact time beginning completion concurrency control reasoning usually precedence time whole operation without looking quite complex detail operation matter operation another operation
+Furthermore many case relationship two specific operation matter specified specified pair operation
+In general operation transaction schedule interleave transaction executed concurrently time order operation transaction remain unchanged implied transaction program
+Since always time order operation transaction matter need specified schedule general operation rather order pair determined list operation
+Also general case transaction may consist several process properly represented partial order operation rather total order
+Thus general schedule partial order operation containing partial order transaction
+two operation represented operation existence pair mean always schedule general case ordered pair
+Such set schedule represented DAG operation node cycle allowed since cycle mean first operation cycle another second operation cycle contradicts perception
+In many case graphical representation graph used demonstrate schedule
+Since list operation table notation used article always represents total order operation schedule total order represented list always represented DAG
+The transaction executed see example serial schedule one transaction start running transaction ended
+A schedule equivalent outcome serial schedule property
+In schedule E order action transaction executed D end E give result Two action said conflict conflicting pair The following set action conflicting While following set action The schedule said following two condition satisfied A schedule said schedule one serial schedule
+Another definition schedule graph committed transaction considered acyclic graph defined include also uncommitted transaction cycle involving uncommitted transaction may occur without conflict serializability violation
+Which serial schedule
+A schedule said obeys CO also schedule property
+This mean order time transaction commitment event compatible precedence partial order respective transaction induced schedule acyclic precedence graph serializability graph conflict graph
+This implies also
+The CO property especially effective achieving distributed system
+discovered obviously mentioned
+Its correct definition appears however description related technique theory partial inaccurate misleading
+For extensive coverage commitment ordering source see
+Two schedule said following condition satisfied A schedule said serial schedule
+Note definition schedule
+Notice example example discussion time
+There however schedule schedule transaction performing The example since serial schedule
+Since determining whether schedule little practical interest
+Transactions commit transaction whose change read commit
+These schedule recoverable
+F recoverable commits make value read correct
+Then commit
+In aborted abort value A read incorrect
+In case database left consistent state
+If transaction abort transaction commits relied unrecoverable schedule
+In example G unrecoverable read value A written committed
+later aborted therefore value read wrong since committed schedule unrecoverable
+Also named cascadeless
+Avoids single transaction abort lead series transaction rollback
+A strategy prevent cascading abort disallow transaction reading uncommitted change another transaction schedule
+The following example one discussion recoverable In example although recoverable avoid cascading abort
+It seen abort aborted order maintain correctness schedule already read uncommitted value written
+The following recoverable schedule avoids cascading abort
+Note however update A always lost since aborted
+Note Schedule would serializable would committed
+Cascading abort avoidance sufficient necessary schedule recoverable
+A schedule strict strictness property two transaction write operation precedes operation either read write commit abort event also precedes conflicting operation
+Any strict schedule cascadeless converse
+Strictness allows efficient recovery database failure
+The following expression illustrate hierarachical containment relationship class The illustrates clause graphically
+In practice general purpose database system employ recoverable primarily strict schedule
+
+Please enable javascript play video
+Software developer creative mind behind computer program
+Some develop application allow people specific task computer another device
+Others develop underlying system run device control network
+Many software developer work firm deal computer system design related service manufacturing software publisher
+Software developer usually bachelor degree computer science strong computer programming skill
+The median annual wage software developer application May
+The median annual wage software developer system software May
+Employment software developer projected grow percent much faster average occupation
+Software developer needed respond increased demand computer software
+Explore resource employment wage state area software developer
+Compare job duty education job growth pay software developer similar occupation
+Learn software developer visiting additional resource including source key characteristic worker occupation
+Software developer creative mind behind computer program
+Some develop application allow people specific task computer another device
+Others develop underlying system run device control network
+Software developer typically following Software developer charge entire development process software program
+They may begin asking customer plan use software
+They must identify core functionality user need software program
+Software developer must also determine user requirement unrelated function software level security performance need
+They design program give instruction programmer write computer code test
+If program work expected tester find difficult use software developer go back design process fix problem improve program
+After program released customer developer may perform upgrade maintenance
+Developers usually work closely computer programmer
+However company developer write code instead giving instruction programmer
+Developers supervise software project planning stage implementation sometimes called information technology IT project manager
+These worker monitor project progress ensure meet deadline standard cost target
+IT project manager plan direct organization IT department IT policy included profile
+The following example type software developer design computer application word processor game consumer
+They may create custom software specific customer commercial software sold general public
+Some application software developer create complex database organization
+They also create program people use Internet within company intranet
+create system keep computer functioning properly
+These could operating system computer general public buy system built specifically organization
+Often system software developer also build system interface allows user interact computer
+Systems software developer create operating system control consumer electronics use today including used cell phone car
+Software developer application held job
+The largest employer software developer application follows Software developer system software held job
+The largest employer software developer system software follows In general software development collaborative process developer work team others also contribute designing developing programming successful software
+However developer work home
+Most software developer work full time additional work hour common
+Software developer usually bachelor degree computer science strong computer programming skill
+Software developer usually bachelor degree typically computer science software engineering related field
+Computer science degree program common tend cover broad range topic
+Students focus class related building software better prepare work occupation
+Many student gain experience software development completing internship software company college
+For position employer may prefer applicant master degree
+Although writing code first priority developer must strong background computer programming
+They usually gain experience school
+Throughout career developer must keep date new tool computer language
+Software developer also need skill related industry work
+Developers working bank example knowledge finance understand bank computing need
+Software developer advance become information technology IT project manager also called position oversee software development process
+Developers must analyze user need design software meet need
+
+Developers must able give clear instruction others working project
+They must also explain customer software work answer question arise
+Developers creative mind behind new computer software
+Developers often work many part application system time must therefore able concentrate pay attention detail
+Software developer must able work well others contribute designing developing programming successful software
+Because developer charge software beginning end must able solve problem arise throughout design process
+Median annual wage May Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Occupational Employment Statistics The median annual wage software developer application May
+The median wage wage half worker occupation earned amount half earned le
+The lowest percent earned le highest percent earned
+The median annual wage software developer system software May
+The lowest percent earned le highest percent earned
+In May median annual wage software developer application top industry worked follows In May median annual wage software developer system software top industry worked follows Most software developer work full time additional work hour common
+Percent change employment projected Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Employment Projections program Employment software developer projected grow percent much faster average occupation
+Employment application developer projected grow percent employment system developer projected grow percent
+The main reason growth application developer system developer large increase demand computer software
+The need new application smart phone tablet help increase demand application software developer
+The health medical insurance reinsurance carrier industry need innovative software manage new healthcare policy enrollment administer existing policy digitally
+As number people use digital platform increase time demand software developer grow
+Systems developer likely see new opportunity increase number product use software
+For example computer system built consumer electronics product cell phone appliance
+Concerns threat computer security could result investment security software protect computer network electronic infrastructure
+In addition increase software offered Internet lower cost allow customization business also increasing demand software developer
+Job prospect best applicant knowledge programming tool proficient one programming language
+SOURCE Bureau Labor Statistics Employment Projections program The OES program produce employment wage estimate annually occupation
+These estimate available nation whole individual state metropolitan nonmetropolitan area
+The link go OES data map employment wage state area
+Occupational employment projection developed state Labor Market Information LMI individual state Employment Projections office
+All state projection data available
+Information site allows projected employment growth occupation compared among state compared within one state
+In addition state may produce projection area link state website data may retrieved
+CareerOneStop includes hundred data available state metro area
+There link side menu compare occupational employment state occupational wage local area metro area
+There also search wage zip code
+This table show list occupation job duty similar software developer
+Computer information research scientist invent design new approach computing technology find innovative us existing technology
+They study solve complex problem computing business medicine science field
+Computer information system manager often called information technology IT manager IT project manager plan coordinate direct activity organization
+They help determine information technology goal organization responsible implementing computer system meet goal
+Computer hardware engineer research design develop test computer system component processor circuit board memory device network router
+Computer network architect design build data communication network including local area network LANs wide area network WANs Intranets
+These network range small connection two office networking capability cloud infrastructure serf multiple customer
+Computer programmer write test code allows computer application software program function properly
+They turn program design created software developer engineer instruction computer follow
+Computer support specialist provide help advice computer user organization
+These specialist either support computer network provide technical assistance directly computer user
+Computer system analyst sometimes called study organization current computer system procedure design solution help organization operate efficiently effectively
+They bring business information technology IT together understanding need limitation
+Database administrator DBAs use specialized software store organize data financial information customer shipping record
+They make sure data available user secure unauthorized access
+Information security analyst plan carry security measure protect organization computer network system
+Their responsibility continually expanding number cyberattacks increase
+Mathematicians statistician analyze data apply mathematical statistical technique help solve problem business engineering healthcare field
+Postsecondary teacher instruct student wide variety academic technical subject beyond high school level
+They may also conduct research publish scholarly paper book
+Web developer design create website
+They responsible look site
+They also responsible site technical aspect performance capacity measure website speed much traffic site handle
+In addition web developer may create content site
+For information software developer visit For information opportunity woman pursuing information technology career visit Bureau Labor Statistics Department Labor Software Developers Internet visited
+Tuesday October The tab describes typical duty responsibility worker occupation including tool equipment use closely supervised
+This tab also cover different type occupational specialty
+The tab includes number job held occupation describes workplace level physical activity expected typical hour worked
+It may also discus major industry employed occupation
+This tab may also describe opportunity work amount type travel required safety equipment used risk injury worker may face
+The tab describes prepare job occupation
+This tab include information education training work experience licensing certification important quality required helpful entering working occupation
+The tab describes typical earnings worker occupation salary hourly wage commission tip bonus
+Within every occupation earnings vary experience responsibility performance tenure geographic area
+For profile tab table wage major industry employing occupation
+It include pay worker agriculture worker worker private household data collected Occupational Employment Statistics OES survey source BLS wage data OOH
+The tab provides link state area occupational data Occupational Employment Statistics OES program state projection data Projections Central occupational information Department Labor CareerOneStop
+The tab describes factor affect employment growth decline occupation instance describes relationship number job seeker number job opening
+The tab describes occupation share similar duty skill interest education training occupation covered profile
+The tab provides Internet address association government agency union organization provide additional information occupation
+This tab also includes link relevant occupational information Occupational Information Network
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+Additional training needed postemployment attain competency skill needed occupation
+Typical level education worker need enter occupation
+Work experience commonly considered necessary employer commonly accepted substitute formal type training education
+The employment size occupation base year employment projection
+The projected percent change employment
+The average growth rate occupation percent
+The projected numeric change employment
+Typical level education worker need enter occupation
+Additional training needed postemployment attain competency skill needed occupation
+The projected numeric change employment
+The percent change employment occupation
+The projected numeric change employment
+The projected percent change employment
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+
+
+Computer information research scientist invent design new approach computing technology find innovative us existing technology
+They study solve complex problem computing business medicine science field
+Most computer information research scientist work full time
+About worked hour per week
+Most job computer information research scientist require master degree computer science related field
+In federal government bachelor degree may sufficient job
+The median annual wage computer information research scientist May
+Employment computer information research scientist projected grow percent much faster average occupation
+Computer scientist likely enjoy excellent job prospect many company report difficulty finding highly skilled worker
+Explore resource employment wage state area computer information research scientist
+Compare job duty education job growth pay computer information research scientist similar occupation
+Learn computer information research scientist visiting additional resource including source key characteristic worker occupation
+Computer information research scientist invent design new approach computing technology find innovative us existing technology
+They study solve complex problem computing business science medicine field
+Computer information research scientist typically following Computer information research scientist create improve computer software hardware
+Creating improving software involves working algorithm set instruction tell computer
+Some computing task difficult require complex algorithm
+Computer information research scientist try simplify algorithm make computer system efficient possible
+The algorithm allow advancement many type technology machine learning system cloud computing
+Computer information research scientist design new computer architecture improves performance efficiency computer hardware
+Their work often lead technological advancement efficiency better networking technology faster computing speed improved information security
+In general computer information research scientist work theoretical level computer professional
+Some computer scientist work specialist multidisciplinary project
+The following example type specialty computer information research scientist Computer information research scientist write algorithm used detect analyze pattern large datasets
+They improve way sort manage display data
+Computer scientist build algorithm software package make data easier analyst use
+For example may create algorithm analyze large set medical data order find new way treat disease
+They may also look pattern traffic data help clear accident faster
+Some computer information research scientist study improve robot
+Robotics explores machine interact physical world
+Computer information research scientist create program control robot
+They work closely engineer focus hardware design robot
+Together worker test well robot task created assemble car collect data planet
+Computer information research scientist design new programming language used write software
+The new language make software writing efficient improving existing language Java making specific aspect programming image processing easier
+Computer information research scientist held job
+The largest employer computer information research scientist follows Some computer scientist may work team specialist multidisciplinary project
+Most computer information research scientist work full time
+About worked hour per week
+Most job computer information research scientist require master degree computer science related field
+In federal government bachelor degree may sufficient job
+Most computer information research scientist need master degree computer science related field computer engineering
+A master degree usually requires year study earning bachelor degree field computer science information system
+Computer scientist work specialized field may need knowledge field
+For example working biomedical application may need taken biology class
+Some computer scientist may become
+Computer information research scientist must organized thinking analyze result research formulate conclusion
+Computer information research scientist must communicate well manager able clearly explain conclusion people technical background
+They often present research conference
+Computer information research scientist work many complex problem
+Computer information research scientist must pay close attention work small programming error cause entire project fail
+Computer information research scientist must continually come innovative way solve problem particularly idea initially work intended
+Computer algorithm rely logic
+Computer information research scientist must talent reasoning
+Computer information research scientist must knowledge advanced math technical topic critical computing
+Median annual wage May Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Occupational Employment Statistics The median annual wage computer information research scientist May
+The median wage wage half worker occupation earned amount half earned le
+The lowest percent earned le highest percent earned
+In May median annual wage computer information research scientist top industry worked follows Most computer information research scientist work full time
+About worked hour per week
+Percent change employment projected Note All Occupations includes occupation Economy
+Source Bureau Labor Statistics Employment Projections program Employment computer information research scientist projected grow percent much faster average occupation
+However small occupation fast growth result new job period
+The research development work computer information research scientist turn idea technology
+As demand new better technology grows demand computer scientist grow well
+Rapid growth data collection business lead increased need service
+Computer scientist needed write algorithm help business make sense large amount data
+With information business understand consumer better making work computer information research scientist increasingly vital
+A growing emphasis cybersecurity also lead new job computer scientist needed find innovative way prevent cyberattacks
+In addition increase demand software may increase need computer scientist create new programming language make software writing efficient
+Computer information research scientist likely excellent job prospect
+For applicant seeking employment specialized field finance biology knowledge field along computer science degree may helpful getting job
+SOURCE Bureau Labor Statistics Employment Projections program The OES program produce employment wage estimate annually occupation
+These estimate available nation whole individual state metropolitan nonmetropolitan area
+The link go OES data map employment wage state area
+Occupational employment projection developed state Labor Market Information LMI individual state Employment Projections office
+All state projection data available
+Information site allows projected employment growth occupation compared among state compared within one state
+In addition state may produce projection area link state website data may retrieved
+CareerOneStop includes hundred data available state metro area
+There link side menu compare occupational employment state occupational wage local area metro area
+There also search wage zip code
+This table show list occupation job duty similar computer information research scientist
+Computer information system manager often called information technology IT manager IT project manager plan coordinate direct activity organization
+They help determine information technology goal organization responsible implementing computer system meet goal
+Computer hardware engineer research design develop test computer system component processor circuit board memory device network router
+Computer programmer write test code allows computer application software program function properly
+They turn program design created software developer engineer instruction computer follow
+Database administrator DBAs use specialized software store organize data financial information customer shipping record
+They make sure data available user secure unauthorized access
+Software developer creative mind behind computer program
+Some develop application allow people specific task computer another device
+Others develop underlying system run device control network
+Computer network architect design build data communication network including local area network LANs wide area network WANs Intranets
+These network range small connection two office networking capability cloud infrastructure serf multiple customer
+Computer system analyst sometimes called study organization current computer system procedure design solution help organization operate efficiently effectively
+They bring business information technology IT together understanding need limitation
+Information security analyst plan carry security measure protect organization computer network system
+Their responsibility continually expanding number cyberattacks increase
+Computer network critical part almost every organization
+Network computer system administrator responsible operation network
+Web developer design create website
+They responsible look site
+They also responsible site technical aspect performance capacity measure website speed much traffic site handle
+In addition web developer may create content site
+Top executive devise strategy policy ensure organization meet goal
+They plan direct coordinate operational activity company organization
+For information computer information research scientist visit For information opportunity woman pursuing information technology career visit To find job opening computer information research scientist federal government visit Bureau Labor Statistics Department Labor Computer Information Research Scientists Internet visited
+Tuesday October The tab describes typical duty responsibility worker occupation including tool equipment use closely supervised
+This tab also cover different type occupational specialty
+The tab includes number job held occupation describes workplace level physical activity expected typical hour worked
+It may also discus major industry employed occupation
+This tab may also describe opportunity work amount type travel required safety equipment used risk injury worker may face
+The tab describes prepare job occupation
+This tab include information education training work experience licensing certification important quality required helpful entering working occupation
+The tab describes typical earnings worker occupation salary hourly wage commission tip bonus
+Within every occupation earnings vary experience responsibility performance tenure geographic area
+For profile tab table wage major industry employing occupation
+It include pay worker agriculture worker worker private household data collected Occupational Employment Statistics OES survey source BLS wage data OOH
+The tab provides link state area occupational data Occupational Employment Statistics OES program state projection data Projections Central occupational information Department Labor CareerOneStop
+The tab describes factor affect employment growth decline occupation instance describes relationship number job seeker number job opening
+The tab describes occupation share similar duty skill interest education training occupation covered profile
+The tab provides Internet address association government agency union organization provide additional information occupation
+This tab also includes link relevant occupational information Occupational Information Network
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+Additional training needed postemployment attain competency skill needed occupation
+Typical level education worker need enter occupation
+Work experience commonly considered necessary employer commonly accepted substitute formal type training education
+The employment size occupation base year employment projection
+The projected percent change employment
+The average growth rate occupation percent
+The projected numeric change employment
+Typical level education worker need enter occupation
+Additional training needed postemployment attain competency skill needed occupation
+The projected numeric change employment
+The percent change employment occupation
+The projected numeric change employment
+The projected percent change employment
+The wage half worker occupation earned amount half earned le
+Median wage data BLS Occupational Employment Statistics survey
+In May median annual wage worker
+
+
+Computer Science All President bold new initiative empower American student kindergarten high school learn computer science equipped computational thinking skill need creator digital economy consumer active citizen world
+Our economy rapidly shifting educator business leader increasingly recognizing computer science CS new basic skill necessary economic opportunity social mobility
+CS All build effort already led parent teacher school district state private sector leader across country
+Last year tech job across United States unfilled percent STEM job projected computer field
+Computer science data science important tech sector many industry including transportation healthcare education financial service
+Parents increasingly recognize need
+However estimate one quarter school United States offer computer science programming coding state still allow count towards high school graduation even advanced economy making available student
+Wide disparity exist even access course
+In addition course access challenge medium portrayal classroom curriculum material unconscious bias stereotype exacerbate problem discourage many student taking course
+For example
+These statistic mirror current makeup America largest innovative tech firm woman compose le technical employee le percent
+We better
+Tech career exciting fun collaborative well critical economy
+We want Americans opportunity part team
+CS For All help make reality ensure every student access Computer Science classroom level
+When come computer science student President Obama led way CS Student became first President write line code
+His first line code moveForward CS All moving forward together
+Who taught code
+A student named Adrianna Newark New Jersey took computer science course school
+If President start learning computer science
+We know need basic tool make possible including teacher infrastructure
+Thanks President well way making happen closing connectivity divide school half empowering million student broadband enlisting school district cause
+And order make sure youth pathway workforce adult access skill President expanded city state rural area
+Grace Clark sophomore International High School New Orleans Louisiana intern Operation Spark offer free technology training coding course young people New Orleans
+Grace worked New Orleans Police Department policing data event taught New Orleans Police Chief Michael Harrison write first line code
+She also teach coding child Arthur Ashe Elementary attended Essence Festival represent inner city youth coding technology
+Christina Li senior Adlai Stevenson High School Macomb Michigan She Vice President Controls FIRST robotics team ThunderChickens
+Christina also created Hello World computer science day camp middle school girl learn code robot apps website game hope reducing gender gap computer science
+Angelica Willis computer science student North Carolina Agricultural Technical State University Greensboro North Carolina
+She used computer science skill help NASA develop ecological forecasting model using satellite support reforestation Rwanda
+She spearhead initiative develop entrepreneurship design Maker Space youth underrepresented community Greensboro
+The field computer science education come long way year
+With support new high school course like Exploring Computer Science AP Principles Computer Science designed inclusive accessible student course program designed early elementary school
+NSF also funded middle school freshman focused course called Bootstrap curriculum emerged teach computer science computational thinking elementary middle high school
+Because CS active applied field Science Technology Engineering Math STEM learning allows student engage interaction key math science engineering principle give student opportunity creator consumer digital economy active citizen world
+CS also help foster computational thinking skill relevant many discipline career breaking large problem smaller one recognizing new problem relate problem already solved setting aside detail problem le important identifying refining step needed reach solution
+CS also complement President initiative focus growing democratization hardware software tool needed design make anything
+As teacher school leader superintendent help expand CS All many different way
+For example Spanish computer science teacher creative director Young Women Leadership School Astoria New York integrated digital education coding class including Spanish
+Andrea also lead group student known Tech Crew composed filmmaker graphic designer coder website designer project manager
+Under Andrea guidance young woman collaborate solve problem around school like teaching student recycling coding educational video game
+grade science teacher Cloonan Middle School Stamford Connecticut
+Jim Stamford Public Schools Teacher Year
+He planed city wide STEM festival providing STEM professional development curate popular STEM Education Twitter handle stemnetwork
+He also sponsor Computer Coding Club printing club Cloonan Middle School
+assistant professor computer science University Nevada Las Vegas
+For last decade creating technology make easier people including disability write computer software
+With grant NSF established first national educational infrastructure blind visually impaired student learn computer science
+He inventor Quorum first programming language
+States city leader movement expand CS education
+In responding President call action give student opportunity learn CS
+In past year Republican Democratic state leader championed ambitious CS effort New York City announced aggressive plan expand CS opportunity student
+Today leader state local level announcing new expanded commitment expand CS including The Chattanooga community worked together create ecosystem youth learn computer science skill prepared future industry
+Cordell Carter Chief Executive Officer TechTown Foundation learning center offer program child skill level age
+TechTown approach aim give youth experience allowing kid discover learn explore limitless possibility imagination
+researcher University California Los Angeles investigates woman student color learned computer science
+She collaborator support National Science Foundation created Exploring Computer Science high school curriculum teacher professional development program committed reaching student especially underserved community school exists across nation including seven largest school district
+retired computer science math teacher Houston Texas advocated Computer Science education since
+She fought keep computer science certification teacher played integral part increasing programming computational thinking Texas math standard
+She serf affiliate Code Buddy Spring Branch Independent School District
+A growing list district leader committing support President vision expanded computer science curriculum student
+Dozens private sector partner nonprofit organization well state local government stepped support CS All commitment
+Today announcement build upon bipartisan progress state like Washington Arkansas
+Both state announced ambitious computer science education effort passed legislation make computer science count towards high school graduation
+Similarly city like New York Chicago San Francisco already announced major expansion computer science education
+Local leader using computer science solve many intractable local challenge opportunity Check
+Involving young people real problem help solve community best practice education exciting youth
+typically significant computer science opportunity American youth pull partner solving challenge engaging future
+Seattle leadership hosted involving community member across city
+New Orleans engaging youth others open data initiative part work Police Data Initiative city
+Denver library hosting camp
+Let youth engagement part learning experience
+Businesses philanthropy also played major role building movement expand CS nationally
+
+Sign free The primary focus IMACS course help child develop critical thinking logic reasoning skill
+The majority class use math computer science achieve goal however IMACS offer specialty course available Homeschool Summer Camp Programs
+Not class offered location
+Check local region schedule availability
+This class full challenging mystery pure logic presented game puzzle compelling story
+Students fun developing reasoning skill love mathematical thinking
+Team logic game exciting tournament independent challenge create strong sense accomplishment student
+This course offered
+Students introduced fascinating world electronics learn component resistor diode LEDs capacitor transistor integrated circuit
+They design construct fun project get keep electronics device build
+This course offered
+The class teach student develop patience planning reasoning skill mental competition
+Independent thinking decision making important component Beginning Chess class
+Beginning Chess available
+This class inspired end game puzzle found Beginner Chess
+These type puzzle help student learn analyze possibility reason problem
+Serious Fun take end game concept next level
+In addition using intellectually exciting chess end game puzzle IMACS instructor us wide variety short game much like chess end game train student think solution systemically logically
+A quick chess review prepares new student type puzzle
+Serious Fun available
+This engaging electric class designed introduce young student reading comprehension cooking music movement
+After reading listening story student learn cook fun dish like cooky brownie smoothy fruit dip
+Following cooking activity student play game based week theme
+Each week instructor add spice class puppet show dance activity
+This class part Combo rotating schedule one week Book n Cookin taught following week Fine Arts taught
+This class available student
+This class designed cultivate natural creativity child
+Students introduced Art History learn art fundamental
+An experienced art instructor Monkey See Monkey Do Art Studio challenge student new technique variety medium
+Every class taught easy understand manner
+This class part Combo rotating schedule one week Fine Arts taught following week Book n Cookin taught
+This class available student
+Because IMACS student grouped ability age child must take free Placement Class enrolling program
+During Placement Class opportunity meet IMACS instructor evaluate child current ability recommend appropriate starting point
+Sign free
+
+Computer information technology CIT use study computer network computer language database within organization solve real problem
+The major prepares student application programming networking system administration internet development
+Technologies studied information system include programming networking server administration information security database design development system analysis designing web development
+CIT career allow person assemble component create something never seen
+There high demand CIT graduate country segment economy
+Careers CIT pay higher average salary
+CIT interactive career work
+It also provides lot work variety
+In major student learn theory organization process information collection transmission utilization computer
+Students learn analyze user need plan design develop implement manage network
+Through coursework student develop skill technique mathematics computer system
+They take series basic course mathematics computer science
+CIT student usually enthusiastic new technology
+They curious creative patient responsible
+They enjoy assisting application creation new technology ability work independently group setting
+Students CIT usually interested computer problem solving game music
+They good oral written communication skill good working organizing numerical data
+College Business Communication Academic Discovery Center Location Smith Phone Email CONTACT Chapman value suggestion idea improve university
+Use Feedback Form let u know think
+
+Computer science often defined
+Students teacher administrator frequently characterize computer science discipline dominated people stare screen mindlessly inputting ream arcane code genius thwart bank heist assassination
+Others believe mastering office application producing webpage form core computer science education
+In reality student class learn develop computational thinking skill
+Using computer solve problem indeed require becoming familiar acronym mastering basic algorithm writing command Python Javascript language
+However critical skill student expected master involve collaboration presentation knowing break task essential step
+By approaching computer science flexible tool vital many discipline student appreciate learning program benefit whatever career path chose
+Teachers content area also see value integrating computer science principle practice
+Here seven trick getting student enroll computer science engage computational thinking classroom
+I often take Sphero robot classroom talk computer science
+Easily programmable Sphero feature kaleidoscope light make impressive entrance
+I arrange visit teacher advance I disturb normal activity
+interface allows student volunteer always several
+make obey command minimal amount instruction
+While entrance may seem unscripted I always tailor pitch audience
+For example anatomy physiology class I stress robot used surgery training doctor paramedic
+In shop class I talk lathe milling machine increasingly relying computer automation greater speed complex manufacturing
+Computer Science Education Week week December
+This annual worldwide event seek expose student basic step writing computer program
+Developed Hour Code requires special training installation software
+Virtually computer web browser suitable
+If feel ambitious numerous tutorial available expand upon lesson Hour Code
+Even computer science teacher every one student benefit learning code
+Coding teach logical thinking skill programming encourages collaboration student share refine code
+Computer science permeates virtually every career get student comfortable
+Head get started
+Not try software great collection video introducing programming student fellow teacher
+Various version Hour Code used
+Last year introduced task based character movie
+This year featured
+One prized possession computer
+Assembled kit group student case black steel monolith rather totally transparent box made plexiglas
+When I high school I built plastic body allowed understand learn anatomy
+My student teacher alike marvel collection wire fan component observe computer
+To make computer especially interesting I installed programmable set light display message temperature name Computer While great student even impressed fact built entire system
+It may sound intimidating building computer really involves little screwdriver right collection part
+A simple bare bone system assembled running hour
+My student really enjoy activity type work engage student think computer science involves writing code
+I seen student variety discipline become inspired build computer fill particular need
+Artists may want system manipulate digital image musician mix composition
+One former student wanted computer help bioinformatics project science fair
+As licensed special education teacher I class almost every content area high school
+This allowed bring programming classroom show student computer great tool learning
+Sometimes computer student leverage lesson class
+For example one student wrote program calculated Law physic homework
+In chemistry class student tasked converting gas pressure different unit measurement
+For one assignment convert atmosphere kilopascals pound per square inch millimeter mercury
+Faced table conversion factor punching away calculator I demonstrated program I wrote Python could easily accurately convert metric English measurement
+My chemistry colleague also able explain laboratory computer important flask Bunsen burner
+My math class natural environment show computer used better understand geometry formula
+Every geometry student faced problem determine three given length valid forming triangle
+The Triangle Inequality Theorem state sum two side length triangle always greater third side easily converted computer program
+With line code program even determine resulting triangle right equilateral scalene
+My school plethora club
+Over year I gone different club meeting shared computer used area interest
+For example weather club perfect place show computer used forecasting
+Working club adviser prepared list website student could visit learn organization NOAA NASA use supercomputer study climate
+The anime club another great opportunity introduce computer science student
+Animation relies heavily vast network computer configured I showed video detail Hollywood us technology make modern movie possible
+While may greatest teacher world student usually respond well guest actually working given field
+You reach area business family military recruiter work district
+Last year Army reservist paid visit classroom
+While uniform serf part Army Cyber Command
+When active duty work local financial institution performing security task digital infrastructure
+This great opportunity show student interested attending college way gain skill need technology career
+Local college often maintain outreach service send professional classroom talk various program study institution
+Not student learn type class take also hear internship placement option school
+Perhaps nothing excites student opportunity take field trip
+Escaping confines classroom learning thing environment really spark imagination reveal dynamic career technology field
+The option limited company area willingness host student
+Several year ago I took student visit Harvard Medical School
+One friend worked network administrator
+We got tour campus data center examine vast rack computing communication equipment
+The raised floor perforated tile massive battery backup mile fiber optic colorful copper cable made fascinating trip
+Some professional working took opportunity speak student type work education needed beyond high school
+This past year computer science class hosted IBM Technology Innovation Center Cambridge
+We given free account tutorial build website using IBM Bluemix development environment
+Volunteers IBM hand speak particular area interest even sat eat lunch mentor student
+While may tempted limit choice company specialize technology never hesitate look beyond core business
+programming job software hardware development firm
+The vast majority exist type business government agency
+Tours often arranged area college
+Students examine computer lab speak student professor type research topic learn
+Information technology rapidly altered economy people communicate
+Being able control utilize computer hardware software critical reading writing arithmetic student
+There tremendous number website training mentoring opportunity teacher student help learn skill need successful school future career
+Interested article blog computer science
+Check Computer Science Education Week
+work Everett High School urban district located north Boston blog regularly
+He teach Exploring Computer Science piloting new AP Computer Science Principles course developed academic year
+Neil deep interest Open Source software especially Linux operating system used classroom
+He recently named Massachusetts State Finalist Presidential Award Excellence Math Science Teaching PAEMST
+Neil member
+Follow twitter
+Web Only Keep logged Send
+
+Our goal investigate issue retrieval analysis model
+As first step developed search engine polygonal model
+The main research issue develop effective shape representation query interface
+The Internet Censorship lab ICLab research platform enable researcher study broad class online information control traffic differentiation censorship content modification
+Big data anonymity privacy ethic The new era experimental method molecular biology transformed science making bioinformatics integral part genomic research
+The research focus Laboratory Bioinformatics Functional Genomics development integrated computational experimental technology study gene function regulation biological system analysis modeling visualization heterogeneous biological data
+The joint laboratory Department Computer Science Institute Integrative Genomics
+Bitcoin Cryptocurrencies This project investigates build efficient similarity search engine data dominated increasing volume digital information
+The research topic include sketch construction indexing similarity search distance function different data type integration search tool searchable storage system Memex system
+The current toolkit used construct search system four data type including audio recording digital photo shape genomic data
+The CertiCoq project aim build compiler functional language core language Coq proof assistant
+A compiler consists functional specification proof important property safety correctness mechanism transport proof generated machine code
+The project expose engineering challenge foundational question compiler language
+My group develops algorithm diverse set problem computational molecular biology
+We particularly interested predicting specificity protein interaction uncovering molecular interaction function vary across context organism individual
+We leverage biological datasets order develop algorithm predicting protein interaction specificity analyzing biological network order uncover cellular organization functioning pathway uncovering protein function via sequence structure analyzing proteomics sequencing data
+An appreciation protein structure guide much research
+The Seung Lab us technique machine learning social computing extract brain structure light electron microscopic image
+Structured decorative pattern common ornamentation variety medium like book web page greeting card interior design
+Creating art scratch using conventional software time consuming expert daunting novice
+We introduce DecoBrush drawing system generalizes conventional digital painting concept beyond scope natural medium allow synthesis structured decorative pattern following path
+The user simply selects example library draw overall shape pattern
+DecoBrush synthesizes shape style exemplar roughly matching overall shape
+If designer wish alter result DecoBrush also support refinement via simple drawing erasing tool
+For variety example style demonstrate synthesized pattern visually resemble exemplar exhibiting plausible structural variation
+Enterprise network We currently developing method performing scan association methylation status phenotype interest
+EyeWire game map brain Seung Lab MIT
+Anyone play need scientific background
+Over people country already
+Together mapping structure neuron advancing quest understand
+FCMA Full Correlation Matrix Analysis Human Brains Programming language network Scalable causal consistency data replication BISmark Broadband Internet Service Benchmark
+It project led Georgia Tech University Napoli Federico II develop platform performing measurement ISP performance well traffic inside home
+You use BISmark measure performance ISP visualize monitor traffic pattern user device inside home network manage usage cap
+ImageNet image database organized according WordNet hierarchy currently noun node hierarchy depicted hundred thousand image
+Currently average five hundred image per node
+We hope ImageNet become useful resource researcher educator student share passion picture
+Internet architecture Internet policy The Trustees Princeton University
+
+
+Prospective Students UMUC For Academic Programs Transfers Credits Costs Financial Aid Military Veterans About UMUC Admissions Locations With Bachelor Science computer science University Maryland University College able plan design optimize computer software hardware system commercial government environment
+These program requirement student enroll academic year
+For prior year academic requirement visit Current Students section
+This program also available
+In online bachelor program computer science learn programming algorithm optimization enhancement theory science math behind modern computing
+Specifically learn Java OpenGL Octave MATLAB
+Your course include data structure analysis computer system architecture image signal processing
+Through coursework learn In past project student opportunity This program help prepare following certification exam Our curriculum designed input employer industry expert scholar
+You learn theory combined application practical skill apply job right away
+The bachelor degree computer science requires credit minor elective coursework
+Related requirement major Since recommended course fulfill one requirement substituting course listed may require take additional course meet degree requirement
+Consult advisor whenever taking advantage option
+Please also see information
+In addition general education requirement major minor elective requirement overall requirement listed apply bachelor degree
+You earn dual major upon completion requirement major including required minimum number credit major related requirement major
+The class used fulfill requirement one major
+Certain restriction including use credit acceptable combination major apply double major
+You major two program excessive overlap required coursework
+Contact admission advisor selecting double major
+To earn second bachelor degree must complete least credit UMUC completing first degree
+The combined credit degree must add least credit
+You must complete requirement major
+All prerequisite apply
+If requirement satisfied previous degree remainder necessary complete minimum credit new class satisfied class related major
+You may earn second bachelor degree general study may obtain second associate degree within second bachelor degree
+Contact admission advisor pursuing second bachelor degree
+Electives taken academic discipline
+No credit consist vocational technical credit
+credit maximum credit applied toward elective
+This program designed help provide foundation career software architecture engineering application software design system analysis programming engineering corporate organization government agency
+We recommend previous professional programming experience experience programming hobby
+For alum RJ Niesen family together commencement month deployment made everything worth
+For UMUC cybersecurity student John Ritchie career potential mean seeing job posting major grow every year
+I work system administrator NASA Goddard Space Flight Center
+I manage support hundred computer user
+At job I apply computer programming knowledge I gained UMUC
+I better able understand existing code implement new script managing computer system
+I deeper understanding IT infrastructure whole
+Tim Roudebush Systems Administrator NASA Computer Science Bachelor Degree The class always real struggle
+
+
+
+But I know without UMUC degree I struggling lot harder
+Raj Jaishi Computer Science Bachelor Degree Academic club Undergraduate Graduate The Computing Club allows student member share experience offer guidance academic major career option
+Club event provide opportunity professional socialization networking member privy club resource help education career
+Honor society Undergraduate Graduate Upsilon Pi Epsilon international honor society computing information discipline
+Formed purpose Upsilon Pi Epsilon promote computing information science encourage enhancement knowledge field
+Upsilon Pi Epsilon open undergraduate graduate student pursuing degree computing information discipline
+Our faculty member combine academic credential wealth experience field
+Faculty member program hold recently held position including Our faculty work worked organization including Bhaskar joined UMUC serving senior programmer analyst SRA Technologies Inc
+He hold MS School Automation Indian Institute Science Bangalore India earned PhD computer science University Maryland College Park
+Duane Jarc began teaching University Maryland University College spending year software developer primarily General Electric
+He earned BS mathematics MS computer engineering Case Western Reserve University DSc computer science George Washington University
+He teach course programming discrete mathematics algorithm compiler theory design
+He received UMUC Stanley Drazek Teaching Excellence Award
+James Robertson joined University Maryland University College serving principal consultant Oracle
+He earned MS engineering University Dayton EdD instructional technology Towson University
+He teach course programming database computer graphic image signal processing UMUC
+He also present paper participates technical discussion conference across United States
+Finance Your Education Learn way meet manage lower education cost
+We help create plan fit budget
+The applied tuition specialty graduate program
+It apply doctoral program
+This discount combined Completion Scholarship Maryland community college student Pennsylvania Completion Scholarship
+Undergraduate standard graduate program student meet criterion applicable rate
+Tuition member Selected Reserves National Guard Commissioned Corps Public Health Service National Oceanic Atmospheric Administration spouse dependent student group applicable military specialty rate
+If student using Post benefit please contact advisor determine apply benefit
+View important information student enrolled certificate program
+All student required pay tuition course enrolled
+Tuition rate subject approval University System Maryland Board Regents
+They may changed charge may included result Board Regents decision
+Notwithstanding provision university publication university reserve right make change tuition fee charge time change deemed necessary university USM Board Regents
+The Board Regents authorized university charge student delinquent account collection cost incurred university
+The normal collection fee percent plus attorney court cost
+The service charge dishonored check
+Requests service example transcript diploma registration denied debt paid
+Please see specific detail residency requirement
+Financial aid tuition remission University System Maryland employee applied noncredit course
+Golden ID benefit may applied fee noncredit course specialty graduate program doctoral program
+Regular tuition rate apply cooperative education course challenge examination EXCEL
+GI Bill registered trademark Department Veterans Affairs
+More information education benefit offered VA available
+The UCSP requirement may waived previously earned graduate degree regionally accredited institution
+For information contact academic advisor
+Complete form admission advisor contact
+If current UMUC student please visit
+Please provide
+Please remove HTML markup field
+Please provide
+Please remove HTML markup field
+Please provide valid
+Please remove HTML markup field
+Please provide
+Please remove HTML markup field
+Please provide
+Please remove HTML markup field
+Please choose
+Please remove HTML markup field
+Please choose
+Please remove HTML markup field
+Please choose Please remove HTML markup field
+By submitting form giving express written consent without obligation UMUC contact regarding educational program service using phone text including automated technology call periodic text mobile number provide
+For detail including information opt read
+All course available
+Select course may available format
+This program accepts transfer credit
+The Completion Scholarship help Maryland community college graduate reduce rate per credit
+View
+Plus available qualify
+UMUC proud member University System Maryland
+UMUC proud member University System Maryland
+University Maryland University College
+All right reserved
+An interdisciplinary introduction role technology contemporary society
+The aim apply principle concept variety social science discipline anthropology sociology psychology gerontology explore influence technology society effect technological change social life including interpersonal relationship work culture society
+Topics include technology change relationship cumulative advantage disadvantage associated technology digital native versus digital immigrant pace technological change change nature people learn think meaning technology society
+Not open student completed BIOL BIOL
+For student majoring science
+Fulfills laboratory science requirement
+An introduction structure function living organism
+The aim apply scientific method use scientific quantitative reasoning make informed decision experimental result biological science
+Topics include chemical foundation life cell biology genetics evolution ecosystem interdependence living organism
+Discussion also cover importance scientific method biological inquiry impact biological knowledge technology human society
+Laboratory activity emphasize scientific method
+Students may receive credit one following BIOL BIOL BIOL BSCI
+A study technique finding solution problem structured programming refinement
+The objective design program using pseudocode C programming language
+practice debugging testing documenting provided
+Topics include principle programming logic constructing computer program practical aspect integrating program module cohesive application
+Algorithms used demonstrate programming approach problem solving
+Students may receive credit one following course CMIS CMIS CMSC
+Not open student taken CMIS
+The first sequence course Java
+Prerequisite CMIS prior programming experience
+Recommended MATH
+A study structured programming using Java language
+The goal design implement test debug document Java program using appropriate development tool
+Projects require use algorithm simple data structure concept
+Students may receive credit one following course CMIS CMIS CMSC
+Prerequisite CMIS
+Further study Java programming language
+The objective design implement test debug document Java program using appropriate development tool
+Topics include design programming exception recursion array data structure
+Not open student completed CMSC
+Prerequisite CMIS CMIS CMIS
+A study fundamental concept computer architecture factor influence performance system
+The aim apply practical skill computer system architecture
+Topics include data representation assembly language central processing unit architecture memory architecture architecture
+Students may receive credit one following course CMIS CMIS CMSC IFSM
+Fulfills general education requirement communication writing course
+Prerequisite WRTG
+An overview designed identify complex component relationship involved today medium
+The goal understand technical political economic cultural organizational influence mediated message
+Topics include visual rhetoric legal ethical issue social medium transactional model advertising security privacy concern
+Prerequisite corequisite MATH
+A survey fundamental mathematical concept relevant computer science
+The objective address problem computer science
+Proof technique presented used modeling solving problem computer science
+Discussion cover function relation infinite set propositional logic
+Topics also include graph tree well selected application
+Students may receive credit one following course CMSC CMSC
+Prerequisite CMSC CMSC
+A comparative study programming language
+The aim write safe secure computer program
+Topics include syntax semantics programming language support required various programming language
+Programming project using selected language required
+Prerequisite CMSC CMSC
+A study concurrent programming using feature Java
+The goal design implement test debug document complex robust program language
+Concepts programming composition classification polymorphism explored
+Topics include principle concurrent programming task synchronization race condition deadlock thread graphic user interface program
+Programming project implemented Java
+Students may receive credit one following course CMSC CMSC
+Prerequisites CMSC CMIS
+A study data structure design computer science
+The aim develop secure Java program
+Topics include linked list stack queue array map vector tree
+Algorithms perform sorting searching recursion discussed analyzed
+Prerequisites CMSC CMSC
+A introduction computer graphic
+The goal develop project render graphic image animate object
+Topics include programming OpenGL transforming viewing modeling object
+Prerequisite CMIS CMSC
+A study fundamental principle underlying modern operating system
+The objective design implement operating system design virtual memory management system
+Discussion cover essential component typical operating system interaction among
+Topics also include method managing process resource computer system
+A programming project implement part operating system required
+Prerequisites CMSC programming experience C
+An examination formal translation programming language syntax semantics
+The goal write program constructed using program generator
+Topics include evaluation grammar recognizers parsing technique recursive descent precedence LL K LR K SLR K improvement generation code translation schema
+Programming project implement part compiler required
+Prerequisites CMSC
+A presentation fundamental technique designing analyzing computer algorithm
+The aim apply estimate algorithm technique design algorithm
+Basic method include technique search traversal technique dynamic programming greedy method induction
+Programming project included
+Intended final capstone course taken student last credit
+Prerequisite Either CMSC CMIS SDEV
+An overview computer technology emphasis integration concept practical application critical thinking
+The goal research plan conduct complete collaborative project compliance schedule deadline
+Analysis cover innovative emerging issue computer science
+Assignments include working team throughout analysis design development implementation testing documentation phase project including periodic peer review
+A survey technological advancement field digital medium impact
+The objective explain digital medium transformed communication idea society make responsible choice creation consumption digital medium based awareness global social ethical legal context
+Topics include social medium visual display information ethic privacy participatory medium impact digital medium culture
+A survey basic concept principle micro macro economics economy affected technology
+The aim define explain key term concept economics determine technology affected consumer producer market well economic growth policy
+Topics include innovation affect labor market value information role technological change economy
+A focused survey intersection technology history evolutionary process mark call progress
+The objective apply historical precedent everyday responsibility relationship order advance goal ideal contemporary society compare contrast historical era describe event influence sense time space technology
+An introduction humanity review major development human culture
+The goal analyze society express idea art literature music religion philosophy consider underlying assumption way society formed run
+Focus developing conceptual tool understand cultural phenomenon critically
+Access standard office productivity package word processing spreadsheet database presentation software required
+An introduction data range technology including hardware software database networking information system provide foundation focus modern organization
+The objective apply knowledge basic technical ethical security consideration select use information technology data arises technology effectively personal professional life
+Discussion cover issue related technology vehicle collecting storing sharing data information including privacy ethic security social impact
+Applied exercise focus manipulation analysis visualization data effective data communication strategy
+Students may receive credit one following course BMGT CAPP CAPP CMST IFSM TMGT
+An introduction research process method retrieving information library online source
+The aim identify information need locate evaluate use appropriate resource keeping academic integrity ethical standard
+Focus implementing effective strategy finding relevant information including selecting appropriate print electronic source effectively using web search engine UMUC Information Library Services electronic resource find information evaluating correctly citing information found
+Students may earn credit LIBS challenge exam portfolio credit may receive credit one following course COMP LIBS LIBS
+Prerequisite MATH MATH
+An introduction calculus
+The goal demonstrate fluency language calculus discus mathematical idea appropriately solve problem identifying representing modeling functional relationship
+Topics include function sketching graph function limit continuity derivative application derivative definite indefinite integral calculation area
+Students may receive credit one course MATH MATH MATH
+A continuation MATH
+Prerequisite MATH
+A study integration function
+The aim demonstrate language calculus discus mathematical idea appropriately model solve problem using integral interpret result use infinite series approximate function model scenario
+Focus technique integration improper integral application volume work arc length moment inverse exponential logarithmic function sequence series
+Students may receive credit one following course MATH MATH MATH
+For student majoring science
+Prerequisite MATH higher
+An introduction basic principle physic chemistry application geology oceanography meteorology astronomy
+The objective use scientific quantitative reasoning make informed decision topic related physical science
+Discussion cover development scientific thinking scientific method relationship among various physical science role physical science interpreting natural world integrated use technology
+Students may receive credit one following course GNSC NSCI NSCI
+Prerequisite CMIS CMIS CMIS
+A study best practice strategy building secure application web
+The objective defend web application vulnerability
+Topics include web application architecture common threat trend scripting SQL injection input validation business logic flaw
+Required within first credit graduate study new graduate student except MBA student
+An overview skill needed academic professional success
+Focus enhancing communication critical thinking skill
+Assignments provide familiarity tool social medium library information resource
+APA style resource also addressed
+Fulfills general education requirement communication
+Practice effective writing clear thinking level including sentence paragraph emphasis essay integration research one writing
+A review grammar provided
+The objective apply specific step within writing process including formulating purpose identifying audience selecting using research resource method development
+Emphasis revising essay applying recursive writing process
+Assignments require application various rhetorical pattern including narrative analysis integration source APA format
+Students may receive credit one following course ENGL ENGL WRTG WRTG WRTG
+Fulfills general education requirement communication
+Prerequisite WRTG WRTG
+An overview professional writing
+The goal analyze professional communication scenario develop effective workplace writing
+Topics include standard convention technology professional writing communicating variety audience developing appropriate written response workplace challenge
+Students may receive credit one following course COMM ENGL WRTG
+Fulfills general education requirement advanced writing
+Prerequisite WRTG WRTG
+Recommended WRTG WRTG
+A comprehensive study applied technical writing
+The aim design develop appropriate effective technical document using strategy technology variety audience
+Students may receive credit one following course COMM ENGL WRTG
+
+If using assistive technology need help accessing PDF another format please contact u via email address
+Program specific task command online robot simulation Engage exercise understand object communicate one another Understand core aspect computer science use create solution understandable adaptable appropriate reusable
+The design implementation computer program solve problem involve skill fundamental study computer science
+This includes development analysis algorithm fundamental data structure use logic formal method
+PDF PDF Ask counselor teacher See question ask
+
+If help find course best fit
+Talk counselor taking course online approved provider
+

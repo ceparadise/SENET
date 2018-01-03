@@ -1,0 +1,367 @@
+In parser
+single
+The special attribute parser LR k grammar transformed LR grammar
+It handle
+In past LR k parser avoided huge memory requirement favor le powerful alternative parser
+Recently however minimal LR parser whose space requirement close LALR parser offered several parser generator
+Like parser LR parser automatically generated like MSTA Menhir HYACC LRSTAR
+In invented LR k parser eft right parser type generalization existing
+This parser potential recognizing deterministic language produce left right derivation statement encountered input file
+Knuth proved reach maximum language recognition power provided method transforming LR k k grammar LR grammar
+Canonical LR parser practical disadvantage enormous memory requirement internal representation
+In Frank DeRemer suggested two simplified version LR parser called
+These parser require much le memory Canonical LR parser slightly le power
+LALR parser common implementation LR Parser
+However new type LR parser people call minimal LR parser introduced David Pager showed LR parser created whose memory requirement rival LALR parser
+Recently parser generator offering minimal LR parser solve memory requirement problem also inherent LALR parser generator
+The LR parser operation based static
+These codify grammar language recognizes typically called parsing table
+The parsing table LR parser parameterized lookahead terminal
+Simple parsing table like used parser represent grammar rule form mean go state state go state
+After parameterizing rule lookahead mean transition performed lookahead terminal
+This allows richer language simple rule different meaning depending lookahead context
+For example LR grammar following rule transition different state spite based state sequence
+The would true lookahead terminal taken account
+Parsing error identified without parser read whole input declaring rule error
+For example declared error causing parser stop
+This mean lookahead information also used catch error following example In case A B reduced lookahead b c error reported lookahead The lookahead also helpful deciding reduce rule
+The lookahead help avoid reducing specific rule lookahead valid would probably mean current state combined following instead previous state
+That mean following example state sequence reduced instead lookahead parser went state B acceptable
+transition rule existed
+It noted state produced directly terminal allows state sequence appear
+LR parser requirement rule expressed complete LR manner
+sequence two state specific lookahead
+That make simple rule requiring great many artificial rule essentially enumerate combination possible state lookahead terminal follow
+A similar problem appears implementing rule possible lookaheads must enumerated
+That reason LR parser practically implemented without significant memory optimization
+LR parsing table constructed way modification contains lookahead
+This mean contrary LR parser different action may executed item process followed different terminal
+Starting language first item set language determined
+In plain word item set list production rule currently processed symbol might part
+An item set correspondence parser state item within set together next symbol used decide state transition parser action applied
+Each item contains marker note point currently processed symbol appears rule item represents
+For LR parser item specific lookahead terminal thus lookahead terminal also noted inside item
+For example assume language consisting terminal symbol nonterminals starting rule following production rule Items set generated analog procedure LR parser
+The item set represents initial state created starting rule The dot denotes marker current parsing position within rule
+The expected lookahead terminal apply rule noted comma
+The sign used denote input expected case starting rule
+This complete item set though
+Each item set must mean production rule nonterminal following recursively included item set nonterminals dealt
+The resulting item set called closure item set began
+For LR production rule item included possible lookahead terminal following rule
+For complex language usually result large item set reason large memory requirement LR parser
+In example starting symbol requires nonterminal turn requires thus production rule appear item set
+At first ignore problem finding lookaheads look case LR whose item contain lookahead terminal
+So item set without lookaheads look like To determine lookahead terminal FIRST FOLLOW set used
+FIRST A set terminal appear first element chain rule matching nonterminal A
+FOLLOW I Item I A α B β x set terminal appear immediately B α β arbitrary symbol string x arbitrary lookahead terminal
+FOLLOW k B item set k nonterminal B union follow set item k followed B
+The FIRST set determined directly closure nonterminals language FOLLOW set determined item usage FIRST set
+In example one verify full list item set first set Within item set follow set found From full item set LR parser created creating item LR item set one copy terminal follow set LHS nonterminal
+Each element follow set may valid lookahead terminal The rest item set created following algorithm In example get set item set item set nonterminal E item set nonterminal T item set terminal n item set terminal item set
+Item set E Item set T Item set n Item set Item set From item set several item set produced
+The complete list quite long thus stated
+Detailed LR k treatment grammar
+found
+The lookahead LR item used directly considering reduce action marker right end
+The LR item S A B e c LR item S A B Different LR item may share core
+For example item set parser required perform reduction E T next symbol shift next symbol
+Note LR parser would able make decision considers core item would thus report conflict
+A state containing A α X β move state containing A α X β label X
+Every state transition according Goto
+If A α b β state I I move state I label b add action If state I add action
+
+To parse computer science string command usually program separated easily processed component analyzed correct syntax attached tag define component
+The computer process program chunk transform machine language
+To parse break sentence group word separate component including definition part function form
+The technical definition implies concept
+Parsing used programming language
+Languages like Java parsed respective compiler transformed executable machine code
+Scripting language like PHP Perl parsed web server allowing correct HTML sent browser
+Techopedia Terms Copyright Techopedia
+
+learn share knowledge build career
+I college student getting Computer Science degree
+A lot fellow student really done lot programming
+They done class assignment let honest question really teach program
+I several student ask question parse thing I never quite sure explain
+Is best start going line line looking substring give complicated lecture using proper lexical analysis etc
+create token use BNF stuff
+They never quite understand I try explain
+What best approach explain without confusing discouraging actually trying
+Many good question generate degree opinion based expert experience answer question tend almost entirely based opinion rather fact reference specific expertise
+I explain parsing process turning kind data another kind data
+In practice almost always turning string binary data data structure inside Program
+For example turning C process analyzing text made sequence token determine grammatical structure respect given le formal grammar
+The parser build data structure based token
+This data structure used compiler interpreter translator create executable program library
+If I gave english sentence asked break sentence part speech noun verb etc
+would parsing sentence
+That simplest explanation parsing I think
+That said parsing computational problem
+You start simple example work way complex
+In computer science parsing process analysing text determine belongs specific language
+
+It informal name process
+For example suppose language mean number character A followed number character B
+A parser language would accept input reject input
+That parser
+In addition process data structure could created processing
+In previous example could instance store two separate stack
+Anything happens like giving meaning transform something else parsing
+Giving meaning part input sequence token called
+I think best way understanding parsing concept begin simpler concept
+The simplest one language processing subject finite automaton
+It formalism parsing regular language regular expression
+It simple input set state set transition
+Consider following language built alphabet
+The automaton represents possible parser language whose valid word start
+It simple parser language
+You start initial state read symbol input move state otherwise remember remember alphabet move state
+If reach state input accepted
+As visual need pencil piece paper explain parser anyone including child
+I think simplicity make automaton suitable way teaching language processing concept parsing
+Finally Computer Science student study concept theoretical computer science class Formal Languages Theory Computation
+Have try write program evaluate arbitrary simple arithmetic expression
+This simple problem understand start getting deeper lot basic parsing start make sense
+In linguistics divide language small component analyzed
+For example parsing sentence would involve dividing word phrase identifying type component verb adjective noun
+Parsing important part many computer science discipline
+For example compiler must parse source code able translate object code
+Likewise application process complex command must able parse command
+This includes virtually application
+Parsing often divided lexical analysis semantic parsing
+Lexical analysis concentrate dividing string component called token based punctuationand key
+Semantic parsing attempt determine meaning string
+I think need teach think like
+So simplest way I think explain parsing someone new concept
+Generally try parse data one line time generally easier human think way dividing conquering also easier code
+We call field every minimum undivisible data
+Name field Age another field Surname another field
+For example
+In line various field
+In order distinguish delimit field separator maximum length assign field
+For example By separating field comma Jones Or space Name letter max age digit Jones letter Paul Any set field called record
+To separate delimited field record need delimit record
+A dot enough though know apply
+A list could James
+Jordan James You say list nba nlf player like
+Then type according format
+Then make program parse display record
+One group make list format program parse list fixed size format viceversa
+Parsing breaking something meaningful part using definable predefined known common set part definition
+For programming language would keyword part usable punctuation sequence For pumpkin pie might something like crust filling topping
+For written language might word sentence verb For spoken language might tone volume mood implication emotion context Syntax analysis well common sense would tell parsing pumpkinpie programming language
+Does crust
+well maybe pumpkin pudding perhaps spoken language
+One thing note parsing stuff usually many way break thing part
+For example could break pumpkin pie cutting center edge bottom top scoop get filling using sledge hammer eating
+And parse thing would determine something part easy hard
+In computer language world common way parse text source code
+These common method algorithims title name
+Search Internet common way parse language
+Wikipedia help regard
+Simple explanation Parsing breaking block data smaller piece token following set rule using delimiters example data could process piece piece managed analysed interpreted transmitted ets
+Examples Many application like Spreadsheet program use CSV Comma Separated Values file format import export data
+CSV format make possible application process data help special parser
+Web browser special parser HTML CSS file
+JSON parser exist
+All special file format must parser designed specifically
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+No typo word sparse
+The word parse mean analyze object specifically
+It commonly used computer science refer reading program
+For example program written whether language code need parsed order compiled
+Web written scripting language need parsed Web server output correct user browser
+Parsing also refer breaking ordinary text
+For example typically parse search phrase entered user accurately search word
+Some program parse text document extract certain information like name address
+program turn formatted document table row column parsing text
+As see way parse clearly sparse
+Updated December Cite definition This page contains technical definiton Parse
+It explains computing terminology Parse mean one many technical term TechTerms dictionary
+All definition TechTerms website written technically accurate also easy understand
+If find Parse definition helpful reference using citation link
+If think term updated added TechTerms dictionary please
+Tech Factor
+
+In linguistics divide language small component analyzed
+For example parsing sentence would involve dividing word phrase identifying type component verb adjective noun
+Parsing important part many discipline
+For example must parse able translate
+Likewise process complex must able parse command
+This includes virtually application
+Parsing often divided
+Lexical analysis concentrate dividing component called based key
+Semantic parsing attempt determine meaning string
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+To parse analyze something orderly way
+In linguistics parse divide word phrase different part order understand relationship meaning
+For example English student sometimes asked parse sentence dividing subject predicate dependent phrase modifier forth
+In general parse someone writing speech simply mean interpret
+In computer parse divide computer language statement part made useful computer
+A program program take program statement developer written divide part example main command option target object attribute forth used developing action creating instruction form executable program
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+process analysing either conforming rule
+The term come Latin meaning
+The term slightly different meaning different branch
+Traditional parsing often performed method understanding exact meaning sentence word sometimes aid device
+It usually emphasizes importance grammatical division
+Within term used refer formal analysis computer sentence string word constituent resulting showing syntactic relation may also contain semantic information
+The term also used describing language comprehension
+In context parsing refers way human being analyze sentence phrase spoken language text term grammatical constituent identifying part speech syntactic relation etc
+This term especially common discussing linguistic cue help speaker interpret
+Within computer science term used analysis referring syntactic analysis input code component part order facilitate writing
+The term may also used describe split separation
+The traditional grammatical exercise parsing sometimes known involves breaking text component part speech explanation form function syntactic relationship part
+This determined large part study language quite intricate heavily inflected language
+To parse phrase bite dog involves noting singular noun subject sentence verb third person singular present tense verb bite singular noun object sentence
+Techniques sometimes used indicate relation element sentence
+Parsing formerly central teaching grammar throughout world widely regarded basic use understanding written language
+However general teaching technique longer current
+Normally parsing defined separation
+To separate sentence grammatical meaning word phrase number
+In system written text human language parsed computer program
+Human sentence easily parsed program substantial structure human language whose usage convey meaning amongst potentially unlimited range possibility germane particular case
+So utterance Man bite dog versus Dog bite man definite one detail another language might appear Man dog bite reliance larger context distinguish two possibility indeed difference concern
+It difficult prepare formal rule describe informal behaviour even though clear rule followed
+In order parse natural language data researcher must first agree used
+The choice syntax affected computational concern instance parsing system use general parsing grammar type known
+another linguistic formalism popular parsing community research effort focused le complex formalism one used Penn
+aim find boundary major constituent noun phrase
+Another popular strategy avoiding linguistic controversy parsing
+Most modern parser least partly rely corpus training data already annotated parsed hand
+This approach allows system gather information frequency various construction occur specific context
+Approaches used include straightforward probabilistic grammar
+Most successful system use statistic consider identity word involved well
+However system vulnerable require kind effective
+Parsing algorithm natural language rely grammar property manually designed grammar programming language
+As mentioned earlier grammar formalism difficult parse computationally general even desired structure kind approximation grammar used perform first pas
+Algorithms use grammar often rely variant usually prune away unlikely analysis save time
+However system trade speed accuracy using version algorithm
+A somewhat recent development parser proposes large number analysis complex system selects best option
+In parsing involves assignment word category evaluation meaning sentence according rule syntax drawn inference made word sentence
+This normally occurs word heard read
+Consequently psycholinguistic model parsing necessity meaning build interpretation sentence processed normally expressed term partial syntactic structure
+Creation initially wrong structure occurs interpreting
+A software component take input data frequently text build often kind hierarchical structure giving structural representation input checking correct syntax process
+The parsing may preceded followed step may combined single step
+The parser often preceded separate creates token sequence input character alternatively combined
+Parsers may programmed hand may automatically generated
+Parsing complementary produce formatted These may applied different domain often appear together pair input front end parsing output back end code generation stage compiler
+The input parser often text may also text natural language le structured textual data case generally certain part text extracted rather parse tree constructed
+Parsers range simple function complex program frontend parser
+An important class simple parsing done using group regular expression defines regular expression engine automatically generating parser language allowing pattern matching extraction text
+In context regular expression instead used prior parsing lexing step whose output used parser
+The use parser varies input
+In case data language parser often found file reading facility program reading HTML text example
+In case parser component par create form internal representation parser key step
+Programming language tend specified term fast efficient parser written
+For compiler parsing done one pas multiple pass see
+The implied disadvantage compiler largely overcome adding provision made forward pas applied backwards current program segment recognized completed
+An example mechanism would useful would forward GOTO statement target GOTO unknown program segment completed
+In case application would delayed target GOTO recognized
+Obviously backward GOTO require
+grammar limited extent express requirement language
+Informally reason memory language limited
+The grammar remember presence construct arbitrarily long input necessary language example name must declared may referenced
+More powerful grammar express constraint however parsed efficiently
+Thus common strategy create relaxed parser grammar accepts superset desired language construct accepts invalid construct later unwanted construct filtered contextual analysis step
+For example following syntactically valid code The following code however syntactically valid term grammar yielding syntax tree structure previous syntactically invalid term requires variable initialized use Rather analyzed parsing stage caught checking syntax tree hence part analysis syntax practice often easily analyzed semantics
+The following example demonstrates common case parsing computer language two level grammar lexical syntactic
+The first stage token generation input character stream split meaningful symbol defined grammar
+For example calculator program would look input split token meaningful symbol context arithmetic expression
+The lexer would contain rule tell character mark start new token meaningless token like generated
+The next stage parsing syntactic analysis checking token form allowable expression
+This usually done reference recursively defines component make expression order must appear
+However rule defining programming language expressed grammar alone example type validity proper declaration identifier
+These rule formally expressed
+The final phase analysis working implication expression validated taking appropriate action
+In case calculator interpreter action evaluate expression program compiler hand would generate kind code
+Attribute grammar also used define action
+The parser essentially determine input derived start symbol grammar
+This done essentially two way example parser accommodate
+Although believed simple implementation parsing accommodate direct indirect may require exponential time space complexity parsing ambiguous sophisticated algorithm parsing created Frost Hafiz Callaghan accommodate polynomial time generate representation potentially exponential number parse tree
+Their algorithm able produce derivation input regard given
+An important distinction regard parser whether parser generates see
+LL parser generate leftmost LR parser generate rightmost derivation although usually reverse
+Some well known parser development tool include following
+Also see
+Lookahead establishes maximum incoming token parser use decide rule use
+Lookahead especially relevant often explicitly indicated affixing lookahead algorithm name parenthesis LALR
+Most primary target parser carefully defined way parser limited lookahead typically one parse parser limited lookahead often efficient
+One important change trend came created thesis efficient LL parser fixed value
+Parsers typically action seeing token
+They shift add token stack later reduction reduce pop token stack form syntactic construct end error known rule applies conflict know whether shift reduce
+Lookahead two advantage
+Example Parsing Expression Most programming language except APL Smalltalk algebraic formula give higher precedence multiplication addition case correct interpretation example
+Note semantic rule
+It possible rewrite grammar incorporate syntax
+However rule translated syntax
+Initially Input The parse tree resulting code correct according language semantics
+To correctly parse without lookahead three solution The parse tree generated correct simply efficient parser
+This strategy followed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I read algorithm LR k parser frequent mention selecting handle grammar given
+For example one document said Please help understand handle parsing
+This question came site theoretical computer scientist researcher related field
+Let consider following grammar S A b S B b A B Obviously language totally uninteresting word aab aaab
+However grammar LL LL sure know problem
+Let try parsing input aaab going one character time pretending know absolutely nothing rest string except next token essentially use token lookahead
+We allowed use knowledge everything seen far though
+Initially know string start
+This tell u absolutely nothing whether production production grammar
+Luckily really care point
+Let skip go next point
+We remember look next token
+This another
+Note seen aa mean might case might case first two constitute instance A
+We leave moment first officially
+We look third token find
+We want decide whether two saw earlier really constitute A LR k algorithm never delay decision
+As A always followed b decide case next token
+Reading know definitely case assuming input correct
+Our lookahead becomes b precisely expect
+We therefore decide three seen far fact B
+Note point longer need seen three need know seen B
+This effectively situation would Bb input read B make everything easier remember precisely corresponds reduce action LR k parser
+Finishing read b find end input decide left part must S decide input correct
+The LR k algorithm work pretty much described
+It remembers seen far decides based information next token whether last bit seen far nonterminal
+It replaces nonterminal shuffle information around continues replacement taken place input
+The crucial bit finding seen far precise last bit seen far actually instance nonterminal expansion production
+In example transformed two start A everything would went wrong
+We say aa handle point
+However aaa handle correctly replaced B
+A grammar LR k always make correct decision handle using k token lookahead everything seen far
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+In SLR use follow set non terminal determining reduce move CLR use lookaheads
+How using lookaheads actually help improving performance parser
+Why computing lookahead better computing follow set parsing
+By posting answer agree
+asked viewed site design logo Stack Exchange Inc user contribution licensed
+

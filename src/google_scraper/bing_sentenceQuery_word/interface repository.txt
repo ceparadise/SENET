@@ -1,0 +1,142 @@
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+As noun interface either As verb interface mean communicate another person object
+With hardware equipment interface mean making appropriate physical connection two piece equipment communicate work together effectively
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+pdf
+
+learn share knowledge build career
+I read internet I got point say Interfaces used But I able understand interface usefull point
+let consider I creating basic without generic repository So interface come picture
+suppose created interface upcasting used
+Please explain precisely also usefullness Interface regard Repository Pattern
+So interface come picture
+Like could many implementation like As see really important implement repository
+What important repository implementation respect defined contract interface posse method returning list employee
+And controller us interface
+See controller longer depends specific implementation repository
+All need know implementation respect contract
+Now need configure favorite dependency injection framework use implementation wish
+Here example done Ninject In generated code simply decide use EF implementation single line code This way longer need manual instantiation repository class worry upcasting whatever
+It dependency injection framework manages take care injecting defined implementation controller constructor
+And simply modifying configuration could switch data access technology without touching single line code controller
+That way unit testing isolation also come play
+Since controller code weakly coupled repository thanks interface introduced need unit test provide mock implementation repository allows define behavior
+This give possibility unit test Index controller action without dependency database whatever
+Complete isolation
+I also invite checkout TDD DI MVC
+You would expose repository interface This would allow many different interface default one Or test one Your code consuming repository interested using interface The secret sauce factory another mechanism resolve interface usable type Dependency Injection framework Ninject Castle Windsor fulfil role
+The point interface
+This allows swap implementation testing purpose easily promotes loose coupling
+Just clarify link use interface repository pattern specifically another pattern make use
+By posting answer agree
+asked viewed active Get In get see By subscribing agree
+site design logo Stack Exchange Inc user contribution licensed
+
+learn share knowledge build career
+So I following basic interface request handler These RequestHandlers different way handle incoming request whether come SMS Email whatever
+Now problem handler save data different repository Database flatfile online storage
+I like make easier manage data various repository injecting data storage various handler share repository
+However repository us different connection parameter etc
+What kind pattern suitable
+Factory pattern seems like I I entirely sure
+I would say create another IDataRepository interface handle saving operation multiple implementation DB file whatever
+And Request handler depend interface
+And every repository implementation care connection string
+Something like And configure Dependency Injection container provide correct implementation repository
+This way Handlers coupled connection string way giving better testability application architecture
+And use factory pattern getting pretty much replaced DI container
+I think looking dependency injection every handler use dependency injection container get whatever resource need
+Going bit simpler without using full DI could make manages access actual repository
+So would feel free invent better name method etc
+return appropriate repository
+During construction handler would need pas single repository repository
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Generically refers central place data stored maintained
+A repository place multiple located distribution repository location directly accessible user without travel across network
+Also see
+In development system database information including data element process input output interrelationship
+A CASE system us repository identify object rule reuse
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Now day term content management key issue website design include include crucial problem
+Here paper shown way managing content called asset may contain metadata course material assessment item image video etc
+The repository open service definition oki specification defines storing retrieving digital content referred asset
+Here shown architecture repository open service interface definition well usefulness managing
+The Repository Open Service Interface Definition OSID
+specification defines storing retrieving digital content referred Assets
+OSIDs programmatic comprise Service Oriented Architecture designing building reusable interoperable software
+Open Service Interface Definition OSID Open Knowledge Initiative OKI Service Oriented Architecture SOA
+Some useful method interface copyAssets getAssets etc
+An Asset definition includes several method managing Records addition common one display name description id
+The management method little complex one found Repository
+To start getDisplayName updateDisplayName getDescription updateDescription getId
+These method similar found many OSIDs
+A PartStructure common method getDisplayName getDescription getId
+The Authentication OSID permit application abstract authentication process without manage detail underlying authentication service AUTHORIZATION The Authorization OSID allows application establish query user privilege view create modify application data use application functionality COURSE MANAGEMENT The CourseManagement Open Service Interface Definition OSID primarily support creating managing CourseCatalog
+The catalog organized CanonicalCourses general exist across term CourseOfferings CanonicalCourses occur specific term Status etc CourseSections CourseOfferings meeting location schedule student roster etc
+While method define service interface boundary protocol server level OSIDs place boundary application level effectively insulate consumer protocol server identity utility library domain service provider resulting software easier OF THE OSIDS The following briefly describes OSIDs Open Service Interface Definitions
+OSID ROOT The Root package mechanism loading OSID manager AGENT OSID use Agents represent individual process invoke specific Services
+
+
+By Reviewed Murray Anderegg Computer Services recommends Subversion Git CVS code repository
+Computer Services still maintains CVS source code control system limited expertise answering question CVS
+This page give brief introduction CVS including CVS repository need one creation CVS repository access CVS repository much space user get CVS repository repository available Computer Science Department
+The book available
+Other information available online recommendation good source welcome
+The process getting started CVS may take bit time plan try CVS repository read online documentation get speed
+Record keeping became necessary people wanted compare program current state point past
+For example normal course implementing new feature developer may bring program thoroughly broken state probably remain feature mostly finished
+Unfortunately time someone usually call report bug last publicly released version
+To debug problem may also exist current version source program brought back useable state
+Restoring state pose difficulty source code history kept CVS
+The developer simply say effect Give program three week ago perhaps Give program time last public release
+If never kind convenient access historical snapshot may surprised quickly come depend
+Personally I always use revision control coding project saved many For collaboration CVS assumes developer equal status project provides ability check copy project modify check copy independently
+At check CVS check file committed one currently repository case conflict alert developer conflict
+When conflict second person committing resolve conflict repository accept new code
+To create CVS repository departmental CVS server send request help asking creation personal CVS repository creation project repository related research group class department
+Personal CVS repository created CVS server project repository created CVS server project name
+After repository space created necessary initialize repository CVS
+Login CVS server run cv repository directory init This create CVSROOT initialize file CVSROOT directory
+If wish run multiple CVS repository CVS repository directory need run init command inside repository subdirectory
+For example mkdir cv init mkdir cv init Access CVS repository currently ONLY using SSH
+We strongly suggest use key authentication SSH prompted password file committed
+This make process committing CVS change atomic le painful
+A document describing setup key authentication Linux Windows available
+The CVS repository currently residing Linux server filesystem running POSIX draft file ACLs
+The process sharing repository collaborating others require modifying ACLs
+For information Linux file ACLs see man page setfacl getfacl see two web page
+Here example adding user anderegg repository
+You need set extended ACLs repository Login cv cd repository setfacl user anderegg rwX
+setfacl user anderegg rwX
+To remove access user anderegg cd repository setfacl user anderegg
+setfacl user anderegg
+NOTE Both command need run make change permission everything existing without everything created future default
+There cron job sweep repository performs chown owner repository everything within case different user creates file within repository
+Users allocated space personal CVS repository
+Projects allocated space CVS repository
+The department offer recommends two repository manager Subversion Git
+These repository manager generally robust CVS
+Computer Science
+
+may refer
+

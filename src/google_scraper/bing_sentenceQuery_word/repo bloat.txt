@@ -1,0 +1,354 @@
+Still question
+Ask
+
+Generically refers central place data stored maintained
+A repository place multiple located distribution repository location directly accessible user without travel across network
+Also see
+In development system database information including data element process input output interrelationship
+A CASE system us repository identify object rule reuse
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+learn share knowledge build career
+I looking method push change backup server scripted fashion
+The initial attempt geared towards redundant check
+The source server pushed change remote server
+As backup check git remote update run hour interval repository living remote server
+The goal ensure failed missed interrupted push would caught update
+I went realizing I would see local branch remote branch
+Since user using repository given commits associated SHA value admins documented restoration policy deal I willing deal added branch
+What surprised I see doubling branch running git branch fact doubling repository size
+Below affect running git remote update backup push branch du du I looking working around question remains
+Since SHA value I seeing code stored twice instead referencing existing SHA value
+When use automatic daily update possible git object database bloat lot loose object
+Try repack git objectstore using Aggressive recommended run regularly blue moon fine slow
+After repos size roughly
+You correct git store one object per hash
+However git store object differently different size depending whether packed
+git gc normal way force garbage collection reduce repository size
+Just one repository bigger mean duplicating object
+A bare repo also smaller working repo
+For broader goal remote server repository backup repository could backup git pull like developer
+Remember cloned repository date contain information replicate server one
+One idea came direct use structure setup like If setup like easily mirror server repository used later directly server repo lost
+I run thru since first time tried mirror technique
+In case repository bloat
+However may different git command would useful compare
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+About site A journal thought thing life Collection article I published Presentations I delivered recently Software I written My link collection My picture collection featuring cute little chihuahua Pico Quick introduction internals people scared word like
+In simplified form git object storage DAG object handful different type object
+They stored compressed identified hash incidentally content file represent representation git
+The simplest object bunch byte
+This often file symlink pretty much anything else
+The object point determines semantics
+Directories represented object
+They refer content file filename access mode etc stored subdirectory
+When node point another node DAG node exist without
+Nodes nothing point garbage collected rescued much like filesystem inodes filename pointing
+A refers represents state file time commit
+It also refers parent
+More one parent mean commit merge parent mean initial commit interestingly one initial commit usually mean two separate project merged
+The body object commit message
+References head branch like note slapped node DAG
+Where DAG get added existing node mutated moved around freely
+They get stored history directly transferred repository
+They act sort bookmark I working
+add node DAG move note current branch new node
+The ref special actually point another ref
+It pointer currently active branch
+Normal ref actually namespace often skip part
+Remote reference note different color
+The difference normal different namespace fact remote ref essentially controlled remote server
+update
+A node DAG note yet another color
+A point includes optional message GPG signature
+The fast way access tag lost recovered DAG
+The node DAG moved repository repository stored effective form pack unused node garbage collected
+But end repository always DAG
+So armed knowledge store version history visualize thing like merges differ tool try manage history linear change per branch
+This simplest repository
+We remote repository one commit
+Here ed remote received one new commit remote merged yet
+The situation
+As merge new commits local branch thing happened moving note changing file working directory respectively
+One local later
+We new local commit new remote commit
+Clearly merge needed
+Results
+Because new local commits actual new node created DAG
+Note two parent Here tree look commits branch another merge
+See stitching pattern emerge
+The DAG record exactly history action taken
+The stitching pattern somewhat tedious read
+If yet published branch clearly communicated others base work alternative
+You branch instead merging commit replaced another commit different parent branch moved
+Your old commit remain DAG garbage collected
+Ignore know way screwed totally
+If extra pointing old commit remain pointing keep old commit alive indefinitely
+That fairly confusing though
+Do rebase branch others created new commits top
+It possible recover hard extra work needed frustrating
+The situation garbage collecting ignoring unreachable commit creating new commit top branch
+also know rebase multiple commits one command
+That end brief intro people intimidated computer science
+Hope helped
+
+By Reviewed Murray Anderegg Computer Services recommends Subversion Git CVS code repository
+Computer Services still maintains CVS source code control system limited expertise answering question CVS
+This page give brief introduction CVS including CVS repository need one creation CVS repository access CVS repository much space user get CVS repository repository available Computer Science Department
+The book available
+Other information available online recommendation good source welcome
+The process getting started CVS may take bit time plan try CVS repository read online documentation get speed
+Record keeping became necessary people wanted compare program current state point past
+For example normal course implementing new feature developer may bring program thoroughly broken state probably remain feature mostly finished
+Unfortunately time someone usually call report bug last publicly released version
+To debug problem may also exist current version source program brought back useable state
+Restoring state pose difficulty source code history kept CVS
+The developer simply say effect Give program three week ago perhaps Give program time last public release
+If never kind convenient access historical snapshot may surprised quickly come depend
+Personally I always use revision control coding project saved many For collaboration CVS assumes developer equal status project provides ability check copy project modify check copy independently
+At check CVS check file committed one currently repository case conflict alert developer conflict
+When conflict second person committing resolve conflict repository accept new code
+To create CVS repository departmental CVS server send request help asking creation personal CVS repository creation project repository related research group class department
+Personal CVS repository created CVS server project repository created CVS server project name
+After repository space created necessary initialize repository CVS
+Login CVS server run cv repository directory init This create CVSROOT initialize file CVSROOT directory
+If wish run multiple CVS repository CVS repository directory need run init command inside repository subdirectory
+For example mkdir cv init mkdir cv init Access CVS repository currently ONLY using SSH
+We strongly suggest use key authentication SSH prompted password file committed
+This make process committing CVS change atomic le painful
+A document describing setup key authentication Linux Windows available
+The CVS repository currently residing Linux server filesystem running POSIX draft file ACLs
+The process sharing repository collaborating others require modifying ACLs
+For information Linux file ACLs see man page setfacl getfacl see two web page
+Here example adding user anderegg repository
+You need set extended ACLs repository Login cv cd repository setfacl user anderegg rwX
+setfacl user anderegg rwX
+To remove access user anderegg cd repository setfacl user anderegg
+setfacl user anderegg
+NOTE Both command need run make change permission everything existing without everything created future default
+There cron job sweep repository performs chown owner repository everything within case different user creates file within repository
+Users allocated space personal CVS repository
+Projects allocated space CVS repository
+The department offer recommends two repository manager Subversion Git
+These repository manager generally robust CVS
+Computer Science
+
+learn share knowledge build career
+I trying remove sensitive info old commits company Git repo using technique described
+Using I able modify repo history liking
+Unfortunately I made mistake origin work repo
+By I believe I effectively merged original repo A repo B since number commit object doubled
+Now I could run step fix I repo still double size
+I know roughly merge occurred precise commit
+I would like able identify prove commit culprit permanently remove commit tree I potential idea could done
+I welcome suggestion
+modifying specific commit join A B You literally
+But something may good sufficiently good make commit committing copy make refer parent parent old history wanted remove
+Once copied commit though must also copy immediate child
+The new copy original except refer copy original
+Of course copied child must copy child
+The new copy refer new copy
+This repeat way time reach recent commits
+Basically need run
+The filter time All commits get copied
+The command know substitute new parent first change onward
+When copying earlier commits side A side B come mistake copy identical original wind original
+The end result changed one specific commit except descendant commits
+You clone repository new clone refer commits simply copied suggested prune away surprisingly difficult Git desperately want avoid losing work commits
+In case one must convince user repository abandon previous clone switch new repository
+The remaining issue point convince Git change parentage one specific commit
+There two easy ish way The latter easier get right since goof simply remove replacement
+However understand former hard get right either single commit write shell script fragment form use
+By shear luck I believe simply repeating original action solved problem
+running repo cleaned commits
+Since filtering process simply remove specific file every commit running filter modified repo B effect B B whereas running commits repo A result commits identical B
+Since commit hash calculated content change hash ancestor ancestor A B effectively identical I end identical commit hash side tree therefore duplicate magically disappear
+My new repo contains commit object
+Further reading By posting answer agree
+asked viewed active Get In get see site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I plan complete rewrite project using another framework etc
+It would nice keep old code including history reference
+What best way order avoid risk confusion surprise
+My idea create new branch replace everything get basic new version running tag last old master merge branch master
+Does sound reasonable
+I vote keeping everything single repository
+I would This When create new repository instead Unless pressing reason merge rewrite historical branch I keep separate
+Create new branch keep old code rewrite master keep separated way
+That way always work old situation change
+That orphaned branch
+You might need temporarily since display master default
+You could create new branch current project may better mark repository private create new one new code way still old repository bloat obsolete work
+I suggest take approach instead trying later merge branch back master still bloat obsolete code also may several frustrating merge conflict time ready pull
+In order avoid would best start clear branch rather merging two completely different one together
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+use following search parameter narrow result
+The operating system collection basic instruction tell electronic part computer work
+Free Libre open source software FLOSS mean everyone freedom use see work change
+collaborative effort GNU project formed develop GNU operating system development team Linux kernel
+Initially Linux intended develop operating system plan shelved somewhere along way
+Linux also used without GNU embedded system mobile phone appliance often BusyBox embedded tool
+Matthew Miller subreddit subscriber add sidebar
+front page internet
+subscribe one thousand community
+This archived post
+You wo able vote comment
+submitted I could find cinnamon desktop user friendly mint without bloat
+So I took installed
+Then I added Cinnamon tweaked theme bit
+Removed
+Finally I added basic program Synaptic Leafpad Midori GPicview GMusicBrowser Totem necessary codecs run medium
+This great
+I really like
+Now question
+Is already distro like Lightwieght Cinnamon DE I missed
+I like look feel I want go every nine month
+A single distro install would much nicer
+Even type install I could add program I need computer
+Any idea
+Post comment
+Debian
+Debian net install Yep
+Go stable change need rolling release newer package
+I sid mate I also sid experimental repos enabled pinned priority nothing sid get installed unless absolutely required package exist testing
+Some package still pinned get latest version iceweasel icedove This
+I use Debian Testing rolling distro stable enough daily use one issue closed source nVidia driver
+During process asked desktop environment would like installed Cinnamon offered among rest
+Network install ensures bare minimum package need little bloat possible
+Granted polished Ubuntu Mint
+Things like boot splash image missing small thing I personally care
+Also Debian get keep well supported package
+You wo get point would compile something get running
+Network install ensures bare minimum package netinstall still installs package
+To avoid install Standard system utility install disable installation recommended package And install cinnamon task using aptitude tasksel
+Or use deboostrap
+Recommended package still reasonable bloat Good info
+Thanks
+Makes happy see Debian top post
+Linux BBQ better Trying upvote HouseofTea understand
+We hope user see light joy worth pain
+TL DR LinuxBBQ similar looking OP better
+Debian like completely incompatible Mint simple reason PPA philosophical difference reason pick one alone
+Bloat uninstalled added choosing enabling disabling support PPA hardly easy
+enabling disabling support PPA hardly easy You actually use PPAs Debian
+Not good idea preferred way Debian
+Eg want use package Debian folllow instruction page This PPA added system manually copying line adding system software source
+deb wily main I use download directly I really need
+Well phrasing incorrect yes
+But get point done lead breakage system whereas Mint officially supported
+It major philosophical difference assured quality stability e central authority versus ease community repos
+Improperly maintained PPAs lead breakage debian mint
+Properly maintained PPAs work fine
+well known example high quality date audio software Debian derivative
+Just expect support official debian org messed software source IMHO fine bug expected reproducible plain Debian
+Mint support PPAs want ca anything PPA maintainer forcing upgrade archive
+Which using discouraged
+Wel philosophical difference also ca anything PPA maintainer forcing upgrade archive
+Which using discouraged
+THey cna tell remove repository get correct one back perfectly doable
+Also system imperfect
+need syntax like force PPA would either get default one system say match ambiguous
+Arch linux
+Configure whatever way want
+Speaking Arch bloat I installed Arch VM day installed pulseaudio xorg gnome
+For reason bunch crap I want came installed
+It came whole host designer tool came Avahi server browser fluid UI designer tool
+Any idea would installed
+Did install everything gnome group
+Because lot stuff
+I know Pulseaudio us Avahi playing sound network
+Probably network thing gnome use
+I installed four thing pulseaudio xorg gnome
+That
+The thing gnome package group
+If pacman gnome You would installing lot different package
+Huh way exclude package
+When install gnome pacman give prompt package group want install
+The default install
+Why would every nine month
+Xubuntu upgrade latest release problem
+Assuming OP used package manager install thing
+I still see issue
+Would Xubuntu revert XFCE distro upgrade
+I idea would happen installed cinnamon source upgrade
+Maybe nothing bad
+Cinnamon Arch repos sound like rolling distro Debian netinst Ubuntu minimal iso
+I like use Fedora Server Media select Minimal Install install lightdm
+Of course I install thing like compton Suse repo
+It perfect build top new package
+Of course Arch probably bit better opinion I like Fedora awesome FreeIPA support I use PDC
+This thread quickly descended name favourite distribution
+There basically trade offs every method choose
+You could install Mint uninstall want might leave thing know could install minimal add thing need
+The downside latter might add everything important
+I personally would go remove need Linux Mint
+Does mean I right
+Thanks everyone suggestion
+I decided attempt upgrade time come
+Hopefully smooth transition Not time
+Just keep building
+What bloated Linux Mint
+Hard drive large lot RAM
+Bloat never problem
+Especially Linux distros
+There uninstall option
+I conflict might created conflict
+Between two related software
+The option hide
+Take
+Out sight mine
+Which I lot
+Hard drive large lot RAM
+Bloat never problem
+Especially Linux distros
+You part problem
+Linux distro made company individual
+Setting liking
+Freedom express self
+As Linux user
+I either like hate
+Hatng add touch start completely scratch fit need
+Linux freedom
+Are saying case
+Windows bloatware
+Is trial shareware stuff never use want
+I get rid immediately boot
+And software needed
+Linux distro try get thing going used get go
+Of course hit miss
+But Linux user fix
+Linux open source Linux user build Linux distro want
+find Linux distro fit mostly need want
+Hard drive large lot RAM
+Bloat never problem
+Read I quoted
+You part problem
+Just large hard drive lot RAM mean need fill thereby promoting bloat
+Computer science science lost sometime past year
+A Hello World binary size entire video game year ago
+Just mentality Lots HD space lot RAM mean include thing
+Or We install gnome package
+Hard drive huge
+Bloat never problem
+Bloat anything need actually want get installed regardlessly
+That enough HDD space matter
+To make simple Is something need system run properly
+If yes bloat otherwise see something need still want
+If bloat
+Perhaps Manjaro Cinnamon DE
+Do forget set clock back Use site constitutes acceptance
+reddit All right reserved
+REDDIT ALIEN Logo registered trademark reddit inc
+

@@ -1,0 +1,711 @@
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+In computer graphical user interface icon pronounced image represents application capability concept specific entity meaning user
+An icon usually selectable also nonselectable image company logo
+On Web page icon often graphical image represents topic information category another Web page
+Frequently icon hypertext page
+Typically icon gathered one two place page either separate graphic file single
+Icon also lexical programming language commonly thought evolution SNOBOL programming language By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+Keller You might uncertain computer science CS use every day
+When use Google smartphone watch movie special effect lot CS
+When order product Internet CS web site cryptography used keep credit card number secure way FedEx route delivery vehicle get order quickly possible
+Nonetheless even computer scientist struggle answer question What CS Many science try understand thing work physic try understand physical world chemistry try understand composition matter biology try understand life
+So computer science trying understand
+Computers
+Probably computer designed built human inner working known least people
+Perhaps programming
+Programming indeed important computer scientist grammar important writer telescope important astronomer
+But nobody would argue writing grammar astronomy telescope
+Similarly programming important piece computer science CS
+If turn origin computer science root disparate field include engineering mathematics cognitive science among others
+Some computer scientist design thing much like engineer
+Others seek new way solve computational problem analyze solution prove correct much like mathematician
+Still others think human interact computer software closely related cognitive science psychology
+All piece part computer science
+One theme unifies nearly computer scientist interested ranging rtificial intelligence oogenesis
+Put another way computer scientist interested finding solution wide variety computational problem
+They analyze solution determine goodness implement good solution create useful software people work
+This diversity endeavor part make CS much fun
+There several important concept heart computer science chosen emphasize six data problem solving algorithm programming abstraction creativity
+When Google word pie recipe Google report find approximately million page ranked order estimated relevance usefulness
+Facebook approximately billion active user generate billion comment Likes day
+GenBank national database DNA sequence used biologist medical researcher studying genetic disease million genetic sequence billion DNA base pair
+According International Data Corporation size Digital Universe reached zettabyte
+How much
+Jeffrey Heer computer scientist specializes managing visualizing large amount data put way A stack DVDs reached moon back would store approximately zettabyte data
+Without computer science data would junk
+Searching recipe Google friend Facebook gene GenBank would impossible without idea tool computer science
+Doing meaningful thing data challenging even dealing million billion thing
+In book interesting thing smaller set data
+But much applicable large amount data
+When presented computational problem first objective find computational solution algorithm solve
+An precise sequence step carrying task ranking web page Google searching friend Facebook finding closely related gene Genbank
+In case single good algorithm enough launch successful company Google initial success due Page Rank algorithm
+Algorithms commonly compared recipe act ingredient data
+For example imagine alien come Earth distant planet hankering pumpkin pie
+The alien Google search pumpkin pie find following Assuming know perform basic cooking step measuring ingredient cracking egg stirring licking spoon etc
+could make tasty pie following step precisely
+Out respect gastronomical computer scientist rarely write recipe algorithm anything food
+As computer scientist would likely write algorithm calculate precisely would write algorithm make pie
+Let consider algorithm Take dart one time dart When thrown dart divide number landed inside circle total number n dart threw multiply
+This give estimate
+Figure show scenario
+Figure Using dartboard approximate That description algorithm work
+Here The area circle π case made radius board
+The area square
+Since assuming dart equally likely end anywhere square expect proportion land circle ratio area circle area square
+Therefore throw n dart determine number k land inside circle approximately
+So multiplying ratio give u approximation
+Happily computer robotically throw physical dart instead simulate dart throwing process computer generating random coordinate describe dart land
+The computer throw million virtual dart fraction second never miss thing considerably safer roommate
+Although noted earlier computer science exclusively programming ultimately usually want implement algorithm operate data
+Learning program bit like learning speak write new language
+The good news programming vocabulary nearly complicated spoken language
+In book program language called Python whose syntax particularly easy learn
+But fooled thinking real programming real language used real programmer write real software
+Moreover idea learn transferable learning language later
+While data algorithm programming might seem like whole story truth important idea behind scene
+Software often immensely complex difficult even impossible single person keep interacting piece mind
+To deal complex system computer scientist use notion idea designing one part program ignore inessential detail part program long high level understanding
+For example car engine drivetrain electrical system component
+These component designed individually assembled work together
+The designer drivetrain need understand every aspect engine work enough know drivetrain engine connected
+To drivetrain designer engine In fact engine divided component engine block distributor others
+These part viewed abstract entity interact one another
+When designing engine block need think every detail distributor work
+Software system even complicated car
+Designing software requires think abstraction order ensure many people contribute project without everyone needing understand everything order test software methodically order able update future simply replacing one component new improved component
+Abstraction therefore key idea design large system software particular
+This book strives prepare write program interesting thing data
+In process hope convey computer science enormously creative endeavor requires innovative exploration even experimentation
+Often time one way solve problem
+In case even clear best way solve problem
+Different solution different merit
+While Google Facebook GenBank wonderfully easy use many challenge continue design continual updating system
+These challenge often lead group computer scientist working together find different solution evaluate relative merit
+While challenge confront book modest scope hope share sense problem solving creativity heart computer science
+
+Auden The best way get feel computer science jump right start solving computer science problem
+So let
+In section examine solution important problem How make sure never least room
+To solve problem use simple programming language named Picobot control robot loosely based Roomba vacuum cleaner robot
+You probably wondering happened Python programming language said would using throughout book
+Why sweeping Python carpet brushing aside language plan use remainder book
+The answer although Python simple powerful
+programming language easy learn Picobot language learn
+The entire language take minute learn yet allows powerful interesting computation
+So able start serious computer science get sucked discussion programming language
+This new whether programmed offer Eureka experience
+So dust browser join u
+It humblest turned killer app household robot
+Imagine Roomba vacuum named Picobot goal suck debris free space around ideally without missing nook cranny
+The robotics community call task ensuring grass mown surface receives paint Martian soil surveyed
+At first problem might seem pretty easy
+After parent gave vacuum cleaner told vacuum room without missing spot probably pretty great job without even thinking much
+Shouldn straightforward convey strategy robot
+Unfortunately couple obstacle make Picobot job considerably difficult
+First Picobot limited sight sense directly around
+Second Picobot totally unfamiliar environment supposed clean
+While could probably walk around room blindfolded without crashing thing Picobot lucky
+Third Picobot limited memory
+In fact even remember part room seen part
+While challenge make Picobot job job programming Picobot difficult also make coverage problem interesting computer science problem worth serious study
+Our first task solving problem represent way computer handle
+In word need define data working solve problem
+For example represent obstacle room
+Where Picobot
+We could represent room plane list coordinate object corner coordinate Picobot location
+While representation reasonable actually use slightly simpler approach
+Whether lawn sand environment simpler cover discretized cell shown Figure
+This first example abstraction ignoring detail environment simplifying something easily work
+You Picobot similarly simplified occupy one grid square green one travel one step time one four compass direction north east west south
+Picobot travel onto obstacle blue also wall mentioned know position obstacle ahead time
+What Picobot sense immediate surroundings four cell directly north east west south
+The surroundings always reported string four letter order meaning first see neighboring cell orth next ast est finally outh
+If cell north empty letter first position
+If cell north occupied letter first position The second letter indicates whether eastern neighbor empty occupied third west fourth south
+At position corner Figure example Picobot sensor would report surroundings
+There sixteen possible surroundings Picobot shown Figure textual representation
+Figure There four type cell Picobot environment map green Picobot blue cell wall gray cell free space
+Picobot sense whether empty cell visited dark light gray sense whether four immediate neighbor free space obstacle
+Figure There sixteen possible surroundings string Picobot
+The one Picobot completely enclosed occur simulator
+As seen Picobot sense immediate surroundings
+This important process
+For example Picobot process moving north sens cell north wall try continue moving north
+In fact simulator allow
+But Picobot know whether moving north direction
+Picobot innate sense direction
+Instead make use powerful concept called
+The state computer person almost thing simply current condition happy sad underwater outer space etc
+In computer science often use state refer internal information describes computer
+Picobot state extremely simple single number range
+Somewhat surprisingly enough give Picobot pretty complex behavior
+Although Picobot state numeric helpful think English term
+For example might think state meaning I heading north I go However important note none state number special meaning u make decision
+Moreover Picobot actually sense direction pointing
+But define conception direction Picobot pointing defining appropriate set state
+For example imagine Picobot want perform task continually moving north get wall
+We might decide state mean I heading north I go I get wall north I consider next
+When Picobot get wall might want enter new state I heading west I go I get wall west I think
+We might choose call state state entirely u
+Figure The five part two Picobot rule
+One useful way interpret idea state attribute distinct intention state
+With two rule Picobot initial state state represents go west far As see next job Picobot programmer define state meaning control Picobot make interesting thing
+Now know represent Picobot surroundings represent state
+But make Picobot anything
+Picobot move following set rule specify action possibly state change
+Which rule Picobot chooses follow depends current state current surroundings
+Thus Picobot complete thought process follows Picobot us rule express thought process
+Figure show two example rule
+The first rule English say If I state western neighbor contains obstacle take one step east change state The second rule say If I state obstacle around move one step west stay state Taken together two rule use local information direct Picobot across open area westward boundary
+Figure The result running Picobot section four rule
+At step Picobot examines list rule written looking rule applies
+A rule applies state part rule match Picobot current state surroundings part rule match current surroundings
+What happens NO rule match Picobot current state surroundings
+The Picobot simulator let know box robot stop running
+Similarly one rule applies Picobot also complain
+Figure show Picobot follows first rule match current state surroundings time step
+But state
+No rule specify Picobot action state
+Just state represents go west task specify two rule make state go east task These rule transition back state creating infinite loop back forth across open row
+Try
+Note Picobot website start Picobot randomly selected empty cell
+Note also Picobot start along top bottom wall rule match move
+We remedy defect next section
+Table Two equivalent formulation general behavior Picobot
+Both set rule use two state wildcard character allows much succinct representation left right
+By way sometimes might want Picobot move result applying rule
+Rather specifying move direction E W N S may use letter X indicate stay
+For example rule saying I state wall north move enter state The problem previous example rule specific
+When going west really care whether wall present north south east
+Similarly going east care neighboring cell north south west
+The wildcard character indicates care surroundings given position N E W S
+Table rule use wildcard direct Picobot forever visit vacuum row start
+So far looked write rule make Picobot move
+But trying solve problem Picobot usually helpful take global view Picobot accomplishing task translate approach rule
+In word want develop algorithm allows Picobot accomplish desired task task usually cover entire room
+In previous section Picobot modest goal simply moving back forth empty room
+The algorithm accomplishing task following Now question becomes translate algorithm rule previous section As written difficult see connection step algorithm Picobot rule
+We see Picobot need two state keep track direction moving step step still exactly clear algorithm translates precise rule
+Essentially Picobot rule applies fashion
+In word Picobot particular state see particular environment take certain action potentially enters new state
+With minor modification rewrite algorithm follow Picobot rule structure directly Repeat following step forever Now see clearly direct translation step algorithm Picobot rule step algorithm translates directly rule Picobot state represents Picobot movingWest state represents Picobot moving East
+Formulating algorithm way key writing successful program Picobot
+Table rule direct Picobot visit entirety starting row
+This section challenge develop set rule direct Picobot cover entirety empty rectangular room room Figure
+The set work regardless big room regardless Picobot initially begin
+Because Picobot distinguish unvisited cell may know visited every cell
+The online simulator however detect report successful complete traversal environment
+Try
+You might find helpful simply play around modifying rule given
+For example might start altering rule Figure neighboring row clearing current one
+However idea might solve problem encourage plan algorithm express algorithm way easily translatable Picobot rule
+Once developed Picobot program completely traverse empty room try write program complex environment
+You see MAP option Picobot Web page scroll forward backward collection map created
+You also edit map clicking cell mouse clicking empty cell turn wall clicking wall turn empty cell
+Figure Picobot maze
+One environment particularly interesting maze shown Figure
+Notice maze wall connected outer boundary empty cell adjacent wall
+A smaller maze property shown Figure
+Any maze property completely explored simple algorithm called prefer
+Imagine moment maze rather Picobot
+In contrast Picobot clear sense direction pointing two hand
+You start facing north right hand touching wall
+Now visit every empty cell simply walking maze making sure right hand always touching wall
+Pause moment convince true
+Notice also algorithm visit every cell wall connected outer boundary shown maze Figure b empty cell adjacent wall shown Figure c
+Figure A maze wall connected outer boundary empty cell adjacent wall
+b A maze wall connected outer boundary
+c A maze empty cell adjacent wall
+Converting rule set Picobot rule interesting computational challenge
+After sense direction right hand guiding around wall whereas Picobot neither hand sense orientation
+To teach Picobot rule need use state represent direction Picobot pointing
+It may seem impossibly large number situation must considered fact number situation finite actually quite small make possible program Picobot task
+To get started seems pretty natural use four state represent Picobot pointing north south east west
+Now need introduce rule allow Picobot behave right hand touch wall
+Assume state arbitrarily choose correspond representing Picobot pointing north
+Picobot imaginary right hand pointing east
+If wall east none north rule would tell u take step north keep pointing north
+Taking step north problem
+Keep pointing north mean stay state On hand state wall east Picobot take step east think pointing east
+Pointing east mean changing another state intended encode information
+This fun challenge encourage stop try
+Remember program work regardless Picobot start maze property wall connected outer boundary empty cell adjacent wall
+Is possible write Picobot program fully explore room give
+Surprisingly answer possible prove fact mathematically
+Picobot computational capability enough guarantee coverage environment
+However adding one simple feature Picobot programmed fully explore room
+That feature ability drop sense pick marker along way
+The fact computational challenge elementary Picobot lead u suggests computation computer far omnipotent
+And time done reading book learned prove certain problem beyond limit computer solve
+Enter search term module class function name
+
+Morse code perfect method quadriplegic someone little ablility move
+A person need able activate switch
+Many people physical disability able use computer keyboard mouse
+This severely limit access educational recreational career opportunity provided computer technology
+Morse code long recognized effective computer access method people able use keyboard mouse
+Morse code system use binary input method represents character command series dot dash
+For example dot followed dash indicates letter dash followed three dot represents b etc
+If single switch used entering code dash differentiated dot holding switch closed longer period time
+In Morse code one switch used entering dot used dash
+input also available people reliably control movement
+A variety switch available people use Morse code matter disability
+Morse code quite efficient
+Speeds word minute common speed excess word per minute attained
+Morse code number advantage alternate computer access strategy
+It usually faster requires le fine motor control le likely produce fatigue method
+Perhaps important advantage ability become process
+After using code period time Morse code user longer think code entering
+This process used touch typist significant impact speed accuracy quality work produced
+Morse code alternate access method become process
+These morse code I use access computer using sip puff pneumatic air switch connected AdapTek Interface I using since unfortunately longer I able enter every keyboard key move mouse click mouse button
+Since hardware interface used operating system
+I used every version Windows currently using Windows Professional several version Linux
+I started using new morse code input device called aka Using switch two head switch sip puff example user input morse code keyboard key mouse mouse left right click mouse button
+It automatically recognized modern computer USB port
+No additional software needed operate
+In Paralysis Resource Center see I use input morse code using sip puff
+I also featured Korean TV program Science Note Some code shown
+I changed code suite need
+I code defined two group use code switch
+This enables reuse code different funtions different group
+A third code group contains code always active command switch code group
+Modifier key Shift Control Alt release next code key sent
+If modifier key needed remain active multiple key code used keep active code sent
+To move mouse pointer send code direction repeat code single sip
+The mouse continues move direction either single sip puff stop
+The standard mouse move set move pixel
+When I need precice I send mouse zoom code change mouse move pixel
+A sip puff
+Thomas King Paperback Morse code one efficient alternative computer access method
+EzMorse based modified military morse code system dot dash combined form code representing character keyboard
+EzMorse effectively used dual switch one switch enters dot dash
+No previous knowledge morse code necessary start using ezMorse user learns go along
+It take average user four hour memorize code alphabet
+Typing speed word per minute uncommon morse code user
+I use disposable puff tube sip puff wheelchair adaptive system
+I getting Prentke Romich charged pack
+I know else sold
+After checking I found call puff tube dentist call Saliva ejector
+I found Saliva Ejectors
+Package Go
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I native English speaker
+In native language I aware term used refer condition checked stop recursion condition checked extreme unlikely case
+In English I encountered term edge case corner case boundary case base case I ca quite figure difference used refer I love get summary difference
+In particular I would happy someone could provide annotation line following code sample I I native English speaker either
+But according Wikipedia So nomenclature seems totally confused even though corner case seems mean something bit different combination value edge boundary case definitely synonymes
+It probably safe say edge corner boundary case thing common speech
+Someone could mean say different thing hardly common agreement
+Your wrote case base case special case
+Regardless difference word use describe test depends meaning test exact code In example provided obvious test mean
+That aside I understand Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Business process modelling essential part developing enterprise information system
+There many modelling method software support currently available market
+Each individual method advantage disadvantage always limitation representing certain view enterprise
+To describe system clearly different perspective provide complete understanding business process developer necessary adopt one kind modelling technique establish set graphical model describing system different view
+The modelling approach described paper composed three widely used modelling method establish functional model capture process description DFD describe flow among activity
+It staged approach different modelling method used different level granularity detail information required
+After careful evaluation comparison including respective advantage disadvantage three adopted modelling method guideline proposed using composite three modelling method establish set business process model different perspective
+The aim combine advantage modelling method maximise effect modelling work
+Finally case study presented order illustrate effectiveness modelling framework
+Check access login credential institution
+received PhD MEngSc BS degree Department Automation Tsinghua University Beijing China respectively
+He researcher IBM China Research Laboratory
+From March February worked collaborative research initiative visiting student Computer Integrated Manufacturing Research Unit National University Ireland Galway participating EU funded project
+His research interest lie enterprise modelling integration business process BPR knowledge management decision support system
+He published paper journal international conference
+project manager Computer Integrated Manufacturing CIM Research Unit National University Ireland Galway
+He hold BE industrial engineering MEngSc industrial engineering information system
+From mid worked Germany planning manager
+In took position area Supply Chain Management Microsoft European Operations Centre Dublin worked year
+While involved implementing number supply chain management initiative particular focus area forecasting distributed requirement
+Since joining CIMRU January responsible participation number EU project working closely SME participant user requirement concentrating research effort area supply chain management business process reengineering enterprise modelling
+He currently writing PhD area applying enterprise engineering realisation SMEs
+research engineer Digital Enterprise Research Institute DERI National University Ireland Galway recently undertook postgraduate position finalising work Computer Integrated Manufacturing CIM Research Unit University
+He hold MSc computer science management Wroclaw University Technology Poland
+He researcher CIMRU working number EU project well writing PhD degree
+During work CIMRU working closely responsible user requirement gathering software development system testing
+He also working IT department National University Ireland Java language tutor
+His main interest semantic web semantic web service electronic business business protocol business information exchange XML EDI based standard specification
+He also Sun Certified Programmer Java Platform
+graduated Department Electrical Engineering Tsinghua University Beijing China advanced study University Strathclyde UK
+Since graduation involved teaching research Tsinghua University Beijing year professor Department Automation Tsinghua University
+His background control engineering especially system theory application
+His current research interest lie Computer Integrated Manufacturing CIM especially CIM system architecture implementation methodology
+He worked deputy chief designer Chengdu Aircraft Company CIM system design lot experimentation CIM implementation methodology Chinese industry collaboration CEC China Chinese side Project Leader
+He published six book many paper
+Chen senior member IEEE fellow Hong Kong Institute Engineers editorial member international journal
+registrar deputy president National University Ireland Galway well founder Computer Integrated Manufacturing CIM Research Unit
+He many year experience working applied research development including extensive experience EU industrially funded project
+His research interest design analysis modelling operation Extended Virtual Enterprises focusing particular Supply Chain Management aspect
+He hold Bachelors Masters degree NUI Galway PhD DSc degree engineering University Manchester Institute Science Technology
+He published extensively including book Management Systems A CIM Floor Control Systems From Design Chapman Hall
+
+Since academic conduct Stanford governed Honor Code read follows The purpose webpage make expectation clear possible regarding Honor Code
+The basic principle operate expected submit work course
+In particular attempting take credit someone work turning constitutes plagiarism serious violation basic academic standard
+Under Honor Code obligated follow following rule It act plagiarism submit work copied derived work others submitted
+For example using solution Internet solution another student past present source part whole work violation Honor Code
+Many Honor Code infraction see make use solution code found online
+The best way steer clear possibility search online solution programming assignment
+Moreover looking someone solution code order determine solve problem also infraction Honor Code
+In essence looking someone code order solve problem class
+This appropriate way work hint alternative In particular ask anyone give copy code conversely give code another student asks
+Similarly discus algorithmic strategy extent collaborator end turning code
+Moreover expected take reasonable measure maintain privacy solution
+For example leave copy work public computer post solution code public website
+If received aid producing solution indicate got help person section leader TA instructor class help received
+A proper citation specifically identify source name book title website URL etc
+clear indication assistance influenced work specific possible
+For example might write discussed approach used sorting number sortNumbers method Mary If make use assistance without giving proper credit may guilty plagiarism
+It also important make sure assistance receive consists general advice cross boundary someone else write actual code show code
+It fine discus idea strategy careful write program indicated Rules Please aware submission subject automated plagiarism detection
+We desire create climate student feel suspicion
+The entire point Stanford Honor Code benefit working atmosphere mutual trust
+Students deliberately take advantage trust however poison atmosphere everyone
+Stanford employ powerful automated plagiarism detection tool compare assignment submission submission current previous quarter
+The tool also compare submission wide variety online solution
+These tool effective detecting unusual resemblance program examined course staff
+The staff make determination whether submission deemed potential infraction Honor Code referred Stanford Community Standards office
+In computer science course usually appropriate ask section leader TAs instructor hint debugging help talk generally strategy program structure
+In fact strongly encourage seek assistance need
+Discuss idea together coding
+
+Given expansive growth field become challenging discern belongs modern computer science degree
+My faculty engaging debate I coalesced thought answer question What every computer science major know
+I tried answer question conjunction four concern My thought factor general principle specific recommendation relevant modern computing landscape
+Computer science major feel free use guide
+Please email suggestion addition deletion
+Thanks suggestion reminder
+I incorporate I receive keep living document
+Having emerged engineering mathematics computer science program take approach hiring graduate
+A say nothing programmer ability
+Every computer science major build
+A portfolio could simple personal blog post project accomplishment
+A better portfolio would include page publicly browsable code hosted perhaps github Google code
+Contributions open source linked documented
+A code portfolio allows employer directly judge ability
+GPAs resume
+Professors design course project impress portfolio student conclusion course take time update
+Lone wolf computer science endangered specie
+Modern computer scientist must practice persuasively clearly communicating idea
+In smaller company whether programmer communicate idea management may make difference company success failure
+Unfortunately something fixed addition single class although solid course technical communication hurt
+More class need provide student opportunity present work defend idea oral presentation
+I would recommend student master presentation tool like PowerPoint favorite Keynote
+Sorry much I love presentation tool static
+For producing beautiful mathematical documentation LaTeX equal
+All written assignment technical course submitted LaTeX
+Computer science quite engineering
+But close enough
+Computer scientist find working engineer
+Computer scientist traditional engineer need speak language language rooted real analysis linear algebra probability physic
+Computer scientist ought take physic electromagnetism
+But need take multivariate calculus differential equation good measure
+In constructing sound simulation command probability often time linear algebra invaluable
+In interpreting result substitute solid understanding statistic
+Computer scientist comfortable practiced Unix philosophy computing
+The Unix philosophy opposed Unix one emphasizes linguistic abstraction composition order effect computation
+In practice mean becoming comfortable notion computing configuration software development
+Given prevalence Unix system computer scientist today fluent basic Unix including ability Students reject Unix philosophy unless understand power
+Thus best challenge student complete useful task Unix comparative advantage Some computer scientist sneer system administration IT task
+The thinking computer scientist teach anything technician
+This true
+In theory
+Yet attitude misguided computer scientist must able competently securely administer system network
+Many task software development efficiently executed without passing system administrator
+Every modern computer scientist able Programming language rise fall solar cycle
+A programmer career
+While important teach language relevant employer equally important student learn teach new language
+The best way learn learn progamming language learn multiple programming language programming paradigm
+The difficulty learning th language half difficulty th
+Yet understand programming language one must implement one
+Ideally every computer science major would take compiler class
+At minimum every computer science major implement interpreter
+The following language provide reasonable mixture paradigm practical application Racket dialect Lisp aggressively simple syntax
+For small fraction student syntax impediment
+To blunt student fundamental mental barrier accepting alien syntactic regime even temporarily lack mental dexterity survive career computer science
+Racket powerful macro system facility programming thoroughly erase line data code
+If taught correctly Lisp liberates
+C terse unforgiving abstraction silicon
+C remains without rival programming embedded system
+Learning C imparts deep understanding dominant von Neumann architecture way language
+Given intimate role poor C programming play prevalence buffer overflow security vulnerability critical programmer learn program C properly
+JavaScript good representative semantic model popular dynamic language Python Ruby Perl
+As native language web pragmatic advantage unique
+Squeak modern dialect Smalltalk purest language
+It imparts essence
+Java remain popular long ignore
+Standard ML clean embodiment system
+The type system one greatest yet achievement modern computing
+Though exponential complexity type inference always fast program human interest
+The type system rich enough allow expression complex structural invariant
+It rich fact program often
+Though niche application logic programming alternate paradigm computational thinking
+It worth understanding logic programming instance programmer may need emulate within another paradigm
+Another logic language worth learning
+miniKanren stress pure cut allowed logic programming
+This constraint evolved alternate style logic programming called relational programming grant property typically enjoyed Prolog program
+Scala fusion functional programming language
+Scala Java
+Built atop Java Virtual Machine compatible existing Java codebases stand likely successor Java
+Haskell crown jewel family language
+Fully exploiting laziness Haskell come closest programming pure mathematics major programming language
+necessary evil
+But since must taught must taught full
+In particular computer science major leave grasp even
+Any assembly language
+Since popular might well
+Learning compiler best way learn assembly since give computer scientist intuitive sense code transformed
+Computer scientist understand generative programming macro lexical dynamic scope closure continuation function dynamic dispatch subtyping module functors monad semantic concept distinct specific syntax
+Computer scientist must solid grasp formal logic proof
+Proof algebraic manipulation natural deduction engages reasoning common routine programming task
+Proof induction engages reasoning used construction recursive function
+Computer scientist must fluent formal mathematical notation reasoning rigorously basic discrete structure set tuples sequence function power set
+For computer scientist important cover reasoning Students learn enough number theory study implement common cryptographic protocol
+Students certainly see common rare yet unreasonably effective data structure algorithm
+But important knowing specific algorithm data structure usually easy enough look computer scientist must understand design algorithm greedy dynamic strategy span gap algorithm ideal implementation
+At minimum computer scientist seeking stable employment know following Computer scientist ready implement extend algorithm operates data structure including ability search element add element remove element
+For completeness computer scientist know imperative functional version algorithm
+A grasp theory prerequisite research graduate school
+Theory invaluable provides hard boundary problem provides mean circumventing initially appear hard boundary
+Computational complexity legitimately claim one truly predictive theory computer science
+A computer scientist know boundary tractability computability lie
+To ignore limit invite frustration best case failure worst
+At undergraduate level theory cover least model computation computational complexity
+Models computation cover automaton regular language regular expression pushdown automaton language formal grammar Turing machine lambda calculus undecidability
+At undergraduate level student learn least enough complexity understand difference P NP
+To avoid leaving wrong impression student solve large problem NP reduction SAT use modern SAT solver
+There substitute solid understanding computer architecture
+Computer scientist understand computer transistor
+The understanding architecture encompass standard level abstraction transistor gate adder muxes flip flop ALUs control unit cache RAM
+An understanding GPU model computing important foreseeable future
+A good understanding cache bus hardware memory management essential achieving good performance modern system
+To get good grasp machine architecture student design simulate small CPU
+Any sufficiently large program eventually becomes operating system
+As computer scientist aware kernel handle system call paging scheduling filesystems internal resource management
+A good understanding operating system secondary understanding compiler architecture achieving performance
+Understanding operating system I would interpret liberally include runtime system becomes especially important programming embedded system without one
+It important student get hand dirty real operating system
+With Linux virtualization easier ever
+To get better understanding kernel student could Given ubiquity network computer scientist firm understanding network stack routing protocol within network
+The mechanic building efficient reliable transmission protocol like TCP top unreliable transmission protocol like IP magic computer scientist
+It core knowledge
+Computer scientist must understand involved protocol design example choose TCP choose UDP
+Programmers need understand larger social implication congestion use UDP large scale well
+Given frequency modern programmer encounter network programming helpful know protocol existing standard Computer scientist understand exponential back packet collision resolution mechanism involved congestion control
+Every computer scientist implement following No student ever pas intro neworking class without sniffing instructor Google query
+It probably going far require student implement reliable transmission protocol scratch atop IP I say personally transformative experience student
+The sad truth security majority security vulnerability come sloppy programming
+The sadder truth many school poor job training programmer secure code
+Computer scientist must aware mean program compromised
+They need develop sense defensive programming mind thinking code might attacked
+Security kind training best distributed throughout entire curriculum discipline warn student native vulnerability
+At minimum every computer scientist need understand A reader pointed computer scientist also need aware basic IT security measure choose legitimately good password properly configure firewall iptables
+Cryptography make much digital life possible
+Computer scientist understand able implement following concept well common pitfall Since common fault implementation cryptosystems every computer scientist know acquire random number task hand
+At least nearly every data breach shown computer scientist need know salt hash password storage
+Every computer scientist pleasure breaking ciphertext using cryptosystems statistical tool
+RSA everyone
+Every student create digital certificate set http apache
+It surprisingly arduous
+Student also write console web client connects SSL
+As strictly practical matter computer scientist know use GPG use authentication ssh encrypt directory hard disk
+Software testing must distributed throughout entire curriculum
+A course software engineering cover basic style testing substitute practicing art
+Students graded test case turn
+I use test case turned student student
+Students seem care much developing defensive test case unleash hell come sandbagging classmate
+Programmers often write software programmer worse
+User interface design broadly user experience design might underappreciated aspect computer science
+There misconception even among professor user experience soft skill ca taught
+In reality modern user experience design anchored principle human factor engineering industrial design
+If nothing else computer scientist know interface need make ease executing task proportional frequency task multiplied importance
+As practicality every programmer comfortable designing usable web interface HTML CSS JavaScript
+Good visualization rendering data fashion human perceive information
+This easy thing
+The modern world sea data exploiting local maximum human perception key making sense
+Parallelism back uglier ever
+The unfortunate truth harnessing parallelism requires deep knowledge architecture multicore cache bus GPUs etc
+And practice
+Lots practice
+It clear final answer parallel programming solution emerged
+For student learn CUDA OpenCL
+Threads flimsy abstraction parallelism particularly cache cache coherency involved
+But thread popular tricky worth learning
+Pthreads reasonably portable thread library learn
+For anyone interested parallelism MPI prerequisite
+On principle side seem enduring
+The principle software engineering change fast programming language
+A good course practice team software construction provides working knowledge pitfall inherent endeavor
+It recommended several reader student break team three role leader rotating three different project
+Learning attack maneuver large existing codebase skill programmer master one best learned school instead job
+All student need understand centralized version control system like svn distributed version control system like git
+A working knowlege debugging tool like gdb valgrind go long way finally become necessary
+As demand secure reliable software increase formal method may one day end mean delivering
+At present formal modeling verification software remains challenging progress field steady get easier every year
+There may even come day within lifetime computer science major formal software construction expected skill
+Every computer scientist least moderately comfortable using one theorem prover
+I think matter one
+Learning use theorem prover immediately impact coding style
+For example one feel instinctively allergic writing statement cover possibility
+And writing recursive function user theorem provers strong urge eliminate
+There discipline dominated clever graphic
+The field driven toward even defined good enough
+As better way teach clever programming solid appreciation optimizing effort graphic simulation
+Over half coding hack I learned came study graphic
+Simple ray tracer constructed line code
+It good mental hygiene work transformation necessary perform perspective projection wireframe engine
+Data structure like BSP tree algorithm like rendering great example clever design
+In graphic simulation many
+Robotics may one engaging way teach introductory programming
+Moreover cost robotics continues fall threshold passed enable personal robotics revolution
+For program unimaginable degree personal physical automation horizon
+If reason outsized impact early history computing computer scientist study artificial intelligence
+While original dream intelligent machine seems far artificial intelligence spurred number practical field machine learning data mining natural language processing
+Aside outstanding technical merit sheer number job opening relevance engineer indicates every computer scientist grasp fundamental machine learning
+Machine learning doubly emphasizes need understanding probability statistic
+At undergraduate level core concept include Bayesian network clustering learning
+Databases common useful ignore
+It useful understand fundamental data structure algorithm power database engine since programmer often enough reimplement database system within larger software system
+Relational algebra relational calculus stand exceptional success story model computation
+Unlike UML modeling ER modeling seems reasonable mechanism visualing encoding design constraint upon software artifact
+A computer scientist set operate LAMP stack one good idea lot hard work away running company
+My suggestion limited blind spot knowledge
+What I listed included
+
+field focus design manage
+At core system engineering utilizes principle organize body knowledge
+Issues different team testing evaluation maintainability many necessary successful system development design implementation ultimate decommission become difficult dealing large complex project
+Systems engineering deal optimization method tool project
+It overlap technical discipline
+Systems engineering ensures likely aspect project system considered integrated whole
+The system engineering process discovery process quite unlike manufacturing process
+A manufacturing process focused repetitive activity achieve high quality output minimum cost time
+The system engineering process must begin discovering real problem need resolved identify probable highest impact failure occur system engineering involves finding solution problem
+The term traced back
+The need identify manipulate property system whole complex engineering project may greatly differ sum part property motivated various industry especially developing system Military apply discipline
+When longer possible rely design evolution improve upon system existing tool sufficient meet growing demand new method began developed addressed complexity directly
+The continuing evolution system engineering comprises development identification new method modeling technique
+These method aid better comprehension design development control engineering system grow complex
+Popular tool often used system engineering context developed time including
+In professional society system engineering NCOSE founded representative number corporation organization
+NCOSE created address need improvement system engineering practice education
+As result growing involvement system engineer outside name organization changed INCOSE
+Schools several country offer graduate program system engineering option also available practicing engineer
+Systems engineering signifies approach recently discipline engineering
+The aim education system engineering formalize various approach simply identify new method research opportunity similar occurs field engineering
+As approach system engineering holistic interdisciplinary flavour
+The traditional scope engineering embrace conception design development production operation physical system
+Systems engineering originally conceived fall within scope
+Systems engineering sense term refers distinctive set concept methodology organizational structure developed meet challenge engineering effective functional system unprecedented size complexity within time budget constraint
+The leading example system engineering project
+The use term system engineer evolved time embrace wider holistic concept system engineering process
+This evolution definition subject ongoing controversy term continues apply narrower broader scope
+Traditional system engineering seen branch engineering classical sense applied physical system space craft aircraft
+More recently system engineering evolved take broader meaning especially human seen essential component system
+Checkland example capture broader meaning system engineering stating read general sense engineer meeting political agreement
+Consistent broader scope system engineering Systems Engineering Body Knowledge SEBoK defined three type system engineering Product Systems Engineering PSE traditional system engineering focused design physical system consisting hardware software
+Enterprise Systems Engineering ESE pertains view enterprise organization combination organization system
+Service Systems Engineering SSE engineering service system
+Checkland defines service system system conceived serving another system
+Most civil infrastructure system service system
+Systems engineering focus analyzing eliciting customer need required functionality early development cycle documenting requirement proceeding design synthesis system validation considering complete problem
+This includes fully understanding involved
+Oliver et al
+claim system engineering process decomposed Within Oliver model goal Management Process organize technical effort lifecycle Technical Process includes
+Depending application although several model used industry aim identify relation various stage mentioned incorporate feedback
+Examples model include
+System development often requires contribution diverse technical discipline
+By providing system view development effort system engineering help mold technical contributor unified team effort forming structured development process proceeds concept production operation case termination disposal
+In acquisition holistic integrative discipline combine contribution balance tradeoff among cost schedule performance maintaining acceptable level risk covering entire life cycle item
+This perspective often replicated educational program system engineering course taught faculty engineering department help create interdisciplinary environment
+The need system engineering arose increase complexity system project turn exponentially increasing possibility component friction therefore unreliability design
+When speaking context complexity incorporates engineering system also logical human organization data
+At time system become complex due increase size well increase amount data variable number field involved design
+The example system
+The development smarter control algorithm microprocessor design analysis environmental system also come within purview system engineering
+Systems engineering encourages use tool method better comprehend manage complexity system
+Some example tool seen Taking approach engineering system inherently complex since interaction among system component always immediately understood
+Defining characterizing subsystem interaction among one goal system engineering
+In gap exists informal requirement user operator marketing organization technical specification successfully bridged
+One way understand motivation behind system engineering see method practice identify improve common rule exist within wide variety system
+Keeping mind principle system engineering holism emergent behavior boundary et al
+applied system complex otherwise provided employed level
+Besides defense aerospace many information technology based company software development firm industry field electronics communication require system engineer part team
+An analysis INCOSE Systems Engineering center excellence SECOE indicates optimal effort spent system engineering total project effort
+At time study shown system engineering essentially lead reduction cost among benefit
+However quantitative survey larger scale encompassing wide variety industry conducted recently
+Such study underway determine effectiveness quantify benefit system engineering
+Systems engineering encourages use validate assumption theory system interaction within
+Use method allow early detection possible failure integrated design process
+At time decision made beginning project whose consequence clearly understood enormous implication later life system task modern system engineer explore issue make critical decision
+No method guarantee today decision still valid system go service year decade first conceived
+However technique support process system engineering
+Examples include soft system methodology method UML currently explored evaluated developed support engineering decision process
+Education system engineering often seen extension regular engineering course reflecting industry attitude engineering student need foundational background one traditional engineering discipline practical experience effective system engineer
+Undergraduate university program system engineering rare
+Typically system engineering offered graduate level combination interdisciplinary study
+maintains continuously updated Directory Systems Engineering Academic Programs worldwide
+As institution United States offer undergraduate graduate program system engineering
+Education system engineering taken
+Both pattern strive educate system engineer able oversee interdisciplinary project depth required
+Systems engineering tool aid performing system engineering
+The purpose tool vary database management graphical browsing simulation reasoning document production neutral
+There many definition field system engineering
+Below authoritative definition Depending application tool used various stage system engineering process play important diverse role system engineering
+A model defined several way including Together definition broad enough encompass physical engineering model used verification system design well schematic model like mathematical quantitative model used trade study process
+This section focus last
+The main reason using trade study provide estimate system effectiveness performance technical attribute cost set known estimable quantity
+Typically collection separate model needed provide outcome variable
+The heart mathematical model set meaningful quantitative relationship among input output
+These relationship simple adding constituent quantity obtain total complex set differential equation describing trajectory spacecraft gravitational field
+Ideally relationship express causality correlation
+Furthermore key successful system engineering activity also method model efficiently effectively managed used simulate system
+However diverse domain often present recurring problem modeling simulation system engineering new advancement aiming crossfertilize method among distinct scientific engineering community title Systems Engineering
+Initially primary purpose system engineer comprehend complex problem graphic representation system used communicate system functional data requirement
+Common graphical representation include A graphical representation relates various subsystem part system function data interface
+Any method used industry based requirement
+For instance chart may used interface system important
+Part design phase create structural behavioral model system
+Once requirement understood responsibility system engineer refine determine along engineer best technology job
+At point starting trade study system engineering encourages use weighted choice determine best option
+A Pugh method one way another make choice considering criterion important
+The trade study turn informs design affect graphic representation system without changing requirement
+In SE process stage represents iterative step carried feasible solution found
+A decision matrix often populated using technique statistical analysis reliability analysis system dynamic feedback control optimization method
+SysML modeling language used system engineering application support specification analysis design verification validation broad range complex system
+LML modeling language designed system engineering support full lifecycle conceptual utilization support retirement stage
+Many related field may considered tightly coupled system engineering
+These area contributed development system engineering distinct entity
+
+Published
+In International Council Museums ICOM celebrated anniversary
+This milestone coincided ICOM Triennial General Conference held July Milan may Stay tuned
+asks paleontologist work change decision slash Bears Ears Grand Staircase Launched October research project Museums
+Ya hacen falta intermediarios ni vendedores para que un expoliador coloque su mercancía
+Extremely Endangered Tiger Losing Fast After year sad story Qurna looter coming close Las cocheras de Cuatro Caminos la casa de Capa en Peironcely el domicilio de Vicente Aleixandre entre los inmuebles históricos en peligro When trying outrun erosion rise best option
+In interview given ANI recently Vinod Daniel Chairman AusHeritage Australia international cultural heritage network said museum movement India need given major boost devoid government interference unless absolutely necessary
+He said I done lot work museum country
+I vice chairman International Council Museums Committee Conservation
+In Indian context museum movement taken
+We must understand acknowledge museum play key part promotion country culture heritage
+mostly stateless identity denied Myanmar state
+

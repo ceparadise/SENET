@@ -1,0 +1,233 @@
+In context hardware act disproving intended underlying system respect certain property using
+Formal verification helpful proving correctness system internal memory software expressed source code
+The verification system done providing abstract system correspondence mathematical model nature system otherwise known construction
+Examples mathematical object often used model system formal semantics programming language
+One approach formation consists systematically exhaustive exploration mathematical model possible also infinite model infinite set state effectively represented finitely using abstraction taking advantage symmetry
+Usually consists exploring state transition model using smart abstraction technique consider whole group state single operation reduce computing time
+Implementation technique include symbolic state space enumeration
+The property verified often described LTL PSL Assertions SVA CTL
+The great advantage model checking often fully automatic primary disadvantage general scale large system symbolic model typically limited hundred bit state explicit state enumeration requires state space explored relatively small
+Another approach deductive verification
+It consists generating system specification possibly annotation collection mathematical truth imply conformance system specification discharging obligation using either interactive theorem provers automatic theorem provers SMT solver
+This approach disadvantage typically requires user understand detail system work correctly convey information verification system either form sequence theorem proved form specification system component
+function procedure perhaps subcomponents loop data structure
+Formal verification software program involves proving program satisfies formal specification behavior
+Subareas formal verification include deductive verification see
+A promising verification approach type function include least part function specification code establishes correctness specification
+Fully featured dependently typed language support deductive verification special case
+Another complementary approach efficient code produced specification series step
+An example approach approach seen another form
+These technique meaning verified property logically deduced semantics meaning guarantee
+A sound technique yield result searched entire space possibility
+An example unsound technique one search subset possibility instance integer certain number give result
+Techniques also meaning algorithmic implementation guaranteed terminate answer undecidable meaning may never terminate
+Because bounded unsound technique often likely decidable sound one
+one aspect testing product fitness purpose
+Validation complementary aspect
+Often one refers overall checking process
+The verification process consists aspect
+software product one inspect source code static run specific test case dynamic
+Validation usually done dynamically product tested putting typical atypical usage Does satisfactorily meet
+Automated program repair involves repairing software bug limited human intervention
+See also
+Program repair performed respect encompassing desired functionality program used validation generated fix
+A simple example pair specify functionality program
+A variety technique employed notably using SMT solver using evolutionary computing generate evaluate possible candidate fix
+The former method deterministic latter randomized
+Program repair combine technique formal verification
+technique formal verification used compute program point might possible targeted synthesis module
+Repair system often focus small class bug order reduce search space
+Industrial use limited owing computational cost existing technique
+The growth complexity design increase importance formal verification technique
+At present formal verification used leading hardware company use still languishing
+This could attributed greater need hardware industry error greater commercial significance
+Because potential subtle interaction component increasingly difficult exercise realistic set possibility simulation
+Important aspect hardware design amenable automated proof method making formal verification easier introduce productive
+As several operating system formally verified NICTA Secure sold commercially OK Labs based operating system Green Hills Software
+The formally verified C compiler implementing majority ISO C
+
+This preview shown page This preview shown page This preview shown page This preview shown page Chapter Software Verification Overview Chapter Motivation Goals Requirements Verification Approaches Verification Testing Goals Theoretical Foundations Empirical Testing Principles Testing Separation Concerns Testing Concurrent Systems Systems Informal Analysis Techniques Source Code Control Verifying Software Properties Motivation Goals Requirements What kind Assurance get Testing
+Information Assurance Info Used Expected Security Assurance Info Misused What Happens Other Engineering Fields
+Civil Engineering Design Build Bridge Requirements Mathematical Formulas Modeling Wind Tunnels Prototypes Practical Tensile Strength Steel Weight Bearing When Bridge Built Loaded Worst Case Semis Filled Cargo Directions Must Not Fail Verify Product Bridge Process Construction Reality All Parties Process Fallible
+Motivation Verification Computing Typically Accomplished Running Test Cases Not All Possible Executions Software Tested Evaluation Documentation User Friendliness Other Software Characteristics Often Ignored Verification Running Deployed Code Difficult If Not Impossible State CT Insurance Dept
+Project Most Divisions Do Testing One Division Wants Just Jump Right System without Testing Their Current System Full Holes Allows Data Entered Is Reasonable Some Situations
+Motivation Verification Process Itself Must Verified This Means Software Process Itself Must Verified Consider CMU Software Engineering Institute http Capability Maturity Model Integration CMMI Many Companies Strive Attain Certain SEI Level Software In addition Recall Software Qualities Correctness Performance Robustness Portability Visibility etc
+How These Verified
+Empirically
+Qualitatively
+Consider Portability Web App How Make sure Works Platforms
+Motivation Results Verification Likely NOT Binary Don get result Often Must Assess Result Errors Large Systems Unavoidable Some Errors Left Tolerable Others Critical Must Repaired Correctness Relative Term Consider Application Market Cost Impact etc
+Verification Subjective Objective Subjective Reusable Portable etc
+Objective Correctness Perform Tests Performance Response Time Resource Usage etc
+Portable Can try Combos
+Approaches Verification Testing Experimenting Product Behavior Explore Dynamic Behavior Execute SW Under Different Conditions Seek Failure Cases Detail Scenarios Scenarios Involve Customer Who Knows Domain Business Logic etc
+Formulate Test Cases Analysis Examining Product
+Design Implementation Testing Process etc
+Deduce Correct SW Operation Logical Consequence Design Decisions Input Customer etc
+Static Technique But Impossible Verify SW Engineers Correctly Precisely Translated Design Working Code Testing Brief Motivation Content Techniques Four Goals Testing Theoretical Foundations Formalizing Program Behavior Testing Input Produces Output Empirical Testing Principles How Does Programming Language Influence Testing Testing Separation Concerns Testing Concurrent Systems Systems Users Domain Specialists Role Testing Case Study CT Insurance Dept
+Project Motivating Testing Testing Can Never Consider All Possible Operating Conditions Approaches Focus Identifying Test Cases Scenarios Access Likely Behavior If Bridge OK Ton OK Ton What Analogy Software
+If System Works Data Items may Reasonable Assume Works Items Problems Software
+Hard Identify Other Scenarios Completely Cover All Possible Interactions Behavior Software Doesn Continuity Behavior Exhibits Correct Behavior Infinitely Many Cases still Incorrect Cases Ex C bitwise If Statement Story Motivating Testing What Realistic Example
+procedure key element table elementTable found Boolean begin bottom top bottom top loop bottom top rem middle bottom top else middle bottom top end key table middle top middle else bottom middle end end loop found key table top end omit routine work else never hit
+
+size table power Four Goals Testing Dijkstra Program testing used show presence bug never show Notes Structured Programs http
+PDF Classic Article Still True Today Simply Point Major Software Release OS Gameboy Games Pure Testing Can Absolutely Prove Correctness Testing Must Used Conjunction Other Techniques Need Sound Systematic Principles Four Goals Testing Goal Testing Must Based Sound Systematic Techniques Test Different Execution Paths Provides Understanding Product Reliability May Require Insertion Testing Code Timing Conditional Compilation etc
+Goal Testing Must Help Locate Errors Test Cases Must Organized Assist Isolation Errors This Facilitates Debugging This Requires Well Thought Out Testing Paradigm Software Developed Four Goals Testing Goal Testing Must Repeatable Same Input Produces Same Output Execution Environment Influences Repeatability return true else return false If x Initialized Behavior Can Predicated In C Memory Location Access Value Which Could Prior Execution Goal Testing Must Accurate Depends Precision SW Specification Test Cases Created Scenarios Usage Mathematical Formulas Expressing SW Greatly Assist Testing Process Remember Logic Specs Chapter Theoretical Foundations Testing Let P Program Domain D Range R P D R may partial P Function Let OR Denote Output Requirements Stated P Specification Correctness Defined OR D R Let Element D P correct P OR P correct P correct For P Satisfy OR Indicates Error Defect Incorrect Intermediate State Program Execution Theoretical Foundations Testing For P Satisfy OR Indicates Error Defect Possibilities Include Undefined Result Error State Result There Defect Causes Failure Typing Mistake x typed instead Programmer Forgot Condition Incorrect Intermediate State Program Execution Theoretical Foundations Testing Test Cases Key Issue Identify Individual Test Cases Set Tests Domain D Tests Designed Test Successful Outcomes Expected Positives Test Incorrect Outcomes Expected Failures D Test Case Element D Test Set T Finite Subset D Test P Correct Test Set P Correct T Test Set T P Incorrect Exists T P Incorrect Theoretical Foundations Testing Test Criterion C Defines Finite Subsets D C Test Set T Satisfies C Element C
+C xn n j k xi xk Two test Sets Satisfy C Does Satisfy C Why
+Theoretical Foundations Testing Properties Criteria C Consistent For Pairs Satisfying C Successful iff Successful Either Provides Information C Complete If P Incorrect test set T C Successful C Complete Consistent Identifies ideal test set Allows Correctness proved
+Very Difficult Achieve Practice Reasonably Size Complex Applications May Required Some Domains Theoretical Foundations Testing What Potential
+Impossible Derive Algorithm States Whether Program Test Set Criterion Satisfies Prior Definitions Impossible Determine Test Set T Impossible Determine Ideal Test Set Not Decidable Whether Test Set Satisfies Criteria Not As Result Full Mechanization Automation Testing Not Possible Instead Testing Requires Common Sense Ingenuity Domain Knowledge User Community Most Critically A Methodological Approach
+Empirical Testing Principles Leverage Theoretical Concepts Only Exhaustive Testing Prove Correctness Absolute Certainty Usually Infeasible Overall Goal Run Sufficient Number Tests Potential Uncover Errors Empirical Testing Principles Testing Criterion Need Practice Define Significant Test Cases Group Domain Elements Expected Behavior Representative Test Case Each Group Complete Coverage Principle Choose Test Cases Union Test Sets Cover D Complete Coverage Principle Try Group Elements D Subdomains Dn Element Di likely Similar Behavior D Dn Select one test Representative Subdomain If Dj Dk j k Partition Element chosen Subdomain Otherwise choose Representatives Minimize number test yet Fulfilling Principle Empirical Testing Focus Testing Small Test Individual Small Pieces Testing Small Module Class Methods Class Testing Large Test Larger Scale Modules Collections Pieces Testing Inheritance Hierarchy Set Related Classes Java Bean Both Achieved via BLACK BOX Functional Testing Partition based Module Specification Tests WHITE BOX Structural Testing Partition based Module Internal Code Tests Testing Small WHITE BOX Structural Testing Testing Software Using Information Internal Structure May Ignore Specification Tests Software Actually Does Performed Incrementally During Creation Code Relies Statements Structure Code Itself BLACK BOX Functional Testing Testing without Relying Way Code Designed Coded Testing Evaluated Against Specification Tests Software supposed Tests Software Engineering Domain User May Performed Part Verification Testing Small White Box Testing Focus Structural Coverage Testing Code Itself
+Various Statements Execution Paths Consider Code Testing Must Consider While Loop Conditional Each May Require Different Test Cases We Consider Control Flow Coverage Criteria Statement coverage Edge coverage Condition coverage Path coverage comment posted one write first
+This preview shown page Share Embed document website
+
+In specifically particular kind based technique development system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Formal method used number level may undertaken program developed informally
+This dubbed
+This may option many case
+may used produce program formal manner
+For example proof property program may undertaken
+This may appropriate system involving
+may used undertake fully formal proof
+This expensive practically worthwhile cost mistake extremely high critical part microprocessor design
+Further information expanded
+As style formal method may roughly classified follows Some practitioner believe formal method community overemphasized full formalization specification design
+They contend expressiveness language involved well complexity system modelled make full formalization difficult expensive task
+As alternative various formal method emphasize partial specification focused application proposed
+Examples lightweight approach formal method include object modelling notation Denney synthesis aspect driven development CSK Tools
+Formal method applied various point
+Formal method may used give description system developed whatever level detail desired
+This formal description used guide development activity see following section additionally used verify requirement system developed completely accurately specified
+The need formal specification system noted year
+In report presented formal notation describing programming language syntax later named renamed BNF
+Backus also wrote formal description meaning syntactically valid ALGOL program completed time inclusion report
+Therefore formal treatment semantics legal program included subsequent paper
+It never appeared
+Once formal specification produced specification may used guide concrete system process realized typically software also potentially hardware
+For example Once formal specification developed specification may used basis property specification hopefully inference developed system
+Sometimes motivation proving system obvious need correctness system desire understand system better
+Consequently proof correctness produced style handwritten typeset using using level informality common proof
+A good proof one readable understandable human reader
+Critics approach point inherent natural language allows error undetected proof often subtle error present detail typically overlooked proof
+Additionally work involved producing good proof requires high level mathematical sophistication expertise
+In contrast increasing interest producing proof correctness system automated mean
+Automated technique fall three general category Some automated theorem provers require guidance property interesting enough pursue others work without human intervention
+Model checker quickly get bogged checking million uninteresting state given sufficiently abstract model
+Proponents system argue result greater mathematical certainty proof since tedious detail algorithmically verified
+The training required use system also le required produce good mathematical proof hand making technique accessible wider variety practitioner
+Critics note system like make pronouncement truth yet give explanation truth
+There also problem program aid verification unproven may reason doubt soundness produced result
+Some modern model checking tool produce proof log detailing step proof making possible perform given suitable tool independent verification
+The main feature abstract interpretation approach provides sound analysis
+false negative returned
+Moreover efficiently scalable tuning abstract domain representing property analyzed applying widening operator get fast convergence
+Formal method applied different area hardware software including router Ethernet switch routing protocol security application
+There several example used verify functionality hardware software used DCs
+IBM used theorem prover AMD processor development process
+Intel us method verify hardware firmware permanent software programmed memory
+used formal method develop compiler system went become commercial product
+There several project NASA formal method applied Unmanned Aircraft System integration National Airspace System Airborne Coordinated Conflict Resolution Detection ACCoRD
+used develop safety automatism various subway installed throughout world also Common Criteria certification development system model
+Formal verification frequently used hardware hardware vendor IBM Intel AMD
+There many area hardware Intel used FMs verify working product parameterized verification cache coherent protocol Intel Core processor execution engine validation using theorem proving symbolic evaluation optimization Intel architecture using HOL light theorem prover verification high performance gigabit Ethernet controller support PCI express protocol Intel advance management technology using Cadence
+Similarly IBM used formal method verification power gate register functional verification IBM microprocessor
+In formal method mathematical approach solving software hardware problem requirement specification design level
+Formal method likely applied software system
+Software safety assurance standard demand formal method highest level categorization
+For sequential software example formal method include specification language used
+In allowed mathematical specification testing exhaustive testing expected behaviour individual function
+The specialization allowed system formally specified necessarily formally verified
+For concurrent software system based see also allow executable software specification used build validate application behavior
+Another approach formal method software development write specification form variation FOL directly execute logic though program
+The language based DL example
+There also work mapping version English another natural language automatically logic executing logic directly
+Examples Internet Business Logic seek control vocabulary syntax
+A feature system support bidirectional mapping direct execution logic made explain result English business scientific level
+There variety formal method notation available
+
+Applying system thinking computing climate sustainability Sometime I drafted frequently asked question list
+Here I wrote meaning term validation verification The term Verification Validation commonly used software engineering mean two different type analysis
+The usual definition In word validation concerned checking system meet customer actual need verification concerned whether system
+Verification help determine whether software high quality ensure system useful
+The distinction two term largely role specification
+Validation process checking whether specification capture customer need verification process checking software meet specification
+Verification includes activity associated producing high quality software testing inspection design analysis specification analysis
+It relatively objective process various product document expressed precisely enough subjective judgement needed order verify software
+In contrast validation extremely subjective process
+It involves making subjective assessment well proposed system address need
+Validation includes activity requirement modelling prototyping user evaluation
+In traditional phased software lifecycle verification often taken mean checking product phase satisfy requirement previous phase
+Validation relegated begining ending project requirement analysis acceptance testing
+This view common many software engineering textbook misguided
+It assumes customer requirement captured completely start project requirement change software developed
+In practice requirement change throughout project partly reaction project development new software make new thing possible
+Therefore validation verification needed throughout lifecycle
+Finally V V regarded coherent discipline Software V V system engineering discipline evaluates software system context relative system element hardware user software
+Software Verification Validation Its Role Computer Assurance Its Relationship Software Project Management Standards Dolores Wallace Roger Fujii NIST Special Publication Having thus carefully distinguished two term advice V V practitioner forget distinction think instead V V toolbox provides wide range tool asking different kind question software
+And master use tool figure use
+Here one attempt visualize space tool toolbox A range V V technique
+Note modeling model checking refer building analyzing abstracted model software behaviour different kind beast scientific model used computational science For climate model definition focus specification make much sense detailed specification climate model built iterative refinement like agile software development
+But matter toolbox approach still work mean tool applied little differently
+An appropriate toolbox climate modeling look little different picture tool appropriate control system application software etc missing picture particular simulation software
+I draw better picture I finished analyzing data field study practice used climate lab
+Many different V V tool climate modelling lab room adding tool toolbox sharpening existing tool subject current research
+But question best must proceed detailed analysis current practice effective
+There seem plenty wandering space claiming model insufficiently verified validated
+And people like pontificate climate modeler ought differently
+But anyone pontificate way unable give detailed account V V technique climate modeller currently use blowing smoke
+If know toolbox already really make constructive comment missing
+Pingback Pingback Great article
+Thank
+This useful description
+The diagram especially useful analyzing verification v validation testing
+thnx article
+
+description diagram help cmplt assignment
+
+
+nice really helpful give clear idea verification validation
+
+Pingback useful article verification validation
+thanks
+tks interesting informative article Thanks article
+This helpful final year project
+useful article thanks need list reference final year project
+thank
+useful article
+thank Useful post
+It helped alot understand difference Validation verification
+Thanks awesome article
+This best different validation verification read care fully Thanks Thanks lot clear informative article
+Pingback verification validation So Thanks
+thank clear informative article Pingback Pingback Pingback
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n trailer startxref EOF obj stream xÚb Í f endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream x yÐ W ç çõ Vú Ë À ëXU K endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream â ó Ñ Z M n W ðý TÝhÈHtA ÆR
+
+This action might possible undo
+Are sure want continue
+Validation Verification Space Flight Software Model Design available
+
+This service advanced JavaScript available learn ethernet protocol developed SUNY Stony Brook
+The purpose protocol provide guaranteed bandwidth deterministic periodic network access multimedia application commodity ethernet hardware
+It implemented PreeBSD operating system used support Stony Brook Video Server SBVS ethernet server providing delivery video server disk subsystem
+Using local model checking provided Concurrency Factory specification verification environment showed particular network configuration Rether indeed make good bandwidth guarantee node without exposing node possibility starvation
+In course specifying verifying Rether identified alternative design protocol warranted study due potential efficiency gain
+Again using model checking showed alternative design also posse property interest
+Research supported part NSF grant AFOSR grant
+Unable display preview
+Unable display preview
+Over million scientific document fingertip Springer International Publishing AG
+Part
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n n n n n n trailer R R startxref EOF obj R endobj obj R stream X ã Vfe bi æ úîÊ ÂËP Ã P ÿ
+endstream endobj obj endobj obj R R R R R R R R R R R R R R R R R R R R endobj obj Bold endobj obj Italic endobj obj Bold endobj obj endobj obj endobj obj R stream
+àÄíVÚR Ó À E ÇÀI V Õ DÊ À endstream endobj obj endobj obj R stream Sû
+
+Choose customizable template blank canvas PicMonkey homepage
+Add font graphic collection use favorite tool
+Save design integrated storage feature make change later
+design whenever like
+Creativity process people
+

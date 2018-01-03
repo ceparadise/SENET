@@ -1,0 +1,280 @@
+In special used control behaviour
+In fact generator
+A generator similar function return array generator parameter called generates sequence value
+However instead building array containing value returning generator yield value one time requires le memory allows caller get started processing first value immediately
+In short generator function
+Generators implemented term expressive construct
+Generators also known semicoroutines special case weaker coroutines always yield control back caller passing value back rather specifying coroutine jump see
+Generators usually inside loop
+The first time generator invocation reached loop iterator created encapsulates state generator routine beginning argument bound corresponding
+The generator body executed context iterator special action encountered time value provided action used value invocation expression
+The next time generator invocation reached subsequent iteration execution generator body resumed action yet another action encountered
+In addition action execution generator body also terminated action time innermost loop enclosing generator invocation terminated
+In complicated situation generator may used manually outside loop create iterator used various way
+Because generator compute yielded value demand useful representing sequence would expensive impossible compute
+These include
+infinite sequence live data stream
+When eager evaluation desirable primarily sequence finite otherwise evaluation never terminate one either convert use parallel construction creates list instead generator
+For example Python generator evaluated list via F evaluates lazily generator sequence evaluates eagerly list
+In presence generator loop construct language reduced single loop end loop construct usual loop construct comfortably simulated using suitable generator right way
+For example ranged loop like implemented iteration generator Python
+Further implemented sending generator using loop
+Generators first appeared prominent feature string manipulation language available later version ECMAScript language
+In CLU C generator called Ruby
+The final standard natively provide generator yet various library implementation exist documented
+A yield statement used implement iterators data abstraction
+Every expression including loop generator
+The language many generator even implement logic semantics using generator mechanism OR done way
+Printing square achieved using writing However time custom generator implemented suspend keyword function exactly like yield keyword CLU
+As Icon every expression generator
+The infinite generator prime serve example It possible introduce generator using macro
+The resulting code might aspect different native
+generator syntax uncluttered
+A good example found
+The set macro defined source allow generator defined syntax following example This iterated using Moreover allows applied class provides function
+It possible write class defining iterable method iterator method class
+For example possible write following program A basic range implementation would look like Perl natively provide generator support provided module us framework
+Example usage In generator mechanism founded named
+In model everything generator every datum created data constructor generated demand
+For example list constructor operator used parenthesization
+This us standard adaptor function value agreeable predicate stop requesting new value soon one encountered
+The shared storage access used universal mediator Haskell
+List comprehension freely used provides several related facility generator
+First form work kind producer sequence also value Some sequence implemented imperatively private state variable implemented possibly infinite lazy list
+Also new struct definition property specifies used sequence
+But directly Racket come generator library traditional generator specification
+For example Note Racket core implement powerful continuation feature providing general continuation composable also delimited continuation
+Using generator library implemented Racket
+The community PHP implemented generator PHP
+Details found original
+Ruby support generator starting version form Enumerator class
+Java standard interface implementing iterators since early day since Java foreach construction make easy loop object provide interface
+The collection framework typically provide iterators collection
+However generator built language
+This mean creating iterators often much trickier language generator especially generation logic complex
+Because state must saved restored every time item yielded iterator possible store state local variable use looping routine generator available instead must manually simulated using object field hold local state loop counter
+Even simple iterators built way tend significantly bulkier using generator lot
+The original example could written An infinite Fibonacci sequence could also written int Iterator Also infinite Fibonacci sequence could also written using Stream interface Or get Iterator BaseStream Stream interface
+An example C generator available since C version Both example utilise Generics required
+It possible use multiple statement applied sequence iteration In iterators basis loop provides generator via since version
+These define sequence lazily evaluated sequential access via list eagerly evaluated sequential access via array eagerly evaluated indexed access via contain code generates value
+For example form sequence square number filtering number range number
+Generators added version
+An example generator In Python generator thought contains frozen
+Whenever iterator method called Python resume frozen frame executes normally next statement reached
+The generator frame frozen yielded value returned caller
+PEP implemented Python add expression allowing generator delegate part operation another generator
+Python syntax modeled called generator expression aid creation generator
+The following extends example using generator expression compute square countfrom generator function
+Harmony feature generator function
+An infinite Fibonacci sequence written using function generator The iterators package used purpose
+
+This service advanced JavaScript available learn A computer program written individual instruction individual macroinstructions microinstructions source language b replaces specific sequence computer instruction source language
+In computer programming program module program unit often part assembler compiler b replaces macroinstruction macrocall source program corresponding macro
+
+
+There affiliation available Over million scientific document fingertip Springer International Publishing AG
+Part
+
+A short macroinstruction rule specifies certain input sequence often sequence mapped replacement output sequence also often sequence character according defined procedure
+The mapping process instantiates transforms macro use specific sequence known
+A facility writing macro may provided part part
+In former case macro used make task using application le repetitive
+In latter case tool allows programmer enable even design
+Macros used make sequence computing instruction available single program statement making programming task le tedious le
+Thus called macro big block code expanded small sequence character
+Macros often allow positional keyword parameter dictate program generates used create entire program suite according variable factor
+The term derives expansion originally used generating code
+allow short sequence keystroke mouse action transform usually sequence keystroke mouse action
+In way frequently used repetitive sequence keystroke mouse movement
+Separate program creating macro called
+During macro program originally SuperKey KeyWorks Prokey popular first mean automatically format variety user input task
+These program based TSR mode operation applied keyboard input matter context occurred
+They extent fallen obsolescence following advent user interface availability keyboard mouse macro application making possible create keyboard macro
+Keyboard macro recent time come life method exploiting economy MMORPGs
+By tirelessly performing boring repetitive low risk action player running macro earn large amount game currency resource
+This effect even larger player operates multiple account simultaneously operates account large amount time day
+As money generated without human intervention dramatically upset economy game
+For reason use macro violation MMORPGs administrator MMORPGs fight continual war identify punish macro user
+Keyboard mouse macro created using application macro feature sometimes called
+They created carrying sequence letting application record action
+An underlying macro programming language commonly direct access feature application may also exist
+The programmer text editor short editing macro follows idea conclusion
+In effect editor made macro
+Emacs originally devised set macro editing language later ported dialect
+Another programmer text editor descendant also full implementation macro
+It record register macro person type keyboard replayed edited like macro Microsoft Office
+Vim also scripting language called create macro
+VBA programming language included Office
+However function evolved replaced macro language originally included application
+access executes document opened
+This make relatively easy write VBA commonly known
+In became one common type computer virus
+However late date patching updating program
+In addition current program immediately counteract attack
+Languages rudimentary macro system implemented compiler assembler
+macro work simple textual token rather character level
+A classic use macro computer typesetting system derivative functionality based macro
+experimental system seek reconcile macro system
+typed syntax macro one productive way think syntax macro
+Other example Some language embedded text source code language
+The mechanism code fragment recognised instance bracketed similar textual macro language much powerful fully featured language
+Macros language written subset compiler executes statement compilation time output execution form part code compiled
+The ability use familiar macro language give power much greater text substitution macro expense larger slower compiler
+frame macro command syntax also contain text language
+Each frame generic component hierarchy nested subassemblies procedure integrating subassembly frame recursive process resolve integration conflict favor higher level subassemblies
+The output custom document typically compilable source module
+Frame technology avoid proliferation similar subtly different component issue plagued software development since invention macro subroutine
+Most assembly language le powerful procedural macro facility example allowing block code repeated N time completely different syntax actual assembly language
+Macro C preprocessor described work level lexical token preserve lexical structure reliably
+Syntactic macro system work instead level preserve lexical structure original program
+The widely used implementation syntactic macro system found language
+These language especially suited style macro due uniform parenthesized syntax known
+In particular uniform syntax make easier determine invocation macro
+Lisp macro transform program structure full language available express transformation
+While syntactic macro often found language also available language
+They also available extension
+
+Before Lisp macro operator whose input value computed argument rather syntactic form argument whose output value used computation
+In word FEXPRs implemented level EVAL provided window layer
+This generally found difficult model reason effectively
+In Timothy Hart proposed adding macro Lisp AI Memo MACRO Definitions LISP
+In number paper introduced notion expansion system syntactic environment macro definition macro use distinct allowing macro definers user worry inadvertent variable capture cf
+
+Hygienic macro standardized Scheme standard
+The upcoming standard also include hygienic macro
+A number competing implementation hygienic macro exist explicit renaming syntactic closure
+Both standardized Scheme standard
+Recently combined notion hygienic macro syntactic expansion time one macro system ordinary runtime another block code showed apply interleaved expansion parsing language
+A number language Scheme either implement hygienic macro implement partially hygienic system
+Examples include
+conjecture three category make primary legitimate us macro system
+Others proposed alternative us macro macro system unhygienic allow selective unhygienic transformation
+The interaction macro language feature productive area research
+For example useful programming interaction macro construct must defined use together
+Module interact macro proposed Scheme language macro
+For example language extends notion macro system syntactic tower macro written language including macro using hygiene ensure syntactic layer distinct allowing module export macro module
+Macros normally used map short string macro invocation longer sequence instruction
+Another le common use macro reverse map sequence instruction macro string
+This approach taken Mobile Programming System used rudimentary macro compiler called SIMCMP map specific instruction set given computer counterpart macro
+Applications notably compiler written macro run without change computer equipped rudimentary macro compiler
+The first application run context sophisticated powerful macro compiler written macro language
+This macro compiler applied fashion produce compiled much efficient version
+The advantage approach complex application ported one computer different computer little effort target machine architecture writing rudimentary macro compiler
+The advent modern programming language notably compiler available virtually computer rendered approach superfluous
+This however one first instance first
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+Macro computer science From Wikipedia free encyclopedia Jump navigation search jEdit macro editor A macro Greek μάκρο big far computer science rule pattern specifies certain input sequence often sequence character mapped output sequence also often sequence character according defined procedure
+The mapping process instantiates transforms macro specific output sequence known macro expansion
+The term originated idea make available programmer sequence computing instruction single program statement making programming task le tedious le
+Macros often allow positional keyword parameter dictate conditional assembler program generates used create entire program program suite according variable operating system platform factor
+Contents hide Keyboard mouse macro Application macro scripting Macro virus Text substitution macro Procedural macro Lisp macro Macros software See also References edit Keyboard mouse macro Keyboard macro mouse macro allow short sequence keystroke mouse action transformed usually sequence keystroke mouse action
+In way repetitive sequence keystroke mouse movement automated
+Separate program creating macro called macro recorder
+During macro program originally SmartKey SuperKey KeyWorks Prokey popular first mean automatically format screenplay variety user input task
+These program based TSR Terminate stay resident mode operation applied keyboard input matter context occurred
+They extent fallen obsolescence following advent user interface availability keyboard mouse macro application word processor spreadsheet make possible create keyboard macro
+Keyboard macro recent time come life method exploiting economy massively multiplayer online game MMORPG like World Warcraft
+By tirelessly performing boring repetitive low risk action player running macro earn large amount game currency
+This effect even larger player operates multiple account simultaneously operates account large amount time day
+As money generated without human intervention dramatically upset economy game causing runaway inflation
+For reason use macro violation TOS EULA MMORPGs administrator MMORPGs fight continual war identify punish macro user
+edit Application macro scripting Keyboard mouse macro created using application macro feature sometimes called application macro
+They created carrying sequence letting application record action
+An underlying macro programming language commonly scripting language direct access feature application may also exist
+The programmer text editor Emacs short editing macro follows idea conclusion
+In effect editor made macro
+Emacs originally devised set macro editing language TECO later ported dialect Lisp
+Another programmer text editor Vim descendant vi also full implementation macro
+It record register macro person type keyboard replayed edited like VBA macro Microsoft Office
+Vim also scripting language called Vimscript create macro
+Visual Basic Applications VBA programming language included Microsoft Office application
+However function evolved replaced macro language originally included application
+edit Macro virus Main article Macro virus computing VBA access Microsoft Windows system call executes document opened
+This make relatively easy write computer virus VBA commonly known macro virus
+In became one common type computer virus
+However late date Microsoft patching updating program
+In addition current program immediately counteract attack
+edit Text substitution macro Languages C assembly language simple dubious discus macro system implemented preprocessors compiler assembler
+C preprocessor macro work simple textual token rather character level
+A classic use macro computer typesetting system TeX derivative functionality based macro
+MacroML experimental system seek reconcile static typing macro system
+Nemerle typed syntax macro one productive way think syntax macro computation
+Other example sophisticated macro processor
+TRAC PHP Macro Extension TAL accompanying Template Attribute Language SMX web page Macro Language One The General Purpose Macroprocessor contextual pattern matching macro processor could described combination regular expression EBNF AWK minimac concatenative macro processor
+troff nroff typesetting formatting Unix manpages
+See also Assembly language Macros Algorithm edit Procedural macro Macros written subset compiler executes preprocessor statement compilation time output execution form part code compiled
+The ability use familiar procedural language macro language give power much greater text substitution macro expense larger slower compiler
+Frame Technology frame macro command syntax also contain text language
+Each frame generic component hierarchy nested subassemblies procedure integrating subassembly frame recursive process resolve integration conflict favor higher level subassemblies
+The output custom document typically compilable source module
+Frame Technology avoid proliferation similar subtly different component issue plagued software development since invention macro subroutine
+Most assembly language le powerful procedural macro facility example allowing block code repeated N time loop unrolling completely different syntax actual assembly language
+edit Lisp macro Lisp uniform parenthesized syntax work especially well macro
+Languages Lisp family Common Lisp Scheme powerful macro system syntax simple enough parsed easily
+Lisp macro transform program structure full language available express transformation
+Common Lisp Scheme differ macro system Scheme based pattern matching Common Lisp macro function explicitly construct section program
+Being able choose order evaluation see lazy evaluation function enables creation new syntactic construct
+control structure indistinguishable built language
+For instance Lisp dialect cond lack possible define latter term former using macro
+Macros also make possible define data language immediately compiled code mean construct state machine implemented way natural efficient
+edit Macros software Macros normally used map short string macro invocation longer sequence instruction
+Another le common use macro reverse map sequence instruction macro string
+This approach taken Mobile Programming System used rudimentary macro compiler called SIMCMP map specific instruction set given computer counterpart macro
+Applications notably compiler written macro run without change computer equipped rudimentary macro compiler
+The first application run context sophisticated powerful macro compiler written macro language
+This macro compiler applied bootstrap fashion produce compiled much efficient version
+The advantage approach complex application ported one computer different computer little effort target machine architecture writing rudimentary macro compiler
+The advent modern programming language notably C compiler available virtually computer rendered approach superfluous
+This however one first instance first compiler bootstrapping
+edit See also Hygienic macro Programming demonstration Macro instruction edit References
+Greenwald Irwin Maureen Kane April
+The Share System Programming Modification PDF
+Journal ACM New York NY USA ACM
+
+
+Quotation One important us programmer macro save time error writing sequence instruction often repeated course program
+
+Strachey Christopher October
+A General Purpose Macrogenerator
+Computer Journal
+
+
+Runescape The Massive Online Adventure Game Jagex
+
+Retrieved
+
+
+
+Brown University Paper Automata Macros
+Orgass Richard William Waite September
+A base mobile programming system
+Communications ACM New York NY USA ACM
+
+
+
+Waite William July
+The mobile programming system
+Communications ACM New York NY USA ACM
+
+
+hide v e Types programming language Array Assembly Compiled Concatenative Concurrent Dataflow Declarative Dynamic Esoteric Extensible Functional Imperative Interpreted Logic Machine Macro Metaprogramming rule Pipeline Procedural Reflective Scripting Synchronous Very Visual Retrieved Categories Programming construct Source code Hidden category All accuracy dispute Articles disputed statement March Personal tool New feature Log create account Namespaces Article Discussion Variants Views Read Edit View history Actions Search Search Navigation Main page Contents Featured content Current event Random article Interaction About Wikipedia Community portal Recent change Contact Wikipedia Donate Wikipedia Help Toolbox What link Related change Upload file Special page Permanent link Cite page Create book Download PDF Printable version Languages العربية Català Česky Deutsch Eesti Español Français 한국어 עברית Italiano Nederlands 日本語 Polski Português Română Русский Suomi Svenska Türkçe Українська 中文 This page last modified July
+Text available Creative Commons License additional term may apply
+See Terms Use detail
+registered trademark Wikimedia Foundation organization
+Contact u
+
+All content website including dictionary thesaurus literature geography reference data informational purpose
+This information considered complete date intended used place visit consultation advice legal medical professional
+
+Strachey General Purpose Macrogenerator Fortran
+Technical CULLEN COLL OF ENGINEERING HOUSTON TEX Hsu Newhouse Albert SEP A general purpose macro processor originally developed Strachey implemented FORTRAN language permit utilization machine independent environment
+Author PROGRAMMING COMPILERS PROGRAMMING LANGUAGES DATA PROCESSING AL GORITHMS SYNTAX DESIGN SUBROUTINES COMPUTER PROGRAMMING AND SOFTWARE APPROVED FOR PUBLIC RELEASE John Kingman Road Fort Belvoir VA
+
+This action might possible undo
+Are sure want continue
+Systems Programming Assignment available
+

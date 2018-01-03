@@ -1,0 +1,687 @@
+In order individual imperative evaluated
+The emphasis explicit control flow distinguishes language language
+Within imperative statement execution result choice made two path follow
+For functional language function language construct exist achieve result usually termed control flow statement
+A set statement turn generally structured addition grouping also defines
+mechanism alter flow control way similar subroutine usually occur response external stimulus event occur rather execution control flow statement
+At level control flow instruction usually work altering
+For CPUs control flow instruction available conditional unconditional instruction also termed jump
+The kind control flow statement supported different language vary categorized effect A explicit name number assigned fixed position within may referenced control flow statement appearing elsewhere source code
+A label mark position within source code effect
+alternative named label used language placed start line text source code
+Languages use often impose constraint line number must increase value following line may require consecutive
+For example BASIC In language label usually appearing start line immediately followed colon
+For example C The language allowed whole number identifier label linked colon following statement variant allowed whole number
+The statement combination English word pronounced accordingly basic form unconditional transfer control
+Although may either upper lower case depending language usually written The effect goto statement cause next statement executed statement appearing immediately indicated label
+Goto statement many computer scientist notably
+The terminology varies may alternatively known routine procedure function especially return result method especially belong
+In computer memory small current standard subroutine used mainly reduce program size
+A piece code written used many time various place program
+Today subroutine often used help make program structured isolating algorithm hiding data access method
+If many programmer working one program subroutine one kind help divide work
+In structured programming ordered sequencing successive command considered one basic control structure used building block program alongside iteration recursion choice
+In May Böhm Jacopini published article showed program could transformed form involving choice IF THEN ELSE loop WHILE condition DO xxx possibly duplicated code addition Boolean variable flag
+Later author showed choice replaced loop yet Boolean variable
+That minimalism possible mean necessarily desirable computer theoretically need subtract one number another branch result negative practical computer dozen even hundred machine instruction
+What Böhm Jacopini article showed program could
+Other research showed control structure one entry one exit much easier understand form mainly could used anywhere statement without disrupting control flow
+In word
+Later development recently composable continued strategy making component program even freely composable
+Some academic took purist approach result argued even instruction like middle loop bad practice needed proof thus advocated loop single exit point
+This purist approach embodied language designed preferred tool teaching introductory programming academia
+The direct application theorem may result additional local variable introduced structured chart may also result
+The latter issue called context
+Pascal affected problem according empirical study cited student programmer difficulty formulating correct solution Pascal several simple problem including writing function searching element array
+A study Henry Shapiro cited Roberts found using control structure correct solution given subject subject wrote incorrect code problem allowed write return middle loop
+Most programming language control structure initial keyword indicates type control structure involved
+Languages divide whether control structure final keyword
+Conditional expression conditional construct feature perform different computation action depending whether evaluates true false
+Less common variation include compare given value specified constant take action according first constant match
+There usually provision default action else otherwise taken match succeeds
+Switch statement allow compiler optimization
+In case may limited constant expression might extend example right implement default case matching string
+Case logic also implemented functional form statement
+A loop sequence statement specified may carried several time succession
+The code inside loop loop shown obeyed specified number time collection item condition met
+In language loop expressed using rather explicit looping construct
+special case recursion easily transformed iteration
+Most programming language construction repeating loop certain number time
+In case counting go downwards instead upwards step size used
+In example N body loop may execute I value depending programming language
+In many programming language integer reliably used loop
+number represented imprecisely due hardware constraint loop might repeated time depending rounding error hardware compiler version
+Furthermore increment X occurs repeated addition accumulated rounding error may mean value X iteration differ quite significantly expected sequence
+Most programming language construction repeating loop condition change
+Some variation test condition start loop others test end
+If test start body may skipped completely end body always executed least
+A value change detection method used within ordinary loop trigger processing group value
+Values monitored within loop change diverts program flow handling group event associated
+Several programming language later special construct allow implicit looping element array member set collection
+generalise loop also support us
+comprehension together provide similar function Scala
+General iteration construct C statement form used express sort loop others looping number collection parallel
+Where specific looping construct used usually preferred general iteration construct since often make purpose expression clearer
+used assure program segment loop forever exceptional condition arises error
+For instance program loop forever handling event occur stopping process terminated operator
+Infinite loop implemented using control flow construct
+Most commonly unstructured programming jump back goto structured programming indefinite loop loop set never end either omitting condition explicitly setting true
+Some language special construct infinite loop typically omitting condition indefinite loop
+Examples include Ada Fortran Go Ruby
+Often infinite loop unintentionally created programming error loop wherein loop condition us variable never change within loop
+Sometimes within body loop desire skip remainder loop body continue next iteration loop
+Some language provide statement language Perl Ruby
+The effect prematurely terminate innermost loop body resume normal next iteration
+If iteration last one loop effect terminate entire loop early
+Some language like Perl Ruby statement restarts current iteration start
+Ruby statement restarts entire loop initial iteration
+When using loop search table might desirable stop searching soon required item found
+Some programming language provide statement language Perl effect terminate current loop immediately transfer control statement immediately loop
+The following example done support
+Both feature similar comparing code snippet show difference must combined statement construct
+support conditional execution code depending whether loop exited early statement using loop
+For example The clause example linked statement inner statement
+Both Python loop support else clause executed early exit loop occurred
+Some language support breaking nested loop theory circle called break
+One common use example searching table
+This done either via multilevel break break level bash PHP via labeled break break continue given label Java Perl
+Alternatives multilevel break include single break together state variable tested break another level exception caught level broken placing nested loop function using return effect termination entire nested loop using label goto statement
+C include multilevel break usual alternative use goto implement labeled break
+Python multilevel break continue proposed rejected basis added complexity worth rare legitimate use
+The notion break interest give rise today called
+In refined proving possible avoid adding additional variable structured programming long break loop allowed
+Furthermore Kosaraju proved strict hierarchy program exists every integer exists program containing break depth rewritten program break depth le without introducing added variable
+One also subroutine executing looped statement breaking nested loop subroutine
+There multiple break generally implemented exception instead
+In textbook us Tennent notion explain similarity break return statement
+Watt note class sequencer known defined sequencer terminates execution textually enclosing command procedure encompasses break loop including break return statement
+As commonly implemented however return sequencer may also carry return value whereas break sequencer implemented contemporary language usually
+used express correctness loop
+In practical term loop variant integer expression initial value
+The variant value must decrease loop iteration must never become negative correct execution loop
+Loop variant used guarantee loop terminate
+A loop invariant assertion must true first loop iteration remain true iteration
+This implies loop terminates correctly exit condition loop invariant satisfied
+Loop invariant used monitor specific property loop successive iteration
+Some programming language contain native support loop variant invariant
+In case support specification
+Some dialect provide extensive sublanguage describing Loops
+An early example found Conversional Lisp
+provides Loop macro implement sublanguage
+Many programming language especially favoring dynamic style programming offer construct
+These cause flow execution jump given context resume predeclared point
+three common sort control construct exotic one also exist keyword
+standard condition ZERODIVIDE SUBSCRIPTRANGE ENDFILE raised intercepted ON action Programmers also define use named condition
+Like one statement specified many case GOTO needed decide flow control resume
+Unfortunately implementation substantial overhead space time especially SUBSCRIPTRANGE many programmer tried avoid using condition
+Common Syntax example Modern language specialized structured construct exception handling rely use break return
+For example one write Any number variety clause used
+If matching particular control percolate back subroutine call nested block matching found end main program reached point program forcibly stopped suitable error message
+Via influence keyword reserved declaring exception handler language popular today like Java C
+Some language like Ada use keyword introduce exception handler may even employ different keyword Ada pattern matching
+A language like incorporate placeholder exception handler syntax automatically extract several piece information exception occurs
+This approach exemplified construct AppleScript David Watt textbook also analyzes exception handling framework sequencer introduced article section early exit loop
+Watt note abnormal situation generally exemplified arithmetic overflow failure like file found kind error detected program unit handler naturally located program unit
+For example program might contain several call read file action perform file found depends meaning purpose file question program thus handling routine abnormal situation located system code
+Watts note introducing status flag testing caller structured programming even return sequencer would entail result situation application code tends get cluttered test status flag programmer might forgetfully lazily omit test status flag
+In fact abnormal situation represented status flag default ignored
+Watt note contrast status flag testing exception opposite causing program terminate unless programmer explicitly deal exception way possibly adding explicit code ignore
+Based argument Watt concludes jump sequencer escape sequencer suitable dedicated exception sequencer semantics discussed
+In Object Pascal D Java C Python clause added construct
+No matter control leaf code inside clause guaranteed execute
+This useful writing code must relinquish expensive resource opened file database connection finished processing Since pattern fairly common C special syntax Upon leaving compiler guarantee object released effectively variable file stream abstracting side effect initializing releasing file
+Python statement Ruby block argument used similar effect
+All language mentioned define standard exception circumstance thrown
+Users throw exception fact allows user throw catch almost type including basic type like whereas language like Java permissive
+C introduced async keyword supporting direct style
+also known semicoroutines allow control yielded consumer method temporarily typically using keyword
+Like async keyword support programming direct style
+function yield control form without thread
+Coroutines implemented library programming language provides either continuation generator distinction coroutines generator practice technical detail
+In spoof article Lawrence Clark suggested GOTO statement could replaced statement provides entertaining example
+COMEFROM implemented one named
+article Structured Programming go Statements identifies two situation covered control structure listed gave example control structure could handle situation
+Despite utility construct yet found way mainstream programming language
+The following proposed If omitted get loop test top
+If omitted get loop test bottom
+If omitted get infinite loop
+Hence single construction replace several construction programming language
+A possible variant allow one test within loop use see next section appears cover case better
+Languages lacking construct generally emulate using equivalent idiom In loop construct represented using standard infinite loop clause middle confused statement following section
+Naming loop like example optional permit leaving outer loop several nested loop
+This proposed
+A modified version presented
+used specify event may occur within occurrence indicated using name event statement
+When event occur relevant action carried control pass
+This construction provides clear separation determining situation applies action taken situation
+conceptually similar exception similar construct used purpose many language
+The following simple example involves searching table particular item
+One way attack piece software redirect flow execution program
+A variety technique including shadow stack pointer verification used defend attack
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+
+The performance CPU affected number core clock speed memory
+There different type volatile memory
+Computers require input hardware processing hardware output hardware
+The hardware defines computer
+Without computer could function
+The CPU memory work together run program
+You need JavaScript enabled view video clip
+Most computer CPU separate graphic processing unit GPU image
+The GPU around time faster CPU
+It optimised produce graphic game film
+The GPU responsible handling image free CPU task
+CPU memory speed affect overall speed computer
+If one significantly slower slow others
+test used ass performance computer
+Different type benchmark software used different kind application might want computer
+It difficult ass performance CPU computer might excel task well others
+For example computer going used gaming require best combination hardware handle intensive graphic quickly
+The computer might perform well used analyse vast amount scientific data
+Sign choose GCSE subject see content tailored
+
+All computer data represented using binary number system us
+Binary digit grouped together byte
+There two popular method converting binary denary
+Computers use digit store data
+A binary digit smallest unit data computing
+It represented eg binary number
+The circuit computer processor made billion
+A transistor tiny switch activated electronic signal receives
+
+Computer program set instruction
+Each instruction translated simple binary code activate
+Programmers write computer code converted binary instruction processor
+All music document information processed computer also stored using binary
+Everything computer represented stream binary number
+
+These number encoded different data format give meaning eg pattern could number character colour image
+Encoding format standardised help compatibility across different platform
+For example The bit used pattern combination value become available
+This larger number combination used represent many thing eg greater number different symbol colour picture
+In early day computing way enter data computer flicking switch feeding punched card punched paper tape
+Since computer work using binary data represented switch punched hole easily able reflect two state represent represent hole represent hole represent
+Charles Babbage Analytical Machine used Second World War operated using punched card tape
+Modern computer still read data binary form much faster convenient read microchip magnetic optical disk
+You need JavaScript enabled play audio clip
+Andrew Robinson explains binary data used monitoring bird Raspberry Pi Sign choose GCSE subject see content tailored
+
+way data stored efficient search retrieval
+Different data structure suited different problem
+Some data structure useful simple general problem retrieving data stored specific identifier
+For example online dictionary structured retrieve definition word
+On hand specialized data structure devised solve complex specific search problem
+The simplest data structure linear array stored element numbered consecutive content accessed number
+Data item stored nonconsecutively memory may linked pointer memory address stored item indicate next item item structure located
+Many developed sorting data efficiently apply structure residing main memory also structure information system
+data structure may incorporate element simpler data structure
+commonly use
+development optimal algorithm inserting deleting locating data constituted major area theoretical computer science since beginning heavy use structure virtually computer compiler operating system file system
+parallel machine
+A major area study computer science storage data efficient search retrieval
+The main memory computer linear consisting sequence memory cell numbered Whereas control structure organize algorithm data structure organize information
+In particular data structure specify type data thus operation performed eliminating need programmer keep track memory address
+Simple data structure positive negative number
+The integer generated set counting number
+
+
+operation subtraction
+When counting number subtracted result zero
+When larger number subtracted smaller systematic procedure finite number answer question solution problem
+The name derives Latin translation Muslim mathematician arithmetic treatise Concerning Hindu Art For question problem We welcome suggested improvement article
+You make easier u review hopefully publish contribution keeping point mind
+Your contribution may edited staff publication subject final approval
+Unfortunately editorial approach may able accommodate contribution
+Our editor review submitted meet criterion add article
+Please note editor may make formatting change correct spelling grammatical error may also contact clarification needed
+There problem submission
+Please try later
+Our editor review submitted determine whether revise article
+
+In storage location identified paired associated contains known unknown quantity information referred
+The variable name usual way stored value addition referring variable depending context
+This separation name content allows name used independently exact information represents
+The identifier computer value variable may thus change course
+Variables programming may directly correspond concept
+The latter reference physical object storage location
+The value computing variable necessarily part mathematics
+Variables computer programming frequently given long name make relatively descriptive use whereas variable mathematics often terse name brevity transcription manipulation
+A variable storage location may referred several different identifier situation known
+Assigning value variable using one identifier change value accessed identifier
+replace variable symbolic name actual location data
+While variable name type location often remain fixed data stored location may changed program execution
+In value generally time
+In variable expression keep single value entire due requirement
+In imperative language behavior exhibited named symbolic constant typically contrasted normal variable
+Depending programming language variable may able store specified
+
+Alternatively datatype may associated current value allowing single variable store anything supported programming language
+An identifier referencing variable used access variable order read value alter value edit variable access permission etc
+For instance variable might referenced identifier variable contain number
+If variable referenced identifier well using identifier value variable altered reading value using identifier yield result
+If variable referenced single identifier simply called
+Otherwise speak
+For instance previous example name variable question another name variable
+The variable describes program text variable may used describes program execution variable meaningful value
+The scope variable actually property name variable extent property variable
+These confused also called property program varies point source code execution see
+Further may coincide variable lifetime many case tied variable lifetime
+A variable name affect
+important part variable
+Most language define specific variable well named entity may differ within given program
+The scope variable portion program code variable name meaning variable said visible
+Entrance scope typically begin variable lifetime come context exit scope typically end lifetime go context
+For instance variable meaningful within certain finely within block accordingly static resolution performable
+Alternatively variable resolved based global binding stack depends specific control flow
+Variables accessible within certain function termed
+A one indefinite scope may referred anywhere program
+hand runtime aspect variable
+Each variable value runtime
+The extent binding portion program execution time variable continues refer value memory location
+A running program may enter leave given extent many time case
+Unless programming language feature variable whose extent permanently outlasts scope result whereby memory allocated variable never freed since variable would used reference deallocation purpose longer accessible
+However permissible variable binding extend beyond scope occurs Lisp C execution pass back variable scope variable may used
+A variable whose scope begin extent said often undefined arbitrary value accessed see since yet explicitly given particular value
+A variable whose extent end scope may become deemed uninitialized since value destroyed
+Variables described previous two case may said
+In many language error try use value variable extent
+In language may yield
+Such variable may however assigned new value give new extent
+For space efficiency memory space needed variable may allocated variable first used freed longer needed
+A variable needed scope thus beginning variable lifetime enters scope may give space unused variable
+To avoid wasting space compiler often warn programmer variable declared used
+It considered good programming practice make scope variable narrow feasible different part program accidentally interact modifying variable
+Doing also prevents
+Common technique different section program use different make individual variable private either
+Many programming language employ reserved value often named indicate invalid uninitialized variable
+In language variable also meaning certain kind value stored
+For example variable type prohibited storing text value
+In language value variable carry type
+In situation exist simultaneously A variable given type undeclared assumed universal exists compile time
+Values also type checked queried runtime
+Typing variable also allows resolved compile time
+However different polymorphism used function call referred resolve call based value type opposed supertypes variable allowed
+Variables often store simple data like integer literal string programming language allow variable store value well
+Such language may also enable function
+These function operate like variable represent data multiple type
+For example function named may determine length list
+Such function may parametric polymorphic including type variable since amount element list independent element type
+The function also referred variable
+For instance code segment variable named given value function called
+The integer give value
+In language function parameter local scope
+This specific variable named referred within function though course function also variable called
+The specific variable allocation representation value vary widely among programming language among implementation given language
+Many language implementation allocate space whose extent last single function call whose memory automatically reclaimed function return
+More generally name variable bound address particular block contiguous sequence byte memory operation variable manipulate block
+common variable whose value large unknown size code compiled
+Such variable reference location value instead storing value allocated pool memory called
+Bound variable value
+A value however abstraction idea implementation value represented stored somewhere computer memory
+The program must set aside memory data object since memory finite ensure memory yielded reuse object longer needed represent variable value
+Objects allocated heap must object longer needed
+In language runtime environment automatically reclaims object extant variable longer refer
+In language program programmer must explicitly memory later free reclaim memory
+Failure lead heap depleted program run risk eventual failure exhausting available memory
+When variable refers created dynamically component may indirectly accessed variable
+In circumstance garbage collector analogous program feature language lack garbage collector must deal case portion memory reachable variable need reclaimed
+Unlike mathematical counterpart programming variable constant commonly take name
+
+name commonly used auxiliary variable instance variable
+Some naming convention enforced language level part language syntax involve format valid identifier
+In almost language variable name start digit contain whitespace character
+Whether punctuation mark permitted variable name varies language language many language permit variable name forbid punctuation
+In programming language specific often punctuation character known prefixed appended variable identifier indicate variable type
+variable name also varies language language require use certain case naming certain entity Most modern language older language
+Some language reserve certain form variable name internal use many language name beginning two underscore often fall category
+However beyond basic restriction imposed language naming variable largely matter style
+At level variable name used exact name chosen matter computer
+Thus name variable identify rest tool programmer make program easier write understand
+Using poorly chosen variable name make code difficult review name name clear often encouraged
+Programmers often create adhere code style guideline offer guidance naming variable impose precise naming scheme
+Shorter name faster type le descriptive longer name often make program easier read purpose variable easier understand
+However extreme verbosity variable name also lead le comprehensible code
+
+Control term used describe
+Examples control include
+It may also used specifically describe object
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+A program counter computer contains address location executed current time
+As instruction get program counter increase stored value
+After instruction fetched program counter point next instruction sequence
+When computer restarts reset program counter normally reverts
+In computing specific set ordered operation computer perform
+An instruction order given computer processor program
+Within computer address specific location
+A register one small set data holding place processor us
+Some engineer refer program counter instruction address register address pointer
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+Outline architecture central processing unit CPU function arithmetic logic unit ALU control unit CU register within CPU
+A major defining point history computing realisation data instruction manipulate data logically could stored place
+The computer design built upon principle became known still basis computer today
+Although name honour John von Neumann brilliant mathematician worked construction atomic bomb idea probably originated Presper Echkert John Mauchly two early pioneer worked ENIAC Moore School University Pennsylvania time period
+Another major characteristic von Neumann architecture unit process information separate unit store information
+This characteristic lead following component von Neumann architecture
+Memory collection cell unique physical address
+We use generic word cell rather byte number bit addressable location called memory varies one machine another
+Today computer byte addressable
+To fully illustrate concept memory take computer RAM example
+The memory consists byte mean byte computer uniquely addressable machine bit
+The cell memory numbered consecutively beginning
+For example cell memory cell would addressed follows What content address
+The bit pattern stored location
+However content actually represents instruction value sign etc
+discussed later
+What important however understand bit pattern information interpreted
+When referring bit byte word bit numbered right left beginning zero
+The bit address numbered follows The capable performing basic arithmetic operation adding subtracting multiplying dividing two number
+This unit also capable performing logical operation
+The operates word natural unit data associated particular computer design
+Historically word length computer number bit processed
+However current Intel line processor blurred definition defining word length bit
+The processor work word bit double word bit quadwords bit
+In rest wiki referring word historical nature aforementioned
+Most modern small number special storage unit called
+These register contain one word used store information needed immediately
+For example calculation
+first added result multiplied
+Rather storing result adding memory retrieving multiply result left register content register multiplied
+Access register much faster access memory location
+All computing power world would useful one could input value calculation outside report outside result said calculation
+Input output unit channel computer communicates outside world
+An device data program outside world entered computer
+The first input unit interpreted hole punched paper tape card
+input device however include limited keyboard mouse camera also known simply webcam scanning device
+An device result stored computer memory made available outside world
+Examples include printer screen monitor
+The organising force computer charge
+There two special register control unit
+The contains instruction executed contains address next instruction executed
+Because control unit work closely together often thought one unit called
+Above simplified view flow information part von Neumann machine
+The part connected one another collection wire called bus data travel computer
+Each bus carry three kind information address data control
+An address used select memory location device data go taken
+Data flow bus CPU memory Devices
+The control information used manage flow address data
+For example control signal typically used determine direction data flowing either CPU
+The number bit transfer simultaneously
+The wider bus address data bit move
+Explain use cache memory
+Because memory access time consuming relative speed processor many architecture provide
+Cache memory small amount memory copy frequently used data stored
+Before main memory access made CPU check whether data stored cache memory
+another technique used speed
+This technique split instruction smaller step overlapped
+In personal computer component von Neumann machine reside physically printed circuit board called
+The motherboard also connection attaching device bus mouse keyboard additional storage device
+So mean say machine processor
+The variable usually refers number bit CPU general register Two number added single instruction
+It also refer width bus size addressable always
+In addition refer width data always
+Explain machine instruction cycle
+Before looking computer let u look
+The definition computer outline capability computer electronic device store retrieve process data
+Therefore instruction give computer relate storing retrieving processing data
+The underlying principle von Neumann machine data instruction stored memory treated alike
+This mean instruction data addressable
+Instructions stored contiguous memory location data manipulated stored together different part memory
+To start Cycle first data loaded main memory operating system address first instruction placed onto
+The process cycle includes four step The increment one one point next instruction executed control unit go address memory address register hold address next instruction specified take main memory address bus return memory buffer register via data bus
+The MBR two way register temporarily hold data fetched Memory cache RAM make copy content place copy
+At point contains instruction executed
+Before going next step cycle must updated hold address next instruction executed current instruction completed
+There instruction register responsible instruction solved CU
+CU check status instruction allows execution
+Because instruction stored contiguously memory adding number byte current instruction put address next instruction
+Thus control unit increment
+It possible may changed later instruction executed
+In case instruction must get additional data memory sends address memory bus memory responds returning value location
+In computer data retrieved memory may immediately participate arithmetic logical operation
+Other computer simply save data returned memory register processing subsequent instruction
+At end execution result instruction may saved either register memory
+To execute instruction instruction register control unit determine instruction
+It might instruction access data input device send data output device perform operation data value
+At phase instruction decoded control signal
+That logic circuitry determines operation executed
+This step show computer execute instruction expressed machine language
+The instruction literally built circuit
+The instruction executed may potentially require additional memory access complete task
+For example instruction say add content memory location register control unit must get content memory location
+Once instruction decoded operand data fetched control unit ready execute instruction
+Execution involves sending signal unit carry processing
+In case adding number register operand sent added content register
+When execution complete cycle begin
+If last instruction add value content register next instruction probably say store result place memory
+However next instruction might control instruction asks question result last instruction perhaps change content program counter
+Hardware changed dramatically last yet von Neumann model remains basis computer today
+As Alan Perlis computer scientist said Describe primary memory
+RAM stand Memory
+RAM memory cell usually byte directly accessed
+Inherent idea able access location ability content location
+That storing something else place change bit pattern cell
+In addition RAM computer contain second kind memory called ROM
+ROM stand Memory
+The content location ROM changed
+Their content permanent altered second operation
+Placing bit pattern ROM called
+The bit pattern burnt either time ROM manufactured time computer part assembled
+RAM ROM differentiated basic property RAM ROM
+This mean RAM retain bit configuration power turned ROM
+Because ROM stable changed used store instruction computer need start
+Frequently used software also stored ROM system read software time machine turned
+Main memory usually contains ROM along RAM
+Identify need persistent storage
+An input device mean data program entered computer stored memory
+An output device mean result sent back user
+Because main memory volatile limited essential type storage device program data stored longer processed machine turned
+These type storage device main memory called storage device
+Because data must read written storage device also input output device
+Examples secondary storage device include Describe main function operating system
+Outline use range application software
+As early end first generation software development split programmer wrote tool help programmer used solve problem
+Modern software divided two category system software application software reflecting separation goal
+written address specific need solve problem real world
+Word processing program game inventory control system automobile diagnostic program missile guidance program application software
+manages computer system fundamental level
+It provides tool environment application software created run
+System software often interacts directly hardware provides functionality hardware
+The computer core system software
+An operating system manages computer resource memory device provides interface human interact computer
+Other system software support specific application goal library graphic software render image display
+The operating system allows application program interact system resource
+The diagram illustrates operating system interacts many aspect computer system
+The operating system manages hardware resource
+It allows application software access system resource either directly system software
+It provides direct user interface computer system
+Recall executing program resides main memory instruction processed one another cycle
+technique keeping multiple program main memory time program compete access CPU work
+All modern operating system employ multiprogramming one degree another
+An operating system must therefore perform keep track program memory memory reside
+Another key operating system concept idea defined program execution
+A program static set instruction
+A process dynamic entity represents program executed
+Through multiprogramming computer system might many active process
+The operating system must manage process carefully
+At point time specific instruction may next executed
+Intermediate value calculated
+A process might interrupted execution operating system performs carefully track progress process intermediate state
+Related idea memory management process management need determines process memory executed CPU given point
+One must remember however OS program must executed
+Operating system process must managed maintained main memory along system software application program
+The OS executes CPU program must take turn among
+The following section Single Contiguous Memory Management Partition Memory Management Paged Memory Management interest purpose
+The Computer Science Guide clearly note technical detail needed
+For example memory management described handled multitasking environment expected
+Therefore section serve purpose illustrating memory management technique summarised rather utilised exam
+Has operating system one program memory one time
+This basic type memory management
+The memory broken different part
+Has operating system number program running time different partition
+The partition base bound register
+Base register Bounds register Partition selection First fit Best fit Worst fit A technique process divided page stored memory frame loaded
+Frame Page The number system specifies number digit used system
+The digit always begin continue one le base
+For example digit base
+There digit base
+There digit base
+The base also determines position digit mean
+When one add last digit number system one carry digit position left
+Numbers written using
+The rightmost digit represents value multiplied base zeroth power
+The digit left one represents value multiplied base first power
+The next digit represents value multiplied base second power
+The next digit represents value multiplied base third power
+One usually familiar positional notation even aware
+One instinctively inclined utilise method calculate number one A formal way defining positional notation say value represented polynomial base number system
+But polynomial
+A polynomial sum two algebriac term consists constant multiplied one variable raised integral power
+When defining positional notation variable base number system
+Thus represented polynomial follows acting base To express idea formally number number system digit represented follows represents digit th position number Look complicated
+Take concrete example base
+Here number exactly digit base
+The formula state fifth digit last digit left multiplied base fourth power fourth digit multiplied base third power In previous calculation one assumed number base
+This logical assumption generic number system base
+However reason number could represent value base
+In order distinguish value general notation utilised order represent number base
+Therefore number found base system
+In order turn turn one simply us previous calculation Therefore base equal base
+One must keep mind two number equivalent value
+That represent number thing
+If one bag contains bean second bag contains bean bag contain exact number bean
+The number system allow one represent value various way
+Note base rightmost digit one position
+In base rightmost digit also one position
+In fact true base anything raised power zero one
+Why would anyone want represent value base
+It done often granted sometimes helpful understand work
+For example computing technique called hashing take number scramble one way scramble number interpret different base
+Other base base binary particularly important computer processing
+The binary number system particularly important computing
+It also helpful familiar number system power ase base octal base hexadecimal
+Recall base digit base two digit base eight digit
+Therefore number could represent value base le digit exist base
+It however valid number base base higher
+Likewise number valid number base higher simply exist us digit base lower
+What digit base higher
+One need assign symbol represent digit correspond decimal value beyond
+In base higher one generally look towards letter digit
+The letter A consequently represent number B represent C represent forth
+Therefore digit base Focusing value binary octal hexadecimal represent number base one calculate example decimal equivalent octal base simply put finding
+As case expanding number polynomial form adding number And converting hexadecimal number decimal Define Boolean operator AND OR NOT NAND NOR XOR
+Construct truth table using operator
+The gate computer sometimes referred logic gate perform one logical function
+That gate accepts one input value produce single output value
+Because one dealing binary information input output either corresponding signal corresponding signal
+The type gate input value determine output value
+A NOT gate accepts one input value produce one output value
+The table right illustrates NOT gate three way Boolean expression logical diagram symbol using truth table
+In representation variable represents input signal either
+The variable represents output signal whose value determined value
+By definition input value NOT gate output input value output
+A NOT gate sometimes referred inverts input value
+In Boolean expression NOT operation represented mark value begin negated
+Sometimes operation shown horizontal bar value begin negated
+In Boolean expression table assigned value determined applying NOT operation input value
+In variable left equal sign take value expression side
+The logical diagram symbol NOT gate triangle small circle called end
+The input output shown line flowing gate
+Sometimes line labeled though always
+The truth table show possible input value NOT gate well corresponding output value
+Because one input signal NOT gate signal two possibility column labelled A truth table
+The column labelled show output gate inverse input
+Note three representation truth table actually defines behaviour gate situation
+These three notation different way representing thing example result Boolean expression always result Boolean expression always
+This behaviour consistent value shown truth table
+Unlike NOT gate accepts one input signal AND gate accepts two input signal
+The value input signal determine output signal
+If two input value AND gate output otherwise output
+The AND operation Boolean algebra expressed using single dot case asterisk
+Often operator assumed example often written
+Because two input two possible value input four possible combination provided input AND gate
+Therefore four situation occur AND operator used Boolean expression
+Likewise truth table showing behaviour AND gate four row showing four possible input combination
+Like AND gate two input OR gate
+If two input value output value otherwise input
+The Boolean algebra OR operation expressed using plus sign
+The OR gate two input one two value AND gate four input combination therefore four row truth table
+The XOR OR gate illustrated right
+An XOR gate produce two input otherwise
+Note difference XOR gate OR gate differ one input situation
+When input signal OR gate produce XOR produce
+Sometimes regular OR gate referred OR produce either input
+The XOR produce input mixed one one
+Think XOR gate saying When I say I mean one
+The Boolean algebra symbol sometimes used express XOR operation
+However XOR operation also expressed using operator leave exercise
+Note logic diagram symbol XOR gate like symbol OR gate except extra curved line connecting input signal
+The NAND NOR gate accept two input value
+The NAND NOR gate essentially opposite AND OR gate respectively
+That output NAND gate one took output AND gate put inverter NOT gate
+There typically specific symbol used express NAND NOR gate operation Boolean algebra
+Instead one rely definition express concept
+That Boolean algebra expression NAND negation AND operation
+Likewise Boolean algebra expression NOR negation OR operation
+The logic diagram symbol NAND NOR AND OR except NAND NOR symbol inversion bubble indicate negation
+Compare output column truth table AND NAND
+They opposite row row
+The true OR NOR gate
+Six specific type gate observed
+It may seem difficult task keep straight remember work
+Well probably depends one think
+One encouraged try memorise truth table
+The processing gate described briefly general term
+If one think way one produce appropriate truth table time needed
+Some description term input value cause gate produce n output case produce Construct logic diagram using AND OR NOT NAND NOR XOR
+A combinational circuit consists logic gate whose output determined time present combination input irrespective previous consists input variable logic gate output variable
+The logic gate accept signal input generate signal example combinational circuit binary adder decimal adder decoder multiplexer half adder half subtractor etc
+A logic circuit addition two number called half adder
+addition process reproduced truth table
+
+Storage instruction computer enable perform variety task sequence intermittently
+The idea introduced late proposed program electronically stored format memory device instruction could modified computer determined intermediate computational result
+Other engineer notably contributed idea enabled become much flexible powerful
+Nevertheless engineer England built first computer shortly Americans built operational
+kept single store instruction encoded modifiable instruction
+This extremely critical decision meant one program could treated data another program
+Zuse considered rejected possibility In computer program data memory indistinguishable
+Both bit may interpreted either data program instruction fetched memory CPU
+The CPU program counter hold concept computer usually credited mathematician John von Neumann
+This instruction well data stored computer memory fast access critical development modern computer
+Previous thinking limited symbol
+This Turing concept implicit possibility machine operating modifying improving program
+Turing conception known simply universal Turing machine
+All modern computer essence universal Turing machine
+within EDVAC memory
+This computer advance upon previous machine Electronic Numerical Integrator Computer ENIAC program instruction determined wiring machine
+Wilkes convinced von Neumann paper future computer would We welcome suggested improvement article
+You make easier u review hopefully publish contribution keeping point mind
+Your contribution may edited staff publication subject final approval
+Unfortunately editorial approach may able accommodate contribution
+Our editor review submitted meet criterion add article
+Please note editor may make formatting change correct spelling grammatical error may also contact clarification needed
+There problem submission
+Please try later
+Our editor review submitted determine whether revise article
+

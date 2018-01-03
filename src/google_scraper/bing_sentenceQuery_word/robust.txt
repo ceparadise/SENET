@@ -1,0 +1,811 @@
+In ability computer system cope error execution cope erroneous input
+Robustness encompass many area computer science
+Formal technique essential showing robustness since type testing involves invalid unexpected input
+Alternatively used test robustness
+Various commercial product perform robustness testing software analysis
+In general building robust system encompass every point possible failure difficult vast quantity possible input input combination
+Since input input combination would require much time test developer run case exhaustively
+Instead developer try generalize case
+For example imagine inputting
+Some selected input might consist negative number zero positive number
+When using number test software way developer generalizes set real three number
+This efficient manageable method prone failure
+Generalizing test case example one technique deal failure due invalid user input
+Systems generally may also fail due reason well disconnecting network
+Regardless complex system still handle error encountered gracefully
+There many example successful system
+Some robust system evolvable easily adapted new situation
+Programs software tool focused specific task thus generalized flexible
+However observation system demonstrate adaptation environment
+One way biological system adapt environment use redundancy
+Many organ redundant human
+The one example
+generally need one kidney second kidney allows room failure
+This principle may taken apply software challenge
+When applying principle redundancy computer science blindly adding code suggested
+Blindly adding code introduces error make system complex render harder understand
+Code provide reinforcement already existing code unwanted
+The new code must instead posse equivalent function broken another providing function replace
+To new code must know accommodate failure point
+This mean need added system
+But system add logic increase size becomes complex
+Thus making redundant system system also becomes complex developer must consider balancing redundancy complexity
+Currently computer science practice focus building robust system
+Rather tend focus
+One main reason focus robustness today hard general way
+Robust programming style programming focus handling unexpected termination unexpected action
+It requires code handle termination action gracefully displaying accurate unambiguous
+These error message allow user easily debug program
+When building software programmer assumes user break code
+The programmer also assumes written code may fail work incorrectly
+The programmer assumes user try incorrect bogus malformed input
+As consequence programmer return user unambiguous intuitive error message require looking error code
+The error message try accurate possible without misleading user problem fixed ease
+Users gain access data structure
+This information hidden user user accidentally modify introduce bug code
+When correctly built user use without finding loophole modify interface
+The interface already correctly implemented user need make modification
+The user therefore focus solely code
+Very often code modified may introduce possibility impossible case occurs
+Impossible case therefore assumed highly unlikely instead
+The developer think handle case highly unlikely implement handling accordingly
+Robust machine learning typically refers robustness machine learning algorithm
+For machine learning algorithm considered robust either testing error consistent training error performance stable adding noise dataset
+Robust network design study network design face variable uncertain demand
+In sense robustness network design broad like robustness software design vast possibility change input
+
+When used describe computer system describe one several quality Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+Get grade money back bullet bullet Delivered time Get grade money back bullet bullet Delivered time Trusted Students Since This essay submitted student
+This example work written professional essay writer
+Any opinion finding conclusion recommendation expressed material author necessarily reflect view UK Essays
+The purpose find general definition robustness analysis web design system development process
+Research currently robustness measure analysis definition used large software development operating system
+Then considers one currently definition might appropriate robustness web design Failure Modes Effects Analysis identify measure robustness web system based Jacobson analysis method model component web design system
+Keywords Robustness Jacobson analysis web design Failure Modes Effects Analysis FMEA
+Introduction Along information technology especially rapid development computer technology tremendous change network era brought website emerged
+Meanwhile many reason may lead web site work
+Systemically make difficult check problem
+However web site designed use measure analysis variety problem may lead crash web site important
+Not improve robustness web site also ability cope unexpected situation order make web site stable robust
+In computer science clear definition robustness easy given especially noted reliability
+But ability deal error execution system
+It regarded measurement criterion apart basic property safety stability functionality robustness overall web site also important
+In process web design robustness measure discussed order enhance overall web site word still could keep stable execution component web site work unexpected circumstance
+
+Main Part What robustness
+There explanation robustness need discussed first
+When word used computer science advert computer application show usual condition also uncommon condition emphasis expectation designer
+Productions made computer web site typically buggy
+include error fragile therefore robust
+It difficult programmer find fix error
+Second one elegant way distinguish reliability robustness way look type error
+From perspective web design reliability problem often caused internal error website component
+Robustness problem often caused external error unexpected input
+After making clear two concept feature error robustness developed corresponding measure
+Definitions measure robustness The success criterion case system crash hang robust
+Fuzz testing Fuzz testing simple technology effect quality code
+In fuzz testing generates bad data randomly attack application programmer observes break
+The technique fuzz testing illogical automatic test speculate data lead damaged like manual testing
+Instead test clutter application data deeply much possible
+The result maybe lead programmer shock logical thinking person would think kind error
+It simple announce important bug application
+How work
+Realization fuzz testing simple process
+
+Prepare correct file insert program
+
+Generate random data replace part file
+
+Observe break
+Disadvantages First generally fuzz testing find simple error
+Second bug found severe sometimes fuzz testing popular world real attacker use tool develop destructive program
+Third randomly input catch boundary value condition difficult
+Ballista Ballista approach make operating system crash get exceptional parameter parameter used system call make software get irregular termination instead denoting error gracefully
+It box testing
+The goal Ballista test robustness existing component
+The result apply class wide range software component
+But generally best situation work module take input parameter list
+How work
+Ballista approach start bombard application module combination exceptional unexceptional input value
+The response system measured operating system failure task task
+OS failure generally form machine reboot detected watchdog timer detected inspecting irregular termination child process
+Ballista us list test case run large number input
+Disadvantage Ballista successful testing approach often used operating system web design
+It also need specific drive workload call kernel function
+Therefore easy expanded
+Another disadvantage Ballista difficult generate test case valid invalid test data must generated input generator
+JCrasher JCrasher approach test robustness Java program
+It inspects type java class construct code fragment create instance different type test public method random test data
+It used examine bug caused program program crash throw undeclared runtime exception
+It require regulation except offline testing case caused crash
+Disadvantage The rewrite class could exist separate compile phase instead load time
+It disadvantage JCrasher support dynamic loading
+FMEA Failure mode effect analysis Failure mode effect analysis FMEA procedure analysis potential failure mode within system classification severity likelihood failure
+It developed three main phase severity occurrence detection
+They determined grade robustness system
+Before starting use EMEA important work need done first confirms robustness included analysis
+Advantages
+Analysis improves safety reliability robustness product
+
+Reduces potential robustness concern
+
+Detects identifies eliminates potential problem early
+New idea web design Robustness concern unexpected domain
+To improve robustness measure taken either enlarge scope specification make sure stability system unexpected situation
+FMEA might appropriate measuring robustness web design
+Because used robustness analysis specification web design result outlined therefore designer clearly understand problem find corresponding solution
+On hand fuzz testing JCrasher widely used large software development programming language web design JSP Java service page JCrasher used measuring robustness java part web developing
+Ballista normally strongly used operating system
+The robustness web site important
+Because web system assessed HTTP protocol difficult control input user
+The web system must tolerance unexpected error user input
+Preparatory work Before applying FMEA two essential work needed
+First model robustness component web design
+Second design worksheet
+Model robustness component One best case diagram method Jacobson analysis
+To design robust web model process web system develop code important
+Here used analysis formed web product diagram robustness diagram design
+The diagram combined class diagram activity diagram
+The part gap robustness diagram
+There several feature
+It used help developer ensure correctness use case
+It used ensure use case contain necessary branch process thereby providing correctness check
+It used reduce gap analysis design ultimately complete preliminary design
+The Jacobson use case diagram us three stereotype element
+Entity object usually real world class domain model
+
+Boundary object used interactive user system
+Normally contains frame diagonal menu typically screen web page
+
+Control object used connect boundary object boundary object
+Boundary object entity object noun object controller verb action
+And four interactive rule three stereotype element design robustness diagram
+
+Nouns connect verb vice versa
+Nouns connect noun
+
+Verbs connect verb
+According rule component web design designed robustness diagram
+For example component web design web login system developer draw diagram analysis working processing existing component system
+Generally hard find page login page boundary object according analysis text use case
+And system provides input checking branch process thus controller object
+System display error message therefore another controller object
+System search database find information form user information form information entity object user information controller object
+Finally robustness case shown
+Once developer finished robustness analysis need Preliminary Design Review
+The session Preliminary Design Review help developer ensure robustness diagram domain model use case text match
+After robustness analysis developer could continue next step detailed design writing code
+Design worksheet When robustness diagram analysis developer could create worksheet continue analysis measure worksheet contains important information system
+All item function worksheet listed logical manner
+The purpose FMEA explore possible failure mode control object model external operating environment
+user input likelihood detection possibility severity impact robustness requirement web system
+It also used control object
+Results usually introduced specially designed worksheet
+Example FMEA Worksheet login part Control object Failure mode System Effect S Severity rating Possible Cause O occurrence rating D detection rating CRIT critical characteristic RPN risk priority number Recommended action Login control No response produced Fail respond user interaction
+Prevent use system
+Error user database contains data N Control user input prevent serious error object
+Understand parameter table
+Severity rating crash effect stand risk stand critical
+occurrence rating similarly range based web design specification detection rating value mean ability detect failure
+risk priority Numbers calculated formula RPN S x O x The highest severity failure mode might necessarily treated firstly rather highest RPN treated
+RPN regarded metric robustness system robustness improved developer solve highest RPN
+There several goal achieved
+Classify robustness critical element part application logic easy failure crash external error abnormal situation
+
+Rank priority possible reason cause failure robustness
+
+Establish prevention measure either eliminate possible cause reduce effect web robustness
+
+Conclusion Seldom method analysis measure robustness web design
+FMEA could establish requirement minimize possibility failure order improve robustness web system
+And measure component web system might fail failure affect system function
+But cost much time analysis web product component web product need analysis
+But ensures potential error affect whole web system
+Although method based basis practical application often apply real development process
+The mathematical evaluation system robustness could make result clear
+FMEA used process web design formed web product
+For large web product development FMEA might appropriate measure analysis product
+Take look essay writing service Our Dissertation Writing service help everything full dissertation individual chapter
+Our Marking Service help pick area work need improvement
+Fully referenced delivered time
+Get extra support require
+If original writer essay longer wish essay published UK Essays website please click link request removal Copyright UK Essays trading name All Answers Ltd company registered England Wales
+Company Registration No
+VAT Registration No
+Registered Data Controller No
+Registered office Venture House Cross Street Arnold Nottingham Nottinghamshire
+
+Robust programming welcome nob
+Trajectory fitting ensures estimated trajectory fluctuate violently department computer science yale university new ct tions like gnc mean field function recover analog outlier foundation software technology theoretical science bangalore sense knowledge kind human define robust strong healthy sentencemarovelli scientific american september
+Sofsem theory practice computer science google book result
+When used describe software computer system robust one several quality system break easily wholly affected single application failure
+Wikipedia wiki url
+Q webcache
+Robustness computer science wikipedia en
+Robustness encompass many area computer science robust programming machine learning security network adj
+Mathematical foundation computer science google book result
+A novel image text extraction method based k mean clustering csense stream processing toolkit robust high rate mobile sensing department computer science aging mind brain initiative university lung motion estimation point matching spatiotemporal tracking ct computing center shenzhen college software spatial mean shift iteration employed track point phase image
+Googleusercontent search
+Terminology defines robust code
+Software engineering dictionary definition mean principal component science direct
+Views expressed example represent opinion merriam webster editor
+What robust
+Definition whatis
+This system require special middleware globus unicore glite
+In computer science robustness ability system cope error execution erroneous input
+Surprising word history computer term
+Trakhtenbrot abstract difficult user submit job distributed computer robust job execution service system closed computer
+Definition robust linux information project
+Robustness computer science wikipedia
+A system either recovers quickly hold well exceptional circumstance robust product one break easily
+General computational method robustness analysis scientific simulation execution support closed distributed csense stream processing toolkit robust high rate mobile lung motion estimation point matching spatiotemporal unification line process outlier rejection
+What robust
+Webopedia definition
+Thus operating system individual application fail without disturbing department computer science university robust program differs non robust fragile adherence following four principle mean create queue delete queue
+
+Jun word robust u
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+Robust adjective commonly applied marketing literature information technology product several way
+It derives Latin meaning strength
+A robust product one break easily
+Thus individual fail without disturbing operating system application said robust
+Robust also sometimes used mean product system product designed full complement capability
+Thus context business world early system considered robust IBM operating system designed continuous operation low failure rate feature automatic backup file system
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+Computer science program teach student work hardware software network theoretical problem solving centered way
+Career opportunity related computer science degree booming increase IT job expected
+For getting computer science degree demand already high well graduate job opening IT available
+Still interested
+You
+Let check computer science degree actually involves
+Typical core class include While median salary computer information technology occupation according include There currently many online program computer science traditional program number range online program growing rapidly
+For information online education please see ranking
+A thing good keep mind searching right compsci program really play field honing top choice
+There wide range price point program length specialization offered program
+By seeking information wide range school likelier find feature could really make break learning experience ability pay school well program fit goal
+Colorado Technical University offer wide array computer bachelor degree online including
+degree cyber security information technology
+The cyber security degree three potential specialization including general track track information assurance computer system security
+The information technology major seven specialization including general track data management security network management software application programming software system engineering web development track
+The information technology degree requires total credit cyber security track requires two though CTU Fast Track allows experienced professional test course already expertise allowing around program bypassed
+Oregon State University
+Computer Science online special program build previous degree
+
+allowing get
+computer science little one year
+The program assumes knowledge previous core requirement allows student take computer science course
+The program may started one four term pace
+For student need additional experience segue program introductory course offered
+The minimum number credit needed complete program
+Tuition per credit introductory course per credit remainder program
+Effectively making program without introductory course program introductory course
+Florida State University offer
+
+degree computer science office distance learning
+Both degree completed year student year student assuming general education requirement met
+The
+program help student become proficient C Assembly Language well exposing student language like Java C Ada Lisp Scheme Prolog Perl HTML
+Both degree require completion credit hour worth class
+Tuition fee equivalent current tuition per credit hour plus distance learning fee
+There number program tuition lowered market rate however
+Old Dominion offer distance learning opportunites leading
+degree computer science computer engineering technology information system technology well certificate cyber security
+For
+computer science credit hour required general education requirement transferred another program
+Program cost vary per credit hour bringing current total tuition somewhere general education requirement met program
+For wishing continue education online
+computer science available Old Dominion well Master Engineering focusing modeling simulation
+Though Colorado State Campus program technically bachelor information technology program goal similar computer science program seek produce high quality software developer computer programmer system analyst support specialist
+The number specialization provided program quite astounding numbering
+Specializations range data management analysis healthcare informatics strategic communication
+Tuition locked place enroll plan ahead schooling cost confidence
+Currently Fall Undergraduate Tuition Rates per credit per course
+With zero transfer credit would bring four year credit program total par many public school
+Dakota State University offering distance learning program since provides student across country quality online education
+All degree program making possible student whether studying field computing business art science health informatics exercise science education access innovative technology
+The
+computer science program accredited state offer well several related major like health information administration network security administration cyber operation information system
+The program cost per credit hour resident
+Pace University offer online degree completion program closely related computer science
+technology study
+The program focus intersection criminal justice system cyber crime forensic computer investigation
+Career goal program well suited include law enforcement government agency private corporation cyber security role
+The degree take two year taking course semester
+A slower track available well
+Up credit may transferred program
+Tuition per credit hour entire program
+Central Michigan University online campus offer bachelor science information technology end goal providing skilled worker following role database administrator application system designer computer network director web specialist administrator computer service technologist computer security technologist
+After core class completed number specialization chosen including data communication networking database interactive multimedia design web application development
+Tuition Central Michigan program per credit hour major course general course
+Western Governor University offer number flexible online degree program related computer science including
+software development version
+information technology including general specialization specialization network administration security software
+The
+program Information Technology expansive prepare real world guiding student certification industry recognized skillsets
+Western Governor University affordable option costing per term term lasting month matter many credit hour completed term
+Students may begin new term start month
+American Public University offer
+degree cybersecurity information system security information technology information technology management
+Of program require credit hour cost per credit hour total
+American Public University also offer amazing range computer science related certification undergraduate level well computer science related certificate graduate level
+Certificates range credit hour
+At per credit hour make price range
+Champlain College offering online education since currently offer degree certificate online
+Six computer science related bachelor available online Champlain including Computer Information Systems Health Integrated Studies Management Information Systems Software Development Web Design Development
+Three cybersecurity bachelor available including computer forensics cyber security economic crime investigation
+Sessions Champlain week allowing modular program quickly developing skillsets
+Tuition program per credit hour student per semester student
+Drexel University offer
+Computing Security Technology well eight certificate information two technology certificate continuity management certificate cyber security law policy
+The online bachelor program flexible allows transfer credit also allows experimental work credit certificate applied degree
+From credit required graduate depending computing technology concentration computing security concentration chosen
+The current tuition rate per credit entire program though therre number corporate partner help pay certain worker education
+Florida Tech Online offer
+Computer Information Systems well Information Assurance Cybersecurity
+A broad range subject covered program including programming database administration system analysis design network theory design project management
+The program credit hour long tuition per credit hour entire program
+Syracuse University school information study providing online class since currently offer
+degree information management technology system information science well graduate level work certificate advanced study
+There six specialization chosen information management technology degree information security management project management network system management web design management database management digital retail strategy
+Nearly information management technology major employed within month showed highest average earnings major Syracuse
+The system information science single track though degree contain credit hour
+DePaul University offer three computer science related bachelor communication medium computing
+A
+information technology computer certificate also available
+For student core requirement taken care DePaul accept number transfer credit
+Information Technology completed three year
+A minimum credit hour must transferred completed
+
+degree granted
+For student taking credit hour per semester per year cost attending DePaul online
+Cal State Online offer
+Computer Science Information Technology
+The program center around thorough grounding theory well creating comprehensive portfolio capstone project
+Common course outcome include immediate entry role mobile app developer software developer project manager
+Entering student must semester credit transferable credit encompassing general education requirement school online portion degree technically degree completion program time
+Even online program research faculty member required unique program element Cal State online offering
+Franklin University offer online
+degree computer science health information management information security information technology management information science web development
+For
+computer science semester hour course needed
+Franklin University also program student looking earn additional bachelor degree already school
+Curriculum course cover wide range topic including design computer architecture coding testing web application development database management quality assurance
+Tuition per credit hour general education course per credit hour computer science related course per credit hour active serviceman
+University Maryland University College offer following computer degree online
+cybersecurity computer network security computer science digital medium web technology information system management
+Computer networking available undergraduate certificate
+While graduate level certificate related computer science available ranging database system technology digital forensics telecommunication management
+The
+computer science requires credit hour without transfer credit yearly rate costing Maryland resident Maryland Community college graduate yearly military servicemembers spouse resident
+Think school included online computer science program list
+Please contact u
+Best College Reviews
+All Rights Reserved
+
+Matt Bishop Department Computer Science University California Davis Davis CA Robust programming also called style programming prevents abnormal termination unexpected action
+Basically requires code handle bad invalid absurd input reasonable way
+If internal error occurs program library terminates gracefully provides enough information programmer debug program routine
+This handout discus principle coding give detailed example right
+Our example library managing queue FIFO list number
+This allows example consider parameter global variable
+The principle apply program also specifically input parameter equivalent environment like global variable
+A robust program differs program adherence following four principle
+Do trust anything generate
+Whenever someone us program library routine assume try break
+When call another function check succeeds
+Most importantly assume code problem program defensively problem detected quickly possible
+
+Assume caller user idiot read manual page documentation
+Program code write handle incorrect bogus malformed input parameter reasonable fashion reasonable defined environment
+For example print error message message require user look error code manual
+If return error code caller example library routine make error code unambiguous detailed
+Also soon detect problem take corrective action stop
+This keep error propagating
+Part problem week likely forgotten detail program may call incorrectly give bogus input
+This programming style also form defensive programming
+
+A dangerous implement anything routine expect remain consistent across call
+For example standard library content FILE structure allocated file expected remain fixed across call standard library
+That make dangerous implement
+Do let user gain access
+They might accidentally deliberately modify data data structure causing library function fail badly
+Never return pointer index array always hide true address index using something called token
+Hiding data structure also make program library modular
+For example queue manager us array represent queue
+This give maximum size
+You might decide linked list would suitable want rewrite routine
+If properly designed interface hidden much information data possible calling program need changed however neglected style information hiding information abstraction program correctly function current representation might break changed representation caller assumed queue element sequential integer location example
+As old saw go never say
+Impossible case rarely often merely highly unlikely
+Think case handled implement type handling
+In worst case check think impossible print error message occurs
+After modify code repeatedly likely one modification affect part code cause inconsistent effect may lead impossible case occurring
+
+Relate informal description principle robust programming formal principle good programming style cohesion coupling information abstraction information hiding good documentation
+The point exercise show robust program arise writing code good style learn school useful
+Robust programming defensive defensive nature protects program use routine also
+Programming mathematics error occur
+Good programming assumes take step detect report error internal well external
+Beware everything even code
+This library implement queue straightforward way
+It typical many C programmer would write
+It also fragile code
+We analyze detail support statement
+The library handle number queue queue created pointer returned caller
+Three entry point provided creating deleting queue adding element queue deleting element queue
+All file calling routine must include header file defines queue structure
+Reviewing structure library function illuminate problem fragile code show usual C coding style fragile
+The file defines queue structure maximum number element queue
+Because program calling queue function must pas pointer queue structure must visible calling procedure need know structure define queue pointer type QUEUE
+Hence file must included program call queue library function
+The header file contains As indicated queue management function This organization provides first evidence fragility
+The caller use pointer QUEUE structure layout structure location known caller bypass queue library obtain data queue directly alter information queue information library us manage queue
+For example one wanted change number element queue without calling queue management function one say pointer relevant queue expression new value assigned queue counter
+So problem including header file caller file The first function control creation deletion stack Glancing see us logical cohesion parameter indicates two distinct logically separate operation performed
+The operation could written separate function
+That routine poor cohesion speak well robustness
+Consider parameter list calling sequence
+The parameter integer indicates whether queue created deleted zero
+The parameter give maximum number integer allowed queue
+Suppose caller interchanged two The routine would detect error allocate queue room element rather
+This ease confusion parameter first problem one checked easily
+Next consider argument
+When mean create queue mean delete queue
+For function intention mean create mean delete coding style changed allow value mean create
+But little connection create delete
+So psychologically programmer may remember number use cause queue destroyed created
+Using would help library compiled program library simply loaded help element translated integer type checking done
+The first parameter pointer pointer necessary value returned parameter list C function argument passed value
+Passing pointer provides call reference mechanism
+However call reference usually us singly indirect pointer doubly indirect pointer used programmer make mistake specifically pas singly indirect pointer
+In general better avoid call reference necessary use multiple level indirection unless absolutely necessary
+The third set problem arises failure check parameter
+First look queue creation
+Suppose invalid pointer
+Then line containing cause segmentation fault
+Also suppose
+What happens queue allocated second
+If return pointer universal
+If negative result implementation dependent may cause segmentation violation
+In either case result unpredictable
+Now look queue deletion
+The parameter irrelevant suppose
+Then result undefined may result segmentation fault
+Worse imagine parameter instead meaningless address
+This almost impossible catch call cause segmentation violation lucky odd behavior afterwards
+The calling sequence checked either
+Suppose one deletes queue creating This would either cause segmentation violation called releasing unallocated memory latter case program probably crash later little indication
+Again problem qmanage check qptr refers valid queue
+However subtle variation problem Now queue deleted twice
+Attempting space already deallocated cause undefined action usually segmentation violation
+Consider body routine
+What happens either fails return
+The subsequent reference fault reference pointer
+Hence One subtle problem arises overflow
+Consider expression first call
+Suppose size integer byte common value
+Then expression evaluates
+On bit machine overflow likely produce value
+Such flaw likely cause problem call cause program produce segmentation fault seemingly unrelated place later
+Overflow underflow floating point calculation pernicious nasty problem watch
+
+The obvious way test overflow multiply absolute value see result smaller overflow occurred
+Does always work
+What problem introduce
+think architecture allowing arithmetic overflow cause trap
+Suggest alternate method without problem
+This function add element queue
+It add index head element current count modulo queue size place new element location increment count Two basic problem arise
+First qptr parameter checked ensure refers valid queue may refer queue deleted random memory may
+Any cause problem caller lucky problem arise routine caller unlucky symptom appear later program indication caused
+As offshoot suppose valid
+Then routine work correctly Second suppose queue full equal
+If function called overwrite head queue
+There check overflowing queue doubtless author assumed would never happen
+A sophisticated problem placing trust value queue structure
+The integrity queue structure depends consistency field
+If increase call routine think queue allocated space actually leading segmentation fault
+If decrease call element might lost
+
+Write program demonstrates decreasing call cause element previously added queue become inaccessible
+Describe problem arise value changed across call
+Given accessibility queue structure element caller element may change accidentally deliberately
+Taking element queue begin getting element index
+Then count decremented incremented modulo The parameter problem described previous section exist may invalid point invalid queue
+Moreover may also invalid integer pointer
+So Here
+danger underflow overflow
+Suppose element queue
+The value returned garbage set bogus value
+Hence The problem variable consistency across call occurs routine also
+
+What problem might invalid pointer cause
+Specifically suppose call The library content presented section fragile code
+Among flaw All flaw make library susceptible failure
+In section study alternate implementation library
+This version however robust performs sanity checking attempt anticipate problem handle gracefully
+If library recover return error code caller indicating problem
+This code complex write caller rely make debugging calling application much simpler
+The queue structure unavailable caller need define two item structure interface
+We deal interface first
+The object caller us represent queue called
+If make token pointer structure user able manipulate data structure directly
+Hence need mechanism indexing array obvious solution
+However use simple index user refer queue high degree certainty getting valid queue
+So instead use function index range function
+Thus represent queue entry array queue token invertible mathematical function index
+In addition must prevent dangling reference problem program reference queue A queue deleted
+Suppose programmer us library create queue Queue A subsequently deleted queue B created queue B happens occupy slot array queue queue A
+A subsequent reference queue A token get queue B
+To avoid problem associate queue unique integer called merge token
+In example queue might nonce queue B might nonce
+The token queue A token queue B
+As value differ reference queue A detected rejected
+We choose function following usual C operator
+We emphasize however function invertible either argument acceptable
+In usual C operator
+This simplifies interface considerably cost assuming quantity greater
+Fortunately system datatype supporting integer length
+So header file put With token defined calling routine need know nothing internal structure
+The second issue error handle
+We print error message take action possibly even terminating return error result allow caller handle error set special error handler language support typically written trap exception handler
+Unfortunately C provide exception handler error
+The method returning error code caller allows much greater flexibility handling error routine equally simple perform
+The complication set error code must indicate error could occur
+So proceed library shall track error define error code
+We make decision library function purpose
+The return value indicate whether error occurred function return error code expository message buffer
+If return flag indicating error
+So define error code negative Like UNIX system variable set error cleared success
+The buffer contain additional information routine error occurred relevant number
+The following macro aid process These defined format message placed function call library use
+We also redefine function interface eliminate low cohesion routine This eliminates use flag variable manage creation deletion
+In file place definition queue structure related variable We made one change queue definition queue fixed size
+This simplicity see exercise
+Also globals declared accessible function outside library file
+We distinguish queue queue
+The former field set queue exists contains element latter relevant element set queue exist
+
+The macro use format error message
+What problem function guard
+Why ignore problem library
+
+What problem static allocation space queue content queue introduce
+What advantage
+One function internal library creates token index another take token validates return appropriate index
+These separate routine need able change token representation library ported system without quantity store token
+Or may prefer modify mathematical function involved
+In either case increase cohesion decrease coupling laudable goal software engineering maintenance
+perspective
+In follows offset added index element initial nonce
+Both defined Here function generate token The function declared function library may access
+Rather return value parameter list compute token return function value
+This allows u return error code well since token always positive error code always negative
+The single parameter index token computed
+The next statement check value parameter case must valid array index inclusive
+As parameter unsigned upper bound need checked
+This may seem excessive function called within library ca ensure parameter always expected range
+The principle ca happen applies
+We indeed assure index always lie within range suppose someone else one day modifies code make error
+That error could cause library fail
+So best program defensively
+If error occurs identified precisely
+Two technique combined
+The first error message giving name routine exact description problem
+It available caller
+The second return value indicating error specifically internal inconsistency The calling routine must detect error act accordingly
+The error code indicates internal inconsistency error indicates another library routine calling incorrectly
+An error message code simply indicating error occurred would le helpful would know error occurred depending error message
+The next statement add offset index
+As upper half number must fit bit signed number
+The code check requirement met
+Again met detailed error message given
+
+Explain check work detail
+
+The code us mask comparison instead using
+Why mask bit instead
+
+The check similar us mask
+Explain need use
+The routine break token component part check queue similar The argument function token representing queue purpose function validate token return corresponding index
+The first section derives index number token check first index legal index queue index
+If either fails appropriate error message given
+Notice error code simply indicates problem parameter although message distinguishes two
+As caller library supplied token bogus token internal error
+So use another error code indicate problem Next check queue index token queue token refers
+This dangling reference problem mentioned earlier
+The current queue token stored queue structure simply ensure current token queue token
+If handle error appropriately
+The last section code check internal consistency
+The goal detect problem internal queue library
+The consistency check When detected routine report error
+An alternate approach favored expert make code conditionally compilable omit production version
+They either use surround code use macro
+This save space library provided production make tracking problem difficult occur production software le information provided development environment
+The macro described manual Its argument expression expression evaluated
+If expression false macro writes message standard error abort program force core dump debugging purpose
+For example internal consistency checking code could replaced If middle expression false error message would If constant defined macro empty effect deleted program
+
+The macro abort program condition fails
+It applies theory library internally inconsistent entire set queue trusted
+The method allow caller attempt recover
+Which better
+When
+The routine creates queue The parameter list routine empty information returned function value
+An alternate approach would pas QTICKET back parameter list declaration return value error code
+But lead confusion
+Some library routine require pointer argument others
+Programmers may become confused suffer memory lapse routine require pointer
+The routine guard potential problem
+Making parameter pointer suitable
+First pointer difficult check validity one check pointer one portably determine pointer contains address process address space address properly aligned quantity stored system notably RISC system cause alignment fault terminate program
+Using style programming akin functional programming language avoids problem
+This routine check room another queue determines index queue report error return error code
+The error code returned calling routine part library In error message supply helpful information namely maximum number queue allowed
+This enables programmer know routine failed tailor code accordingly
+The next part allocates space queue
+Again routine check failure report happen
+Again special error code used
+This special importance since failure usually due system call failure print informative message caller may desire
+The queue library error indicator The routine obtains token new queue checking failure
+If token obtained new queue deleted error returned
+No error message provided token generator provides
+Finally quantity queue structure set default value indicating empty queue token returned
+This way need worry initialization later library might harder determine initialization needed
+
+If token ca generated error message come indication routine called
+Write macro append error message
+Remember check bound problem append content
+This routine deletes queue
+This routine take parameter token queue deleted
+It determines token valid return error code
+Thus queue created one already deleted report error
+The queue freed
+The entry array reset indicate element array available reassignment
+
+The statement protected check see whether
+Is bug
+If need make check
+
+What prevents caller deleting queue twice
+Adding element queue requires placed tail The variable parameter list pointer passed value
+As validity token first checked build error message code token valid error simply returned
+Adding element queue requires checking queue full
+The first part statement
+The error message give maximum number element queue hold
+If queue full appropriate error code generated We remove element head queue Here must distinguish return value error code return value come queue
+The solution check error buffer
+Before function called first byte array set NUL byte
+If return error buffer contains string length greater error occurred returned value error code otherwise error occurred
+So calling sequence This way need pas pointer parameter list
+The disadvantage method complexity calling function however seems small price pay avoid possible segmentation fault within library
+The standard library function us similar technique distinguish failure success case
+
+Rewrite use second parameter return value removed queue parameter
+Use error code defined report invalid pointer
+The function value error code
+Compare contrast approach one used version
+When would use
+
+How use distinguish failure success
+The rest routine similar
+We check parameter validate queue
+We next check empty queue report error queue empty If empty return element head queue
+The index incremented move next element queue becomes element head queue
+The routine give several example difference robust fragile coding
+The routine robust crashed poor incorrect call inconsistency caller
+They form module informational cohesion stamp coupling latter share data common variable specifically
+While coding version routine take time fragile routine take much le debug require le debugging time application using routine
+
+Rewrite library allocate space queue dynamically
+Specifically change take parameter maximum number element allowed queue
+Allocate space queue array dynamically
+
+Rewrite library use linked list structure queue
+What advantage disadvantage
+Many security problem arise fragile coding
+The UNIX operating system C standard library encourage
+They provide library call cause severe problem example check buffer overflow
+Avoid routine
+
+Why following function avoided writing robust code
+How would modify make acceptable
+
+When member family function avoided writing robust code
+What use instead
+Chip Elliott Dartmouth College later BBN Communications provided inspiration
+His handout Writing Code Dartmouth COSC Introduction Software Engineering class succinctly described many principle technique I extended
+Thanks Kim Knowles constructive suggestion document
+Also student ECS ECS UC Davis helped refine exposition asking question indicating difficult understand
+I hope document clear certainly clearer earlier version
+
+Robustness property strong healthy constitution
+When transposed system refers ability tolerating perturbation might affect system functional body
+In line defined ability resist change without adapting initial stable configuration
+Robustness small refers situation wherein perturbation small magnitude considers small magnitude hypothesis difficult verify small large depends specific problem
+Conversely Robustness large problem refers situation wherein assumption made magnitude perturbation either small large
+It discussed robustness two dimension resistance avoidance
+In different context robustness may refer
+
+Almost every field today art medium lab science requires understanding computing
+Students better prepared rigor college learn important skill applied across wide range career discipline
+It easy
+bring AP CSP school
+The AP Computer Science A course exam focus computing skill related programming Java
+The new AP Computer Science Principles course complement AP Computer Science A focus broader aspect computing including computing data Internet cybersecurity
+Visit information
+already stated intent award credit satisfactory exam score new policy continue submitted
+AP Computer Science Principles designed equivalent introductory college computing course
+Colleges university make individual decision credit placement policy vary institution institution
+Students contact college interested detail
+The AP Computer Science Principles assessment consists two part assessment AP Exam
+Both measure student achievement course learning objective
+For assessment student upload digital artifact written response via
+
+It help fundamental understanding computer science teach course
+However due broad multidisciplinary nature course teacher need prior computer science experience
+While STEM teacher may particularly suited teach course teacher background opportunity professional development supplement experience including
+Teachers le computer science experience also explore professional development offered College Board
+Additionally state determine requirement teacher certification endorsement
+Be sure check computer science
+There designated programming language course
+Teachers flexibility choose programming language appropriate student use classroom
+Alice App Inventor Java JavaScript Python Scratch Snap example programming language used teacher piloting new course
+The AP Program recommends student successfully complete high school algebra course like Algebra I strong foundation basic algebraic concept dealing function notation strategy
+Students able use Cartesian coordinate system represent point plane
+Students need prior knowledge programming language
+The AP Program recommends classroom computer accessible student conduct daily work computer
+Visit comprehensive list resource
+The course open March offered high school college around country
+If school implementing curriculum teacher attend professional development event offered specific program required attend AP Summer Institute
+Samples performance task available
+Yes
+Students take course without taking AP Exam
+If student seeking college credit placement check institution policy determine grant credit placement without AP Exam score
+Teachers required provide student minimum hour class time Explore performance task minimum hour class time Create performance task
+Sufficient time provided student learn concept tested performance task practice skill prior completing submitting work AP Digital Portfolio AP scoring purpose
+The course taken order
+The decision offer sequence left school district
+We recommend course taught entire school year
+It taught block schedule
+Computers Internet access strongly recommended since study Internet included course
+In addition part requirement performance task student able conduct online investigation computing innovation
+It also beneficial teacher able install computing software choosing student develop program create computational artifact using computer
+Students also use tablet similar device smartphones course
+We offer several strategy help school ensure student opportunity take AP Computer Science Principles focus student traditionally underrepresented computer science
+
+The application used facilitate process collecting transmitting AP Computer Science Principles performance task AP Reading scoring
+The AP Digital Portfolio contains user role teacher student AP Coordinators
+Through AP Digital Portfolio create CSP class
+Information AP Digital Portfolio including log create classroom upload submit performance task available site
+Visit important timeline instruction
+If would like assist homeschooled student student pursue independent study complete assessment exam AP CSP following Visit special instruction accommodate student
+Visit comprehensive AP Central go AP
+For question send email
+It blast course teach
+I love
+Jennifer Hardy AP Computer Science Principles Teacher AP History AP English Literature AP Computer Science Principles teacher experience level participate
+Complete interest form receive update resource AP Computer Science Principles
+If question please email
+Be part many educator call best professional development ever
+

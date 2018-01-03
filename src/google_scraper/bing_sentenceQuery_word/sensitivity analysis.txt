@@ -1,0 +1,438 @@
+study output system numerical otherwise apportioned different source uncertainty input
+A related practice greater focus ideally uncertainty sensitivity analysis run tandem
+The process recalculating outcome alternative assumption determine impact variable sensitivity analysis useful range purpose including A example model engineering etc
+highly complex result relationship input output may poorly understood
+In case model viewed
+output opaque function input
+Quite often model input subject source including absence information poor partial understanding driving force mechanism
+This uncertainty imposes limit response output model
+Further model may cope natural intrinsic variability system aleatory occurrence event
+Good modeling practice requires modeler provide evaluation confidence model
+This requires first uncertainty model result second evaluation much input contributing output uncertainty
+Sensitivity analysis address second issue although uncertainty analysis usually necessary precursor performing role ordering importance strength relevance input determining variation output
+In model involving many input variable sensitivity analysis essential ingredient model building quality assurance
+National international agency involved study included section devoted sensitivity analysis guideline
+Examples see
+guideline White House modelling guideline
+The choice method sensitivity analysis typically dictated number problem constraint setting
+Some common There large number approach performing sensitivity analysis many developed address one constraint discussed
+They also distinguished type sensitivity measure based example
+In general however procedure adhere following outline In case procedure repeated example problem user screen unimportant variable performing full sensitivity analysis
+The various type core method discussed distinguished various sensitivity measure calculated
+These category somehow overlap
+Alternative way obtaining measure constraint problem given
+One simplest common approach changing OAT see effect produce output
+OAT customarily involves Sensitivity may measured monitoring change output
+
+This appears logical approach change observed output unambiguously due single variable changed
+Furthermore changing one variable time one keep variable fixed central baseline value
+This increase comparability result computed reference central point space minimizes chance computer programme crash likely several input factor changed simultaneously
+OAT frequently preferred modeller practical reason
+In case model failure OAT analysis modeller immediately know input factor responsible failure
+Despite simplicity however approach fully explore input space since take account simultaneous variation input variable
+This mean OAT approach detect presence input variable
+Local method involve taking output respect input factor subscript indicates derivative taken fixed point space input hence name class
+Adjoint modelling Automated Differentiation method class
+Similar local method attempt fully explore input space since examine small perturbation typically one variable time
+A simple useful tool plot output variable individual input variable randomly sampling model input distribution
+The advantage approach also deal given data
+set data point give direct visual indication sensitivity
+Quantitative measure also drawn example measuring even estimating measure
+context sensitivity analysis involves fitting model response using direct measure sensitivity
+The regression required linear respect data
+hyperplane hence quadratic term regressors otherwise difficult interpret standardised coefficient
+This method therefore suitable model response fact linear linearity confirmed instance large
+The advantage regression analysis simple low computational cost
+method class probabilistic approach quantify input output uncertainty decompose output variance part attributable input variable combination variable
+The sensitivity output input variable therefore measured amount variance output caused input
+These expressed conditional expectation
+considering model measure sensitivity th variable given Var denote variance expected value operator respectively denotes set input variable except
+This expression essentially measure contribution alone uncertainty variance averaged variation variable known
+Importantly measure uncertainty caused interaction variable
+A measure known give total variance caused interaction input variable
+Both quantity typically standardised dividing Var
+method allow full exploration input space accounting interaction nonlinear response
+For reason widely used feasible calculate
+Typically calculation involves use method since involve many thousand model run method emulator used reduce computational expense necessary
+Note full variance decomposition meaningful input factor independent one another
+One major shortcoming previous sensitivity analysis method none considers spatially ordered structure response model parameter space
+By utilizing concept directional covariograms Variogram Analysis Response Surfaces VARS address weakness recognizing spatially continuous correlation structure value hence also value
+Basically higher variability heterogeneous response surface along particular specific perturbation scale
+Accordingly VARS framework value directional given perturbation scale considered comprehensive illustration sensitivity information linking variogram analysis direction perturbation scale concept
+As result VARS framework account fact sensitivity concept thus overcomes scale issue traditional sensitivity analysis method
+More importantly VARS able provide relatively stable statistically robust estimate parameter sensitivity much lower computational cost strategy two order magnitude efficient
+Noteworthy shown theoretical link VARS framework approach
+Screening particular instance method
+The objective rather identify input variable contributing significantly output uncertainty model rather exactly quantifying sensitivity
+term variance
+Screening tends relatively low computational cost compared approach used preliminary analysis weed uninfluential variable applying informative analysis remaining set
+One commonly used screening method
+A number method developed overcome constraint discussed would otherwise make estimation sensitivity measure infeasible often due
+Generally method focus efficiently calculating measure sensitivity
+Emulators also known metamodels surrogate model response surface approach involve building relatively simple mathematical function known approximates behaviour model
+In word concept modelling model hence name metamodel
+The idea although computer model may complex series equation take long time solve always regarded function input
+By running model number point input space may possible fit much simpler emulator within acceptable margin error
+Then sensitivity measure calculated emulator either Monte Carlo analytically negligible additional computational cost
+Importantly number model run required fit emulator order magnitude le number run required directly estimate sensitivity measure model
+Clearly crux emulator approach find emulator sufficiently close approximation model
+This requires following step Sampling model often done due mathematician although random design also used loss efficiency
+The selection emulator type training intrinsically linked since training method dependent class emulator
+Some type emulator used successfully sensitivity analysis include The use emulator introduces problem difficult response model highly
+In case useful check accuracy emulator example using
+A HDMR term due Rabitz essentially emulator approach involves decomposing function output linear combination input term interaction increasing dimensionality
+The HDMR approach exploit fact model usually neglecting interaction second
+The term truncated series approximated
+polynomial spline REFS response expressed sum main effect interaction truncation order
+From perspective HDMRs seen emulator neglect interaction advantage able emulate model higher dimensionality emulator
+The Fourier Amplitude Sensitivity Test FAST us represent multivariate function model frequency domain using single frequency variable
+Therefore integral required calculate sensitivity index become univariate resulting computational saving
+Methods based Monte Carlo filtering
+These also objective identify region space input factor corresponding particular value
+high low output
+In uncertainty sensitivity analysis crucial trade scrupulous analyst exploring input wide resulting may
+The point well illustrated econometrician I proposed form organized sensitivity analysis I call sensitivity analysis neighborhood alternative assumption selected corresponding interval inference identified
+Conclusions judged sturdy neighborhood assumption wide enough credible corresponding interval inference narrow enough useful
+Note Leamer emphasis need selection assumption
+The easiest way invalidate model demonstrate fragile respect uncertainty assumption show assumption taken enough
+The concept expressed Jerome Ravetz bad modeling Some common difficulty sensitivity analysis include Some example sensitivity analysis performed various discipline follow
+Environmental computer model increasingly used wide variety study application
+For example used
+Moreover computer model increasingly used environmental local scale example assessing impact waste water treatment plant river flow assessing behavior contaminated waste water
+In case sensitivity analysis may help understand contribution various source uncertainty model output uncertainty system performance general
+In case depending model complexity different sampling strategy may advisable traditional sensitivity index generalized cover multiple model output effect correlated input
+In decision problem analyst may want identify cost driver well quantity need acquire better knowledge order make informed decision
+On hand quantity influence prediction save resource loss accuracy relaxing condition
+See
+Additionally general motivation listed sensitivity analysis help variety circumstance specific business However also problem associated sensitivity analysis business context Sensitivity analysis common practice social science
+A famous early example Mroz analysed female labor market participation
+In modern econometrics use sensitivity analysis anticipate criticism subject one ten commandment applied econometrics Thou shall confess presence sensitivity
+Corollary Thou shall anticipate criticism When reporting sensitivity analysis researcher explain fully specification search reader judge result may affected
+This basically best policy approach advocated Leamer
+Sensitivity analysis also used policy assessment study
+Sensitivity analysis used ass robustness composite indicator also known index
+Sensitivity analysis common many area physic chemistry
+With accumulation knowledge kinetic mechanism investigation advance power modern computing technology detailed complex kinetic model increasingly used predictive tool aid understanding underlying phenomenon
+A kinetic model usually described set differential equation representing relationship
+Sensitivity analysis proven powerful tool investigate complex kinetic model
+Kinetic parameter frequently determined experimental data via nonlinear estimation
+Sensitivity analysis used
+determining initial condition measurement position sampling time generate informative data critical estimation accuracy
+A great number parameter complex model candidate estimation estimable
+Sensitivity analysis used identify influential parameter determined available data screening unimportant one
+Sensitivity analysis also used identify redundant specie reaction allowing model reduction
+Modern design make extensive use computer model test design manufactured
+Sensitivity analysis allows designer ass effect source uncertainty interest building robust model
+In sensitivity analysis test result sensitive restriction data included
+Common example large trial higher quality trial recent trial
+If result consistent provides stronger evidence effect
+Sometimes sensitivity analysis may reveal surprising insight subject interest
+For instance field MCDM study among topic problem select best alternative among number competing alternative
+This important task
+In setting alternative described term set evaluative criterion
+These criterion associated weight importance
+Intuitively one may think larger weight criterion critical criterion
+However may case
+It important distinguish notion By mean criterion small change percentage weight may cause significant change final solution
+It possible criterion rather small weight importance one important respect much critical given situation one larger weight
+That sensitivity analysis may shed light issue anticipated beginning study
+This turn may dramatically improve effectiveness initial study assist successful implementation final solution
+Producing accurate knowledge state system effect computational data acquisition cause constraint major challenge especially knowledge required critical system operation safety operator integrity costly equipment stake manufacturing environment substrate drilling
+Understanding interpreting chain interrelated event predicted unpredicted may may result specific state system core challenge research
+Sensitivity analysis may used identify set input data signal significant impact set system state information
+output
+Through analysis technique sensitivity used support filtering unsolicited data reduce communication computational capability standard supervisory control data acquisition system
+One application sensitivity analysis address question What important model system development
+One seek identify important connection observation model input prediction forecast
+That one seek understand observation measurement dependent variable least important model input parameter representing system characteristic excitation model input least important prediction forecast observation least important prediction forecast
+Often result surprising lead finding problem data model development fixing problem
+This lead better model
+It may happen sensitivity analysis study meant underpin inference certify robustness context inference feed policy decision making process
+In case framing analysis institutional context motivation author may become matter great importance pure sensitivity analysis emphasis parametric uncertainty may seen insufficient
+The emphasis framing may derive relevance policy study different constituency characterized different norm value hence different story problem foremost telling story
+Most often framing includes le implicit assumption could political
+group need protected way technical
+variable treated constant
+In order take concern due consideration instrument SA extended provide assessment entire knowledge model generating process
+This approach called auditing
+It take inspiration NUSAP method used qualify worth quantitative information generation number
+Likewise sensitivity auditing developed provide pedigree model inference
+Sensitivity auditing especially designed adversarial context nature evidence also degree certainty uncertainty associated evidence subject partisan interest
+Sensitivity analysis closely related uncertainty analysis latter study overall conclusion study sensitivity analysis try identify source uncertainty weighs study conclusion
+The problem setting sensitivity analysis also strong similarity field
+In design experiment one study effect process intervention object unit
+In sensitivity analysis one look effect varying input mathematical model output model
+In discipline one strives obtain information system minimum physical numerical experiment
+
+An error occurred trying load video
+Try refreshing page contact customer support
+As member also get unlimited access lesson math English science history
+Plus get practice test quiz personalized coaching help succeed
+Want watch later
+Douglas two master degree MPA MBA currently working PhD Higher Education Administration
+
+What Is Sensitivity Analysis
+There many different way decision maker try predict future outcome decision
+They many guess kinder term go gut
+Some may consider past look similar decision outcome decision
+If really clever look difference current condition historical example using consider may impact outcome
+And right information understanding use sensitivity analysis
+investigation certain variable impact single independent variable much change variable change independent variable
+That complex idea let use example
+Imagine business make case smartphones
+Each month make many case sit around may even go waste new phone introduced
+But make enough case selling many could maximizing profit
+Thus beginning month faced decision many case make
+The first step sensitivity analysis identify dependent variable want predict b many independent variable might impact dependent variable
+In business case number case produce dependent variable
+It dependent depends number factor
+Those factor independent variable
+So independent variable could impact many case sell thus many case need make
+Your advertising budget one advertise extent sell
+Let measure term advertising budget
+What else
+The price case impact
+You noticed drop price sell raise price
+Anything else
+How day week since latest version specific popular smartphone announced
+If customer think new phone coming going buy phone buy phone buying case
+After considering independent variable would use data analysis package probably Microsoft Excel others exist use historical data regression analysis create
+This equation put independent variable see outcome
+For lesson let say use Excel get following demand equation Demand Units Advertising Price Days since last version What equation mean enter advertising budget price day since last version major phone announced math answer estimated demand unit
+Now perfect
+Whatever data analysis software using finding best answer answer exactly right
+Get FREE access day create account
+But remember talking specifically demand analysis regression talking sensitivity analysis
+So care equation
+Because sensitivity analysis figuring sensitive demand variable
+You looking coefficient variable tell increase variable demand
+If remember algebra terminology variable value change
+In example advertising price day since last version
+Coefficients static number indicate much increase variable impact demand
+In example coefficient advertising increasing advertising increase demand case
+We measured advertising term budget increase budget could reasonably anticipate demand increasing case
+We measured price dollar well increasing price would decrease demand case
+You see would decrease negative sign coefficient price
+Finally day since launch recent phone demand go case
+This information give need consider sensitive demand product based certain variable
+You change variable coefficient variable see expect happen demand
+This allows answer question like would happen I invest advertising
+would happen I cut price product
+happen new phone announced next month
+For decision maker especially working quantitative data understanding variable interact important
+It often easy correctly guess directional correlation I increase price demand go
+But finance manager production manager need information
+Knowing direction impact small part decision making
+Understanding significant change critical optimizing production profit
+tool manager use get information
+It requires data understanding analysis specific knowledge sensitivity analysis magic eight ball data driven approach coming best answer
+It done using
+To unlock lesson must Member
+Already member
+Did We college course prepare earn credit exam accepted college university
+You test first two year college save thousand degree
+Anyone earn regardless age education level
+To learn visit Not sure college want attend yet
+thousand article every imaginable degree area study career path help find school right
+Get unbiased info need find right school
+Browse area study degree level
+Back To Course chapter lesson copyright
+All trademark copyright property respective owner
+All right reserved
+Your Cart Empty
+Please Choose Product
+video lesson helped student
+I learned month chemistry class Ashlee I aced CLEP exam earned Clair video lesson helped engage student
+The video changed way I teach
+The video accomplish would take entire class
+Chris Students condition performed better receiving instruction
+Department Education
+
+Find best broker trading investing need analysis method used identify much variation input value given variable impact result mathematical model
+Sensitivity analysis applied number different discipline including business analysis environmental study engineering physic chemistry
+Sensitivity analysis concerned uncertainty inherent mathematical model value input used model vary
+It companion analytical tool uncertainty analysis two often used together
+All model composed study done draw conclusion inference policy decision based assumption regarding validity input used calculation
+For example equity assumes valid accurate calculation company asset arrived reasonable analyze profit return relation asset mean evaluating company investment purpose
+The conclusion drawn study mathematical calculation significantly altered depending thing certain variable defined parameter chosen study
+When result study computation significantly change due variation underlying assumption considered robust
+If variation foundational input assumption significantly change outcome sensitivity analysis employed determine change input definition modeling improve accuracy robustness result
+In business context sensitivity analysis used improve decision made based certain calculation modeling
+A company use sensitivity analysis identify best data collected future analysis evaluate basic assumption regarding investment optimize allocation asset resource
+One simple example sensitivity analysis used business analysis effect including certain piece information company advertising comparing sale result ad differ whether include specific piece information
+Computer model commonly used weather environmental climate change
+Sensitivity analysis used improve model analyzing various method input model parameter affect accuracy result conclusion obtained computer model
+The discipline physic chemistry often employ sensitivity analysis evaluate result conclusion
+Sensitivity analysis proven particularly useful evaluation adjustment kinetic model involve using number differential equation
+The importance various input effect input model outcome analyzed
+It standard practice engineering use computer model test design structure built
+Sensitivity analysis help engineer create reliable robust design assessing point uncertainty wide variation possible input corresponding effect viability model
+Refinement computer model significantly impact accuracy evaluation thing bridge stress ability risk
+
+Find best broker trading investing need A sensitivity analysis technique used determine different value independent variable impact particular dependent variable given set assumption
+This technique used within specific boundary depend one input variable effect change interest rate bond price
+Assume Sue sale manager want understand impact customer traffic total sale
+She determines sale function price transaction volume
+The price widget Sue sold last year total sale
+Sue also determines increase customer traffic increase transaction volume allows build financial model sensitivity analysis around equation based statement
+It tell happens sale customer traffic increase
+Based transaction today increase customer traffic equates increase transaction
+The sensitivity analysis demonstrates sale highly sensitive change customer traffic
+In finance sensitivity analysis created understand impact range variable given outcome
+It important note sensitivity analysis scenario analysis
+As example assume analyst want sensitivity analysis scenario analysis around impact EPS company relative valuation using
+The sensitivity analysis based variable impacting valuation financial model depict using variable price EPS
+The sensitivity analysis isolates variable record range possible outcome
+A scenario analysis hand based scenario
+The analyst determines certain scenario market crash change industry regulation
+He change variable within model align scenario
+Put together analyst comprehensive picture
+He know full range outcome given extreme understanding outcome would given specific set variable defined scenario
+
+Want watch later
+You running restaurant four year
+While business consistent seen increase business last two year
+You spend time analyzing business determine increase sale next twelve month
+As part review sensitivity analysis
+A hypothesis happen variable changed
+More specifically analyzing happen one variable changed
+In word change something business affect aspect business overall operation
+In example consider different area restaurant change make educated assumption result change
+As start sensitivity analysis begin planning change could make restaurant
+You could change menu change theme type food offer add catering expand dining room size
+In looking option consider cost change result anticipate
+Upon reviewing option determine changing theme expanding dining room size costly justified based amount revenue option would bring
+There change made would immediately affect success restaurant
+You review menu determine item selling well decide remove item adding new option
+You analyze would happen added catering
+By making change easily increase revenue next six month
+The sensitivity analysis reveals option offer opportunity increase revenue without extensive increase cost
+Get FREE access day create account
+Using help make important valuable business decision
+In performing sensitivity analysis necessary review different option determine variable affect
+It also allows look aspect affect decision may value attached
+For instance restaurant area see greater demand tourist season need plan seasonal change business
+This affect need make alteration change demand
+Doing sensitivity analysis allows company evaluate making adjustment modification affect business seeing sensitive company change
+When company asks impact business
+performing basic sensitivity analysis
+Some change may sizable impact success business making educated assumption manager make change likely positive outcome
+To unlock lesson must Member
+Already member
+Did We college course prepare earn credit exam accepted college university
+You test first two year college save thousand degree
+Anyone earn regardless age education level
+To learn visit Not sure college want attend yet
+thousand article every imaginable degree area study career path help find school right
+Get unbiased info need find right school
+Browse area study degree level
+Back To Course chapter lesson Next Lesson copyright
+All trademark copyright property respective owner
+All right reserved
+Your Cart Empty
+Please Choose Product
+video lesson helped student
+I learned month chemistry class Ashlee I aced CLEP exam earned Clair video lesson helped engage student
+The video changed way I teach
+The video accomplish would take entire class
+Chris Students condition performed better receiving instruction
+Department Education
+
+Studypool value privacy
+Only question posted visible website
+In word describe meant Sensitivity Analysis
+A discussion question Attached
+Sensitivity Analysis It technique used determine different value independent variable affect dependent variable given certain condition
+It technique specific boundary depend input variable
+Brown University Tutors California Institute Technology Tutors Carnegie Mellon University Tutors Columbia University Tutors Dartmouth University Tutors Emory University Tutors Harvard University Tutors Massachusetts Institute Technology Tutors New York University Tutors Notre Dam University Tutors Oklahoma University Tutors Pennsylvania State University Tutors Princeton University Tutors Stanford University Tutors University California Tutors Oxford University Tutors Yale University Tutors Enter email address associated account email link reset password
+Accounting Communications Geology Physics Algebra Computer Science Health Medical Political Science Art Design Economics History Programming Article Writing Engineering Law Psychology Biology English Management Python Business Finance Environmental Science Marketing SAT Calculus Film Mathematics Social Science Chemistry Foreign Languages Philosophy Sociology Statistics Science Website Design Writing Essay Writing Questions Archive Accounting Environmental Science Political Science Algebra Essay Writing Programming Art Design Film Psychology Article Writing Foreign Languages Python Biology Geology Questions Archive Business Finance Health Medical SAT Calculus History Science Chemistry Law Social Science Communications Management Sociology Computer Science Marketing Statistics Economics Mathematics Website Design Engineering Philosophy Writing English Physics Accounting Communications Geology Physics Statistics Algebra Computer Science Health Medical Political Science Science Art Design Economics History Programming Website Design Article Writing Engineering Law Psychology Writing Biology English Management Python Essay Writing Business Finance Environmental Science Marketing SAT Philosophy Calculus Film Mathematics Social Science Sociology Chemistry Foreign Languages Questions Archive Studypool powered Microtutoring Studypool inc California company
+
+obj stream ò
+HEM Áu n ÿ Á TÝ qß í
+uô îwv
+M z v Ö ø cØõrª hÎ Ú ÐíìËt ý é Öoa àçVÀ eïLyÃËÄæ Ç
+Ý mø ovËó ÍÃ Kä û ÈUð XB iO endobj obj endobj obj R R R R R R endobj obj stream mï ÍJÍÓÜ ÿ
+ð ø V qN ÂCUÙü vû Ë Vq x
+ã b ìM U ÖqJ ºàÍ
+Ú U x éSHcá rÒ ÂÀêá pHeÃþÉ ÕibÙ C G p úÀ ùxh Õ K ã L R ý Ø OÐýÈ ªd ÕËò Ié ª DÏÀ ySß Ù Þó Ç aÕ cã
+
+ã oÞq õ Ú âX ºã V WáþØgQfH
+M æÛ Uo mGÝÿé endobj obj endobj obj R R R R R endobj obj stream í
+ï K úusD à Óè kÁ Ý õÔ pÈf zÜ Ü
+NïâÞÃ åüô ú ÿúºÖ ßæZ l Úºy UÕüSÌä coú
+üd Ì æ ªúpëÎgoÍ Ød µ É céÐw W yß Ñ µ Ù In üàéÉ nã ß è
+u À Btñ ñôé yýË ó Çºª Á í mWôÙ O RóÁçn ÕÞ bÿq
+
+Allameh Tabatabai University Lund University United States Environmental Protection Agency Allameh Tabatabai University United Arab Emirates University
+
+This view SA process highly consistent A conceptual difficulty theoretical framework using optimisation model outlined appendix
+This version paper modified original journal article reduce emphasis economics since content relevant discipline simplify section Bayesian decision theory moving part Appendix
+
+statistical measure performance also known statistic Another way understand context sensitivity extent true positive false negative specificity extent positive really represent condition interest condition mistaken false positive
+Thus highly sensitive test rarely overlook positive example showing nothing bad despite something bad existing highly specific test rarely register positive anything target testing example finding one bacterial specie another closely related one true target test highly sensitive highly specific rarely overlook thing looking rarely mistake anything else thing
+Because medical test sensitivity specificity value rarely equate
+But practical reason test sensitivity specificity value high credibility albeit usually certainty
+Sensitivity therefore quantifies avoiding specificity
+For test usually measure instance since testing passenger potential threat safety scanner may set trigger alarm item like belt buckle key low specificity order increase probability identifying dangerous object minimize risk missing object pose threat high sensitivity
+This represented graphically using curve
+A perfect predictor would described sensitive meaning sick individual correctly identified sick specific meaning healthy individual incorrectly identified sick
+In reality however predictor posse minimum known
+Imagine study evaluating new test screen people disease
+Each person taking test either disease
+The test outcome positive classifying person disease negative classifying person disease
+The test result subject may may match subject actual status
+In setting In general Positive identified negative rejected
+Therefore Let u consider group positive instance negative instance condition
+The four outcome formulated follows Sensitivity refers test ability correctly detect ill patient condition
+In example medical test used identify disease sensitivity test proportion people test positive disease among disease
+Mathematically expressed A negative result test high sensitivity useful ruling disease
+A high sensitivity test reliable result negative since rarely misdiagnoses disease
+A test sensitivity recognize patient disease testing positive
+A negative test result would definitively presence disease patient
+A positive result test high sensitivity useful ruling disease
+Suppose test kit designed show one reading positive
+When used diseased patient patient test positive giving test sensitivity
+However sensitivity definition take account false positive
+The bogus test also return positive healthy patient giving false positive rate rendering useless detecting ruling disease
+Sensitivity ratio true positive combined true false positive much statement proportion actual positive population tested test
+The calculation sensitivity take account indeterminate test result
+If test repeated indeterminate sample either excluded analysis number exclusion stated quoting sensitivity treated false negative give value sensitivity may therefore underestimate
+Specificity relates test ability correctly reject healthy patient without condition
+Consider example medical test diagnosing disease
+Specificity test proportion healthy patient known disease test negative
+Mathematically also written A positive result test high specificity useful ruling disease
+The test rarely give positive result healthy patient
+A test specificity read negative accurately exclude disease healthy patient
+A positive result signifies high probability presence disease
+A test higher specificity lower rate
+High sensitivity low specificity Low sensitivity high specificity In test sensitivity ability test correctly identify disease true positive rate whereas test specificity ability test correctly identify without disease true negative rate
+If patient known disease tested test positive test sensitivity
+If disease tested return negative result test specificity
+Sensitivity specificity test characteristic value intrinsic test depend disease prevalence population interest
+Positive negative predictive value sensitivity specificity value influenced prevalence disease population tested
+These concept illustrated graphically applet show positive negative predictive value function prevalence sensitivity specificity
+It often claimed highly specific test effective ruling disease positive highly sensitive test deemed effective ruling disease negative
+This led widely used mnemonic SPIN SNOUT according highly SPecific test Positive rule IN disease highly test Negative rule OUT disease
+Both rule thumb however inferentially misleading diagnostic power test determined sensitivity specificity
+The tradeoff Specificity Sensitivity explored trade TPR FPR Recall Fallout
+Giving equal weight optimizes Informedness magnitude give probability informed decision two class represents appropriate use information represents performance represents perverse use information
+The pronounced used signal
+It provides separation mean signal noise distribution compared standard deviation noise distribution
+For signal noise mean standard deviation respectively defined An estimate also found measurement hit rate rate
+It calculated function inverse
+statistic
+A higher indicates signal readily detected
+Hence large number false positive false negative positive screen test poor confirming disorder PPV investigation must undertaken however correctly identify case sensitivity
+However screening test negative result good reassuring patient disorder NPV initial screen correctly identifies cancer specificity
+Sensitivity specificity value alone may highly misleading
+The sensitivity specificity must calculated order avoid reliance experiment result
+For example particular test may easily show sensitivity tested gold standard four time single additional test gold standard gave poor result would imply sensitivity
+A common way state often calculated using Wilson score interval
+sensitivity specificity calculated giving range value within correct value lie given confidence level
+In positive predictive value called sensitivity called
+Unlike Specificity v Sensitivity tradeoff measure independent number true negative generally unknown much larger actual number relevant retrieved document
+This assumption large number true negative versus positive rare application
+The used single measure performance test positive class
+The precision recall In traditional language sensitivity test called test although word context general usage applicable present context
+A sensitive test fewer
+

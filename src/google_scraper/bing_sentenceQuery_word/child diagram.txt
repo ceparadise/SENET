@@ -1,0 +1,240 @@
+Graphs mathematical concept found many us computer science
+Graphs come many different flavor many found us computer program
+Some flavor Most graph defined slight alteration following rule
+If u v edge set say sometimes write
+For example graph drawn Has following part
+The adjacency relation symetric undirected graph also case
+Has following part
+Note B D D B Edge set arc B D arrow direction
+Here following part
+Edge labeled graph usually drawn label drawn adjacent arc specifying edge
+Here following part
+Here following part
+Here following part
+Vertices like called sink
+Vertices like called source
+Here following part
+Graphs often used represent physical entity network road relationship people etc inside computer
+There numerous mechansims used
+
+Possible operation include
+Not program need operation program efficent representation compute operation needed others suffice
+represented function
+We could represent Dgraph follows In rest note assume Vertices type Vertices set finite range type
+Thus graph represented follows There many many algorithm graph
+In note look
+They include
+
+CS Odessa CS Odessa Corp
+
+In widely used ADT implementing simulates hierarchical root value child parent node represented set linked
+A tree data structure defined locally collection starting root node node data structure consisting value together list reference node child constraint reference duplicated none point root
+Alternatively tree defined abstractly whole globally value assigned node
+Both perspective useful tree analyzed mathematically whole actually represented data structure usually represented worked separately node rather set node edge node one may represent instance
+For example looking tree whole one talk parent node given node general data structure given node contains list child contain reference parent A tree data structure made node vertex edge without cycle
+The tree node called tree
+A tree empty consists root node potentially many level additional node form hierarchy
+There distinction tree abstract data type concrete data structure analogous distinction
+As data type tree value child child tree value child tree interpreted value root node subtrees child root node
+To allow finite tree one must either allow list child empty case tree required empty tree instead represented forest zero tree allow tree empty case list child fixed size especially binary desired
+As data structure linked tree group node value list node child
+There also requirement two downward reference point node
+Nodes tree could reference reference parent node
+Due use tree linked tree data structure tree often discussed implicitly assuming represented reference root node often actually implemented
+For example rather empty tree one may null reference tree always reference tree may null
+Recursively data type tree defined value data type possibly empty together list tree possibly empty list subtrees child symbolically A tree consists value list tree
+More elegantly via tree one basic example tree defined term forest list tree tree consists value forest subtrees child Note definition term value appropriate assumes different tree connection simply list value
+As data structure tree defined node root consists value data type possibly empty together list reference node list possibly empty reference possibly null symbolically A node consists value list reference node
+This data structure defines directed graph tree one must add condition global structure topology namely one reference point given node node single parent node tree point root
+In fact every node root must exactly one parent root must parent
+Indeed given list node node list reference child one tell structure tree without analyzing global structure fact topologically tree defined
+As abstract tree type value type defined using abstract forest type list tree function axiom In term tree defined constructor empty forest tree root node given value child
+Viewed whole tree data structure generally value attached node
+Concretely required together Often tree fixed properly bounded particularly always two child node possibly empty hence two child node hence binary tree
+Allowing empty tree make definition simpler complicated rooted tree must hence empty tree allowed definition instead becomes empty tree rooted tree
+On hand empty tree simplify defining fixed branching factor empty tree allowed binary tree tree every node exactly two child tree possibly empty complete set operation tree must include fork operation
+A structure may contain value condition represent separate data structure could tree
+Each node tree zero tree convention tree drawn growing downwards
+A node child called child
+A node one parent
+An also known short node tree child node
+Similarly also known node child node
+The topmost node tree called
+Depending definition tree may required root node case tree may allowed empty case necessarily root node
+Being topmost node root node parent
+It node algorithm tree begin since data structure one pas parent child
+Note algorithm search begin root first visit leaf node access value leaf node visit root last first access child root access root last
+All node reached following
+In formal definition path also unique
+In diagram root node conventionally drawn top
+In tree root node special property
+Every node tree seen root node subtree rooted node
+The node length longest downward path leaf node
+The height root height tree
+The node length path root
+This commonly needed manipulation various tree particular
+The root node depth zero leaf node height zero tree single node hence root leaf depth height zero
+Conventionally empty tree tree node allowed height
+A tree tree consisting node descendant
+Nodes thus correspond subtrees node corresponds subtree descendant subtree corresponding root node entire tree node root node subtree determines subtree corresponding node called analogy
+Trees often drawn plane
+Ordered tree represented essentially uniquely plane hence called follows one fix conventional order say counterclockwise arranges child node order first incoming parent edge first child edge etc
+yield embedding tree plane unique
+Conversely embedding determines ordering child node
+If one place root top parent child place node given distance root term number edge level tree given horizontal line one obtains standard drawing tree
+Given binary tree first child left left node second child right right node
+There many different way represent tree common representation represent node record pointer child parent item relationship determined position array
+Indeed binary tree implemented list list list value list head list value first term left child subtree tail list second subsequent term right child subtree
+This modified allow value well Lisp head value first term value node head tail value second term left child tail tail list third subsequent term right child
+In general node tree pointer parent information included expanding data structure also include pointer parent stored separately
+Alternatively upward link included child node data
+If edge child node thought reference tree special case digraph tree data structure generalized represent removing constraint node may one parent cycle allowed
+Edges still abstractly considered pair node however term usually replaced different terminology example
+Different exist digraph represented local data structure tree node value list child assuming list child list reference globally structure
+In connected acyclic unless stated otherwise graph theory tree graph assumed undirected
+There correspondence tree tree data structure
+We take arbitrary undirected tree arbitrarily pick one make edge directed making point away root node producing assign order node
+The result corresponds tree data structure
+Picking different root different ordering produce different one
+Given node tree child define ordered forest union subtrees given child equivalently taking subtree given node erasing root
+Just subtrees natural recursion search forest natural search
+Via forest defined list tree represented root node node tree consists value forest child Stepping item tree mean connection parent child called action tree
+Often operation might performed pointer arrives particular node
+A walk parent node traversed child called walk walk child traversed respective parent traversed called walk walk node left subtree node finally right subtree traversed called traversal
+This last scenario referring exactly two subtrees left subtree right subtree assumes specifically
+A walk effectively performs entirety tree node traversed level level root node visited first followed direct child node sibling followed grandchild node sibling node tree traversed
+
+Studypool value privacy
+Only question posted visible website
+Select one following scenario The entity relationship diagram crucial creation successfully implemented application database
+A good understanding identify component define Entity Relationship Diagram needed
+Select one following scenario anddesign entity relationship diagram following component Sub Shop starting online ordering system provide local delivery within five mile sub shop
+The customer order limited menu sandwich sub shop creates
+The online order system need track following information customer order product
+They shop need know quantity ordered topping direction order
+The delivery drive need know address phone number customer
+You asked develop database maintain detail football team signed play local league including schedule
+The database must maintain detail name location team team player position team
+So handicap system developed later database maintain gender age player
+Each player also one number stored
+Schedule field location game team play
+A local university starting internship program senior gain real world experience local business gain experience business word
+The following information need tracked student intern opportunity company degree program application
+The detail related student name degree program contact information
+For company need track company name address contact information Please identify additional information would necessary support database design
+A local community center establishing playgroup introduce child neighborhood parent child
+This playgroup sponsor weekly play session structured activity free play time week
+If program successful community center would like offer play session daily basis
+The following information need considered parent one child parent information including name phone number mailing address need tracking
+name gender age need tracked
+The ability track one session including date time location session type
+Eventually community center would like add additional special parent child would interested
+A local company starting provide pet sitting service local community
+This company provide daily pet sitting service dog cat fish bird reptile
+Each employee insured certified pet care specialist
+The company need track following employee information employee name address pet type certified support hourly rate availability
+Information pet owner need track including pet owner name address billing information phone number
+The pet information includes pet type pet name pet medication pet like dislike
+The company need track pet sitting requirement pet including number visit per day total number day pet sitting order special requirement addition special pet food treat information need track pet
+Each pet owner one pet
+Attached
+Running head ERD DIAGRAM DEFINITION ERD Diagram Definition Course Your name Name optional University ERD DIAGRAM DEFINITION Contents Introduction Entities Ordering system Customer Table Product Table Order Table The Entity Attributes Customer Table Attributes Product Table Attributes Order Table Attributes Entity Its Attributes Primary Key Brown University Tutors California Institute Technology Tutors Carnegie Mellon University Tutors Columbia University Tutors Dartmouth University Tutors Emory University Tutors Harvard University Tutors Massachusetts Institute Technology Tutors New York University Tutors Notre Dam University Tutors Oklahoma University Tutors Pennsylvania State University Tutors Princeton University Tutors Stanford University Tutors University California Tutors Oxford University Tutors Yale University Tutors Enter email address associated account email link reset password
+Accounting Communications Geology Physics Algebra Computer Science Health Medical Political Science Art Design Economics History Programming Article Writing Engineering Law Psychology Biology English Management Python Business Finance Environmental Science Marketing SAT Calculus Film Mathematics Social Science Chemistry Foreign Languages Philosophy Sociology Statistics Science Website Design Writing Essay Writing Questions Archive Accounting Environmental Science Political Science Algebra Essay Writing Programming Art Design Film Psychology Article Writing Foreign Languages Python Biology Geology Questions Archive Business Finance Health Medical SAT Calculus History Science Chemistry Law Social Science Communications Management Sociology Computer Science Marketing Statistics Economics Mathematics Website Design Engineering Philosophy Writing English Physics Accounting Communications Geology Physics Statistics Algebra Computer Science Health Medical Political Science Science Art Design Economics History Programming Website Design Article Writing Engineering Law Psychology Writing Biology English Management Python Essay Writing Business Finance Environmental Science Marketing SAT Philosophy Calculus Film Mathematics Social Science Sociology Chemistry Foreign Languages Questions Archive Studypool powered Microtutoring Studypool inc California company
+
+This action might possible undo
+Are sure want continue
+An Example Data Flow Diagram available
+
+Create physical data flow child diagram Create physical data flow child diagram following situation The local PC Users Group hold meeting month informative speaker door prize session special interest group
+A laptop computer taken meeting used add name new member group
+The diagram represents online process child process ADD NEW MEMBERS
+The following task included
+Key new member information
+Validate information
+Errors displayed screen
+When information valid confirmation screen displayed
+The operator visually confirms data correct either accepts transaction cancel
+Accepted transaction add new member MEMBERSHIP MASTER file stored laptop hard drive
+Accepted transaction written MEMBERSHIP JOURNAL file stored second hard drive
+Expected delivery within Hoursrs Questions Asked Experts Questions Answered Start Excelling course Ask Expert get answer homework assignment
+
+All right reserved
+
+Your assessment important improving work artificial intelligence form content project
+
+Venn diagram going nickname primary diagram set diagram logic diagram widely known
+This kind diagram show possible logical relation finite collection different set
+These diagram depict element point plane well set region inside closed curve
+A Venn diagram consists multiple overlapping closed curve usually represented circle represents set
+The point inside curve labeled S represent element set S point outside boundary represent element set S
+In Venn diagram curve overlapped different way showing possible relation existing set
+This kind diagram invented year paper work named On Diagrammatic Mechanical Representation Propositions Reasonings John Venn Philosophical Magazine Journal Science used teach elementary set theory well illustrate simple set relationship logic linguistics probability computer science
+Venn never used term Venn diagram referred invention Eulerian Circles
+An scaled Venn diagram Venn diagram area shape proportional number element contains
+Venn diagram general similar Euler diagram invented Leonhard Euler century
+Baron noted Leibniz century produced similar diagram Euler unpublished
+In century Venn diagram better developed Henderson showed existence diagram rotational symmetry implied n prime number mean natural number greater positive divisor
+Henderson also showed symmetric Venn diagram exist n
+In year Peter Hamburger found symmetric Venn diagram n Griggs Killian Savage showed symmetric Venn diagram exist prime
+Thus rotationally symmetric Venn diagram exist n prime number
+Venn diagram Euler diagram incorporated part instruction set theory part new math movement
+Since also adopted curriculum field
+A Venn diagram built using collection simple closed curve plane
+The principle diagram class also known set represented region relation one another possible logical relation class set indicated diagram
+That diagram initially leaf room possible relation class
+The actual given relation within diagram specified indicating particular region null
+Venn diagram normally comprise overlapping circle
+The inner part circle aid symbol represents element set
+The exterior though implies element included set
+For example Venn diagram one circle may represent group object made wood another circle may represent set table
+The overlapping region would represent set wooden table
+Any shape circle employed shown Venn higher set diagram
+Venn diagram contain information relative absolute size set similar Euler diagram mentioned
+However Venn diagram n component set must contain hypothetically possible zone correspond combination inclusion exclusion component set
+The difference Euler diagram Venn diagram Euler diagram contain actually possible zone given context
+In Venn diagram though shaded zone may represent empty zone
+At time Euler diagram corresponding zone missing diagram
+As example imagine one set representing dairy product another one cheese
+In case Venn diagram contains zone cheese dairy product
+Thus context cheese mean type dairy product Euler diagram cheese zone entirely contained within one zone cheese
+In case Euler diagram typically le visually complex similar Venn diagram especially number intersection small
+Once plan draw mentioned diagram including Venn one find useful tool allows make needed drawing within short period time necessary tool design element symbol always available ConceptDraw PRO user basic application rest needed solution always downloaded ConceptDraw STORE site
+You always draw Venn diagram purpose computer science using ConceptDraw PRO diagramming vector drawing software extended Venn Diagrams solution
+The Venn Diagrams solution always downloaded Diagrams area ConceptDraw Solution Park site ConceptDraw STORE
+Venn Diagrams Solution The Venn diagram example visualizes class language inclusion described Chomsky hierarchy
+Within field computer science specifically area formal language Chomsky hierarchy occasionally referred hierarchy containment hierarchy class formal grammar
+This hierarchy grammar described Noam Chomsky
+It also named Schützenberger played crucial role development theory formal language
+The Chomsky Hierarchy essence allows possibility understanding use computer science model enables programmer accomplish meaningful linguistic goal systematically
+Venn Diagram Problem Solving Chomsky Hierarchy A graphical representation set language included Chomsky hierarchy
+The Chomsky hierarchy consists following level Having ConceptDraw PRO software well ConceptDraw STORE one allows anyone care drawing look nice also smart professional get needed result hour even minute depending familiar ConceptDraw PRO
+CS Odessa CS Odessa Corp
+
+Problem Draw logical child diagram Diagram Problem process add new customer currently database never ordered Perfect Pizza
+Problem Explode diagram Problem showing major process
+Call Diagram
+It logical data flow diagram
+Problem Draw data flow diagram Perfect Pizza Problem
+Problem Perfect Pizza want install system record order pizza chicken wing
+When regular customer call Perfect Pizza phone asked phone number
+When number typed computer name address last order date automatically brought screen
+Once order taken total including tax delivery calculated
+Then order given cook
+A receipt printed
+Occasionally special offer coupon printed customer get discount
+Drivers make delivery give customer copy receipt coupon
+Weekly total kept comparison last year performance
+Write summary business activity taking order Perfect Pizza
+Choose Subject Â Select Duration Â Schedule Session Get notified immediately answer question available
+Draw logical child diagram Diagram Problem process add new customer currently database never ordered Perfect Pizza record order pizza chicken wing
+When regular customer call Perfect Pizza phone asked phone number
+When number typed computer
+Problem Perfect Pizza want install system record order pizza chicken wing
+When regular customer call Perfect Pizza phone asked phone record order pizza chicken wing
+When regular customer call Perfect Pizza phone asked phone number
+When number typed computer computer name address last order date automatically brought screen
+Once order taken total including tax delivery calculated
+Then By creating account agree We post anything without permission Attach Files
+
+ÐÄÆ obj R stream xí ÛnÇ Kreû Z kcë ÊÊÔCåµ Üo ë kN ÿàÂ F VÑ w Ja ä åª r é
+

@@ -1,0 +1,289 @@
+Partial order theory widely employed computer science particularly logic formal method programming language static analysis
+But partial order theory intertwined field like topology zoo definition concept attached area
+Not commonly used computer science
+In article I summarized fragment partial order theory commonly used computer science particular home fragment static analysis
+Topics covered include preorders equivalence relation total order partial order semilattices lattice bounded lattice complete lattice monotonicity fixed point Kleene fixed point theorem
+At end find natural liftings partial order lattice across power set Cartesian product sequence function space
+Where applicable formal definition transliterated Haskell
+If interested partial order theory static analysis check appendix It comprehensive
+The header Haskell code file And ghc extension used A binary relation set X iff relation reflexive transitive
+A binary relation R x R x x
+A binary relation R R b b R c implies R c
+An preorder also symmetric
+A binary relation R R b implies b R
+An equivalence relation divide set S equivalence class
+The element x x The set equivalence class X relation set
+Every preorder induces natural equivalence relation A preorder antisymmetric
+A set X equipped partial order often described pair X
+A binary relation R R b b R implies b
+In Haskell define partial order type class A binary relation total transitive antisymmetric
+A binary relation R two value b R b b R
+Totality implies reflexivity mean every total order also partial order
+A poset two element b greatest lower bound denoted b
+The greatest lower bound b largest element still le
+In lattice greatest lower bound must unique
+The greatest lower bound b also called b
+The following property A poset two element b least upper bound denoted b
+The least upper bound b smallest element still greater
+In lattice least upper bound must unique
+The least upper bound b also called b
+The following property If poset meet semilattice join semilattice poset also
+In Haskell lattice partial order meet join defined A lattice L exists maximum element top minimum element bottom set L
+For element x lattice must case In Haskell type class bounded lattice defines top bottom A lattice L every possibly infinite subset S L least upper bound sup S greatest lower bound inf S
+Every complete lattice L bounded lattice Given posets X Y function f X Y x x implies f x f x
+To define continuous function first need define function application across set
+Given function f X Y S X f x x S
+Alternately f f
+In text function application notationally distinguished ordinary function application
+Given lattice X Y function f X Y S X implies f sup S sup
+function also monotonic
+Given function f X X x f x f x
+With respect monotonic function f X X complete lattice X divide set X region It useful distinguish least greatest fixed point The following property hold region I recommend proving property short exercise
+Given monotonic function f L L lattice L starting point x L set K x The notation mean iterated function composition If x Asc f ascending order chain K x since x x x Asc f
+In Haskell infinite list represents Kleene chain starting bottom On lattice Kleene fixed point theorem say Moreover lattice finite height exists natural n lfp f
+This fact lead simple algorithm computing fixed point
+The function look first element sequence repeat neighbor So least fixed point function look stable point Kleene sequence There several natural liftings posets lattice across foundational discrete data structure flat set power set Cartesian product sum sequence function
+Given set S pointed poset contains bottom And pointed poset contains top If S poset order extended pointing lattice In Haskell Given set S lift S L x iff In Haskell Given collection posets naturally lift partial order poset If posets lattice resulting poset lattice default
+To make lattice must pointed
+Given lattice natural Cartesian product lattice In Haskell Given poset L natural sequence poset As sum sequence must pointed become lattice
+That sequence greater lesser sequence sequence different length always incomparable
+In Haskell Given set S subset S form lattice inclusion P S
+Given partial order X define preordered set P X Why partial order
+Consider set natural number natural total order
+Under regime yet violates antisymmetry
+Of course possible lift preorder partial order equivalence class
+Alternatively set canonicalized equivalence class represented single distinguished member
+If preorder also partial order possible lift partial order equivalence class preorder
+Given preordered set X natural partial order equivalence class poset b iff b b Given lattice Y set X natural lattice lattice X Y In Haskell This post scratch surface order theory leaf even application computer science
+The two biggest omission reserved future post ordinal Scott domain theory
+The ordinal extend natural number transfinite arithmetic provide powerful structure
+That structure powerful mechanism reasoning program termination
+Scott domain theory give meaningful interpretation infinitely recursive domain equation arise denotational semantics
+If like learn Haskell I recommend And using Haskell I recommend
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+In Section Transaction Histories A H set transaction consists two part event E reflects operation read write abort commit transaction version order committed object version
+The author give comment partial order event Page For convenience present history event example consistent partial order
+Furthermore wherever possible example make total order consistent event database system
+Why present partial order event total order
+Because partial order may imply multiple total order consistent one choose
+Does choice matter later definition theorem
+Some comment total version order Page follows The version order history H different order write commit event H
+This flexibility needed allow certain optimistic implementation possible version placed version version order even though installed committed state installed
+And The system chooses version order object
+What mean database system choose version order
+And
+Is
+concern Question theoretical result state partial order S extended total order S contains S
+This result known Order Extension Principle proof result us Axiom Choice I aware whether alternative proof use
+The paper written French find proof
+When Adya state chooses order event best guess assumes implementation database case every history H corresponds execution database event totally ordered order order
+More specifically requiring partial order history H extended total order Adya imposes whenever H instant time event take place execution database lead H le instant time take place
+Choosing order event extend partial order history H needed one want prove correctness abstract specification
+set property history satisfy respect given specification
+Let turn Question case seems Adya want stress fact allows implementation database access version object precedes version order latest version installed
+In practice choosing earlier version object could either result database able access version
+lost update anomaly causal consistency user explicitly requesting access older version object
+accessing older version revision SVN repository
+Hope help Andrea Cerone
+Edward Szpilrajn sur de partiel By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+In book Martin Davis writes chapter two A partial function said partially computable computed program
+also A function said computable partially computable total
+From first definition partially computable function must second definition computable function must partially computable total contradiction function partially computable partial partial function total time
+The definition exclude possibility function total
+On contrary every total function fortiori partial function
+Perhaps terminology unfortunate
+A D R subset f D R D exists unique r R denoted f r f
+The f dom f D
+A D R R function f D R
+When f say f
+The f dom f D f
+If dom f D f
+For every partial function f dom f total function
+As see partial function function undefined input total function partial function happens defined everywhere
+Now regarding computability
+Every program computes partial function f N N program halt input x f undefined x word f x
+A computable function one computed algorithm always halt
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+use following search parameter narrow result
+Welcome Computer Science researcher student professional enthusiast
+We share discus content computer scientist find interesting
+Q A thread welcome prefer high quality post focused directly graduate level CS material
+We discourage post introductory material study CS career
+For topic please consider one subreddits sidebar instead
+Read original free see Other optic likely better suited Other online community If new Computer Science please read posting
+A list book recommendation community various topic found
+front page internet
+subscribe one thousand community
+This archived post
+You wo able vote comment
+submitted I know supposed help able think rationally etc
+direct use otherwise
+The closest I found Big O notation I really understand
+Post comment
+Integral differential calculus set mental tool use solve problem world
+It easy dismiss irrelevant learning problem book entirely divorced reality plenty application
+Reasoning algorithm performance say primary purpose computer science find way use unexpected way job
+You know saying hammer everything look like nail
+It true enough good luck hammering bolt
+The integral differential calculus set good wrench applicable every job absolutely necessary one designed
+I totally agree example I make presentation example integral calculus used computer engineering could I talk
+The time I recall seeing used CS undergrad algorithm course
+We used approximation series hard work approximation probability
+Those us expected course since integral continuous version series easy find event whose probability nasty
+The sort probability approximation used applied probability class numerous place
+If look CLRS Algorithm Design textbook algorithm data structure I sure see I talking
+Especially look section approximation algorithm problem performance different hash scheme
+All could put heading us theoretical CS
+It probably least useful compared discrete mathematics algebra logic field
+But many application integral calculus especially computer graphic lighting raytracing physic engine basically force represenatations based calculus also computer vision
+notation try describe function scale compared input size grows use lot stuff found calculus like comparing function using limit derivative etc
+Some advanced method use integral calculus example
+Integral calculus also often used probabilistic algorithm analysis le often approximation algorithm
+In used analyze asymptotic behavior mathematical appear analysis substantially different size
+It generalization assumes equal size
+It depends sort work
+For run mill business application development certainly wo use calculus much
+For application science certain type engineering used daily basis
+For run mill business application development certainly wo use calculus much
+One example I think top head calculating total cost carrying inventory
+Let say estimated cost per unit per day essentially use integral determine total cost inventory period time
+But right business application require explicit use calculus
+I sure accurate I always viewed calculus necessary order force certain level mathematical maturity
+If handle handle discrete math linear algebra IMO relevant
+It foundation I guess
+Summations crop algorithm analysis I ca remember using integral solve CS problem
+Fouier series transform laplace transform use integral basis signal processing analysis heat transfer
+The precise value math constant computer language provide summing large range
+Pi e An integral curve give area bound respect ax
+And many application lazy Knowing turn function polynomial function computer compute
+Continuous time Markov chain important application improving performance analysis computer network devising better routing algorithm
+Integral calculus used calculate probability density function continuous random variable Markov chain
+Physics simulation numeric integration heart
+Use site constitutes acceptance
+reddit All right reserved
+REDDIT ALIEN Logo registered trademark reddit inc
+
+It Where attribute depend reliey A functional dependency hold relation partial removing one determining attribute give
+Partial dependency mean non prime attribute functionally dependent part TutorSense Course Hero homework study help need succeed
+We got note study guide practice test along expert tutor customizable anywhere anytime
+Find best study resource around tagged specific course
+Share gain free Course Hero access earn money Marketplace
+Get homework help expert online
+Ask question browse existing Q A thread
+Satisfaction guaranteed
+Browse existing set create using digital flashcard system
+A simple yet effective studying tool help earn grade want
+Or get help Computer Science expert
+Copyright
+Course Hero Inc
+Course Hero sponsored endorsed college university
+
+obj R endobj obj stream gÜZëK KkÌGºJéÒ ptËâlÅ
+yç z Ê è Ì B bÐÝ F É e sÜÑzß ïéü q ovQ ì z àÞo u L jendstream endobj obj R R R R R R R R R R R R R R R R R R R R R R R R R endobj obj R stream xÚÓÎP Îà ýðendstream endobj obj false false endobj obj R stream xÚÓÎP Îà ýðendstream endobj obj false false endobj obj R stream xÚÓÎP Îà ýðendstream endobj obj false false endobj obj R stream xÚÓÎP Îà ýðendstream endobj obj false false endobj obj R stream xÚÓÎP Îà ýðendstream endobj obj true false endobj obj R stream xÚÓÎP Îà ýðendstream endobj obj true false endobj obj R stream xÚÓÎP Îà ýðendstream endobj obj false false endobj obj R R R stream
+I u z QÉS Ì sä S ÈôhgÄ kà ß Ìz
+ñåªòSÿ DzØXô Î W gtTIÆ I îé Hj Î sA Ë e Rg ÙTá Y ü Z ä kW
+
+study theoretical foundation implementation application
+Computing science encompasses emphasize computation specific result others relate property
+Still others focus challenge implementing computation
+For example study approach describing computation applies specific craft solution concrete computational problem
+previously especially suited
+Originally developed campus south scientific engineering application Fortran came dominate area programming early continual use half century computationally intensive area
+It one popular language area language used program benchmark rank world
+Partial map Internet based January data found
+Each line drawn two node representing two IP address
+The length line indicative delay two node
+This graph represents le Class C network reachable data collection program early
+Lines according corresponding
+In early day Cerf program manager United States Department Defense Advanced Research Projects Agency DARPA funding various group develop technology
+When Internet began transition commercial opportunity late Cerf moved MCI instrumental development first commercial email system MCI Mail connected Internet
+Cerf instrumental funding formation ICANN start
+He waited wing year stepped forward join ICANN Board eventually becoming chairman
+Cerf went Van Nuys High School along Jon Postel Steve Crocker wrote former obituary
+Both also instrumental creation Internet
+Cerf also known sartorial style typically appearing rarity industry known casual dress norm
+The following sister project provide subject Books Media News Quotations Texts Learning resource Travel guide Definitions Database
+
+In widely used ADT implementing simulates hierarchical root value child parent node represented set linked
+A tree data structure defined locally collection starting root node node data structure consisting value together list reference node child constraint reference duplicated none point root
+Alternatively tree defined abstractly whole globally value assigned node
+Both perspective useful tree analyzed mathematically whole actually represented data structure usually represented worked separately node rather set node edge node one may represent instance
+For example looking tree whole one talk parent node given node general data structure given node contains list child contain reference parent A tree data structure made node vertex edge without cycle
+The tree node called tree
+A tree empty consists root node potentially many level additional node form hierarchy
+There distinction tree abstract data type concrete data structure analogous distinction
+As data type tree value child child tree value child tree interpreted value root node subtrees child root node
+To allow finite tree one must either allow list child empty case tree required empty tree instead represented forest zero tree allow tree empty case list child fixed size especially binary desired
+As data structure linked tree group node value list node child
+There also requirement two downward reference point node
+Nodes tree could reference reference parent node
+Due use tree linked tree data structure tree often discussed implicitly assuming represented reference root node often actually implemented
+For example rather empty tree one may null reference tree always reference tree may null
+Recursively data type tree defined value data type possibly empty together list tree possibly empty list subtrees child symbolically A tree consists value list tree
+More elegantly via tree one basic example tree defined term forest list tree tree consists value forest subtrees child Note definition term value appropriate assumes different tree connection simply list value
+As data structure tree defined node root consists value data type possibly empty together list reference node list possibly empty reference possibly null symbolically A node consists value list reference node
+This data structure defines directed graph tree one must add condition global structure topology namely one reference point given node node single parent node tree point root
+In fact every node root must exactly one parent root must parent
+Indeed given list node node list reference child one tell structure tree without analyzing global structure fact topologically tree defined
+As abstract tree type value type defined using abstract forest type list tree function axiom In term tree defined constructor empty forest tree root node given value child
+Viewed whole tree data structure generally value attached node
+Concretely required together Often tree fixed properly bounded particularly always two child node possibly empty hence two child node hence binary tree
+Allowing empty tree make definition simpler complicated rooted tree must hence empty tree allowed definition instead becomes empty tree rooted tree
+On hand empty tree simplify defining fixed branching factor empty tree allowed binary tree tree every node exactly two child tree possibly empty complete set operation tree must include fork operation
+A structure may contain value condition represent separate data structure could tree
+Each node tree zero tree convention tree drawn growing downwards
+A node child called child
+A node one parent
+An also known short node tree child node
+Similarly also known node child node
+The topmost node tree called
+Depending definition tree may required root node case tree may allowed empty case necessarily root node
+Being topmost node root node parent
+It node algorithm tree begin since data structure one pas parent child
+Note algorithm search begin root first visit leaf node access value leaf node visit root last first access child root access root last
+All node reached following
+In formal definition path also unique
+In diagram root node conventionally drawn top
+In tree root node special property
+Every node tree seen root node subtree rooted node
+The node length longest downward path leaf node
+The height root height tree
+The node length path root
+This commonly needed manipulation various tree particular
+The root node depth zero leaf node height zero tree single node hence root leaf depth height zero
+Conventionally empty tree tree node allowed height
+A tree tree consisting node descendant
+Nodes thus correspond subtrees node corresponds subtree descendant subtree corresponding root node entire tree node root node subtree determines subtree corresponding node called analogy
+Trees often drawn plane
+Ordered tree represented essentially uniquely plane hence called follows one fix conventional order say counterclockwise arranges child node order first incoming parent edge first child edge etc
+yield embedding tree plane unique
+Conversely embedding determines ordering child node
+If one place root top parent child place node given distance root term number edge level tree given horizontal line one obtains standard drawing tree
+Given binary tree first child left left node second child right right node
+There many different way represent tree common representation represent node record pointer child parent item relationship determined position array
+Indeed binary tree implemented list list list value list head list value first term left child subtree tail list second subsequent term right child subtree
+This modified allow value well Lisp head value first term value node head tail value second term left child tail tail list third subsequent term right child
+In general node tree pointer parent information included expanding data structure also include pointer parent stored separately
+Alternatively upward link included child node data
+If edge child node thought reference tree special case digraph tree data structure generalized represent removing constraint node may one parent cycle allowed
+Edges still abstractly considered pair node however term usually replaced different terminology example
+Different exist digraph represented local data structure tree node value list child assuming list child list reference globally structure
+In connected acyclic unless stated otherwise graph theory tree graph assumed undirected
+There correspondence tree tree data structure
+We take arbitrary undirected tree arbitrarily pick one make edge directed making point away root node producing assign order node
+The result corresponds tree data structure
+Picking different root different ordering produce different one
+Given node tree child define ordered forest union subtrees given child equivalently taking subtree given node erasing root
+Just subtrees natural recursion search forest natural search
+Via forest defined list tree represented root node node tree consists value forest child Stepping item tree mean connection parent child called action tree
+Often operation might performed pointer arrives particular node
+A walk parent node traversed child called walk walk child traversed respective parent traversed called walk walk node left subtree node finally right subtree traversed called traversal
+This last scenario referring exactly two subtrees left subtree right subtree assumes specifically
+A walk effectively performs entirety tree node traversed level level root node visited first followed direct child node sibling followed grandchild node sibling node tree traversed
+

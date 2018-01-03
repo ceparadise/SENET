@@ -1,0 +1,260 @@
+Lecture Symbolic Execution Flash JavaScript required feature
+Download video
+In lecture Professor MIT CSAIL present concept symbolic execution
+Armando Lecture Introduction Th Lecture Control Hijackin Lecture Buffer Overflow Lecture Privilege Separa Lecture Capabilities Lecture Sandboxing Nativ Lecture Web Security Model Lecture Securing Web App Lecture Symbolic Execution Lecture Lecture Network Security Lecture Network Protocols Lecture SSL HTTPS Lecture Medical Software Lecture At Lecture User Authentica Lecture Private Browsing Lecture Anonymous Commu Lecture Mobile Phone Se Lecture Data Tracking Lecture Guest Lecture b Lecture Security Economics This one course OCW
+Find material course page linked along left
+free open publication material thousand MIT course covering entire MIT curriculum
+Freely browse use OCW material pace
+There signup start end date
+Use OCW guide learning teach others
+We offer credit certification using OCW
+
+Download file later
+Send friend colleague
+Modify remix reuse remember cite OCW source
+Learn MIT OpenCourseWare make material used teaching almost MIT subject available Web free charge
+With course available OCW delivering promise open sharing knowledge
+Massachusetts Institute Technology Your use MIT OpenCourseWare site material subject
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+Now I confused symbolic execution SE reachability analysis RA
+As I know SE us symbol execute code reach branch branch condition
+And RA used find reachability branch right
+When RA used extract branch condition branch
+If difference
+Can swift
+Are static analysis
+Generally reachability analysis goal determine point code reachable whereas symbolic execution specific algorithmic technique tool analyzing code
+You use symbolic execution reachability analysis goal
+Conversely use algorithm reachability analysis
+Classically symbolic execution static analysis
+However recently widely used hybrid analysis see concolic execution
+These hybrid method seem effective purely static
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Contact information general information Get computing support CSRs
+A complete list course offered CS department
+Requirements earn computer science degree
+Research group CS department
+Research lab CS department
+Career Employment service
+CS department corporate relation
+BYU club homepage
+Family History Technology homepage
+CS department colloquium Willem Visser NASA Ames Research Center The talk consist three part brief introduction Java PathFinder JPF model checker novel feature symbolic execution implemented JPF latter used invariant generation predicate abstraction generation
+The introduction JPF include description general architecture well example tool usage
+The symbolic execution within JPF novel since support traditional constraint solving linear integer constraint well structural constraint array linked list tree etc
+The main part talk focus usage symbolic execution within JPF
+It shown loop termination treated invariant generation predicate abstraction based approach
+Lastly JPF capability generation tool highlighted showing used cover branch code manipulating tree
+Willem Visser received University Manchester
+His thesis introduced first efficient algorithm model checking property
+Prior PhD received University Stellenbosch South Africa work development model checker operating system kernel
+After completion study taught course model checking University Stellenbosch month October started work Research Institute Advanced Computer Science RIACS NASA Ames
+His main research focus application model checking programming language
+To end main developer Java PathFinder model checker Java TGIR Engineering Innovation award Office Aerospace Technology NASA
+This model checker first model checker Java language
+His current work focus using symbolic execution model checking generation program proof environment generation feasible detection model checking agent verification
+
+Enter mobile number email address send link download free Kindle App
+Then start reading Kindle book smartphone tablet computer Kindle device required
+To get free app enter mobile phone number
+There problem loading menu right
+
+In also mean analyzing program determine input cause part program execute
+An interpreter follows program assuming symbolic value input rather obtaining actual input normal execution program would case
+It thus arrives expression term symbol expression variable program constraint term symbol possible outcome conditional branch
+The field applies concept hardware
+applies concept analysis mathematical expression
+Consider program read value fails input
+During normal execution concrete execution program would read concrete input value assign
+Execution would proceed multiplication conditional branch would evaluate false print
+During symbolic execution program read symbolic value assigns
+The program would proceed multiplication assign
+When reaching statement would evaluate
+At point program λ could take value symbolic execution therefore proceed along branch forking two path
+Each path get assigned copy program state branch instruction well path constraint
+In example path constraint branch branch
+Both path symbolically executed independently
+When path terminate result executing simply exiting symbolic execution computes concrete value λ solving accumulated path constraint path
+These concrete value thought concrete test case help developer reproduce bug
+In example would determine order reach statement λ would need equal
+Symbolically executing feasible program path scale large program
+The number feasible path program grows exponentially increase program size even infinite case program unbounded loop iteration
+Solutions problem generally use either heuristic increase code coverage reduce execution time parallelizing independent path merging similar path
+Symbolic execution used reason program advantage reasoning program testing paradigm use
+
+However input take path program little saving testing input separately
+Programs interact environment performing system call receiving signal etc
+Consistency problem may arise execution reach component control symbolic execution tool kernel library
+Consider following example This program open file based condition writes different kind data file
+It later read back written data
+In theory symbolic execution would fork two path line path would copy file
+The statement line would therefore return data consistent value condition line
+In practice file operation implemented system call kernel outside control symbolic execution tool
+The main approach address challenge The advantage approach simple implement
+The disadvantage side effect call clobber state managed symbolic execution engine
+In example instruction line would return datasome data datasomedata depending sequential ordering state
+In case engine instrument system call model simulates effect keep side effect storage
+The advantage one would get correct result symbolically executing program interact environment
+The disadvantage one need implement maintain many potentially complex model system call
+Tools KLEE Otter take approach implementing model file system operation socket IPC etc
+Symbolic execution tool based virtual machine solve environment problem forking entire VM state
+For example state independent VM snapshot executed separately
+This approach alleviates need writing maintaining complex model allows virtually program binary executed symbolically
+However higher memory usage overhead VM snapshot may large
+The concept symbolic execution introduced academically description Select system EFFIGY system DISSECT system Clarke system
+See technical paper published symbolic execution
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+This written wiki entry I ca find reference
+Can anyone show pointer
+Thank
+I aware paper concerned comparison symbolic execution abstract interpretation
+Nor I think one needed
+Reading original description two technique enough
+Conversely would unexpected connection would worth describing
+But I much doubt case
+The main idea symbolic execution arbitrary point execution express value variable function initial value
+The main idea abstract interpretation systematically explore execution program series
+I hear several AI enthusiast groaning previous approximation
+Thus least original formulation symbolic execution concerned exploring possible execution
+You see even title includes word
+But Section For program infinite execution tree symbolic testing exhaustive absolute proof correctness established
+In contrast abstract interpretation aim explore execution
+To us several ingredient one similar main idea symbolic execution
+These ingredient abstract state joining widening hence title
+The concrete state program particular point time basically snapshot memory content including program code program counter
+This lot detail hard track
+When analyze particular property may want ignore large part concrete state
+Or may want care whether particular variable negative zero positive care exact value
+In general want consider abstract version concrete state
+For work must commutativity property If take concrete state execute statement abstract resulting state obtain result abstract initial state execute statement abstract state
+This commutativity diagram appears paper
+This common idea
+Again abstract interpretation general dictate abstract state say way
+In contrast symbolic execution say use symbolic expression mention initial value
+If program execution reach certain statement two different way symbolic execution try merge two analyzes
+That quote talk execution tree rather dag
+But remember abstract interpretation want cover execution
+Thus asks way merge analysis two execution point program counter
+The join dumb join b b amount symbolic execution
+In general joining sufficient guarantee eventually finish analyzing execution
+In particular dumb join mentioned earlier wo work
+Consider program loop range n dostuff
+How many time go around loop keep joining
+No fixed answer work
+Thus something else needed seen heuristic
+Suppose went around loop time learned
+Then say hmmm let widen get
+Again abstract interpretation say widening say property widening work
+Sorry long answer I really time make shorter
+I think meant shallow sense
+The first step abstract interpretation identify concrete collecting semantics
+Rather describe evolution single state collecting semantics describes evolution set state
+Since symbolic execution reason representation set state one argue represents concrete semantics program
+I aware precise correspondence worked
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Affiliation Department Computer Science Engineering University Host Professor Tingting Yu Time Date Friday September Location Marksbury Theater Abstract Symbolic execution applied last decade automate generation test suite perform precise differencing software version detect fault security vulnerability
+Symbolic execution treat path equally developer understand path executed much frequently either specific input likely set value drive execution path large
+In talk describe recent work incorporates probabilistic reasoning symbolic execution quantify likelihood executing program path
+We describe done sequential program detail sketch recent work concurrent program
+Applications technique include able quantify confidence property hold proven definitively ranking error based likelihood accelerating statistical program analysis
+Biography Matthew Dwyer Leonard Lovell Professor Engineering Chair Department Computer Science Engineering University
+He received Bachelors Electrical Engineering University Rochester Masters Computer Science University Massachusetts Boston Doctorate Computer Science University Massachusetts Amherst
+From worked Intermetrics development embedded system compiler
+He faculty member Kansas State University currently hold appointment Extraordinary Professor Stellenbosch University South Africa
+He published widely area program analysis software specification automated formal method
+His work received several award including ICSE Most Influential Paper SIGSOFT Impact Paper award named ACM Distinguished Scientist Fulbright Research Scholar IEEE Fellow
+Dwyer served program chair number top research conference including ACM SIGSOFT Symposium Foundations Software Engineering FSE International Conference Software Engineering ICSE ACM SIGPLAN Conference Programming Systems Languages Applications OOPSLA
+His editorial work includes serving International Journal Software Tools Technology Transfer Associate Editor ACM Transactions Programming Languages Systems since Editorial Board Member CACM Research Highlights since Associate Editor since IEEE Transactions Software Engineering
+Davis Marksbury Building Rose Street Lexington KY Phone Fax
+
+In also called scientific area refers study development manipulating
+Although properly speaking computer algebra subfield generally considered distinct field scientific computing usually based approximate symbolic computation emphasizes computation expression containing given value manipulated symbol
+application perform symbolic calculation called term alluding complexity main application include least method represent mathematical data computer user programming language usually different language used implementation dedicated memory manager mathematical expression large set perform usual operation like simplification expression using etc
+Computer algebra widely used experiment mathematics design formula used numerical program
+It also used complete scientific computation purely numerical method fail problem
+Some author distinguish using latter name refer kind symbolic computation computation mathematical
+Some author use computer science aspect subject computer algebra mathematical aspect
+In language name field direct translation English name
+Typically called French mean formal computation
+This name reflects tie field
+Symbolic computation also referred past term also refer manipulation use referring computer algebra
+There specific computer algebra function assumed named Special Interest Group Symbolic Algebraic Manipulation
+There several annual conference computer algebra premier International Symposium Symbolic Algebraic Computation regularly sponsored SIGSAM
+There several journal specializing computer algebra top one founded
+There also several journal regularly publish article computer algebra
+As highly efficient approximate common computer algebra emphasize computation exactly represented data
+Such exact representation implies even size output small intermediate data generated computation may grow unpredictable way
+This behavior called
+To obviate problem various method used representation data well algorithm manipulate
+The usual number system used either number fixed bounded size improperly called
+None convenient computer algebra expression swell
+Therefore basic number used computer algebra integer mathematician commonly represented unbounded signed sequence usually largest base allowed
+These integer allow define two integer
+Programming efficient implementation arithmetic operation hard task
+Therefore free commercial one like use thus standard
+Except every may viewed symbol operator followed operand
+In computer algebra software expression usually represented way
+This representation flexible many thing seem mathematical expression first glance may represented manipulated
+For example equation expression operator matrix may represented expression matrix operator row operand
+Even program may considered represented expression operator procedure least two operand list parameter body expression body operator sequence instruction operand
+Conversely mathematical expression may viewed program
+For example expression may viewed program addition parameter
+Executing program consists expression given value result evaluation simply input
+This process delayed evaluation fundamental computer algebra
+For example operator equation also computer algebra system name program equality test normally evaluation equation result equation equality test needed explicitly asked user evaluation Boolean command automatically started system case test inside evaluation boolean executed
+As size operand expression unpredictable may change working session sequence operand usually represented sequence either like entry like
+The raw application basic rule respect expression give result Such complicated expression clearly acceptable procedure simplification needed soon one work general expression
+This simplification normally done
+There several class rewriting rule considered
+The simplest consists rewriting rule always reduce size expression like
+They systematically applied computer algebra system
+The first difficulty occurs like addition multiplication
+The standard way deal associativity consider addition multiplication arbitrary number operand represented
+Thus simplified displayed
+What
+To deal problem simplest way rewrite systematically respectively
+In word internal representation expression subtraction division unary minus outside representation number
+A second difficulty occurs addition multiplication
+The problem recognize quickly order combine canceling
+In fact method finding like term consisting testing every pair term costly practicable long sum product
+For solving problem sort operand sum product function comparison designed order like term consecutive place thus easily detected
+In designed generating collision like term entered allowing combine soon introduced
+This design hash function allows also recognize immediately expression subexpressions appear several time computation store
+This allows save memory space also speed computation avoiding repetition operation several identical expression
+Some rewriting rule sometimes increase sometimes decrease size expression applied
+This case
+For example distributivity law allows rewriting As way make good general choice applying rewriting rule rewriting done explicitly asked user
+For distributivity computer function apply rewriting rule generally called expand
+The reverse rewriting rule called factor requires algorithm thus key function computer algebra system see
+In section consider fundamental mathematical question arise soon one want manipulate computer
+We consider mainly case
+This real restriction soon appearing expression simplified usually considered new indeterminates
+For example viewed polynomial There two notion equality
+The equality expression mean written represented computer way
+As trivial rarely considered mathematician equality easy test program
+The two expression represent mathematical object like It known may exist algorithm decides two expression representing number semantically equal exponential logarithm allowed expression
+Therefore semantical equality may tested class expression
+To test equality two expression instead design specific algorithm usual put put difference test syntactic equality result
+Unlike usual mathematics canonical form normal form synonymous computer algebra
+A two expression canonical form semantically equal syntactically equal expression normal form semantically zero syntactically zero
+In word zero unique representation expression normal form
+Normal form usually preferred computer algebra several reason
+Firstly canonical form may costly compute normal form
+For example put polynomial canonical form one expand every product necessary normal form see
+Secondly It may case like expression involving radical canonical form exists depends arbitrary choice choice may different two expression computed independently
+This may make impracticable use canonical form
+At beginning computer algebra circa first put computer turned highly inefficient
+Therefore large part work researcher field consisted revisiting classical order make discover implement effectiveness
+A typical example kind work computation required simplify fraction
+Surprisingly classical turned inefficient polynomial infinite field thus new algorithm needed developed
+The also true classical algorithm
+For detailed definition subject For textbook devoted subject
+
+ÐÔÅØ obj stream ÊÃ ÅO ÿ D ÄBMÓÓ Ò å
+

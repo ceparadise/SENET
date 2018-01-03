@@ -1,0 +1,457 @@
+In serf element two principal operation The order element come stack give rise alternative name
+Additionally operation may give access top without modifying stack
+The name stack type structure come analogy set physical item stacked top make easy take item top stack getting item deeper stack may require taking multiple item first
+Considered abstractly sequential collection push pop operation occur one end structure referred stack
+This make possible implement stack pointer top element
+A stack may implemented bounded capacity
+If stack full contain enough space accept entity pushed stack considered state
+The pop operation remove item top stack
+Stacks entered computer science literature used term bury unbury mean calling returning subroutine
+Subroutines already implemented proposed idea filed patent March Bauer received invention stack principle
+The concept developed independently Australian first half
+Stacks often described analogy stack plate cafeteria
+Clean plate placed top stack pushing already
+When plate removed stack one pop become new top
+In many implementation stack operation push pop
+An example top stack observes element without removing stack
+Since done pop push data essential
+An underflow condition occur stack top operation stack empty pop
+Also implementation often function return whether stack empty
+A stack easily implemented either
+What identifies data structure stack either case implementation interface user allowed pop push item onto array linked list helper operation
+The following demonstrate implementation using
+An array used implement bounded stack follows
+The first element usually bottom resulting first element pushed onto stack last element popped
+The program must keep track size length stack using variable record number item pushed far therefore pointing place array next element inserted assuming index convention
+Thus stack effectively implemented structure The operation add element increment index checking overflow Similarly decrement index checking underflow return item previously top one Using possible implement stack grow shrink much needed
+The size stack simply size dynamic array efficient implementation stack since adding item removing item end dynamic array requires amortized O time
+Another option implementing stack use
+A stack pointer head list perhaps counter keep track size list Pushing popping item happens head list overflow possible implementation unless memory exhausted Some language make stack operation push pop available standard type
+Some language notably family including designed around stack directly visible manipulated programmer
+The following example manipulating stack Lisp interpreter prompt line starting interpreter response expression Several container type operation LIFO semantics additionally template class adapts existing container provide restricted operation
+PHP class
+Java library contains class specialization
+Following example program language using class
+A common use stack architecture level mean allocating accessing memory
+A typical stack area computer memory fixed origin variable size
+Initially size stack zero
+A usually form hardware register point recently referenced location stack stack size zero stack pointer point origin stack
+The two operation applicable stack There many variation basic principle stack operation
+Every stack fixed location memory begin
+As data item added stack stack pointer displaced indicate current extent stack expands away origin
+Stack pointer may point origin stack limited range address either origin depending direction stack grows however stack pointer cross origin stack
+In word origin stack address stack grows downwards towards address stack pointer must never incremented beyond etc
+If pop operation stack cause stack pointer move past origin stack occurs
+If push operation cause stack pointer increment decrement beyond maximum extent stack occurs
+Some environment rely heavily stack may provide additional operation example Stacks often visualized growing bottom like stack
+They may also visualized growing left right topmost becomes rightmost even growing top bottom
+The important feature bottom stack fixed position
+The illustration section example growth visualization top stack bottom since stack top item pushed popped
+A move first element third position second first third second
+Here two equivalent visualization process A stack usually represented computer block memory cell bottom fixed location stack pointer holding address current top cell stack
+The top bottom terminology used irrespective whether stack actually grows towards lower memory address towards higher memory address
+Pushing item stack adjusts stack pointer size item either decrementing incrementing depending direction stack grows memory pointing next cell copy new top item stack area
+Depending exact implementation end push operation stack pointer may point next unused location stack may point topmost item stack
+If stack point current topmost item stack pointer updated new item pushed onto stack point next available location stack updated new item pushed onto stack
+Popping stack simply inverse pushing
+The topmost item stack removed stack pointer updated opposite order used push operation
+Many design including dedicated register use stack pointer dedicated call return push pop instruction implicitly update dedicated register thus increasing density
+Some CISC processor like also typically stack pointer well
+In contrast CPU design dedicated stack instruction therefore register may used stack pointer needed
+The architecture example set register organised stack direct access individual register relative current top also possible
+As machine general implicit argument allows small footprint good usage also prevents type optimization possible processor permitting two three operand
+A stack structure also make implementation somewhat complex implement although still feasible exemplified modern implementation
+example architecture using within another strategy avoid use slow main memory function argument return value
+There also number small microprocessor implement stack directly hardware stack directly accessible
+Examples line
+Many microprocessor used implement programming language level
+Stacks also used basis number mainframe mini computer
+Such machine called famous
+Calculators employing use stack structure hold value
+Expressions represented prefix postfix infix notation conversion one form another may accomplished using stack
+Many compiler use stack parsing syntax expression program block etc
+translating low level code
+Most programming language allowing parsed stack based machine
+Another important application stack
+Consider simple example finding correct path maze
+There series point starting point destination
+We start one point
+To reach final destination several path
+Suppose choose random path
+After following certain path realise path chosen wrong
+So need find way return beginning path
+This done use stack
+With help stack remember point reached
+This done pushing point stack
+In case end wrong path pop last point stack thus return last point continue quest find right path
+This called backtracking
+The prototypical example backtracking algorithm find vertex graph reached specified starting vertex
+Other application backtracking involve searching space represent potential solution optimization problem
+technique performing backtracking search without exhaustively searching potential solution space
+A number meaning define basic operation adding two number printing character taking argument stack placing return value back stack
+For example return stack operand stack also graphic state stack dictionary stack
+Many also including
+Almost way receive parameter return special stack hold information calling nesting order switch context called function restore caller function calling finish
+The function follow runtime protocol caller callee save argument return value stack
+Stacks important way supporting nested function call
+This type stack used implicitly compiler support CALL RETURN statement equivalent manipulated directly programmer
+Some programming language use stack store data local procedure
+Space local data item allocated stack procedure entered deallocated procedure exit
+The typically implemented way
+Using stack data procedure call important security implication see programmer must aware order avoid introducing serious security bug program
+Several use stack separate usual function call stack programming language principle organize information
+These include Some computing environment use stack way may make vulnerable security breach attack
+Programmers working environment must take special care avoid pitfall implementation
+For example programming language use common stack store data local called procedure linking information allows procedure return caller
+This mean program move data stack contains critical return address procedure call
+If data moved wrong location stack oversized data item moved stack location large enough contain return information procedure call may corrupted causing program fail
+Malicious party may attempt attack take advantage type implementation providing oversized data input program check length input
+Such program may copy data entirety location stack may change return address procedure called
+An attacker experiment find specific type data provided program return address current procedure reset point area within stack within data provided attacker turn contains instruction carry unauthorized operation
+This type attack variation attack extremely frequent source security breach software mainly popular compiler use shared stack data procedure call verify length data item
+Frequently programmer write code verify size data item either oversized undersized data item copied stack security breach may occur
+
+Regardless field study college student live digital information age
+The Elements Computing certificate program offer set course intended help student understand sophisticated technology use everyday well gain computer skill employer value
+The goal program intellectually stimulating personally rewarding supplement undergraduate program
+see course offering semester
+CS course end E Elements course
+Step Begin taking Elements course along UT coursework Track certificate progress stay date completed contact advisor question During last semester Elements coursework submit certificate request Once semester end certification program process digital copy certificate sent address provide
+Apply Elements Computing Certificate Begin taking Elements course UT coursework Track certificate progress stay date completed contact advisor question During last semester Elements coursework submit certificate request Once semester end certification program process digital copy certificate sent address provide
+While student welcome take one two Elements course student choose pursue coherent set course lead receipt Elements Computing certificate
+The certificate may used part resume proof computational knowledge
+The certificate accompanied letter explains program
+new requirement student catalog beyond major
+Please see FAQ tab information regarding change
+No two course substitution used towards certificate
+CS CS count course substitution limit
+MIS Database Management If course substitution Approved specified semester mean approved course taken prior listed semester valid course substitution
+If student would like petition substitution course Elements certificate please print read follow instruction fill
+The student must registered course received expecting receive better letter grade
+Transfer course need completed transferred UT prior evaluation process
+These petition guaranteed approval student sent Elements faculty advisor make final decision
+Please note student may register two Elements CS course first registration period
+Students may add third Elements CS course schedule period
+Students allowed access waitlist system course waitlisted first registration period period
+Submit semester student completing certificate
+Students awarded digital Elements Computing certificate completion letter form approved end certification process
+These item sent email provided certification form
+Step Begin taking Elements course along UT coursework Track certificate progress stay date completed contact advisor question During last semester Elements coursework submit certificate request Once semester end certification program process digital copy certificate sent address provide
+Apply Elements Computing Certificate Begin taking Elements course UT coursework Track certificate progress stay date completed contact advisor question During last semester Elements coursework submit certificate request Once semester end certification program process digital copy certificate sent address provide
+In order u certify student given semester please submit certification form deadline
+If date fall weekend please submit form next business day
+If missed deadline please submit form prior next deadline may certify semester
+Students MUST apply certification latest one year graduating semester student graduated Spring must apply certification May
+Once completed certificate requirement applied certification received approval certification form receive digital Elements Computing certificate completion letter end certification process
+These item sent email provided certification form
+The Elements Computing certificate designation appear UT transcript graduate UT
+Lastly MUST apply certification latest one year graduating semester student graduated Spring must apply certification May
+Yes
+All student seeking Elements certificate required take CS approved equivalent
+Students AP credit CS may claim course counted towards certificate
+Students catalog beyond major seeking certificate required take CS approved equivalent
+Currently student seeking Elements certificate strongly encouraged take CS order meet upper division Elements course
+Otherwise choice upper division elective limited
+It likely need waiver case
+Please email provide name eID course substituting course like waived
+We respond ASAP created waiver register course
+A waiver guarantee spot course
+You granted waiver course substitution
+Here example waiver request Name John Smith eID Substitution EE CS Course waived CS CS As moment CS topic course require CS
+Many Elements course require CS highly recommended student take course prior taking upper division Elements course
+We waive student approved course
+That correct
+CS option credit CS approved equivalent
+Additionally CS count towards Elements certificate course taken received credit CS approved equivalent
+In order best chance completing Elements Computing certificate graduation student take least one Elements course semester beginning sophomore year
+Elements course limited seating student given special priority registering
+Students must least certificate completed wish complete remaining coursework graduation additionally student must complete requirement apply certification within one academic year graduation
+No
+All Elements course approved equivalent counting towards Elements certificate need taken letter grade
+You need receive better order course count towards Elements certificate
+The number Elements course offered semester varies
+It highly possible expecting add course course schedule however please check course schedule periodically change reflect course schedule
+Students may add third Elements course schedule period
+Please utilize waitlist system course waitlisted first registration period period
+That mean took course prior listed semester approved substitution Elements certificate regardless apply certification
+Taking course past semester need approval Elements faculty advisor order valid substitution
+You must registered course received expecting receive better letter grade
+Please print read follow instruction fill
+These petition guaranteed approval sent Elements faculty advisor make final decision
+The final decision may appealed
+If transfer course question transfer directly approved substitution need submit transferred course UT
+This mean must completed course better send transcript evaluated UT Office Admissions
+Once evaluation record please submit
+Please print read follow instruction fill form
+These petition guaranteed approval sent Elements faculty advisor make final decision
+The final decision may appealed
+The new requirement student catalog beyond major
+If sure catalog year please contact academic advisor
+The new requirement certificate include following Students may semester completing last requirement
+They need graduating semester graduation application completely different process
+In order u certify given semester please submit certification application deadline
+If date fall weekend please submit application next business day
+If missed deadline please submit application prior next deadline may certify semester Once completed certificate requirement applied certification received approval certification form receive digital Elements Computing certificate completion letter end certification process
+These item sent email provided certification form
+The Elements Computing certificate designation appear UT transcript graduate UT
+Students MUST apply certification latest one year graduating semester student graduated Spring must apply certification May
+If additional question program encourage email
+You must include EID communication phone voicemail email office assist
+Speedway Stop Austin TX Phone
+
+âãÏÓ obj endobj xref n n n n n n n n n n n n n n n n n n n n n n n trailer ã WëÃf ß Ö wuu hñÂy Ñ ýÖÖis ÏK endstream endobj obj stream r ð Ú
+B Æ ËId Åº Ôqa endstream endobj obj endobj obj endobj obj stream
+
+study theory experimentation engineering form basic design use computer
+It scientific practical approach application systematic study feasibility structure expression mechanization methodical underlie acquisition representation processing storage communication access information
+An alternate succinct definition computer science study automating algorithmic process scale
+A specializes theory computation design computational system
+Its field divided variety theoretical
+Some field explores fundamental property intractable problem highly abstract field emphasize visual application
+Other field still focus challenge implementing computation
+For example considers various approach description computation study investigates various aspect use
+considers challenge making computer computation useful usable human
+The earliest foundation would become computer science predate invention modern
+Machines calculating fixed numerical task existed since antiquity aiding computation multiplication division
+Further performing computation existed since antiquity even development sophisticated computing equipment
+designed constructed first working
+In demonstrated digital mechanical calculator called
+He may considered first computer scientist information theorist among reason documenting binary number system
+In launched industry released simplified first calculating machine strong enough reliable enough used daily office environment
+started design first eventually gave idea first
+He started developing machine le two year sketched many salient feature modern computer
+A crucial step adoption punched card system derived making infinitely programmable
+In translation French article Analytical Engine wrote one many note included algorithm compute considered first computer program
+Around invented used process statistical information eventually company became part
+In one hundred year Babbage impossible dream convinced IBM making kind punched card equipment also calculator business develop giant programmable calculator based Babbage Analytical Engine used card central computing unit
+When machine finished hailed Babbage dream come true
+During new powerful machine developed term came refer machine rather human predecessor
+As became clear computer could used mathematical calculation field computer science broadened study general
+Computer science began established distinct academic discipline early
+The world first computer science degree program began
+The first computer science degree program United States formed
+Since practical computer became available many application computing become distinct area study right
+Although many initially believed impossible computer could actually scientific field study late fifty gradually became accepted among greater academic population
+It brand formed part computer science revolution time
+IBM short International Business Machines released IBM later IBM computer widely used exploration period device
+Still working IBM computer frustrating misplaced much one letter one instruction program would crash would start whole process
+During late computer science discipline much developmental stage issue commonplace
+Time seen significant improvement usability effectiveness
+Modern society seen significant shift user computer technology usage expert professional user base
+Initially computer quite costly degree human aid needed efficient part professional computer operator
+As computer adoption became widespread affordable le human assistance needed common usage
+Despite short history formal academic discipline computer science made number fundamental contribution science fact along founding science current epoch human history called driver seen third major leap human technological progress CE BC
+These contribution include Although first proposed term computer science appears article Louis Fein argues creation analogous creation justifying name arguing like subject applied interdisciplinary nature characteristic typical academic discipline
+His effort others rewarded university went create program starting Purdue
+Despite name significant amount computer science involve study computer
+Because several alternative name proposed
+Certain department major university prefer term emphasize precisely difference
+Danish scientist suggested term reflect fact scientific discipline revolves around data data treatment necessarily involving computer
+The first scientific institution use term Department Datalogy University Copenhagen founded Peter Naur first professor datalogy
+The term used mainly Scandinavian country
+An alternative term also proposed Naur used distinct field data analysis including statistic database
+Also early day computing number term practitioner field computing suggested
+Three month later journal suggested followed next year
+The term also suggested
+In Europe term derived contracted translation expression automatic information
+informazione automatica Italian information mathematics often used
+French German Italian Dutch Spanish Portuguese mean informatics
+Similar word also adopted UK
+In however linked applied computing computing context another domain
+A folkloric quotation often attributed almost certainly first formulated state computer science computer astronomy telescope
+The design deployment computer computer system generally considered province discipline computer science
+For example study computer hardware usually considered part study commercial deployment often called information technology
+However much idea various discipline
+Computer science research also often intersects discipline philosophy
+Computer science considered much closer relationship mathematics many scientific discipline observer saying computing mathematical science
+Early computer science strongly influenced work mathematician continues useful interchange idea two field area
+The relationship computer science software engineering contentious issue muddied term software engineering mean computer science defined
+taking cue relationship engineering science discipline claimed principal focus computer science studying property computation general principal focus software engineering design specific computation achieve practical goal making two separate complementary discipline
+The academic political funding aspect computer science tend depend whether department formed mathematical emphasis engineering emphasis
+Computer science department mathematics emphasis numerical orientation consider alignment
+Both type department tend make effort bridge field educationally across research
+A number computer scientist argued distinction three separate paradigm computer science
+argued paradigm science technology mathematics
+working group argued theory abstraction modeling design
+Amnon Eden described rationalist paradigm treat computer science branch mathematics prevalent theoretical computer science mainly employ technocratic paradigm might found engineering approach prominently software engineering scientific paradigm approach artifact empirical perspective identifiable branch
+As discipline computer science span range topic theoretical study algorithm limit computation practical issue implementing computing system hardware software
+formerly called Computing Sciences Accreditation made representative ACM IEEE CS four area considers crucial discipline computer science
+In addition four area CSAB also identifies field software engineering artificial intelligence computer networking communication database system parallel computation distributed computation interaction computer graphic operating system numerical symbolic computation important area computer science
+mathematical abstract spirit derives motivation practical everyday computation
+Its aim understand nature consequence understanding provide efficient methodology
+All study related mathematical logic formal concept method could considered theoretical computer science provided motivation clearly drawn field
+Data structure algorithm study commonly used computational method computational efficiency
+According fundamental question underlying computer science What efficiently automated
+Theory computation focused answering fundamental question computed amount resource required perform computation
+In effort answer first question examines computational problem solvable various theoretical
+The second question addressed study time space cost associated different approach solving multitude computational problem
+The famous problem one open problem theory computation
+Information theory related quantification information
+This developed find fundamental limit operation compressing data reliably storing communicating data
+Coding theory study property system converting information one form another fitness specific application
+Codes used recently also
+Codes studied purpose designing efficient reliable method
+Programming language theory branch computer science deal design implementation analysis characterization classification individual
+It fall within discipline computer science depending affecting software engineering
+It active research area numerous dedicated academic journal
+Formal method particular kind based technique development software system
+The use formal method software hardware design motivated expectation engineering discipline performing appropriate mathematical analysis contribute reliability robustness design
+They form important theoretical underpinning software engineering especially safety security involved
+Formal method useful adjunct software testing since help avoid error also give framework testing
+For industrial use tool support required
+However high cost using formal method mean usually used development safety utmost importance
+Formal method best described application fairly broad variety fundamental particular calculus also problem software hardware specification verification
+Computer architecture digital computer organization conceptual design fundamental operational structure computer system
+It focus largely way central processing unit performs internally access address memory
+The field often involves discipline computer engineering electrical engineering selecting interconnecting hardware component create computer meet functional performance cost goal
+Computer performance analysis study work flowing computer general goal improving controlling using resource efficiently eliminating predicting performance anticipated peak load
+Concurrency property system several computation executing simultaneously potentially interacting
+A number mathematical model developed general concurrent computation including model
+A distributed system extends idea concurrency onto multiple computer connected network
+Computers within distributed system private memory information often exchanged among achieve common goal
+This branch computer science aim manage network computer worldwide
+Computer security branch computer technology whose objective includes protection information unauthorized access disruption modification maintaining accessibility usability system intended user
+Cryptography practice study hiding encryption therefore deciphering decryption information
+Modern cryptography largely related computer science many encryption decryption algorithm based computational complexity
+A database intended organize store retrieve large amount data easily
+Digital database managed using database management system store create maintain search data
+Computer graphic study digital visual content involves synthesis manipulation image data
+The study connected many field computer science including heavily applied field special effect
+Research develops theory principle guideline user interface designer create satisfactory user experience desktop laptop mobile device
+field study concerned constructing technique using computer analyze solve problem
+In practical use typically application form problem various scientific discipline
+Artificial intelligence AI aim required synthesize process environmental adaptation learning communication found human animal
+From origin artificial intelligence research necessarily drawing area expertise
+AI associated popular mind main field practical application embedded component area require computational understanding
+The late question Can computer think
+question remains effectively unanswered although still used ass computer output scale human intelligence
+But automation evaluative predictive task increasingly successful substitute human monitoring intervention domain computer application involving complex data
+Software engineering study designing implementing modifying software order ensure high quality affordable maintainable fast build
+It systematic approach software design involving application engineering practice software
+Software engineering deal organizing analyzing deal creation manufacture new software internal maintenance arrangement
+Both computer application software engineer computer system software engineer projected among fastest growing occupation
+The philosopher computing noted three Conferences important event computer science research
+During conference researcher public private sector present recent work meet
+Unlike academic field computer science prestige greater journal publication
+One proposed explanation quick development relatively new field requires rapid review distribution result task better handled conference journal
+Since computer science relatively new field widely taught school university academic subject
+For example estimated percent high school United States offered computer science education
+A report Association Computing Machinery ACM Computer Science Teachers Association CSTA revealed state adopted significant education standard high school computer science
+However computer science education growing
+Some country Israel New Zealand South Korea already included computer science respective national secondary education curriculum
+Several country following suit
+In country significant gender gap computer science education
+For example US computer science degree conferred woman
+This gender gap also exists Western country
+However part world gap small nonexistent
+In approximately half computer science degree conferred woman
+In woman made computer science graduate
+
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I currently hard time understanding author using word correctly paper classified BS
+Hence I set get better feeling correct use word I even confused First I look state Methodology systematic theoretical analysis method applied field study theoretical analysis body method principle associated branch knowledge
+This sentence followed second sentence reference paper
+Irny far I could see state something contracting Methodology generally guideline solving problem specific component phase task method technique tool two source given Even though I think wikipedia description identical understanding term reference confusion
+I asked help
+Here say body method rule postulate employed discipline particular procedure set procedure analysis principle procedure inquiry particular field Oxford say discipline branch knowledge I would interpret thing like math sociology computer science psychology thing like UML modeling crossword solving method solving problem even sticking together method solve problem
+This match part definition
+And give weird example Â solving crossword puzzle usual methodology begin filling answer I reasonably sure ofÂ Maybe bracket indicate chose poor example consider crossword discipline case
+It obviously qualify case example analyse method used crossword domain
+Sadly Oxford defines term system method used particular area study activity methodology investigating concept focal point Which used problem theorecial study method field
+Only Methodology buzzword section wikipedia seems back understanding term Many recent us word methodology mistakenly treat synonym method body method
+Doing shift away true epistemological meaning reduces procedure set tool instrument outcome
+A methodology design process carrying research development procedure instrument thing
+Using synonym method set method lead misinterpretation undermines proper analysis go designing research
+Is understanding methodology name suggests logic behind method consequently must deal topic per se address meta level used method wrong
+For particular academic problem CS Is combination general priciples rule part standard creating particular type operating system methodology
+used AUTOSAR
+Such principle rule govern describe communication mechanism memory access method scheduling like
+I would call body method hence must buzzword
+My Sixth edition Oxford say Science method body method used particular branch activity So current version dumped actual meaning used weird body method definition
+I happy source bringing clarity mess
+Do worry ca answer CS specific question general purpose answer may well good
+Words fixed meaning dictionary follow usage
+That happening
+The word turn branch philosophy dealing knowledge
+This classical meaning discus WP encyclopedia dictionary list meaning given word
+It also one definition say analysis principle procedure inquiry particular field Now language evolves addition meaning sense second meaning developing
+This new meaning noted
+Now every language evolution clearly written point view see section
+The go say Etymologically refers study method
+Thus use synonym simple term
+Well sod Hades
+It clear thus considered acceptable
+Since exists also word method one could argue use methodology full epistemological meaning definition Merriam Webster discourse science method
+In practice lot people use two word almost interchangeably
+There reason method rather narrow descriptive flavor methodology invokes knowledge fundamental principle logic science whatever else pertinent case specific method descend
+So write methodology followed paper mean refer fact aware philosophical epistemological foundation weakness method
+Even aware sense make u afterwards claim employed widely used method using word methodology accept responsibility clear opinion way even really
+One meaning methodology synonym method
+That used technical literature common use
+Another meaning study method
+And yet another body method particular field
+You find writer celebrated expert craft use word meaning question technical usage versus casual usage
+As writes language defined usage evolves constantly
+Nevertheless writer expectation reader mind also primarily expectation commissioning editor gatekeeper publication
+If descriptivist may work order get published
+If style guide work must work
+Your goal get paper published fighting change publisher style guide different separate battle mix
+So find whether using methodology method paradigm read comparable paper target journal see commonly used context analagous
+If clear ask contact editor journal
+Maybe strictness definition
+Maybe I friend speak Greek
+But I always understood log part declension
+So methodology would regard part method
+Given discussing methodology writer go great detail definition seems fit
+Part I treat log synonym part used independently English
+Consider log tree tree sliced slice part log
+A timelog datalog essentially bunch separate entry single document
+You find lot similar use Some thought I think lot recent use methodology stem bigger word therefore sounding sophisticated intellectual
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+µµµµ obj endobj obj endobj obj R R R R R R R R endobj obj stream ì OÀxÃy bÃB A I ÝwÖ Oæp ud S ü endstream endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj endobj obj stream T KQ ø Áa é B ü ûúWæÉæÀ Tì ð hÈC Å êÈj endstream endobj obj stream pÛ Z ùÉÓO ã TL ÖÔ deI Z ZêµgÏM À Â õ Ð aE æþÜ wêµlöbÕáþÔ öí atðØää
+u ê ÖÔ cÔwG Ô
+HØ V Ô öVËÍZí ß jý ARô
+
+ÐÔÅØ obj stream xÚ x hËM
+g Õq ÓIÊÍLT Ê X UØ ÅHµ sÔ
+ÉHóÝØ Ñü
+
+VÜ ïµ á FP Ëç à ç lOÉ Esä HR Æ InS ì â YT Wö
+endstream endobj obj R R R endobj obj R R R endobj obj stream îÞÖ lÈ
+k R ûû UeÑÃÙz M
+ê îèèomsR FÆgÔ º ÿc D E öB º L nüé É OÕ Tcla EÜÌùO â Ré ÉaÇ é B I ÑÞ Á Z
+ÜÈ gVV V SËu kxvCß É endstream endobj obj R R R endobj obj R R endobj obj stream Ðh dZGÿ ß µ ò ÂS f è Y
+VG Þ r È B ÿ F ÔL óq á X TÔL ü YBXöe Ê å Ì RW xýåë h ë endstream endobj obj R R R endobj obj R R R R R R endobj obj stream xÚ x þå z Ï x
+éy Þ ý Å á æ RiáO EZ ÌØ úbãj F sõóòYÞ üÝOe PÄ
+
+obj stream r ú oûóä Õc ûð hè mð ÆlI á D Ðß ËÒ ïûcu É ÿ
+NT Ç A ÿ îú QË K KN ãT
+Þ æD Ù ÜF
+L Q X ècÝ à Y ÓXân ùº
+ÅWû Öþ ÖÏ æ
+b Jb ª v L oº Ä EIþï jnúO jy ýgx oaMçÃ Â endobj obj endobj obj stream Q TªJ
+æ çà XN ÚÒ Î ÏSò æ Ñe â víg AëH l q YÉÊÍø þñfßf dÌøøîJ ÎªTÔÌÙ Ö ÿéw ÞrÝõ þDY NÏh q NØbr E õ ÌjéÏb
+ÛqC
+üö Èì P Íèv GÑ ºË ÿGtY GlÈ çÝ W ïémÌ YJÏ àËNº Å j ÍRÏK ÜT Y ÇBrrlÝl Ò
+Èª á X
+w r ù endobj obj endobj obj stream l
+
+É ÙbôãS cÏwè î ÌW lw ÔTÉ ÏÛ
+ÀIôÉ ä ôLCU PuãË L À I R ÕF E ÈUÛÏÍ ê vêÚ v Æ úþ e
+ê çð qóï ýAÕduP ÕÙRð Kuðd Gä MQ K V XÒïa B Ã ºMpÍû xW W ç b L ýÂ Ó Q ÐÌøëqY ÝY ÙªYºóú â xg ãÝW Ý ñ j
+endobj obj endobj obj stream gVÚ ã é v á onq
+ETrAv ïhMÞiOO Ø aiÀ ê Á M è ÉÝ æqèºæø ri Z à E Y KÀÄí úêqÉ
+
+hÏO
+Q Ã ÜcVöc Ç Ífæ O Ç nèiëNõÃÃØ v ö xMÆ kpË P oy z Ú çRtª Q nÝ Å endobj obj endobj obj stream Éï IÎûåY A
+u JOo ÜÇzú ú qª é ÅØ Ýk ÆµÅTÀ tZ Ý nõc v Ñ E È Rm DáB ß Â Äð
+Rá Ñ ç Ç ÍhÞ
+dà b ÕP
+
+âãÏÓ obj endobj obj stream hÞbbd AÜC endstream endobj startxref EOF obj stream hÞb æø Ö
+

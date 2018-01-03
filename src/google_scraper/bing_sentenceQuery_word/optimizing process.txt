@@ -1,0 +1,333 @@
+In process modifying software system make aspect work use fewer resource
+In general may optimized executes rapidly capable operating le resource draw le power
+Although word optimization share root optimal rare process optimization produce truly optimal system
+The optimized system typically optimal one application one audience
+One might reduce amount time program take perform task price making consume memory
+In application memory space premium one might deliberately choose slower order use le memory
+Often one size fit design work well case make optimize attribute greatest interest
+Additionally effort required make piece software completely optimal incapable improvement almost always reasonable benefit would accrued process optimization may halted completely optimal solution reached
+Fortunately often case greatest improvement come early process
+Optimization occur number level
+Typically higher level greater impact harder change later project requiring significant change complete rewrite need changed
+Thus optimization typically proceed via refinement higher lower initial gain larger achieved le work later gain smaller requiring work
+However case overall performance depends performance portion program small change late stage early consideration detail outsized impact
+Typically consideration given efficiency throughout project though varies significantly major optimization often considered refinement done late ever
+On project typically cycle optimization improving one area reveals limitation another typically curtailed performance acceptable gain become small costly
+As performance part specification program program unusably slow fit purpose video game Hz acceptable unacceptably choppy performance consideration start ensure system able deliver sufficient performance early prototype need roughly acceptable performance confidence final system optimization achieve acceptable performance
+This sometimes omitted belief optimization always done later resulting prototype system far slow often order magnitude factor system ultimately failure architecturally achieve performance goal one take year work achieve acceptable performance Java achieved acceptable performance
+The degree performance change prototype production system amenable optimization significant source uncertainty risk
+At highest level design may optimized make best use available resource given goal constraint expected
+The architectural design system overwhelmingly affect performance
+For example system network network latency main constraint overall performance would optimized minimize network trip ideally making single request request rather multiple roundtrips
+Choice design depends goal designing fast compilation key priority faster assuming work speed output code goal slower compiler fulfills goal better even though take longer
+Choice platform programming language occur level changing frequently requires complete rewrite though modular system may allow rewrite component example Python program may rewrite section In distributed system choice architecture etc
+occurs design level may difficult change particularly component replaced sync old client
+Given overall design good choice efficient implementation algorithm data structure come next
+After design choice data structure affect efficiency aspect program
+Generally data structure difficult change algorithm data structure assumption performance assumption used throughout program though minimized use abstract data type function definition keeping concrete data structure definition restricted place
+For algorithm primarily consists ensuring algorithm constant O logarithmic O log linear O case O log input space time
+Algorithms quadratic complexity O fail scale even linear algorithm cause problem repeatedly called typically replaced constant logarithmic possible
+Beyond asymptotic order growth constant factor matter asymptotically slower algorithm may faster smaller simpler asymptotically faster algorithm faced small input may case occurs reality
+Often provide best performance due tradeoff changing size
+A general technique improve performance avoid work
+A good example use common case improving performance avoiding unnecessary work
+For example using simple text layout algorithm Latin text switching complex layout algorithm complex script
+Another important technique caching particularly avoids redundant computation
+Because importance caching often many level caching system cause problem memory use correctness issue stale cache
+Beyond general algorithm implementation abstract machine concrete source code level choice make significant difference
+For example early C compiler slower unconditional loop evaluated conditional jump tested true unconditional jump
+Some optimization one nowadays performed
+This depends source language target machine language compiler difficult understand predict change time key place understanding compiler machine code improve performance
+example optimization reduce need auxiliary variable even result faster performance avoiding optimization
+Between source compile level used tune performance option source code compiler respectively using defines disable unneeded software feature optimizing specific processor model hardware capability predicting branching instance
+software distribution system take advantage form optimization
+Use tends ensure optimized least much compiler predict
+At lowest level writing code using designed particular hardware platform produce efficient compact code programmer take advantage full repertoire
+Many used traditionally written assembler code reason
+Programs small program seldom written start finish assembly due time cost involved
+Most compiled high level language assembly hand optimized
+When efficiency size le important large part may written language
+With modern greater complexity recent harder write efficient code compiler generates project need ultimate optimization step
+Much code written today intended run many machine possible
+As consequence programmer compiler always take advantage efficient instruction provided newer CPUs quirk older model
+Additionally assembly code tuned particular processor without using instruction might still suboptimal different processor expecting different tuning code
+Typically today rather writing assembly language programmer use analyze output compiler change source code compiled efficiently understand inefficient
+compiler produce customized machine code based data cost compilation overhead
+This technique date earliest engine become widespread Java HotSpot JavaScript
+In case may able perform optimization exceeding capability static compiler dynamically adjusting parameter according actual input factor
+AOT compilation optimization technique based runtime profile similar static average case analog dynamic technique adaptive optimization
+alter response run time condition order optimize code common assembly language program
+Some perform optimization runtime
+Some example include
+Compilers help program take advantage CPU feature example
+Code optimization also broadly categorized technique
+While latter one effective platform technique use specific property one platform rely parameter depending single platform even single processor
+Writing producing different version code different processor might therefore needed
+For instance case optimization technique generic technique reduction function call memory efficient routine reduction condition etc
+impact CPU architecture similar way
+Generally serve reduce total required complete program reduce total memory usage process
+On hand technique involve instruction scheduling parallelism parallelism cache optimization technique parameter differ among various platform optimal instruction scheduling might different even different processor architecture
+Computational task performed several different way varying efficiency
+A efficient version equivalent functionality known
+For example consider following code snippet whose intention obtain sum integer N This code assuming rewritten using mathematical formula like The optimization sometimes performed automatically optimizing compiler select method computationally efficient retaining functionality
+See discussion technique
+However significant improvement performance often achieved removing extraneous functionality
+Optimization always obvious intuitive process
+In example optimized version might actually slower original version N sufficiently small particular hardware happens much faster performing addition operation multiplication division
+In case however optimization relies using elaborate algorithm making use special case special trick performing complex
+A fully optimized program might difficult comprehend hence may contain unoptimized version
+Beyond eliminating obvious antipatterns code level optimization decrease maintainability
+Optimization generally focus improving one two aspect performance execution time memory usage disk space bandwidth power consumption resource
+This usually require one factor optimized expense others
+For example increasing size improves runtime performance also increase memory consumption
+Other common include code clarity conciseness
+There instance programmer performing optimization must decide make software better operation cost making operation le efficient
+These may sometimes nature competitor published result must beaten order improve commercial success come perhaps burden making normal usage software le efficient
+Such change sometimes jokingly referred
+Optimization may include finding system component limiting factor performance
+In term code often critical part code primary consumer needed resource though another factor latency network bandwidth
+In computer science resource consumption often follows form distribution applied resource optimization observing resource typically used operation
+In software engineering often better approximation execution time computer program spent executing code known law context
+More complex algorithm data structure perform well many item simple algorithm suitable small amount data setup initialization time constant factor complex algorithm outweigh benefit thus may faster single algorithm
+A performance profiler used narrow decision functionality fit condition
+In case adding help make program run faster
+For example filtering program commonly read line filter output line immediately
+This us enough memory one line performance typically poor due latency disk read
+Performance greatly improved reading entire file writing filtered result though us much memory
+Caching result similarly effective though also requiring larger memory use
+Optimization reduce add code used improve
+This may complicate program system making harder maintain debug
+As result optimization performance tuning often performed end
+made following two statement optimization We forget small efficiency say time premature optimization root evil
+Yet pas opportunity critical In established engineering discipline improvement easily obtained never considered marginal I believe viewpoint prevail software engineering Premature optimization phrase used describe situation programmer let performance consideration affect design piece code
+This result design clean could code incorrect code complicated optimization programmer distracted optimizing
+When deciding whether optimize specific part program always considered impact overall program depends much much time actually spent specific part always clear looking code without
+A better approach therefore design first code design resulting code see part optimized
+A simple elegant design often easier optimize stage profiling may reveal unexpected performance problem would addressed premature optimization
+In practice often necessary keep performance goal mind first designing software programmer balance goal design optimization
+Modern compiler operating system efficient intended performance increase often fail materialize
+As example caching data application level cached operating system level yield improvement execution
+Even rare case programmer remove failed optimization production code
+It also true advance hardware often obviate potential improvement yet obscuring code persist future long purpose negated
+Optimization code development using take different form different language
+In procedural language macro implemented using token substitution
+Nowadays used alternative many case
+In case inlined function body undergo optimization compiler including may move computation compile time
+In many language macro implemented using substitution parse syntax tree claimed make safer use
+Since many case interpretation used one way ensure computation performed sometimes way
+originated style macro macro often called macro
+A similar effect achieved using
+In case work moved
+The difference macro one side macro side latter tool allow performing arbitrary computation expansion macro perform computation relies optimizer ability perform
+Additionally macro directly support
+As optimization however often difficult predict tool impact project complete
+Optimization automated compiler performed programmer
+Gains usually limited local optimization larger global optimization
+Usually powerful optimization find superior
+Optimizing whole system usually undertaken programmer complex automated optimizers
+In situation programmer system administrator explicitly change code overall system performs better
+Although produce better efficiency far expensive automated optimization
+Use find section program taking resource
+Programmers sometimes believe clear idea bottleneck intuition frequently wrong
+Optimizing unimportant piece code typically little help overall performance
+When bottleneck localized optimization usually start rethinking algorithm used program
+More often particular algorithm specifically tailored particular problem yielding better performance generic algorithm
+For example task sorting huge list item usually done routine one efficient generic algorithm
+But characteristic item exploitable example already arranged particular order different method used even sort routine
+After programmer reasonably sure best algorithm selected code optimization start
+Loops unrolled lower loop overhead although often lead speed overload data type small possible used integer arithmetic used instead
+See article technique
+Performance bottleneck due language limitation rather algorithm data structure used program
+Sometimes critical part program different give direct access underlying machine
+For example common language like module written greater speed
+Programs already written C module written
+Programs written use
+Rewriting section pay circumstance general known state time spent code time remaining code
+So putting intellectual effort optimizing small part program huge effect overall speed correct part located
+Manual optimization sometimes side effect undermining readability
+Thus code optimization carefully documented preferably using comment effect future development evaluated
+The program performs automated optimization called
+Most optimizers embedded compiler operate compilation
+Optimizers often tailor generated code specific processor
+Today automated optimization almost exclusively limited
+However compiler optimization usually limited fixed set rather general optimization considerable demand optimizers accept description problem optimization allowing engineer specify custom optimization
+Tools accept description optimization called system beginning applied real software system
+Some language optimize program using
+aim optimize whole system moving task computer high usage computer idle time
+Sometimes time taken undertake optimization therein may issue
+Optimizing existing code usually add new feature worse might add new previously working code change might
+Because manually optimized code might sometimes le readability unoptimized code optimization might impact maintainability well
+Optimization come price important sure investment worthwhile
+An automatic optimizer program performs code optimization may optimized either improve efficiency target program else speed operation
+A compilation performed optimization turned usually take longer although usually problem program quite large
+In particular performance compile component executing together target code key improving overall execution speed
+
+In process modifying system make feature work use fewer
+For instance may optimized run faster run le resource see consume le
+This branch
+The optimization sense different level lowest development writing machine code designed especially architecture highest level making implementation use design
+The optimization generally recommended leave end process since premature optimization introduce new error generally difficult detect algorithmic nature
+The optimized system may single collection even entire network
+
+The interplay optimization machine learning one important development modern computational science
+Optimization formulation method proving vital designing algorithm extract essential knowledge huge volume data
+Machine learning however simply consumer optimization technology rapidly evolving field generating new optimization idea
+This book capture state art interaction optimization machine learning way accessible researcher field
+Optimization approach enjoyed prominence machine learning wide applicability attractive theoretical property
+The increasing complexity size variety today machine learning model call reassessment existing assumption
+This book start process reassessment
+It describes resurgence novel context established framework method stochastic approximation convex relaxation method proximal method
+It also devotes attention newer theme regularized optimization robust optimization gradient subgradient method splitting technique method
+Many technique draw inspiration field including operation research theoretical computer science subfields optimization
+The book enrich ongoing machine learning community field within broader optimization community
+Suvrit Sra Research Scientist Max Planck Institute Biological Cybernetics Tübingen Germany
+Sebastian Nowozin Researcher Machine Learning Perception group MLP Microsoft Research Cambridge England
+Stephen Wright Professor Computer Sciences Department University Wisconsin Madison
+One Rogers Street Cambridge MA Suite Duchess Street London UK
+
+CMPSCI Optimization Computer Science Spring Professor Sridhar Mahadevan Room CS Building Many application computer science involve application sophisticated idea optimization theory
+These categorized broadly following type resource allocation problem ii control planning iii approximation estimation iv game theory
+This course provide unified treatment optimization method used application focusing core set geometric principle Generalized distance measure Bregman divergence unify commonly used metric Euclidean distance The projection theorem vector space used widely approximation estimation The celebrated theorem underlies many important idea optimization The duality principle show convert minimization problem maximization problem using hyperplanes Differentials particular subgradients subdifferentials
+Overview course Instructor Professor Sridhar Mahadevan Email last name without n AT c DOT uma DOT edu Room CS Building Office hour
+
+Optimization Techniques Computing Basic OR technique Requirements Networks Design Role Methods Databases Compilers Optimization Performance Web Computing Internet Application Performance measurement tool Case Studies P Associate Professor Head Department India
+We Social Networks
+Follow u get touch
+
+Optimization computer science Simple English Wikipedia free In computing optimization process modifying system make feature work efficiently use fewer resource
+For instance computer program may optimized run faster run le memory requirement resource see Spacetime tradeoff consume le energy
+Program optimization Wikipedia In computer science program optimization software optimization process modifying software system make aspect work efficiently use fewer resource
+In general computer program may optimized executes rapidly capable operating le memory storage Optimization problem Wikipedia In mathematics computer science optimization problem problem finding best solution feasible solution
+Optimization problem divided two category depending whether variable continuous discrete
+An optimization problem discrete variable known What optimization problem computer science
+Updated When engineer solve problem like find best possible solution solution work work efficiently effectively
+An Optimization Problems Algorithms Unit Introduction This section contains lecture video resource lecture question problem set information
+Optimization Problems Algorithms Computer Science Powerful algorithm computer science devised find optimum complex costfunctions case even achieved polynomial time
+In recent year many algorithm could successfully applied physically relevant model system polymer random medium interface CMPSCI Optimization Computer Science Spring CMPSCI Optimization Computer Science Spring Professor Sridhar Mahadevan
+
+Room CS Building
+Many application computer science involve application sophisticated idea optimization theory
+These categorized broadly following type resource Department Computer Science Complexity Optimization The complexity theory numerical optimization problem deal question determining computational cost solving optimization problem function input size
+Different complexity model formulated depending type conceptual computer one assumes available type Department Computer Science Nonlinear Optimization Numerical optimization mathematical programming deal problem minimizing maximizing function finitely infinitely many variable domain implicitly defined via constraint system equation inequality
+We interested aspect area Optimality condition Optimization Computer Sciences Department Students interested optimization first take CS CS
+After completing good linear programming optimization modeling course student may take CS emphasizes integer optimization CS emphasizes continuous nonlinear optimization could taken Required field marked
+
+This preview shown page This preview shown page This preview shown page This preview shown page Optimizing Scrip Systems Efficiency Crashes Hoarders Altruists By Ian Kash Eric Friedman Joseph Halpern Presentation Avner May Overview Introduction Review Earlier Model Basic Results Equilibrium System Examining Distribution Money System Optimizing System Performance Through Money Supply Effects Altruists Hoarders System Conclusion Intro Brief History NGO issue currency These known scrip Examples In company town government currency scarce To prevent robbery DC bus Online Systems Everquest Second Life Creates market exchange would impractical undesirable real currency Introduction Motivating Example Capital Hill Baby Sitting op Effects much little money effectiveness system Optimal Money Supply
+Note fixed price Homogeneous Heterogeneous Population Altruists Hoarders Gnutella user satisfy request Effect System
+Model Very similar previous model Agent Types Tuple αt βt γt δt ρt T finite set αt Cost satisfying request βt Probability agent satisfy request γt Utility agent gain request satisfied δt Rate agent discount utility ρt Represents agent relative request rate Agent population entirely determined T f n T finite set type f vector ft fraction agent type n agent Model cont
+Infinite number round Each round An agent picked request service prob
+proportional ρt If chosen agent money every agent able satisfy request certain probability βt independent round
+Else round end If least one agent willing able satisfy request transaction occurs Requester type get γt utils pay normalized scrip cost Volunteer type pay cost αt utils receives n round per unit time time round Model cont
+Payoff Heterogeneity Population type T differ α γ δ utility variable Don differ probability able satisfy request β frequency request ρ The result paper explicitly apply payoff heterogeneous population Authors believe would fundamentally change result extend arbitrary heterogeneous population Recap This paper extends result previous paper population Discussion Model Any thought
+Are assumption strong
+Assumption
+Agent type remain constant time
+Choice volunteer independent time
+Threshold Strategies
+Theoretical Results Many result paper direct analog theorem saw previous paper Theorem General idea Given system approach monetary distribution More specifically enough agent system sufficient time arbitrarily close distribution arbitrarily high probability Note This assuming given distribution strategy final monetary distribution maximizes entropy subject constraint strategy distribution Theoretical Results cont Theorem Given system agent type play threshold strategy every agent threshold strategy Lemma The function agent type decreasing Note input function vector k threshold value agent type Intuition If agent increase threshold value agent earn money le often wanting spend money least often
+Thus increase threshold value
+Theoretical Results cont Theorem Given system exists Nash equilibrium agent type play threshold strategy Sk
+Sketch proof By Lemma type BRt k k vector Thus BR k function So Tarski fixed point theorem guarantee existence greatest least fixed point Least fixed point trivial equilibrium type play Greatest fixed point equilibrium Tarski Fixed Point Theorem Given monotone increasing function complete lattice L f exist greatest least fixed point
+Theoretical Results cont What fixed point
+Vector k
+BR k k This mean given k strategy profile precisely k Thus equilibrium Computing fixed point efficiently dynamic Begin strategy profile Iteratively compute strategy profile BR BR
+BR This process converges greatest fixed point Note The greatest fixed point might one maximizes social welfare Theoretical Results cont Using Dynamics EXAMPLE Identifying User Strategies In section paper used get explicit formula monetary distribution given strategy agent fraction agent playing strategy π M Now would like try determine strategy agent given certain monetary distribution π M Identifying User Strategies cont Given monetary distribution M M distribution π strategy maximum entropy distribution result π M
+π explains M π M Lemma If M fully supported distribution money finite support exist infinite number explanation M The paper explains algorithm finding minimal explanation fewest strategy played
+From minimal explanation make inference fraction population type strategy playing Discussion At point author motivate minimal explanation useful They think cluster agent similar type within cluster agent play similar strategy
+Does make sense
+What small difference type make large difference strategy
+Can people expected compute best response function accurately
+What cluster rather uniform distribution agent different type
+Optimizing Money Supply In section assumed money supply fixed considered money distributed among agent different type We examine happens distribution money money supply altered We want determine money supply optimize performance system maximize social welfare Optimizing Money Supply Result Increasing amount money improves performance point system crash
+Thus optimizing system simply matter finding point system would experience monetary crash Optimizing Money Supply But find optimal point
+Observation We would like find money supply minimizes fraction people without money Why
+Expected utility gain round PROB least one agent volunteer Expected total utility assuming homogeneous population Analysis similar heterogeneous population Optimizing Money Supply Theorem Increasing average money decrease fraction people money assuming monetary crash Thus long equilibrium exist money better Corollary There exists finite threshold If average equilibrium exist If average system crash trivial equilibrium exists Optimizing Money Supply But find
+Given know T f use technique section dynamic see equilibrium exists Binary search Given T f
+Vary average But know T f
+You use result section solve T f
+Reasonable
+Altruists Hoarders Altruists Provide service cost Presumably gain utility satisfying request Hoarders Always volunteer satisfy request never make request Can modeled playing Intuition Having altruist like increasing money supply Having hoarder like decreasing money supply Altruists Hoarders Theorem Increasing fraction agent altruist increase social welfare point system crash Theorem Increasing fraction agent hoarder decrease social welfare System designer see action agent modify money supply accordingly prevent outcome Additional property Hoarders stabilize system helping prevent monetary crash Theoretically always willing work regardless depreciated dollar Discussion Floating price
+Auctions scrip
+Other type irrational behavior
+Would theoretical result well scrip system
+What next
+Any thought comment posted one write first
+This preview shown page Share Embed document website
+
+Get expert test prep advice world first social free platform
+Laptop tablet smartphone reading guide device created using expertise theory skill gained computer science degree
+Interested studying computer science contributing next phase field
+Click tab information computer science course specialization career
+In nutshell computer science degree deal theoretical foundation information computation taking scientific practical approach computation application
+Computation defined type calculation use computing technology follows model algorithm protocol practice information processing turn defined use model transform data computer
+Computer science considered many practitioner foundational science one make knowledge achievement possible
+The study computer science involves systematically studying methodical process algorithm order aid acquisition representation processing storage communication access information
+This done analyzing feasibility structure expression mechanization process relate information
+In computer science term information refers usually information encoded bit byte computer memory
+Some higher education institution may use computer science CS umbrella term cover various specialist vocational degree involving computer technology
+You may also find term computer science used refer information technology IT degree although many institution distinguish two exactly draw line varies
+Make sure check chosen university course detail closely
+The QS World University Rankings Subject includes ranking
+The table sorted location based different criterion used compile ranking including academic reputation employer reputation research citation
+Entry requirement computer science degree usually emphasize mathematics institution asking background physic
+A background psychology sociology provide added dimension study would gained understanding human process information natural science may also helpful
+Undergraduate applicant computer science degree usually expected formally studied computer science university
+However recommended pick programming language gain understanding involved
+While generally accepted beginner language include Python Haskell Java Pascal language may come across study
+On hand may find institution discourage student learning programming beforehand avoid student learning bad programming habit early
+Some institution offer joint course computer science studied alongside subject mathematics engineering computing
+You expect begin computer science degree developing foundation key
+Some core computer science course may cover include theory computation fundamental computer science compliers operating system information theory basic programming system architecture software development testing web application database algorithm data structure principle computer hardware
+Mathematical concept may cover include formal method Boolean algebra discreet mathematics set theory probability statistic linear algebra differential equation calculus
+You choose range specialist computer science topic including advanced internet advanced programming artificial intelligence artificial life computational logic computer graphic computer modelling computer network computer security computer vision encryption ethical hacking GUIs game development interaction mobile application multimedia computing networking theory professional issue research method software engineering design
+A closer look popular computer science topic provided
+Programming interdisciplinary topic incorporating element subject mathematics software engineering linguistics
+involves looking design implementation analysis characterization classification programming language individual feature
+Your introductory course teach one programming language
+Knowledge one help better understand individual strength weakness turn help better engage challenge addressed programming language theory
+You cover topic syntax natural semantics structural operational semantics abstract machine code
+Studying involves using computer create still moving two three dimensional image using specialized graphic hardware software
+You study manipulate visual geometric information using computational technique focusing mathematical computational foundation image generation processing rather purely aesthetic issue
+You need knowledge physic light material well knowledge mathematics homogenous matrix data storage representation manipulation
+Computer graphic make interaction understanding computer interpretation data easier computing professional consumer
+With company exploring increased use trend gamification demand computer scientist advanced knowledge computer graphic never greater
+The study interaction HCI considers challenge making computer computation useful usable universally accessible human order prevent unexpected problem caused poorly designed interface
+Coupled study rooted behavioral science cover study planning design kind interaction understanding computer almost unlimited amount us take place dialogue user computer
+You approach subject machine side computing technique computer graphic operating system programming language development environment human side exploring communication graphic linguistics social science cognitive psychology user satisfaction
+The study AI closely related field artificial life AL involved synthesizing process environmental adaptation learning communication using computer algorithm
+While field artificial life examines system study complex behavior emerge system artificial intelligence us system develop specific behavior machine software
+AI topic drawing applied mathematics symbolic logic semiotics electrical engineering philosophy mind neurophysiology social intelligence
+AI involves automation task evaluative predictive task computer application involving complex data successful use AI manner act viable substitute human task
+procedure making calculation used data processing automated reasoning creates output often always predictable
+provide way storing organizing data computer used efficiently different kind data structure suited different kind application may highly specialized specific task
+Together algorithm data structure underlie aspect computer science involve learning store process data efficiently possible ensuring algorithm able cope system question
+You learn thing linked list sorting recursion tree hashing greedy solution graph optimizing data arrangement
+You may also go analysis algorithm determining amount resource necessary execute algorithm
+Choose computer science degree could working forefront next greatest technological innovation
+The increasing scope computer science mean choice work wide variety highly specialized area
+With computer technology playing ever growing role aspect modern life likely find computer science skill high demand across many different industry although unsurprisingly graduate go role within computer industry
+Popular include Working partnership client provides advice planning design installation usage information technology system meet client business objective overcome problem improve structure efficiency IT system
+As represent broad role IT job similar system analyst system designer application programmer whose role specialized nonetheless work consultancy basis
+On typical day meet client determine requirement plan timescales resource spend time clarifying client current system specification work practice nature business
+You analyze IT requirement develop solution implement new system may include designing installing present result written oral report answering feedback helping client subsequent change organizing training user
+You may also become involved sale business development identifying potential client maintaining good business contact
+A similar role IT consultant usually member staff responsible secure effective operation computer system within company
+You responsible perhaps help team IT staff entire upkeep ICT infrastructure within organization typical task involving overseeing installation system ensuring system system operating effectively purchasing hardware software setting secure access user including remote user ensuring security data internal external attack providing IT support advice user
+You need make sure ICT facility meet need company current remaining within set budget within relevant software licensing law
+You may also need understanding business management principle order contribute organizational policy regarding quality standard strategic planning relation IT
+A DBA responsible accurately securely using developing maintaining performance integrity security computerized database
+The specific role always determined organization question likely either mean involved purely database maintenance specialized database development
+The role also dependent type database process capability database management system DBMS use particular organization
+Typically role includes ensuring data remains consistent clearly defined easily accessible secure recovered emergency
+You also required troubleshoot problem arise liaise programmer operational staff IT project manager technical staff provide user training support feedback write report documentation operating manual
+A responsible designing creating multimedia computer product making sure functional maintaining fidelity designer specification
+You use creative well technical skill develop multimedia feature including text sound graphic digital photography modelling animation video
+You need work designer understand design concept discus technically implemented identify operational rule necessary write efficient computer code script make feature work run test product test bug rewrite add new code necessary
+You also available technical support product completed need keep abreast industry news development order suggest implement improvement
+You may work across platform internet interactive television information kiosk DVDS computer game console mobile phone remain specialized one platform
+Your role may overlap similar IT role web developer game developer system developer software engineer may find working tandem professional achieve mutual goal
+Further include working area development web game system product program software analyst business continuity system technical administrator database network academic industrial research capacity contributing ongoing development computer related technology
+Computer science career opportunity available huge variety industry sector organization including financial organization IT company management consultancy firm software house communication company data warehouse multinational company financial service others governmental agency university hospital
+Other option include working technical author trainer explaining technical information audience going teaching journalism management entrepreneurship
+Sign receive regular content highlight direct inbox
+

@@ -1,0 +1,201 @@
+In refers ability different part unit program algorithm problem executed partial order without affecting final outcome
+This allows parallel execution concurrent unit significantly improve overall speed execution system
+In technical term concurrency refers decomposability property program algorithm problem component unit
+A number mathematical model developed general concurrent computation including model
+As Leslie Lamport note While execution considered year computer science concurrency began seminal paper introduced problem
+The ensuing decade seen huge growth interest
+Looking back origin field stand fundamental role played Edsger Dijkstra
+Because computation concurrent system interact executed number possible execution path system extremely large resulting outcome
+Concurrent use shared source indeterminacy leading issue
+Design concurrent system often entail finding reliable technique coordinating execution data exchange execution scheduling minimize maximise
+Concurrency theory active field research
+One first proposal seminal work early
+In year since wide variety formalism developed modeling reasoning concurrency
+A number formalism modeling understanding concurrent system developed including Some model concurrency primarily intended support reasoning specification others used entire development cycle including design implementation proof testing simulation concurrent system
+Some based others different mechanism concurrency
+The proliferation different model concurrency motivated researcher develop way unify different theoretical model
+For example Lee demonstrated model used provide common framework defining variety different model concurrency Nielsen Sassone Winskel demonstrated used provide similar unified understanding different model
+The Concurrency Representation Theorem Actor model provides fairly general way represent concurrent system closed sense receive communication outside
+Other concurrency system modeled Actor model using
+The mathematical denotation denoted closed system constructed increasingly better approximation initial behavior called using behavior approximating function construct denotation meaning follows In way mathematically characterized term possible behavior
+Various type used help reason concurrent system
+Some logic allow assertion made sequence state concurrent system pas
+Others build assertion sequence change state
+The principal application logic writing specification concurrent system
+encompasses programming language algorithm used implement concurrent system
+Concurrent programming usually considered general involve arbitrary dynamic pattern communication interaction whereas parallel system generally predefined communication pattern
+The base goal concurrent programming include
+Concurrent system generally designed operate indefinitely including automatic recovery failure terminate unexpectedly see
+Some concurrent system implement form transparent concurrency concurrent computational entity may compete share single resource complexity competition sharing shielded programmer
+Because use shared resource concurrent system general require inclusion kind somewhere implementation often underlying hardware control access resource
+The use arbiter introduces possibility major implication practice including correctness performance
+For example arbitration introduces raise issue cause explosion state space even cause model infinite number state
+Some concurrent programming model include
+In model thread control explicitly timeslices either system another process
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+When looking concurrent programming two term commonly used
+concurrent parallel
+And programming language specifically claim support parallel programming
+Does mean parallel concurrent programming actually different
+This question came site theoretical computer scientist researcher related field
+Distinguish parallelism using extra computational unit work per unit time concurrency managing access shared resource
+Teach parallelism easier help establish sequential mindset
+From A Introduction Parallelism Concurrency Dan Grossman version November Conurrency parallelism differ problem solve cause independent
+Executing two task mean individual step task executed interleaved fashion
+If disregard parallelism assume one statement executed point time priori guarantee task get execute next step
+This useful regard Some main challenge Executing two task mean statement executed
+This mainly useful Key challenge include See also distinguishing parallel distributed computing
+In addition Nish answer let recommend Simon Marlow book
+They answer first question Haskell perspective could better suited theoretically inclined reader Haskell purely functional lazy programming language much closer Mathematics language
+Quoting In many field word parallel concurrent synonym programming used describe fundamentally different concept
+A parallel program one us multiplicity computational hardware
+multiple processor core order perform computation quickly
+Different part computation delegated different processor execute time parallel result may delivered earlier computation performed sequentially
+In contrast concurrency technique multiple thread control
+Notionally thread control execute time user see effect interleaved
+Whether actually execute time implementation detail concurrent program execute single processor interleaved execution multiple physical processor
+I recommend reading rest tutorial let quote remainder section connects programming paradigm quantitative qualitative characteristic program efficiency modularity determinism
+While parallel programming concerned efficiency concurrent programming concerned structuring program need interact multiple independent external agent example user database server external client
+Concurrency allows program modular thread interacts user distinct thread talk database
+In absence concurrency program written event loop callback indeed event loop callback often used even concurrency available many language concurrency either expensive difficult use
+The notion thread control make sense purely functional program effect observe evaluation order irrelevant
+So concurrency structuring technique effectful code Haskell mean code IO monad
+A related distinction deterministic nondeterministic programming model
+A deterministic programming model one program give one result whereas nondeterministic programming model admits program may different result depending aspect execution
+Concurrent programming model necessarily nondeterministic must interact external agent cause event unpredictable time
+Nondeterminism notable drawback however program become signifficantly harder test reason
+For parallel programming would like use deterministic programming model possible
+Since goal arrive answer quickly would rather make program harder debug process
+Deterministic parallel programming best world testing debugging reasoning performed sequential program program run faster processor added
+Indeed computer processor implement deterministic parallelism form pipelining multiple execution unit
+While possible parallel programming using concurrency often poor choice concurrency sacriffices determinism
+In Haskell parallel programming model deterministic
+However important note deterministic programming model sufficient express kind parallel algorithm algorithm depend internal nondeterminism particularly problem involve searching solution space
+In Haskell class algorithm expressible using concurrency
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In operating system happens several process thread running parallel
+These thread may communicate either shared memory message passing
+Distribution form concurrency communication simultaneous thread done exclusively via message passing
+Distribution useful employ lenient scaling resource consumption economizes resource
+Whereas shared memory concurrency often requires single processor per thread distribution allows several thread communicate one another
+Concurrency also programming design philosophy
+In concurrent programming programmer attempt break complex problem several simultaneous executing process addressed individually
+Although concurrent programming offer better program structure sequential programming always practical
+In concurrent system computation executed time diverge giving indeterminate answer
+They system may end deadlock maximum assigned resource consumption executing thread
+Thus design robust concurrency operating system programmer need reduce problem individual parallel task coordinate execution memory allocation data exchange task
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I often hear phrase like concurrency semantics concurrency equivalence without reference
+What term mean important
+What example true concurrency equivalence need
+
+case applicable standard equivalence bisimulation trace equivalence etc
+The term true concurrency arises theoretical study concurrent parallel computation
+It contrast interleaving concurrency
+True concurrency concurrency reduced interleaving
+Concurrency interleaved step computation one atomic computing action
+exchange message sender receiver take place
+Concurrency true one atomic action take place step
+The simplest way distinguishing look rule parallel composition
+In interleaving based setting would look something like P P This rule enforces one process parallel composition execute atomic action
+For true concurrency rule like following would appropriate
+P Q Q This rule allows participant parallel composition execute atomic action
+Why would one interested interleaved concurrency concurrency theory really study system execute computation step parallel
+The answer great insight simple form message passing concurrency true concurrency interleaving based concurrency contextually distinguishable
+In word interleaved concurrency behaves like true concurrency far observer see
+Interleaving good decomposition true concurrency
+Since interleaving easier handle proof people often study simpler interleaving based concurrency
+CCS
+However simplicity disappears concurrent computation richer form observation
+timed computation difference true concurrency interleaved concurrency becomes observable
+Standard equivalence like bisimulations trace definition true interleaving based concurrency
+But may may equate different process depending underlying calculus
+Let give informal explanation interleaving truly concurrent interaction indistinguishable simple process calculus
+The setting CCS calculus
+Say program P x b Then following truly concurrent reduction P b This reduction step matched following interleaved step P x b b The difference former take one step latter two
+But simple calculus detect number step used reach process
+At time P following second interleaved reduction sequence P b b But also reduction sequence truly concurrent setting long true concurrency forced
+interleaved execution allowed even potential one interaction time
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+The problem caused concurrency even important ability support concurrent transaction
+For example one user changing data yet saved committed data database allow user query data view changed unsaved data
+Instead user view original data
+Almost database deal concurrency way although terminology may differ
+The general principle changed unsaved data held sort temporary log file
+Once saved written database physical storage place original data
+As long user performing change saved data able view data changing
+All user querying data view data existed prior change
+Once user save data new query reveal new value data
+Techopedia Terms Copyright Techopedia
+
+Concurrency context computer science ability program decomposed part run independently
+This mean task executed order result would still executed order
+Concurrency ability algorithm program run one task time
+The concept similar parallel processing possibility many independent job different thing rather executing job
+Concurrent program difficult write simply managing independent task requires coordination resource
+The famous Dining Philosophers Problem classic thought experiment illustrates complexity resource sharing concurrency
+Modern multitasking operating system concurrent ability run many different program
+As computing hardware becomes cheaper running complex job cluster becoming feasible
+Several programming language designed concurrency mind including Go
+Techopedia Terms Copyright Techopedia
+
+For question International pricing please go page
+Principles Parallelism The Principles Concurrency course examine design implementation concurrency abstraction found modern programming language computing system
+In course concurrency viewed primarily program structuring device
+Refine search using tool
+
+form several executed overlapping time one completing next start
+This property may individual separate execution point thread control computation process
+A one computation advance without waiting computation complete
+As concurrent computing form namely overall computation subcomputations may executed concurrently
+Pioneers field concurrent computing include
+The concept concurrent computing frequently confused related distinct concept although described multiple process executing
+In parallel computing execution occurs physical instant example separate machine goal speeding computing impossible single processor one computation occur instant single clock cycle
+By contrast concurrent computing consists process overlapping execution need happen instant
+The goal model process outside world happen concurrently multiple client accessing server time
+Structuring software system composed multiple concurrent communicating part useful tackling complexity regardless whether part executed parallel
+For example concurrent process executed one core interleaving execution step process via slice one process run time complete time slice another process begin resume later original process resumed
+In way multiple process execution single instant one process executed instant
+Concurrent computation executed parallel example assigning process separate processor processor core computation across network
+In general however language tool technique parallel programming might suitable concurrent programming vice versa
+The exact timing task concurrent system executed depend task need always executed concurrently
+For example given two task The word sequential used antonym concurrent parallel explicitly distinguished used opposing pair
+A schedule task execute one time serially parallelism without interleaving sequentially concurrency task begin prior task end called
+A set task scheduled serially simplifies
+The main challenge designing concurrent program ensuring correct sequencing interaction communication different computational execution coordinating access resource shared among execution
+Potential problem include
+For example consider following algorithm make withdrawal checking account represented shared resource Suppose two concurrent make call
+If line operation executes line operation find evaluates execution proceed subtracting withdrawal amount
+However since process perform withdrawal total amount withdrawn end original balance
+These sort problem shared resource need use
+Because concurrent system rely use shared resource including communication medium concurrent computing general need use form somewhere implementation mediate access resource
+Unfortunately many solution exist problem conflict one resource many solution concurrency problem one resource involved
+Concurrent computing following advantage There several model concurrent computing used understand analyze concurrent system
+These model include A number different method used implement concurrent program implementing computational execution implementing computational process set within single operating system process
+In concurrent computing system communication concurrent component hidden programmer using others must handled explicitly
+Explicit communication divided two class Shared memory message passing concurrency different performance characteristic
+Typically although always memory overhead task switching overhead lower message passing system overhead message passing greater procedure call
+These difference often overwhelmed performance factor
+Concurrent computing developed earlier work railroad early century term date period semaphore
+These arose address question handle multiple train railroad system avoiding collision maximizing efficiency handle multiple transmission given set wire improving efficiency via
+The academic study concurrent algorithm started credited first paper field identifying solving
+Concurrency pervasive computing occurring hardware single chip worldwide network
+Examples follow
+At programming language level At operating system level At network level networked system generally concurrent nature consist separate device
+programming language use language construct
+These construct may involve support including
+Such language sometimes described Concurrency Oriented Languages Concurrency Oriented Programming Languages COPL
+Today commonly used programming language specific construct concurrency
+Both language fundamentally use concurrency model locking provided although model implemented top underlying model
+Of language use concurrency model probably widely used industry present
+Many concurrent programming language developed research language
+rather language production use
+However language seen industrial use various time last year
+Languages concurrency play important role include Many language provide support concurrency form library level roughly comparable list
+

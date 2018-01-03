@@ -1,0 +1,184 @@
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I studying operating system concept sixth edition I question flow execution program
+A figure explains processing user program We get executable binary file reach point
+As book say The program must brought memory placed within process executed
+I several question flow Before program loaded memory binary executable file generated linkage editor stored hard disk
+The address binary executable file stored hard disk logical address generated CPU
+If previous answer yes Why CPU generate logical address
+I mean executable file stored somewhere hard disk pertains address CPU separately stuff
+CPU main aim processing
+Why executable file need physical memory ram executed hard disk
+Is due speed issue
+First fundamentally confusing purpose RAM hard disk
+RAM part memory CPU access
+Hard disk exists expand capacity RAM well store data permanently data RAM transient
+How work That creating small beginner program never save state program
+We create variable process running modify never explicitly store hard disk unless engaging file handling aspect
+When destroy program memory lost
+read write operation language merely wrapper around system call provided OS make code portable across several operating system since system call different
+These system call request OS let u access file hard disk different RAM
+As question logical address little ambiguous want say
+Logical address used reference RAM program usually refer program view memory
+For program logical address may start translate fact program start physical address RAM
+You right CPU process data need data process stored RAM
+The address provided program code logical say get data stored location start program CPU calculate actual physical address work upon
+replace program base address process code block RAM
+Thus logical address nothing hard disk
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+obj stream
+ï w Ç cô J mL endobj obj endobj obj stream wS ÊAõ Æ ÖZW eÝ µqÇËEÄ vXb X Á
+ïôãøÚ J Á Gz Î å ª çâôaZCº À ÙgºëÊ ÒØ Ö ä Z óîBU q
+ýq YæMW ê x vu åã j ÿ Ñi E ÇXÓ úã EgÀS Û Ùwr H CÞV øC ó
+r
+î FgÌl só sDA
+ÈÙ ÍÔ l ÀpQh Lµ ÚüCDçèð Ö Y Å yèt ÑGä ç VC ÖBôÿ iÇ
+
+Æ úLe Éh ö æ
+G ªïko ß å BQn Ò lÕY gC endstream endobj obj endobj obj stream þÍ ÂP h xÀñ l QØ X b Ò Ç Çj Ci ÖïfÄMpÄ
+ÉZFM ä sL u Òãñï düëg Ñ üDFÀç ÉÈËP ò
+h Ùc Â ÒXqTX
+ÖæÌ x Ë æÒ e ùjK
+âHÂ ê ã åz
+I º ä Öé áÓ
+Þlï ð M GªUÀTLË DÎ Ó à z H ÀÍØÖµs BµÖ ÍvP ù àWdB ÅÅÜ MT
+À cÌ õ fK Ã íg ûú ÿ µendstream endobj obj endobj obj stream ª h zS
+Q cÎÑú ýú k W Êv b ãí VMY ôqÖ ñ æÄ bVfmÁíp ØÛÂÿ XüsY ºÑSëEq ñè aGºx ÐM wR ÓN ïZ Ì er ÀÕìúhxgk Ø ñæ Ó N MÅFV
+ißTæùîÅ V Ñ F VDk gô ÑXúh bì ÖÙ ûÿ hÝÀ ÓÈå ö ó Yâ B
+ï ø ì Ç q áù Ñ ýÁÈçÚE J kHÈb ÎDwø åîP ÉÐc Aù Ó íÛ
+
+A short
+Threads way divide termed two simultaneously running
+Threads differ one another general thread contained inside process different thread process share resource different
+Threads lightweight term system resource consume compared process
+
+learn share knowledge build career
+I learning computer programming year layer abstraction clouding I understand
+Say I compiled source code I executable machine code
+Once computer run code going
+For example say I run simple else statement machine code
+What going circuitry computer executes instruction
+It depends language regular executable like get machine code bit pattern CPU interpret direct instruction
+These machine language instruction map assembly instruction done assembly getting CS degree end taking course two learn assembly may even manually translate assembly machine language using CPU reference
+Other language like Java C little tricky intermediate interpreted translated machine code program run allowing achieve platform independence
+As instruction depends CPU thing like following probably
+register small fast memory space exists within CPU certain register used certain instruction
+One current instruction register hold address next instruction executed
+Changing value directly jump new address similar statement
+stack internal stack value stored retrieved manner
+This function calling achieved
+Like Hansel Gretel leave trail bread crumb behind u find way back home
+Additionally two school thought towards instruction set organized RISC CISC reduced instruction set computer complex instruction set computer
+In RISC computer much fewer le powerful instruction programmer compiler use group complex thing
+In CISC computer much powerful instruction redundancy
+Intel based CPUs CISC
+See also By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Wikipedia Advertizing Wikipedia In set stored storage location denoted
+In assignment statement one basic
+Common notation assignment
+Assignment statement typically allow variable contain different value different time execution
+Thus language featuring destructive assignment rarely enforce requires procedure return result given set input point time
+An assignment operation process different value associated particular variable name time pass
+The program model operates changing state using successive assignment statement
+Primitives imperative programming language rely assignment
+At lowest level assignment implemented using
+The container value
+It possible put value variable later replace new one
+An assignment operation modifies current state executing program
+Consequently assignment dependent concept
+In assignment Example Assuming numeric variable assignment mean content variable doubled execution statement
+The case assigned value depends previous one common many imperative language notably majority descendant defining special like convenience example becomes
+An example segment code In sample variable first declared int assigned value
+Notice declaration assignment occur statement
+In second line declared without assignment
+In third line reassigned value
+Finally assigned value
+For assignment operation necessary value valid represents modifiable entity valid modifiable
+In language typically one necessary declare variable prior assigning value
+Any assignment change existing value
+disallowed language
+In assignment discouraged favor single assignment also called
+Single assignment example differs assignment described article done usually variable created subsequent allowed
+Once created single assignment named value variable
+An evaluation expression change observable state machine produce value input
+Imperative assignment introduce side effect destroying making old value unavailable substituting new one referred reason similar
+Single assignment form assignment available language Haskell variable sense imperative programming language rather named constant value possibly compound nature element progressively defined
+Purely functional language provide opportunity avoiding sequential one step time execution since value independent
+Impure functional language provide single assignment well true assignment though true assignment typically used le frequency imperative programming language
+For example Scheme single assignment true assignment used variable specialized primitive provided destructive update inside list vector string etc
+In OCaml single assignment allowed variable via syntax however destructive update used element array string separate operator well field record object explicitly declared meaning capable changed initial declaration programmer
+Functional programming language use single assignment include vals
+code considered explicit sense named variable explicitly unassigned state set exactly
+In Haskell contrast unassigned variable every variable thought implicitly set value rather computational object produce value created
+In programming language assignment statement return value others
+In example assignment statement return assigned value allowing idiom assignment statement return value assigned
+In statement return value function used control loop assigning value variable
+In programming language example return value assignment undefined idiom invalid
+In variable assignment operation similar assignment like assigning field array field mutable data structure usually evaluate value unit type typically type expression evaluated purely side effect
+A statement like called value assigned multiple variable
+Chained assignment often used initialize multiple variable Not programming language support chained assignment
+In programming language example chained assignment supported assignment return value
+In also available value class type making appropriate return type assignment operator
+This however strongly discouraged also allows value class type assigned temporary object result statement effect assignment temporary object detected error type
+In assignment statement expression thus return value
+Instead chained assignment series statement multiple target single expression
+The assignment executed evaluates expression assigns result leftmost target assigns result next target using new value
+Some programming language since since using tuples allow several variable assigned parallel syntax like simultaneously assigns
+If side assignment array variable feature sometimes called The list unpacked assigned
+More interestingly Swaps value
+In language without parallel assignment would written use temporary variable since leaf original value
+Parallel assignment introduced name
+Beginning programmer sometimes confuse assignment equality mean mathematics used assignment many language
+But assignment alters value variable equality testing test whether two expression value
+In language single equal sign used assignment operator equality relational operator context determining meant
+Other language use different symbol two operator
+For example The similarity two symbol lead error programmer forgets form appropriate mistypes intended
+This common programming problem language C assignment operator also return value assigned validly nested inside expression way function return value
+If intention compare two value statement instance assignment quite likely return value interpretable Boolean true case clause executed leading program behave unexpectedly
+Some language processor detect situation warn programmer potential error
+Common textual representation assignment include
+These two form typical programming language classify assignment infix
+Other possibility include left arrow keyword though rarer variant Some platform put expression left variable right Some language Tcl uniformly use prefix syntax statement including assignment
+This entry Wikipedia leading encyclopedia
+It may reviewed professional editor see content Advertising Webmaster Solution Alexandria A window information Sensagent triggered word webpage
+Give contextual explanation translation site
+Try get SensagentBox With visitor site access reliable information million page provided
+Choose design fit site
+Business solution Improve site content Add new content site Sensagent XML
+Crawl product add Get XML access reach best product
+Index image define metadata Get XML access fix meaning metadata
+Please describe idea
+WordGame The English word game Lettris curious game brick square shape different content
+Each square carry letter
+To make square disappear save space square assemble English word left right falling square
+boggle give minute find many word letter grid letter
+You also try grid letter
+Letters must adjacent longer word score better
+See get grid Hall Fame
+English dictionary Main reference Most English definition provided
+English thesaurus mainly derived The Integral Dictionary TID
+English Encyclopedia licensed Copyrights The wordgames provided Memodata
+The web service
+The offered sensAgent
+Translation Change target language find translation
+Tips browse semantic field see two language learn
+computed Copyright sensagent Corporation Online Encyclopedia Thesaurus Dictionary definition
+All right reserved
+My account Advertising Cookies help u deliver service
+By using service agree use cooky
+
+A disk execution monitor daemon background process run computer multitasking operating system usually bootstrap time perform administrative change monitor service
+Common daemon process include email handler print spoolers program perform OS administrative task
+Daemons also perform specified operation predefined time response event
+Unix daemon file generally suffix
+For example identd refers daemon provides identity TCP connection
+Microsoft OS daemon referred terminate stay resident TSR program called system agent service within context OS administration
+Mac OS X system also us daemon provide service Microsoft OS
+Techopedia Terms Copyright Techopedia
+
+Your browser old version Safari fully supported Quizlet
+Please download newer web browser improve experience
+

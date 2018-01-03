@@ -1,0 +1,468 @@
+In association name entity region binding valid name used refer entity
+Such region referred
+In part program name may refer different entity may different binding nothing may unbound
+The scope binding also known entity particularly older technical literature perspective referenced entity referencing name
+A scope part program scope set binding precise tricky casual use practice largely corresponds function file depending language type entity
+The term scope also used refer set entity visible name valid within portion program given point program correctly referred
+Strictly speaking practice programming language part program refers portion source code area text known
+In language however part program refers portion run time time period execution known
+Both term somewhat misleading misuse technical term discussed distinction accurate precise standard respective term
+Lexical scope main focus article dynamic scope understood contrast lexical scope
+In case name resolution based lexical scope straightforward use implement use one simply read backwards source code determine entity name refers implementation one simply maintain list name context compiling interpreting program
+Basic difficulty arise considerably subtler one arise particularly
+The strict definition lexical scope name unambiguous portion source code binding name entity applies virtually unchanged definition specification
+Representative language specification follow
+Most commonly scope refers given name refer given effect also apply entity function type class constant enumeration
+A fundamental distinction scoping part program mean
+In language also called name resolution depends location source code defined named variable function defined
+In contrast language name resolution depends upon name encountered determined
+In practice lexical scope variable definition resolved searching containing block function fails searching outer containing block whereas dynamic scope calling function searched function called calling function progressing call stack
+Of course rule first look local definition variable
+Most modern language use lexical scoping variable function though dynamic scoping used language notably dialect Lisp scripting language like
+Even lexically scoped language scope confusing uninitiated depend lexical context closure defined called
+Lexical resolution determined also known dynamic resolution general determined thus known
+In selects object runtime though whether actual name binding done compile time run time depends language
+De facto dynamic scoping common directly name resolution instead expand place
+Some programming framework like use term scope mean something entirely different used article
+In framework scope object programming language use case AngularJS used certain way framework emulate dynamic scope language us lexical scope variable
+Those scope scope using usual meaning term given part program following usual rule variable scope language like object using rule
+In context AngularJS sometimes term scope dollar sign used avoid confusion using dollar sign variable name often discouraged style guide
+Scope important component turn fundamental
+Name resolution including scope varies programming language within programming language varies type entity rule scope called
+Together scoping rule crucial change one part program break unrelated part
+When discussing scope three basic concept Scope context particular frequently confused scope property identifier fixed context property program varies position
+More precisely context property position program either position source code point
+Execution context consists lexical context current execution point plus additional runtime state
+Thus execution point program variable name scope variable name context meaning context point execution point exit variable name scope returning function variable name go context
+Narrowly speaking execution program enters exit various scope point execution identifier context context hence identifier come context go context program enters exit scope however practice usage much looser
+Scope level concept property identifier particularly variable function name identifier source code entity program part behavior compiler interpreter language
+As issue scope similar type reference used program generally
+Using value variable name context variable uninitialized analogous dereferencing accessing value undefined
+However variable destroyed go context analog exist
+For entity variable scope subset also known name refer variable exists possibly undefined value variable exist necessarily visible variable may exist inaccessible value stored referred within given context accessible via given name case program scope name
+In case lifetime irrelevant label named position source code lifetime identical program statically compiled language may context given point program likewise context entire program context within function local context lifetime entire run program
+Determining entity identifier refers known particularly varies language
+Given identifier language properly compiler interpreter check entity context match case ambiguity two entity name global local variable name name resolution rule used distinguish
+Most frequently name resolution relies rule Python LEGB Local Enclosing Global rule name implicitly resolve narrowest relevant context
+In case name resolution explicitly specified keywords Python case default rule overridden
+When two identical identifier context time referring different entity one say occurring name usually innermost masking name
+At level variable known
+Due potential masking language disallow discourage masking raising error warning compile time run time
+Various various different scoping rule different kind declaration identifier
+Such scoping rule large effect consequently behavior correctness program
+In language like accessing unbound variable semantics may result similar referring declaration identifier used outside scope generate
+Scopes frequently tied language construct determined implicitly many language also offer construct specifically controlling scope
+Scope vary little single expression much entire program many possible gradation
+The simplest scoping rule global scope entity visible throughout entire program
+The basic modular scoping rule scoping global scope anywhere program local scope within function
+More sophisticated modular programming allows separate module scope name visible within module private module visible outside
+Within function language C allow block scope restrict scope subset function others notably functional language allow expression scope restrict scope single expression
+Other scope include file scope notably C function similarly module scope block scope outside function notably Perl
+A subtle issue exactly scope begin end
+In language C scope start declaration thus different name declared within given block different scope
+This requires declaring function use though necessarily defining requires case notably mutual recursion
+In language JavaScript Python name scope begin start relevant block start function regardless defined name within given block scope JavaScript known
+However name bound value varies behavior name undefined value differs Python use undefined variable yield runtime error JavaScript undefined variable usable undefined value function declaration also hoisted top containing function usable throughout function
+Many language especially language offer feature called allow declaration scope single expression
+This convenient example intermediate value needed computation
+For example return expression evaluates using temporary variable named avoid calling twice
+Some language block scope approximate functionality offering syntax block embedded expression example aforementioned Standard ML expression could written
+In Python auxiliary variable generator expression list comprehension Python expression scope
+In C variable name expression scope known context
+As variable name prototype referred may different actual definition dummy often omitted though may used generating documentation instance
+Many programming language allow scope restricted known
+This began e declaration valid block
+today particularly associated language family tradition
+Most often block contained within function thus restricting scope part function case Perl block may within function
+A representative example use block scope C code shown two variable scoped loop loop variable initialized incremented iteration loop auxiliary variable initialized iteration
+The purpose avoid adding variable function scope relevant particular block example prevents error generic loop variable accidentally already set another value
+In example expression would generally assigned auxiliary variable body loop would simply written complicated example auxiliary variable useful
+Blocks primarily used control flow loop case block scope mean scope variable depends structure function flow execution
+However language block scope typically also allow use naked block whose sole purpose allow control variable scope
+For example auxiliary variable may defined block used say added variable function scope discarded block end loop might enclosed block initializes variable used inside loop initialized
+A subtlety several programming language C demonstrated example standardized since variable declared within body block also within control statement
+This analogous function parameter declared function declaration block function body start scope whole function body
+This primarily used initialization statement separate loop condition unlike loop common idiom
+Block scope used shadowing
+In example inside block auxiliary variable could also called shadowing parameter name considered poor style due potential error
+Furthermore descendant C Java C despite support block scope local variable made go scope end function allow one local variable hide another
+In language attempted declaration second would result syntax error one variable would renamed
+If block used set value variable block scope requires variable declared outside block
+This complicates use conditional statement
+For example Python use block scope one may initialize variable accessible statement
+In Perl block scope instead requires declaring variable prior block Often instead rewritten using multiple assignment initializing variable default value
+In Python necessary would Perl would In case single variable assignment alternative use avoid block general possible multiple variable assignment difficult read complex logic
+This significant issue C notably string assignment string initialization automatically allocate memory string assignment already initialized variable requires allocating memory string copy checking successful
+Some language allow concept block scope applied varying extent outside function
+For example Perl snippet right variable name block scope due use keyword function name global scope
+Each call increase value one return new value
+Code outside block call otherwise obtain alter value
+This idiom allows one define Perl
+Most commonly used programming language offer way create function variable whose scope end go context function return
+In case lifetime variable duration function call created function start variable declared destroyed function return scope variable within function though meaning within depends whether scoping lexical dynamic
+However language C also provide lifetime variable entire lifetime program variable context inside function
+In case static local variable variable created program initializes destroyed program terminates context within function like automatic local variable
+Importantly lexical scoping variable function scope scope within function move context another function called within function move back context function return called function access local variable calling function local variable context within body function declared
+By contrast dynamic scoping scope extends function local variable another function called moving context defining function end thus local variable context function defined
+In language lexical scoping local variable context nested function since within lexical context function lexically nested
+A local variable enclosing function known nested function
+Function scope also applicable
+For example snippet Python code right two function defined
+computes square number computes sum square number
+For example
+Each function variable named represents argument function
+These two variable completely separate unrelated despite name lexically scoped local variable function scope one scope lexically separate function thus overlap
+Therefore call without altered
+Similarly variable named variable limited scope interfere variable named might belong function
+In word risk identifier unrelated identifier even identical
+Note also name masking occurring one variable named context given time scope overlap
+By contrast similar fragment written language dynamic scope calling function would remain context called function scope would overlap would masked shadowed new called function
+Function scope significantly complicated function object created locally function returned
+In case variable nested function local unbound variable function definition resolve variable enclosing context create function also environment variable must returned potentially called different context
+This requires significantly support compiler complicate program analysis
+A scoping rule largely particular C scope variable function declared top level file within function entire file rather C declaration end source file precisely internal linking
+This seen form module scope module identified file modern language replaced explicit module scope
+Due presence include statement add variable function internal context may call include statement difficult determine context body file
+In C code snippet function name file scope
+In scope name entire module however may structured across various file
+In paradigm module basic unit complex program allow information hiding exposing limited interface
+Module scope pioneered family language Python influenced Modula representative contemporary example
+In language lack direct support module similar structure instead provided class hierarchy class basic unit program class private method
+This properly understood context rather name resolution scope though often play analogous role
+In case facility available Python module class code organization function conventionally private method choice programmer
+A declaration effect throughout entire program
+Variable name global scope called frequently considered bad practice least language due possibility name collision unintentional masking together poor modularity function scope block scope considered preferable
+However global scope typically used depending language various sort identifier name function name
+In case mechanism used avoid collision
+The use local variable variable name limited scope exist within specific function help avoid risk name collision two identically named variable
+However two different approach answering question What mean within function
+In also called variable name scope certain function scope program text function definition within text variable name exists bound variable value outside text variable name exist
+By contrast variable name scope certain function scope function executing function running variable name exists bound value function return variable name exist
+This mean function invokes separately defined function lexical scoping function access local variable assuming text inside text dynamic scoping function access local variable since invoked invocation
+Consider example program right
+The first line creates global variable initializes
+The second line defines function print echo current value set overwriting previous value
+The third line defines function creates local variable hiding identically named global variable initializes call
+The fourth line call
+The fifth line print current value
+So exactly program print
+It depends scoping rule
+If language program one us lexical scoping print modifies global variable defined outside program print
+By contrast language us dynamic scoping print modifies local variable called within program print
+As happens language program us dynamic scoping program print
+With name always refers le local lexical environment
+This property program text made independent runtime language implementation
+Because matching requires analysis static program text type scoping also called
+Lexical scoping standard language well modern functional language
+It also used syntactic semantic relative although different kind limitation
+Static scoping allows programmer reason object reference parameter variable constant type function etc
+simple name substitution
+This make much easier make modular code reason since local naming structure understood isolation
+In contrast dynamic scope force programmer anticipate possible dynamic context module code may invoked
+For example consider Pascal program fragment right
+The variable visible point never hidden another variable name
+The variable visible main program hidden variable visible procedure
+Variable also visible procedure hide variable
+Variable visible procedure therefore accessible either procedure main program
+Also procedure visible procedure therefore called main program
+There could another procedure declared program outside procedure
+The place program mentioned determines two procedure named represents thus precisely analogous scope variable
+Correct implementation static scope language trivial requires function value carry record value variable depends pair function environment called
+Depending implementation variable become slightly inefficient deeply lexically function used although technique mitigate
+Also nested function refer argument immediately local variable relative location known
+No overhead therefore incurred using type nested function
+The applies particular part program nested function used naturally program written language nested function available C language
+Lexical scoping used picked language since
+approximates static lexical scoping introduced LISP via device developed working
+The original Lisp interpreter early used dynamic scoping descendant dynamically scoped language often adopt static scoping SRFI dynamic static scoping
+another language dynamic scoping added static scoping afterwards
+Languages like always lexical scoping since influenced idea went although C include lexically
+The term lexical scope date least term lexical scoping date least used describe scoping rule Lisp dialect known Muddle
+With global identifier refers identifier associated recent environment uncommon modern language
+In technical term mean identifier global binding
+Introducing local variable name push binding onto global stack may empty popped leaf scope
+Evaluating context always yield top binding
+Note done binding stack exists type scoping called scoping
+Generally certain defined create binding whose lifetime execution time block add feature static scoping dynamic scoping process
+However since section code called many different location situation difficult determine outset binding apply variable used one exists
+This beneficial application suggests code avoid depending circumstance variable value simply use value according variable definition
+This narrow interpretation shared data provide flexible system adapting behavior function current state policy system
+However benefit relies careful documentation variable used way well careful avoidance assumption variable behavior provide mechanism detect interference different part program
+Dynamic scoping also void benefit
+As dynamic scoping dangerous modern language use
+Some language like allow programmer choose static dynamic scoping defining redefining variable
+Examples language use dynamic scoping include shell language
+Dynamic scoping fairly easy implement
+To find identifier value program could traverse runtime stack checking activation record function stack frame value identifier
+In practice made efficient via use stack pair
+Pairs pushed onto stack whenever declaration made popped whenever variable go scope
+alternative strategy considerably faster making use associate name stack meaning
+This avoids linear search find particular name care taken properly maintain table
+Note strategy assume ordering binding one variable practice binding ordered
+An even simpler implementation representation dynamic variable simple global variable
+The local binding performed saving original value anonymous location stack invisible program
+When binding scope terminates original value restored location
+In fact dynamic scope originated manner
+Early implementation Lisp used obvious strategy implementing local variable practice survives dialect still use GNU Emacs Lisp
+Lexical scope introduced Lisp later
+This equivalent shallow binding scheme except central reference table simply global variable binding environment current meaning variable global value
+Maintaining global variable complex
+For instance symbol object dedicated slot global value
+Dynamic scoping provides excellent abstraction used way based saving restoring global variable
+A possible implementation strategy variable key
+When variable accessed key used access memory location code generated compiler know variable dynamic lexical
+If key exist calling thread global location used
+When variable locally bound prior value stored hidden location stack
+The storage created variable key new value stored
+Further nested override variable within thread simply save restore location
+When initial override scope terminates key deleted exposing global version variable thread
+In modern language key example de facto dynamic scope
+The macro language transforms source code without resolving name since expansion done place name expanded text resolved notably free variable resolved based expanded loosely called dynamic scoping occurring
+The used de facto dynamic scope name resolution
+For example macro expand add passed variable identifier later resolved compiler based macro called properly expanded dynamic scope independent macro defined
+Properly C preprocessor expanding macro tokenization stage parsing syntax tree name resolution
+For example following code macro resolved expansion local variable expansion site As seen one key reason scope help prevent name collision allowing identical identifier refer distinct thing restriction identifier must separate scope
+Sometimes restriction inconvenient many different thing need accessible throughout program generally need identifier global scope different technique required avoid name collision
+To address many language offer mechanism organizing global identifier
+The detail mechanism term used depend language general idea group identifier given name prefix necessary entity referred consisting identifier plus prefix
+Normally identifier sense two set scope scope usually global scope qualified identifier visible one narrower scope without prefix visible well
+And normally group organized group
+Although many language support concept detail vary greatly
+Some language mechanism serve almost exclusively enable global identifier organized group
+Other language mechanism combine additional purpose allowing identifier visible member group
+And language often allow class singleton object fulfill purpose whether mechanism primary purpose
+Furthermore language often meld approach example package largely similar namespaces optionally double class programming organizes variable function class organizes class package
+Scoping rule representative language follow
+In C scope traditionally known particularly variable
+C lexically scoped language global scope known form module scope file scope known local scope within function within function scope nested via block scope
+However standard C support nested function
+The lifetime visibility variable determined
+There three type lifetime C static program execution automatic block execution allocated stack manual allocated heap
+Only static automatic supported variable handled compiler manually allocated memory must tracked manually across different variable
+There three level visibility C external linkage global internal linkage roughly file block scope includes function block scope nested different level internal linkage possible use includes
+Internal linkage C visibility level namely source file processed notably including relevant includes
+C program compiled separate linked executable library via
+Thus name resolution split across compiler resolve name within translation unit loosely compilation unit properly different concept linker resolve name across translation unit see discussion
+In C variable block scope enter scope declared top block move scope function called within block move back scope function return move scope end block
+In case automatic local variable also allocated declaration deallocated end block static local variable allocated program initialization deallocated program termination
+The following program demonstrates variable block scope coming scope partway block exiting scope fact deallocated block end The program output There level scope Variable name used function prototype function prototype visibility exit scope end function prototype
+Since name used useful compilation may useful documentation
+Label name GOTO statement function scope case label name block scope block switch
+All variable intend use program must declared type specifier earlier point code like previous code beginning body function main declared b result type int
+A variable either global local scope
+A global variable variable declared main body source code outside function local variable one declared within body function block
+Modern version nested lexical scoping
+lexically scoped using block
+lexically scoped
+A Java class contain three type variable defined inside method particular block
+These variable local defined lower level
+For example loop inside method use method local variable way around
+The loop variable local loop destroyed soon loop end
+also called variable declared within class outside method
+By default variable available method within class also class package
+variable method declaration
+In general set bracket defines particular scope variable top level within class differ behavior depending modifier keywords used definition
+The following table show access member permitted modifier
+simple variable initialization name resolution rule cause problem widespread use closure callback mean lexical environment function defined used name resolution different lexical environment called irrelevant name resolution
+JavaScript object name resolution property separate topic
+JavaScript lexical scoping nested function level global scope outermost scope
+This scoping used variable function meaning function declaration opposed variable function type
+Block scoping keywords standard since
+Block scoping produced wrapping entire block function executing known IIFE pattern
+While JavaScript scoping simple lexical associated initialization name resolution rule cause confusion
+Firstly assignment name scope default creating new global variable local one
+Secondly create new local variable one must use keyword variable created top function value variable assigned value assignment expression reached This known declaration initialization hoisted top function
+Thirdly accessing variable initialization yield rather syntax error
+Fourthly function declaration declaration initialization hoisted top function unlike variable initialization
+For example following code produce dialog output local variable declaration hoisted shadowing global variable initialization variable undefined used Further function object JavaScript frequently assigned callback returned function function executed name resolution depends originally defined lexical environment definition lexical environment execution environment called
+The nested scope particular function global local JavaScript particularly closure used callback sometimes referred analogy prototype chain object
+produced JavaScript using nested function function object
+Returning nested function enclosing function includes local variable enclosing function lexical environment returned function yielding closure
+For example Closures frequently used JavaScript due used callback
+Indeed hooking function local environment callback returning function creates closure unbound variable function body environment closure based nested scope current lexical environment scope chain may accidental
+When creating callback based parameter parameter must stored closure otherwise accidentally create closure refers variable enclosing environment may change
+Name resolution property JavaScript object based inheritance prototype tree path root tree called separate name resolution variable function
+dialect various rule scoping
+The original Lisp used dynamic scoping introduced static lexical scoping Lisp family
+adopted lexical scoping Scheme dialect Lisp like still use dynamic scoping
+For variable Python function scope module scope global scope
+Names enter scope start context function module globally exit scope function called context end
+If name used prior variable initialization raise runtime exception
+If variable simply accessed assigned context name resolution follows LEGB rule Local Enclosing Global
+However variable assigned default creating local variable scope entire context
+Both rule overridden Python declaration prior use allows accessing global variable even intervening nonlocal variable assigning global nonlocal variable
+As simple example function resolve variable global scope Note initialized called error raised even though declared declared
+Lexically allowed Python
+Here assignment creates new local variable change value global variable Assignment variable within function cause declared local function hence local variable scope entire function thus using prior assignment raise error
+This differs C local variable scope declaration entire function
+This code raise error The default name resolution rule overridden Python keywords
+In code declaration mean resolve global variable
+It thus accessed already initialized assignment assigns global variable rather declaring new local variable
+Note declaration needed since assign variable default resolving global variable
+also used nested function
+In addition allowing assignment global variable unnested function also used access global variable presence nonlocal variable For nested function also declaration assigning nonlocal variable similar using unnested function lexically scoped language unlike implementation value free variable determined set global variable R determined environment function created
+The scoping environment may accessed using variety feature simulate experience dynamic scoping programmer desire
+
+learn share knowledge build career
+This question already answer From python A defines visibility name within block
+If local variable defined block scope includes block
+When name used code block resolved using nearest enclosing scope
+So obviously quote scope mean
+Is true scope collection binding
+And mean
+Does mean every scope must contain reference
+This question marked exact duplicate existing question
+Martjin Pieters clarification answer awesome I like add beyond python scope computer concept span across basically programming language currently use
+To learn scope generally aside python I start Many language including python follow set basic scoping rule detail different language
+Thus really asking scope
+starting general source may useful learning intricacy python scoping least first
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+This action might possible undo
+Are sure want continue
+Mission Maker Manual available
+
+Need relax
+Try
+I would recommend marked
+
+This action might possible undo
+Are sure want continue
+Fsm available
+
+Functions procedure summarise set programming instruction
+Modules used group function procedure specific purpose
+many part
+These may include
+Each part given name called
+Every part must unique identifier
+If programmer want create function procedure program part one must also given different identifier
+Identifiers made unique two way Identifiers may case meaning throughout whole program meaning everywhere
+Or identifier may case meaning within small part program may defined different meaning different place
+Identifiers may also case meaning throughout single module file
+This allows u use name different place refer different thing
+These name actually different identifier even though casual reader might think
+We safely divide programming project smaller component programmer writing one component may choose name local component without worrying name chosen programmer writing component
+Sign choose GCSE subject see content tailored
+
+µµµµ obj endobj obj endobj obj R R R R R R R R R R R endobj obj stream ÙV øñðð ÁÚ HaIh Èhü Ä oWA ÑÇO UÂ T IH q Z Þ sw ÜëÀbK Æ Q ëúY YÿP ÜW íJ ª cû æÑ äÊ w fÓÆ Møëìp
+endstream endobj obj endobj obj endobj obj endobj obj stream ÿØÿà JFIF ÿÛ C K
+C ÿÄ ÿÄ µ ÿÄ µ w ñ
+ó ý ÿ ù Y A åÚÿ ÑW ÿ
+
+A plural simply mathematical
+It exactly one finite number given time
+The FSM change one state another response external change one state another called
+An FSM defined list state initial state condition transition
+The behavior state machine observed many device modern society perform predetermined sequence action depending sequence event presented
+Examples dispense product proper combination coin deposited whose sequence stop determined floor requested rider change sequence car waiting require input combination number proper order
+The finite state machine le computational power model computation
+The computational power distinction mean computational task Turing machine FSM
+This FSM limited number state
+FSMs studied general field
+An example simple mechanism modeled state machine
+A turnstile used control access subway amusement park ride gate three rotating arm waist height one across entryway
+Initially arm locked blocking entry preventing patron passing
+Depositing coin slot turnstile unlocks arm allowing single customer push
+After customer pass arm locked another coin inserted
+Considered state machine turnstile two possible state
+There two possible input affect state putting coin slot pushing arm
+In locked state pushing arm effect matter many time input given stay locked state
+Putting coin giving machine input shift state
+In unlocked state putting additional coin effect giving additional input change state
+However customer pushing arm giving input shift state back
+The turnstile state machine represented showing possible state transition based upon input given machine output resulting input The turnstile state machine also represented called
+Each state represented
+Edges show transition one state another
+Each arrow labeled input trigger transition
+An input cause change state input state represented circular arrow returning original state
+The arrow node black dot indicates initial state
+A description status system waiting execute
+A transition set action executed condition fulfilled event received
+For example using audio system listen radio system radio state receiving next stimulus result moving next station
+When system CD state next stimulus result moving next track
+Identical stimulus trigger different action depending current state
+In machine representation also possible associate action state Several type used
+The common representation shown combination current state
+B input
+Y show next state
+C
+The complete action information directly described table added using footnote
+A FSM definition including full action information possible using see also
+The notation describing state machine
+overcome limitation traditional finite state machine retaining main benefit
+UML state machine introduce new concept extending notion
+UML state machine characteristic
+They support depend state system triggering Mealy machine well associated state rather transition Moore machine
+The standard includes graphical symbol describe action transition SDL embeds basic data type called Abstract Data Types action language execution semantic order make finite state machine executable
+There large number variant represent FSM one figure
+In addition use modeling reactive system presented finite state machine significant many different area including
+Finite state machine class automaton studied
+In computer science finite state machine widely used modeling application behavior design study computation language
+Finite state machine subdivided transducer acceptor classifier sequencer
+also called produce binary output indicating whether received input accepted
+Each state FSM either accepting accepting
+Once input received current state accepting state input accepted otherwise rejected
+As rule input character action used
+The example figure show finite state machine accepts string nice
+In FSM accepting state state
+A possibly infinite set symbol sequence aka
+formal language called Finite State Machine accepts exactly set
+For example set binary string even number zero regular language cf
+Fig
+set string whose length prime number
+A machine could also described defining language would contain every string accepted machine none rejected one language accepted machine
+By definition language accepted FSMs language regular FSM accepts
+The problem determining language accepted given finite state acceptor instance generalization graph edge weighted element arbitrary
+The start state also accepting state case automaton accepts empty string
+An example accepting state appears DFA detects whether input string contains even number
+also start state indicates state even number input
+S therefore accepting state
+This machine finish accept state binary string contains even number including binary string containing
+Examples string accepted DFA etc
+A generalization finite state machine similar acceptor produce single output termination two terminal state
+generate output based given input state using action
+They used control application field
+In control application two type distinguished subclass acceptor transducer type
+They produce one sequence seen output sequence acceptor transducer output
+A distinction automaton
+In deterministic automaton every state exactly one transition possible input
+In automaton input lead one one transition given state
+The algorithm transform nondeterministic automaton usually complex deterministic automaton identical functionality
+A finite state machine one state called combinatorial FSM
+It allows action upon transition state
+This concept useful case number finite state machine required work together convenient consider purely combinatorial part form FSM suit design tool
+There set semantics available represent state machine
+For example tool modeling designing logic embedded controller
+They combine usually one current state flow graph one language resulting different formalism set semantics
+These chart like Harel original state machine support hierarchically nested state state action transition action
+In accordance general classification following formal definition found For deterministic FSMs conventional allow
+defined every combination
+If FSM state next symbol defined announce error
+reject input
+This useful definition general state machine le useful transforming machine
+Some algorithm default form may require total function
+A finite state machine computational power restricted head may perform read operation always move left right
+That formal language accepted finite state machine accepted kind restricted Turing machine vice versa
+If output function function state input alphabet definition corresponds modelled
+If output function depends state definition corresponds modelled
+A machine output function known
+If disregard first output symbol Moore machine readily converted Mealy machine setting output function every Mealy transition
+labeling every edge output symbol given destination Moore state
+The converse transformation le straightforward Mealy machine state may different output label incoming transition edge
+Every state need split multiple Moore machine state one every incident output symbol
+Optimizing FSM mean finding machine minimum number state performs function
+The fastest known algorithm
+Other technique include using
+Additionally acyclic FSAs minimized linear time
+In FSM may built using
+More specifically hardware implementation requires store state variable block determines state transition second block combinational logic determines output FSM
+One classic hardware implementation
+In output directly connected state minimizing time delay output
+Through state machine may optimized minimize power consumption
+The following concept commonly used build software application finite state machine Finite automaton often used programming language compiler
+Such frontend may comprise several finite state machine implement parser
+Starting sequence character lexical analyzer build sequence language token reserved word literal identifier parser build syntax tree
+The lexical analyzer parser handle regular part programming language grammar
+Finite process also known
+

@@ -1,0 +1,315 @@
+In sequence program instruction perform specific task packaged unit
+This unit used program wherever particular performed
+Subprograms may defined within program separately used multiple program
+In different programming language subroutine may called
+The generic term sometimes used
+The name suggests subroutine behaves much way computer program used one step larger program another subprogram
+A subroutine often coded started called several time several place one execution program including subroutine branch back next instruction subroutine task done
+credited invention concept termed contrasted
+Subroutines powerful tool many includes support writing using
+Judicious use subroutine example approach often substantially reduce cost developing maintaining large program increasing quality reliability
+Subroutines often collected important mechanism sharing trading software
+The discipline based subroutine attached object object
+In method called executable program basically sequence subroutine call
+The content subroutine body piece program code executed subroutine called invoked
+A subroutine may written expects obtain one data value calling program replace formal parameter
+The calling program provides actual value parameter called
+Different programming language may use different convention passing argument The subroutine may return computed value caller provide various result value output parameter
+Indeed common use subroutine implement purpose subroutine purely compute one result whose value entirely determined argument passed subroutine
+Examples might include computing number
+A subroutine call may also modifying reading writing creating halting program machine even delaying program execution specified time
+A subprogram side effect may return different result time called even called argument
+An example available many language return different number time called
+The widespread use subroutine side effect characteristic language
+A subroutine coded may one place perform task
+This method allows direct implementation function defined recursive
+A subroutine whose purpose compute one answer question sometimes called predicate
+In language often subroutine called predicate since primarily determine success failure
+For example type function subroutine main
+usually include specific construct Some many distinguish function function subprogram provide explicit return value calling program subroutine procedure
+In language function call normally embedded function may called
+Procedure call either behave syntactically procedure may called explicitly invoked statement
+
+Other language distinguish function subroutine
+In strictly language subprogram mean various internal state program change
+Functions always return result repeatedly called argument
+Such language typically support function since subroutine return value use unless cause side effect
+In subroutine may also simply called function confused different concept
+A language usually translate procedure call return machine instruction according subroutine compiled separately program call
+The instruction sequence corresponding call return statement called procedure
+The advantage breaking program subroutine include Invoking subroutine versus using code imposes call mechanism
+A subroutine typically requires standard code entry exit function usually saving return address minimum
+The idea subroutine worked computing machine already existed time
+The arithmetic conditional jump instruction planned ahead time changed relatively little special instruction used procedure call changed greatly year
+The earliest computer microprocessor single subroutine call instruction
+Subroutines could implemented required programmer use call series
+Some early computer microprocessor subroutine call us dedicated hardware stack store return hardware support level subroutine nesting support recursive subroutine
+Machines mid use saved instruction counter first memory location called subroutine
+This allows arbitrarily deep level subroutine nesting support recursive subroutine
+The one first computer subroutine call instruction feature support arbitrarily deep subroutine nesting also support recursive subroutine
+In early assembler subroutine support limited
+Subroutines explicitly separated main program indeed source code subroutine could interspersed subprogram
+Some assembler would offer predefined generate call return sequence
+By assembler usually much sophisticated support inline separately assembled subroutine could linked together
+Even cumbersome approach subroutine proved useful
+For one thing allowed use code many different program
+Moreover memory scarce resource early computer subroutine allowed significant saving size program
+Many early computer loaded program instruction memory
+Each subroutine could provided separate piece tape loaded spliced main program mainline subroutine tape could used many different program
+A similar approach applied computer used main input
+The name originally meant library literal sense kept indexed collection tape collective use
+To remove need computer designer eventually provided instruction whose operand instead location variable containing return address
+On computer instead modifying subroutine return jump calling program would store return address variable subroutine completed would execute indirect jump would direct execution location given predefined variable
+Another advance instruction combined saving return address calling jump thereby minimizing significantly
+In IBM example branch instruction BAL BALR designed procedure calling would save return address processor register specified instruction
+To return subroutine execute indirect branch instruction BR register
+If subroutine needed register purpose calling another subroutine would save register content private memory location register
+In system JSB instruction would perform similar task except return address stored memory location target branch
+Execution procedure would actually begin next memory location
+In HP assembly language one would write example call subroutine called MYSUB main program
+The subroutine would coded The JSB instruction placed address NEXT instruction namely BB location specified operand namely MYSUB branched NEXT location namely AA MYSUB
+The subroutine could return main program executing indirect jump JMP MYSUB I branched location stored location MYSUB
+Compilers Fortran language could easily make use instruction available
+This approach supported multiple level call however since return address parameter return value subroutine assigned fixed memory location allow recursive call
+Incidentally similar method used early discover recalculation dependency spreadsheet
+Namely location reserved cell store address
+Since allowed natural recalculation order allows tree walk without reserving space stack memory limited small computer
+Most modern implementation use special case implement subroutine call return
+Each procedure call creates new entry called top stack procedure return stack frame deleted stack space may used procedure call
+Each stack frame contains corresponding call typically includes procedure parameter internal variable return address
+The call sequence implemented sequence ordinary instruction approach still used RISC VLIW architecture many traditional machine designed since late included special instruction purpose
+The call stack usually implemented contiguous area memory
+It arbitrary design choice whether bottom stack lowest highest address within area stack may grow forward backwards memory however many architecture chose latter
+Some design notably implementation used two separate stack one mainly control information like return address loop counter data
+The former worked like call stack indirectly accessible programmer language construct latter directly accessible
+When procedure call first introduced important motivation save precious memory
+With scheme compiler reserve separate space memory private data parameter return address local variable procedure
+At moment stack contains private data call currently namely called returned yet
+Because way program usually assembled library still uncommon find program include thousand subroutine handful active given moment
+For program call stack mechanism could save significant amount memory
+Indeed call stack mechanism viewed earliest simplest method
+However another advantage call stack method allows since nested call procedure get separate instance private data
+One disadvantage call stack mechanism increased cost procedure call matching return
+The extra cost includes incrementing decrementing stack pointer architecture checking accessing local variable parameter address instead absolute address
+The cost may realized increased execution time increased processor complexity
+This overhead obvious objectionable return without making procedure call
+To reduce overhead many modern compiler try delay use call stack really needed
+For example call procedure may store return address parameter called procedure certain processor register transfer control procedure body simple jump
+If procedure return without making call call stack used
+If need call another procedure use call stack save content register return address needed return
+In programming language subprogram termed classified associated
+These language use special keyword indicate function take parameter especially C return value
+Note function including modifying variable whose address passed parameter
+Examples The function return value called function This function return result number call part expression This function convert number initial letter corresponding day week namely
+The result calling might assigned variable
+This function return value modifies variable whose address passed parameter would called
+In example call subroutine define actual subroutine keyword must used subroutine name following
+After content followed must typed
+In language subprogram termed associated class
+Visual Basic us various term called define passed parameter
+By default unspecified variable registered passed default
+Also function sub declared given public private friend designation determines whether accessed outside module project declared
+The function return value called function This function return result number call part expression This function convert number initial letter corresponding day week namely
+The result calling might assigned variable
+This function return value modifies variable whose address passed parameter would called
+In called procedure may passed providing information argument string length array bound
+This allows procedure general eliminates need programmer pas information
+By default pass argument reference
+A trivial subroutine change sign element array might look like This could called various array follows A subprogram may find useful make use certain amount space used execution subprogram hold intermediate result
+Variables stored scratch space termed scratch space termed
+An activation record typically tell pas control back subprogram finish
+A subprogram may number nature call site
+If recursion supported subprogram may even call causing execution suspend another execution subprogram occurs
+useful mean simplify complex algorithm break complex problem
+Recursive language generally provide new copy local variable call
+If programmer desire value local variable stay call declared language global value common area used
+Here example recursive subroutine find number Early language like initially support recursion variable statically allocated well location return address
+Most computer late support hardware stack register
+Modern language almost invariably use stack usually supported modern computer instruction set provide fresh activation record every execution subprogram
+That way nested execution free modify local variable without concern effect suspended execution progress
+As nested call accumulate structure formed consisting one activation record suspended subprogram
+In fact stack structure virtually ubiquitous activation record commonly termed
+Some language also support subroutine callable within outer parent subroutine
+Inner subroutine access local variable outer subroutine called
+This accomplished storing extra context information within activation record also termed
+If subprogram executed properly even another execution subprogram already progress subprogram said
+A recursive subprogram must reentrant
+Reentrant subprogram also useful situation since multiple thread call subprogram without fear interfering
+In slightly le restrictive similar requirement application program shared many thread
+In environment generally one stack
+An environment fully support may use data structure stack store activation record
+In sometimes desirable number function name operating different type data different parameter profile
+For example square root function might defined operate real complex value matrix
+The algorithm used case different return result may different
+By writing three separate function name programmer convenience remember different name type data
+Further subtype defined real separate positive negative real two function written real one return real parameter positive another return complex value parameter negative
+In series function name accept different parameter profile parameter different type function said
+Here example subroutine overloading In code two function name different parameter
+As another example subroutine might construct accept direction trace path point screen
+There plethora parameter could passed constructor colour trace starting x trace speed
+If programmer wanted constructor able accept color parameter could call another constructor accepts color turn call constructor parameter passing set parameter X Y would generally centered screen placed origin speed would set another value coder choosing
+A subprogram together value variable captured environment created
+Closures notable feature Lisp programming language introduced
+Depending implementation closure serve mechanism
+A wide number convention coding subroutine developed
+Pertaining naming many developer adopted approach name subroutine certain task make inquiry used substitute variable
+Some programmer suggest subroutine perform one task subroutine perform one task split subroutine
+They argue subroutine key component role program must remain distinct
+Proponents modularizing code advocate subroutine minimal dependency piece code
+For example use generally deemed unwise advocate perspective add tight coupling subroutine global variable
+If coupling necessary advice subroutine accept passed instead
+However increasing number parameter passed subroutine affect code readability
+Besides effect subroutine may need inform calling program condition may occurred execution
+In language programming standard often done integer value placed subroutine standard location encodes normal exceptional condition
+In return code expected subroutine return value often designed multiple could used direct index branch table often located immediately call instruction avoid extra conditional test improving efficiency
+In one would write example There significant runtime calling subroutine including passing argument branching subprogram branching back caller
+The overhead often includes saving restoring certain processor register allocating reclaiming call frame storage
+In language subroutine call also implies automatic testing subroutine return code handling may raise
+In language significant source overhead intensively used method call
+There seemingly obvious optimization procedure call applied procedure may side effect
+For example expression function must called twice two call may return different result
+Moreover value must fetched second call since first call may changed
+Determining whether subprogram may side effect difficult indeed
+So optimization safe purely functional programming language compiler typical imperative programming usually assume worst
+A method used eliminate overhead subprogram body versus branching subroutine back
+Not avoid call overhead also allows procedure effectively taking account context argument call
+The inserted body optimized compiler
+Inlining however usually increase code size unless program contains one call subroutine subroutine body le code call overhead
+
+This action might possible undo
+Are sure want continue
+Lecture computer science course available
+
+This action might possible undo
+Are sure want continue
+Hit Debug available
+
+There different model software development
+Testing major phase developing software
+It important use test plan carry different type test
+When testing complex example sometimes necessary test number condition time
+A also called used record outcome test
+The trace table simple example would look like A trace table might appear look similar without heading like outcome outcome
+Sign choose GCSE subject see content tailored
+
+This preview shown page This preview shown page This preview shown page This preview shown page Subroutine Call Return Mechanisms Trace given program Void Main faculty say good morning Write Introduction call Write Thankyou Continue Tracing Void say nursery rhyme Write Computer Architecture call Write School name Continue Tracing Void act like vegetable vendor Write slot call Write branch Continue Tracing Void Sing song Write name Subroutine Subroutine sequence instruction performs given computational task
+It may called many time various point main program When called branch line subroutine end returned main program
+Different name instruction transfer program control subroutine Call subroutine Jump subroutine Branch subroutine Branch save address Control transfer called caller Subroutine instruction Opcode starting address subroutine Execution PC content return address stored temporary location Control transferred subroutine return Transfers return address temporary location PC
+Control transferred back called routine Locations store return address First memory location subroutine Fixed location memory Processor register Memory stack best option Adv In case sequential call subroutine
+So top stack always return address subroutine returned first
+SP SP decrement stack pointer M SP PC push content PC onto stack PC effective address transfer control subroutine PC M SP pop stack transfer PC SP SP increment stack pointer Recursive subroutine Subroutine call If one register memory location used hold return address subroutine called recursively destroys previous return address
+So stack good solution problem References Mano Computer System Architecture This preview shown page Share Embed document website
+
+This service advanced JavaScript available learn A language construct expressed object code b performs call function
+
+
+There affiliation available Over million scientific document fingertip Springer International Publishing AG
+Part
+
+learn share knowledge build career
+I studying lisp language lisp routine general context know routine technical context talk starting learn routine
+So real definition routine
+already googled find anything The term derives common term language like BASIC one actually creates SUBroutines
+BASIC actually difference SUBroutine FUNCTION nevertheless From Wikipedia entry In computer science subroutine As name subprogram suggests subroutine behaves much way computer program used one step larger program another subprogram
+A subroutine often coded started called several time several place single execution program including subroutine branch back return next instruction call subroutine task done
+Different different ecosystem thus different term describe general concept
+I generally use term OOP environment day
+Happy coding
+For fun I Community
+The list hopefully cover term correct widely accepted use given language mean
+Informally used context language omitted unless defacto term used
+Feel free add correct annotate appropriate
+You ca find technical definition technical definition specific lisp
+A outside vaudeville another name function
+While many year since I programmed Lisp one ever used term formal way even used commonly
+We talked
+If someone said routine calculate many apple pie perfectly informal
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+In cause execution leave current resume point code immediately subroutine called known
+The return address saved usually part operation making subroutine call
+Return statement many language allow function specify passed back called function
+In tell function return execution program calling function report value
+If function return type return statement used without value case program break current function return calling one
+In return statement
+However newer Pascals used return value immediately
+Without parameter break procedure
+A subroutine automatically return execution reach last executable statement
+Values may returned assigning identifier name subroutine Pascal terminology
+This way function identifier used recursive call result holder syntactically similar explicit
+The syntax used
+In language user defined result variable used instead function identifier
+return clause instead return statement
+The return clause placed last statement procedure body
+This enables checking proper return return value procedure
+Some allow programmer omit explicit return statement specifying instead last evaluated expression return value subroutine
+In case Null value returned explicit return statement value returned return statement omitted JavaScript value returned
+In evaluated expression captured assigned variable returned subroutine element array single object case one object captured
+In Perl return value value subroutine depend context called
+The fundamental distinction context calling code expects one value context calling code expects list value context calling code expect return value
+A subroutine check context using function
+A special syntax return without argument used return undefined value scalar context empty list list context
+The scalar context divided number various type context
+Also returned using contextual return sequence scalar value
+Values returned program process terminates referred specifically
+Return statement come many shape
+The following syntax common C function PHP return Javascript return value Java C permitted function contextual return sequence In example mnemonic RTS ReTurn Subroutine used
+Languages explicit return statement create possibility multiple return statement function
+Whether good thing controversial
+Strong adherent make sure function single entry single exit SESE
+It thus argued one eschew use explicit return statement except textual end subroutine considering used return early may suffer sort problem arise statement
+Conversely argued using return statement worthwhile alternative convoluted code deeper nesting harming readability
+In textbook writes control flow often desirable
+Using Tennent framework notion Watt uniformly describes control flow construct found contemporary programming language attempt explain certain type sequencer preferable others context control flow
+Watt writes unrestricted gotos jump sequencer bad destination jump reader program reader find examines actual label address target jump
+In contrast Watt argues conceptual intent return sequencer clear context without examine destination
+Furthermore Watt writes class sequencer known defined sequencer terminates execution textually enclosing command procedure encompasses loop including break return statement
+Watt also note jump sequencer gotos somewhat restricted language like C target must inside local block encompassing outer block restriction alone sufficient make intent gotos C still produce
+Watt also examines exception sequencer differ escape jump sequencer detail see article
+According empirical study cited student programmer difficulty formulating correct solution several simple problem language like allow multiple exit point
+For problem writing function linearly searching element array study Henry Shapiro cited Roberts found using control structure correct solution given subject subject wrote incorrect code problem allowed write return middle loop
+Others including argue one conditional early exit return statement near beginning function often make function easier read alternative
+The common problem early exit cleanup final statement executed example allocated memory unallocated open file closed causing leak
+These must done return site brittle easily result bug
+For instance later development return statement could overlooked developer action performed end subroutine statement might performed case
+Languages without return statement standard problem
+Some language Python employ concept allow action performed automatically upon return exception throw mitigates issue often known similar
+Ironically functionality like finally clause implemented goto single return point subroutine
+An alternative solution use normal stack unwinding variable deallocation function exit unallocate resource via destructors local variable similar mechanism Python statement
+Some early implementation language original Pascal C restricted type returned function supporting type simplify
+In possible execute code even return statement block always executed
+So statement placed somewhere within block code within added executed
+It even possible alter return value non primitive type property already returned object exit occurs afterwards well
+Cousin return statement return cause routine yield cause The coroutine later continue suspended called
+Coroutines significantly involved implement subroutine thus yield statement le common return statement found number language
+
+Hamlet Othello Romeo Juliet Julius Caesar Share Sparknote page Page Page Page Page Imagine following scenario
+You talented programmer Robot Works One day valuable customer Gene Roddenberry Star Trek fame come problem
+He creating new TV show called Star Trek The Next Generation one character show Data android
+At last minute actor supposed play Data canceled show could find another actor good enough fill part looking Robot Works build actual android
+While rest company busily work getting Data built assigned task programming walk simple enough task human robot quite easy
+After sorting manual produced group company many grueling hour finally produce function allow Data take single step
+You call day
+The next day come work bos Applegate asks much progress made
+You tell done
+I done say
+But responds bos written one function
+How done
+Do need write function teach take two step
+And three step
+And step
+You chuckle slightly knowing smile cross face smile person understands power recursion
+What recursion
+Sometimes problem difficult complex solve big
+If problem broken smaller version may able find way solve one smaller version able build solution entire problem
+This idea behind recursion recursive algorithm break problem smaller piece either already know answer solve applying algorithm piece combining result
+Stated concisely recursive definition defined term
+Recursion computer programming technique involving use procedure subroutine function algorithm call step termination condition successive repetition processed critical step condition met time rest repetition processed last one called first
+Do worry detail definition
+The main point defined term Recursion information see Recursion
+Page Page Page Page Take Study Break
+SparkNotes brought
+Visit B N buy rent check tablet ereaders including
+All Rights Reserved
+

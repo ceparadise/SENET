@@ -1,0 +1,467 @@
+Sync short synchronize
+When sync device cell phone synchronize data computer
+This typically done connecting device computer via wireless connection
+For example might sync address book stored computer cell phone update contact
+If iPod may connect computer sync song video data using Apple
+When sync device computer typically update device computer recent information
+This also referred merging data
+For example added phone number phone since last time synced computer number added computer address book
+Similarly number entered computer address book since last sync added phone
+Most syncing program also remove entry either device computer since last sync
+Since many device synced single computer computer often referred hub syncing portable electronics
+For example might able sync iPod Blackberry PDA using address book computer
+However may need use different syncing program device since use proprietary software sync computer
+Common syncing program include iTunes The Missing Sync Palm Desktop iSync
+Updated April Cite definition This page contains technical definiton Sync
+It explains computing terminology Sync mean one many technical term TechTerms dictionary
+All definition TechTerms website written technically accurate also easy understand
+If find Sync definition helpful reference using citation link
+If think term updated added TechTerms dictionary please
+Tech Factor
+
+In refers one two distinct related concept synchronization synchronization
+refers idea multiple process join certain point order reach agreement commit certain sequence action
+refers idea keeping multiple copy dataset coherence one another maintain
+Process synchronization primitive commonly used implement data synchronization
+The need synchronization arise merely system kind concurrent process even single processor system
+Mentioned main need synchronization When job arrives fork point split N serviced n task
+After serviced wait done processing
+Then joined leave system
+Thus parallel programming require synchronization parallel process wait several process occur
+In relationship consumer process dependent producer process till necessary data produced
+When multiple process dependent resource need access time operating system need ensure one processor access given point reduces concurrency
+Thread synchronization defined mechanism ensures two concurrent simultaneously execute particular program segment known
+Processes access critical section controlled using synchronization technique
+When one thread start executing serialized segment program thread wait first thread finish
+If proper synchronization technique applied may cause value variable may unpredictable vary depending timing process thread
+For example suppose three process namely
+All three concurrently executing need share common resource critical section shown Figure
+Synchronization used avoid conflict accessing shared resource
+Hence Process try access resource assigned one process time
+If assigned Process process Process need wait Process free resource shown Figure
+Another synchronization requirement need considered order particular process thread executed
+For example board plane buy ticket
+Similarly check without validating credential user name password
+In way ATM provide service provide correct PIN
+Other mutual exclusion synchronization also deal following One challenge exascale algorithm design minimize reduce synchronization
+Synchronization take time computation especially distributed computing
+Reducing synchronization drew attention computer scientist decade
+Whereas becomes increasingly significant problem recently gap improvement computing latency increase
+Experiments shown global communication due synchronization distributed computer take dominated share sparse iterative solver
+This problem receiving increasing attention emergence new benchmark metric High Performance Conjugate Gradient HPCG ranking top supercomputer
+The following classic problem synchronization These problem used test nearly every newly proposed synchronization scheme primitive
+Many system provide hardware support code
+A single processor could disable executing currently running code without inefficient system
+The key ability require implement synchronization multiprocessor set hardware primitive ability atomically read modify memory location
+Without capability cost building basic synchronization primitive high increase processor count increase
+There number alternative formulation basic hardware primitive provide ability atomically read modify location together way tell read write performed atomically
+These hardware primitive basic building block used build wide variety synchronization operation including thing
+In general architect expect user employ basic hardware primitive instead expect primitive used system programmer build synchronization library process often complex tricky
+Many modern hardware provides special atomic hardware instruction either memory word content two memory word
+In prevent thread interference memory consistency error block code wrapped section
+This force thread acquire said lock object execute block
+The lock automatically released thread leaf block enter waiting state within block
+Any variable update made thread synchronized block become visible thread whenever thread similarly acquires lock
+In addition mutual exclusion memory consistency Java block enable signaling sending event thread acquired lock execute code block waiting lock within block
+This mean Java synchronized section combine functionality mutexes event
+Such primitive known
+Any object fine used Java
+The declaring object implicitly implied lock object whole method marked
+The synchronization primitive
+Synchronization designed cooperative demanding every thread process follow synchronization mechanism accessing protected resource critical section consistent result
+In locking signaling lightweight synchronization type spinwait interlocked operation mechanism related synchronization
+Another effective way implementing synchronization using spinlocks
+Before accessing shared resource piece code every processor check flag
+If flag reset processor set flag continues executing thread
+But flag set locked thread would keep spinning loop keep checking flag set
+But spinlocks effective flag reset lower cycle otherwise lead performance issue waste many processor cycle waiting
+Barriers simple implement provide good responsiveness
+They based concept implementing wait cycle provide synchronization
+Consider three thread running simultaneously starting barrier
+After time reach barrier still wait thread reach correct data
+Once thread reach barrier start
+After time thread reach wait thread correct data
+Thus barrier synchronization multiple thread always thread end waiting thread example thread keep waiting thread
+This result severe degradation process performance
+The barrier synchronization wait function thread represented Wbarrier f Tbarrier Rthread Where Wbarrier wait time thread Tbarrier number thread arrived Rthread arrival rate thread
+Experiments show total execution time spent waiting slower thread
+Semaphores signalling mechanism allow one access section
+A Semaphore flag certain fixed value associated time thread wish access section decrement flag
+Similarly thread leaf section flag incremented
+If flag zero thread access section get blocked chooses wait
+Some semaphore would allow one thread process code section
+Such Semaphores called binary semaphore similar Mutex
+Here value semaphore thread allowed access value access denied
+Synchronization originally concept whereby lock could obtained object
+Its primary usage database
+There two type file
+lock may obtained many process thread
+lock exclusive may used single time
+Although lock derived file database data also shared memory process thread
+Sometimes one object file locked time
+If locked simultaneously overlap causing deadlock exception
+exclusive lock thread based rely processor instruction
+An abstract mathematical foundation synchronization primitive given
+There also many theoretical device built top history monoid
+Following synchronization example respect different platform
+provides provides Enabling disabling kernel preemption replaced spinlocks uniprocessor system
+Prior kernel version disabled interrupt implement short critical section
+Since version later Linux fully preemptive
+provides provides A distinctly different related concept
+This refers need keep multiple copy set data coherent one another maintain Figure
+For example database replication used keep multiple copy data synchronized database server store data different location
+Examples include Some challenge user may face data synchronization When start something data usually simple format
+It varies time organization grows evolves result building simple interface two application source target also need transform data passing target application
+extraction transformation loading tool helpful stage managing data format complexity
+This era system
+Customers want see current status order current status parcel real time parcel current balance account etc
+This show need system updated well enable smooth manufacturing process ordering material enterprise running stock synchronizing customer order manufacturing process etc
+From real life exist many example processing give successful competitive advantage
+There fixed rule policy enforce data security
+It may vary depending system using
+Even though security maintained correctly source system capture data security information access privilege must enforced target system well prevent potential misuse information
+This serious issue particularly come handling secret confidential personal information
+So sensitivity confidentiality data transfer information must encrypted
+Data quality another serious constraint
+For better management maintain good quality data common practice store data one location share different people different system application different location
+It help preventing inconsistency data
+There five different phase involved data synchronization process Each step critical
+In case large amount data synchronization process need carefully planned executed avoid negative impact performance
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+How someone synchronize two thread using serialization
+According professor slide code assignment use serialization solve synchronization problem
+He explain serialization
+I tried research serialization mean put data specific order
+I would understand mean thing case Running thread specific order
+But I confused syntax question
+My question Does serialization mean synchronization
+How would one synchronize thread using serialization
+Two thread executing require synchronization least one thread access modifies one variable write access accessed remaining thread either read write access
+Therefore thread access set variable reading value read access synchronization needed
+You probably know access variable multiple thread least one writes least one variable must happen critical region code
+You synchronize access providing using instance Posix mutex lock
+This permit concurrent execution multiple thread execution preserve correctness updating one variable involved
+Of course concurrent execution multiple thread efficient way writing code general
+However may also imagine different execution operation associated thread executed sequentially concurrently one order concurrent correct execution
+This called
+What mean strictly equivalent
+Serialization must provide requirement exactly result provided concurrent correct execution
+Note multiple possible concurrent correct execution outcome must one one
+Now really want use serialization synchronize thread
+The answer serialized execution general slower concurrent execution obvious since execution sequential concurrent
+In practice serialization give correctness
+You want thread execute concurrently performance reason however must ensure outcome correct independently actual concurrent execution took place
+As example imagine two thread accessing variable amount money deposited bank
+If thread want read amount money issue arises
+However one thread want modify value problem arises need synchronize access
+For instance one thread may depositing money account bank thread withdrawing money account wife ATM
+In case access variable holding amount money must synchronized
+Serialization case simple must either first withdraw money add money first add money bank account withdraw money
+In case serialization provides correct outcome
+To grant correct outcome case concurrent execution must instead protect variable using mutex lock access variable mutually exclusive thread
+Otherwise value variable accessed thread without proper synchronization actually undefined bad money
+You may example loose part money
+Another type synchronization related mutual exclusion
+Imagine instance one thread execute operation another thread completed
+Another example thread execute specific condition true condition depends another thread includes previous example general requirement based evaluation predicate
+For instance may synchronize thread way using Posix mutex lock condition variable
+Serialization thoroughly studied context database transaction
+A provides criterion correctness execution concurrent transaction database protocol ensure proper synchronization locking
+But concept applies equally well thread well
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+Data synchronization technology designed synchronize single set two automatically copying change back forth
+For example user contact list one mobile device synchronized mobile device computer
+Data synchronization device computer data transferred user mobile data synchronized mobile
+Stay date latest development Internet terminology free weekly newsletter Webopedia
+Join subscribe
+The following fact statistic capture changing landscape cloud computing service provider customer keeping
+The following computer science fact statistic provide quick introduction changing trend education related career
+From ZZZ guide list text message online chat abbreviation help translate understand today texting lingo
+Learn five generation computer major technology development led computing device use Computer architecture provides introduction system design basic computer science student
+Networking fundamental teach building block modern network design
+Learn different type network concept architecture
+
+coordination event operate unison
+The orchestra serf keep orchestra synchronized
+Systems operating part synchrony said
+Today synchronization occur global basis signal
+synchronization clock critical problem ocean navigation accurate time required conjunction astronomical observation determine far East West vessel traveled
+The invention accurate revolutionized marine navigation
+By end century form signal gun flag dropping provided important port mariner could check chronometer error
+Synchronization important operation century railway first major mean transport fast enough difference local time adjacent town noticeable
+Each line handled problem synchronizing station headquarters standard
+In territory sharing single railroad track controlled timetable
+The need strict timekeeping led company settle one standard civil authority eventually abandoned local favor standard
+In term digital logic data transfer requires
+However use word clock sense different typical sense clock device keep track clock signal simply signal start end time period often minute measured microsecond nanosecond arbitrary relationship sidereal solar lunar time system measurement passage minute hour day
+In different sense electronic system sometimes synchronized make event point far apart appear simultaneous certain perspective
+Albert Einstein proved first relativity paper actually thing absolutely simultaneous event
+Timekeeping technology satellite NTP provide access close approximation timescale used many terrestrial synchronization application kind
+Synchronization important concept following field Synchronization multiple interacting occur system
+For instance oscillator either symmetric coupling synchronize strength coupling frequency unit greater difference among natural oscillator frequency
+Poincare phase oscillator model system interact partially synchronize within random regular network
+In case global synchronization phase oscillator abrupt transition unsynchronized full synchronization take place coupling strength exceeds critical threshold
+This known phase transition
+Synchronization emergent property occurs broad range dynamical system including neural signaling beating heart synchronization light wave
+Synchronization movement defined similar movement two people temporally aligned
+This different mimicry movement occur short delay
+idea moving time evokes particular emotion
+This sparked first research movement synchronization effect human emotion
+In group synchronization movement shown increase conformity cooperation trust however research group synchronization needed determine effect group whole individual within group
+In group two people synchronization demonstrated increase affiliation compassion altruistic behaviour increase rapport
+During argument synchrony arguing pair noted decrease however clear whether due change emotion factor
+There evidence show movement synchronization requires people cause beneficial effect effect affiliation occur one dyad synchronizing movement something outside dyad
+This known interpersonal synchrony
+There dispute regarding true effect synchrony study
+Research area detailing positive effect synchrony attributed synchrony alone however many experiment incorporate shared intention achieve synchrony
+Indeed Reinforcement Cooperation Model suggests perception synchrony lead reinforcement cooperation occurring lead effect synchrony
+More research required separate effect intentionality beneficial effect synchrony
+Some system may approximately synchronized
+Some application require relative offset event determined
+For others event important
+
+Stack Exchange network consists Q A community including largest trusted online community developer learn share knowledge build career
+I looking explanation reference implementation computer clock
+To keep question level logical abstraction say put together combinational sequential logic basic gate
+The role clock oscillator sort going detail needed abstraction synchronise unorderly chorus input output passing gate
+Exactly clock synchronize signal
+To render thing concrete Take NAND gate
+Say I set two input high signal obtain inherent delay stable low signal end
+Now add basic sequential logic inverter let add Data DFF
+The effect certain end DFF broadcast low signal definitively start next clock cycle
+What happens within cycle trusted
+The clock period set circuitry NAND gate case time stabilize cycle
+This contract
+But achieved
+The metaphor mind clock act sluice
+But comparison misleading signal entering exiting DFF truncated point
+We could physically measure signal within cycle clock end DFF
+Another metaphor would motion orchestra rehearsal gradually transforming attuned performance conductor setting beat
+How signal attuned clock oscillation distinguished propagating gate circuitry time
+I realize may missing part picture question framed constructive term Judging response question original question must poorly phrased
+I understand reason behind choice frequency system clock ensure circuit stable tick clock
+The response emphasize contractual side thing
+My question really contract hold
+In retrospect I getting trivial fact measuring instrument system clock must selected based degree precision required typical case discussed human sluggish attention span
+To illustrate graph clock pulse Qa output DFF
+Say clock cycle Captain Marvel sends pulse line oblivious clock period expects read immediately
+With lightning speed way make sense output circuit clock cycle geological time
+Billy Watson hand read fine
+Neither Captain Billy synchronized system clock
+Not sense gate circuitry
+But Billy experience time clock time scale sufficiently precise
+You good understanding clocking mechanism register really implemented using clocked memory used get final reading propagation signal stabilized
+But question The clock period set circuitry NAND gate case time stabilize cycle
+This contract
+But achieved
+Perhaps overthinking
+It never achieved
+Rather specified
+Basically read user manual engineering usually data sheet
+If user manual say maximum clock supply clock
+That basic mechanism achieved
+So I already see next question forming How designer know specify
+It ca arbitrary
+The basic way done calculate timing propagation
+Say circuit Lets say OR AND gate propagation time
+Lets also circuit make thing clearer So circuit longest path output input D It pass four gate assuming gate two input three level use three input OR gate
+Since gate take stabilize circuit sampled rate every
+The calculation simplified course
+It assumes wire zero propagation time also assume input simultaneous
+CAD software calculate propagation time even lengthen trace necessary ensure signal arrive time
+As simultaneity input user engineer using component problem
+If output circuit take time stabilize going circuit take account use slower clock allow signal stabilize
+There also dirty way calculation overclocking
+You keep increasing clock frequency system fails back bit work back bit allow overhead
+There also third question part assumption almost every digital designer When clock SURE input stabilized
+We accounted output gate input
+The answer input circuit come form another circuit system
+They synchronize using clock
+Since clocked end previous clock cycle assume stable beginning clock cycle
+Which consider propagation gate limiting factor stability signal
+All signal signal share clock must sampled
+That part reason external signal never fast internal clock allow stable register somewhere signaling internal circuit ready enter system
+So general term signal stability assume noise exists clock pulse signal entire system stabilize next clock pulse
+That effectively defines maximum clock rate
+I feel multiple question post
+I attempt answer first Shown transistor level circuit D shown picture post
+If replace schematic picture see signal propagates D input Q output
+Your second question Logic distinguish signal noise
+Noise signal
+It usually unwanted signal signal
+It job designer ensure noise various source pollute actual signal much result incorrect reading Q output
+Circuits amount noise immunity
+Chips cell library designed noise cross specified noise immunity circuit
+From question seems already answer acknowledging answer
+It exactly describe The logic circuit take time stabilize
+This given description circuit adding longest path path
+There additional delay I discus
+Once know set clock oscillation
+That gap least time one clock tick cause change logic circuit next clock tick sample new output
+By second click output already stable
+This second click trigger change input change output time output stable another clock tick allowed
+So basic idea By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+What would like
+Would like merge question
+Would like make primary merge question
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+Supervisor CONTRIBUTIONS What would like
+What would like
+
+learn share knowledge build career
+I question regarding usage significance keyword
+The keyword different thread reading writing variable object resource
+This trivial topic quote Sun method enable simple strategy preventing thread interference memory consistency error object visible one thread read writes object variable done synchronized method
+When two thread reading writing say variable named need ensure thread access variable atomic way
+Without keyword thread may see change thread made worse may half changed
+This would logically expect
+Again topic
+To learn explore topic SO Interwebs Keep exploring topic name becomes permanently associated term brain
+Well I think enough theoretical explanation consider code Note block next thread call method test long previous thread execution finished
+Threads access method one time
+Without thread access method simultaneously
+When thread call synchronized method object object instance class acquires lock object new thread call ANY synchronized method object long previous thread acquired lock release lock
+Similar thing happens static synchronized method class called
+The thread acquires lock associated class case non static synchronized method instance class called thread object level lock still available
+Any thread able call static synchronized method class long class level lock released thread currently hold lock
+The keyword prevents concurrent access block code object multiple Threads
+By default one thread access table time
+On usage construct like must build thread safety feature code prevent memory consistency error
+mean multi threaded environment object method let two thread access method code time
+This mean one thread ca read another thread update
+The second thread instead wait first thread completes execution
+The overhead speed advantage guaranteed consistency data
+If application single threaded though block provide benefit
+The keyword cause thread obtain lock entering method one thread execute method time given object instance unless static method
+This frequently called making class I would say euphemism
+While true synchronization protects internal state Vector getting corrupted usually help user Vector much
+Consider Even though method involved synchronized locked unlocked individually two unfortunately timed thread create vector two element
+So effect synchronize application code well
+Because synchronization expensive need b insufficient need synchronization replacement ArrayList case Vector
+More recently concurrency package released number clever utility take care issue
+Synchronized keyword Java multiple thread read write variable
+The synchronized keyword used define block code multiple thread access variable safe way
+keyword take parameter called followed
+When execution encounter keyword current thread try take pick execute associated block code lock acquired
+Any writes variable inside synchronized code block guaranteed visible every thread similarly executes code inside synchronized code block using
+Only one thread time hold lock time thread trying acquire wait pause execution
+The lock released execution exit synchronized code block
+Adding keyword method definition equal entire method body wrapped synchronized code block
+Without synchronization guaranteed order read writes happen possibly leaving variable garbage
+It enough complete write operation thread time another thread read hardware could cached value variable reading thread would see cached value instead written
+Thus Java case follow Java Memory Model ensure threading error happen
+Think kind turnstile like might find football ground
+There parallel steam people wanting get turnstile
+Only one person time get
+All wanting get may wait go
+What synchronized keyword
+Threads communicate primarily sharing access field object reference field refer
+This form communication extremely efficient make two kind error possible
+The tool needed prevent error synchronization
+Synchronized block method prevents thread interference make sure data consistent
+At point time one thread access synchronized block method acquiring lock
+Other thread wait release lock access
+When method synchronized
+Methods synchronized add method definition declaration
+You also synchronize particular block code method
+What mean pro grammatically logically
+It mean one thread access acquiring lock
+Unless thread release lock thread wait acquire lock
+They access enter acquiring lock
+This ca done magic
+It programmer responsibility identify application guard accordingly
+Java provides framework guard application section guarded responsibility programmer
+More detail java documentation Synchronization built around internal entity known intrinsic lock monitor lock
+Intrinsic lock play role aspect synchronization enforcing exclusive access object state establishing relationship essential visibility
+
+By convention thread need exclusive consistent access object field acquire object intrinsic lock accessing release intrinsic lock done
+A thread said intrinsic lock time acquired lock released lock
+The thread block attempt acquire lock
+When thread release intrinsic lock relationship established action subsequent acquisition lock
+Making method synchronized two First possible two invocation synchronized method object interleave
+When one thread executing synchronized method object thread invoke synchronized method object block suspend execution first thread done object
+Second synchronized method exit automatically establishes relationship subsequent invocation synchronized method object
+This guarantee change state object visible thread
+Look alternative synchronization To understanding synchronized basically mean compiler write around method
+As may thread safe depending used I mean write object synchronized method threadsafe depending class
+I know already gotten answer
+I write help people question looking page answer
+explanation Consider following code instance making method synchronized two effect synchronized simple mean two thread access simultaneously
+When say class synchronized mean one thread access time
+Internally thread try access first take lock object long lock available thread access synchronized instance class
+Note another thread access method object defined synchronized
+A thread release lock calling What answer missing one important aspect
+Thread synchronization basically consists part serialization visibility
+I advise everyone google jvm memory barrier extremely important topic modify shared data accessed multiple thread
+Having done I advise looking package class help avoid using explicit synchronization turn help keeping program simple efficient maybe even preventing deadlock
+One example
+Together allows create highly efficient worker thread stuffing command concurrent queue explicit synchronization needed deadlock possible explicit sleep necessary poll queue calling take
+In short memory synchronization happens start thread thread end read volatile variable unlock monitor leave synchronized etc
+This synchronization affect sense flush writes done particular action
+In case aforementioned documentation say Memory consistency effect As concurrent collection action thread prior placing object ConcurrentLinkedDeque action subsequent access removal element ConcurrentLinkedDeque another thread
+This implicit behavior somewhat pernicious aspect Java programmer without much experience take lot given
+And suddenly stumble thread Java supposed production different work load pretty hard test concurrency issue
+Synchronized simply mean multiple thread associated single object prevent dirty read write synchronized block used particular object
+To give clarity let take example We created two MyRunnable class object shared thread thread shared thread
+Now start without synchronized used PFB output suggest thread simultaneously affecting var value thread var memory
+Using Synchronzied thread waiting thread complete scenario
+There two lock acquired one shared thread thread another shared thread
+synchronized keyword Java used make happens relationship multithreading environment avoid memory inconsistency thread interference error
+Thank interest question
+Because attracted spam answer removed posting answer requires site
+Would like answer one instead
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+The Internet Things IoT environment object animal people assigned unique identifier given ability transfer data network without requiring interaction
+In general synchronous pronounced Greek meaning meaning time adjective describing object event coordinated time
+In information technology term several different usage
+In telecommunication signaling within network network synchronous signal occur clock rate clock based single reference clock
+signal almost quite synchronization signal run different clock different transition rate
+In communication synchronous communication requires end exchange communication respond turn without initiating new communication
+A typical activity might use synchronous protocol would transmission file one point another
+As transmission received response returned indicating success need resend
+Each successive transmission data requires response previous transmission new one initiated
+Synchronous program communication contrasted program communication
+By submitting agree receive email TechTarget partner
+If reside outside United States consent personal data transferred processed United States
+An internal audit IA organizational initiative monitor analyze business operation order determine
+Pure risk also called absolute risk category threat beyond human control one possible outcome Risk assessment identification hazard could negatively impact organization ability conduct business
+A polymorphic virus harmful destructive intrusive type malware change making difficult
+According Federal Bureau Investigation cyberterrorism politically motivated attack Antimalware type software program designed prevent detect remove malicious software malware An accountable care organization ACO association hospital healthcare provider insurer party
+Patient engagement ideal healthcare situation people motivated involved A personal health record PHR collection information documented maintained individual Business continuity disaster recovery BCDR closely related practice describe organization preparation A business continuity plan BCP document consists critical information organization need continue A call tree sometimes referred phone tree telecommunication chain notifying specific individual
+Cloud object storage format storing unstructured data cloud
+A parallel file system software component designed store data across multiple networked server facilitate flash storage us interface connect storage directly CPU A hybrid hard disk drive electromechanical spinning hard disk contains amount NAND Flash memory
+All Rights Reserved
+
+learn share knowledge build career
+This question already answer I trying learn design pattern
+us keyword I understand
+I searched net found somewhat related memory I mechanical engineer understand mean
+Can anybody please help understand thread keyword
+This question asked already answer
+If answer fully address question please
+There keyword
+There one Java though method
+Also I recommend learning book arbitrary website
+In Java example mean one thread time able access getInstance method avoid racing condition
+As commenters already pointed synchronized Java keyword
+It mean method executed two thread time JVM take care enforcing
+In use synchronization construct like critical section mutex
+You consult
+If one thread try read data thread try update data lead inconsistent state
+This prevented synchronising access data
+Use method asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
+The EASIEST Way Sync Copyright
+Laplink Software All Rights Reserved
+

@@ -1,0 +1,441 @@
+This handled process manager OS see First little
+So process program execution
+The first three letter program process probably clue something
+Think process An abstraction sequence instruction executed processor processor may need service hardware device process time sharing executing device driver instruction process
+make hardly sense understand process bit reading
+A process contains A really important thing remember process program disk would file
+Imagine recipe cake
+Now cake recipe instruction making cake like program disk
+The actual activity making cake process
+The thing take away section OS collection process
+The OS make computer productive switching CPU process
+The thing normally cause process created The system call creates process known fork execve Unix Windows CreateProcess
+These process called one process create another
+This known parent process creating child process
+There several reason process may terminated Things could become issue The OS table one entry per process
+Each entry known PCB
+Each entry The basic thing learn PCB info needed process stopped restarted
+Note This diagram taken source material post available slide
+All right reserved
+The diagram fairly simple
+You see actual switching process happening neither process executing CPU perform processing middle switching
+The actual switching time vary around microsecond second millisecond The concept processing used far assumed single address space used every process single thread control
+But multiple thread within one process
+It possible think way You multiple process sharing one computer multiple thread sharing process
+This would useful web browser example one thread receiving data network another display text
+With web browser could one thread getting input user another thread autosaving
+Imagine word processor single threaded You able type anything autosaving
+Note On version powerpoint I type anything autosaving
+It annoying
+You might hear something called
+This another way saying thread
+So thread multiple flow control sharing one address space
+Each one need program counter register value stack
+Remember thread process share code section global variable network connection open file
+You may heard
+This multiple thread share process
+Programs become responsive resource shared better
+If part program blocked keep running
+As IO CPU use shared thread process performance usually better
+It economical There lot cost associated making process
+Memory resource need allocated
+Creating thread faster
+There concern though I mentioned two thread share data
+Therefore one thread might read location another writing need take care stop problem like
+Implementing threading fast done user space
+However OS aware meaning user level thread get blocked whole process blocked
+This useful support multiprocessor dual core available
+This OS schedule individual thread
+However slow requires system call
+That
+Slightly detailed note available I super cool I computer science unrelated coolness Fill detail click icon log You commenting using account
+You commenting using Twitter account
+You commenting using Facebook account
+You commenting using account
+Connecting
+
+In computing executed
+It contains program code current activity
+Depending OS process may made multiple execute instruction
+A computer program passive collection process actual execution instruction
+Several process may associated program example opening several instance program often mean one process executed
+method allow multiple process share CPUs system resource
+Each CPU core executes single time
+However multitasking allows processor task executed without wait task finish
+Depending operating system implementation switch could performed task perform operation task indicates switched hardware
+A common form multitasking
+method allow fast response interactive user application
+In system performed rapidly make seem like multiple process executed simultaneously processor
+This seeming execution multiple process simultaneously called
+For security reliability modern prevent direct independent process providing strictly mediated controlled communication functionality
+In general computer system process consists said following resource The operating system hold information active process data structure called
+Any subset resource typically least processor state may associated process operating system support thread process
+The operating system keep process separate allocates resource need le likely interfere cause system failure
+The operating system may also provide mechanism enable process interact safe predictable way
+A may switch process give appearance many process simultaneously though fact one process executing one time single unless CPU multiple core similar technology used
+It usual associate single process main program child process parallel process behave like subroutine
+A process said resource program memory one resource
+However multiprocessing system process may run share program location memory process said program
+Processes often called task operating system
+The sense process task something take time opposed memory something take space
+The description applies process managed operating system process defined
+If process request something must wait blocked
+When process eligible swapping disk transparent system region process memory may really disk time
+Note even unused portion active executing program eligible swapping disk
+All part executing program data physical memory associated process active
+An operating system allows multitasking need process
+Names state standardised similar functionality
+When process communicate called communication IPC
+Processes frequently need communicate instance shell pipeline output first process need pas second one process
+It preferred way using interrupt
+It even possible two process running different machine
+The operating system OS may differ one process therefore mediator called needed
+By early computer control software evolved example
+Over time computer got faster still neither cheap fully utilized environment made possible necessary
+Multiprogramming mean several program run
+At first one program ran single processor result underlying computer architecture shared scarce limited hardware resource consequently concurrency nature
+On later system multiple program may run concurrently
+Programs consist sequence instruction processor
+A single processor run one instruction time impossible run program time
+A program might need input device large delay program might start slow operation sending output printer
+This would lead processor idle unused
+To keep processor busy time execution program halted operating system switch processor run another program
+To user appear program run time hence term parallel
+Shortly thereafter notion program expanded notion executing program context
+The concept process born also became necessary invention
+came somewhat later
+However advent concept computer old multiprogramming gave way true multiprocessing later
+
+What would like
+Would like merge question
+Would like make primary merge question
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+What would like
+
+In execution smallest sequence programmed instruction managed independently typically part
+The implementation thread differs operating system case thread component process
+Multiple thread exist within one process executing sharing resource different process share resource
+In particular thread process share executable code value variable given time
+Systems single processor generally implement multithreading CPU switch different
+This generally happens often rapidly enough user perceive thread task running parallel
+On system multiple thread execute every processor core executing separate thread simultaneously processor core separate software thread also executed concurrently separate hardware thread
+Threads made early appearance MVT context called task
+The term thread attributed
+many modern operating system directly support multiprocessor threading allows programmer manipulate thread exposing required functionality interface
+Some threading implementation called whereas LWP specific type kernel thread share state information
+Furthermore program threading timer signal method interrupt execution performing sort time slicing
+Threads differ traditional operating system Systems said thread process operating system great difference except cost switch architecture notably result TLB flush
+In one time
+The opposite multithreading
+While suggested term misleading term widely accepted within community
+Multithreading mainly found multitasking operating system
+Multithreading widespread programming execution model allows multiple thread exist within context one process
+These thread share process resource able execute independently
+The threaded programming model provides developer useful abstraction concurrent execution
+Multithreading also applied one process enable system
+Multithreaded application following advantage Multithreading following drawback Operating system schedule thread either cooperatively
+On widely used approach finer grained control execution time via
+However preemptive scheduling may context switch thread moment unanticipated programmer therefore causing
+In contrast relies thread relinquish control execution thus ensuring thread
+This create problem cooperatively multitasked thread waiting thread yielding control execution intensive computation
+Until early desktop computer one CPU support although thread still used computer switching thread generally still quicker
+In added support processor name introduced processor introduced processor
+Processors higher requirement behavior might support multithreading decreasing time perhaps allocating dedicated thread instead common register file
+Scheduling done kernel level user level multitasking done preemptively cooperatively
+This yield variety related concept
+At kernel level contains one share process resource memory file handle process unit resource thread unit scheduling execution
+Kernel scheduling typically uniformly done preemptively le commonly cooperatively
+At user level process schedule multiple thread execution
+If share data Erlang usually analogously called process share data usually called particularly preemptively scheduled
+Cooperatively scheduled user thread known different process may schedule user thread differently
+User thread may executed kernel thread various way
+The term variously refers user thread kernel mechanism scheduling user thread onto kernel thread
+A heavyweight unit kernel scheduling creating destroying switching process relatively expensive
+Processes allocated operating system
+Resources include memory code data socket device handle window
+Processes share address space file resource except explicit method inheriting file handle shared memory segment mapping file shared way see
+Creating destroying process relatively expensive resource must acquired released
+Processes typically preemptively multitasked process switching relatively expensive beyond basic cost due issue cache flushing
+A lightweight unit kernel scheduling
+At least one kernel thread exists within process
+If multiple kernel thread exist within process share memory file resource
+Kernel thread preemptively multitasked operating system process preemptive
+Kernel thread resource except copy including thus relatively cheap create destroy
+Thread switching also relatively cheap requires context switch saving restoring register stack pointer change virtual memory thus leaving TLB valid
+The kernel assign one thread logical core system processor split multiple logical core support multithreading support one logical core per physical core swap thread get blocked
+However kernel thread take much longer user thread swapped
+Threads sometimes implemented library thus called
+The kernel unaware managed scheduled
+Some implementation base user thread top several kernel thread benefit machine
+In article term thread without kernel user qualifier default referring kernel thread
+User thread implemented also called
+User thread generally fast create manage take advantage multithreading multiprocessing get blocked associated kernel thread get blocked even user thread ready run
+even lighter unit scheduling running fiber must explicitly allow another fiber run make implementation much easier kernel
+A fiber scheduled run thread process
+This permit application gain performance improvement managing scheduling instead relying kernel scheduler may tuned application
+Parallel programming environment typically implement task fiber
+Closely related fiber distinction coroutines construct fiber construct
+Threads process share address space
+This allows concurrently running code tightly conveniently exchange data without overhead complexity
+When shared thread however even simple data structure become prone require one CPU instruction update two thread may end attempting update data structure time find unexpectedly changing underfoot
+Bugs caused race condition difficult reproduce isolate
+To prevent threading APIs offer data structure concurrent access
+On uniprocessor system thread running locked mutex must sleep hence trigger context switch
+On system thread may instead poll mutex
+Both may sap performance force processor SMP system contend memory bus especially locking fine
+Although thread seem small step sequential computation fact represent huge step
+They discard essential appealing property sequential computation understandability predictability determinism
+Threads model computation wildly job programmer becomes one pruning nondeterminism
+User thread fiber implementation typically entirely
+As result context switching user thread fiber within process extremely efficient require interaction kernel context switch performed locally saving CPU register used currently executing user thread fiber loading register required user thread fiber executed
+Since scheduling occurs userspace scheduling policy easily tailored requirement program workload
+However use blocking system call user thread opposed kernel thread fiber problematic
+If user thread fiber performs system call block user thread fiber process unable run system call return
+A typical example problem performing program written perform synchronously
+When operation initiated system call made return operation completed
+In intervening period entire process blocked kernel run starves user thread fiber process executing
+A common solution problem providing API implement synchronous interface using internally scheduling another user thread fiber operation progress
+Similar solution provided blocking system call
+Alternatively program written avoid use synchronous blocking system call
+implemented LWPs
+implement LWPs kernel thread model
+SunOS SunOS well NetBSD NetBSD implemented two level model multiplexing one user level thread kernel thread M N model
+SunOS later well NetBSD eliminated user thread support returning model
+FreeBSD implemented M N model
+FreeBSD supported M N user could choose one used given program using
+Starting FreeBSD became default
+FreeBSD longer support M N model
+The use kernel thread simplifies user code moving complex aspect threading kernel
+The program need schedule thread explicitly yield processor
+User code written familiar procedural style including call blocking APIs without starving thread
+However kernel threading may force context switch thread time thus expose race hazard concurrency would otherwise lie latent
+On SMP system exacerbated kernel thread may literally execute separate processor parallel
+Threads created user correspondence schedulable entity kernel simplest possible threading implementation
+used approach start implement approach via older
+This approach also used
+An model implies thread map one scheduled entity kernel knowledge application thread
+With approach context switching done quickly addition implemented even simple kernel support threading
+One major drawback however benefit hardware acceleration processor computer never one thread scheduled time
+For example If one thread need execute request whole process blocked threading advantage used
+The us threading
+M N map M number application thread onto N number kernel entity virtual processor
+This compromise threading
+In general M N threading system complex implement either kernel user thread change kernel code required
+In M N implementation threading library responsible scheduling user thread available schedulable entity make context switching thread fast avoids system call
+However increase complexity likelihood well suboptimal scheduling without extensive expensive coordination userland scheduler kernel scheduler
+Fibers implemented without operating system support although operating system library provide explicit support
+IBM F included support multithreading called late continued Optimizing Compiler later version
+The IBM Enterprise compiler introduced new model thread API
+Neither version part standard
+Many programming language support threading capacity
+Many implementation support threading provide access native threading APIs operating system
+Some usually programming language language expose threading developer abstracting platform specific difference threading implementation runtime
+Several programming language language extension also try abstract concept concurrency threading developer fully MPI
+Some language designed sequential parallelism instead especially using GPUs without requiring concurrency thread
+A interpreted programming language implementation Ruby Python support threading concurrency parallel execution thread due GIL
+The GIL mutual exclusion lock held interpreter prevent interpreter simultaneously interpreting application code two thread effectively limit parallelism multiple core system
+This limit performance mostly thread require processor much one
+Other implementation interpreted programming language using Thread extension avoid GIL limit using Apartment model data code must explicitly shared thread
+In Tcl thread one interpreter
+different threading model support extremely large number thread modeling hardware
+A standardized interface thread implementation Pthreads set library call
+OS vendor free implement interface desired application developer able use interface across multiple platform
+Most platform including Linux support Pthreads
+Microsoft Windows set thread function interface multithreading like
+Java provides yet another standardized interface host operating system using library
+Multithreading library provide function call create new thread take function parameter
+A concurrent thread created start running passed function end function return
+The thread library also offer synchronization function make possible implement free multithreading function using condition variable synchronization primitive
+Another paradigm thread usage set number thread created startup wait task assigned
+When new task arrives wake completes task go back waiting
+This avoids relatively expensive thread creation destruction function every task performed take thread management application developer hand leaf library operating system better suited optimize thread management
+For example framework like
+In programming model designed array thread run parallel using ID find data memory
+In essence application must designed thread performs operation different segment memory operate parallel use GPU architecture
+
+A computer generally one operating system becomes active take control system turned
+Computer hardware wired initially load small set system instruction stored
+You likely used least one operating system
+The various version Microsoft Windows NT XP Vista popular choice personal computer
+UNIX favourite serious programmer year version UNIX called popular personal computer system
+Identify resource need managed within computer system
+The various role operating system generally revolve around idea sharing nicely
+An operating system manages resource resource often shared one way another among various program want use multiple program executing concurrently share use main memory take turn using CPU compete opportunity use input output device
+The operating system act playground monitor making sure everyone cooperates get chance play
+There various aspect resource require management computer system including primary memory secondary memory processor bandwidth graphic sound network cache
+Outline OS resource management technique scheduling policy virtual memory paging interrupt polling
+An executing program resides main memory instruction processed one another
+Multiprogramming technique keeping multiple program main memory time program compete access CPU work
+All modern operating system employ multiprogramming one degree another
+An operating system must therefore perform memory management keep track program memory memory reside
+Memory continuous set bit referenced specific address
+All program stored main memory executed
+All data referenced program program also stored main memory accessed
+Main memory thought big continuous chuck space divided group bit
+Each byte word memory corresponding address simply integer uniquely identifies particular part memory
+To right representation memory first memory address
+Explain role operating system term managing memory peripheral hardware interface
+Earlier stated multiprogramming environment multiple program data stored main memory time
+Thus operating system must employ technique A program filled reference variable part program code
+When program compiled reference changed address memory data code resides
+But since one know exactly program loaded main memory one know address use anything
+The solution use two kind address logical address physical address
+A logical address sometimes called virtual relative address value specifies generic location relative program reality main memory
+A physical address actual address main memory device shown figure
+When program compiled reference identifier variable name changed logical address
+When program eventually loaded memory logical address finally corresponds specific physical address
+The mapping logical address physical address called address binding
+Logical address allow program moved around memory loaded different place different time
+As long one keep track program stored one always able determine physical address corresponds given logical address
+The following section examine underlying principle main memory management technique
+To simplify example calculation performed base
+Outline OS resource management technique scheduling policy multitasking paging interrupt polling
+The demand paging approach give rise idea virtual memory illusion restriction size program entire program necessarily memory time
+In memory management technique examined earlier entire process brought memory continuous whole
+Therefore always upper bound process size
+Demand paging remove restriction
+However virtual memory come lot overhead execution program
+With memory management technique program loaded memory ready go
+With virtual memory approach one constantly swap page main secondary memory
+This overhead usually acceptable one program waiting page swapped another process take control CPU make progress
+Excessive page swapping called thrashing seriously degrade system performance
+Identify limitation range resource specified computer system Describe possible problem resulting limitation resource computer system
+Limitations resource specific computer system often closely related hardware system capability
+Limitations could include The widely used device magnetic disk drive
+It includes hard drive found computer main casing disk portable moved easily computer
+Storing data onto secondary storage requires mechanism organising electron medium
+As use individual file used user point view smallest amount data bet written secondary memory
+A file system natural solution managing file logical view operating system provides user manage data collection file
+A file system often organized grouping file directory
+Additionally file generic concept
+Different type file managed different way
+A file general contains program form data one type another
+Some file rigid format others flexible
+The important hardware device used secondary memory magnetic disk drive
+File system stored drive must accessed efficient manner
+It turn transferring data secondary memory worst bottleneck general computer system
+The speed CPU speed main memory much faster speed data transfer secondary memory magnetic disk
+That process must perform disk made wait data transferred give another process chance use CPU
+Because secondary slowest aspect general computer system technique accessing data disk drive crucial importance file system
+As computer deal multiple process period time request access disk accumulate
+The technique operating system us determine request satisfy called disk scheduling
+A magnetic disk drive organized stack platter platter divided track track divided sector
+The set corresponding track platter called cylinder
+Outline OS resource management technique scheduling policy multitasking virtual memory paging interrupt
+Outline OS resource management technique scheduling policy multitasking virtual memory interrupt polling
+Identify limitation range resource specified computer system Describe possible problem resulting limitation resource computer system
+Another important resource operating system must manage use CPU individual process
+TO understand operating system manages process one must recognise stage process go computational life understand information must managed keep process working correctly computer system
+Explain role operating system term managing memory peripheral hardware interface
+Processes move specific stage managed computer system
+That process enters system ready executed executing waiting resource finished
+Below flow chart represents process state
+In figure box represents state process might arrow indicate process might move one state another
+Examining happening process state Note many process may ready state waiting state time one process running state
+After process created operating system admits ready state
+When CPU scheduling algorithm dictate process dispatched running state
+While running process might interrupted operating system allow another process chance CPU
+In case process simply return ready state
+Alternatively running process might request resource available requires retrieve newly referenced part process case moved waiting state
+A running process may finally get enough CPU time complete processing terminate normally otherwise may generate unrecoverable error terminate abnormally
+When waiting process get resource waiting move ready state
+The operating system must manage large amount data active process
+Usually data stored data structured called process control block PCB
+Generally state represented list PCBs one process state
+When process move one state another corresponding PCB move one state list another operating system
+A new PCB created process first created new state persists process terminates
+Outline OS resource management technique scheduling policy multitasking virtual memory paging polling
+Identify limitation range resource specified computer system Describe possible problem resulting limitation resource computer system
+Outline OS resource management technique policy multitasking virtual memory paging interrupt polling
+Related idea memory management process management need CPU scheduling determines process memory executed CPU given point
+The problem capitalise computer greater capability speed led concept timesharing
+A timesharing system allows multiple user interact computer time
+Multiprogramming allowed multiple process active gave rise ability programmer interact computer system directly still sharing resource whereas timesharing system create illusion user exclusive access computer
+That user actively compete resource though exactly happening behind scene
+One user may actually know sharing machine user anything special allow
+The operating system manages sharing resource including CPU behind scene
+CPU scheduling act determining process ready state moved running state
+That CPU scheduling algorithm decide process given CPU make computational progress
+CPU scheduling decision made process switch running state waiting state program terminates
+This type CPU scheduling called nonpreemptive scheduling need new CPU process result activity current executing process
+CPU scheduling decision may also made process move running state ready state process move waiting state ready state
+These example preemptive scheduling currently running process fault preempted operating system
+Scheduling algorithm often evaluated using particular metric turnaround time process
+This amount time time process arrives ready state time exit running state last time
+One would like average turnaround time process small possible
+There various approach used determine process get chosen first move ready state running state
+Here examination three In FCFS scheduling approach process moved CPU order arrive running state
+FCFS scheduling nonpreemptive
+Once process given access CPU keep unless make request force wait request force wait request device use another process
+The SJN CPU scheduling algorithm look process ready state dispatch one smallest service time
+Like FCFS generally implemented nonpreemptive algorithm
+Explain role operating system term managing memory peripheral hardware interface
+CPU scheduling distributes processing time equitably among ready process
+The algorithm establishes particular time slice time quantum amount time process receives preempted return ready state allow another process turn
+Eventually preempted process given another time slice CPU
+This procedure continues process eventually get time need terminates
+Note algorithm preemptive
+The expiration time slice arbitrary reason move process CPU
+This action presented transition running state ready state
+Identify limitation range resource specified computer system Describe possible problem resulting limitation resource computer system
+Outline OS resource management technique scheduling multitasking virtual memory paging interrupt polling
+Operating system must also take account fact computer usually connected network
+Today World Wide Web one would take network communication granted however vastly connected interactive world requires management data level
+Operating system able process input output fro physical computer usually network card sort
+This communication network card computer usually managed Network Interface Controller NIC small component handle two physical data link layer
+Identify limitation range resource specified computer system Describe possible problem resulting limitation resource computer system
+Along peripheral fundamental aspect operating system must deal graphic graphic management
+Computer graphic generally described setting pixel value computer screen
+As computer graphic play role many aspect computer science common application graphical user interface GUI modern operating system
+Files folder represented icon screen icon indicating file type instance
+The operating system must account whereabouts calculation computer graphic typically done using individual Graphics Processing Unit GPU
+Identify limitation range resource specified computer system Describe possible problem resulting limitation resource computer system
+A type cache
+Aside obvious various miscellaneous system concept require management may entirely obvious
+One cache
+Cache component transparently store data future request data served faster
+The data stored within cache might value computed earlier duplicate original value stored elsewhere
+If requested data contained cache request served simply reading cache comparatively faster
+Otherwise data recomputed fetched original storage location comparatively slower
+Hence greater number request served cache faster overall system performance becomes
+Evaluate resource available variety computer system
+An operating system responsible communicating variety device
+Usually communication accomplished help device driver small program know way particular device expects receive deliver information
+With device driver every operating system longer need know every device might possible expected communicate te fuure
+It another beautiful example abstraction
+An appropriate device driver often come new hardware driver often downloaded free manufacturing company website
+Discuss advantage producing dedicated operating system device
+Mobile device smartphones tablet computer run operating system tailored need
+The memory constraint smaller set peripheral involved example different typical desktop laptop computer
+iPod Touch iPhone iPad run iOS mobile operating system derived Mac OS
+The Android operating system developed Google open source project part Open Handset Alliance
+It become popular OS variety mobile device
+Android iOS dominate current market mobile operating system though competitor
+Outline operating system hide complexity hardware user application
+Modern computer hardware incredibly complex
+Luckily operating system hide complexity use abstraction APIs
+For example application want create file particular location order OS create file
+The program need concerned filesystem disk running FAT NTFS etc disk whether network server local drive
+The OS hide detail
+Other example include virtualizing real device drive letter virtual memory input device Java virtual machine
+
+learn share knowledge build career
+I added hosting interface native application instantiates CLR creates custom appDomainManager provides call load managed assembly native process
+In native LoadDLL function I expecting able test incoming dll v calling LoadLibrary dllPath I assumed would return failure NULL managed assembly I finding returning handle instead CLR currently running unmanaged process
+Is normal behavior unmanaged LoadLibrary call managed assembly
+I sure I understand LoadLibrary even find proper entry point test managed assembly
+I know one possible way solve problem way I planning implement simply use CLR instance access reflection APIs check DLL managed first I puzzled fact LoadLibrary returning failure I like understand I missing
+Is behavior undefined always return handle depend configuration managed assembly
+Any link reference appreciated
+Edit Question answered comment closing
+No wo anything managed program stub stub mean template essential program attempt call mscoree runtime executor also called shim would attempt select version framework native function name called shim bootstrap framework launch clr instance start procession IL code inside PE besides metadata generated CIL compiler resource pool string pool constant value function prototype inheritance generic type
+For information take deep look You wo disappointed
+By posting answer agree
+asked viewed active site design logo Stack Exchange Inc user contribution licensed
+
