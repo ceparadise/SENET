@@ -13,14 +13,14 @@ class FeatureExtractor:
                          self.include_each_other,
                          # self.pos_compare, #Very time consuming
                          self.doc_similarity,
-                         # self.iterative_levenshtein
+                         self.iterative_levenshtein,
                          # self.doc_contain_tokens_w1,
                          # self.doc_contain_tokens_w2,
                          # self.wordnet_related_tokens_intersection,
                          # self.wordnet_related_tokens_highest_similarity,
                          # self.wordnet_related_tokens_lowest_similarity
                          self.wordnet_last_token_h_similarity,
-                         self.one_side_single_token
+                         self.one_side_single_token,
                          ]
 
     def __stem_Tokens(self, words):
@@ -181,7 +181,7 @@ class FeatureExtractor:
                 dist[row][col] = min(dist[row - 1][col] + 1,  # deletion
                                      dist[row][col - 1] + 1,  # insertion
                                      dist[row - 1][col - 1] + cost)  # substitution
-        return dist[row][col]
+        return dist[row][col] < 5
 
     def doc_contain_tokens_w1(self, w1, d1, w2, d2):
         w1_tk = set(self.__stem_Tokens(w1))

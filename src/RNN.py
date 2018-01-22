@@ -20,15 +20,15 @@ class RNN:
 
         weights = {
             # shape ( vec_len, 128)
-            'in': tf.Variable(tf.random_normal([self.n_inputs, self.n_hidden_units])),
+            'in': tf.Variable(tf.random_normal([self.n_inputs, self.n_hidden_units]), name='w_in'),
             # shape (128, 2)
-            'out': tf.Variable(tf.random_normal([self.n_hidden_units, self.n_classes]))
+            'out': tf.Variable(tf.random_normal([self.n_hidden_units, self.n_classes]), name='w_out')
         }
         biases = {
             # shape (128, )
-            'in': tf.Variable(tf.constant(0.1, shape=[self.n_hidden_units, ])),
+            'in': tf.Variable(tf.constant(0.1, shape=[self.n_hidden_units, ]), name='b_in'),
             # shape (2, )
-            'out': tf.Variable(tf.constant(0.1, shape=[self.n_classes, ]))
+            'out': tf.Variable(tf.constant(0.1, shape=[self.n_classes, ]), name='b_out')
         }
 
         with tf.Session() as sess:
@@ -39,7 +39,7 @@ class RNN:
             correct_pred = tf.equal(pred_label_index, tf.argmax(y, 1))
             accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
             init = tf.global_variables_initializer()
-
+            saver = tf.train.Saver()
             a_acc = a_recall = a_pre = a_f1 = 0
             result_file = RESULT_DIR + os.sep + "RNN_result{}.txt".format(len(os.listdir(RESULT_DIR)))
             with open(result_file, "w", encoding='utf8') as fout:
@@ -74,6 +74,7 @@ class RNN:
                                                                                        a_f1 / 10, a_acc / 10)
                 fout.write(avg_str)
                 print(avg_str)
+            saver.save(sess, RNNMODEL + os.sep + 'rnn.ckpt')
 
     def classify(self, X, weights, biases):
         X = tf.reshape(X, [-1, self.n_inputs])
@@ -135,5 +136,6 @@ class RNN:
             if correctness[0] == True:
                 correct_output = 'Correct'
 
-            res_str = "{}\t{}\t{}\t\t{}\t{}".format(tran_label, correct_output, word_pairs[0][0], word_pairs[0][1], features)
+            res_str = "{}\t{}\t{}\t\t{}\t{}".format(tran_label, correct_output, word_pairs[0][0], word_pairs[0][1],
+                                                    features)
             writer.write(res_str + "\n")
