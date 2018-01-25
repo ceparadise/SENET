@@ -109,7 +109,7 @@ def main(data_set):
         result_file = RESULT_DIR + os.sep + "FeedForward_Result{}.txt".format(len(os.listdir(RESULT_DIR)))
         a_acc = a_recall = a_pre = a_f1 = 0
         with open(result_file, "w", encoding='utf8') as fout:
-            for index, (train_set, test_set) in enumerate(data.ten_fold()):
+            for index, (train_set, test_set) in enumerate(data.ten_times_of_half_seen()):
                 train_X, train_y, train_word_pair = train_set.all()
                 test_X, test_y, test_word_pair = test_set.all()
                 print("Start fold {}".format(index))

@@ -23,6 +23,8 @@ RESULT_DIR = DATA_DIR + os.sep + "results"
 
 PACKAGES_DIR = PROJECT_ROOT + os.sep + "packages"
 
+FEATUREVECS = "dataset.pickle"
+
 
 def report_ration(data_set):
     pos_cnt = 0

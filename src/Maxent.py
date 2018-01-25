@@ -64,7 +64,7 @@ data = DataPrepare(p2v_model)
 result_file = RESULT_DIR + os.sep + "Maxent_result{}.txt".format(len(os.listdir(RESULT_DIR)))
 a_acc = a_recall = a_pre = a_f1 = 0
 with open(result_file, "w", encoding='utf8') as fout:
-    for raw_train_set, raw_test_set in data.ten_fold():
+    for raw_train_set, raw_test_set in data.ten_times_of_half_seen():
         train_x, train_y, train_word_pair = raw_train_set.all()
         test_x, test_y, test_word_pair = raw_test_set.all()
         train_set = []

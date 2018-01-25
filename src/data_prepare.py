@@ -4,50 +4,61 @@ import re
 import numpy as np
 from common import *
 from nltk.stem.porter import PorterStemmer
-
+import pickle
 from feature_extractors import FeatureExtractor
 
 
 class DataPrepare:
     def __init__(self, p2v_model, fake=False):
-        self.p2v_model = p2v_model
-        self.keyword_path = VOCAB_DIR + os.sep + "vocabulary.txt"
-        self.keys = []
-        with open(self.keyword_path, 'r', encoding='utf-8') as kwin:
-            for line in kwin:
-                self.keys.append(line.strip(" \n\r\t"))
-
-        self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
-        golden_pairs = self.build_golden()
         self.data_set = []
-        neg_pairs = self.build_neg_with_random_pair(golden_pairs)
-        labels = [[0., 1.], [1., 0.]]
-        print("Candidate neg pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
-        cnt_n = cnt_p = 0
-        for i, plist in enumerate([neg_pairs, golden_pairs]):
-            label = labels[i]
-            for pair in plist:
-                try:
-                    words1 = pair[0].strip(" \n")
-                    words2 = pair[1].strip(" \n")
-                    vector = []
-                    vector.extend(self.build_feature_vector(words1, words2))
-                    self.data_set.append(
-                        (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
-                    if i == 0:
-                        cnt_n += 1
-                    else:
-                        cnt_p += 1
-                except Exception as e:
-                    print(e)
-        print("Negative pairs:{} Golden Pairs:{}".format(cnt_n, cnt_p))
-        random.shuffle(self.data_set)
-        # self.write_file()
+        self.p2v_model = p2v_model
+        if os.path.isfile(FEATUREVECS):
+            self.load_file()
+        else:
+            self.keyword_path = VOCAB_DIR + os.sep + "vocabulary.txt"
+            self.keys = []
+            with open(self.keyword_path, 'r', encoding='utf-8') as kwin:
+                for line in kwin:
+                    self.keys.append(line.strip(" \n\r\t"))
+
+            self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
+            golden_pairs = self.build_golden()
+            neg_pairs = self.build_neg_with_random_pair(golden_pairs)
+            labels = [[0., 1.], [1., 0.]]
+            print("Candidate neg pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
+            cnt_n = cnt_p = 0
+            for i, plist in enumerate([neg_pairs, golden_pairs]):
+                label = labels[i]
+                for pair in plist:
+                    try:
+                        words1 = pair[0].strip(" \n")
+                        words2 = pair[1].strip(" \n")
+                        vector = []
+                        vector.extend(self.build_feature_vector(words1, words2))
+                        self.data_set.append(
+                            (vector, label, (words1, words2)))  # This will be parsed by next_batch() in dataset object
+                        if i == 0:
+                            cnt_n += 1
+                        else:
+                            cnt_p += 1
+                    except Exception as e:
+                        print(e)
+            print("Negative pairs:{} Golden Pairs:{}".format(cnt_n, cnt_p))
+            random.shuffle(self.data_set)
+            self.write_file()
 
     def write_file(self):
-        with open(DATA_DIR + os.sep + "dataset.data", encoding='utf8') as fout:
-            for entry in self.data_set:
-                fout.write(entry)
+        '''
+        entry = (vector, label, (words1, words2)))
+        :return:
+        '''
+        with open(FEATUREVECS, 'wb') as fout:
+            pickle.dump(self.data_set, fout)
+
+    def load_file(self):
+        with open(FEATUREVECS, 'rb') as fin:
+            self.data_set = pickle.load(fin)
+        print(self.data_set)
 
     def build_neg_with_w2v(self, golden_pairs):
         neg_pairs = []
