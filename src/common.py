@@ -38,7 +38,6 @@ def report_ration(data_set):
             raise Exception
     return pos_cnt, neg_cnt
 
-
 def unbalance_dataset(dataset, neg_vs_pos_ration):
     "neg_vs_pos_ration means how many times of neg samples should be against the pos ones"
     pos_entries = [x for x in dataset if x[1] == [1, 0]]

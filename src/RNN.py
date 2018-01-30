@@ -1,6 +1,7 @@
 import tensorflow as tf
 from common import *
 import numpy as np
+from data_prepare import DataPrepare
 
 
 class RNN:
@@ -13,7 +14,7 @@ class RNN:
         self.n_hidden_units = 128  # neurons in hidden layer
         self.n_classes = 2  # classes (0/1 digits)
 
-    def train_test(self, data):
+    def train_test(self, data, half_seen):
         # x y placeholder
         x = tf.placeholder(tf.float32, [None, self.n_steps, self.n_inputs])
         y = tf.placeholder(tf.float32, [None, self.n_classes])
@@ -30,7 +31,6 @@ class RNN:
             # shape (2, )
             'out': tf.Variable(tf.constant(0.1, shape=[self.n_classes, ]), name='b_out')
         }
-
         with tf.Session() as sess:
             pred = self.classify(x, weights, biases)
             cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y))
@@ -43,7 +43,12 @@ class RNN:
             a_acc = a_recall = a_pre = a_f1 = 0
             result_file = RESULT_DIR + os.sep + "RNN_result{}.txt".format(len(os.listdir(RESULT_DIR)))
             with open(result_file, "w", encoding='utf8') as fout:
-                for index, (train_set, test_set) in enumerate(data.ten_times_of_half_seen()):
+                if half_seen:
+                    exp_data = data.ten_times_of_half_seen()
+                else:
+                    exp_data = data.ten_fold()
+
+                for index, (train_set, test_set) in enumerate(exp_data):
                     print("Start fold {}".format(index))
                     sess.run(init)
                     step = 0
@@ -75,6 +80,7 @@ class RNN:
                 fout.write(avg_str)
                 print(avg_str)
             saver.save(sess, RNNMODEL + os.sep + 'rnn.ckpt')
+        tf.reset_default_graph()
 
     def classify(self, X, weights, biases):
         X = tf.reshape(X, [-1, self.n_inputs])
@@ -139,3 +145,10 @@ class RNN:
             res_str = "{}\t{}\t{}\t\t{}\t{}".format(tran_label, correct_output, word_pairs[0][0], word_pairs[0][1],
                                                     features)
             writer.write(res_str + "\n")
+
+
+if __name__ == '__main__':
+    data = DataPrepare()
+    print("Experiment data is ready, size ", len(data.data_set))
+    rnn = RNN(data.get_vec_length())
+    rnn.train_test(data, half_seen=True)

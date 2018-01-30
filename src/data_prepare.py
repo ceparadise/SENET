@@ -9,7 +9,8 @@ from feature_extractors import FeatureExtractor
 
 
 class DataPrepare:
-    def __init__(self, p2v_model, fake=False):
+    def __init__(self, p2v_model=None, remove_same_pre_post=True):
+        self.remove_same_pre_post = remove_same_pre_post
         self.data_set = []
         self.p2v_model = p2v_model
         if os.path.isfile(FEATUREVECS):
@@ -58,7 +59,6 @@ class DataPrepare:
     def load_file(self):
         with open(FEATUREVECS, 'rb') as fin:
             self.data_set = pickle.load(fin)
-        print(self.data_set)
 
     def build_neg_with_w2v(self, golden_pairs):
         neg_pairs = []
@@ -115,7 +115,8 @@ class DataPrepare:
                         pair_set.add(wp)
 
         print("Golden pair number:{}".format(len(pair_set)))
-        pair_set = self.remove_pair_with_same_pre_post(pair_set)
+        if self.remove_same_pre_post:
+            pair_set = self.remove_pair_with_same_pre_post(pair_set)
         return pair_set
 
     def remove_pair_with_same_pre_post(self, pair_set):
