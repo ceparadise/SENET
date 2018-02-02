@@ -1,5 +1,4 @@
 import nltk
-from data_prepare import DataPrepare
 from common import *
 
 
@@ -60,8 +59,9 @@ class Maxent:
 
     def run(self, data, half_seen):
         result_file = RESULT_DIR + os.sep + "Maxent_result{}.txt".format(len(os.listdir(RESULT_DIR)))
+        result_csv = RESULT_DIR + os.sep + "csv" + os.sep + "Maxent_result{}.csv".format(len(os.listdir(RESULT_DIR)))
         a_acc = a_recall = a_pre = a_f1 = 0
-        with open(result_file, "w", encoding='utf8') as fout:
+        with open(result_file, "w", encoding='utf8') as fout, open(result_csv, "w", encoding='utf8') as csv_fout:
             if half_seen:
                 exp_data = data.ten_times_of_half_seen()
             else:
@@ -102,6 +102,7 @@ class Maxent:
                     res[1].append(correctness)
                     res[2].append(test_word_pair[i])
                 re, pre, f1, accuracy = self.eval(res)
+                write_csv([re, pre, f1, accuracy], csv_fout)
                 self.write_res(res, fout)
                 a_recall += re
                 a_pre += pre

@@ -42,7 +42,8 @@ class RNN:
             saver = tf.train.Saver()
             a_acc = a_recall = a_pre = a_f1 = 0
             result_file = RESULT_DIR + os.sep + "RNN_result{}.txt".format(len(os.listdir(RESULT_DIR)))
-            with open(result_file, "w", encoding='utf8') as fout:
+            result_csv = RESULT_DIR + os.sep + "csv" + os.sep + "RNN_result{}.csv".format(len(os.listdir(RESULT_DIR)))
+            with open(result_file, "w", encoding='utf8') as fout, open(result_csv, 'w', encoding='utf8') as csv_fout:
                 if half_seen:
                     exp_data = data.ten_times_of_half_seen()
                 else:
@@ -70,6 +71,7 @@ class RNN:
                         is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
                         res.append((batch_ys, is_correct, test_word_pairs, batch_xs))
                     re, pre, f1, accuracy = self.eval(res)
+                    write_csv([re, pre, f1, accuracy], csv_fout)
                     self.write_res(res, fout)
                     a_recall += re
                     a_pre += pre

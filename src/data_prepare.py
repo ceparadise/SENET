@@ -198,6 +198,18 @@ class DataPrepare:
             for fd in folds[i + 1:]:
                 train_entries.extend(fd)
 
+            positive_test_entries = []
+            negative_test_entries = []
+            for test_entry in test_entries:
+                if test_entry[1] == [0., 1.]:
+                    negative_test_entries.append(test_entry)
+                else:
+                    positive_test_entries.append(test_entry)
+            pos_test_entries_num = int(0.1 * (len(positive_test_entries) + len(negative_test_entries)))
+            positive_test_entries = positive_test_entries[:pos_test_entries_num]
+            positive_test_entries.extend(negative_test_entries)
+            test_entries = positive_test_entries
+
             train_set = DataSet(train_entries)
             test_set = DataSet(test_entries)
             train_test_pair.append((train_set, test_set))

@@ -110,8 +110,9 @@ class FNN:
         # Run SGD
         with tf.Session() as sess:
             result_file = RESULT_DIR + os.sep + "FeedForward_Result{}.txt".format(len(os.listdir(RESULT_DIR)))
+            result_csv = RESULT_DIR + os.sep + "csv" + os.sep + "FeedForward_result{}.csv".format(len(os.listdir(RESULT_DIR)))
             a_acc = a_recall = a_pre = a_f1 = 0
-            with open(result_file, "w", encoding='utf8') as fout:
+            with open(result_file, "w", encoding='utf8') as fout, open(result_csv, "w", encoding='utf8') as csv_fout:
                 if half_seen:
                     exp_data = data_set.ten_times_of_half_seen()
                 else:
@@ -132,6 +133,7 @@ class FNN:
                     res = (test_y, is_correct, test_word_pair)
 
                     re, pre, f1, acc = self.eval(res)
+                    write_csv([re, pre, f1, acc], csv_fout)
                     self.write_res(res, fout)
                     a_recall += re
                     a_pre += pre
