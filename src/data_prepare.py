@@ -25,7 +25,7 @@ class DataPrepare:
             self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
             golden_pairs = self.build_golden()
             neg_pairs = self.build_neg_with_random_pair(golden_pairs)
-            labels = [[0., 1.], [1., 0.]]
+            labels = [[0., 1.], [1., 0.]]# [0,1] is negative and [1,0] is positive
             print("Candidate neg pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
             cnt_n = cnt_p = 0
             for i, plist in enumerate([neg_pairs, golden_pairs]):

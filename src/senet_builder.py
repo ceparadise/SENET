@@ -100,10 +100,14 @@ class FeatureBuilder:
                     for str in doc:
                         sent = " ".join(str)
                         res += " " + sent
+        print("Scraping context for word:" + keyword)
         if not os.path.isfile(dir + keyword + ".txt") and len(res) > 0:
-            with open(dir + os.sep + keyword + ".txt", 'w', encoding='utf8') as fout:
-                fout.write(res)
-            print("Scraping context for word:" + keyword)
+            try:
+                with open(dir + os.sep + keyword + ".txt", 'w', encoding='utf8') as fout:
+                    fout.write(res)
+            except Exception as e:
+                print(e)
+
         return res
 
     def get_features_vecs(self, pairs):
@@ -202,7 +206,7 @@ class Heuristics:
         token2 = nltk.word_tokenize(phrase)
         if len(token1) != 1 or len(acr) != len(token2):
             return False
-        for i in range(0,len(acr)):
+        for i in range(0, len(acr)):
             if acr[i].lower() != token2[i][0].lower():
                 return False
         return True
@@ -249,19 +253,58 @@ class Heuristics:
         return 'no'
 
 
+class PairBuilder:
+    def __read_words(self, file_path):
+        res = set()
+        with open(file_path, encoding='utf8') as fin:
+            for line in fin.readlines():
+                phrase = line.strip("\n\t\r ")
+                res.add(phrase)
+        return list(res)
+
+    def __get_all_relationships(self):
+        constras = os.path.join(VOCAB_DIR, "contrast.txt")
+        hyper = os.path.join(VOCAB_DIR, "hyper.txt")
+        related = os.path.join(VOCAB_DIR, "related.txt")
+        synonym = os.path.join(VOCAB_DIR, "synonym.txt")
+        one_pair_in_line = [constras, related, synonym]
+        multi_pair_in_line = [hyper]
+        rel = set()
+        for f in one_pair_in_line:
+            with open(f) as fin:
+                for line in fin.readlines():
+                    line = line.strip("\n\t\r ")
+                    word_pair = line.split(",")
+                    relation = (word_pair[0], word_pair[1])
+                    rel.add(relation)
+        for f in multi_pair_in_line:
+            with open(f) as fin:
+                for line in fin.readlines():
+                    line = line.strip("\n\t\r ")
+                    hyper, rest = line.split(":")
+                    for w_r in rest.split(","):
+                        rel.add((hyper[0], w_r))
+        return rel
+
+    def __init__(self, expension_list_txt):
+        self.exp_list = self.__read_words(expension_list_txt)
+        self.relations = self.__get_all_relationships()
+
+    def get_pairs(self):
+        pairs = []
+        vocab = self.__read_words(os.path.join(VOCAB_DIR, "vocabulary.txt"))
+        for w_v in vocab:
+            for w_e in self.exp_list:
+                if (w_v, w_e) not in self.relations and (w_e, w_v) not in self.relations:
+                    pairs.append((w_v, w_e))
+        return pairs
+
+
 if __name__ == "__main__":
-    pairs = [('java', 'python'),
-             ('translator', 'assembler'),
-             ('caution', 'warning'),
-             ('software test environment', 'capacity'),
-             ('override', 'partial'),
-             ('acceptance criteria', 'requirement'),
-             ('risk trigger', 'software'),
-             ('requirements review', 'audit'),
-             ('nanostore', 'control store'),
-             ('most valuable product', 'mvp'),
-             ('contiguous allocation', 'paging'),
-             ('specification change notice', 'configuration control')]
+    pair_builder = PairBuilder(os.path.join(DATA_DIR, "dataset", "requirement_extension_vocab.txt"))
+    pairs = pair_builder.get_pairs()
+    pairs = pairs[:100]
+    print(len(pairs))
     fb = FeatureBuilder()
     fb.get_features_vecs(pairs)
     vec_len = len(fb.data_set[0][0])
@@ -272,9 +315,16 @@ if __name__ == "__main__":
         hu_res.append(hu.classify(pair[1]))
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     res = []
+    print(len(hu_res), len(rnn_res))
     for i in range(len(pairs)):
         if hu_res[i] == 'yes':
-            res.append('yes')
+            res.append('yes-h')
         else:
-            res.append(rnn_res[i])
-    print(res)
+            res.append(rnn_res[i] + "-m")
+    with open(os.path.join(RESULT_DIR, "extension_res.text"), 'w', encoding='utf8') as fout:
+        for i in range(len(pairs)):
+            words = pairs[i]
+            w1 = words[0]
+            w2 = words[1]
+            label = res[i]
+            fout.write(",".join([w1, w2, label]) + "\n")
