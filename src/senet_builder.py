@@ -190,7 +190,7 @@ class RNNModel:
                 result.append(pre_res)
         parsed_result = []
         for res in result:
-            if res == 1:
+            if res == 0:
                 parsed_result.append('yes')
             else:
                 parsed_result.append('no')
@@ -303,7 +303,6 @@ class PairBuilder:
 if __name__ == "__main__":
     pair_builder = PairBuilder(os.path.join(DATA_DIR, "dataset", "requirement_extension_vocab.txt"))
     pairs = pair_builder.get_pairs()
-    pairs = pairs[:100]
     print(len(pairs))
     fb = FeatureBuilder()
     fb.get_features_vecs(pairs)
@@ -321,6 +320,7 @@ if __name__ == "__main__":
             res.append('yes-h')
         else:
             res.append(rnn_res[i] + "-m")
+    #TODO Pickle the feature vector and report progress
     with open(os.path.join(RESULT_DIR, "extension_res.text"), 'w', encoding='utf8') as fout:
         for i in range(len(pairs)):
             words = pairs[i]
