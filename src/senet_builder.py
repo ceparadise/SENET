@@ -64,7 +64,7 @@ class FeatureBuilder:
             clean_sents_list = preprocessor.clean_nonAlpha(tokens)
             return clean_sents_list
         except Exception as e:
-            pass
+            print(e)
 
     def search(self, dir, keyword):
         BING_STACKOVERFLOW = BING_WORD_DIR_ROOT + os.sep + "bing_stackoverflow_word"
@@ -96,12 +96,14 @@ class FeatureBuilder:
         for serp in sqlalchemy_session.serps:
             for link in serp.links:
                 doc = self.get_page_content(link.link)
-                for str in doc:
-                    sent = " ".join(str)
-                    res += " " + sent
-        # if not os.path.isfile(dir + keyword + ".txt"):
-        #     with open(dir + keyword + ".txt", 'w', encoding='utf8') as fout:
-        #         fout.write(res)
+                if doc:
+                    for str in doc:
+                        sent = " ".join(str)
+                        res += " " + sent
+        if not os.path.isfile(dir + keyword + ".txt") and len(res) > 0:
+            with open(dir + os.sep + keyword + ".txt", 'w', encoding='utf8') as fout:
+                fout.write(res)
+            print("Scraping context for word:" + keyword)
         return res
 
     def get_features_vecs(self, pairs):
@@ -127,12 +129,12 @@ class FeatureBuilder:
             except Exception as e:
                 define1 += self.search(dir, words1)
 
-            for dir in BING_WORD_DIR:
-                try:
-                    with open(dir + os.sep + words2 + ".txt", encoding='utf8') as f2:
-                        define2 += f2.read()
-                except Exception as e:
-                    define2 += self.search(dir, words2)
+        for dir in BING_WORD_DIR:
+            try:
+                with open(dir + os.sep + words2 + ".txt", encoding='utf8') as f2:
+                    define2 += f2.read()
+            except Exception as e:
+                define2 += self.search(dir, words2)
         return FeatureExtractor().get_feature(words1, define1, words2, define2)
 
 
@@ -200,14 +202,14 @@ class Heuristics:
         token2 = nltk.word_tokenize(phrase)
         if len(token1) != 1 or len(acr) != len(token2):
             return False
-        for i in len(acr):
+        for i in range(0,len(acr)):
             if acr[i].lower() != token2[i][0].lower():
                 return False
         return True
 
     def pharse_processing(self, phrase):
         tokens = phrase.split(" ")
-        bigrams = zip(tokens, tokens[1:])
+        bigrams = list(zip(tokens, tokens[1:]))
         return tokens, bigrams
 
     def isHyper(self, w1, w2):
@@ -257,7 +259,7 @@ if __name__ == "__main__":
              ('risk trigger', 'software'),
              ('requirements review', 'audit'),
              ('nanostore', 'control store'),
-             ('maintained', 'mvp'),
+             ('most valuable product', 'mvp'),
              ('contiguous allocation', 'paging'),
              ('specification change notice', 'configuration control')]
     fb = FeatureBuilder()
@@ -267,7 +269,7 @@ if __name__ == "__main__":
     hu = Heuristics()
     hu_res = []
     for pair in fb.data_set:
-        hu_res.append(hu.classify(pair))
+        hu_res.append(hu.classify(pair[1]))
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     res = []
     for i in range(len(pairs)):
@@ -275,3 +277,4 @@ if __name__ == "__main__":
             res.append('yes')
         else:
             res.append(rnn_res[i])
+    print(res)

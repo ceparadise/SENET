@@ -205,7 +205,8 @@ class DataPrepare:
                     negative_test_entries.append(test_entry)
                 else:
                     positive_test_entries.append(test_entry)
-            pos_test_entries_num = int(0.1 * (len(positive_test_entries) + len(negative_test_entries)))
+            pos_test_entries_num = int(
+                (0.1 * len(negative_test_entries) / len(positive_test_entries) + 0.1) * len(positive_test_entries))
             positive_test_entries = positive_test_entries[:pos_test_entries_num]
             positive_test_entries.extend(negative_test_entries)
             test_entries = positive_test_entries
