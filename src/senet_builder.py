@@ -367,16 +367,16 @@ if __name__ == "__main__":
         hu_res.append(hu.classify(pair[1]))
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     res = []
-    print(len(pairs), len(hu_res), len(rnn_res))
-    for i in range(len(pairs)):
+    print(len(hu_res), len(rnn_res))
+    for i in range(len(fb.data_set)):
         if hu_res[i] == 'yes':
             res.append('yes-h')
         else:
             res.append(rnn_res[i] + "-m")
     print("Writing result to disk ...")
     with open(os.path.join(RESULT_DIR, "extension_res_{}.text".format(partition_num)), 'w', encoding='utf8') as fout:
-        for i in range(len(pairs)):
-            words = pairs[i]
+        for i in range(len(rnn_res)):
+            words = fb.data_set[i][1]
             w1 = words[0]
             w2 = words[1]
             label = res[i]
