@@ -328,7 +328,7 @@ if __name__ == "__main__":
     pairs = pair_builder.get_pairs()
     work_size = len(pairs)
     chunk_siz = int(work_size / total_partition_num)
-    work_partition_start = partition_num-1 * chunk_siz
+    work_partition_start = (partition_num - 1) * chunk_siz
     work_partition_end = min(partition_num * chunk_siz, work_size)
     pairs = pairs[work_partition_start: work_partition_end]
     print("Total pairs to process:{}, the working interval for partition {} is from {} to {}".format(

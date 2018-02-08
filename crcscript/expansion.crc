@@ -2,7 +2,7 @@
 
 #$ -q gpu             # Specify queue (use ‘debug’ for development)
 #$ -N senet_expansion  # Specify job name
-#$ -t 1-2           # Specify number of tasks in array
+#$ -t 1-999           # Specify number of tasks in array
 
 module load tensorflow/0.12-python3
 set root = "/afs/crc.nd.edu/user/y/yliu26/SENET/src"
@@ -10,4 +10,4 @@ cd $root
 set log = "../crcscript/log/debug_$SGE_TASK_ID.log"
 
 pip3 install --user -r requirement.txt
-unbuffer python3 senet_builder.py $SGE_TASK_ID 2 > $log
+unbuffer python3 senet_builder.py $SGE_TASK_ID 1000 > $log
