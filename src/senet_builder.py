@@ -10,7 +10,7 @@ import os
 from threading import Thread
 import functools
 from nltk import PorterStemmer
-import nltk
+import nltk, sys
 
 
 class FeatureBuilder:
@@ -301,15 +301,33 @@ class PairBuilder:
 
 
 if __name__ == "__main__":
+    try:
+        partition_num = sys.argv[1]
+    except:
+        partition_num = 0
+
+    try:
+        total_partition_num = sys.argv[2]
+    except:
+        total_partition_num = 1
+
     pair_builder = PairBuilder(os.path.join(DATA_DIR, "dataset", "requirement_extension_vocab.txt"))
     pairs = pair_builder.get_pairs()
-    print(len(pairs))
+    work_size = len(pairs)
+    chunk_siz = int(work_size / total_partition_num)
+    work_partition_start = partition_num * chunk_siz
+    work_partition_end = min((partition_num + 1) * chunk_siz, work_size)
+    pairs = pairs[work_partition_start: work_partition_end]
+    print("Total pairs to process:{}, the working interval for partition {} is from {} to {}".format(
+        work_size, partition_num, work_partition_start, work_partition_end))
+    print("Start building feature vectors ...")
     fb = FeatureBuilder()
     fb.get_features_vecs(pairs)
     vec_len = len(fb.data_set[0][0])
     rnn = RNNModel(vec_len, RNNMODEL + os.sep + 'rnn.ckpt')
     hu = Heuristics()
     hu_res = []
+    print("Start classification ...")
     for pair in fb.data_set:
         hu_res.append(hu.classify(pair[1]))
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
@@ -320,11 +338,12 @@ if __name__ == "__main__":
             res.append('yes-h')
         else:
             res.append(rnn_res[i] + "-m")
-    #TODO Pickle the feature vector and report progress
-    with open(os.path.join(RESULT_DIR, "extension_res.text"), 'w', encoding='utf8') as fout:
+    print("Writing result to disk ...")
+    with open(os.path.join(RESULT_DIR, "extension_res_{}.text".format(partition_num)), 'w', encoding='utf8') as fout:
         for i in range(len(pairs)):
             words = pairs[i]
             w1 = words[0]
             w2 = words[1]
             label = res[i]
             fout.write(",".join([w1, w2, label]) + "\n")
+    print("Finished")
