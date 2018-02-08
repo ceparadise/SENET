@@ -323,6 +323,9 @@ if __name__ == "__main__":
         total_partition_num = int(sys.argv[2])
     except:
         total_partition_num = 1
+    nltk_requires = ["punkt", ]
+    for nltk_require in nltk_requires:
+        nltk.download(nltk_require)
 
     pair_builder = PairBuilder(os.path.join(DATA_DIR, "dataset", "requirement_extension_vocab.txt"))
     pairs = pair_builder.get_pairs()
