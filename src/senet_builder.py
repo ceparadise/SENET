@@ -329,7 +329,6 @@ if __name__ == "__main__":
 
     pair_builder = PairBuilder(os.path.join(DATA_DIR, "dataset", "requirement_extension_vocab.txt"))
     pairs = pair_builder.get_pairs()
-    pairs = pairs[:10]
     work_size = len(pairs)
     chunk_siz = int(work_size / total_partition_num)
     work_partition_start = (partition_num - 1) * chunk_siz
