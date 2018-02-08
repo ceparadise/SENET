@@ -110,17 +110,30 @@ class FeatureBuilder:
 
         return res
 
-    def get_features_vecs(self, pairs):
-        for i, pair in enumerate(pairs):
-            try:
-                words1 = pair[0].strip(" \n")
-                words2 = pair[1].strip(" \n")
-                vector = []
-                vector.extend(self.build_feature_vector(words1, words2))
-                self.data_set.append(
-                    (vector, (words1, words2)))
-            except Exception as e:
-                print(e)
+    def get_features_vecs(self, pairs, write_to_file_path=""):
+        try:
+            if write_to_file_path != "":
+                fin = open(write_to_file_path, 'w')
+
+            for i, pair in enumerate(pairs):
+                try:
+                    print("Preparing feature vec, progress {}/{}".format(i, len(pairs)))
+                    words1 = pair[0].strip(" \n")
+                    words2 = pair[1].strip(" \n")
+                    vector = []
+                    vector.extend(self.build_feature_vector(words1, words2))
+                    self.data_set.append(
+                        (vector, (words1, words2)))
+                    if write_to_file_path != "":
+                        entry = "{},{},{}\n".format(words1, words2, ",".join(map(str, vector)))
+                        fin.write(entry)
+                except Exception as e:
+                    print(e)
+        except Exception as fun_e:
+            print(fun_e)
+        finally:
+            if write_to_file_path != "":
+                fin.close()
 
     def build_feature_vector(self, words1, words2):
         define1 = ""
@@ -322,8 +335,10 @@ if __name__ == "__main__":
         work_size, partition_num, work_partition_start, work_partition_end))
     print("Start building feature vectors ...")
     fb = FeatureBuilder()
-    fb.get_features_vecs(pairs)
+    feature_vec_backup_file = os.path.join(DATA_DIR, "dataset", "fv_backup", "fv_{}".format(partition_num))
+    fb.get_features_vecs(pairs, feature_vec_backup_file)
     vec_len = len(fb.data_set[0][0])
+
     rnn = RNNModel(vec_len, RNNMODEL + os.sep + 'rnn.ckpt')
     hu = Heuristics()
     hu_res = []
