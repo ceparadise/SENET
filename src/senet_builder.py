@@ -315,12 +315,12 @@ class PairBuilder:
 
 if __name__ == "__main__":
     try:
-        partition_num = sys.argv[1]
+        partition_num = int(sys.argv[1])
     except:
         partition_num = 1
 
     try:
-        total_partition_num = sys.argv[2]
+        total_partition_num = int(sys.argv[2])
     except:
         total_partition_num = 1
 
