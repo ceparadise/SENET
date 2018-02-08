@@ -119,8 +119,13 @@ class FeatureBuilder:
                         parts = line.split(",")
                         w1 = parts[0]
                         w2 = parts[1]
-                        vec = parts[2:]
-                        self.data_set.append((vec, (w1,w2)))
+                        vec = []
+                        for f in parts[2:]:
+                            if f == 'True' or f == 'False':
+                                vec.append(bool(f))
+                            else:
+                                vec.append(float(f))
+                        self.data_set.append((vec, (w1, w2)))
                     return
 
         try:
