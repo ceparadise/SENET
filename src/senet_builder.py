@@ -367,7 +367,7 @@ if __name__ == "__main__":
         hu_res.append(hu.classify(pair[1]))
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     res = []
-    print(len(hu_res), len(rnn_res))
+    print(len(pairs), len(hu_res), len(rnn_res))
     for i in range(len(pairs)):
         if hu_res[i] == 'yes':
             res.append('yes-h')
