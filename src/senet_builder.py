@@ -111,9 +111,21 @@ class FeatureBuilder:
         return res
 
     def get_features_vecs(self, pairs, write_to_file_path=""):
+        if os.path.isfile(write_to_file_path):
+            with open(write_to_file_path) as fin:
+                lines = fin.readlines()
+                if len(lines) > 0:
+                    for line in lines:
+                        parts = line.split(",")
+                        w1 = parts[0]
+                        w2 = parts[1]
+                        vec = parts[2:]
+                        self.data_set.append((vec, (w1,w2)))
+                    return
+
         try:
             if write_to_file_path != "":
-                fin = open(write_to_file_path, 'w')
+                fout = open(write_to_file_path, 'w')
 
             for i, pair in enumerate(pairs):
                 try:
@@ -126,14 +138,14 @@ class FeatureBuilder:
                         (vector, (words1, words2)))
                     if write_to_file_path != "":
                         entry = "{},{},{}\n".format(words1, words2, ",".join(map(str, vector)))
-                        fin.write(entry)
+                        fout.write(entry)
                 except Exception as e:
                     print(e)
         except Exception as fun_e:
             print(fun_e)
         finally:
             if write_to_file_path != "":
-                fin.close()
+                fout.close()
 
     def build_feature_vector(self, words1, words2):
         define1 = ""
@@ -225,7 +237,7 @@ class Heuristics:
         return True
 
     def pharse_processing(self, phrase):
-        tokens = phrase.split(" ")
+        tokens = phrase.split()
         bigrams = list(zip(tokens, tokens[1:]))
         return tokens, bigrams
 
