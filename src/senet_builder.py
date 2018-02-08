@@ -323,7 +323,7 @@ if __name__ == "__main__":
         total_partition_num = int(sys.argv[2])
     except:
         total_partition_num = 1
-    nltk_requires = ["punkt", ]
+    nltk_requires = ["punkt", "averaged_perceptron_tagger"]
     for nltk_require in nltk_requires:
         nltk.download(nltk_require)
 
