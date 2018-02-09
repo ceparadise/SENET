@@ -1,8 +1,8 @@
 #!/bin/csh
 
-#$ -q gpu             # Specify queue (use ‘debug’ for development)
-#$ -N senet_expansion  # Specify job name
-#$ -t 1-2           # Specify number of tasks in array
+#$ -q gpu@@general_access     # Specify queue (use ‘debug’ for development)
+#$ -N senet_expansion         # Specify job name
+#$ -t 1-2                     # Specify number of tasks in array
 
 module load tensorflow/0.12-python3
 set root = "/afs/crc.nd.edu/user/y/yliu26/SENET/src"

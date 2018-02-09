@@ -1,12 +1,13 @@
 #!/bin/csh
 
-#$ -q gpu             # Specify queue (use ‘debug’ for development)
+#$ -q long             # Specify queue (use ‘debug’ for development)
 #$ -N senet_expansion  # Specify job name
 #$ -t 1-30          # Specify number of tasks in array
 
 set root = "/afs/crc.nd.edu/user/y/yliu26/SENET/src"
 cd $root
 set log = "../crcscript/log/feature_build_$SGE_TASK_ID.log"
-
+module load python/3.6.0
+pip3 install --user GoogleScraper
 pip3 install --user -r requirement.txt
-unbuffer python3 senet_builder.py $SGE_TASK_ID 30 > $log
+python3 senet_builder.py $SGE_TASK_ID 30 > $log
