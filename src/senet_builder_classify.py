@@ -139,15 +139,16 @@ if __name__ == "__main__":
     feature_vec_dir = os.path.join(DATA_DIR, "dataset", "fv_backup")
     all_feature_vec_files = [x for x in os.listdir(feature_vec_dir) if x.startswith("fv_")]
     fv_file_for_partition = []
-    for f in feature_vec_dir:
+    for f in all_feature_vec_files:
         file_num = int(f.split("_")[1])
         if file_num % partition_num == 0:
             fv_file_for_partition.append(os.path.join(feature_vec_dir, f))
 
+
     fb = FeatureBuilder()
     fb.read_feature_vecs(fv_file_for_partition)
     vec_len = len(fb.data_set[0][0])
-
+    print("{} pairs for processing...".format(len(fb.data_set)))
     rnn = RNNModel(vec_len, RNNMODEL + os.sep + 'rnn.ckpt')
     hu = Heuristics()
     hu_res = []

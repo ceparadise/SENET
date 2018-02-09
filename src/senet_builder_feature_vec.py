@@ -123,7 +123,7 @@ class FeatureBuilder:
                     self.data_set.append(
                         (vector, (words1, words2)))
                     if write_to_file_path != "":
-                        entry = "{},{},{}\n".format(words1, words2, ",".join(map(str, vector)))
+                        entry = "{}|{}|{}\n".format(words1, words2, ",".join(map(str, vector)))
                         fout.write(entry)
                 except Exception as e:
                     print(e)
@@ -134,11 +134,11 @@ class FeatureBuilder:
                 lines = fin.readlines()
                 if len(lines) > 0:
                     for line in lines:
-                        parts = line.split(",")
+                        parts = line.split("|")
                         w1 = parts[0]
                         w2 = parts[1]
                         vec = []
-                        for f in parts[2:]:
+                        for f in parts[2].strip("\n\t\r").split(","):
                             if f == 'True' or f == 'False':
                                 vec.append(bool(f))
                             else:
