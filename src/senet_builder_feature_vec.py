@@ -85,19 +85,23 @@ class FeatureBuilder:
 
         }
 
+        res = ""
+        print("Scraping context for word:" + keyword)
         try:
             sqlalchemy_session = scrape_with_config(config)
+            for serp in sqlalchemy_session.serps:
+                for link in serp.links:
+                    try:
+                        doc = self.get_page_content(link.link)
+                        if doc:
+                            for str in doc:
+                                sent = " ".join(str)
+                                res += " " + sent
+                    except Exception as sql_e:
+                        print(sql_e)
         except GoogleSearchError as e:
             print(e)
-        res = ""
-        for serp in sqlalchemy_session.serps:
-            for link in serp.links:
-                doc = self.get_page_content(link.link)
-                if doc:
-                    for str in doc:
-                        sent = " ".join(str)
-                        res += " " + sent
-        print("Scraping context for word:" + keyword)
+
         if not os.path.isfile(dir + keyword + ".txt") and len(res) > 0:
             try:
                 with open(dir + os.sep + keyword + ".txt", 'w', encoding='utf8') as fout:
