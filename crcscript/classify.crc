@@ -3,7 +3,7 @@
 #$ -q gpu     # Specify queue (use ‘debug’ for development)
 #$ -l gpu_card=1
 #$ -N senet_classify        # Specify job name
-#$ -t 1-2                     # Specify number of tasks in array
+#$ -t 1-4                     # Specify number of tasks in array
 
 module load tensorflow/0.12-python3
 set root = "/afs/crc.nd.edu/user/y/yliu26/SENET/src"
@@ -11,4 +11,4 @@ cd $root
 set log = "../crcscript/log/classify_$SGE_TASK_ID.log"
 
 pip3 install --user -r requirement.txt
-unbuffer python3 senet_builder_classify.py $SGE_TASK_ID 2 > $log
+unbuffer python3 senet_builder_classify.py $SGE_TASK_ID 4 > $log

@@ -49,6 +49,7 @@ class RNNModel:
             saver = tf.train.Saver()
             saver.restore(sess, RNNMODEL + os.sep + "rnn.ckpt")
             for i in range(len(feature_vecs)):
+                print("RNN:{}/{}".format(i, len(feature_vecs)))
                 batch_xs = feature_vecs[i].reshape([self.batch_size, self.n_steps, self.n_inputs])
                 pre_res = sess.run(pred_label_index, feed_dict={x: batch_xs})
                 result.append(pre_res)
@@ -141,9 +142,8 @@ if __name__ == "__main__":
     fv_file_for_partition = []
     for f in all_feature_vec_files:
         file_num = int(f.split("_")[1])
-        if file_num % partition_num == 0:
+        if file_num % total_partition_num == partition_num - 1:
             fv_file_for_partition.append(os.path.join(feature_vec_dir, f))
-
 
     fb = FeatureBuilder()
     fb.read_feature_vecs(fv_file_for_partition)
@@ -153,7 +153,8 @@ if __name__ == "__main__":
     hu = Heuristics()
     hu_res = []
     print("Start classification ...")
-    for pair in fb.data_set:
+    for i, pair in enumerate(fb.data_set):
+        print("HU:{}/{}".format(i, len(hu_res)))
         hu_res.append(hu.classify(pair[1]))
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     res = []
