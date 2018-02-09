@@ -153,10 +153,10 @@ if __name__ == "__main__":
     hu = Heuristics()
     hu_res = []
     print("Start classification ...")
+    rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     for i, pair in enumerate(fb.data_set):
         print("HU:{}/{}".format(i, len(hu_res)))
         hu_res.append(hu.classify(pair[1]))
-    rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     res = []
     print(len(hu_res), len(rnn_res))
     for i in range(len(fb.data_set)):
