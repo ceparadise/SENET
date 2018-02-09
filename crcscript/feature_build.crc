@@ -1,6 +1,7 @@
 #!/bin/csh
 
-#$ -q gpu@@general_access  # Specify queue (use ‘debug’ for development)
+#$ -q gpu # Specify queue (use ‘debug’ for development)
+#$ -l gpu_card=1
 #$ -N senet_fv_build  # Specify job name
 #$ -t 1-30          # Specify number of tasks in array
 
