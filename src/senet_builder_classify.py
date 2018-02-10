@@ -132,7 +132,7 @@ if __name__ == "__main__":
     try:
         total_partition_num = int(sys.argv[2])
     except:
-        total_partition_num = 1
+        total_partition_num = 2
     nltk_requires = ["punkt", "averaged_perceptron_tagger"]
     for nltk_require in nltk_requires:
         nltk.download(nltk_require)
@@ -140,6 +140,7 @@ if __name__ == "__main__":
     feature_vec_dir = os.path.join(DATA_DIR, "dataset", "fv_backup")
     all_feature_vec_files = [x for x in os.listdir(feature_vec_dir) if x.startswith("fv_")]
     fv_file_for_partition = []
+    print("Input files:", fv_file_for_partition)
     for f in all_feature_vec_files:
         file_num = int(f.split("_")[1])
         if file_num % total_partition_num == partition_num - 1:
@@ -155,7 +156,7 @@ if __name__ == "__main__":
     print("Start classification ...")
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     for i, pair in enumerate(fb.data_set):
-        print("HU:{}/{}".format(i, len(hu_res)))
+        print("HU:{}/{}".format(i, len(fb.data_set)))
         hu_res.append(hu.classify(pair[1]))
     res = []
     print(len(hu_res), len(rnn_res))
