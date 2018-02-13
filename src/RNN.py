@@ -33,6 +33,7 @@ class RNN:
         }
         with tf.Session() as sess:
             pred = self.classify(x, weights, biases)
+            output = tf.nn.softmax(pred)
             cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y))
             train_op = tf.train.AdamOptimizer(self.lr).minimize(cost)
             pred_label_index = tf.argmax(pred, 1)  # Since we use one-hot represent the predicted label, index = label
