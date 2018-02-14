@@ -2,6 +2,7 @@ from nltk.stem.porter import PorterStemmer
 import nltk, string
 from sklearn.feature_extraction.text import TfidfVectorizer
 import common
+import re
 
 
 class FeatureExtractor:
@@ -21,11 +22,22 @@ class FeatureExtractor:
                          # self.wordnet_related_tokens_lowest_similarity
                          self.wordnet_last_token_h_similarity,
                          self.one_side_single_token,
+                         self.token_is_substr
                          ]
 
     def __stem_Tokens(self, words):
         porter_stemmer = PorterStemmer()
         return [porter_stemmer.stem(x) for x in words.split(" ")]
+
+    def token_is_substr(self, w1, d1, w2, d2):
+        w1_tk = re.split("[\s-]", w1)
+        w2_tk = re.split("[\s-]", w2)
+        count = 0
+        for tk1 in w1_tk:
+            for tk2 in w2_tk:
+                if tk1 in tk2 or tk2 in tk1:
+                    count += 1
+        return count
 
     def common_token_len(self, w1, d1, w2, d2):
         """
