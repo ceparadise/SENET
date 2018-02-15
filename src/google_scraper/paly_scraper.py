@@ -14,6 +14,9 @@ if query_type == 'sentence':
 elif query_type == "stack_overflow":
     file_dir = './bing_stackoverflow_word/'
     query_template = "{} site:stackoverflow.com definition"
+elif query_type == "word":
+    file_dir = './bing_word/'
+
 
 for vocab_file in ["vocabulary.txt", "acronym_vocab.txt"]:
     with open(os.path.join(VOCAB_DIR, vocab_file), 'r', encoding='utf8') as fin:

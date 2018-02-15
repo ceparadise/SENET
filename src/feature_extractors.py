@@ -7,23 +7,30 @@ import re
 
 class FeatureExtractor:
     def __init__(self):
-        self.func_pip = [self.common_token_len,
-                         self.same_postfix,
-                         self.same_prefix,
-                         self.token_num_same,
-                         self.include_each_other,
-                         # self.pos_compare, #Very time consuming
-                         self.doc_similarity,
-                         self.iterative_levenshtein,
-                         # self.doc_contain_tokens_w1,
-                         # self.doc_contain_tokens_w2,
-                         # self.wordnet_related_tokens_intersection,
-                         # self.wordnet_related_tokens_highest_similarity,
-                         # self.wordnet_related_tokens_lowest_similarity
-                         self.wordnet_last_token_h_similarity,
-                         self.one_side_single_token,
-                         self.token_is_substr
-                         ]
+        self.func_pip = [
+            self.common_token_len,
+            self.common_token_len_with_slash,
+
+            self.same_postfix,
+            self.same_prefix,
+            self.token_num_same,
+            self.include_each_other,
+
+            # self.pos_compare, #Very time consuming
+
+            self.doc_similarity,
+            self.iterative_levenshtein,
+
+            # self.doc_contain_tokens_w1,
+            # self.doc_contain_tokens_w2,
+            # self.wordnet_related_tokens_intersection,
+            # self.wordnet_related_tokens_highest_similarity,
+            # self.wordnet_related_tokens_lowest_similarity
+
+            self.wordnet_last_token_h_similarity,
+            self.one_side_single_token,
+            self.token_is_substr
+        ]
 
     def __stem_Tokens(self, words):
         porter_stemmer = PorterStemmer()
@@ -41,11 +48,25 @@ class FeatureExtractor:
 
     def common_token_len(self, w1, d1, w2, d2):
         """
-        Number of common tokens
+        Number of common tokens. Split on white space then stem each token
         :return:
         """
         w1_tk = set(self.__stem_Tokens(w1))
         w2_tk = set(self.__stem_Tokens(w2))
+        common_len = len(w1_tk.intersection(w2_tk))
+        return common_len
+
+    def common_token_len_with_slash(self, w1, d1, w2, d2):
+        """
+        If a token in the phrases have '-', split on '-' as well then calculate the interaction
+        :param w1:
+        :param d1:
+        :param w2:
+        :param d2:
+        :return:
+        """
+        w1_tk = set(re.split("[\s-]", w1))
+        w2_tk = set(re.split("[\s-]", w2))
         common_len = len(w1_tk.intersection(w2_tk))
         return common_len
 

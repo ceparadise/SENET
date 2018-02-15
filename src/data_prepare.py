@@ -25,7 +25,7 @@ class DataPrepare:
             self.golden_pair_files = ["synonym.txt", "contrast.txt", "related.txt"]
             golden_pairs = self.build_golden()
             neg_pairs = self.build_neg_with_random_pair(golden_pairs)
-            labels = [[0., 1.], [1., 0.]]# [0,1] is negative and [1,0] is positive
+            labels = [[0., 1.], [1., 0.]]  # [0,1] is negative and [1,0] is positive
             print("Candidate neg pairs:{}, Golden pairs:{}".format(len(neg_pairs), len(golden_pairs)))
             cnt_n = cnt_p = 0
             for i, plist in enumerate([neg_pairs, golden_pairs]):
@@ -108,6 +108,8 @@ class DataPrepare:
         with open(VOCAB_DIR + os.sep + "hyper.txt") as fin:
             for line in fin.readlines():
                 words1, rest = line.strip(" \n").split(":")
+                if rest == "":
+                    continue
                 for word in rest.strip(" ").split(","):
                     wp = (words1.strip(" \n"), word.strip("\n"))
                     wp_r = (wp[1], wp[0])
@@ -158,19 +160,19 @@ class DataPrepare:
         """
         define1 = ""
         define2 = ""
-        try:
-            for dir in BING_WORD_DIR:
+        for dir in BING_WORD_DIR:
+            try:
                 with open(dir + os.sep + words1 + ".txt", encoding='utf8') as f1:
                     define1 += f1.read()
-        except Exception as e:
-            print(e)
+            except Exception as e:
+                print(e)
 
-        try:
             for dir in BING_WORD_DIR:
-                with open(dir + os.sep + words2 + ".txt", encoding='utf8') as f2:
-                    define2 += f2.read()
-        except Exception as e:
-            print(e)
+                try:
+                    with open(dir + os.sep + words2 + ".txt", encoding='utf8') as f2:
+                        define2 += f2.read()
+                except Exception as e:
+                    print(e)
 
         return FeatureExtractor().get_feature(words1, define1, words2, define2)
 

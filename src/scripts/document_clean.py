@@ -30,3 +30,4 @@ for dir in BING_WORD_DIR:
             cleaned_content = "\n".join(final_lines)
             with open(os.path.join(clean_dir, file_name), 'w', encoding="utf8") as fout:
                 fout.write(cleaned_content)
+print("finished")

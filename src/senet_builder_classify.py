@@ -45,6 +45,7 @@ class RNNModel:
 
         with tf.Session() as sess:
             pred = self.classify(x, weights, biases)
+            confidence = tf.nn.softmax(pred)
             pred_label_index = tf.argmax(pred, 1)  # Since we use one-hot represent the predicted label, index = label
             saver = tf.train.Saver()
             saver.restore(sess, RNNMODEL + os.sep + "rnn.ckpt")
@@ -52,13 +53,15 @@ class RNNModel:
                 print("RNN:{}/{}".format(i, len(feature_vecs)))
                 batch_xs = feature_vecs[i].reshape([self.batch_size, self.n_steps, self.n_inputs])
                 pre_res = sess.run(pred_label_index, feed_dict={x: batch_xs})
-                result.append(pre_res)
+                confidence_score = sess.run(confidence, feed_dict={x: batch_xs})
+                result.append(confidence_score)
         parsed_result = []
         for res in result:
-            if res == 0:
-                parsed_result.append('yes')
-            else:
-                parsed_result.append('no')
+            # if res == 0:
+            #     parsed_result.append('yes')
+            # else:
+            #     parsed_result.append('no')
+            parsed_result.append(res[0])
         return parsed_result
 
 
@@ -162,15 +165,15 @@ if __name__ == "__main__":
     print(len(hu_res), len(rnn_res))
     for i in range(len(fb.data_set)):
         if hu_res[i] == 'yes':
-            res.append('yes-h')
+            res.append('1.01')
         else:
-            res.append(rnn_res[i] + "-m")
+            res.append(rnn_res[i])
     print("Writing result to disk ...")
     with open(os.path.join(RESULT_DIR, "extension_res_{}.text".format(partition_num)), 'w', encoding='utf8') as fout:
         for i in range(len(rnn_res)):
             words = fb.data_set[i][1]
             w1 = words[0]
             w2 = words[1]
-            label = res[i]
-            fout.write(",".join([w1, w2, label]) + "\n")
+            score = res[i]
+            fout.write(",".join([w1, w2, str(score)]) + "\n")
     print("Finished")

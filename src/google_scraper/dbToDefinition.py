@@ -19,6 +19,9 @@ if query_type == 'sentence':
 elif query_type == "stack_overflow":
     file_dir = './bing_stackoverflow_word/'
     query_template = "{} site:stackoverflow.com definition"
+elif query_type == "word":
+    file_dir = './bing_word/'
+    query_template = "{}"
 
 from threading import Thread
 from threading import Lock
@@ -116,11 +119,12 @@ for row in join_result:
     if query_type == "sentence":
         begin_index = len("what is ")
         end_len = len(" in computer science")
+        query = query[begin_index:-end_len]
     elif query_type == "stack_overflow":
         begin_index = 0
         end_len = len(" site:stackoverflow.com definition")
+        query = query[begin_index:-end_len]
 
-    query = query[begin_index:-end_len]
     q_file = os.path.join(file_dir, query + ".txt")
     if os.path.isfile(q_file):
         continue
