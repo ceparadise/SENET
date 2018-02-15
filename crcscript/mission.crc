@@ -1,13 +1,12 @@
 #!/bin/csh
 #$ -q gpu
 #$ -N SENET 
-#$ -pe smp 24
-
 
 module load tensorflow/0.12-python3
-pip3 install --user gensim
+pip3 install --user GoogleScraper
+pip3 install --user -r requirement.txt
 
 set root = "/afs/crc.nd.edu/user/y/yliu26/SENET/src"
 cd $root
 
-python3 main.py
+python3 RNN.py
