@@ -13,7 +13,11 @@ class WordCleaner:
 
     def clean_line(self, line):
         line = line.strip("\n\t\r ")
+        line = re.sub("[\/\\\\]+", "-", line)
         line = re.sub('\(.*?\)', '', line)
+        line = re.sub('\[.*?\]', '', line)
+        line = re.sub("[^\w\',\"\-&\s\:]", "", line)
+
         line = re.sub("\s+", " ", line)
         line = re.sub("\s*-\s*", "-", line)
         return line
@@ -26,7 +30,7 @@ class WordCleaner:
         :return: a list of phrases
         """
         cleaned_line = self.clean_line(line)
-        phrases = re.split(seperator,cleaned_line)
+        phrases = re.split(seperator, cleaned_line)
         phrases = [p.strip("\n\t\r ") for p in phrases]
         return phrases
 
@@ -34,10 +38,9 @@ class WordCleaner:
         vocab = set()
         with open(file_path, encoding="utf8") as fin:
             for line in fin.readlines():
-                if self.valid_line(line):
-                    clean_phrases = self.get_clean_phrases(line, seperator)
-                    for phrase in clean_phrases:
-                        vocab.add(phrase)
+                clean_phrases = self.get_clean_phrases(line, seperator)
+                for phrase in clean_phrases:
+                    vocab.add(phrase)
         return vocab
 
     def is_acronym(self, phrase):
@@ -50,20 +53,12 @@ class WordCleaner:
         if (len(tokens) == 1):
             if len(tokens[0].split("-")) > 1:
                 return False
-            if tokens[0] not in self.en_words:
+            if tokens[0] not in self.en_words and len(tokens[0]) < 5:
                 return True
         for tk in tokens:
             if re.match("^[A-Z].*[A-Z]$", tk) != None:
                 return True
         return False
-
-    def valid_line(self, line):
-        """
-        Line should only contain the limit signs
-        :param line:
-        :return:
-        """
-        return re.match("[^\w&,\'\"\s :]+", line) == None
 
 
 if __name__ == "__main__":
@@ -72,6 +67,7 @@ if __name__ == "__main__":
     wc = WordCleaner()
 
     all_vocab = set()
+    acr_vocab = set()
     for file_name_root in relation_files:
         in_file_path = os.path.join(VOCAB_DIR, "origin", file_name_root + "_origin.txt")
         out_file_path = os.path.join(VOCAB_DIR, file_name_root + ".txt")
@@ -79,24 +75,26 @@ if __name__ == "__main__":
         all_vocab |= wc.get_vocab(in_file_path)
         with open(in_file_path, encoding="utf8") as fin, open(out_file_path, 'w', encoding='utf8') as fout:
             for line in fin.readlines():
-                if wc.valid_line(line):
-                    cleaned = wc.clean_line(line)
-                    fout.write(cleaned + "\n")
+                cleaned = wc.clean_line(line)
+                fout.write(cleaned + "\n")
         if file_name_root == "acronym":
-            acr_vocab = wc.get_vocab(in_file_path)
+            acr_tmp_vocab = wc.get_vocab(in_file_path)
             acr_vocab_file = os.path.join(VOCAB_DIR, file_name_root + "_vocab.txt")
-            with open(acr_vocab_file, 'w', encoding='utf8') as arc_vocab_in:
-                for acr_ph in acr_vocab:
-                    if wc.is_acronym(acr_ph):
-                        arc_vocab_in.write(acr_ph + "\n")
+            for acr_ph in acr_tmp_vocab:
+                if wc.is_acronym(acr_ph):
+                    acr_vocab.add(acr_ph)
 
     vocab_file = os.path.join(VOCAB_DIR, "origin", "vocabulary_origin.txt")
     vocab_clean = os.path.join(VOCAB_DIR, "vocabulary.txt")
     all_vocab |= wc.get_vocab(vocab_file)
-    with open(vocab_clean, 'w', encoding='utf8') as vocab_out:
+    with open(vocab_clean, 'w', encoding='utf8') as vocab_out, \
+            open(acr_vocab_file, 'w', encoding='utf8') as arc_vocab_in:
         for ph in all_vocab:
             if wc.is_acronym(ph):
-                continue
-            vocab_out.write(ph + "\n")
+                acr_vocab.add(ph)
+            else:
+                vocab_out.write(ph + "\n")
+        for ph in acr_vocab:
+            arc_vocab_in.write(ph + "\n")
 
     print("Cleaned ...")

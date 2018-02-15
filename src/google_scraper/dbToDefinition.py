@@ -11,8 +11,14 @@ c = conn.cursor()
 user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 headers = {'User-Agent': user_agent, }
 
-existed_files = [f[:-4] for f in os.listdir('./bing_sentenceQuery_word/') if
-                 os.path.isfile("./bing_sentenceQuery_word/" + f)]
+query_type = 'sentence'  # change type here
+
+if query_type == 'sentence':
+    file_dir = './bing_sentenceQuery_word/'
+    query_template = "what is {} in computer science"
+elif query_type == "stack_overflow":
+    file_dir = './bing_stackoverflow_word/'
+    query_template = "{} site:stackoverflow.com definition"
 
 from threading import Thread
 from threading import Lock
@@ -70,29 +76,26 @@ def get_page_content(link):
 
 
 def worker(sub_query_link, thread_num):
-    visited_doc = set()
-    last_visited_num = 0
-    for query in sub_query_link:
-        for link in sub_query_link[query]:
+    cur_visited_num = 0
+    for q_file in sub_query_link:
+        for link in sub_query_link[q_file]:
+            print("querying {} with link {}".format(q_file, link))
             try:
-                mode = 'w'
-                if query in visited_doc:
+                if os.path.isfile(q_file):
                     mode = 'a'
                 else:
-                    visited_doc.add(query)
+                    mode = 'w'
+                    cur_visited_num += 1
+                    if cur_visited_num % 5 == 0:
+                        print("T{}: word processed = {}".format(thread_num, cur_visited_num))
 
                 page_content = get_page_content(link)
-                cur_visited_num = len(visited_doc)
-                if cur_visited_num % 5 == 0 and last_visited_num != cur_visited_num:
-                    print("T{}: word processed = {}".format(thread_num, cur_visited_num))
-                    last_visited_num = cur_visited_num
                 if page_content:
-                    with open("./bing_sentenceQuery_word/" + query + ".txt", mode, encoding='utf8') as fout:
+                    with open(q_file, mode, encoding='utf8') as fout:
                         for str in page_content:
                             str = " ".join(str)
                             fout.write(str + "\n")
                         fout.write("\n")
-                        fout.flush()
                 time.sleep(1)
             except Exception as e:
                 print(e)
@@ -107,15 +110,21 @@ count_lock = Lock()
 word_link = dict()
 for row in join_result:
     query = row[0]
-    begin_index = len("what is ")
-    end_len = len(" in computer science")
+    if query_type == "sentence":
+        begin_index = len("what is ")
+        end_len = len(" in computer science")
+    elif query_type == "stack_overflow":
+        begin_index = 0
+        end_len = len(" site:stackoverflow.com definition")
+
     query = query[begin_index:-end_len]
-    if query in existed_files:
+    q_file = os.path.join(file_dir, query + ".txt")
+    if os.path.isfile(q_file):
         continue
     link = row[1]
-    if query not in word_link:
-        word_link[query] = []
-    word_link[query].append(link)
+    if q_file not in word_link:
+        word_link[q_file] = []
+    word_link[q_file].append(link)
 
 threads = []
 for thread_num in range(0, 4):

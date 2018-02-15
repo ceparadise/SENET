@@ -8,8 +8,8 @@ RNNMODEL = DATA_DIR + os.sep + "RNNModel"
 BING_WORD_DIR_ROOT = PROJECT_ROOT + os.sep + "src" + os.sep + "google_scraper"
 BING_STACKOVERFLOW = BING_WORD_DIR_ROOT + os.sep + "bing_stackoverflow_word"
 BING_REGULAR = BING_WORD_DIR_ROOT + os.sep + "bing_word"
-BING_SENTENCE_QUERY = BING_WORD_DIR_ROOT + os.sep + "bing_setenceQuery_word"
-BING_WORD_DIR = [BING_STACKOVERFLOW, BING_REGULAR]  # , BING_SENTENCE_QUERY]
+BING_SENTENCE_QUERY = BING_WORD_DIR_ROOT + os.sep + "bing_sentenceQuery_word"
+BING_WORD_DIR = [BING_STACKOVERFLOW, BING_SENTENCE_QUERY]  # , BING_SENTENCE_QUERY]
 
 RAW_DIR = DATA_DIR + os.sep + "raw"
 SE_BOOK_DIR = RAW_DIR + os.sep + "SE_Books_txt"
