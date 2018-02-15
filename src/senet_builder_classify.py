@@ -156,7 +156,6 @@ if __name__ == "__main__":
     rnn = RNNModel(vec_len, RNNMODEL + os.sep + 'rnn.ckpt')
     hu = Heuristics()
     hu_res = []
-    res
     print("Start classification ...")
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
     # for i, pair in enumerate(fb.data_set):
