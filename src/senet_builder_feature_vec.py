@@ -8,7 +8,7 @@ import os
 from threading import Thread
 import functools
 import nltk, sys
-from clean_vocab import WordCleaner
+from scripts.clean_vocab import WordCleaner
 
 
 class FeatureBuilder:
