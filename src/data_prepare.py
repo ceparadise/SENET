@@ -3,6 +3,7 @@ import re
 import numpy as np
 from common import *
 from nltk.stem.porter import PorterStemmer
+import nltk
 import pickle
 from feature_extractors import FeatureExtractor
 from scripts.clean_vocab import WordCleaner
@@ -10,6 +11,7 @@ from scripts.clean_vocab import WordCleaner
 
 class DataPrepare:
     def __init__(self, p2v_model=None, remove_same_pre_post=True):
+        nltk.download("words")
         self.remove_same_pre_post = remove_same_pre_post
         self.data_set = []
         self.p2v_model = p2v_model

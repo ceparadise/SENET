@@ -77,7 +77,6 @@ class WordCleaner:
 
 
 if __name__ == "__main__":
-    nltk.download("words")
     relation_files = ["contrast", "hyper", "related", "synonym", "acronym"]
     wc = WordCleaner()
 
