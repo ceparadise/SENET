@@ -4,6 +4,7 @@ import urllib
 from lxml import html
 from preprocess import Preprocessor
 import os
+from clean_vocab import WordCleaner
 
 conn = sqlite3.connect('google_scraper.db')
 c = conn.cursor()
@@ -80,7 +81,7 @@ def get_page_content(link):
 
 def worker(sub_query_link, thread_num):
     cur_visited_num = 0
-    for q_file in sub_query_link:
+    for q_file in sub_query_link:  # q_file is the path of file. the file name is processed by WordCleaner
         for link in sub_query_link[q_file]:
             print("querying {} with link {}".format(q_file, link))
             try:
@@ -125,7 +126,7 @@ for row in join_result:
         end_len = len(" site:stackoverflow.com definition")
         query = query[begin_index:-end_len]
 
-    q_file = os.path.join(file_dir, query + ".txt")
+    q_file = os.path.join(file_dir, WordCleaner.to_file_name_format(query) + ".txt")
     if os.path.isfile(q_file):
         continue
     link = row[1]

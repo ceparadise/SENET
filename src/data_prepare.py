@@ -1,4 +1,3 @@
-import os
 import random
 import re
 import numpy as np
@@ -6,6 +5,7 @@ from common import *
 from nltk.stem.porter import PorterStemmer
 import pickle
 from feature_extractors import FeatureExtractor
+from clean_vocab import WordCleaner
 
 
 class DataPrepare:
@@ -162,17 +162,19 @@ class DataPrepare:
         define2 = ""
         for dir in BING_WORD_DIR:
             try:
-                with open(dir + os.sep + words1 + ".txt", encoding='utf8') as f1:
+                with open(dir + os.sep + WordCleaner.to_file_name_format(words1) + ".txt", encoding='utf8') as f1:
                     define1 += f1.read()
             except Exception as e:
-                print(e)
+                print("word \'{}\' try to access file \'{}\', get error {}".format(words1, WordCleaner.to_file_name_format(
+                    words1) + ".txt", e))
 
             for dir in BING_WORD_DIR:
                 try:
-                    with open(dir + os.sep + words2 + ".txt", encoding='utf8') as f2:
+                    with open(dir + os.sep + WordCleaner.to_file_name_format(words2) + ".txt", encoding='utf8') as f2:
                         define2 += f2.read()
                 except Exception as e:
-                    print(e)
+                    print("word \'{}\' try to access file \'{}\', get error {}".format(words2, WordCleaner.to_file_name_format(
+                        words2) + ".txt", e))
 
         return FeatureExtractor().get_feature(words1, define1, words2, define2)
 

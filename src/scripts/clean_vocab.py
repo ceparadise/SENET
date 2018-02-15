@@ -11,6 +11,18 @@ class WordCleaner:
     def __init__(self):
         self.en_words = words.words()
 
+    @staticmethod
+    def to_file_name_format(word):
+        """
+        Convert the word to file name format which are used to retrive document in file system. Windows don't
+        distinguish upper and lower cases, this cause error in linux
+        :param word:
+        :return:
+        """
+        word = WordCleaner().clean_line(word)
+        word = re.sub("-", " ",word)
+        return word.lower()
+
     def clean_line(self, line):
         line = line.strip("\n\t\r ")
         line = re.sub("[\/\\\\]+", "-", line)

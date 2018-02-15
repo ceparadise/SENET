@@ -8,6 +8,7 @@ import os
 from threading import Thread
 import functools
 import nltk, sys
+from clean_vocab import WordCleaner
 
 
 class FeatureBuilder:
@@ -66,7 +67,7 @@ class FeatureBuilder:
     def search(self, dir, keyword):
         BING_STACKOVERFLOW = BING_WORD_DIR_ROOT + os.sep + "bing_stackoverflow_word"
         BING_REGULAR = BING_WORD_DIR_ROOT + os.sep + "bing_word"
-        BING_SENTENCE_QUERY = BING_WORD_DIR_ROOT + os.sep + "bing_setenceQuery_word"
+        BING_SENTENCE_QUERY = BING_WORD_DIR_ROOT + os.sep + "bing_sentenceQuery_word"
 
         if dir == BING_STACKOVERFLOW:
             query = keyword.strip("\n\t\r") + " site:stackoverflow.com definition"
@@ -102,9 +103,10 @@ class FeatureBuilder:
         except GoogleSearchError as e:
             print(e)
 
-        if not os.path.isfile(dir + keyword + ".txt") and len(res) > 0:
+        file_path = os.path.join(dir, WordCleaner.to_file_name_format(keyword) + ".txt")
+        if not os.path.isfile(file_path) and len(res) > 0:
             try:
-                with open(dir + os.sep + keyword + ".txt", 'w', encoding='utf8') as fout:
+                with open(file_path, 'w', encoding='utf8') as fout:
                     fout.write(res)
             except Exception as e:
                 print(e)
@@ -151,14 +153,14 @@ class FeatureBuilder:
 
         for dir in BING_WORD_DIR:
             try:
-                with open(dir + os.sep + words1 + ".txt", encoding='utf8') as f1:
+                with open(dir + os.sep + WordCleaner.to_file_name_format(words1) + ".txt", encoding='utf8') as f1:
                     define1 += f1.read()
             except Exception as e:
                 define1 += self.search(dir, words1)
 
         for dir in BING_WORD_DIR:
             try:
-                with open(dir + os.sep + words2 + ".txt", encoding='utf8') as f2:
+                with open(dir + os.sep + WordCleaner.to_file_name_format(words2) + ".txt", encoding='utf8') as f2:
                     define2 += f2.read()
             except Exception as e:
                 define2 += self.search(dir, words2)

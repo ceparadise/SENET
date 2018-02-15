@@ -156,18 +156,20 @@ if __name__ == "__main__":
     rnn = RNNModel(vec_len, RNNMODEL + os.sep + 'rnn.ckpt')
     hu = Heuristics()
     hu_res = []
+    res
     print("Start classification ...")
     rnn_res = rnn.get_result(np.array([x[0] for x in fb.data_set]))
-    for i, pair in enumerate(fb.data_set):
-        print("HU:{}/{}".format(i, len(fb.data_set)))
-        hu_res.append(hu.classify(pair[1]))
+    # for i, pair in enumerate(fb.data_set):
+    #     print("HU:{}/{}".format(i, len(fb.data_set)))
+    #     hu_res.append(hu.classify(pair[1]))
     res = []
-    print(len(hu_res), len(rnn_res))
-    for i in range(len(fb.data_set)):
-        if hu_res[i] == 'yes':
-            res.append('1.01')
-        else:
-            res.append(rnn_res[i])
+    res = rnn_res # Skip heuristics right now
+    # print(len(hu_res), len(rnn_res))
+    # for i in range(len(fb.data_set)):
+    #     if hu_res[i] == 'yes':
+    #         res.append('1.01')
+    #     else:
+    #         res.append(rnn_res[i])
     print("Writing result to disk ...")
     with open(os.path.join(RESULT_DIR, "extension_res_{}.text".format(partition_num)), 'w', encoding='utf8') as fout:
         for i in range(len(rnn_res)):
