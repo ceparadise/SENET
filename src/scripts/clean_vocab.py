@@ -10,6 +10,9 @@ import re
 class WordCleaner:
     def __init__(self):
         self.en_words = words.words()
+        nltk_requires = ["words"]
+        for nltk_require in nltk_requires:
+            nltk.download(nltk_require)
 
     @staticmethod
     def to_file_name_format(word):
@@ -20,7 +23,7 @@ class WordCleaner:
         :return:
         """
         word = WordCleaner().clean_line(word)
-        word = re.sub("-", " ",word)
+        word = re.sub("-", " ", word)
         return word.lower()
 
     def clean_line(self, line):
