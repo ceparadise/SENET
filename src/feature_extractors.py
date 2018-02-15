@@ -8,8 +8,8 @@ import re
 class FeatureExtractor:
     def __init__(self):
         self.func_pip = [self.common_token_len,
-                         # self.same_postfix,
-                         # self.same_prefix,
+                         self.same_postfix,
+                         self.same_prefix,
                          self.token_num_same,
                          self.include_each_other,
                          # self.pos_compare, #Very time consuming

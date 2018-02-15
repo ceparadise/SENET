@@ -33,7 +33,7 @@ class RNN:
         }
         with tf.Session() as sess:
             pred = self.classify(x, weights, biases)
-            output = tf.nn.softmax(pred)
+            confidence = tf.nn.softmax(pred)
             cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y))
             train_op = tf.train.AdamOptimizer(self.lr).minimize(cost)
             pred_label_index = tf.argmax(pred, 1)  # Since we use one-hot represent the predicted label, index = label
@@ -70,7 +70,8 @@ class RNN:
                         batch_xs, batch_ys, test_word_pairs = test_set.next_batch(self.batch_size)
                         batch_xs = batch_xs.reshape([self.batch_size, self.n_steps, self.n_inputs])
                         is_correct = sess.run(correct_pred, feed_dict={x: batch_xs, y: batch_ys})
-                        res.append((batch_ys, is_correct, test_word_pairs, batch_xs))
+                        confidence_score = sess.run(confidence, feed_dict={x: batch_xs})
+                        res.append((batch_ys, is_correct, test_word_pairs, batch_xs, confidence_score))
                     re, pre, f1, accuracy = self.eval(res)
                     write_csv([re, pre, f1, accuracy], csv_fout)
                     self.write_res(res, fout)
@@ -101,7 +102,7 @@ class RNN:
         tp = 0
         fn = 0
         fp = 0
-        for label, correctness, word_pairs, feature in results:
+        for label, correctness, word_pairs, feature, confidence in results:
             if label[0][0] == 1:  # positive
                 if correctness[0]:
                     tp += 1
@@ -136,7 +137,7 @@ class RNN:
 
     def write_res(self, res, writer):
         writer.write("label, correctness, w1, w2, features\n")
-        for label, correctness, word_pairs, features in res:
+        for label, correctness, word_pairs, features, confidence in res:
             tran_label = "Yes"
             if np.argmax(label.ravel()) == 1:
                 tran_label = "No";
@@ -145,8 +146,8 @@ class RNN:
             if correctness[0] == True:
                 correct_output = 'Correct'
 
-            res_str = "{}\t{}\t{}\t\t{}\t{}".format(tran_label, correct_output, word_pairs[0][0], word_pairs[0][1],
-                                                    features)
+            res_str = "{}\t{}\t{}\t\t{}\t{}\t{}".format(tran_label, correct_output, word_pairs[0][0], word_pairs[0][1],
+                                                        confidence, features)
             writer.write(res_str + "\n")
 
 
@@ -154,4 +155,4 @@ if __name__ == '__main__':
     data = DataPrepare()
     print("Experiment data is ready, size ", len(data.data_set))
     rnn = RNN(data.get_vec_length())
-    rnn.train_test(data, half_seen=True)
+    rnn.train_test(data, half_seen=False)

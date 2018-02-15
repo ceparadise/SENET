@@ -11,7 +11,7 @@ c = conn.cursor()
 user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
 headers = {'User-Agent': user_agent, }
 
-query_type = 'sentence'  # change type here
+query_type = 'stack_overflow'  # change type here
 
 if query_type == 'sentence':
     file_dir = './bing_sentenceQuery_word/'
@@ -96,7 +96,10 @@ def worker(sub_query_link, thread_num):
                             str = " ".join(str)
                             fout.write(str + "\n")
                         fout.write("\n")
-                time.sleep(1)
+                if "stackoverflow" in link:
+                    time.sleep(3)
+                else:
+                    time.sleep(0.5)
             except Exception as e:
                 print(e)
 
