@@ -5,7 +5,7 @@ from common import *
 from nltk.stem.porter import PorterStemmer
 import pickle
 from feature_extractors import FeatureExtractor
-from clean_vocab import WordCleaner
+from scripts.clean_vocab import WordCleaner
 
 
 class DataPrepare:
